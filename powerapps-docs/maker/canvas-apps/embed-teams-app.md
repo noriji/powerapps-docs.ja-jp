@@ -14,15 +14,15 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: ba08437dc144fc81aa9748163b1005222735cb69
-ms.sourcegitcommit: f296922b8039b573e5adb81423a544f70c56c1ee
+ms.sourcegitcommit: a560630f5ee83629a7236ae774fc0c8195b95efa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70842243"
 ---
 # <a name="embed-a-powerapps-app-in-teams"></a>チームへの PowerApps アプリの埋め込み 
 
-作成した PowerApps は、Microsoft Teams に直接埋め込むことによって共有できます。 完了すると、ユーザーは **+** **、チーム内**のチームチャネルまたは会話にアプリを追加することを選択できます。 アプリは、**チームのタブ**の下にタイルとして表示されます。 
+作成した PowerApps は、Microsoft Teams に直接埋め込むことによって共有できます。 完了すると、ユーザーは [ **+** ] を選択して、チーム内**のチームチャネル**または会話にアプリを追加できます。 アプリは、**チームのタブ**の下にタイルとして表示されます。 
 
 管理者はアプリをアップロードして、テナント内の**すべて**のチームに対して [**すべてのタブ] セクション**に表示されるようにすることができます。 「 [Microsoft Teams でのアプリの共有」を](https://docs.microsoft.com/en-us/power-platform/admin/embed-app-teams)参照してください。
 
@@ -38,7 +38,7 @@ ms.locfileid: "70842243"
 
 後の手順で使用する PowerApp の GUID を見つけてメモします。
 
-1. に[https://web.powerapps.com](https://web.powerapps.com)サインインし、メニューの **[アプリ]** を選択します。
+1. [@No__t_1](https://web.powerapps.com)にサインインし、メニューの **[アプリ]** を選択します。
 
    > [!div class="mx-imgBorder"] 
    > ![アプリの一覧を表示する](./media/embed-teams-app/file-apps2.png "アプリの一覧を表示する")
@@ -58,7 +58,7 @@ ms.locfileid: "70842243"
 
 App Studio が既にインストールされている場合は、これらの手順を省略できます。 
 
-1. チーム で、チーム メニューの左下にある **[アプリ]** を選択します (![アプリアイコン](./media/embed-teams-app/apps-icon.png "アプリアイコン"))。
+1. チームで、[チーム] メニュー (![アプリアイコン](./media/embed-teams-app/apps-icon.png "アプリアイコン")) の左下にある **[アプリ]** を選択します。
 
 2. 検索ボックスで "App Studio" を検索し、それを選択します。
 
@@ -99,7 +99,7 @@ App Studio が既にインストールされている場合は、これらの手
    |長い名前     | アプリの完全名。完全なアプリ名が30文字を超える場合に使用されます。       | 
    |**番号**     |         |
    |アプリ ID     | 必須。 Microsoft が生成したこのアプリの一意の識別子。        |
-   |パッケージ名     | 必須。 このアプリの一意の識別子。 逆引きドメイン表記を使用することをお勧めします。たとえば、「.com」のようにします。<AppName>.       |
+   |パッケージ名     | 必須。 このアプリの一意の識別子。 逆引きドメイン表記を使用することをお勧めします。たとえば、「.com」のようにします.<AppName>。       |
    |バージョン     | 必須。 特定のアプリのバージョン。 マニフェストの内容を更新する場合は、バージョンもインクリメントする必要があります。     |
    |**摘要**    |     |
    | 簡単な説明    | 必須。 領域が制限されている場合に使用される、アプリのエクスペリエンスに関する簡単な説明。 80文字の制限。   |
@@ -129,9 +129,9 @@ App Studio が既にインストールされている場合は、これらの手
    > [!div class="mx-imgBorder"] 
    > ![チームタブの追加](./media/embed-teams-app/team-tab-add.png "チームタブの追加")
 
-7. 次の形式を使用して、"Configuration URL" 入力フィールドにアプリの構成 URL を追加します。`https://apps.powerapps.com/teams/settings/<PowerApp ID>`
+7. 次の形式を使用して、"Configuration URL" 入力フィールドにアプリの構成 URL を追加します。 `https://apps.powerapps.com/teams/settings/<PowerApp ID>`
 
-   を`<PowerApp ID>` 、上で記録したアプリ ID GUID に置き換えます。
+   @No__t_0 を、上で記録したアプリ ID GUID に置き換えます。
 
    アプリを表示する[スコープ](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-overview#tab-scope)を選択します。 **[更新プログラムの構成]** チェックボックスがオンになっていることを確認し、 **[保存]** を選択します。
 
@@ -161,7 +161,7 @@ App Studio が既にインストールされている場合は、これらの手
 
 ## <a name="add-the-app-as-a-tab"></a>アプリをタブとして追加する
 
-チャネルまたはメッセージ交換にアプリをタブとして追加する **+** には、[] を選択し、**チームの [タブ**] でアプリを選択します。 
+チャネルまたはメッセージ交換にアプリをタブとして追加するには、[ **+** ] を選択し、**チームの [タブ**] でアプリを選択します。 
 
 > [!div class="mx-imgBorder"] 
 > ![[アプリをタブとして追加]](./media/embed-teams-app/add-app-as-tab.png "[アプリをタブとして追加]")
@@ -173,4 +173,4 @@ App Studio が既にインストールされている場合は、これらの手
 
 ### <a name="see-also"></a>関連項目
 [Microsoft Teams へようこそ](https://docs.microsoft.com/MicrosoftTeams/teams-overview)<br />
-[管理者の場合:Microsoft Teams へのアプリの埋め込み](https://docs.microsoft.com/power-platform/admin/share-app-teams)
+[For 管理者:Microsoft Teams にアプリを埋め込む ](https://docs.microsoft.com/power-platform/admin/share-app-teams)
