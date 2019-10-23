@@ -1094,6 +1094,10 @@
           href: ./portals/admin/change-base-url.md
         - name: メンテナンス モードを有効にする
           href: ./portals/admin/enable-maintenance-mode.md
+        - name: カスタム ドメイン名を追加する
+          href: ./portals/admin/add-custom-domain.md
+        - name: メタデータ変換をインポートする
+          href: ./portals/admin/import-metadata-translation.md
         - name: Power BI 統合
           items:
             - name: Power BI 統合を設定する
@@ -1120,6 +1124,24 @@
           href: ./portals/configure/configure-portal.md
         - name: サイト設定を構成する
           href: ./portals/configure/configure-site-settings.md
+        - name: ポータル認証
+          items:
+            - name: ポータル認証を構成する
+              href: ./portals/configure/configure-portal-authentication.md
+            - name: 認証 ID を設定する
+              href: ./portals/configure/set-authentication-identity.md
+            - name: ポータルの Azure AD B2C プロバイダーの設定
+              href: ./portals/configure/azure-ad-b2c.md
+            - name: OAuth2 プロバイダー設定を構成する
+              href: ./portals/configure/configure-oauth2-settings.md
+            - name: OpenID プロバイダー設定を構成する
+              href: ./portals/configure/configure-openid-settings.md
+            - name: WS-Federation プロバイダー設定を構成する
+              href: ./portals/configure/configure-ws-federation-settings.md
+            - name: SAML 2.0 プロバイダー設定を構成する
+              href: ./portals/configure/configure-saml2-settings.md
+            - name: ID プロバイダーを Azure AD B2C に移行する
+              href: ./portals/configure/migrate-identity-providers.md
     - name: 高度なポータルのカスタマイズ
       items:
         - name: 液体テンプレートを操作する
