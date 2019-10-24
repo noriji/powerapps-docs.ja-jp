@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 48966659ca12ada12448543492731fff8431fbde
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71995824"
 ---
 # <a name="overview-of-the-canvas-app-for-northwind-traders"></a>Northwind Traders 用キャンバスアプリの概要
@@ -33,13 +33,13 @@ ms.locfileid: "71995824"
 アプリユーザーは、1つの画面で、注文の表示、更新、作成、および削除を行うことができます。
 
 > [!div class="mx-imgBorder"]
-> @no__t 0Complete canvas app @ no__t-1
+> ![Complete キャンバスアプリ ](media/northwind-orders-canvas-part1/orders-finished.png)
 
 ## <a name="explore-the-user-interface"></a>ユーザーインターフェイスを調べる
 
 ### <a name="order-gallery"></a>注文ギャラリー
 
-アプリの左端にあるギャラリーには、注文番号、状態、顧客の名前、注文の総コストなど、注文の一覧が表示されます。 ユーザーは、リストをスクロールして注文を検索し、注文の矢印を選択してその詳細を表示できます。 詳細情報:[注文ギャラリーを作成](northwind-orders-canvas-part1.md)します。
+アプリの左端にあるギャラリーには、注文番号、状態、顧客の名前、注文の総コストなど、注文の一覧が表示されます。 ユーザーは、リストをスクロールして注文を検索し、注文の矢印を選択してその詳細を表示できます。 詳細につい[ては、「注文書ギャラリーを作成](northwind-orders-canvas-part1.md)する」を参照してください。
 
 ### <a name="summary-form"></a>概要フォーム
 
@@ -47,10 +47,10 @@ ms.locfileid: "71995824"
 
 ### <a name="detail-gallery"></a>詳細ギャラリー
 
-右下隅には、選択した注文に含まれる製品とその数量に関する情報が別のギャラリーに表示されます。 このギャラリー内の各アイテムは、注文の詳細として知られています。 アプリユーザーは、その下にあるコントロールを使用して、ギャラリー内の任意の項目を追加および削除できます。 詳細情報:[詳細ギャラリーを作成](northwind-orders-canvas-part3.md)します。
+右下隅には、選択した注文に含まれる製品とその数量に関する情報が別のギャラリーに表示されます。 このギャラリー内の各アイテムは、注文の詳細として知られています。 アプリユーザーは、その下にあるコントロールを使用して、ギャラリー内の任意の項目を追加および削除できます。 詳細につい[ては、「詳細ギャラリーを作成](northwind-orders-canvas-part3.md)する」を参照してください。
 
 > [!div class="mx-imgBorder"]
-> 画面領域の @no__t 0Definition @ no__t-1
+> 画面領域の ![Definition ](media/northwind-orders-canvas-part1/orders-parts.png)
 
 ## <a name="explore-the-data-sources"></a>データソースを探索する
 

@@ -14,17 +14,17 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 0ecb30a5a452a6ee092ccf9bc9d47f6182ef60ab
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71993009"
 ---
 # <a name="astype-and-istype-functions-in-canvas-apps"></a>キャンバスアプリの AsType 機能と IsType の関数
 
 特定のエンティティ型 (**istype**) のレコード参照を確認し、その参照を特定の型 (**astype**) として扱います。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 
 詳細については、「[レコード参照とポリモーフィック参照](../working-with-references.md)について」を参照してください。
 
@@ -100,35 +100,35 @@ If( IsType( ThisItem.'Company Name', [@Accounts] ),
 
 1. **[表示]** タブで **[データソース]** を選択し、**連絡先**エンティティと**アカウント**エンティティをデータソースとして追加します。
     > [!div class="mx-imgBorder"]
-    > 2つのデータソースを持つ @no__t 0Blank アプリ: アカウントと連絡先 @ no__t-1
+    > 2つのデータソースを持つ ![Blank アプリ: アカウントと連絡先 ](media/function-astype-istype/contacts-add-datasources.png)
 
 1. 垂直方向に**空**の**ギャラリー**コントロールを挿入します。
 
     > [!div class="mx-imgBorder"]
-    > @no__t 空の垂直レイアウトでギャラリーコントロールを挿入する @ no__t-1
+    > 空の垂直レイアウトでギャラリーコントロールを ![Insert ](media/function-astype-istype/contacts-customer-gallery.png)
 
 1. 画面の右側の **[プロパティ]** タブで、ギャラリーの**Items**プロパティを**Contacts**に設定します。
 
     > [!div class="mx-imgBorder"]
-    > ![Set items to Contacts to the properties pane @ no__t-1
+    > プロパティペインで連絡先に項目を ![Set ](media/function-astype-istype/contacts-customer-datasource.png)
 
 1. ギャラリーのレイアウトを [**タイトル] と [サブタイトル**] に設定します。
 
     > [!div class="mx-imgBorder"]
-    > @no__t [プロパティ] ペインでレイアウトピッカーを開きます。 @ no__t-1
+    > [プロパティ] ペインでレイアウトピッカーを ![Open ](media/function-astype-istype/contacts-customer-layout.png)
 
     > [!div class="mx-imgBorder"]
-    > ![Set を Title とサブタイトルに設定 @ no__t-1
+    > タイトルとサブタイトル ](media/function-astype-istype/contacts-customer-flyout.png) にレイアウトを ![Set
 
 1. **データ**ペインで、 **Title1**の一覧を開き、 **[フルネーム]** を選択します。
 
     > [!div class="mx-imgBorder"]
-    > ![Set title value @ no__t-1
+    > ![Set タイトルの値 ](media/function-astype-istype/contacts-customer-title.png)
 
 1. **Subtitle1** label コントロールを選択します。
 
     > [!div class="mx-imgBorder"]
-    > ![Set の値を設定する @ no__t-1
+    > ![Set のサブタイトルの値 ](media/function-astype-istype/contacts-customer-subtitle.png)
 
 1. **Subtitle1**の**Text**プロパティを次の数式に設定します。
 
@@ -141,7 +141,7 @@ If( IsType( ThisItem.'Company Name', [@Accounts] ),
     ```
 
     > [!div class="mx-imgBorder"]
-    > ギャラリー @ no__t-1 で、アカウントと連絡先が混在していることを示す @no__t 0Screen が完成しました。
+    > ![Screen は、ギャラリーに含まれるアカウントと連絡先の表示が完了しました ](media/function-astype-istype/contacts-customer-complete.png)
 
     ギャラリーのサブタイトルには、次の値が表示されます。
     - "**会社名**" が*空白*の場合は "--" になります。

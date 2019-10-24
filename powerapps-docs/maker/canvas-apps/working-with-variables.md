@@ -14,15 +14,15 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 036de37aa2593254d6ae665f8546fe4038dd922d
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71994837"
 ---
 # <a name="understand-canvas-app-variables-in-powerapps"></a>PowerApps のキャンバス アプリの変数について
 
-Visual Basic や JavaScript などの別のプログラミングツールを使用した場合は、次のことを求めることがあります。**変数はどこにありますか。** PowerApps は若干異なり、別のアプローチが必要です。 キャンバスアプリを構築するときに変数を使用するのではなく、自分で確認してください。**Excel で何を行うのでしょうか。**
+Visual Basic や JavaScript などの別のプログラミング ツールを使ってきた方は、**変数はどこにあるのか**という疑問を抱くことでしょう。 PowerApps は若干異なり、別のアプローチが必要です。 キャンバス アプリをビルドする際に、変数の説明に進む代わりに、**Excel で何をしようとしているか**を考えてください。
 
 他のツールでは、明示的に計算を実行し、その結果を変数に格納していたことでしょう。 ところが、PowerApps と Excel のどちらも、入力データが変更されると自動的に数式が再計算されます。そのため、通常は変数を作成したり更新したりする必要はありません。 可能な限りこの方法に従うことで、アプリをより簡単に作成、理解、維持することができます。
 
@@ -82,9 +82,9 @@ PowerApps では、数式を使用して、コントロールのプライマリ�
 
 単純な加算器に変更を加えて、累計機能を備えた昔ながらの計算機のように動作するようにしましょう。 **[Add]** ボタンを選択すると、数値が累計に加算されます。 **[Clear]** ボタンを選択すると、累計が 0 にリセットされます。
 
-| '95'5c | 説明 |
+| '95'5c | Description |
 |----|----|
-| <style>img {max width: none}</style> ![ アプリのテキスト入力コントロール、ラベル、2つのボタン @ no__t-2 | アプリが開始されると、実行中の合計は0になります。<br><br>赤い点は、ユーザーが**77**を入力したテキスト入力ボックスにユーザーの指を表します。 |
+| <style>img {max width: none}</style> ![App テキスト入力コントロール、ラベル、および2つのボタンが ](media/working-with-variables/button-changes-state-1.png) | アプリが開始されると、実行中の合計は0になります。<br><br>赤い点は、ユーザーが**77**を入力したテキスト入力ボックスにユーザーの指を表します。 |
 | ![テキスト入力コントロールに77が含まれており、[追加] ボタンが押されています。](media/working-with-variables/button-changes-state-2.png) | ユーザーは **[追加]** ボタンを選択します。 |
 | ![合計が77で、別の77が追加されています](media/working-with-variables/button-changes-state-3.png) | 77が累計に追加されます。<br><br>ユーザーはもう一度 **[追加]** ボタンを選択します。 |
 | ![合計は、クリアされる前の154です。](media/working-with-variables/button-changes-state-4.png) | 77はもう一度累計に追加され、結果は154になります。<br><br>ユーザーは **[クリア]** ボタンを選択します。 |
@@ -118,7 +118,7 @@ PowerApps では、数式を使用して、コントロールのプライマリ�
 
     **Set (RunningTotal、RunningTotal、TextInput1)**
 
-    この数式が単に存在する場合は、 **+** 演算子によって、数値を保持するグローバル変数として**runningtotal**が設定されます。 アプリの任意の場所で**Runningtotal**を参照できます。 ユーザーがこのアプリを開くたびに、 **Runningtotal**の初期値は*空白*になります。
+    この数式が単に存在する場合は、 **+** 演算子により、数値を保持するグローバル変数として**runningtotal**が設定されます。 アプリの任意の場所で**Runningtotal**を参照できます。 ユーザーがこのアプリを開くたびに、 **Runningtotal**の初期値は*空白*になります。
 
     ユーザーが最初に **[追加]** ボタンを選択し、実行 を **[設定](functions/function-set.md)** すると、 **runningtotal**は**runningtotal + TextInput1**の値に設定されます。
 
@@ -152,7 +152,7 @@ PowerApps では、数式を使用して、コントロールのプライマリ�
 
 PowerApps には、次の3種類の変数があります。
 
-| 変数の種類 | 適用範囲 | 説明 | を確立する関数 |
+| 変数の種類 | 適用範囲 | Description | を確立する関数 |
 | --- | --- | --- | --- |
 | グローバル変数 |App |使い方が最も単純です。 数値、テキスト文字列、ブール値、レコード、テーブルなどを保持し、アプリ内のどこからでも参照できます。 |[**Set**](functions/function-set.md) |
 | コンテキスト変数 |画面 |他の言語のプロシージャにパラメーターを渡す場合など、画面に値を渡すのに最適です。 は、1つの画面からのみ参照できます。 |[**UpdateContext**](functions/function-updatecontext.md)<br>[**Navigate**](functions/function-navigate.md) |
@@ -195,7 +195,7 @@ PowerApps には、次の3種類の変数があります。
 コンテキスト変数のしくみは次のとおりです。
 
 * コンテキスト変数を暗黙的に確立および設定するには、 **[Updatecontext](functions/function-updatecontext.md)** 関数または **[Navigate](functions/function-navigate.md)** 関数を使用します。 アプリが起動すると、すべてのコンテキスト変数の初期値は*空白*になります。
-* コンテキスト変数は、レコードを使用して更新します。 他のプログラミング ツールでは、一般的に、"x = 1" のように、代入には "=" を使用します。 コンテキスト変数には **{x を使用します。1}** を代わりにします。 コンテキスト変数を使用する場合は、record 構文を使用せずに名前を直接使用します。
+* コンテキスト変数は、レコードを使用して更新します。 他のプログラミング ツールでは、一般的に、"x = 1" のように、代入には "=" を使用します。 コンテキスト変数の場合は、代わりに **{ x: 1 }** を使用します。 コンテキスト変数を使用する場合は、record 構文を使用せずに名前を直接使用します。
 * **[Navigate](functions/function-navigate.md)** 関数を使用して画面を表示する場合は、コンテキスト変数を設定することもできます。 画面がプロシージャまたはサブルーチンの一種であると考えられる場合、この方法は、他のプログラミングツールでのパラメーターの引き渡しに似ています。
 * **[Navigate](functions/function-navigate.md)** を除き、コンテキスト変数は、名前を取得する場所である単一の画面のコンテキストに制限されます。 このコンテキスト以外でコンテキスト変数を使用または設定することはできません。
 * コンテキスト変数では、文字列、数値、レコード、[テーブル](working-with-tables.md)など、任意の値を保持できます。
@@ -208,9 +208,9 @@ PowerApps には、次の3種類の変数があります。
 
 3. ユーザーが **[Add]** ボタンを選択するたびに累計を更新するために、 **[OnSelect](controls/properties-core.md)** プロパティを次の数式に設定します。
 
-    **UpdateContext ({RunningTotal:RunningTotal + TextInput1})**
+    **UpdateContext ({RunningTotal: RunningTotal + TextInput1})**
 
-    この数式が単に存在する場合は、 **+** 演算子のために数値を保持するコンテキスト変数として**runningtotal**を設定します。 この画面の任意の場所で、 **Runningtotal**を参照できます。 ユーザーがこのアプリを開くたびに、 **Runningtotal**の初期値は*空白*になります。
+    この数式が単に存在する場合は、 **+** 演算子により、数値を保持するコンテキスト変数として**runningtotal**が設定されます。 この画面の任意の場所で、 **Runningtotal**を参照できます。 ユーザーがこのアプリを開くたびに、 **Runningtotal**の初期値は*空白*になります。
 
     ユーザーが初めて **[Add]** ボタンと **[updatecontext](functions/function-updatecontext.md)** を選択したときに、 **runningtotal**は**runningtotal + TextInput1**の値に設定されます。
 
@@ -218,9 +218,9 @@ PowerApps には、次の3種類の変数があります。
 
 4. ユーザーが **[Clear]** ボタンを選択するたびに累計を **0** に設定するために、 **[OnSelect](controls/properties-core.md)** プロパティを次の数式に設定します。
 
-    **UpdateContext ({RunningTotal:0})**
+    **UpdateContext( { RunningTotal: 0 } )**
 
-    ここでも、 **[updatecontext](functions/function-updatecontext.md)** は、式 **updatecontext ({runningtotal:0})**  です。
+    ここでも、 **[UpdateContext](functions/function-updatecontext.md)** を数式 **UpdateContext( { RunningTotal: 0 } )** で使用します。
 
     ![Clear ボタンの OnSelect プロパティ](media/working-with-variables/context-variable-2.png)
 
