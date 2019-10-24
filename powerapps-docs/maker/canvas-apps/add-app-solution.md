@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: c908e3d25530b52b103ef58989545e46b931e791
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71987701"
 ---
 # <a name="create-a-canvas-app-from-within-a-solution"></a>ソリューション内からキャンバスアプリを作成する
@@ -42,24 +42,24 @@ ms.locfileid: "71987701"
 1. 左側のナビゲーションバーで、 **[ソリューション]** を選択します。
 
     > [!div class="mx-imgBorder"]
-    > 左側のナビゲーションバーの左側のナビゲーションバー(./media/add-app-solution/left-nav.png "ソリューションオプション")の![[ソリューション] オプション]
+    > ![左側のナビゲーションバーの [ソリューション] オプション](./media/add-app-solution/left-nav.png "左側のナビゲーションバーの [ソリューション] オプション")
 
 1. タイトルバーの下のバナーで、 **[新しいソリューション]** を選択します。
 
     > [!div class="mx-imgBorder"]
-    > バナーの [(./media/add-app-solution/banner-new-solution.png "新しいソリューション] オプション")の![[新規ソリューション] オプション]
+    > ![バナーの [新規]-[ソリューション] オプション](./media/add-app-solution/banner-new-solution.png "バナーの [新規]-[ソリューション] オプション")
 
 1. 表示されるウィンドウで、ソリューションの表示名、発行元、およびバージョンを指定します。
 
     > [!div class="mx-imgBorder"]
-    > (./media/add-app-solution/configure-new-solution.png "新しいソリューションの")![新しいソリューションオプションのオプション]
+    > ![新しいソリューションのオプション](./media/add-app-solution/configure-new-solution.png "新しいソリューションのオプション")
 
     指定した表示名に基づいて (スペースなしの) 名前が自動的に生成されますが、必要に応じて生成された名前をカスタマイズできます。 環境に合わせて既定のパブリッシャーを指定できます。また、これらの領域に特定のニーズがない場合は、 **1.0**のバージョンを指定できます。
 
 1. 左上隅の近くにある **[保存して閉じる]** を選択します。
 
     > [!div class="mx-imgBorder"]
-    > ![新しいソリューションを保存]する(./media/add-app-solution/save-new-solution.png "新しいソリューションを保存する")
+    > ![新しいソリューションを保存する](./media/add-app-solution/save-new-solution.png "新しいソリューションを保存する")
 
 ## <a name="create-a-canvas-app-in-a-solution"></a>ソリューションにキャンバスアプリを作成する
 
@@ -72,14 +72,14 @@ ms.locfileid: "71987701"
 1. 左側のナビゲーションバーで、 **[ソリューション]** を選択します。
 
     > [!div class="mx-imgBorder"]
-    > 左側のナビゲーションバーの左側のナビゲーションバー(./media/add-app-solution/left-nav.png "ソリューションオプション")の![[ソリューション] オプション]
+    > ![左側のナビゲーションバーの [ソリューション] オプション](./media/add-app-solution/left-nav.png "左側のナビゲーションバーの [ソリューション] オプション")
 
 1. ソリューションの一覧で、キャンバスアプリを作成するソリューションを選択します。
 
-1. タイトルバーの下のバナーで、[**新規** > **アプリ** > **キャンバスアプリ**] を選択し、作成するアプリのフォームファクター (電話またはタブレット) を選択します。
+1. タイトルバーの下のバナーで、 **[新規]** [ > **アプリ**] [ > **キャンバスアプリ**] の順に選択し、作成するアプリのフォームファクター (電話またはタブレット) を選択します。
 
     > [!div class="mx-imgBorder"]
-    > ソリューション(./media/add-app-solution/new-option.png "にアプリを作成するため")の![ソリューションオプションでアプリを作成するオプション]
+    > ![ソリューションにアプリを作成するためのオプション](./media/add-app-solution/new-option.png "ソリューションにアプリを作成するためのオプション")
 
     PowerApps Studio、別のブラウザータブに空白のキャンバスが表示されます。
 
@@ -88,7 +88,7 @@ ms.locfileid: "71987701"
 1. ソリューションを選択した ブラウザー タブで、**完了** を選択してソリューション内のコンポーネントの一覧を更新します。
 
     > [!div class="mx-imgBorder"]
-    > 完了![ボタン]の(./media/add-app-solution/done-button.png "完了ボタン")
+    > ![[完了] ボタン](./media/add-app-solution/done-button.png "[完了] ボタン")
 
     新しいアプリが、そのソリューションのコンポーネントの一覧に表示されます。 アプリに変更を保存すると、ソリューション内のバージョンに反映されます。
 
@@ -103,21 +103,21 @@ ms.locfileid: "71987701"
 1. 左側のナビゲーションバーで、 **[ソリューション]** を選択します。
 
     > [!div class="mx-imgBorder"]
-    > 左側のナビゲーションバーの左側のナビゲーションバー(./media/add-app-solution/left-nav.png "ソリューションオプション")の![[ソリューション] オプション]
+    > ![左側のナビゲーションバーの [ソリューション] オプション](./media/add-app-solution/left-nav.png "左側のナビゲーションバーの [ソリューション] オプション")
 
 1. ソリューションの一覧で、アプリをリンクするソリューションを選択します。
 
-1. タイトルバーの下のバナーで、[**既存**の @no__t の追加]-1**アプリ** > **キャンバスアプリ**を選択します。
+1. タイトルバーの下のバナーで、[**既存**の  > **アプリ** > **キャンバスアプリ**の追加] を選択します。
 
     > [!div class="mx-imgBorder"]
-    > 既存のアプリをリンクするために既存のアプリケーション(./media/add-app-solution/add-existing.png "バナーオプション")を![リンクするバナーオプション]
+    > ![既存のアプリをリンクするバナーオプション](./media/add-app-solution/add-existing.png "既存のアプリをリンクするバナーオプション")
 
     この環境でソリューション内に作成されたキャンバスアプリの一覧が表示されます。
 
 1. アプリの一覧で、ソリューションにリンクするアプリを選択し、 **[追加]** を選択します。
 
     > [!div class="mx-imgBorder"]
-    > ![ボタン](./media/add-app-solution/add-button.png "の追加ボタン")を追加する
+    > ![[追加] ボタン](./media/add-app-solution/add-button.png "[追加] ボタン")
 
 ## <a name="known-limitations"></a>既知の制限
 
