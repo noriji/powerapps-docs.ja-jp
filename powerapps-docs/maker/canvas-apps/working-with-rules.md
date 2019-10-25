@@ -7,23 +7,24 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/10/2017
+ms.date: 10/23/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 52a28f73a0a9dae0e410714102f1bc78fe706fab
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: d104bc88fb8f5306a9d086fa04bc946b6a719129
+ms.sourcegitcommit: c3e7be17c8b39bf17b2089ad3bd424e63b5645e5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71994730"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72822100"
 ---
-# <a name="create-a-rule-in-powerapps"></a>PowerApps でのルールの作成
-指定した条件に基づいてアプリを自動的に変更するためのルールを作成します。 たとえば、状態に基づいてリスト項目を赤、黄、または緑で表示したり、特定のユーザー (管理者など) に対してのみ承認ボタンを表示したりします。
+# <a name="create-a-rule-in-canvas-apps"></a>キャンバスアプリでルールを作成する
+指定した条件に基づいてアプリを自動的に変更するためのルールを作成します。 たとえば、状態に基づいてリスト項目を赤、黄、または緑で表示したり、特定のユーザー (管理者など) に対してのみ承認ボタンを表示したりします。 ルールは、さまざまなコントロールに追加できます。 このトピックでは、**スライダー** コントロールの値が 70 を超えている場合に、**ラベル**のテキストの色を変更するルールを追加します。
 
-ルールは、さまざまなコントロールに追加できます。 このトピックでは、**スライダー** コントロールの値が 70 を超えている場合に、**ラベル**のテキストの色を変更するルールを追加します。
+> [!IMPORTANT]
+> 2019年10月14日より、キャンバスアプリのルール機能は非推奨となりました。 詳細については、「[ブログ: キャンバスルール機能の廃止](https://powerapps.microsoft.com/blog/canvas-rules-feature-deprecation/)」を参照してください。
 
 ## <a name="add-a-rule"></a>ルールの追加
 1. コントロールを選択します (またはコントロールを追加し、選択されたままにします)。

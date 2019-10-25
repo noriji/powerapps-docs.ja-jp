@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: afd5dffc75dea4186058ba96adbaf0dbde8dc3d8
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71988555"
 ---
 # <a name="show-information-about-a-powerapps-user-in-a-canvas-app"></a>キャンバス アプリの PowerApps ユーザーに関する情報を表示する
