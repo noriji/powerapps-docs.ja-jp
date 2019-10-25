@@ -357,6 +357,8 @@
               href: ./canvas-apps/sharepoint-lookup-fields.md
             - name: フローを追加
               href: ./canvas-apps/using-logic-flows.md
+            - name: キャンバス アプリでルールを作成する
+              href: ./canvas-apps/working-with-rules.md
             - name: 数式のリファレンス
               items:
                 - name: 概要
@@ -1348,6 +1350,8 @@
           href: ./common-data-service/navigate-specific-solution.md
         - name: ソリューションを作成する
           href: ./common-data-service/create-solution.md
+        - name: 環境変数を使用する
+          href: ./common-data-service/EnvironmentVariables.md
         - name: ソリューションのレイヤーを表示する
           href: ./common-data-service/solution-layers.md
         - name: ソリューション履歴を表示する
