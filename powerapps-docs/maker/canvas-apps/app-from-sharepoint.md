@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 08/09/2018
+ms.date: 10/24/2018
 ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: af06a3707073498df65f782fc634c1e93b1760c5
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 101c77b7bdd84e2d2ed31febc441e54944eb9fa3
+ms.sourcegitcommit: fa6ad01cf6d025d46564d755915caaa9db517c41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71994077"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72902445"
 ---
 # <a name="generate-a-canvas-app-in-powerapps-from-a-sharepoint-list"></a>PowerApps で SharePoint リストからキャンバス アプリを作成する
 
@@ -42,7 +42,7 @@ ms.locfileid: "71994077"
 
 ## <a name="generate-an-app-from-within-powerapps"></a>PowerApps 内からアプリを作成する
 
-1. [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) にサインインします。
+1. [PowerApps にサインインします](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。
 
 1. **[Make your own app]\(独自アプリの作成\)** の下の **[Start from data]\(データから開始\)** にポインターを合わせ、 **[このアプリの作成]** を選択します。
 
@@ -66,7 +66,7 @@ ms.locfileid: "71994077"
 
     ![ブラウズ画面](./media/app-from-sharepoint/browse-screen.png)
 
-    このアプリを使用したり、他のユーザーと共有したりする前に、さらに変更を加えたい場合があります。 続行する前に、ベスト プラクティスとして、Ctrl キーと S キーを押し、これまでの作業を保存します。 アプリの名前を指定し、 **[保存]** を選択します。
+    このアプリを使用したり、他のユーザーと共有する前に、さらに変更を加えたいことでしょう。 続行する前に、ベスト プラクティスとして、Ctrl キーと S キーを押し、これまでの作業を保存します。 アプリの名前を指定し、 **[保存]** を選択します。
 
 ## <a name="generate-an-app-from-within-sharepoint-online"></a>SharePoint Online 内からアプリを作成する
 
@@ -94,6 +94,9 @@ SharePoint Online コマンド バーからカスタム リストのアプリを
     - SharePoint からビューを削除するには、 **[Remove this view]\(このビューを削除する\)** を選択します。
 
         PowerApps からアプリを削除するには、[アプリを削除します](delete-app.md)。
+
+> [!NOTE]
+> 現在、SharePoint リストから作成されたアプリは、PowerApps Mobile には表示されません。
 
 ## <a name="next-steps"></a>次の手順
 このトピックでは、SharePoint リスト内のデータを管理するアプリを作成しました。 次の手順として、より複雑なリストからアプリを生成し、ニーズに合わせて ([参照] 画面から) アプリをカスタマイズします。
