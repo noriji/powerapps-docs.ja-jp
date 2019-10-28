@@ -32,6 +32,8 @@
           items:
             - name: 自分のプロファイルを表示する
               href: ../user/view-your-user-profile.md
+            - name: 管理者またはサポート担当者を見つける
+              href: ../user/find-admin.md
             - name: 個人用オプションを設定する
               href: ../user/set-personal-options.md
             - name: スクリーン リーダーを使う
@@ -85,6 +87,8 @@
               href: ../user/export-excel-static-worksheet.md
             - name: Excel のピボットテーブルにエクスポートする
               href: ../user/export-excel-pivottable.md
+            - name: 重複レコードをマージする
+              href: ../user/merge-duplicate-records.md
         - name: 'レポート:'
           items:
             - name: レポートを操作する
