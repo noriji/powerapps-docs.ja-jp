@@ -449,7 +449,7 @@ Northwind Traders データベースで架空のデータを管理するため�
 1. このコントロールの**既定**のプロパティを **""** に設定します。
 
     > [!div class="mx-imgBorder"]
-    > テキスト入力ボックスの * * 既定の * * プロパティを設定 ![](media/northwind-orders-canvas-part3/add-details-21.png)
+    > ![テキスト入力ボックスの **既定の** プロパティを設定](media/northwind-orders-canvas-part3/add-details-21.png)
 
 1. **[ホーム]** タブで、このコントロールのテキストの配置を**右**に設定します。
 
