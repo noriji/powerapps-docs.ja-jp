@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 04/04/2019
+ms.date: 10/24/2019
 ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 60d4fb21bc2f298b1dd2ce37c3e25f5355e881cb
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: d50d9933eaaa79011a623bc643f4eda23ba8d745
+ms.sourcegitcommit: fa6ad01cf6d025d46564d755915caaa9db517c41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71993141"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72902415"
 ---
 # <a name="customize-a-sharepoint-list-form-by-using-powerapps"></a>PowerApps を使用した SharePoint リスト フォームのカスタマイズ
 
@@ -27,7 +27,8 @@ SharePoint リスト フォームは、ブラウザーで PowerApps を開くこ
 このトピックの手順を行うには、カスタマイズがどのように機能しているかを確認できるように、単純なリストを作成してから、同じ概念を独自のリストに適用できます。
 
 > [!NOTE]
-> 自分のリストで **[フォームのカスタマイズ]** オプションが使用できない、または正常に動作しない場合は、[PowerApps がサポートしない](connections/connection-sharepoint-online.md#known-issues)データ型が含まれている場合があります。 また、フォームを別のリストまたは[環境](working-with-environments.md)に移動することはできません。
+> - 自分のリストで **[フォームのカスタマイズ]** オプションが使用できない、または正常に動作しない場合は、[PowerApps がサポートしない](connections/connection-sharepoint-online.md#known-issues)データ型が含まれている場合があります。 また、フォームを別のリストまたは[環境](working-with-environments.md)に移動することはできません。 
+> - リストのカスタムフォームは、ジェネリックリストでのみサポートされています。 汎用ドキュメントライブラリのサポートは近日対応予定です。 カスタムリストとライブラリテンプレートは現在サポートされていません。お知らせ、連絡先、タスクなどの一覧を含めますが、限定することはできません。
 
 ## <a name="create-a-list"></a>リストを作成する
 
@@ -39,7 +40,7 @@ SharePoint サイトでリストを作成し、次の列をそのリストに追
 - **色** (選択)
 
 > [!div class="mx-imgBorder"]
-> ![Select サイトコンテンツ > 新しい > 一覧] を選択し、リスト名を入力して、[作成] を選択します。 列ごとに、[列の追加] を選択し、リストの種類 ([はい]/[いいえ]、[通貨]、[日付]、[選択肢]) を指定して、リスト名 (詳細、価格、利用可能、色) を指定し、[保存] を選択します。 ](./media/customize-list-form/create-list.gif)
+> [サイトのコンテンツ > 新しい > リストを選択 ![には、リスト名を入力し、[作成] を選択します。 列ごとに、[列の追加] を選択し、リストの種類 ([はい]/[いいえ]、[通貨]、[日付]、[選択]) を指定して、リスト名 (詳細、価格、利用可能、色) を指定し、[保存] を選択します。](./media/customize-list-form/create-list.gif)
 
 ## <a name="open-the-form"></a>フォームを開く
 
@@ -50,7 +51,7 @@ SharePoint サイトでリストを作成し、次の列をそのリストに追
 1. **[PowerApps Studio へようこそ]** ダイアログ ボックスが開いたら、 **[スキップ]** を選びます。
 
 > [!div class="mx-imgBorder"]
-> ![In バーの [PowerApps] を選択し、[フォームのカスタマイズ] を選択します。 同じブラウザー タブに PowerApps Studio が開きます。[PowerApps Studio の開始] ダイアログボックスが表示されたら、[スキップ] を選択します。 ](./media/customize-list-form/create-form.gif)
+> ![、コマンドバーで [PowerApps] を選択し、[フォームのカスタマイズ] を選択します。 PowerApps Studio 同じブラウザータブで開きます。[PowerApps Studio の開始] ダイアログボックスが表示されたら、[スキップ] を選択します。](./media/customize-list-form/create-form.gif)
 
 ## <a name="move-and-remove-a-field"></a>フィールドの移動と削除
 
@@ -63,7 +64,7 @@ SharePoint サイトでリストを作成し、次の列をそのリストに追
     指定したフィールドがフォームに表示されなくなります。
 
 > [!div class="mx-imgBorder"]
-> @no__t [可用性] フィールドをフィールドの一覧の一番下にドラッグします。 [添付ファイル] フィールドの上にマウスポインターを移動し、表示される省略記号 (...) を選択して、[削除] を選択します。 ](./media/customize-list-form/move-remove-fields.gif)
+> [可用性] フィールドをフィールドの一覧の一番下にドラッグ ![ます。 [添付ファイル] フィールドの上にマウスポインターを移動し、表示される省略記号 (...) を選択して、[削除] を選択します。](./media/customize-list-form/move-remove-fields.gif)
 
 ## <a name="set-conditional-formatting"></a>条件付き書式を設定する
 
@@ -80,7 +81,7 @@ SharePoint サイトでリストを作成し、次の列をそのリストに追
     構成した 3 つのフィールドが表示され、フォームから消えます。
 
 > [!div class="mx-imgBorder"]
-> 左側のナビゲーションバーで、Datacシャードの値の最後に表示される数字を書き留めます。 @no__t ます。 色、使用可能、および価格カードの [可視性] プロパティをこの数式に設定します。 Alt キーを押したまま、詳細コントロールを複数回選択します。 ](./media/customize-list-form/conditional-format.gif)
+> ![左側のナビゲーションバーで、Datacシャード値の最後に表示される数字を確認します。 色、使用可能、および価格カードの [可視性] プロパティをこの数式に設定します。 Alt キーを押したまま、詳細コントロールを複数回選択します。](./media/customize-list-form/conditional-format.gif)
 
 ## <a name="save-and-publish-the-form"></a>フォームを保存して発行する
 
@@ -89,7 +90,7 @@ SharePoint サイトでリストを作成し、次の列をそのリストに追
 1. 左上隅で、戻る矢印を選択し、 **[SharePoint に戻る]** を選択します。
 
 > [!div class="mx-imgBorder"]
-> ![Open ファイル] メニューの [保存] をクリックし、[SharePoint に発行] を2回選択します。 左上隅にある [戻る] 矢印をクリックし、[SharePoint に戻る] を選択します。 ](./media/customize-list-form/save-form.gif)
+> ![[ファイル] メニューの [保存] をクリックし、[SharePoint に発行] を2回クリックします。 左上隅にある [戻る] 矢印をクリックし、[SharePoint に戻る] を選択します。](./media/customize-list-form/save-form.gif)
 
 ## <a name="further-customize-your-form"></a>フォームをさらにカスタマイズする
 
@@ -101,7 +102,7 @@ SharePoint サイトでリストを作成し、次の列をそのリストに追
     - [1 つまたは複数のカードをカスタマイズ](working-with-cards.md)します (たとえば、カードの表示テキストや入力コントロールを変更します)。
     - [ルックアップ フィールド](sharepoint-lookup-fields.md)を作成する。
 
-    詳細情報:[SharePoint フォームの統合につい](sharepoint-form-integration.md)て説明します。
+    詳細: [SharePoint フォームの統合](sharepoint-form-integration.md)について説明します。
 
 ## <a name="use-the-default-form"></a>既定のフォームを使用する
 
@@ -129,43 +130,43 @@ SharePoint サイトでリストを作成し、次の列をそのリストに追
 
     ![カスタム フォームの削除](./media/customize-list-form/use-default-sharepoint.png)
 
-## <a name="q--a"></a>Q &AMP; A
+## <a name="q--a"></a>Q & A
 
 ### <a name="forms-vs-apps"></a>フォームとアプリ
 
-**Q.** カスタマイズしたフォームは、SharePoint または PowerApps から作成したスタンドアロンアプリとどのように違いますか。
+**Q:** カスタマイズしたフォームは、SharePoint または PowerApps から作成したスタンドアロンのアプリとどう違うのですか?
 
-**ある**SharePoint リストのフォームをカスタマイズする場合、フォームは PowerApps Studio または PowerApps Mobile でアプリとして表示されません。 フォームは、それを作成したリストからのみ開くことができます。
+**A:** SharePoint リストのフォームをカスタマイズする場合、PowerApps Studio または PowerApps Mobile でフォームがアプリとして表示されません。 フォームは、それを作成したリストからのみ開くことができます。
 
-**Q.** SharePoint リストのデータを管理するようにフォームをカスタマイズする必要がある場合、およびスタンドアロンアプリを作成する場合はどうすればよいですか。
+**Q:** SharePoint リスト内のデータを管理するためのフォーをカスタマイズする必要があるのは、どのような場合ですか? また、スタンドアロン アプリを作成する必要があるのはどのような場合ですか?
 
-**ある**SharePoint を離れることなくユーザーがデータを管理できるようにする場合 (たとえば、デスクトップブラウザーで)、フォームをカスタマイズします。 ユーザーが SharePoint の外部で (たとえばモバイル デバイスなどで) データを管理できるようにする場合は、アプリを作成します。
+**A:** ユーザーが SharePoint を離れることなく、(たとえばデスクトップ ブラウザーなどで) データを管理できるようにする場合は、フォームをカスタマイズします。 ユーザーが SharePoint の外部で (たとえばモバイル デバイスなどで) データを管理できるようにする場合は、アプリを作成します。
 
-**Q.** フォームをカスタマイズして、同じリストのアプリを作成することはできますか。
+**Q:** フォームをカスタマイズし、同じリストのアプリを作成できますか?
 
-**ある**はい。
+**A:** はい。
 
-**Q.** リストをカスタマイズし、同じ機能を使用してアプリを作成することはできますか。
+**Q:** リストをカスタマイズし、同じ機能のアプリを作成できますか?
 
-**ある**はい。
+**A:** はい。
 
-**Q.** 組織内の既定の環境以外の環境でフォームをカスタマイズすることはできますか。
+**Q:** 所属組織の既定の環境以外の環境でフォームをカスタマイズできますか?
 
-**ある**いいえ。
+**A:** いいえ。
 
 ### <a name="manage-your-custom-form"></a>カスタム フォームを管理する
 
-**Q.** フォームを他のユーザーと簡単に共有するにはどうすればよいですか。
+**Q:** 自分のフォームを他のユーザーと簡単に共有するにはどうすればよいですか?
 
-**ある**フォームを開き、 **[リンクのコピー]** を選択して、フォームを使用するすべてのユーザーにリンクを送信します。
+**A:** フォームを開き、 **[リンクのコピー]** を選択して、フォームを使用するすべてのユーザーにリンクを送信します。
 
-**Q.** 自分の変更を他のユーザーに表示せずにフォームを更新できますか。
+**Q:** 他のユーザーに変更を見せずに、フォームを更新できますか?
 
-**ある**はい。 フォームの変更と保存は何度でもできますが、変更内容は **[SharePoint に発行]** を 2 回選択するまで他のユーザーには表示されません。
+**A:** はい。 フォームの変更と保存は何度でもできますが、変更内容は **[SharePoint に発行]** を 2 回選択するまで他のユーザーには表示されません。
 
-**Q.** リストフォームをカスタマイズして間違いを犯した場合、以前のバージョンに戻すことはできますか。
+**Q:** リスト フォームをカスタマイズしたけれど間違えた場合は、以前のバージョンに戻すことができますか?
 
-**ある**はい。
+**A:** はい。
 
 1. リストを開き、コマンド バーで **[PowerApps]** を選択し、 **[フォームをカスタマイズ]** を選択します。
 
@@ -181,31 +182,31 @@ SharePoint サイトでリストを作成し、次の列をそのリストに追
     > [!NOTE]
     > フォームが別のユーザーによってロックされているために復元が失敗したというエラーメッセージが表示された場合は、ユーザーがフォームのロックを解除するまで待ってから、もう一度やり直してください。
 
-**Q.** 1つの一覧から別の一覧にフォームを移動できますか。
+**Q:** リスト間でフォームを移動できますか?
 
-**ある**いいえ。
+**A:** いいえ。
 
 ### <a name="administer-your-custom-form"></a>カスタム フォームを管理する
 
-**Q.** フォームを共有操作方法には
+**Q:** フォームを共有する方法を教えてください
 
-**ある**フォームを共有する必要はありません。フォームは、SharePoint リストからアクセス許可を継承します。 フォームのカスタマイズが完了したら、他のユーザーが使用できるように[そのフォームを SharePoint に発行しなおす](customize-list-form.md#save-and-publish-the-form)だけです。
+**A:** フォームを共有する必要はありません。フォームは、SharePoint リストからアクセス許可を継承します。 フォームのカスタマイズが完了したら、他のユーザーが使用できるように[そのフォームを SharePoint に発行しなおす](customize-list-form.md#save-and-publish-the-form)だけです。
 
-**Q.** フォームをカスタマイズできるユーザー
+**Q:** フォームをカスタマイズできるのは誰ですか?
 
-**ある**SharePoint のアクセス許可を持つすべてのユーザーが、関連付けられているリストを管理、デザイン、または編集できます。
+**A:** 関連リストを管理、設計、または編集する SharePoint アクセス許可を持つ任意のユーザーです。
 
-**Q.** カスタムリストフォームを作成または使用するには PowerApps ライセンスが必要ですか?
+**Q:** カスタム リスト フォームの作成や使用に、PowerApps のライセンスは必要ですか?
 
-**ある**[PowerApps を含む Office 365 プラン](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#licenses)が必要です。
+**A:** [PowerApps を含む Office 365 プラン](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#licenses)が必要です。
 
-**Q.** ゲストユーザーがカスタムフォームを使用しているリストにアクセスするとどうなりますか。
+**Q:** ゲスト ユーザーがカスタム フォームを含むリストにアクセスするとどうなりますか?
 
-**ある**PowerApps を使用してカスタマイズされたリストフォームにアクセスしようとすると、ゲストユーザーはエラーメッセージを受け取ります。
+**A:** ゲスト ユーザーが PowerApps を使用してカスタマイズされているリスト フォームにアクセスしようとすると、エラー メッセージが表示されます。
 
-**Q.** 管理者として、組織内のすべてのカスタマイズされたフォームの一覧を取得するにはどうすればよいですか。
+**Q:** 管理者が所属組織のすべてのカスタマイズされたフォームのリストを取得する方法を教えてください。
 
-**ある**PowerApps のテナント管理者である場合、または組織の既定の PowerApps 環境に対する環境管理者のアクセス許可がある場合は、次の手順を実行します。
+**A:** PowerApps のテナント管理者であるか、組織の既定の PowerApps 環境に対する環境管理者アクセス許可を持っている場合は、次のように操作します。
 
 1. [PowerApps 管理センター](https://admin.powerapps.com)で、環境のリストから、組織の既定の環境を選択します。
 
