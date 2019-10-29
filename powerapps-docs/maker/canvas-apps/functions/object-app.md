@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: b0ab20ce5e0700337bb059644c458a2665d20f1e
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 10/29/2019
 ms.locfileid: "71983581"
 ---
 # <a name="app-object-in-powerapps"></a>PowerApps のアプリオブジェクト
@@ -31,7 +31,7 @@ ms.locfileid: "71983581"
 **アプリ**オブジェクトの一部のプロパティの数式を作成できます。 **ツリービュー**ペインの上部で、他のコントロールまたは画面と同じように、**アプリ**オブジェクトを選択します。 オブジェクトのプロパティの1つを表示して編集するには、数式バーの左側にあるドロップダウンリストから選択します。
 
 > [!div class="mx-imgBorder"]
-> ツリービューペインで ![The アプリオブジェクト ](media/object-app/appobject.png)
+> ツリービューペインでアプリオブジェクトを ![](media/object-app/appobject.png)
 
 ## <a name="activescreen-property"></a>ActiveScreen プロパティ
 
@@ -54,7 +54,7 @@ ms.locfileid: "71983581"
 **Onstart**プロパティを変更した後、**ツリービュー**ペインで**アプリ**オブジェクトをポイントし、表示される省略記号 (...) を選択して、 **[実行 onstart]** を選択してテストします。 アプリが初めて読み込まれるときとは異なり、既存のコレクションと変数は既に設定されています。 空のコレクションから始めるには、 **collect**関数ではなく、 **[clearcollect](function-clear-collect-clearcollect.md)** 関数を使用します。
 
 > [!div class="mx-imgBorder"]
-> 実行 OnStart ](media/object-app/appobject-runonstart.png) の ![App 項目のショートカットメニュー
+> 実行 OnStart](media/object-app/appobject-runonstart.png) の ![アプリ項目ショートカットメニュー
 
 ## <a name="confirmexit-properties"></a>ConfirmExit プロパティ
 
@@ -108,7 +108,7 @@ ms.locfileid: "71983581"
     このダイアログボックスは、ユーザーがいずれかの形式でデータを変更し、変更を保存せずにアプリを終了しようとした場合に表示されます。
 
     > [!div class="mx-imgBorder"]
-    > [![Generic の確認] ダイアログボックス ](media/object-app/confirm-native.png)
+    > ![の一般的な確認ダイアログボックス](media/object-app/confirm-native.png)
 
 1. **アプリ**オブジェクトの**confirmexitmessage**プロパティを次の数式に設定します。
 
@@ -122,4 +122,4 @@ ms.locfileid: "71983581"
     このダイアログボックスは、ユーザーがアカウントフォームのデータを変更し、変更を保存せずにアプリを終了しようとした場合に表示されます。
 
     > [!div class="mx-imgBorder"]
-    > ![Form 固有の確認 ダイアログボックス ](media/object-app/confirm-native-custom.png)
+    > ![フォーム固有の確認ダイアログボックス](media/object-app/confirm-native-custom.png)

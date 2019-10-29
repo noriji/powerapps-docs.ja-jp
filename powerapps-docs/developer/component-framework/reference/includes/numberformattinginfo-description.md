@@ -13,11 +13,11 @@ applies_to:
 - Dynamics 365 (online)
 - Dynamics 365 Version 9.x
 ms.assetid: e5fa625c-3d41-4873-8aad-da372369ee6d
-ms.openlocfilehash: ad09d1ae06fd9887e4216d4d51ff7378fd133b68
-ms.sourcegitcommit: 63ea15e2f861d43333aacda19230cd8922d7bdfd
+ms.openlocfilehash: 45ee8733618f9e83b751c004c7e35183e5c0a6e3
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "72337656"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73034729"
 ---
-カスタム コンポーネントに公開される組織のシステム設定の数値形式情報のインターフェイス
+コードコンポーネントに公開される組織のシステム設定番号書式情報のインターフェイス。

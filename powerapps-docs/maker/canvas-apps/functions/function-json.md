@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: ba852093da05c3fa69cc47b219a0bef65908c170
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 10/29/2019
 ms.locfileid: "71992629"
 ---
 # <a name="json-function-in-powerapps"></a>PowerApps の JSON 関数
@@ -47,7 +47,7 @@ ms.locfileid: "71992629"
 | **2つの &nbsp;option** | 表示に使用されるラベルではなく、 *true*または*false*の2つのオプションのブール値。 ブール値は、言語に依存しないために使用されます。 | `false` |
 | **Hyperlink、Text** | 二重引用符で囲まれた文字列。 関数は、埋め込みの二重引用符を円記号でエスケープし、改行文字を "\n" に置き換え、その他の標準的な JavaScript の置換を行います。 | `"This is a string."` |
 
-オプションの*Format*引数を指定して、結果の読み取り方法とサポートされていないデータ型およびバイナリデータ型の処理方法を制御します。 既定では、出力はできるだけコンパクトになります。不要なスペースや改行は不要で、サポートされていないデータ型とバイナリデータは使用できません。 **@No__t_1**演算子を指定する場合は、複数の形式を組み合わせることができます。
+オプションの*Format*引数を指定して、結果の読み取り方法とサポートされていないデータ型およびバイナリデータ型の処理方法を制御します。 既定では、出力はできるだけコンパクトになります。不要なスペースや改行は不要で、サポートされていないデータ型とバイナリデータは使用できません。 **&** 演算子を指定する場合は、複数の形式を組み合わせることができます。
 
 | JSONFormat 列挙型 | Description |
 |-----------------|-------------|
@@ -93,12 +93,12 @@ ms.locfileid: "71992629"
     **CitiesByCountry**コレクションは、このデータ構造を使用して作成されます。このデータ構造を表示するには、 **[ファイル]** メニューの **[コレクション]** を選択し、コレクションの名前を選択します。
 
     > [!div class="mx-imgBorder"]
-    > ![CitiesByCountry コレクション ](media/function-json/cities-grouped.png)
+    > ![CitiesByCountry collection](media/function-json/cities-grouped.png)
 
     このコレクションを表示するには、[**ファイル** > **アプリの設定** >  詳細  >  設定] を選択し、 **[** **数式バーの結果ビューを有効に**する] を選択し、数式バーでコレクションの名前を選択してから、数式バーの下のコレクション名の横にある下矢印。
 
     > [!div class="mx-imgBorder"]
-    > 数式バーの結果ビューでの ![Collection ](media/function-json/cities-grouped-resultview.png)
+    > 数式バーの結果ビューの ![コレクション](media/function-json/cities-grouped-resultview.png)
 
 1. 別のボタンを挿入し、その**Onselect**プロパティを次の数式に設定します。
 

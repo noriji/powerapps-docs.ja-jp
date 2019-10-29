@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 036de37aa2593254d6ae665f8546fe4038dd922d
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 10/29/2019
 ms.locfileid: "71994837"
 ---
 # <a name="understand-canvas-app-variables-in-powerapps"></a>PowerApps のキャンバス アプリの変数について
@@ -84,7 +84,7 @@ PowerApps では、数式を使用して、コントロールのプライマリ�
 
 | '95'5c | Description |
 |----|----|
-| <style>img {max width: none}</style> ![App テキスト入力コントロール、ラベル、および2つのボタンが ](media/working-with-variables/button-changes-state-1.png) | アプリが開始されると、実行中の合計は0になります。<br><br>赤い点は、ユーザーが**77**を入力したテキスト入力ボックスにユーザーの指を表します。 |
+| <style>img {max width: none}</style> ![アプリには、テキスト入力コントロール、ラベル、2つのボタンがあり](media/working-with-variables/button-changes-state-1.png) | アプリが開始されると、実行中の合計は0になります。<br><br>赤い点は、ユーザーが**77**を入力したテキスト入力ボックスにユーザーの指を表します。 |
 | ![テキスト入力コントロールに77が含まれており、[追加] ボタンが押されています。](media/working-with-variables/button-changes-state-2.png) | ユーザーは **[追加]** ボタンを選択します。 |
 | ![合計が77で、別の77が追加されています](media/working-with-variables/button-changes-state-3.png) | 77が累計に追加されます。<br><br>ユーザーはもう一度 **[追加]** ボタンを選択します。 |
 | ![合計は、クリアされる前の154です。](media/working-with-variables/button-changes-state-4.png) | 77はもう一度累計に追加され、結果は154になります。<br><br>ユーザーは **[クリア]** ボタンを選択します。 |

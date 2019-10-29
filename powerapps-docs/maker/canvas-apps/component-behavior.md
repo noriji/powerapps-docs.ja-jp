@@ -12,10 +12,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: baf7e74581819b3ea21542f30f96a0a6f517c0d5
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 10/29/2019
 ms.locfileid: "71705043"
 ---
 # <a name="behavior-formulas-for-components"></a>コンポーネントの動作に関する数式
@@ -30,21 +30,21 @@ ms.locfileid: "71705043"
 コンポーネントマスターを選択した状態で、プロパティのドロップダウンリスト (数式バーの左側) で **[Onreset]** を選択し、1つまたは複数の数式を入力します。
 
 > [!div class="mx-imgBorder"]
-> ![OnReset の例 ](./media/component-behavior/example-onreset.png)
+> ![OnReset の例](./media/component-behavior/example-onreset.png)
 
 **Onreset**をテストするには、コンポーネントをリセットするようにコントロールを構成します。 たとえば、ボタンの**Onselect**プロパティを「 **Reset**(*ComponentName*)」という数式に設定します。
 
 ### <a name="example---reset-timer"></a>例-タイマーのリセット
 
 > [!div class="mx-imgBorder"]
-> ![OnReset の例 ](./media/component-behavior/Resettimer.gif)
+> ![OnReset の例](./media/component-behavior/Resettimer.gif)
 
 このタイムピッカーコンポーネントでは、時刻の表示に2つの変数が使用されています。 ピッカーがリセットされたら、これらの変数を既定値にリセットします (たとえば、12:12)。  コンポーネントの OnReset プロパティには、次の式があります。 **Set (selec、12)。設定 (_ 分、12)**
 
 リセットをトリガーするには、画面にアクセスし、コンポーネントのインスタンスを挿入します。 ボタンを追加し、 **reset (TimerComponent_instance)** を呼び出して onselect をトリガーするボタンの onselect を構成します。
 
 > [!div class="mx-imgBorder"]
-> ![Reset ボタン ](./media/component-behavior/reset-button.png)
+> ![リセットボタン](./media/component-behavior/reset-button.png)
 
 ## <a name="update-onreset-using-custom-property"></a>カスタムプロパティを使用して OnReset を更新する
 
@@ -55,7 +55,7 @@ ms.locfileid: "71705043"
 ### <a name="example"></a>例
 
 > [!div class="mx-imgBorder"]
-> ![OnReset の例 ](./media/component-behavior/updateordernumber2.gif)
+> ![OnReset の例](./media/component-behavior/updateordernumber2.gif)
 
 ここでは、注文番号を確認し、数値を更新する例を示します。 数値の上下のコンポーネントは、注文の数を増減するために使用されます。 左側のギャラリーを選択すると、既定の数値の上下のコンポーネントがリセットされ、選択したツールの順序番号が表示されます。 "**値の変更時に OnReset を発生させる" と**、入力の変更時に既定値をリセットできるようになりました。 
 

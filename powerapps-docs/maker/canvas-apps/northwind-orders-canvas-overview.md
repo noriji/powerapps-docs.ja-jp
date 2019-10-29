@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 48966659ca12ada12448543492731fff8431fbde
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 10/29/2019
 ms.locfileid: "71995824"
 ---
 # <a name="overview-of-the-canvas-app-for-northwind-traders"></a>Northwind Traders 用キャンバスアプリの概要
@@ -33,7 +33,7 @@ ms.locfileid: "71995824"
 アプリユーザーは、1つの画面で、注文の表示、更新、作成、および削除を行うことができます。
 
 > [!div class="mx-imgBorder"]
-> ![Complete キャンバスアプリ ](media/northwind-orders-canvas-part1/orders-finished.png)
+> キャンバスアプリ](media/northwind-orders-canvas-part1/orders-finished.png) の完全な ![
 
 ## <a name="explore-the-user-interface"></a>ユーザーインターフェイスを調べる
 
@@ -50,7 +50,7 @@ ms.locfileid: "71995824"
 右下隅には、選択した注文に含まれる製品とその数量に関する情報が別のギャラリーに表示されます。 このギャラリー内の各アイテムは、注文の詳細として知られています。 アプリユーザーは、その下にあるコントロールを使用して、ギャラリー内の任意の項目を追加および削除できます。 詳細につい[ては、「詳細ギャラリーを作成](northwind-orders-canvas-part3.md)する」を参照してください。
 
 > [!div class="mx-imgBorder"]
-> 画面領域の ![Definition ](media/northwind-orders-canvas-part1/orders-parts.png)
+> 画面領域の ![定義](media/northwind-orders-canvas-part1/orders-parts.png)
 
 ## <a name="explore-the-data-sources"></a>データソースを探索する
 

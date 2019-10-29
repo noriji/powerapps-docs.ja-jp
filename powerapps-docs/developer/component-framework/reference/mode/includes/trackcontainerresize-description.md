@@ -13,11 +13,11 @@ applies_to:
 - Dynamics 365 (online)
 - Dynamics 365 Version 9.x
 ms.assetid: 6536db92-de91-4eab-bd56-9f9eaf5e212a
-ms.openlocfilehash: 68ce5179c24d7a274c840ccae781d7fbc0918682
-ms.sourcegitcommit: 63ea15e2f861d43333aacda19230cd8922d7bdfd
+ms.openlocfilehash: 9adff0083b71c0306c1eb5aa3f7a912100573597
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "72337748"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73034568"
 ---
-コンポーネントが対処する必要がある場合に、コンテナーのサイズを決定する API。 入力が ' true ' の場合、コンポーネントは allocatedWidth または allocatedHeight を取得します
+コンポーネントが応答する必要がある場合に、コンテナーのサイズ変更を決定します。 入力が true の場合、コンポーネントは `allocatedWidth` または `allocatedHeight` を取得します。

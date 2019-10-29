@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 7d9ae4df7a4ad11a49b2a25ae78330d0cd807c9b
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 10/29/2019
 ms.locfileid: "71985244"
 ---
 # <a name="distinct-function-in-powerapps"></a>PowerApps の Distinct 関数
@@ -56,7 +56,7 @@ ms.locfileid: "71985244"
     数式は evaluatd であり、数式バーで**CityPopulations**を選択することによって表示できる**CityPopulations** collection が作成されます。
 
     > [!div class="mx-imgBorder"]
-    > 結果ビューに表示される ![CityPopulations コレクション ](media/function-distinct/citypopulations-create.png)
+    > 結果ビューに表示される ![CityPopulations collection](media/function-distinct/citypopulations-create.png)
 
 1. [**データテーブル**](../controls/control-data-table.md)コントロールを挿入し、その**Items**プロパティを次の数式に設定します。
 
@@ -67,12 +67,12 @@ ms.locfileid: "71985244"
     数式バーで数式全体を選択することで、この数式の結果を表示できます。
 
     > [!div class="mx-imgBorder"]
-    > 結果ビューに表示される Distinct 関数からの ![Output ](media/function-distinct/citypopulations-distinct.png)
+    > 結果ビューに表示される Distinct 関数からの出力の ![](media/function-distinct/citypopulations-distinct.png)
 
 1. データテーブルのプロパティペインの **[フィールドの編集]** リンクを使用すると、**結果**列を追加できます。
 
     > [!div class="mx-imgBorder"]
-    > データテーブルに表示される Distinct 関数からの ![Output ](media/function-distinct/citypopulations-datatable.png)
+    > ![データテーブルに示されている Distinct 関数からの出力](media/function-distinct/citypopulations-datatable.png)
 
 1. [**ラベル**](../controls/control-text-box.md)コントロールを挿入し、その**Text**プロパティを数式に設定します。
 
@@ -83,6 +83,6 @@ ms.locfileid: "71985244"
     この数式では、 [**Sort**](function-sort.md)関数を使用して**Distinct**の結果を並べ替え、結果のテーブルの最初のレコードを[**最初**](function-first-last.md)の関数と共に取得し、**結果**フィールドを抽出して、国名だけを取得します。
 
     > [!div class="mx-imgBorder"]
-    > 名前によって最初の国を示す Distinct 関数から ![Output ](media/function-distinct/citypopulations-first.png)
+    > 名前によって最初の国を示す Distinct 関数からの出力を ![](media/function-distinct/citypopulations-first.png)
 
      

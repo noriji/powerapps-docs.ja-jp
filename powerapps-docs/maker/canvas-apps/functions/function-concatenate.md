@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 0a56230539990ce51cc9270f71d8c2b7c9a1db73
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 10/29/2019
 ms.locfileid: "71992894"
 ---
 # <a name="concat-and-concatenate-functions-in-powerapps"></a>PowerApps の Concat および Concatenate 関数
@@ -51,7 +51,7 @@ ms.locfileid: "71992894"
 
 - **FirstName** = "Jane"
 - **LastName** = "Doe"
-- **Products**  = 、2つの列と4つの行で ![Table ](media/function-concatenate/products.png)
+- **Products** = 2 つの列と4つの行を含む![テーブル](media/function-concatenate/products.png)
 
 アプリでこれらのグローバル変数を作成するには、[**ボタン**](../controls/control-button.md)コントロールを挿入し、その**onselect**プロパティを次の数式に設定します。
 
@@ -106,8 +106,8 @@ Set( Products,
 
 | 数式 | Description | 結果 |
 |---------|-------------|--------|
-| **Left (Concat (&nbsp;Products、&nbsp;Name &nbsp; & &nbsp; "、&nbsp;" &nbsp;)、Len (&nbsp;Concat (&nbsp;Products、0Name 1 2 3 "、4" 5) 6) 7t_18 92)** | **Concat**の結果を返しますが、余分な区切り記号を形成する最後の2文字を削除します。 | "Violin, &nbsp;Cello, &nbsp;Trumpet" |
-| **Match (Concat (&nbsp;Products、&nbsp;Name &nbsp; & &nbsp; "、&nbsp;" &nbsp;)、"^ (?&lt;trim &gt;. *)、0 $ ")。 trim** | 文字列の先頭から末尾 ($) までの**Concat**の文字を返しますが、末尾には不要なコンマとスペースは含まれません。 | "Violin, &nbsp;Cello, &nbsp;Trumpet" |
+| **Left (Concat (&nbsp;Products、&nbsp;Name&nbsp;&&nbsp;"、&nbsp;"&nbsp;)、Len (&nbsp;Concat (&nbsp;Products、&nbsp;Name&nbsp;&&nbsp;"、&nbsp;"&nbsp;)&nbsp;)&nbsp;-&nbsp;2)** | **Concat**の結果を返しますが、余分な区切り記号を形成する最後の2文字を削除します。 | "Violin, &nbsp;Cello, &nbsp;Trumpet" |
+| **Match (&nbsp;製品、&nbsp;名&nbsp;&&nbsp;"、&nbsp;"&nbsp;)、"^ (?&lt;trim&gt;. *)、&nbsp;$ ")。 trim** | 文字列の先頭から末尾 ($) までの**Concat**の文字を返しますが、末尾には不要なコンマとスペースは含まれません。 | "Violin, &nbsp;Cello, &nbsp;Trumpet" |
 
 ### <a name="split-and-matchall"></a>Split と MatchAll
 
@@ -118,4 +118,4 @@ Separator**を区切り記号と共に**使用した場合は、 **Split**関数
 | 数式 | Description | 結果 |
 |---------|-------------|--------|
 | **Split (Concat (&nbsp;Products、&nbsp;Name &nbsp; & &nbsp; "、&nbsp;" &nbsp;)、"、")** | テキスト文字列を区切り記号 **","** で分割します。 文字列はコンマとスペースで終わります。そのため、結果の最後の行は空の文字列になります。  | ![Table](media/function-concatenate/split.png) |
-| **MatchAll (Concat (&nbsp;Products、&nbsp;Name &nbsp; & &nbsp; "、&nbsp;" &nbsp;)、"[^ \s,] +")。FullMatch** | スペースやコンマ以外の文字に基づいてテキスト文字列を分割します。 この数式は、文字列の末尾にある余分なコンマとスペースを削除します。 | ![Table](media/function-concatenate/matchall.png)
+| **MatchAll (Concat (&nbsp;Products、&nbsp;Name&nbsp;&&nbsp;"、&nbsp;"&nbsp;)、"[^ \s,] +")。FullMatch** | スペースやコンマ以外の文字に基づいてテキスト文字列を分割します。 この数式は、文字列の末尾にある余分なコンマとスペースを削除します。 | ![Table](media/function-concatenate/matchall.png)

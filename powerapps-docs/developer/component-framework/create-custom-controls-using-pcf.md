@@ -11,12 +11,12 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
-ms.openlocfilehash: 286458da2ed7b7b94f92b86355bf8785161ef778
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
+ms.openlocfilehash: 9a02b64321564b0a09e6b53223f13748358d76cf
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72347017"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025774"
 ---
 # <a name="create-and-build-a-code-component"></a>コードコンポーネントの作成とビルド
 
@@ -26,17 +26,18 @@ ms.locfileid: "72347017"
 
 開始するには、PowerApps CLI をインストールした後で、 **FOR VS 2017 の開発者コマンドプロンプトを**開きます。
 
-1. VS 2017 の開発者コマンドプロンプトで、ローカルコンピューター上に新しいフォルダーを作成します。たとえば、コマンド `mkdir <Specify the folder name>` を使用して*C:\Users\your name\Documents\My_PCF_Component*を作成します。
+1. VS 2017 の開発者コマンドプロンプトで、name\Documents\My_code_Component `mkdir <Specify the folder name>`コマンドを使用して*C:\Users\your*など、ローカルコンピューター上に新しいフォルダーを作成します。
 2. コマンド `cd <specify your new folder path>` を使用して、新しく作成したフォルダーにアクセスします。
-3. 次のコマンドを実行して、いくつかの基本的なパラメーターを渡して新しいコンポーネントプロジェクトを作成します。
+3. コマンドを使用していくつかの基本パラメーターを渡すことによって、新しいコンポーネントプロジェクトを作成します。
 
-    `pac pcf init --namespace <specify your namespace here> --name <put component name here> --template <component type>`
+    `pac pcf init --namespace <specify your namespace here> --name <Name of the code component> --template <component type>`
  
    > [!NOTE]
-   > 現在、PowerApps CLI では、**フィールド**と**データセット**という2種類のコンポーネントがサポートされています。  キャンバスアプリの場合、この実験的なプレビューでサポートされているのは**フィールド**の種類のみです。
+   > 現在、PowerApps CLI は、モデル駆動型アプリ用の**フィールド**と**データセット**という2種類のコンポーネントをサポートしています。  キャンバスアプリの場合、この実験的なプレビューでサポートされているのは**フィールド**の種類のみです。
 
 4. 必要なすべてのプロジェクトの依存関係を取得するには、コマンド `npm install` を実行します。
-5. 任意の開発環境でプロジェクトフォルダー `C:\Users\<your name>\Documents\<My_PCF_Component>` を開き、コードコンポーネントの開発を開始します。 開始する最も簡単な方法は、`C:\Users\<your name>\Documents\<My_PCF_Component>` ディレクトリにアクセスした後、コマンドプロンプトから `code .` を実行することです。 このコマンドにより、コンポーネントプロジェクトが Visual Studio Code で開きます。
+5. 任意の開発環境でプロジェクトフォルダー `C:\Users\<your name>\Documents\<My_code_Component>` を開き、コードコンポーネントの開発を開始します。 開始する最も簡単な方法は、`C:\Users\<your name>\Documents\<My_code_Component>` ディレクトリにアクセスした後、コマンドプロンプトから `code .` を実行することです。 このコマンドにより、コンポーネントプロジェクトが Visual Studio Code で開きます。
+6. マニフェスト、コンポーネントロジック、スタイルなど、コンポーネントに必要なアーティファクトを実装し、コンポーネントプロジェクトをビルドします。 詳細情報:[サンプルコンポーネントの実装](implementing-controls-using-typescript.md)
 
 ## <a name="build-your-component"></a>コンポーネントをビルドする
 

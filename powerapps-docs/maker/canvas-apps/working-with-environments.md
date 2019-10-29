@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: d7783113c7102d9c8b292d0ee84d4329709eeaa7
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 10/29/2019
 ms.locfileid: "71705257"
 ---
 # <a name="working-with-environments-and-microsoft-powerapps"></a>Microsoft PowerApps で環境を使用する
@@ -31,12 +31,12 @@ PowerApps では、異なる環境での作業が可能で、それらを簡単�
 サインアップして最初に PowerApps にサインインすると、既定の環境で開かれます。これは、ページの右上隅で確認できます。
 
 > [!div class="mx-imgBorder"]
-> ![Default 環境 ](./media/working-with-environments/env-dropdown.png)
+> 既定の環境](./media/working-with-environments/env-dropdown.png) の ![
 
 組織内のすべてのユーザーが既定の環境にアクセスできます。 この環境でアプリを作成し、他のユーザーとアプリを共有できます。 また、他の環境を[作成する](../../administrator/environments-administration.md)かどうかに関係なく、他の環境にアクセスすることもできます。 環境を切り替えるには、右上隅にある [環境] の一覧を開き、別の環境を選択します。 この例は、 **Microsoft**から**MyOwnEnv**への切り替えを示しています。
 
 > [!div class="mx-imgBorder"]
-> ![Switch 環境 ](./media/working-with-environments/switch-environment.png)
+> ![スイッチ環境](./media/working-with-environments/switch-environment.png)
 
 環境を切り替えた後、新しい環境には、その環境でアクセスできるすべてのアプリが表示されます。
 

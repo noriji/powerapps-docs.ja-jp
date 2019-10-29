@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 351fede5be1e0f3db74bde065dd9663672afd08a
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 10/29/2019
 ms.locfileid: "71992910"
 ---
 # <a name="collect-clear-and-clearcollect-functions-in-powerapps"></a>PowerApps の Collect、Clear、および ClearCollect 関数
@@ -86,9 +86,9 @@ ms.locfileid: "71992910"
 
 | 数式 | Description | 結果 |
 | --- | --- | --- |
-| **ClearCollect( IceCream, {&nbsp;Flavor:&nbsp;"Strawberry",&nbsp;Quantity:&nbsp;300&nbsp;} )** |**IceCream** コレクションのすべてのデータをクリアし、その後、ストロベリー アイスクリームの数量を含むレコードを追加します。 |<style>img {max width: none}</style> ![Table 1 つのレコード ](media/function-clear-collect-clearcollect/icecream-clearcollect.png)<br><br>**IceCream**コレクションも変更されています。 |
-| **Collect( IceCream, {&nbsp;Flavor:&nbsp;"Pistachio",&nbsp;Quantity:&nbsp;40&nbsp;}, {&nbsp;Flavor:&nbsp;"Orange",&nbsp;Quantity:&nbsp;200&nbsp;}  )** |数量 pistachio とオレンジのアイスクリームを含む2つのレコードを**IceCream**コレクションに追加します。 |2つのレコードを含む ![Table ](media/function-clear-collect-clearcollect/icecream-collect.png)<br><br>**IceCream**コレクションも変更されています。 |
-| **Clear( IceCream )** |**IceCream** コレクションからすべてのレコードを削除します。 |![Empty テーブル ](media/function-clear-collect-clearcollect/icecream-clear.png)<br><br>**IceCream**コレクションも変更されています。 |
+| **ClearCollect( IceCream, {&nbsp;Flavor:&nbsp;"Strawberry",&nbsp;Quantity:&nbsp;300&nbsp;} )** |**IceCream** コレクションのすべてのデータをクリアし、その後、ストロベリー アイスクリームの数量を含むレコードを追加します。 |<style>img {max width: none}</style> 1 つのレコードを含む ![テーブル](media/function-clear-collect-clearcollect/icecream-clearcollect.png)<br><br>**IceCream**コレクションも変更されています。 |
+| **Collect( IceCream, {&nbsp;Flavor:&nbsp;"Pistachio",&nbsp;Quantity:&nbsp;40&nbsp;}, {&nbsp;Flavor:&nbsp;"Orange",&nbsp;Quantity:&nbsp;200&nbsp;}  )** |数量 pistachio とオレンジのアイスクリームを含む2つのレコードを**IceCream**コレクションに追加します。 |2つのレコードを含む ![テーブル](media/function-clear-collect-clearcollect/icecream-collect.png)<br><br>**IceCream**コレクションも変更されています。 |
+| **Clear( IceCream )** |**IceCream** コレクションからすべてのレコードを削除します。 |空のテーブルの ![](media/function-clear-collect-clearcollect/icecream-clear.png)<br><br>**IceCream**コレクションも変更されています。 |
 
 コレクションを作成する手順の例については、「[コレクションの作成と更新](../create-update-collection.md)」を参照してください。
 
@@ -98,7 +98,7 @@ ms.locfileid: "71992910"
 
 | 数式 | Description | 結果 |
 | --- | --- | --- |
-| **ClearCollect (IceCream、{&nbsp;Flavor: &nbsp; "チョコレート"、&nbsp;Quantity: &nbsp;100 &nbsp;}、{&nbsp;Flavor: &nbsp; "バニラ"、&nbsp;Quantity: &nbsp;200 0})** | すべてのデータをクリアし、チョコレートとバニラアイスクリームの数量を含む2つのレコードを**IceCream**コレクションに追加します。  追加するレコードは、関数に個別の引数として提供されます。| コレクション ](media/function-clear-collect-clearcollect/icecream.png) に追加された ![Chocolate およびバニラレコード <br><br>**IceCream**コレクションも変更されています。 |
-| **ClearCollect (IceCream、Table ({&nbsp;Flavor: &nbsp; "チョコレート"、&nbsp;Quantity: &nbsp;100 &nbsp;}、{&nbsp;Flavor: &nbsp; "バニラ"、&nbsp;Quantity: &nbsp;200 0}))** | 前の例と同じですが、レコードがテーブルに結合され、1つの引数を通じて渡される点が異なります。 テーブルの内容は、 **IceCream**コレクションに追加される前にレコードによって抽出されます。 | コレクション ](media/function-clear-collect-clearcollect/icecream.png) に追加された ![Chocolate およびバニラレコード<br><br>**IceCream**コレクションも変更されています。 |
-| **ClearCollect (IceCream、<br> {&nbsp;MyFavorites: Table ({&nbsp;Flavor: &nbsp; "チョコレート"、&nbsp;Quantity: &nbsp;100 &nbsp;}、{&nbsp;Flavor: &nbsp; "バニラ"、0Quantity: 1200 2})})** | 前の例と同じですが、テーブルがレコードにラップされている点が異なります。  テーブルのレコードは抽出されず、テーブル全体がレコードのサブテーブルとして追加されます。 | コレクション ](media/function-clear-collect-clearcollect/icecream-myfavorites.png) に追加された ![Chocolate およびバニラレコード<br><br>**IceCream**コレクションも変更されています。 |
+| **ClearCollect (IceCream、{&nbsp;Flavor: &nbsp; "チョコレート"、&nbsp;Quantity: &nbsp;100 &nbsp;}、{&nbsp;Flavor: &nbsp; "バニラ"、&nbsp;Quantity: &nbsp;200 0})** | すべてのデータをクリアし、チョコレートとバニラアイスクリームの数量を含む2つのレコードを**IceCream**コレクションに追加します。  追加するレコードは、関数に個別の引数として提供されます。| コレクション](media/function-clear-collect-clearcollect/icecream.png) に追加されたチョコレートおよびバニラレコード ![ <br><br>**IceCream**コレクションも変更されています。 |
+| **ClearCollect (IceCream、Table ({&nbsp;Flavor: &nbsp; "チョコレート"、&nbsp;Quantity: &nbsp;100 &nbsp;}、{&nbsp;Flavor: &nbsp; "バニラ"、&nbsp;Quantity: &nbsp;200 0}))** | 前の例と同じですが、レコードがテーブルに結合され、1つの引数を通じて渡される点が異なります。 テーブルの内容は、 **IceCream**コレクションに追加される前にレコードによって抽出されます。 | コレクション](media/function-clear-collect-clearcollect/icecream.png) に追加されたチョコレートおよびバニラレコード ![<br><br>**IceCream**コレクションも変更されています。 |
+| **ClearCollect (IceCream、<br> {&nbsp;MyFavorites: Table ({&nbsp;Flavor: &nbsp; "チョコレート"、&nbsp;Quantity: &nbsp;100 &nbsp;}、{&nbsp;Flavor: &nbsp; "バニラ"、0Quantity: 1200 2})})** | 前の例と同じですが、テーブルがレコードにラップされている点が異なります。  テーブルのレコードは抽出されず、テーブル全体がレコードのサブテーブルとして追加されます。 | コレクション](media/function-clear-collect-clearcollect/icecream-myfavorites.png) に追加されたチョコレートおよびバニラレコード ![<br><br>**IceCream**コレクションも変更されています。 |
 

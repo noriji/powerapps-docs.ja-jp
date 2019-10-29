@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: ae82166b9cc21de1e25f99f7606ce7b95b2152b9
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 10/29/2019
 ms.locfileid: "71993975"
 ---
 # <a name="connect-to-sharepoint-from-a-canvas-app"></a>キャンバスアプリから SharePoint に接続する
@@ -43,31 +43,31 @@ SharePoint サイトに接続してカスタムリストからアプリを自動
 1. [PowerApps にサインイン](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)し、左側のナビゲーションバーで [**データ** > **接続**] を選択し、左上隅にある **[新しい接続]** を選択します。
 
     > [!div class="mx-imgBorder"]
-    > 左側のナビゲーションバーでデータ > 接続を ![Select、左上隅にある [新しい接続] を選択します。](./media/connection-sharepoint-online/new-connection.png)
+    > 左側のナビゲーションバーで [データ > 接続] を選択し、左上隅にある [新しい接続] を選択 ![ます。](./media/connection-sharepoint-online/new-connection.png)
 
 1. 右上隅にある検索ボックスに「 **sharepoint**」と入力するか貼り付け、 **[sharepoint]** を選択します。
 
     > [!div class="mx-imgBorder"]
-    > 右上隅にある検索ボックス ![In、SharePoint を入力するか貼り付け、[SharePoint] を選択します。](./media/connection-sharepoint-online/select-sharepoint.png)
+    > 右上隅の [検索] ボックスに ![て、SharePoint を入力するか貼り付け、[SharePoint] を選択します。](./media/connection-sharepoint-online/select-sharepoint.png)
 
 1. 次のいずれかの手順を実行します。
 
     - SharePoint Online に接続するには、 **[直接接続 (クラウドサービス)]** を選択し、 **[作成]** を選択して、資格情報を入力します (メッセージが表示された場合)。
 
         > [!div class="mx-imgBorder"]
-        > SharePoint Online に接続 ![To には、[直接接続 (クラウドサービス)] を選択し ](./media/connection-sharepoint-online/select-online.png)
+        > SharePoint Online に接続する ![には、[直接接続 (クラウドサービス)] を選択し](./media/connection-sharepoint-online/select-online.png)
 
         接続が作成され、既存のアプリにデータを追加したり、アプリを最初から作成したりすることができます。
 
     - オンプレミスサイトに接続するには、[オン**プレミスデータゲートウェイを使用して接続**する] を選択します。
 
         > [!div class="mx-imgBorder"]
-        > [オンプレミスのサイトに接続 ![To には、[オンプレミスデータゲートウェイを使用して接続する] を選択し ](./media/connection-sharepoint-online/select-onprem.png)
+        > オンプレミスのサイトに接続 ![には、[オンプレミスデータゲートウェイを使用して接続する] を選択し](./media/connection-sharepoint-online/select-onprem.png)
 
         認証の種類として **[Windows]** を指定し、資格情報を入力します (資格情報にドメイン名が含まれる場合は、 *<ドメイン>\<エイリアス>* 形式で入力します)。
 
         > [!div class="mx-imgBorder"]
-        > ![Specify の資格情報 ](./media/connection-sharepoint-online/specify-creds.png)
+        > 資格情報を指定 ![](./media/connection-sharepoint-online/specify-creds.png)
 
         **[ゲートウェイの選択]** で、使用するゲートウェイを選択し、 **[作成]** を選択します。
 
@@ -75,7 +75,7 @@ SharePoint サイトに接続してカスタムリストからアプリを自動
         > オンプレミスデータゲートウェイがインストールされていない場合は、ゲートウェイを[インストール](../gateway-reference.md)し、アイコンを選択して、ゲートウェイの一覧を更新します。
 
         > [!div class="mx-imgBorder"]
-        > ゲートウェイ ](./media/connection-sharepoint-online/choose-gateway.png) の ![Choose
+        > ![ゲートウェイの選択](./media/connection-sharepoint-online/choose-gateway.png)
 
         接続が作成され、既存のアプリにデータを追加したり、アプリを最初から作成したりすることができます。
 
@@ -84,24 +84,24 @@ SharePoint サイトに接続してカスタムリストからアプリを自動
 1. PowerApps Studio で、更新するアプリを開き、 **[表示]** タブを選択し、 **[データソース]** を選択します。
 
     > [!div class="mx-imgBorder"]
-    > ![On 表示] タブをクリックし、[データソース] を選択し ](./media/connection-sharepoint-online/view-data-sources.png)
+    > [表示] タブの ![、[データソース] を選択し](./media/connection-sharepoint-online/view-data-sources.png)
 
 1. **データ**ペインで、[**データソース** > **SharePoint**に追加] を選択します。
 
 1. **[SharePoint サイトへの接続]** で、 **[最近使っ]** たサイト の一覧でエントリを選択します (または、使用するサイトの URL を入力または貼り付け)、 **[接続]** を選択します。
 
     > [!div class="mx-imgBorder"]
-    > ![Select サイト ](./media/connection-sharepoint-online/select-sp-site.png)
+    > ![サイト](./media/connection-sharepoint-online/select-sp-site.png) の選択
 
 1. **[一覧の選択]** で、使用する**ドキュメント**または1つ以上の一覧のチェックボックスをオンにし、 **[接続]** を選択します。
 
     > [!div class="mx-imgBorder"]
-    > 一覧を選択 ![Under には、使用するドキュメントまたは1つ以上の一覧のチェックボックスをオンにし、[接続] を選択し ](./media/connection-sharepoint-online/select-sp-tables.png)
+    > [一覧の選択] で、使用するドキュメントまたは1つ以上の一覧のチェックボックスをオンにし、[接続] を選択し](./media/connection-sharepoint-online/select-sp-tables.png) ![
 
     すべての種類のリストが既定で表示されるわけではありません。 PowerApps ではカスタム リストはサポートされますが、テンプレート ベースのリストはサポートされません。 使用するリストの名前が表示されない場合は、一番下までスクロールし、[**カスタムテーブル名を入力**してください] と表示されているボックスにリストの名前を入力します。
 
     > [!div class="mx-imgBorder"]
-    > [カスタムリスト名を入力してください] ボックスの一覧の名前 ![Type ます。](./media/connection-sharepoint-online/custom-list.png)
+    > [カスタムリスト名を入力してください] ボックスにリストの名前を入力 ![ます。](./media/connection-sharepoint-online/custom-list.png)
 
     データソースまたはソースがアプリに追加されます。
 
@@ -145,7 +145,7 @@ SharePoint ライブラリに複数のイメージがある場合は、表示す
     ライブラリ内のイメージのファイル名が**ImageList**に表示されます。
 
     > [!div class="mx-imgBorder"]
-    > イメージの ![List ](./media/connection-sharepoint-online/dropdown-items.png)
+    > 画像の一覧を ![](./media/connection-sharepoint-online/dropdown-items.png)
 
 1. **イメージ**コントロールを追加し、 **image**プロパティを次の式に設定します。
 
@@ -156,7 +156,7 @@ SharePoint ライブラリに複数のイメージがある場合は、表示す
     指定したイメージが表示されます。
 
     > [!div class="mx-imgBorder"]
-    > ![Sample イメージ ](./media/connection-sharepoint-online/golden-honey.png)
+    > ![サンプルイメージ](./media/connection-sharepoint-online/golden-honey.png)
 
 SharePoint ライブラリからデータを表示するためのより複雑な方法を示す[サンプルアプリをダウンロード](https://pwrappssamples.blob.core.windows.net/samples/spdoclib_blogapp.msapp)できます。
 
@@ -174,13 +174,13 @@ SharePoint ライブラリからデータを表示するためのより複雑な
 目的のファイルが見つかったら、それを選択して、右上にある**ビデオ**、**画像**、または**オーディオ**コントロールに表示します。
 
 > [!div class="mx-imgBorder"]
-> ![Sample イメージ ](./media/connection-sharepoint-online/library-app.png)
+> ![サンプルイメージ](./media/connection-sharepoint-online/library-app.png)
 
 ## <a name="known-issues"></a>既知の問題
 
 ### <a name="lists"></a>表示
 
-PowerApps では、スペースを含む列名を読み取ることができますが、スペースは、16進数のエスケープコード **"\_x0020 \_"** で置き換えられます。 たとえば、SharePoint の **"Column Name"** は、PowerApps のデータ レイアウトに表示されるときや数式で使用されるときは **"Column_x0020_Name"** と表示されます。
+PowerApps では、スペースを含む列名を読み取ることができますが、スペースは、16進数のエスケープコード **"\_x0020\_"** で置き換えられます。 たとえば、SharePoint の **"Column Name"** は、PowerApps のデータ レイアウトに表示されるときや数式で使用されるときは **"Column_x0020_Name"** と表示されます。
 
 すべての種類の列がサポートされているわけではありません。また、すべての種類の列でサポートされている種類の列もありません。
 

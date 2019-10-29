@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1daf6ea280710043572a0685da6daeda78f9f620
-ms.sourcegitcommit: fa6ad01cf6d025d46564d755915caaa9db517c41
+ms.openlocfilehash: 68e702156b0a5b820dd23076551cf7970efc65a3
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72902432"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025104"
 ---
 # <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>キャンバス アプリのシステム要件、制限、構成値
 このトピックには、PowerApps についての、デバイス プラットフォーム、Web ブラウザーの要件、制限と構成値が含まれています。
@@ -117,7 +117,7 @@ PowerApps からの要求では、アプリが存在する[環境](../../adminis
 
 アプリプランごとの PowerApps を使用すると、個々のユーザーは、PowerApps のすべての機能に基づいて、特定のビジネスシナリオに対して1つのポータルで2つのアプリケーションを実行できます。 このプランでは、大規模なスケーリングを導入する前に、ユーザーが簡単にプラットフォームを使い始めることができます。
 
-管理者がアプリプランごとに PowerApps を環境に割り当てると、アプリがユーザーと共有されるときに、既定でユーザーに割り当てられます。
+管理者がアプリプランごとに PowerApps を環境に割り当てると、アプリがユーザーと共有されるときに、既定でユーザーに割り当てられます。 管理者がアプリプランごとに割り当てる方法については、[こちら](https://docs.microsoft.com/power-platform/admin/capacity-add-on)を参照してください。
 
 次の手順に従って、アプリを共有するときにユーザーに割り当てられるアプリごとのプランをオフにします。
 

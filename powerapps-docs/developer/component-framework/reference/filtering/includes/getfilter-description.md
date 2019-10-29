@@ -13,11 +13,11 @@ applies_to:
 - Dynamics 365 (online)
 - Dynamics 365 Version 9.x
 ms.assetid: b8f41b5f-7de2-4855-87a1-d052ee9aa7ae
-ms.openlocfilehash: 69fa81670dfdb4cb440ea03976e9b167b1720181
-ms.sourcegitcommit: 9a16bb75c856f7c84cd385811b7135ab2804ae69
+ms.openlocfilehash: c272904c9033aeac2b445ce81527555f2290f569
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "72339841"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73034775"
 ---
 データセットに関連付けられている最上位のフィルターを返します。

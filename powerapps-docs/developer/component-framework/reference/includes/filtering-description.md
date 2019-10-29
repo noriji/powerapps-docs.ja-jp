@@ -13,11 +13,11 @@ applies_to:
 - Dynamics 365 (online)
 - Dynamics 365 Version 9.x
 ms.assetid: 6660c40c-df2f-4fc2-9771-02c9e0d27b3a
-ms.openlocfilehash: 60b78c79d4177f5b978f54385af8708a8830480f
-ms.sourcegitcommit: 2754a58c7affa63cfd4db800780554eae45eace2
+ms.openlocfilehash: 0918d9b80a8f1499a3f61c592c1dee71febe4b7b
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "72339680"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73034637"
 ---
-データセット内のフィルター処理のためのプロパティとメソッドを提供します。
+データセット内でフィルター処理を行うためのプロパティとメソッドを提供します。

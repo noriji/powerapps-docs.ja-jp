@@ -13,11 +13,11 @@ applies_to:
 - Dynamics 365 (online)
 - Dynamics 365 Version 9.x
 ms.assetid: cf19b0b2-4da5-47c7-9c4c-24de9969bdf2
-ms.openlocfilehash: e7f746258f2c9deaed1d4525995c358fda0953dc
-ms.sourcegitcommit: 63ea15e2f861d43333aacda19230cd8922d7bdfd
+ms.openlocfilehash: f9bc0976a366ca2bddae3b4e3dbd1bb0f57372b4
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "72338139"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73034959"
 ---
 フィルター、並べ替え、リンク、新しい列に基づいてデータセットを更新します。

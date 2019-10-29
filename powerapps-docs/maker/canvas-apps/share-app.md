@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: cb8c77b60caa1f1ddf07e12f50e3cd52df764627
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.openlocfilehash: 22260480d24cea999128f3c85cdf99e839d5f740
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "71995605"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025914"
 ---
 # <a name="share-a-canvas-app-in-powerapps"></a>PowerApps でのキャンバス アプリの共有
 
@@ -155,7 +155,7 @@ PowerApps キャンバスアプリは、Azure Active Directory テナントの�
    > ゲストにライセンスを割り当てるには、Microsoft 365 管理センターのプレビューを無効にする必要がある場合があります。 
 
 3. キャンバスアプリを共有します。 
-    1. [https://make.powerapps.com](https://make.powerapps.com ) にサインインします  
+    1. https://make.powerapps.com にサインインします  
     2. **[アプリ]** にアクセスし、キャンバスアプリを選択してから、コマンドバーで **[共有]** を選択します。 
     3. Azure AD テナントのゲストユーザーの電子メールアドレスを入力します。 詳細情報: [AZURE AD B2B でのゲストユーザーアクセスとは](/azure/active-directory/b2b/what-is-b2b)
           > [!div class="mx-imgBorder"] 
@@ -201,13 +201,13 @@ IFrame HTML タグを使用して SharePoint にキャンバスアプリを埋�
 #### <a name="what-license-must-be-assigned-to-my-guest-so-they-can-run-an-app-shared-with-them"></a>ゲストに割り当てられているアプリを実行できるようにするには、どのライセンスを割り当てる必要がありますか。
 ゲスト以外がアプリを実行するために必要なものと同じライセンス。 たとえば、アプリが premium の登録を使用していない場合、PowerApps P1 ライセンスはゲストに割り当てるのに十分です。  
 
-
 |                                 | SharePoint カスタマイズフォーム | Premium 以外のコネクタを使用するスタンドアロンキャンバスアプリ | Premium コネクタを使用したスタンドアロンのキャンバスアプリ | モデル駆動型アプリ |
 |---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
 | SharePoint ユーザー (PA ライセンスなし) | x                          |                                                    |                                                |                  |
 | Office に含まれる PowerApps    | x                          |                                                    |                                                |                  |
-| PowerApps プラン1                | x                          | x                                                  |                                                |                  |
-| PowerApps Plan2                 | x                          | x                                                  | x                                              | x                |
+| アプリプランごとの PowerApps          | x                          | x                                                  | x                                              | x                |
+| PowerApps Per User プラン         | x                          | x                                                  | x                                              | x                |
+
 
 #### <a name="in-powerapps-mobile-how-does-a-guest-see-apps-for-their-home-tenant"></a>PowerApps Mobile では、ゲストがホームテナントのアプリを表示するにはどうすればよいですか。
 自分のモバイルデバイス上にあるキャンバスアプリにアクセスしたユーザーは、そのホームテナントではない Azure AD テナントで公開されているすべてのユーザーが PowerApps からサインアウトし、PowerApps Mobile に再度サインインする必要があります。  

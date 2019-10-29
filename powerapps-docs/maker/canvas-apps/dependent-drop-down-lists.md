@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 57abde44541a2a1e40e3a8ffc55a89e37a8c6478
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 10/29/2019
 ms.locfileid: "71985744"
 ---
 # <a name="create-dependent-drop-down-lists-in-a-canvas-app"></a>キャンバスアプリに依存するドロップダウンリストを作成する
@@ -82,7 +82,7 @@ ms.locfileid: "71985744"
     フォームには、追加したフィールドだけが表示されます。
 
     > [!div class="mx-imgBorder"]
-    > タイトルと添付ファイルのフィールドのない ![Form ](./media/dependent-drop-down-lists/default-form.png)
+    > タイトルと添付ファイルのフィールドのない ![フォーム](./media/dependent-drop-down-lists/default-form.png)
 
 ## <a name="replace-the-controls"></a>コントロールを置き換える
 
@@ -93,7 +93,7 @@ ms.locfileid: "71985744"
 1. **[コントロールの種類]** の一覧を開き、 **[許可さ]** れた値 を選択します。
 
     > [!div class="mx-imgBorder"]
-    > ![Allowed 値 ](./media/dependent-drop-down-lists/change-control.png)
+    > 許可される値の ![](./media/dependent-drop-down-lists/change-control.png)
 
     入力メカニズムが**ドロップダウン**コントロールに変わります。
 
@@ -108,12 +108,12 @@ ms.locfileid: "71985744"
 1. この一覧のチェックボックスをオンにし、 **[接続]** を選択します。
 
     > [!div class="mx-imgBorder"]
-    > ![Data ウィンドウ ](./media/dependent-drop-down-lists/select-list.png)
+    > ![データペイン](./media/dependent-drop-down-lists/select-list.png)
 
     接続の一覧には、フォームの基になっている**インシデント**の一覧と、フォーム内の場所と部署を識別する**場所**の一覧が表示されます。
 
     > [!div class="mx-imgBorder"]
-    > データソースの ![SharePoint ](./media/dependent-drop-down-lists/data-sources.png)
+    > SharePoint データソースの ![](./media/dependent-drop-down-lists/data-sources.png)
 
 ## <a name="unlock-the-cards"></a>カードのロックを解除する
 
@@ -130,7 +130,7 @@ ms.locfileid: "71985744"
 1. 右側のウィンドウの上部にある **[Ddlocation]** を入力または貼り付けて、選択したコントロールの名前を変更します。
 
     > [!div class="mx-imgBorder"]
-    > コントロールを ![Rename ](./media/dependent-drop-down-lists/rename-control.png)
+    > コントロールの名前を変更 ![](./media/dependent-drop-down-lists/rename-control.png)
 
 1. **Department**カードの前の2つの手順を繰り返して、**ドロップダウン**コントロールの名前を**dddepartment**に変更します。
 
@@ -154,7 +154,7 @@ ms.locfileid: "71985744"
 1. **[一致するフィールド]** で、上部の一覧から [**場所] を選択し**、下部の一覧から **[場所]** を選択し、 **[適用]** を選択します。
 
     > [!div class="mx-imgBorder"]
-    > リンク ](./media/dependent-drop-down-lists/depends-on.png) の ![Depends
+    > ![はリンク](./media/dependent-drop-down-lists/depends-on.png) に依存します
 
     **Dddepartment**の**Items**プロパティは、次の数式に設定されます。
 
@@ -167,7 +167,7 @@ ms.locfileid: "71985744"
     この手順では、SharePoint の **[場所]** ボックスの一覧の **[部門]** 列に表示されるテキストをオプションに設定します。
 
     > [!div class="mx-imgBorder"]
-    > ![Department 値 ](./media/dependent-drop-down-lists/dept-value.png)
+    > ![Department 値](./media/dependent-drop-down-lists/dept-value.png)
 
 ## <a name="test-the-form"></a>フォームをテストする
 
@@ -176,7 +176,7 @@ Alt キーを押したまま、場所の一覧を開き、1つを選択して、
 場所と部門の一覧には、SharePoint の **[場所]** リストの情報が反映されています。
 
 > [!div class="mx-imgBorder"]
-> 場所の一覧 ![Open、選択内容を Renfrew から Pembroke に変更し、部門の一覧を開き ](./media/dependent-drop-down-lists/dropdowns.gif)
+> ![の場所の一覧を開いて、選択内容を Renfrew から Pembroke に変更し、部門の一覧を開き](./media/dependent-drop-down-lists/dropdowns.gif)
 
 ## <a name="save-and-open-the-form-optional"></a>フォームを保存して開きます (省略可能)。
 
@@ -194,12 +194,12 @@ Alt キーを押したまま、場所の一覧を開き、1つを選択して、
 - ドロップダウンリストを選択し、右側のペインの **[プロパティ]** タブで **[値]** プロパティを選択します。
 
     > [!div class="mx-imgBorder"]
-    > ![Change ドロップダウン ](./media/dependent-drop-down-lists/drop-down-display-field.png)
+    > ![ドロップダウン](./media/dependent-drop-down-lists/drop-down-display-field.png) の変更
 
 - コンボボックスを選択し、プライマリテキストが表示するフィールドであることを確認します。
 
     > [!div class="mx-imgBorder"]
-    > ![Change コンボボックス ](./media/dependent-drop-down-lists/combo-box-display-field.png)
+    > コンボボックス](./media/dependent-drop-down-lists/combo-box-display-field.png) を変更 ![
 
 **[マイ子] ドロップダウンリストに重複する項目が含まれています。**
 この現象は、SharePoint で**参照**列を使用しているか、PowerApps で**choice**関数が使用されていることが原因である可能性があります。 重複を削除するには、適切にデータを返すように**個別**の関数をラップします。 詳細については、「 [Distinct 関数](functions/function-distinct.md)」を参照してください。
