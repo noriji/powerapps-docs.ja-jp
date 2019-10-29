@@ -11,12 +11,12 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a0f9abc5-c605-4433-bf5a-f8253eeeda3b
-ms.openlocfilehash: 0558004b889df59c168cfe9bdcfc7b5b5414fc02
-ms.sourcegitcommit: b8148ec3324b7ffed9fa5a28ea1f4df7e444a081
+ms.openlocfilehash: f4c8ce52907c5e49dcd782b51824ab3976ae3fcd
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72347339"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025508"
 ---
 # <a name="device"></a>ドライブ
 
@@ -43,6 +43,14 @@ ms.locfileid: "72347339"
 |[getBarcodeValue](device/getbarcodevalue.md)|[!INCLUDE [getbarcodevalue-description](device/includes/getbarcodevalue-description.md)]|
 |[getCurrentPosition](device/getcurrentposition.md)|[!INCLUDE [getcurrentposition-description](device/includes/getcurrentposition-description.md)]|
 |[ファイルの候補](device/pickfile.md)|[!INCLUDE [pickfile-description](device/includes/pickfile-description.md)]|
+
+## <a name="example"></a>例
+
+```TypeScript
+ private onUploadButtonClick(event: Event): void {
+    this._context.device.pickFile().then(this.processFile.bind(this), this.showError.bind(this));
+  }
+```
 
 ### <a name="related-topics"></a>関連トピック
 
