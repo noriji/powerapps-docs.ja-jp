@@ -9,19 +9,19 @@ ms.custom: ''
 ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer: ''
-ms.openlocfilehash: 8914bdf9415299651285b452cb1587dad03ce55d
-ms.sourcegitcommit: 5338e01d2591f76d71f09b1fb229d405657a0c1c
+ms.openlocfilehash: e9f4c65d5b2929a1f2cc51d0d3a9d29152307752
+ms.sourcegitcommit: 133c51f10fc4fe6cd105c2a6af83fc15634143d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72977659"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068746"
 ---
 # <a name="portal-templates"></a>ポータルのテンプレート
 
 選択した環境に基づいて、PowerApps で Common Data Service starter ポータルまたは Dynamics 365 ポータルを作成できます。
 
 > [!NOTE]
-> 既存のポータルと既存のポータルテンプレート (コミュニティ、パートナー、従業員のセルフサービス、カスタマーセルフサービス) は、PowerApps ポータル Studio では完全にはサポートされておらず、一部のコンポーネントはレンダリングされない場合があります。 ただし、残りのコンポーネントの編集は、通常どおり行うことができます。 
+> 既存のポータルと既存のポータルテンプレート (コミュニティ、パートナー、従業員のセルフサービス、カスタマーセルフサービス) は、PowerApps ポータル Studio では完全にはサポートされておらず、一部のコンポーネントはレンダリングされない場合があります。 ただし、コンポーネントの残りの部分は、通常どおり編集し続けることができます。 
 
 ## <a name="environment-with-common-data-service"></a>Common Data Service がある環境
 
@@ -39,7 +39,7 @@ Dynamics 365 (Dynamics 365 Sales、Dynamics 365 Customer Service、Dynamics 365 
 - **パートナーポータル**: パートナーポータルを使用すると、リセラー、ディストリビューター、サプライヤー、パートナーを持つすべての組織が、共有活動のすべてのステージにリアルタイムでアクセスできるようになります。
 
     > [!NOTE]
-    > 各オプションを有効にするには、Dynamics 365 組織にフィールドサービスパッケージとプロジェクトサービスパッケージがインストールされている必要があります。 詳細については、「 [Project Service Automation の統合](https://docs.microsoft.com/en-us/dynamics365/portals/integrate-project-service-automation)」および「[フィールドサービスの統合](https://docs.microsoft.com/en-us/dynamics365/portals/integrate-field-service)」を参照してください。
+    > 各オプションを有効にするには、Dynamics 365 組織にフィールドサービスパッケージとプロジェクトサービスパッケージがインストールされている必要があります。 詳細については、「 [Project Service Automation の統合](https://docs.microsoft.com/dynamics365/portals/integrate-project-service-automation)」および「[フィールドサービスの統合](https://docs.microsoft.com/dynamics365/portals/integrate-field-service)」を参照してください。
 
 - **従業員のセルフサービスポータル**: 従業員のセルフサービスポータルは、一般的なタスクを合理化し、すべての従業員に明確な知識のあるソースを持つことで、効率的で十分な情報を得られた従業員を作成します。
 - **コミュニティポータル**: コミュニティポータルでは、お客様と専門家の間でピアツーピアの相互作用を活用して、サポート技術情報の記事、フォーラム、ブログから利用可能なナレッジのカタログを有機拡張し、フィードバックを提供します。コメントと評価

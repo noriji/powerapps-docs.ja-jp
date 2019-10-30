@@ -1,30 +1,30 @@
 ---
 title: キャンバス アプリ用の Help Desk サンプルをインストールして構成する | Microsoft Docs
 description: PowerApps でキャンバス アプリ用の Help Desk サンプルをインストールして構成する詳細な手順を示します。
-author: yijw2017
+author: matthewbolanos
 manager: kvivek
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/08/2018
-ms.author: yijw
+ms.date: 10/29/2019
+ms.author: mabolan
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5f8744d7cc6b6048debc18775e7bf3ad7cbbff22
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 6c9195bb9256c3d977300e61efe3f2cc88cfbf67
+ms.sourcegitcommit: 0e7bdaea83adaa15da4d5c9ddbcd0b2bcbee01df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71990211"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73063396"
 ---
 # <a name="install-and-configure-the-help-desk-sample-in-powerapps"></a>PowerApps で Help Desk サンプルをインストールして構成する
 
 PowerApps でキャンバス アプリ用の Help Desk サンプルをインストールして構成する詳細な手順を示します。
 
-これらの手順の推定所要時間: **10 - 15 分**
+この手順の推定所要時間: **10 - 15 分**
 
 > [!TIP]
 > この手順のデモについては、こちらの[ビデオ](https://youtu.be/z4cdtD6hB_4)をご覧ください。

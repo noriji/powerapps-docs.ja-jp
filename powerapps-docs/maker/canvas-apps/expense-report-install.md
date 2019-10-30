@@ -1,30 +1,30 @@
 ---
 title: キャンバス アプリ用の Expense Report サンプルをインストールして構成する | Microsoft Docs
 description: PowerApps でキャンバス アプリ用の Expense Report サンプルをインストールして構成する詳細な手順を示します。
-author: yijw2017
+author: matthewbolanos
 manager: kvivek
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/08/2018
-ms.author: yijw
+ms.date: 10/29/2019
+ms.author: mabolan
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: bca1fb3760727278e42676c9f0a5ec501f9002e0
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 20b49aee68b7c8c357b49dac2218d994153da230
+ms.sourcegitcommit: 0e7bdaea83adaa15da4d5c9ddbcd0b2bcbee01df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71985786"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73063380"
 ---
 # <a name="install-and-configure-the-expense-report-sample-for-canvas-apps-in-powerapps"></a>PowerApps でキャンバス アプリ用の Expense Report サンプルをインストールして構成する
 
 Expense Report サンプルをインストールして構成する詳細な手順を示します。 また、[こちら](https://aka.ms/previewmyexpenses)からサンプル アプリをプレビューすることもできます。
 
-これらの手順の推定所要時間: **10 - 15 分**
+この手順の推定所要時間: **10 - 15 分**
 
 > [!TIP]
 > Expense Report サンプル アプリの使い方のデモについては、[こちらのビデオ](https://youtu.be/kJXZPILfbwU)をご覧ください。 
