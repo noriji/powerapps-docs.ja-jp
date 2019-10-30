@@ -135,7 +135,7 @@
           href: ./canvas-apps/sample-meeting-capture.md
     - name: 最初のアプリを作成する
       items:
-        - name: 1 - データからアプリを生成する
+        - name: 1 - データからアプリを作成する
           items:
             - name: Common Data Service から
               href: ./canvas-apps/data-platform-create-app.md
@@ -143,6 +143,8 @@
               href: ./canvas-apps/app-from-sharepoint.md
             - name: Excel から
               href: ./canvas-apps/get-started-create-from-data.md
+            - name: Azure SQL Database から
+              href: ./canvas-apps/app-from-azure-sql-database.md
         - name: 2 - 基本的なカスタマイズを行う
           items:
             - name: 1 - ギャラリー
@@ -1422,6 +1424,8 @@
       href: ./canvas-apps/common-issues-and-resolutions.md
     - name: セッションまたはアプリ ID を取得する
       href: ./canvas-apps/get-sessionid.md
+    - name: PowerApps のスタートアップに関する問題のトラブルシューティング
+      href: troubleshooting-startup-issues.md
     - name: Power Query のトラブルシューティング
       href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
     - name: サポート
