@@ -27,13 +27,13 @@ search.app:
 
 ソリューション チェックや、結果のダウンロードの要求を送信した直後に、処理が完了せずに次のようなエラーメッセージが表示される:
 
-> ***"[ソリューション名称]** のソリューション チェックを実行することができませんでした。再度実行をしてください。"*
+> ***[ソリューション名称]** のソリューション チェックを実行することができませんでした。再度実行をしてください。*
 
 実行が可能な時に、ソリューション チェッカーは潜在的な原因と解決手順の詳細へのリンクを含む特定のエラーメッセージが返されます。 詳細については **さらに詳しく** を選択してください。
 
 ![エラー メッセージ バー](media/solution-checker-missing-roles-error.png)
 
-分析処理のバックグラウンド処理にてエラーが発生した場合は、PowerAppsのポータルにて、 **完了できませんでした** のステータスとなり、エラーメッセージが返され、指定された担当者に電子メールで通知されます。 
+分析のバックグラウンド処理中に発生した障害は、**'Couldn't be completed'** ステータスで失敗すると PowerApps ポータルでエラー メッセージを返して要求者に電子メール通知を送信します。 
 
 ![エラー ステータス](media/solution-checker-exception-status.png)
 
@@ -41,11 +41,11 @@ search.app:
 
 ![エラーの通知](media/solution-checker-failure-notification.png)
 
-## <a name="solution-checker-fails-due-to-unsupported-version-of-powerapps-checker"></a>対応していないPowerAppsチェッカーのバージョンが原因となる、ソリューション チェッカーのエラー
+## <a name="solution-checker-fails-due-to-unsupported-version-of-powerapps-checker"></a>サポートされていないバージョンの PowerApps チェッカーによりソリューション チェッカーが失敗する
 
-ソリューション チェッカーは、PowerApps アプリによって有効となる機能です。  **1.0.0.47** よりも古いバージョン PowerAppsチェッカーをインストールしている場合は、ソリューション チェッカーを実行した際にはエラーになることがあります。 PowerApps チェッカーのバージョンを [!INCLUDE [pn-dyn-365-admin-center](../../includes/pn-dyn-365-admin-center.md)] からアップグレードする必要があります。 
+ソリューション チェッカーは PowerApps チェッカー アプリで有効化される機能です。  バージョン **1.0.0.47** よりも前のバージョンの PowerApps チェッカー アプリをインストールした場合、ソリューション チェッカーの実行が正常に完了しない場合があります。 PowerApps チェッカーのバージョンを [!INCLUDE [pn-dyn-365-admin-center](../../includes/pn-dyn-365-admin-center.md)] からアップグレードする必要があります。 
 
-**1.0.0.45** よりも以前のバージョンのPowerAppsチェッカーをご利用の場合は、ソリューションを削除して再度インストールをしてください。 スキーマの変更に伴い、**1.0.0.45** より以前のバージョンから PowerApps チェッカーを更新するとエラーに場合ことがあります。
+ただし、バージョンが **1.0.0.45** より前の PowerApps チェッカーがインストールされている場合は、ソリューションを削除して再インストールすることをお勧めします。 最近のスキーマの変更により、PowerApps チェッカーの **1.0.0.45** より前のバージョンからのアップグレードは失敗する可能性があります。
 
 ソリューション チェッカーの過去の結果を保持したい場合は、前回の実行からの結果をエクスポートするか、または [データをExcel にエクスポート](../../user/export-data-excel.md) を使用してすべてのソリューション チェッカーのデータを以下のエンティティからエクスポートします:
 
@@ -54,25 +54,25 @@ search.app:
 - 分析結果
 - 分析結果の詳細
 
-### <a name="how-to-uninstall-powerapps-checker"></a>PowerApps チェッカーをアンストールする
+### <a name="how-to-uninstall-powerapps-checker"></a>PowerApps チェッカーをアンインストールする方法
 
-PowerApps チェッカーソリューションをアンストールするには:
+PowerApps チェッカー ソリューションをアンインストールする方法:
 
-1. システム管理者またはシステム カスタマイザーとして https://web.powerapps.com/environments に移動して PowerApps ポータルを開きます。
+1. システム管理者またはシステム カスタマイザーとして https://web.powerapps.com/environments にアクセスして PowerApps ポータルを開きます。
 2. **ソリューション**を選択します。
-3. **PowerApps チェッカー** を選択して、ソリューション ツールバーで **削除** を選択します。
+3. **PowerApps チェッカー** を選択し、ソリューション ツールバーで **削除** を選択します。
 
-### <a name="how-to-install-powerapps-checker"></a>PowerApps チェッカーをインストールする
+### <a name="how-to-install-powerapps-checker"></a>PowerApps チェッカーをインストールする方法
 
-PowerApps チェッカーを Common Data Service 環境に再インストールするには、次の手順に従います:
+PowerApps チェッカーを Common Data Service 環境に再インストールする方法:
 
-1. システム管理者またはシステム カスタマイザーとして https://web.powerapps.com/environments に移動して PowerApps ポータルを開きます。
+1. システム管理者またはシステム カスタマイザーとして、https://web.powerapps.com/environments にアクセスして PowerApps ポータルを開きます。
 2. **ソリューション**を選択します。
 3. ソリューション ツールバーで **ソリューション チェッカー** を選択し、次に **Install** を選択します。
 
 ## <a name="solution-checker-cant-access-organizations-in-administration-mode"></a>ソリューションチェッカー は管理者モードでは組織にアクセスすることができません
 
-[管理者モード](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) に設定された組織は、システム管理者およびシステム カスタマイザの役割を持つユーザーだけに意図的なアクセスを制限を行います。 PowerApps チェッカー アプリケーションのIDには、これらの役割が既定で割り当てられていないため、このモードにて使用している組織にはアクセスできません。
+[管理者モード](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) に設定された組織は、システム管理者およびシステム カスタマイザの役割を持つユーザーだけに意図的なアクセスを制限を行います。 PowerApps チェッカー アプリケーション ID に既定でこれらのロールが割り当てられておらず、このモードで動作する組織にアクセスできません。
 
 ソリューションチェッカー をこの組織にて使用するには、管理者モードを無効にする必要があります。
 
@@ -80,7 +80,7 @@ PowerApps チェッカーを Common Data Service 環境に再インストール�
 
 組織のインスタンスで管理者モードを無効にするには:
 
-1. Dynamics 365 の Customer Engagement アプリのインスタンス ピッカーを開きます: : https://port.crm.dynamics.com/G/Instances/InstancePicker.aspx
+1. Dynamics 365 インスタンス ピッカーを開きます: https://port.crm.dynamics.com/G/Instances/InstancePicker.aspx。
 2. ソリューション チェッカーの実行に問題がある組織のインスタンスを選択します。
 3. **管理** を選択します。<br/>
 ![インスタンスの管理](media/solution-checker-instance-admin.png)
@@ -92,17 +92,17 @@ PowerApps チェッカーを Common Data Service 環境に再インストール�
 
 ## <a name="solution-checker-fails-due-to-missing-security-roles"></a>セキュリティ役割が存在しないことに起因するソリューションチェッカーのエラー
 
-ソリューションチェッカーを使用するユーザーには、 2つのセキュリティ役割が必要となります。これにより Common Data Service の組織と連携に必要な権限が与えられます。 **PowerApps チェッカー**にこのいずれの役割も割り当てられていない場合は、分析の実行、結果のダウンロード、キャンセルの実行は失敗します。 これは予期しないユーザーがセキュリティ役割を削除してしまうような自動化処理が実装されている場合に発生します。 以下のセキュリティ役割はには必要とされる最低限の権限が含まれています:
+ソリューションチェッカーを使用するユーザーには、 2つのセキュリティ役割が必要となります。これにより Common Data Service の組織と連携に必要な権限が与えられます。 これらのロールのいずれかが **'PowerApps チェッカー'** ユーザーに割り当てられていない場合、分析の実行、結果のダウンロード、キャンセルの実行は失敗します。 これは予期しないユーザーがセキュリティ役割を削除してしまうような自動化処理が実装されている場合に発生します。 以下のセキュリティ役割はには必要とされる最低限の権限が含まれています:
 
 - カスタマイズのエクスポート
 - ソリューション チェッカー
 
 ### <a name="how-to-assign-missing-security-roles"></a>不足しているセキュリティ役割の割り当て
 
-PowerAppsチェッカーのユーザーに不足している セキュリティ役割を割り当てる:
+足りないセキュリティ ロールを PowerApps チェッカー ユーザーに割り当てる方法:
 
 1. Common Data Service の組織を開き、 **設定** > **セキュリティ** > **ユーザー**に移動します。
-2. ユーザーのリストから **PowerAppsチェッカー** のユーザーを選択します。
+2. ユーザーのリストから **'PowerApps チェッカー'** ユーザーを選択します。
 3. コマンドバーにて、 **役割の管理** を選択します。
 4. **カスタマイズのエクスポート** と **ソリューション チェッカー** の役割のチェックボックスを選択し、 **OK** を選択します。<br/>
 ![必要なセキュリティ役割](media/solution-checker-required-roles.png)
@@ -113,14 +113,14 @@ PowerAppsチェッカーのユーザーに不足している セキュリティ�
 
 ソリューションチェッカーを使用するユーザーには、 **非対話型** または **読み書き** のアクセスモードが必要となります。これにより Common Data Service の組織と連携に必要な権限が与えられます。 アクセスモードが **管理者** のような値に変更されている場合は、分析の実行、結果のダウンロード、キャンセルの実行は失敗します。
 
-このエラーを解決するには、 **PowerApps チェッカー** アプリケーションのユーザーのアクセスモードを非対話型に更新する必要があります。
+この問題を解決するには「非対話型」アクセス モードで **'PowerApps チェッカー'** アプリケーション ユーザーを更新する必要があります。
 
 ### <a name="how-to-update-user-access-mode"></a>ユーザーのアクセスモードを更新する
 
-PowerAppsチェッカー のユーザーのアクセスモードを更新するには:
+PowerApps チェッカー ユーザーのアクセス モードを更新する方法:
 
 1. Common Data Service の組織を開き、 **設定** > **セキュリティ** > **ユーザー**に移動します。
-2. ユーザーのリストから **PowerApps チェッカー** のユーザーを選択し、ダブルクリックしてゆーーざーフォームを開きます。
+2. ユーザーのリストから **'PowerApps チェッカー'** ユーザーを選択し、ダブルクリックでユーザー フォームを開きます。
 3. フォームの **管理** > **クライアント アクセス ライセンス (CAL) 情報** へとスクロールします。
 4. **アクセスモード** のドロップダウンリストコントロールから **非対話型** を選択します。<br/>
 ![[アクセス モード]](media/solution-checker-access-mode.png)
@@ -130,26 +130,26 @@ PowerAppsチェッカー のユーザーのアクセスモードを更新する�
 
 ## <a name="solution-checker-fails-due-to-disabled-first-party-application-in-aad"></a>AADでファースト パーティのアプリケーションが無効になっていることが原因で、ソリューション チェッカーがエラーとなる
 
-ソリューション チェッカー (PowerApps-Advisor) が使用するファーストパーティのエンタープライズアプリケーションのIDは、 Azure Active Directory (AAD)にて有効となっている必要があります。 これが無効になっていると、要求されたユーザーの代理として Common Data Service とその他の必要なリソース プロバイダのベアラー トークンを要求する際に、IDの認証ができません。 
+ソリューション チェッカー (PowerApps-アドバイザー) で使用するファースト パーティのエンタープライズ アプリケーション ID を、Azure Active Directory (AAD) で無効化することはできません。 これが無効になっていると、要求されたユーザーの代理として Common Data Service とその他の必要なリソース プロバイダのベアラー トークンを要求する際に、IDの認証ができません。 
 
 次の手順に従って、AADにてアプリケーションIDが無効になっていないことを確認し、必要に応じてアプリケーションを有効にします。
 
 ### <a name="how-to-verify-andor-modify-application-enabled-status"></a>アプリケーションの有効状態を確認/変更する
 
-PowerApps-Advisorエンタープライズ アプリケーションIDの有効ステータスを確認/変更するには、以下の手順に従います。
+PowerApps-アドバイザー エンタープライズ アプリケーション ID の有効化状態を確認や変更する方法
 
 1. [Azure Active Directory (AAD) ポータル](https://aad.portal.azure.com/) にてご利用のテナントにアクセスします。
 2. **エンタープライズ アプリケーション**に移動します。
-3. **すべてのアプリケーション** を選択し、 **PowerApps-Advisor** を検索します。<br/>
-![Search PowerApps-Advisor app](media/solution-checker-search-advisor-app.png) のPowerApps-Advisor アプリ を検索する
+3. **すべてのアプリケーション** を選択して **'PowerApps-アドバイザー'** を検索します。<br/>
+![PowerApps-アドバイザー アプリを検索](media/solution-checker-search-advisor-app.png)
 
-4. **'PowerApps-Advisor'** を選択し、アプリの詳細を確認します。
+4. **'PowerApps-アドバイザー'** を選択してアプリの詳細を表示します。
 5. **プロパティ** を選択します。
 6. **ユーザーをサインインできるようにする** の状態を確認します。 **いいえ** になっている場合は、アプリケーションは無効となります。<br/>
 ![無効にされたエンタープライズアプリ](media/solution-checker-disabled-app.png)
 
 7. ラジオボタンを **はい** に変更します。 このアプリケーション オブジェクト<br/>
-![Enable PowerApps-Advisor app](media/solution-checker-enable-app.png)のPowerApps-Advisor アプリ を有効にする
+![PowerApps-アドバイザー アプリの有効化](media/solution-checker-enable-app.png)
 
 8. **保存**を選択します。 このアプリケーションが有効になりました。 変更が適用されるまで数分かかる場合があります。
 9. ソリューション チェッカーを再実行

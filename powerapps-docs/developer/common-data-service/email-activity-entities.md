@@ -17,12 +17,12 @@ search.app:
 ---
 # <a name="email-activity-entities"></a>電子メール活動エンティティ
 
-電子メール活動を使用すると、顧客との電子メール通信を追跡および管理できます。 Common Data Service には、Common Data Service との間の電子メールのルーティングを管理する電子メール ルーター ソフトウェアが含まれています。 電子メール活動は、電子メール プロトコルを使用して配信されます。 電子メール ルーターは、Exchange Web サービス、POP3、および SMTP の電子メール プロトコルをサポートしています。 電子メール ルーターのソフトウェアに加え、電子メール活動は Dynamics 365 for Outlook を使用して配信することもできます。  
+電子メール活動を使用すると、顧客との電子メール通信を追跡および管理できます。 Common Data Service には、Common Data Service との間の電子メールのルーティングを管理する電子メール ルーター ソフトウェアが含まれています。 電子メール活動は、電子メール プロトコルを使用して配信されます。 電子メール ルーターは、Exchange Web サービス、POP3、および SMTP の電子メール プロトコルをサポートしています。 電子メール ルーターに加え、電子メール活動は Dynamics 365 for Outlook を使用して配信することもできます。  
   
 <a name="Actions"></a>   
 
 ## <a name="actions-on-an-email-activity"></a>電子メール活動のアクション  
- Dynamics 365 Customer Engagement Web サービスを使用して、電子メール活動で以下のアクションを実行できます。  
+ Common Data Service Web サービスでは、電子メール活動の以下のアクションを実行できます。  
   
 - 電子メール活動を作成、取得、更新、削除する。  
   
@@ -32,17 +32,17 @@ search.app:
   
 - 大量の電子メールを一括で送信する。  
   
-- 着信した電子メール メッセージが Microsoft Exchange Server からユーザーまたはキューへ配信されるようにする、または発信するメッセージがユーザーまたはキューから Microsoft Exchange Server へ送信されるようにします。 キューに対して着信の電子メール メッセージを構成する方法については、[受信メッセージ用電子メールを構成する](/dynamics365/customer-engagement/developer/configure-email-incoming-messages) を参照してください。  
+- 着信した電子メール メッセージが Microsoft Exchange Server からユーザーまたはキューへ配信されるようにする、または発信するメッセージがユーザーまたはキューから Microsoft Exchange Server へ送信されるようにする。 キューに対して着信の電子メール メッセージを構成する方法については、[受信メッセージ用電子メールを構成する](/dynamics365/customer-engagement/developer/configure-email-incoming-messages) を参照してください。  
   
    `Organization.RequireApprovalForuserEmail` と `Organization.RequireApprovalForQueueEmail` (承認されたユーザー/キューに関してだけ電子メールを処理する) 組織属性が **true** (1) に設定されている場合、電子メール メッセージはユーザー/キューの既定電子メール アドレスが承認されている場合に限ってユーザー/キューから配信または送信されます。 `SystemUser.EmailRouterAccessApproval` と `Queue.EmailRouterAccessApproval` 属性は、それぞれユーザーとキューの既定電子メール アドレスのステータスを示し、値を 1 に設定する必要があります。 それ以外の場合は、受信メッセージと送信メッセージがブロックされます。 まだ承認状態でない場合、現在使用しているユーザー アカウントに **prvApproveRejectEmailAddress** 権限が割り当てられていれば、ユーザーまたはキュー レコードを更新してこの属性値を変更できます。
   
 > [!NOTE]
->  Common Data Service で `Email.StatusCode` 属性を **null** にできません。  
+>  Common Data Service では、`Email.StatusCode` 属性を **null** にできません。  
   
 <a name="BulkE-Mail"></a>   
 
-## <a name="bulk-email"></a>電子メールの一括処理  
- Common Data Service は電子メールの一括処理要求を通じて、大きな受信者リスト対して電子メールを送信する機能をサポートしています。 電子メールの一括処理要求が Common Data Service に送られると、非同期サービス キュー内に非同期処理が作成され、それがバックグラウンド プロセスを使用してそのすべての電子メール メッセージを送信します。 これでシステム パフォーマンスが向上します。  
+## <a name="bulk-email"></a>電子メール広告  
+ Common Data Service は、電子メールの一括処理要求を通じて大きな受信者リストに電子メールを送信する機能をサポートしています。 電子メールの一括処理要求が Common Data Service に送られると、非同期サービス キュー内に非同期処理が作成され、それがバックグラウンド プロセスを使用してそのすべての電子メール メッセージを送信します。 これでシステム パフォーマンスが向上します。  
   
  電子メール メッセージの一括送信には <xref:Microsoft.Crm.Sdk.Messages.SendBulkMailRequest> メッセージと <xref:Microsoft.Crm.Sdk.Messages.BackgroundSendEmailRequest> メッセージが使用されます。 電子メールの一括送信のシーケンスは次のとおりです。  
   

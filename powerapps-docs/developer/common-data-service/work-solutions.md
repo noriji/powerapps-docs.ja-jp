@@ -39,8 +39,8 @@ search.app:
   
   以下のサンプルでは、最初に発行元を定義した後、一意の名前に基づいて発行元が既に存在するかどうかを確認します。 既に存在する場合は、カスタマイズの接頭辞が変更されている可能性があるので、現在のカスタマイズの接頭辞を探して取得します。 `PublisherId` を取得することで、発行元のレコードを削除することもできます。 発行者が見つからない場合は、<xref:Microsoft.Xrm.Sdk.IOrganizationService> を使用して新しい発行者が作成されます。 <xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*> メソッド 
 
-  ```csharp
-  //Define a new publisher
+ ```csharp
+//Define a new publisher
 Publisher _crmSdkPublisher = new Publisher
 {
     UniqueName = "sdksamples",
@@ -50,7 +50,6 @@ Publisher _crmSdkPublisher = new Publisher
     EMailAddress = "someone@microsoft.com",
     Description = "This publisher was created with samples from the Microsoft Dynamics CRM SDK"
 };
-
 //Does publisher already exist?
 QueryExpression querySDKSamplePublisher = new QueryExpression
 {
@@ -62,7 +61,6 @@ QueryExpression querySDKSamplePublisher = new QueryExpression
 querySDKSamplePublisher.Criteria.AddCondition("uniquename", ConditionOperator.Equal, _crmSdkPublisher.UniqueName);
 EntityCollection querySDKSamplePublisherResults = _serviceProxy.RetrieveMultiple(querySDKSamplePublisher);
 Publisher SDKSamplePublisherResults = null;
-
 //If it already exists, use it
 if (querySDKSamplePublisherResults.Entities.Count > 0)
 {
@@ -77,12 +75,14 @@ if (SDKSamplePublisherResults == null)
     Console.WriteLine(String.Format("Created publisher: {0}.", _crmSdkPublisher.FriendlyName));
     _customizationPrefix = _crmSdkPublisher.CustomizationPrefix;
 }
-  ``` 
+``` 
   
-<a name="BKMK_RetrieveDefaultPublisher"></a>   
+<a name="BKMK_RetrieveDefaultPublisher"></a>
+   
 ## <a name="retrieve-the-default-publisher"></a>既定の発行元の取得  
- このサンプルは既定の発行者を取得する方法を示します。 既定の発行元の不変 GUID 値は `d21aab71-79e7-11dd-8874-00188b01e34f` です。  
-  
+
+このサンプルは既定の発行者を取得する方法を示します。 既定の発行元の不変 GUID 値は `d21aab71-79e7-11dd-8874-00188b01e34f` です。  
+
 ```csharp
 // Retrieve the Default Publisher
 
@@ -120,7 +120,7 @@ Console.WriteLine("Retrieved the {0}.", DefaultPublisherReference.Name);
   
   このサンプルでは、一意の名前を基にして組織内にソリューションが既に存在するかどうかを調べます。 ソリューションが存在しない場合は作成します。 ソリューションを削除できるように、`SolutionId` の値を取得します。  
   
-  ```csharp
+ ```csharp
   // Create a Solution
 //Define a solution
 Solution solution = new Solution
@@ -155,11 +155,13 @@ if (SampleSolutionResults == null)
 }
   ```
   
-<a name="BKMK_RetrieveASolution"></a>   
-## <a name="retrieve-a-solution"></a>ソリューションの取得  
- 特定のソリューションを取得するには、ソリューションの `UniqueName` を使用します。 各組織には既定のソリューションがあり、その不変 GUID 値は `FD140AAF-4DF4-11DD-BD17-0019B9312238` です。  
+<a name="BKMK_RetrieveASolution"></a> 
   
- このサンプルでは、一意の名前 ”samplesolution” のソリューション用にデータを取得する方法を示します。 この名前のソリューションは、「[ソリューションの作成](work-solutions.md#BKMK_CreateASolution)」で作成されます。  
+## <a name="retrieve-a-solution"></a>ソリューションの取得  
+
+特定のソリューションを取得するには、ソリューションの `UniqueName` を使用します。 各組織には既定のソリューションがあり、その不変 GUID 値は `FD140AAF-4DF4-11DD-BD17-0019B9312238` です。  
+  
+このサンプルでは、一意の名前 ”samplesolution” のソリューション用にデータを取得する方法を示します。 この名前のソリューションは、「[ソリューションの作成](work-solutions.md#BKMK_CreateASolution)」で作成されます。  
   
  ```csharp
  // Retrieve a solution
@@ -175,9 +177,11 @@ querySampleSolution.Criteria.AddCondition("uniquename", ConditionOperator.Equal,
 Solution SampleSolution = (Solution)_serviceProxy.RetrieveMultiple(querySampleSolution).Entities[0];
  ``` 
   
-<a name="BKMK_AddANewSolutionComponent"></a>   
-## <a name="add-a-new-solution-component"></a>新しいソリューション コンポーネントの追加  
- このサンプルでは、特定のソリューションに関連付けられたソリューション コンポーネントの作成方法を示します。 ソリューション コンポーネントを作成したときに、特定のソリューションと関連付けないと、コンポーネントは既定のソリューションだけに追加され、手動でコンポーネントをソリューションに追加するか、または「[既存のソリューション コンポーネントの追加](work-solutions.md#BKMK_AddExistingSolutionComponent)」で示されているコードを使用する必要が生じます。  
+<a name="BKMK_AddANewSolutionComponent"></a> 
+  
+## <a name="add-a-new-solution-component"></a>新しいソリューション コンポーネントの追加 
+ 
+このサンプルでは、特定のソリューションに関連付けられたソリューション コンポーネントの作成方法を示します。 ソリューション コンポーネントを作成したときに、特定のソリューションと関連付けないと、コンポーネントは既定のソリューションだけに追加され、手動でコンポーネントをソリューションに追加するか、または「[既存のソリューション コンポーネントの追加](work-solutions.md#BKMK_AddExistingSolutionComponent)」で示されているコードを使用する必要が生じます。  
   
  このコードでは、新しいグローバル オプション セットを作成し、一意の名前が `_primarySolutionName` であるソリューションに追加します。  
   
@@ -203,11 +207,13 @@ createOptionSetRequest.SolutionUniqueName = _primarySolutionName;
 _serviceProxy.Execute(createOptionSetRequest);
  ```  
   
-<a name="BKMK_AddExistingSolutionComponent"></a>   
+<a name="BKMK_AddExistingSolutionComponent"></a>  
+ 
 ## <a name="add-an-existing-solution-component"></a>既存のソリューション コンポーネントの追加  
- このサンプルは、ソリューションに既存のソリューション コンポーネントを追加する方法を示します。  
+
+このサンプルは、ソリューションに既存のソリューション コンポーネントを追加する方法を示します。  
   
- 次のコードでは、<xref:Microsoft.Crm.Sdk.Messages.AddSolutionComponentRequest> を使用して、`Account` エンティティをアンマネージド ソリューションにソリューション コンポーネントとして追加します。  
+次のコードでは、<xref:Microsoft.Crm.Sdk.Messages.AddSolutionComponentRequest> を使用して、`Account` エンティティをアンマネージド ソリューションにソリューション コンポーネントとして追加します。  
   
  ```csharp
  // Add an existing Solution Component
@@ -226,9 +232,11 @@ AddSolutionComponentRequest addReq = new AddSolutionComponentRequest()
 _serviceProxy.Execute(addReq);
 ``` 
   
-<a name="BKMK_RemoveSolutionComponent"></a>   
+<a name="BKMK_RemoveSolutionComponent"></a>  
+ 
 ## <a name="remove-a-solution-component"></a>ソリューション コンポーネントの削除  
- このサンプルは、アンマネージド ソリューションからソリューション コンポーネントを削除する方法を示します。 次のコードでは、<xref:Microsoft.Crm.Sdk.Messages.RemoveSolutionComponentRequest> を使用して、エンティティ ソリューション コンポーネントをアンマネージド ソリューションから削除します。 `solution.UniqueName` は、「[ソリューションの作成](work-solutions.md#BKMK_CreateASolution)」で作成したソリューションを参照します。  
+
+このサンプルは、アンマネージド ソリューションからソリューション コンポーネントを削除する方法を示します。 次のコードでは、<xref:Microsoft.Crm.Sdk.Messages.RemoveSolutionComponentRequest> を使用して、エンティティ ソリューション コンポーネントをアンマネージド ソリューションから削除します。 `solution.UniqueName` は、「[ソリューションの作成](work-solutions.md#BKMK_CreateASolution)」で作成したソリューションを参照します。  
   
  ```csharp
  // Remove a Solution Component
@@ -248,9 +256,11 @@ RemoveSolutionComponentRequest removeReq = new RemoveSolutionComponentRequest()
 _serviceProxy.Execute(removeReq);
 ```
   
-<a name="BKMK_ExportPackageSolution"></a>   
+<a name="BKMK_ExportPackageSolution"></a>
+   
 ## <a name="export-or-package-a-solution"></a>ソリューションのエクスポートまたはパッケージ化  
- このサンプルでは、アンマネージド ソリューションのエクスポートまたはパッケージの方法を示します。 このコードでは、<xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest> を使用して、アンマネージド ソリューションを表す圧縮されたファイルをエクスポートします。 マネージド ソリューションを作成するためのオプションは、<xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest.Managed> プロパティを使用して設定します。 このサンプルでは、samplesolution.zip という名前のファイルを `c:\temp\` フォルダーに保存します。  
+
+このサンプルでは、アンマネージド ソリューションのエクスポートまたはパッケージの方法を示します。 このコードでは、<xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest> を使用して、アンマネージド ソリューションを表す圧縮されたファイルをエクスポートします。 マネージド ソリューションを作成するためのオプションは、<xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest.Managed> プロパティを使用して設定します。 このサンプルでは、*samplesolution.zip* という名前のファイルを `c:\temp\` フォルダーに保存します。  
   
 ```csharp
 // Export or package a solution
@@ -269,13 +279,15 @@ File.WriteAllBytes(outputDir + filename, exportXml);
 Console.WriteLine("Solution exported to {0}.", outputDir + filename);
 ``` 
 
-<a name="BKMK_InstallUpgradeSolution"></a>   
+<a name="BKMK_InstallUpgradeSolution"></a>  
+ 
 ## <a name="install-or-upgrade-a-solution"></a>ソリューションのインストールまたはアップグレード  
- このサンプルは、<xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest> メッセージを使用してソリューションインストールまたはアップグレードするする方法を説明します。  
+
+このサンプルは、<xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest> メッセージを使用してソリューションインストールまたはアップグレードするする方法を説明します。  
   
- `ImportJob` エンティティを使用すると、成功したインポートについてのデータを取得できます。  
+`ImportJob` エンティティを使用すると、成功したインポートについてのデータを取得できます。  
   
- 以下のサンプルは、成功したかどうかを追跡せずにソリューションをインポートする方法を示します。  
+以下のサンプルは、成功したかどうかを追跡せずにソリューションをインポートする方法を示します。  
   
  ```csharp
  // Install or Upgrade a Solution                  
@@ -293,6 +305,7 @@ Console.WriteLine("Imported Solution from {0}", ManagedSolutionLocation);
  ```  
   
 ### <a name="tracking-import-success"></a>インポートの成功の追跡
+
  `ImportSolutionRequest` に対して <xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest.ImportJobId> を指定すると、その値を使用してインポートの状態を `ImportJob` エンティティにクエリできます。  
   
  `ImportJobId` を使用すると、<xref:Microsoft.Crm.Sdk.Messages.RetrieveFormattedImportJobResultsRequest> メッセージを使用してインポート ログ ファイルをダウンロードすることもできます。  
@@ -350,7 +363,7 @@ foreach (System.Xml.XmlNode node in optionSets)
 }
 ```   
   
- `Data` プロパティの内容は XML ファイルを表す文字列です。 このサンプルのコードを使用して取得されるもののサンプルを次に示します。 このマネージド ソリューションには、`sample_tempsampleglobaloptionsetname` という名前のグローバル オプション セットが 1 つ含まれていました。  
+`Data` プロパティの内容は XML ファイルを表す文字列です。 このサンプルのコードを使用して取得されるもののサンプルを次に示します。 このマネージド ソリューションには、`sample_tempsampleglobaloptionsetname` という名前のグローバル オプション セットが 1 つ含まれていました。  
   
 ```xml  
 <importexportxml start="634224017519682730"  

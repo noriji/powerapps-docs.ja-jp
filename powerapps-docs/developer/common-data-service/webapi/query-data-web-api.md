@@ -2,7 +2,7 @@
 title: Web API を使用してデータのクエリを実行する (Common Data Service)| Microsoft Docs
 description: Common Data Service Web APIを使用して Common Data Service データをクエリするさまざまな方法と、これらのクエリに適用できるさまざまなシステム クエリ オプションについて説明します。
 ms.custom: ''
-ms.date: 07/23/2019
+ms.date: 09/10/2019
 ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -34,7 +34,8 @@ search.app:
  **要求**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$top=3 HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$top=3 HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -161,7 +162,9 @@ Preference-Applied: odata.maxpagesize=3
  エンティティ セットのために URL に追加する各システム クエリ オプションは、クエリ文字列の構文を使用して追加されます。 最初のクエリは [?] の後に追加され、それ以降のクエリ オプションは [&] を使用して分離されます。 すべてのクエリ オプションは、次の例のように大文字と小文字が区別されます。  
   
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue&$top=3&$filter=revenue gt 100000  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
+&$top=3
+&$filter=revenue gt 100000  
 ```  
   
 <a name="bkmk_requestProperties"></a>
@@ -234,7 +237,8 @@ Web API では、以下の標準 OData 文字列クエリ機能がサポート�
 Common Data Service には、パラメーターを受入れ、ブール値を返し、クエリでフィルター条件として使用できる、様々な特別な関数が用意されています。 これらの関数の一覧は、<xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>を参照してください。 以下は <xref href="Microsoft.Dynamics.CRM.Between?text=Between Function" />の例で、5 ～ 2000 の間の従業員数の取引先企業を検索します。  
   
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,numberofemployees&$filter=Microsoft.Dynamics.CRM.Between(PropertyName='numberofemployees',PropertyValues=["5","2000"])  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,numberofemployees
+&$filter=Microsoft.Dynamics.CRM.Between(PropertyName='numberofemployees',PropertyValues=["5","2000"])  
 ```  
   
 詳細: [関数を使用してクエリを作成する](use-web-api-functions.md#bkmk_composeQueryWithFunctions) 
@@ -256,7 +260,8 @@ Web APIでは、 `any` と `all` の2つのラムダ演算子を使用して、�
 以下の例では、件名に「sometext」 が含まれる電子メールが1つ以上ある、すべてのアカウント エンティティ レコードを取得する方法を示しています。
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Emails/any(o:contains(o/subject,'sometext')) HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=Account_Emails/any(o:contains(o/subject,'sometext')) HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json  
 OData-MaxVersion: 4.0  
@@ -273,7 +278,8 @@ OData-Version: 4.0
 以下の例では、関連するすべてのタスクがクローズされている、すべての取引先企業エンティティ レコードを取得する方法を示しています。
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Tasks/all(o:o/statecode eq 1) HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=Account_Tasks/all(o:o/statecode eq 1) HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json  
 OData-MaxVersion: 4.0  
@@ -283,7 +289,9 @@ OData-Version: 4.0
 次の例では、件名に「sometext」が含まれ、ステートコードがアクティブな電子メールが1つ以上ある、すべての取引先企業エンティティ レコードを取得する方法を示しています。
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Account_Emails/any(o:contains(o/subject,'sometext') and o/statecode eq 0) HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=Account_Emails/any(o:contains(o/subject,'sometext') and 
+o/statecode eq 0) HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json
 OData-MaxVersion: 4.0
@@ -293,7 +301,10 @@ OData-Version: 4.0
 以下の例は、 `any` と `all` 演算子を使用してネストされたクエリーを作成する方法を示しています。
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=(contact_customer_accounts/any(c:c/jobtitle eq 'jobtitle' and c/opportunity_customer_contacts/any(o:o/description ne 'N/A'))) and endswith(name,'{0}') HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=(contact_customer_accounts/any(c:c/jobtitle eq 'jobtitle' and 
+c/opportunity_customer_contacts/any(o:o/description ne 'N/A'))) and 
+endswith(name,'{0}') HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json
 OData-MaxVersion: 4.0
@@ -304,25 +315,23 @@ OData-Version: 4.0
 
 以下の例では、[any 演算子](#bkmk_anyoperator)を使用して、以下のものを持つすべての取引先企業レコードを取得する方法を示しています:
 
-- リンクされた営業案件レコードの予算が500以上の場合、かつ
+- リンクされた営業案件レコードの予算のいずれかが 300 以上の場合、かつ
 - 営業案件レコードの摘要に記述がない、または
-- 営業案件レコードの摘要に 「*良好*」という語句が含まれている。
+- 営業案件レコードの摘要に 「*不適切*」 という語句が含まれている。
 
 **要求**
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=not opportunity_customer_accounts/any(o:o/description eq null and o/budgetamount le 300 or contains(o/description, 'bad')) and opportunity_customer_accounts/any() and endswith(name,'{0}') HTTP/1.1
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=not opportunity_customer_accounts/any(o:o/description eq null and 
+o/budgetamount le 300 or 
+contains(o/description, 'bad')) and 
+opportunity_customer_accounts/any() and 
+endswith(name,'{0}') HTTP/1.1
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0 
 ```
-
-> [!NOTE]
-> [Microsoft.Dynamics.CRM.EqualUserId](/dynamics365/customer-engagement/web-api/equaluserid) 関数などのカスタム関数では、 `NOT` 演算子を使用できません。 たとえば、以下のクエリは有効なクエリではありません。
->
-> ```http
-> GET [Organization URI]/api/data/v9.1/accounts?$filter=NOT Microsoft.Dynamics.CRM.EqualUserId(Name='Contoso')
-> ```
 
 <a name="BKMK_FilterNavProperties"></a>
 
@@ -339,7 +348,8 @@ OData-Version: 4.0
 **要求** 
  
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=primarycontactid/contactid%20eq%20a0dbf27c-8efb-e511-80d2-00155db07c77 HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=primarycontactid/contactid eq a0dbf27c-8efb-e511-80d2-00155db07c77 HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -374,7 +384,8 @@ OData-Version: 4.0
 **要求**  
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=parentaccountid/accountid%20eq%203adbf27c-8efb-e511-80d2-00155db07c77  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=parentaccountid/accountid eq 3adbf27c-8efb-e511-80d2-00155db07c77  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -416,7 +427,9 @@ OData-Version: 4.0
 ラムダ演算子を使用することで、リンク エンティティの収集プロパティの値にフィルターを適用することができます。 以下の例では、 `team` および `teammembership` エンティティ タイプにリンクされている、 `systemuser` エンティティ タイプのレコードを取得します。つまり、「CITTEST」 という名前のチームの管理者を兼ねている `systemuser` レコードを取得します。
 
 ```http
-GET [Organization URI]/api/data/v9.1/systemusers?$teammembership_association/any(t:t/name eq 'CITTEST')&$select=fullname,businessunitid,title,address1_telephone1,positioned,systemuserid&$oderby= fullname
+GET [Organization URI]/api/data/v9.1/systemusers?$filter=(teammembership_association/any(t:t/name eq 'CITTEST'))
+&$select=fullname,businessunitid,title,address1_telephone1,systemuserid
+&$orderby=fullname
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -442,7 +455,9 @@ OData-Version: 4.0
  項目が返される順番を、`$orderby` システム クエリ オプションを使用して指定します。 `asc` または `desc` 接尾辞を使用して、それぞれ昇順または降順を指定します。 接尾辞が適用されない場合、既定は昇順です。 以下の例では、取引先企業の名前および売り上げプロパティを、売り上げを昇順で、名前を降順で取得します。  
   
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue,&$orderby=revenue asc,name desc&$filter=revenue ne null  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
+&$orderby=revenue asc,name desc
+&$filter=revenue ne null  
 ```  
 <a name="bkmk_AggregateGroup"></a>
 
@@ -452,17 +467,18 @@ GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue,&$orderby=rev
 
 |使用例|例|
 |--------------|-------------| 
-|クエリ内の一意のステータスのリスト|`$apply=groupby((statuscode))`|
-|予想値合計の集計|`$apply=aggregate(estimatedvalue with sum as total)`|
-|予想値およびステータスに基づく取引の平均サイズ|`$apply=groupby((statuscode),aggregate(estimatedvalue with average as averagevalue)`|
-|ステータスに基づく予測値の合計|`$apply=groupby((statuscode),aggregate(estimatedvalue with sum as total))`|
-|アカウント名ごとの業案件の売上合計|`$apply=groupby((parentaccountid/name),aggregate(estimatedvalue with sum as total))`|
-|最後に作成されたレコードの日時|`$apply=aggregate(createdon with max as lastCreate)`|
-|最初に作成されたレコードの日時|`$apply=aggregate(createdon with min as firstCreate)`|
+|クエリ内の一意のステータスのリスト|`accounts?$apply=groupby((statuscode))`|
+|予想値合計の集計|`opportunities?$apply=aggregate(estimatedvalue with sum as total)`|
+|予想値およびステータスに基づく取引の平均サイズ|`opportunities?$apply=groupby((statuscode),aggregate(estimatedvalue with average as averagevalue)`|
+|ステータスに基づく予測値の合計|`opportunities?$apply=groupby((statuscode),aggregate(estimatedvalue with sum as total))`|
+|アカウント名ごとの業案件の売上合計|`opportunities?$apply=groupby((parentaccountid/name),aggregate(estimatedvalue with sum as total))`|
+|「WA」 の取引先企業の取引先責任者名|`accounts?$apply=filter(address1_stateorprovince eq 'WA')/groupby((primarycontactid/fullname))`|
+|最後に作成されたレコードの日時|`accounts?$apply=aggregate(createdon with max as lastCreate)`|
+|最初に作成されたレコードの日時|`accounts?$apply=aggregate(createdon with min as firstCreate)`|
 
 集計機能は 50,000 レコードのコレクションに制限されます。  Common Data Service での集約機能の使用に関する詳細は、次を参照してください: [FetchXML を使用してクエリを構築する](../use-fetchxml-construct-query.md)
 
-OData データ集計の追加の詳細はこちらを参照してください: [データ集計用 OData 拡張 バージョン 4.0](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html)。  Dynamics 365 for Customer Engagement アプリはこれらの集計手法のサブセットのみをサポートすることに注意してください。
+OData データ集計の追加の詳細はこちらを参照してください: [データ集計用 OData 拡張 バージョン 4.0](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html)。  Common Data Service はこれらの集計手法のサブセットのみをサポートすることに注意してください。
 
 
 <a name="bkmk_useParameterAliases"></a>
@@ -474,13 +490,17 @@ OData データ集計の追加の詳細はこちらを参照してください: 
  パラメーター エイリアスなし:
 
 ```http  
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue,&$orderby=revenue asc,name desc&$filter=revenue ne null  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
+&$orderby=revenue asc,name desc
+&$filter=revenue ne null  
 ```  
   
  パラメーター エイリアスあり:
 
 ```http  
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue,&$orderby=@p1 asc,@p2 desc&$filter=@p1 ne @p3&@p1=revenue&@p2=name  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
+&$orderby=@p1 asc,@p2 desc
+&$filter=@p1 ne @p3&@p1=revenue&@p2=name  
 ```  
   
  また、関数を使用するとき、パラメーター エイリアスを使用することもできます。 詳細: [Web API 機能を使用](use-web-api-functions.md)  
@@ -504,7 +524,9 @@ GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue,&$orderby=@p1
  **要求**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=contains(name,'sample')&$count=true HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name
+&$filter=contains(name,'sample')
+&$count=true HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -579,7 +601,8 @@ OData-Version: 4.0
  **要求**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,donotpostalmail,accountratingcode,numberofemployees,revenue&$top=1 HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$select=name,donotpostalmail,accountratingcode,numberofemployees,revenue
+&$top=1 HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -638,7 +661,8 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
  **要求**  
 
 ```http 
-GET [Organization URI]/api/data/v9.1/incidents(39dd0b31-ed8b-e511-80d2-00155d2a68d4)?$select=title,_customerid_value&$expand=customerid_contact($select=fullname) HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/incidents(39dd0b31-ed8b-e511-80d2-00155d2a68d4)?$select=title,_customerid_value
+&$expand=customerid_contact($select=fullname) HTTP/1.1  
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
@@ -685,7 +709,9 @@ Preference-Applied: odata.include-annotations="*"
 **要求**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$top=5&$select=name&$expand=Account_Tasks($select%20=%20subject,%20scheduledstart) HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$top=5
+&$select=name
+&$expand=Account_Tasks($select=subject,scheduledstart) HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -708,7 +734,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(36dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(36dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart"
       },
       {  
          "@odata.etag":"W/\"513477\"",
@@ -717,7 +743,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(38dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(38dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart"
       },
       {  
          "@odata.etag":"W/\"514074\"",
@@ -726,7 +752,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3adbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3adbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart"
       },
       {  
          "@odata.etag":"W/\"513481\"",
@@ -735,7 +761,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3cdbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3cdbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart"
       },
       {  
          "@odata.etag":"W/\"514057\"",
@@ -744,7 +770,7 @@ OData-Version: 4.0
          "Account_Tasks":[  
 
          ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3edbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3edbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart"
           }
        ]
     }
@@ -762,7 +788,9 @@ OData-Version: 4.0
 **要求**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$top=3&$select=name&$expand=primarycontactid($select=contactid,fullname),Account_Tasks($select=subject,scheduledstart)  HTTP/1.1  
+GET [Organization URI]/api/data/v9.1/accounts?$top=3
+&$select=name
+&$expand=primarycontactid($select=contactid,fullname),Account_Tasks($select=subject,scheduledstart)  HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  

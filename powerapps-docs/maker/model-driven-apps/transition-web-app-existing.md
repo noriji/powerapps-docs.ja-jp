@@ -2,7 +2,7 @@
 title: 'クイックスタート: 既存の環境を使用して、統合インターフェイスで旧式のWebクライアント アプリケーションを検証する | MicrosoftDocs'
 description: 旧式のWebクライアントから統合インターフェイスへの移行を計画し、実行する方法を説明します。
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 09/11/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -23,26 +23,24 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
-
-<!--editor comment: I notice two mentions of Dynamics 365 Home page and both are followed by the URL but the text isn't linked. Just want to point that out in case it wasn't intentional. -->
-
-
 # <a name="quick-start-for-using-an-existing-environment-to-validate-your-legacy-web-client-app-with-the-unified-interface"></a>クイックスタート: 既存の環境を使用して、統合インターフェイスで旧式のWebクライアント アプリケーションを検証する
+このクイックスタート トピックでは、既存の環境を使用して現在の構成あるいは既定のソリューションに基づいた、統合インターフェイス アプリケーションを作成する方法について説明します。 これにより、既存の旧式のWebクライアントアプリケーションを並行稼働しながら、統合インターフェイスを調査、テストすることができます。 これにより、ユーザーは環境を切り替えて並列のビューを表示することができます。 
 
-このクイックスタート トピックでは、既存の環境を使用して現在の構成あるいは既定のソリューションに基づいた、統合インターフェイス アプリケーションを作成する方法について説明します。 これにより、既存の旧式のWebクライアントアプリケーションを並行稼働しながら、統合インターフェイスを調査、テストすることができます。 これにより、ユーザーは環境を切り替えて並列のビューを表示することができます。 新しいサンドボックス環境を作成することでテスト環境を分離し、統合インターフェースのエクスペリエンスのみを表示する方法については、 [クイックスタート: Dynamics 365 for Customer Engagement apps レガシーWebクライアントアプリケーションから統合インターフェイスへの移行](transition-web-app.md) を参照してください。
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE3JzyI]
+
+新しいサンドボックス環境を作成することでテスト環境を分離し、統合インターフェースのエクスペリエンスのみを表示する方法については、 [クイックスタート: Dynamics 365 レガシー Web クライアントアプリケーションから統合インターフェイスへの移行](transition-web-app.md) を参照してください。
 
 > [!IMPORTANT]
->  Dynamics 365 for Field Serviceおよび Dynamics 365 for Project Service Automation アプリの環境の場合は、 [Dynamics 365 for Customer Engagement apps](transition-web-app.md#dynamics-365-for-customer-engagement-apps) を参照してください。
+>  Dynamics 365 Field Serviceおよび Dynamics 365 Project Service Automation アプリの環境の場合は、[Dynamics 365 アプリ](transition-web-app.md#dynamics-365-apps)を参照してください。
 
 ## <a name="prerequisites"></a>前提条件 
-- 既存の Dynamics 365 for Sales 、または Service legacy web クライアント アプリケーション 
+- 既存の Dynamics 365 Sales、または Service legacy Web クライアント アプリケーション 
 - 必須ではありませんが、非本番環境を使用してアプリケーションをテストすることを推奨します。 詳細については次を参照してください: [サンドボックス インスタンスの管理](/dynamics365/customer-engagement/admin/manage-sandbox-instances) 
 
 ## <a name="overview"></a>概要 
 このトピックは、統合インターフェイスへの移行を計画/実行する必要がある、旧式のWebクライアントアプリケーションを現在使用しているユーザーを対象としています。 並列環境をセットアップするには、現在の既定のソリューションを元にして新しいアプリケーションを作成します。 これによって既存の作業に影響を与えることなく、現在の開発サンドボックス環境内で実行することができます。
 
-この記事に記載している手順を完了すると、適切な役割を持つユーザーは、Dynamics 365 for Customer Engagement ドロップダウン アプリケーション リスト、または Dynamics 365 ホームページ (http://home.dynamics.com) のアプリケーションリストに新しいアプリケーションが表示されるようになります。
+この記事に記載している手順を完了すると、適切な役割を持つユーザーは、Dynamics 365 ドロップダウン アプリケーション リスト、または Dynamics 365 ホームページ (http://home.dynamics.com) のアプリケーションリストに新しいアプリケーションが表示されるようになります。
 
 ![アプリ の一覧](media/app-list.png)
 
@@ -58,15 +56,15 @@ search.app:
 2.  新規駆動型モデル アプリを作成する 
 3.  アプリのプロパティを構成する  
 
-直近で [クイックスタート: Dynamics 365 for Customer Engagement apps レガシー Web クライアントアプリケーションから統合インターフェイスへの移行](transition-web-app.md) に示されている手順で、開発環境の **統合インターフェイスのみを使用する** モードを **オン** に切り替えている場合は、この設定を **オフ** に切り替えることで、既存の旧式Webクライアントアプリケーションを実行することができます。
+直近で [クイックスタート: Dynamics 365 レガシー Web クライアントアプリケーションから統合インターフェイスへの移行](transition-web-app.md) に示されている手順で、開発環境の **統合インターフェイスのみを使用する** モードを **オン** に切り替えている場合は、この設定を **オフ** に切り替えることで、既存の旧式Webクライアントアプリケーションを実行することができます。
 
 ### <a name="create-a-new-solution-thats-based-on-the-default-solution"></a>既定のソリューションに基づいた新しいソリューションを作成する。
-1. [PowerApps メーカー ポータル](https://make.powerapps.com) にサインインします。   
+1. [PowerApps メーカー ポータル](https://make.powerapps.com)にサインインします。   
 2. 環境のリストから、目的の環境を選択します。  
 3. 左のナビゲーション ウィンドウで、**ソリューション** を選択します。 
 4. メニューバーで **新規ソリューション**を選択します。 
 5. **新規ソリューション** ウィンドウで、以下のプロパティを入力します: 
-   - **[名前]**. ソリューションの名前を入力します。 名前の例としては、 *統一インターフェイス アプリ*です。 
+   - **名前**. ソリューションの名前を入力します。 名前の例としては、 *統一インターフェイス アプリ*です。 
    - **発行者** 組織で使用する発行者を選択します。 既存のカスタマイズについては、必ずカスタマイズの管理ルールに従ってください。 これにより、モデル駆動型アプリケーションとそのサイトマップのスキーマ名称が既存の標準と一致するようになります。 
    - **バージョン**. これは、ソリューションの既存の標準と管理ルールに従って設定する必要があります。 
 6. **作成**を選びます。  
@@ -77,7 +75,7 @@ search.app:
 
 1. メニュー バーの **新規**で、 **アプリ** をポイントし、選択 **モデル駆動型アプリ**を選択します。
 2. **新規アプリの作成** ページで、以下のプロパティを入力します。 
-   - **[名前]**. アプリケーションの相応する名前を入力します。 たとえば、 *アプリケーションの名称* + *新規* または *統合インターフェーステスト*. 
+   - **名前**. アプリケーションの相応する名前を入力します。 たとえば、 *アプリケーションの名称* + *新規* または *統合インターフェーステスト*. 
    - **一意の名前**: これは、ソリューションの接頭辞と、指定したアプリケーション名の簡略版で始まります。 変更することも、そのままにしておくこともできます。  
    - **説明**。 *新しい統合インタフェースのテスト用*などのアプリケーションに関する説明を追加します。  
 3. **既存のソリューションを使用してアプリケーションを作成する**を選択し、 **次へ**を選択します。 
@@ -89,7 +87,7 @@ search.app:
 5. App Designer が開き、既定のソリューションに存在したすべてのアプリのコンポーネントが表示されます。 **発行**を選択します。  
 6. 公開プロセスの完了後、 **プレイ**を選択します。  
 
-ブラウザに新しいウィンドウが開き、既定の Dynamics 365 for Customer Engagement アプリケーション に存在したすべてのエンティティ、サイトマップ、サイトマップのカスタマイズを含む、新たなモデル駆動型アプリケーションが表示されます。  
+ブラウザに新しいウィンドウが開き、既定の Dynamics 365 アプリケーション に存在したすべてのエンティティ、サイトマップ、サイトマップのカスタマイズを含む、新たなモデル駆動型アプリケーションが表示されます。  
 
 > [!div class="mx-imgBorder"] 
 > ![新規統合インターフェースアプリ](media/new-unified-interface-app.png "新規統合インターフェースアプリ")
@@ -132,7 +130,7 @@ PowerApps メーカーポータル **ソリューション** エリアのブラ�
 
 6. **保存**を選択します。 
 
-これで、適切なロールを持つユーザは、Dynamics 365 for Customer Engagement ドロップダウンのアプリ リスト、あるいは Dynamics 365 Home page (http://home.dynamics.com) の両方のアプリ リストで新しいアプリを確認することができます。 
+これで、適切なロールを持つユーザは、Dynamics 365 ドロップダウンのアプリ リスト、あるいは Dynamics 365 Home page (http://home.dynamics.com) の両方のアプリ リストで新しいアプリを確認することができます。 
   
    ![アプリのリスト](media/app-list.png "アプリのリスト")
 
@@ -151,10 +149,10 @@ PowerApps メーカーポータル **ソリューション** エリアのブラ�
 統合インターフェイスを表示するアプリケーションでは、アプリケーション、プロセス、およびカスタマイズの検証を開始して、移行がどのように表示されるかを特定することができます。 すべてのテストケースを実施することを推奨しますが、最も重要なテストケースから始めたることも、論理的な設計パターンにまとめてテストをすることも可能です。 統合インターフェイスは応答性の高い設計がなされているため、常に画面解像度が異なる複数のデバイスでテストをすることを推奨します。 アプリケーションのテストを進めていく中で、行ったカスタマイズが統合インターフェイスと互換性があること、および再設計が必要な機能や不足している機能について認識することができます。  
 
 > [!IMPORTANT]
-> Common Data Service および Dynamics 365 for Customer Engagement アプリケーションの現在のバージョンには、いくつかの非推奨な機能が含まれています。 使用しているアプリケーションで非推奨の機能を確認し、必要に応じて新しい機能に置き換える必要があります。 詳細については次を確認してください: [ Dynamics 365 Customer Engagementで行われる重要な変更(非推奨)](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming)
+> Common Data Service および Dynamics 365 のモデル駆動型アプリの現在のバージョンには、いくつかの非推奨な機能が含まれています。 使用しているアプリケーションで非推奨の機能を確認し、必要に応じて新しい機能に置き換える必要があります。 詳細: [重要な変更 (非推奨) の予定](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming)
 
 > [!TIP]
-> PowerApps のチェッカー ツールは、ソリューションのコンポーネントの品質チェックをサポートします。  詳細については次を確認してください: [ソリューション チェッカーをを使用して、PowerApps のモデル駆動型アプリケーションを検証する](../common-data-service/use-powerapps-checker.md)
+> PowerApps のチェッカー ツールは、ソリューションのコンポーネントの品質チェックをサポートします。  詳細: [ソリューション チェッカーをを使用して、PowerApps のモデル駆動型アプリを検証する](../common-data-service/use-powerapps-checker.md)
 
 ## <a name="next-steps"></a>次のステップ
 実装担当チームまたはパートナーは、調査結果に基づいてアプリケーションを統合インターフェイスに移行にあたって必要な作業量を見積もり、潜在的なユーザビリティの向上を発見することができます。 統合インターフェイスでは複数の新機能を利用できるため、アプリケーションを利用するユーザーの価値を高めることができます。 
@@ -167,9 +165,9 @@ PowerApps メーカーポータル **ソリューション** エリアのブラ�
 [統合インターフェイスの活用プレイブック](unified-interface-playbook.md) <br />
 [ユーザエクスペリエンスと統合インターフェイスへの移行](approaching-unified-interface.md) <br />
 [Unified Interface について](/dynamics365/customer-engagement/admin/about-unified-interface) <br />
-[PowerApps におけるモデル駆動型アプリとは](model-driven-app-overview.md) <br />
+[PowerApps におけるモデル駆動型アプリとは?](model-driven-app-overview.md) <br />
 [アプリを統一インターフェイスに更新する](/dynamics365/customer-engagement/admin/update-apps-to-unified-interface) <br />
 [モデル駆動型アプリの対話型エクスペリエンス ダッシュボードの構成](configure-interactive-experience-dashboards.md) <br />
 [モデル駆動型アプリのデータのビジュアル化のためのカスタム コントロールの使用](use-custom-controls-data-visualizations.md) <br />
-[PowerApps component framework の概要](/powerapps/developer/component-framework/overview) <br />
+[PowerApps Component Framework の概要](/powerapps/developer/component-framework/overview) <br />
 [全ユーザー向けの統合インターフェイス](/power-platform-release-plan/2019wave2/microsoft-powerapps/unified-interface-app-everybody)

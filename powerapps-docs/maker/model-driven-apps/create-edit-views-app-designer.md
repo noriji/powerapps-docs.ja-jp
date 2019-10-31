@@ -1,5 +1,5 @@
 ---
-title: PowerApps で共有またはシステム モデル駆動型アプリ ビューを作成および編集 | MicrosoftDocs
+title: PowerApps を使用して共有またはシステム モデル駆動型アプリ ビューを作成、編集する | MicrosoftDocs
 description: アプリ デザイナーを使用してビューを作成または編集する方法を学習する
 keywords: ''
 ms.date: 11/27/2018
@@ -43,8 +43,8 @@ PowerApps において、ビューは特定のエンティティのレコード�
 
 詳細: [ビューについて](create-edit-views.md)
 
-## <a name="create-a-public-view-in-powerapps"></a>PowerApps での共有ビューの作成
-アプリ作成者として、PowerApps を使用して、共有ビューを作成および編集できます。
+## <a name="create-a-public-view-in-powerapps"></a>PowerAppsで共有ビューを作成する
+アプリの作成者は、PowerApps を使用して、共有ビューを作成および編集することができます。
 1. [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) にサインインします。  
 
 
@@ -79,7 +79,7 @@ PowerApps において、ビューは特定のエンティティのレコード�
 ### <a name="open-and-add-a-view-in-the-app-designer"></a>アプリケーション デザイナーでビューを開いて追加します。
 
 次の手順では、アプリケーションでのデザイナー ビューを開き追加する方法を説明します。
-1. PowerApps で、左のナビゲーション ウィンドウから**アプリ**を選択して、目的のアプリの隣の **...** を選択し、**編集**を選択します。 
+1. PowerApps で、左のナビゲーション ウィンドウから **アプリ** を選択して、目的のアプリの隣にある **...** を選択し、 **編集**を選択します。 
 
 2. アプリ デザイナーの**エンティティ ビュー** セクションで、**ビュー**を選択します。
 
@@ -176,9 +176,9 @@ PowerApps において、ビューは特定のエンティティのレコード�
 
 
 ## <a name="community-tools"></a>コミュニティ ツール
-**ビュー レイアウト レプリケーター**および**ビュー デザイナー**は Dynamics 365 Customer Engagement 用に XrmToolbox コミュニティが開発したツールです。
+**ビュー レイアウト レプリケーター** および **ビュー デザイナー** は、PowerApps用に開発された XrmToolbox コミュニティが提供するツールです。
 
-詳細: [開発者ツール](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools)。
+詳細: [開発者ツール](/powerapps/developer/common-data-service/developer-tools)。
 
 > [!NOTE]
 > これらのツールは XrmToolBox が提供するもので、Microsoft ではサポートされません。 このツールに関するご質問は、その発行元にお問い合わせください。 詳細: [XrmToolBox](https://www.xrmtoolbox.com/) 

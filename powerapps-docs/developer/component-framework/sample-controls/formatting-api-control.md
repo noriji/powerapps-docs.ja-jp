@@ -1,7 +1,7 @@
 ---
-title: API コンポーネントの書式設定 |Microsoft Docs
-description: ''
-keywords: ''
+title: 書式設定 API コンポーネント | Microsoft Docs
+description: null
+keywords: null
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -11,23 +11,18 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3b875f06-0fd9-49fa-bc34-939d00e17185
-ms.openlocfilehash: f81c0bdf98e6db4ec3326a151e53961e4936f244
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72340439"
 ---
+
 # <a name="implementing-formatting-api-component"></a>書式設定 API コンポーネントの実装
 
-このサンプルコンポーネントでは、PowerApps component framework の書式設定 API の一部として使用できるさまざまなメソッドについて説明します。 このサンプルでは、表示された値と一致する書式設定 API の各メソッドを呼び出す一連の入力要素を作成します。
+このサンプル コンポーネントは、PowerApps Component Framework の書式設定 API の一部として利用できるなさまざまなメソッドを説明します。 このサンプルでは、表示された値と一致する書式設定 API のそれぞれのメソッドを呼び出す一連の入力要素を作成します。
 
 > [!div class="mx-imgBorder"]
-> ![Api コンポーネント]の(../media/formatting-api.png "書式設定 Api コンポーネント")の書式設定
+> ![書式設定 API コンポーネント](../media/formatting-api.png "書式設定 API コンポーネント")
 
-## <a name="available-for"></a>利用可能な対象 
+## <a name="available-for"></a>以下に使用できます 
 
-モデル駆動型アプリとキャンバスアプリ (試験段階プレビュー) 
+モデル駆動型アプリとキャンバス アプリ (実験的プレビュー) 
 
 ## <a name="manifest"></a>マニフェスト
 
@@ -44,7 +39,7 @@ ms.locfileid: "72340439"
 </manifest>
 ```
 
-## <a name="code"></a>コード
+## <a name="code"></a>Code
 
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
@@ -52,14 +47,14 @@ export class FormattingAPI
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
   // PowerApps component framework framework delegate which will be assigned to this object which would be called whenever an update happens.
   private _notifyOutputChanged: () => void;
-  // reference to the div element that holds together all the HTML elements that we are creating as part of this control
+  // Reference to the div element that holds together all the HTML elements that we are creating as part of this control
   private divElement: HTMLDivElement;
-  // reference to HTMLTableElement rendered by control
+  // Reference to HTMLTableElement rendered by control
   private _tableElement: HTMLTableElement;
-  // reference to the control container HTMLDivElement
+  // Reference to the control container HTMLDivElement
   // This element contains all elements of our custom control example
   private _container: HTMLDivElement;
-  // reference to ComponentFramework Context object
+  // Reference to ComponentFramework Context object
   private _context: ComponentFramework.Context<IInputs>;
   // Flag if control view has been rendered
   private _controlViewRendered: Boolean;
@@ -287,8 +282,8 @@ export class FormattingAPI
 
 ### <a name="related-topics"></a>関連トピック
 
-[サンプルコンポーネントのダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps コンポーネントフレームワーク API リファレンス](../reference/index.md)<br/>
-[PowerApps コンポーネントフレームワークマニフェストスキーマリファレンス](../manifest-schema-reference/index.md)
+[サンプル コンポーネントをダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[PowerApps Component Framework API の参照](../reference/index.md)<br/>
+[PowerApps Component Framework のマニフェスト スキーマの参照](../manifest-schema-reference/index.md)
 
 

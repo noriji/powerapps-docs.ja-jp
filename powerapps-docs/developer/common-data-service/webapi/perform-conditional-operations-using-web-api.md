@@ -2,7 +2,7 @@
 title: Web API (Common Data Service) を使って条件付き操作を実行する| Microsoft Docs
 description: Web API を使用して特定の操作を実行するかどうかおよびその方法を決定する、条件の作成方法について説明します。
 ms.custom: ''
-ms.date: 10/31/2018
+ms.date: 08/31/2019
 ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -85,7 +85,7 @@ upsert は、エンティティが存在しない場合にエンティティを�
  
 ### <a name="prevent-create-in-upsert"></a>upsert での作成の阻止
 
-データを更新するとき、エンティティが意識して削除された可能性が見られる場合、そのエンティティの再作成を望まないでしょう。 これを阻止するには、`If-Match` ヘッダーを "`*`" の値を持つ要求に追加します。  
+データを更新するとき、エンティティが意識して削除された可能性が見られる場合、そのエンティティの再作成を望まないでしょう。 これを阻止するには、`If-Match` ヘッダーを 「*」 の値を持つ要求に追加します。  
   
  **要求**  
 ```http  
@@ -93,7 +93,7 @@ PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-00000000
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
-If-Match: "*"  
+If-Match: *  
   
 {  
     "name": "Updated Sample Account ",  
@@ -130,7 +130,7 @@ Content-Type: application/json; odata.metadata=minimal
   
 ### <a name="prevent-update-in-upsert"></a>upsert での更新の阻止
 
-データを挿入する場合、同じ `id` 値を持つレコードがシステムにすでに存在している可能性があり、その更新を望まないでしょう。 これを阻止するには、`If-None-Match` ヘッダーを "`*`" の値を持つ要求に追加します。  
+データを挿入する場合、同じ `id` 値を持つレコードがシステムにすでに存在している可能性があり、その更新を望まないでしょう。 これを阻止するには、`If-None-Match` ヘッダーを 「*」 の値を持つ要求に追加します。  
   
  **要求**  
 ```http  
@@ -138,7 +138,7 @@ PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-00000000
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
-If-None-Match: "*"  
+If-None-Match: *  
   
 {  
     "name": "Updated Sample Account ",  

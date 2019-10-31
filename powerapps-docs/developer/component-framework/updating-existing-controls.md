@@ -1,7 +1,7 @@
 ---
-title: PowerApps component framework ツールを使用して既存のコードコンポーネントを更新するMicrosoft Docs
+title: PowerApps component framework ツールを使用して既存のコード コンポーネントを更新する | Microsoft Docs
 description: PowerApps component framework ツールを使用してコンポーネントを更新する
-keywords: PowerApps コンポーネントフレームワーク、コードコンポーネント、コンポーネントフレームワーク
+keywords: PowerApps component framework、コード コンポーネント、コンポーネント フレームワーク
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -11,42 +11,33 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
-ms.openlocfilehash: 05e32fb7e098dad3aabf36f2efdaf311c1bea327
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72340232"
 ---
-# <a name="update-existing-code-components"></a>既存のコードコンポーネントを更新する 
+# <a name="updating-existing-code-components"></a>既存のコード コンポーネントを更新する 
 
-モデル駆動型アプリの PowerApps component framework プライベートプレビュー参加要素で、既にコードコンポーネントがビルドされている場合は、新しい ALM 中心のプロジェクト構造との互換性を確保するために、いくつかのマイナー更新を行う必要があります。 
+モデル駆動型アプリの PowerApps component framework のプライベート プレビュー参加者で、既にコード コンポーネントを作成している場合は、新しい ALM 中心のプロジェクト構造と互換性を保つために、いくつかマイナー アップデートを行う必要があります。 
 
-既存の PowerApps コンポーネントフレームワークのコードコンポーネントで新しい PowerApps CLI ツールを使用するには、いくつかの変更が必要です。
+既存の PowerApps component framework コード コンポーネントと共に新しい PowerApps CLI ツールを使用するには、いくつかの変更が必要です。
 
 > [!NOTE]
-> このトピックは、モデル駆動型アプリのコードコンポーネントを更新する場合にのみ適用されます。これは、モデル駆動型アプリのプライベートプレビューの時点で PowerApps CLI ツールを利用できないためです。  
+> PowerApps CLI ツールキットはモデル駆動型アプリのプライベート プレビュー時には使用できないため、このトピックは、モデル駆動型アプリのコード コンポーネントの更新のみに適用されます。  
 
-## <a name="creating-an-empty-project"></a>空のプロジェクトの作成
+## <a name="creating-an-empty-project"></a>空のプロジェクトを作成する
 
-PowerApps CLI を使用して、コードコンポーネント用の新しい空のプロジェクトを作成します。 詳細情報:[ツールを使用したコンポーネントの作成](create-custom-controls-using-pcf.md)
+コード コンポーネントに新しい空のプロジェクトを作成するには、PowerApps CLI を使用します。 詳細: [ツールを使用してコンポーネントを作成する](create-custom-controls-using-pcf.md).
+プロジェクトが作成されたら、コード コンポーネントのソースを新しいプロジェクトに移行します:
 
-プロジェクトが作成されたら、コードコンポーネントソースを新しいプロジェクトに移行します。
+1. コンポーネント ソース ファイルを古いソース ファイルから **index.ts** にコピーするか置き換えます。
+2.  **ControlManifest.xml** の内容を **ControlManifest.Input.xml** ファイルにコピーまたは置き換えます。
+3. css、resx、img など他のすべての周辺コンポーネント リソースを、古いプロジェクトから新しいプロジェクトの対応するサブフォルダーにコピーします。
 
-1. 以前のソースファイルのコンポーネントソースファイルをコピーするか、または変更します **。**
-2. **コントロール**の内容をコピーするか、controlmanifest .xml**ファイルに**置き換えます。
-3. CSS、RESX、IMG などの他のすべての周辺機器リソースを、古いプロジェクトから新しいプロジェクトに対応するサブフォルダーにコピーします。
+## <a name="updating-manifest-file"></a>マニフェスト ファイルの更新
 
-## <a name="updating-manifest-file"></a>マニフェストファイルを更新しています
+コード コンポーネントのプロパティを定義する `ControlManifest.xml` ファイルは `ControlManifest.Input.xml` ファイルに置き換えられました。 それ以外の場合、ふたつのファイル間のスキーマにほとんど変更はありません。
+重要なセマンティックの変更点がいくつかあります。
 
-コードコンポーネントのプロパティを定義する `ControlManifest.xml` ファイルは、`ControlManifest.Input.xml` ファイルに置き換えられます。 それ以外の場合、2つのファイル間でスキーマが変更されることはほとんどありません。
-
-ただし、いくつかの重要なセマンティック変更があります。
-
-1. @No__t_0 リソースエントリは、コードコンポーネントのプリコンパイルされたソースファイルを指す必要があります。 ファイル名の既定値は、 **index. ts**です。
-
-   たとえば、コンポーネントソースが `MyControl.ts` という名前のファイルに実装されている場合、`ControlManifest.Input.xml` の `code` エントリはそのファイルを指す必要があります。 @No__t_0 ファイルも有効な TypeScript ファイルである必要があります。 これは、`code` エントリでコンパイル済みの JS 出力ファイルを指定したレガシマニフェストファイルとは対照的です。
-2. @No__t_1 や `css` などのリソース要素の `path` 属性は、ディスク上のファイルへのローカルパスを参照するようになりました。 例:
+1. `code` リソース エントリはコード コンポーネントの事前コンパイルされたソース ファイルを指すようになりました。 ファイル名は既定で **index.ts** になります。
+たとえばコンポーネント ソースが `MyControl.ts` と呼ばれるファイルに実装された場合、`ControlManifest.Input.xml` の `code` エントリはそのファイルを指す必要があります。 `code` ファイルも有効な Typescript ファイルである必要があります。 これは `code` エントリでコンパイルされた JS 出力ファイルを指定した、従来のマニフェスト ファイルとは対照的です。
+2. `code` や `css` のようなリソース要素の `path` 属性は、現在ディスクのファイルへのローカル パスを参照します。 たとえば、
 
     ```XML
    <resources>
@@ -54,35 +45,34 @@ PowerApps CLI を使用して、コードコンポーネント用の新しい空
     </resources>
     ```
 
-上記の `path` 属性は、`YourControlName.css` ファイルが、`ControlManifest.Input.xml` がディスク上に存在する現在のディレクトリを基準とした `css` サブフォルダーにあることを示しています。
+上記の `path` 属性は、`YourControlName.css` ファイルが `ControlManifest.Input.xml` がディスク上に存在する現在のディレクトリを基準にした `css` サブフォルダにあることを示します。
+次のように ControlManifest.Input.xml ファイルを更新します:
 
-次のようにして、ControlManifest .xml ファイルを更新します。
+1. `ControlManifest.Input.xml` の `code` エントリを、コード コンポーネントの事前コンパイルのソース ファイルに編集します (通常は index.ts です)。
+2. ディスク上のファイルへの相対パスを正しく参照するように、リソースのすべてのパスを編集します。
 
-1. @No__t_1 の `code` エントリを、コードコンポーネントのプリコンパイルされたソースファイル (通常は、) に編集します。
-2. リソースのパスを編集して、ディスク上のファイルへの相対パスを正しく参照します。
+## <a name="updating-the-project-files"></a>プロジェクト ファイルの更新
 
-## <a name="updating-the-project-files"></a>プロジェクトファイルの更新
+ツールの古いバージョンを使用してコンポーネントを作成した場合で、最新機能を利用する場合は、以下に示すように、プロジェクト ファイルを更新してください。
 
-以前のバージョンのツールを使用してコンポーネントを作成し、最新の機能を利用する場合は、次に示すようにプロジェクトファイルを更新してください。
-
-1. 最新のモジュールを使用するように既存のプロジェクトを更新します。
+1. 最新のモジュールを使用するように既存のプロジェクトを更新する
  
-   - PowerApps component framework プロジェクトフォルダー内にある `pcfproj` のバージョンタグを次のように更新します。
+   - 以下のように、PowerApps component framework プロジェクト フォルダにある `pcfproj` のバージョン タグを更新します。
 
       ```XML
-      <Packagereference Include="Microsoft.PowerApps.MSBuild.Pcf" Version="1.*"/>
+      <PackageReference Include="Microsoft.PowerApps.MSBuild.Pcf" Version="1.*"/>
       ```
-   - ソリューションプロジェクトフォルダー内にある `cdsproj` のバージョンタグを次のように更新します。
+   - 以下のようにソリューション プロジェクト フォルダにある `cdsproj` の バージョン タグを更新します。
 
       ```XML
-      <Packagereference Include="Microsoft.PowerApps.MSBuild.Solution" Version="1.*"/>
+      <PackageReference Include="Microsoft.PowerApps.MSBuild.Solution" Version="1.*"/>
       ```
 
-      > [!NOTE] 
-      > 上記の変更を行った後、コマンド `msbuild /t:restore` を実行して、プロジェクトを正しいバージョンに更新します。
+    > [!NOTE] 
+    > 上記の変更を行った後、正しいバージョン `msbuild /t:restore` でプロジェクトを作成するコマンドを実行します。
 
 
-   - PowerApps component framework プロジェクトフォルダー内にある `package.json` ファイルのバージョンタグを更新します。
+   - PowerApps component framework プロジェクト フォルダにある `package.json` ファイル の バージョン タグを更新します。
 
       ```JSON
       "devDependencies":{
@@ -90,26 +80,26 @@ PowerApps CLI を使用して、コードコンポーネント用の新しい空
        "pcf-start": "^1"
           }
       ```
-     > [!NOTE]
-     > 上記の変更を行った後、`npm update` コマンドを実行して、プロジェクトを正しいバージョンに更新します。
+   > [!NOTE]
+   > 上記の変更を行った後、`npm update` コマンドを実行してプロジェクトを正しいバージョンに更新します。
 
-2. 事前に認証プロファイルを作成してある場合は、再作成する必要があります。 これは、パブリックでないクラウドをサポートするために、プロファイルに新しいプロパティが追加されたためです。 これを行うには、次の手順を実行します。
+2. 前に認証プロファイルを作成した場合、再度再作成する必要があります。 これは、非公開のクラウドをサポートするために新しいプロパティがプロファイルに追加されたためです。 これを行うには、次のようにします。
  
-    - コマンド `pac auth clear` を実行しています。
-    - コマンド `pac auth create --url <your org url>` を実行しています。
+    - コマンド `pac auth clear` の実行
+    - コマンド `pac auth create --url <your org url>` の実行
 
-## <a name="updating-your-project-with-the-latest-node-modules"></a>最新のノードモジュールを使用したプロジェクトの更新
+## <a name="updating-your-project-with-the-latest-node-modules"></a>最新のノード モジュールを使用したプロジェクトの更新
 
-レガシプロジェクトで最新の CLI 機能を利用するには、最新の npm モジュールを取得する必要があります。 以前にダウンロードしたノードモジュールを更新するには、開発者コマンドプロンプトでプロジェクトディレクトリにアクセスし、コマンド `npm update` を実行します。 
+従来のプロジェクトでは、最新の CLI 機能を利用するために最新の npm モジュールを取得する必要があります。 前にダウンロードしたノード モジュールを更新するには、開発者コマンド プロンプトでのプロジェクト ディレクトリに移動し、コマンド `npm update` を実行します。 
 
-## <a name="using-es6-module-syntax"></a>ES6 module 構文の使用
+## <a name="using-es6-module-syntax"></a>ES6 モジュール構文を使用する
 
-ビルドツールでは、標準の ES6 モジュール形式を使用してコンポーネントソースがエクスポートされることを想定しています。 レガシコンポーネントは通常、内部モジュール (名前空間とも呼ばれます) としてエクスポートされます。 新しいビルドツールに合わせるには、次のようにコンポーネントのソースファイルを変更する必要があります。
+ビルド ツールはコンポーネント ソースが標準の ES6 モジュール形式を使用してエクスポートされることを意図します。 従来のコンポーネントは通常、内部モジュール (別名名前空間) としてエクスポートされます。 新しいビルド ツールに合わせて、コンポーネント ソース ファイルを次のように修正する必要があります。
 
-1. コードコンポーネント (たとえば、index. ts) を実装するソースファイルを開きます。
-2. 標準の ES6 export 構文を使用するには、モジュール宣言を削除します。
+1. コード コンポーネントを実装するソース ファイル (たとえば index.ts) を開きます。
+2. モジュール宣言を削除して標準の ES6 エクスポート構文を使用します
 
-     以前は：
+     削除前:
      ```TypeScript
      module SampleNamespace
      {
@@ -119,42 +109,38 @@ PowerApps CLI を使用して、コードコンポーネント用の新しい空
             }
      
       ```
-    行っ
+    以下の後で:
     ```TypeScript
      export class YourControlName implements ComponentFramework.StandardControl<IInputs, IOutputs> { 
           <your class implementation>
           }
    ```
 
-## <a name="using-generated-manifest-typing-file"></a>生成されたマニフェスト入力ファイルの使用
+## <a name="using-generated-manifest-typing-file"></a>生成されたマニフェスト タイピング ファイルの使用
 
-レガシプロジェクトでは、`inputsOutputs.d.ts` 入力ファイルを手動で作成して編集する必要があります。これは通常、`private_typing` サブフォルダーにあります。 PowerApps CLI ツールでは、ビルド時にこのファイルが自動的に生成されるようになりました。 
+従来のプロジェクトでは、通常は `private_typing` サブフォルダにある `inputsOutputs.d.ts` タイピング ファイルを手動で作成および編集する必要があります。 PowerApps CLI ツールはビルド時に自動的にこのファイルを生成します。 
 
-コード生成により、コンポーネントのソースコードで使用される `type` 定義が、コンポーネントマニフェストファイルで定義されている `types` と同期していることが保証されます。
+Code-gen は、コンポーネントのソースコードで使われる `type` の定義が、コンポーネント マニフェスト ファイルで定義された `types` と同期していることを保証します。  
+タイピング ファイルは `ManifestTypes.d.ts` という名前に変更され、現在は `generated` という名前のサブフォルダに生成されます。 さらに、`InputsOutputs.IInputBag` と `InputsOutputs.IOutputBag` 型は `IInputs` と `IOutputs` にそれぞれ名前が変更されます。
+新しいタイピング ファイルを使用するには:
 
-入力ファイルの名前が `ManifestTypes.d.ts` に変更され、`generated` という名前のサブフォルダーに生成されるようになりました。 さらに、`InputsOutputs.IInputBag` と `InputsOutputs.IOutputBag` の種類の名前がそれぞれ `IInputs` および `IOutputs` に変更されています。
-
-新しい入力ファイルを使用するには、次のようにします。
-
-1. コンポーネントソースファイルの先頭に次の行を追加して、新しい `ManifestTypes.d.ts` ファイルをインポートします。
-
-    `./generated/ManifestTypes` から {IInputs、Iinputs} をインポートします。
-2. **IInputBag**のすべての参照の名前を**iinputs**に変更します。
-3. **Inputsoutputs**のすべての参照を**ioutputs**に名前変更します。
-4. コマンド `npm run build` を使用して、新しい**Manifesttypes.** . ts ファイルを生成するプロジェクトをビルドします。
+1. コンポーネントのソース ファイルの先頭に次の行を追加して、新しい `ManifestTypes.d.ts` ファイルをインポートします。`./generated/ManifestTypes` から { IInputs、IOutputs } をインポートします。
+2. **InputsOutputs.IInputBag** の参照をすべて **IInputs** に名前を変更します。
+3. **InputsOutputs.IOutputBag** の参照をすべて IOutputs** に名前を変更します。
+4. コマンド `npm run build` を使って、プロジェクトをビルドして新しい **ManifestTypes.d.ts** ファイルを生成します。
 
 ## <a name="troubleshooting-and-workarounds"></a>トラブルシューティングと回避策
 
-1. Pcf スクリプトがどのように使用されているかをたずねる 1 ES の通知がある場合は、これらのスクリプトはコードコンポーネントのビルドにのみ使用され、結果のコンポーネントではバンドルまたは使用されないことに注意してください。  
-2. 以前にツールバージョン0.1.817.1 以前を使用してコードコンポーネントを作成していて、最新のビルドモジュールとデバッグモジュールが使用されていることを確認したい場合は、次に示すように、パッケージを更新してください。
+1. pcf-scripts の使用方法を尋ねる 1ES 通知を取得した場合、これらのスクリプトはコード コンポーネントの作成のみに使用され、結果のコンポーネントによってバンドルまたは使用されないことに注意してください。  
+2. 最新のビルドおよびデバッグ モジュールが使用されていることを確認するためにバージョン 0.1.817.1 以前のツールを使用してコード コンポーネントを既に作成している場合は、以下に示すように package.json を更新します。
    
     ```JSON
      "dependencies": { "@types/node": "^10.12.18", "@types/powerapps-component-framework": "1.1.0"}, "devDependencies": { "pcf-scripts": "~0", "pcf-start": "~0" } 
     ```
-3. ビルドが承認の問題のために失敗した場合、ユーザーはエラー `Failed to retrieve information about Microsoft.PowerApps.MSBuild.Pcf from remote source <Feed Url>` を取得します。 この回避策を次に示します。
+3. 認証の問題のためビルドに失敗すると、ユーザーはエラー `Failed to retrieve information about Microsoft.PowerApps.MSBuild.Pcf from remote source <Feed Url>` を取得します。 この問題を回避する方法は次のとおりです。
 
-   - % **Appdata% uget**から nuget.exe ファイルを開きます。 ユーザーがエラーを取得するフィードは、このファイルに存在する必要があります。 
-   - Nuget.exe ファイルからフィードを削除するか、PAT トークンを生成して、それを Nuget.exe ファイルに追加します。 例:
+   - NuGet.Config ファイルを **%APPDATA%\NuGet** から開きます。 ユーザーがエラーを得たフィードはこのファイルにある必要があります。 
+   - NuGet.Config ファイルからフィードを削除するか、PAT トークンを生成して Nuget.Config ファイルに追加します。 たとえば、
 
      ```XML
      <?xml version="1.0" encoding="utf-8"?>  
@@ -173,6 +159,6 @@ PowerApps CLI を使用して、コードコンポーネント用の新しい空
 
 ### <a name="see-also"></a>関連項目
 
-[PowerApps コンポーネントフレームワークの制限事項](limitations.md)<br/>
-[PowerApps コンポーネントフレームワーク API リファレンス](reference/index.md)<br/>
-[PowerApps コンポーネントフレームワークの概要](overview.md)
+[PowerApps Component Framework の制限](limitations.md)<br/>
+[PowerApps Component Framework API の参照](reference/index.md)<br/>
+[PowerApps Component Framework の概要](overview.md)

@@ -1,5 +1,5 @@
 ---
-title: '付録: アプリの認証チェックリスト (PowerApps) | Microsoft Docs'
+title: '付録: アプリ認定チェックリスト (PowerApps) | Microsoft Docs'
 description: アプリ認定チェックリストはモデル駆動型の確認に関する情報を提供し、キャンバス アプリとフローは AppSource に公開する前に通過する必要があります。
 ms.custom: ''
 ms.date: 03/20/2019
@@ -27,7 +27,7 @@ search.app:
 <th>認定チェックリスト</th>
 </tr>
 <tr>
-<td rowspan=5>Common Data Service に接続する<a href="https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview">モデル駆動型アプリ</a>, <a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started">キャンバス アプリ</a>および <a href="https://docs.microsoft.com/flow/getting-started">フロー</a><br/><br/><strong>注意</strong>: Dynamics 365 for Customer Engagement アプリはモデル駆動型アプリです。</td>
+<td rowspan=5>Common Data Service に接続する<a href="https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview">モデル駆動型アプリ</a>, <a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started">キャンバス アプリ</a>および <a href="https://docs.microsoft.com/flow/getting-started">フロー</a><br/></td>
 <td>正常性確認</td>
 <td><ul>
 <li>アプリ登録の種類を確認: 無料、試用版またはお問い合わせ お問い合わせに登録されている場合、発行者はテスト ドライブを有効にする必要があります。</li>
@@ -40,7 +40,7 @@ search.app:
 <td>コード検証</td>
 <td>
 <ul>
-<li>キャンバス アプリのコード検証は PowerApps の <a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/accessibility-checker">アクセシビリティ チェッカー ツール</a> によって行われ、以下を確認します:
+<li>キャンバス アプリのコード検証は PowerApps の <a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/accessibility-checker">アクセシビリティ チェッカー ツール</a> を介して行われ、以下を確認します。
 <ul>
 <li>静的数式エラーと警告: 何か問題があった場合は、検証チームが問題解決のためにフィードバックを共有し、AppSourceへと再提出します。</li>
 <li>実行時エラー: アプリを実行モードで開いて表示する時に発生する可能性があります。 問題が見つかったらすべて電子メールで報告されます。</li>
@@ -56,7 +56,7 @@ search.app:
 <td>展開の検証</td>
 <td>
 <ul>
-<li>ソリューションは  <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/package-deployer/create-packages-package-deployer">Package Deployer</a> を使用して PowerApps studio にインストールされます。 インストールされたキャンバス アプリは、ソリューションおよびアプリ セクションにインストール後に手動で配置されます。そしてアプリが編集モードおよび実行モードで開かれていることを確認します。 キャンバス アプリが PowerApps Studio から手動で削除され、アンインストールが成功したことを確認します。</li>
+<li>ソリューションは <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/package-deployer/create-packages-package-deployer">Package Deployer</a> を使用して PowerApps Studio にインストールされます。 インストールされたキャンバス アプリは、ソリューションおよびアプリ セクションにインストール後に手動で配置されます。そしてアプリが編集モードおよび実行モードで開かれていることを確認します。 キャンバス アプリは PowerApps Studio から手動で削除され、アンインストールが成功したことを検証します</li>
 <li>キャンバス アプリが発行者から提供されたコネクタを介して正しく接続していることを確認します。 たとえば、 Common Data Service またはほかのコネクションです。</li>
 <li>すべての Common Data Service コンポーネント (エンティティ、webリソース、プラグイン、その他のコンポーネント) がソリューションにて利用可能となっていることを確認します。</li>
 <li>ソリューションを手動でアンインストールし、管理ソリューションに関連付けられたすべてのコンポーネントが削除されたかを確認します。</li>
@@ -77,7 +77,7 @@ search.app:
 <td>
 <ul>
 <li>外部データ ソースまたはアクセスを必要とする接続にキャンバス アプリが接続しているかどうか、また適切な接続の詳細を E2E ドキュメントで共有する必要があるかどうかを確認します。</li>
-<li>キャンバス アプリが PowerApps コネクタ以外の任意の外部接続に接続することを確認します。</li>
+<li>キャンバス アプリが PowerApps コネクタの外部接続に接続されていることを確認します。</li>
 <li>Package Deployer にて提供されているカスタム コードを確認します。 アプリケーションを AppSourceに承認する前にコードを検証します。</li>
 <li>カスタム コードが対象の環境から顧客データを取得しているかを確認するにはコードを手動で検証します。</li>
 </ul>
@@ -103,7 +103,7 @@ search.app:
 <td>展開の検証</td>
 <td>
 <ul>
-<li>キャンバス アプリはアプリ インポート機能を使用して PowerApps Studio に手動でインストールされます。 インストールされたキャンバス アプリは、アプリ セクションにインストール後に手動で配置されます。そしてアプリが編集モードおよび実行モードで開かれていることを確認します。 キャンバス アプリが PowerApps Studio から手動で削除され、アンインストールが成功したことを確認します。</li>
+<li>キャンバス アプリはアプリ インポート機能を使用して PowerApps Studio に手動でインストールされます。 インストールされたキャンバス アプリは、アプリ セクションにインストール後に手動で配置されます。そしてアプリが編集モードおよび実行モードで開かれていることを確認します。 キャンバス アプリは PowerApps Studio から手動で削除され、アンインストールが成功したことを検証します。</li>
 <li>キャンバス アプリが発行者から提供されたコネクタに正しく接続していることを確認します。</li>
 </ul>
 </td>

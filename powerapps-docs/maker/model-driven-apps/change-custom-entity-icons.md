@@ -1,5 +1,5 @@
 ---
-title: PowerApps におけるモデル駆動型アプリのユーザー定義エンティティのアイコンの変更 | MicrosoftDocs
+title: PowerApps でモデル駆動型アプリのカスタム エンティティ アイコンを変更する | MicrosoftDocs
 definition: Learn how to change the icon for a custom entity
 ms.custom: ''
 ms.date: 05/17/2018
@@ -63,7 +63,7 @@ search.app:
   
 ## <a name="community-tools"></a>コミュニティ ツール
 
-**[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)** は Dynamics 365 Customer Engagement 用に XrmToolbox コミュニティが開発したツールです。 コミュニティが開発したツールについては、[Common Data Service の開発者ツール](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools) を参照してください。
+**[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)** は XrmToolbox コミュニティが PowerApps 向けに開発したツールです。 コミュニティが開発したツールについては [Common Data Service の開発者ツール](/powerapps/developer/common-data-service/developer-tools) トピックをご覧ください。
 
 > [!NOTE]
 > コミュニティ ツールは Microsoft の製品ではなく、コミュニティ ツールに対するサポートは提供されません。 このツールに関するご質問は、その発行元にお問い合わせください。 詳細: [XrmToolBox](https://www.xrmtoolbox.com)。

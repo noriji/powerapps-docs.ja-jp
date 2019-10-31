@@ -1,5 +1,5 @@
 ---
-title: PowerApps ポータルを使用して 1 対多または多 対 1 のエンティティ関連付けを作成および編集する | MicrosoftDocs
+title: PowerApps ポータルを使用して 1 対多または多対 1 のエンティティ関連付けを作成、編集する | MicrosoftDocs
 description: PowerApps ポータルを使用して 1 対多または多 対 1 のエンティティ関連付けを作成する方法について説明します
 ms.custom: ''
 ms.date: 06/11/2018
@@ -21,9 +21,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="create-and-edit-one-to-many-or-many-to-one-entity-relationships-using-powerapps-portal"></a>PowerApps ポータルを使用して 1 対多または多対 1 のエンティティ関連付けを作成および編集する
+# <a name="create-and-edit-one-to-many-or-many-to-one-entity-relationships-using-powerapps-portal"></a>PowerApps ポータルを使用して 1 対多または多対 1 のエンティティ関連付けを作成、編集する
 
-[PowerApps ポータル](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) では、Common Data Service の 1:N (1 対多) または N:1 (多対 1) の関連付けを簡単に作成および編集できます。
+[PowerApps ポータル](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) では、  Common Data Serviceの 1:N (1 対多) または N:1 (多対 1) の関連付けを簡単に作成、編集することができます。
 
 ポータルでは一般的なオプションのほどんとを構成できますが、特定のオプションはソリューション エクスプローラーを使用してのみ設定できます。 詳細: 
 - [1:N (一対多) または N:1 (多対一) の関連付けを作成および編集する](create-edit-1n-relationships.md)
@@ -31,7 +31,7 @@ search.app:
 
 ## <a name="view-entity-relationships"></a>エンティティの関連付けを表示する
 
-1. [PowerApps ポータル](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)から、**モデル駆動型**または**キャンバス**設計モードを選択します。
+1. [PowerApps ポータル](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)から、 **モデル駆動型** または **キャンバス** 設計モードを選択します。
 2. **データ** > **エンティティ** を選択し、表示する関連付けを持つエンティティを選択します。
 3. **関連付け** タブでは、次のビューを選択できます。 
 
@@ -55,7 +55,7 @@ search.app:
 
 <!-- This may change going forward, but this is the way it is now. #2534972 -->
 > [!Important]
-> ポータルは、ソリューション エクスプローラーとは異なる用語を使用します。 用語は逆になっています。 ソリューション エクスプローラーの **関連エンティティ** は、ポータルでは **主エンティティ** です。 同様に、ソリューション エクスプローラーの **主エンティティ** は、ポータルでは **関連エンティティ** です。
+> ポータルは、ソリューション エクスプローラーとは異なる用語を使用します。 ソリューション エクスプローラーの **主エンティティ** は、ポータルでは **現在のエンティティ** となります。
 
 選択肢に応じて、次のいずれかが表示されます。
 
@@ -65,10 +65,10 @@ search.app:
 |**多対 1**|![多対 1 の関連付けパネル](media/many-to-one-relationship-panel.png)|
 |**1 対多**|![1 対多の関連付けパネル](media/one-to-many-relationship-panel.png)|
 
-2 つのエンティティの間に作成する関連付けの **関連エンティティ** または **主エンティティ** を選択します。 
+2つのエンティティ間で関連付けを作成をするには、 **関連エンティティ** を選択します。 
 
 > [!NOTE]
-> いずれかを選択すると、検索フィールドが*主*エンティティで作成されます。
+> いずれかを選択すると、検索フィールドが *現在の* エンティティで作成されます。
 
 エンティティを選択すると、関連付けの詳細を編集できます。 この例では、複数の取引先担当者のエンティティ レコードを 1 つの取引先企業に関連付けることができます。
 

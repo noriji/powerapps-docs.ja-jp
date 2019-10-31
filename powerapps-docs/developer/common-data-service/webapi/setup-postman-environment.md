@@ -1,5 +1,5 @@
 ---
-title: Postman 環境の設定 (アプリ用 Common Data Service) | MicrosoftDocs
+title: Postman 環境の設定 (Common Data Service for Apps)| MicrosoftDocs
 description: Common Data Service 環境に接続する Postman 環境を設定と構成する方法を説明します。
 ms.custom: null
 ms.date: 04/09/2019
@@ -8,8 +8,6 @@ ms.service: powerapps
 ms.suite: null
 ms.tgt_pltfrm: null
 ms.topic: article
-applies_to:
-  - Dynamics 365 for Customer Engagement (online)
 ms.assetid: 955BA444-A53D-4843-9429-833B1636E2B4
 caps.latest.revision: 7
 author: susikka
@@ -23,27 +21,24 @@ search.app:
 
 # <a name="set-up-a-postman-environment"></a>Postman 環境の設定
 
-Postman を使用して Common Data Service のインスタンスに接続し、Web API 要求を構成および送信し、応答を表示できます。 認証管理は多くの人たちにとって課題となります。 このトピックでは Postman 環境を Common Data Service 環境で機能するように構成する方法について説明します。
+Postman を使用すると、Common Data Service インスタンスに接続して、Web API 要求を構成および送信し、応答を表示できます。 認証管理は多くの人たちにとって課題となります。 このトピックでは Postman 環境を Common Data Service 環境で機能するように構成する方法について説明します。
 
 ユーザーが接続するために使用する一連の変数を保存するために Postman 環境を使用できます。 これらの値には、次の構文を使用することで postman 内でアクセスできます: `{{name}}`。 Postman 変数の詳細については [Postman のドキュメント > 変数](https://www.getpostman.com/docs/v6/postman/environments_and_globals/variables) を参照してください。
 
-> [!NOTE]
-> [!INCLUDE[cc-d365ce-note-topic](../includes/cc-d365ce-note-topic.md)] [Postman 環境をセットアップする (Customer Engagement)](/dynamics365/customer-engagement/developer/webapi/setup-postman-environment)
-
 ## <a name="prerequisites"></a>前提条件
 
-* 接続できる PowerApps の Common Data Service 環境を用意してください。 
+* 接続できる PowerApps Common Data Service 環境が必要です。 
 * [Postman デスクトップ アプリケーション](https://www.getpostman.com/apps) をダウンロードおよびインストールします。
 
 <a name="bkmk_connectcds"></a> 
 
-## <a name="connect-with-your-common-data-service-environment"></a>Common Data Service 環境に接続してください。
+## <a name="connect-with-your-common-data-service-environment"></a>Common Data Service 環境に接続
 
 この環境では、すべての Common Data Service 環境で登録されるアプリケーションのクライアント ID を使用します。 
  
 これらの説明で提供されている `clientid` および `callback` の値を使用できます。  ただし、独自のアプリケーションを構築するときは、独自の Azure Active Directory (Azure AD) アプリケーションを登録する必要があります。
  
-独自の Azure AD アプリケーションを登録するには [チュートリアル: Azure Active Directory と共に Common Data Service アプリを登録](../walkthrough-register-app-azure-active-directory.md) で説明されている手順を参照してください。
+独自の Azure AD アプリケーションを登録するには、[チュートリアル: Azure Active Directory への Common Data Service アプリの登録](../walkthrough-register-app-azure-active-directory.md)に記載される手順を参照してください。
 
 Common Data Service インスタンスと接続するのに使用できる Postman 環境を作成するには、これらのステップを使用します:
 
@@ -65,7 +60,7 @@ Common Data Service インスタンスと接続するのに使用できる Postm
     |`authurl`|`https://login.microsoftonline.com/common/oauth2/authorize?resource={{url}}`|
 
     ![新しい Postman 環境を作成してオンライン インスタンスと接続する](media/postman-add-online-env.png "新しい Postman 環境を作成してオンライン インスタンスと接続する")<br>
-1. インスタンス URL のプレースホルダー値を Common Data Service インスタンスの URL と置換して、**追加** を選択して環境を保存します。
+1. インスタンス URL のプレースホルダー値を Common Data Service インスタンスの URL と置換して、**追加**をクリックして環境を保存します。
 
 1. **環境の管理** ダイアログ ボックスを閉じます。  
 
@@ -105,4 +100,4 @@ Common Data Service インスタンスと接続するテストのための新し
 ## <a name="see-also"></a>関連項目
 
 [Postman を使用して操作を実行する](use-postman-perform-operations.md)<br>
-[チュートリアル: Azure Active Directory と共に Common Data Service アプリを登録](../walkthrough-register-app-azure-active-directory.md)
+[チュートリアル: Common Data Service アプリを Azure Active Directory に登録する](../walkthrough-register-app-azure-active-directory.md)

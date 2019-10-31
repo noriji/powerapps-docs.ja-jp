@@ -1,29 +1,30 @@
 ---
 title: PowerApps ポータルとは | Microsoft Docs
-description: PowerApps を使用して web サイトを設計および構築し、外部ユーザーが Common Data Service に格納されているデータを操作できるようにします。
+description: Common Data Service に格納されているデータを外部ユーザーが操作できる PowerApps を使用して Web サイトを設計し、構築します 。
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: ''
-ms.date: 10/07/2019
+ms.custom: null
+ms.date: 07/18/2019
 ms.author: shjais
-ms.reviewer: ''
-ms.openlocfilehash: 88650cba518ca5fe5d15f5e6bbaacc1a7d958b0f
-ms.sourcegitcommit: 5338e01d2591f76d71f09b1fb229d405657a0c1c
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72977797"
+ms.reviewer: null
 ---
+
 # <a name="what-is-powerapps-portals"></a>PowerApps ポータルとは
 
-PowerApps のメーカーは、強力な新しい種類のエクスペリエンスを作成できるようになりました。外部向けの web サイトを使用すると、組織外のユーザーがさまざまな id でサインインしたり、Common Data Service でデータを作成して表示したり、匿名でコンテンツを参照したりすることもできます。 Dynamics 365 のモデル駆動型アプリへのアドオンとしてのみ提供されていた[dynamics 365 ポータル](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/administer-manage-portal-dynamics-365)のすべての機能は、PowerApps 内で完全にスタンドアロンで使用できるようになりました。  
+[!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-これらの機能は、作成者が web サイトをすばやく作成し、ページ、レイアウト、コンテンツでカスタマイズするためのエンドツーエンドのエクスペリエンスを向上させます。 テンプレートを使用してページデザインを再利用したり、フォームやビューを追加して Common Data Service のキーデータを表示したり、ユーザーに発行したりすることができます。
+> [!IMPORTANT]
+> - [!INCLUDE[cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> - プレビュー機能は Microsoft サポートで限定的にサポートされています。また、指定された地理上の区域でしか使用できない場合があります。
+
+PowerApps メーカーでは、新しい、強力な種類のエクスペリエンスを作成することもできます。外部に接続する Web サイトは、組織外のユーザーがさまざまな ID でサインインできるようになっており、Common Data Service でデータを作成したり閲覧したりできます。あるいは、コンテンツを匿名で参照できます。 [Dynamics 365 ポータル](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/administer-manage-portal-dynamics-365) のフル機能は、以前は、Dynamics 365 のモデル駆動型アプリケーションにアドオンする場合に限って提供されていましたが、現在では PowerApps の内部で、完全にスタンドアロンで利用できます。  
+
+これらの能力によりエクスペリエンスが徹底的に改善され、Web サイトの作成とページ、レイアウト、コンテンツを使用したカスタマイズが迅速に実行できるようになりました。 作成者は、テンプレートを使用してページ デザインを再利用したり、フォームとビューを Common Data Service のキー データに追加したり 、ユーザーに公開したりできます。
 
 > [!NOTE]
-> 特定のエクスペリエンスに既知の問題がある可能性があります。 これらの問題については、このドキュメントで後述する「[既知の問題](known-issues.md)」で説明しています。  
+> PowerApps ポータルがプレビューにあるため、特定のエクスペリエンスに既知の問題が存在する場合があります。 これらの問題については、このドキュメントの [既知の問題](known-issues.md) セクションで後程説明します。  
 
 
  

@@ -1,7 +1,7 @@
 ---
-title: キャンバスアプリの PowerApps コンポーネントフレームワーク |Microsoft Docs
-description: キャンバスアプリのコードコンポーネントを作成する
-keywords: ''
+title: キャンバス アプリの PowerApps Component Framework | Microsoft Docs
+description: キャンバス アプリのコード コンポーネントを作成する
+keywords: null
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -11,101 +11,96 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
-ms.openlocfilehash: e1c6b4bad1280bdabf8c27e30396b368276ff10b
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72347224"
 ---
-# <a name="powerapps-component-framework-for-canvas-apps"></a>キャンバスアプリ用の PowerApps コンポーネントフレームワーク
+
+# <a name="powerapps-component-framework-for-canvas-apps"></a>キャンバス アプリの PowerApps Component Framework
 
 > [!IMPORTANT]
-> この機能は引き続き試験段階であり、既定では無効になっています。 詳細については、「[試験機能とプレビュー機能](../../maker/canvas-apps/working-with-experimental.md)」を参照してください。
+> この機能はまだ実験的であり既定で無効になっています。 詳細については [実験的機能とプレビュー機能](../../maker/canvas-apps/working-with-experimental.md) を参照してください。
 
-PowerApps component framework を使用すると、アプリの作成者はアプリまたはアプリで使用するコードコンポーネントを作成できます。 詳細情報: [PowerApps component framework の概要](overview.md) 
+PowerApps Component Framework を使用すると、アプリ作成者はアプリ内やアプリ全体で使用するコード コンポーネントを作成できます。 詳細: [PowerApps Component Framework の概要](overview.md) 
 
-この実験的なプレビューでは、powerapps component framework により、アプリの開発者は、PowerApps CLI ツールを使用してコードコンポーネントの作成、デバッグ、インポート、キャンバスアプリへの追加を行うことができます。 この実験的なプレビューでは、特定の Api のみがサポートされています。 各 API でキャンバスアプリがサポートされているかどうかを確認することをお勧めします。 
+この実験的プレビューでは、PowerApps component framework により、アプリ作成者は PowerApps CLI ツールを使用してコード コンポーネントを作成、デバッグ、インポート、キャンバス アプリに追加できます。 この実験的プレビューでは特定の API のみがサポートされています。 それぞれの API がキャンバス アプリをサポートしているか確認することを推奨します。 
 
 > [!WARNING]
-> コードコンポーネントには、Microsoft によって生成されない可能性があり、セキュリティトークンとデータにアクセスできる可能性のあるコードが含まれています。 コードコンポーネントをアプリに追加するときは、コードコンポーネントソリューションが信頼できるソースからのものであることを確認してください。
+> コード コンポーネントには Microsoft が生成していない可能性があるコードが含まれており、セキュリティ トークンやデータにアクセスする可能性があります。 コード コンポーネントをアプリに追加するときは、コード コンポーネント ソリューションが信頼できるソースのものであることを確認してください。
 
 ## <a name="prerequisites"></a>前提条件
 
-環境で PowerApps コンポーネント機能を有効にするには、システム管理者特権が必要です。
+1. 環境で PowerApps コンポーネント機能を有効にするには、システム管理者特権が必要です。
 
 > [!IMPORTANT]
-> 既定では、PowerApps component framework はモデル駆動型アプリに対して有効になっています。
+> 既定で PowerApps Component Framework はモデル駆動型アプリに対して有効です。
 
-## <a name="enable-powerapps-component-framework-feature"></a>PowerApps コンポーネントフレームワーク機能の有効化
+## <a name="enable-powerapps-component-framework-feature"></a>PowerApps Component Framework 機能を有効にする
 
-コードコンポーネントをアプリに追加するには、PowerApps component framework 機能を使用する各環境で有効にする必要があります。 環境でアプリ内のコードコンポーネントを使用できるようにするには、次のようにします。
+アプリにコード コンポーネントを追加するには、使用するそれぞれの環境で PowerApps Component Framework 機能を有効にする必要があります。 環境がアプリ内でコード コンポーネントを使用するようにする方法:
 
-1. [PowerApps にサインインします](https://powerapps.microsoft.com/en-us/)。
+1. [PowerApps](https://powerapps.microsoft.com/en-us/) にサインインします。
 
-2. **設定**アイコンを選択し、 **[管理センター]** を選択します。
+2. **設定** アイコンをクリックして **管理センター** を選択します。
     
-    ![設定と管理センター](media/select-admin-center-from-settings.png "の設定と管理センター") 
+    ![設定の管理センター](media/select-admin-center-from-settings.png "設定の管理センター") 
 
-3. この機能を有効にする環境を選択し、省略記号 ( **..** .) を選択して、 **[設定]** を選択します。
+3. この機能を有効にする環境を選択し、**...** をクリックしてから **設定** を選択します。
 
-4. **[製品]** タブで、 **[機能]** を選択します。
+4. **製品** タブで **機能** を選択します。
 
-   Powerapps コンポーネント![フレームワーク]を有効にする(media/enable-pcf-feature.png "powerapps コンポーネントフレームワークを")有効にする
+   ![PCF の有効化](media/enable-pcf-feature.png "PCF の有効化")
 
-5. 使用可能な機能の一覧から、**キャンバスアプリの PowerApps component framework** の下にある オン を**オン** に設定します。
+5. 利用可能な機能のリストから **キャンバス アプリの PowerApps Component Framework** のスイッチをオンにします。
 
-6. 次に、コードコンポーネントを追加するアプリを開き、[**ファイル** > **アプリの設定**] に移動して **[詳細設定]** を選択します。
+6. ここで、コード コンポーネントを追加するアプリを開き **ファイル** > **アプリ設定** に移動して、**詳細設定** を選択します。
 
-   Powerapps コンポーネント![フレームワークのコンポーネントを有効に]する(media/enable-components-for-pcf.png "powerapps component framework のコンポーネントを有効")にする
+   ![PCF のコンポーネントを有効にする](media/enable-components-for-pcf.png "PCF のコンポーネントを有効にする")
    
-7. **[実験的な機能]** セクションで、 **[コンポーネント]** を **[** オン] に切り替えます。
+7. **実験的機能** セクションの下の **コンポーネント** スイッチをオンにします。
 
-## <a name="implementing-code-components"></a>実装 (コードコンポーネントを)
+## <a name="implementing-code-components"></a>コード コンポーネントの実装
 
-環境で PowerApps component framework の機能を有効にした後、コードコンポーネントのロジックの実装を開始できます。 [サンプルコンポーネントの実装](implementing-controls-using-typescript.md)に関するトピックでは、カスタムロジックとマニフェストファイルを実装するコードコンポーネントを作成し、デバッグプロセスを実行し、ソリューションの zip ファイルを作成して、ソリューションを共通にインポートするためのステップバイステップのプロセスを示します。データサービス。
-
-> [!NOTE]
-> コードコンポーネントの実装は、モデル駆動型アプリとキャンバスアプリ (試験的プレビュー) の両方で同じです。 唯一の違いは、コードコンポーネントの追加です。 
-
-## <a name="add-components-to-a-canvas-app"></a>キャンバスアプリにコンポーネントを追加する
+環境で PowerApps Component Framework 機能を有効にしたら、コード コンポーネントのロジックの実装を開始できます。 [サンプル コンポーネントを実装する](implementing-controls-using-typescript.md) のトピックでは、カスタム ロジック、マニフェスト ファイル、デバッグ プロセスの実装、ソリューション zip ファイルの作成、ソリューションの Common Data Service へのインポートから、直接コード コンポーネントを作成するプロセスをステップごとに説明します。
 
 > [!NOTE]
-> モデル駆動型アプリのフィールドまたはエンティティにコードコンポーネントを追加する方法については、「[モデル駆動型アプリへのコードコンポーネントの追加](add-custom-controls-to-a-field-or-entity.md)」を参照してください。
+> コード コンポーネントの実装は、モデル駆動型アプリとキャンバス アプリ (実験的プレビュー) の両方で同じです。 唯一の違いはコード コンポーネントの追加です。 
 
-キャンバスアプリにコードコンポーネントを追加するには:
+## <a name="add-components-to-a-canvas-app"></a>キャンバス アプリにコンポーネントを追加する
+
+キャンバス アプリにコード コンポーネントを追加する方法:
+
+> [!NOTE]
+> モデル駆動型アプリのフィールドやエンティティにコード コンポーネントを追加する方法は [モデル駆動型アプリにコード コンポーネントを追加する](add-custom-controls-to-a-field-or-entity.md) を参照してください。
 
 1. PowerApps Studio に移動します。
-2. 新しいキャンバスアプリを作成するか、コードコンポーネントを追加する既存のアプリを編集します。
+2. コード コンポーネントを追加する新しいキャンバス アプリを作成するか、既存のアプリを編集します。
 
    > [!IMPORTANT]
-   > 次の手順に進む前に、ソリューション zip ファイルが既に Common Data Service に[インポート](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/import-update-export-solutions)されていることを確認してください。
+   > 次のステップに進む前に、ソリューションの zip ファイルがすでに Common Data Service に [インポート](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/import-update-export-solutions) されていることを確認してください。
 
-3. **コンポーネントのインポート** > **コンポーネント**の**挿入** >  にアクセスします。 
+3. **挿入** > **コンポーネント** > **コンポーネントをインポート** の順にクリックします。 
  
-    ![コンポーネント]の挿入コンポーネントの(media/insert-components-import.png "挿入")
+    ![コンポーネントの挿入](media/insert-components-import.png "コンポーネントの挿入")
 
-4. **[コード (試験段階)]** タブを選択し、一覧からコンポーネントを追加して、 **[インポート]** を選択します。 これにより、 **[コンポーネント]** メニューにサンプルコンポーネントが追加されます。
+4. **コード (実験的)** タブを選択し、リストからコンポーネントを追加して **インポート** をクリックします。 これで **コンポーネント** メニューにサンプル コンポーネントが追加されます。
 
-    ![コンポーネント]の(media/import-component-add-sample-component.png "インポート")サンプルコンポーネントのインポート
+    ![サンプル コンポーネントのインポート](media/import-component-add-sample-component.png "サンプル コンポーネントのインポート")
 
-5. **コンポーネント**に移動し、コンポーネントを選択してアプリに追加します。
+5. **コンポーネント** に移動し、コンポーネントを選択してアプリに追加します。
 
-   ![サンプルコンポーネント]の追加(media/add-sample-component-from-list.png "サンプルコンポーネント")の追加
+   ![サンプル コンポーネントを追加](media/add-sample-component-from-list.png "サンプル コンポーネントを追加")
 
-## <a name="delete-a-code-component"></a>コードコンポーネントの削除 
+## <a name="delete-a-code-component"></a>コード コンポーネントの削除 
 
-キャンバスアプリからコードコンポーネントを削除するには、削除するコードコンポーネントを選択し、メニューの **[削除]** ボタンを選択します。 コードコンポーネントがアプリから削除されると、すべてのコードコンポーネント要素がアプリとアプリパッケージから削除されます。 
+キャンバス アプリからコード コンポーネントを削除するには、削除するコード コンポーネントを選択してメニューの **削除** ボタンを押します。 コード コンポーネントをアプリから削除すると、すべてのコード コンポーネント要素がアプリとアプリ パッケージから削除されます。 
 
-## <a name="update-existing-code-components"></a>既存のコードコンポーネントを更新する
+## <a name="updating-existing-code-components"></a>既存のコード コンポーネントを更新する
 
-コードコンポーネントを更新すると、マニフェストファイルに*version*属性が指定されるため、最新の変更がランタイムに反映されます。 キャンバスアプリの場合、既存のコードコンポーネントを更新するときに、 *version*属性を更新する必要はありません。 設計上、キャンバスアプリは最新のコードコンポーネントを取得し、実行時に表示します。 キャンバスアプリには、同じコンポーネントの1つのバージョンのみが存在できます。
+コード コンポーネントを更新する場合は、マニフェスト ファイルで *バージョン* 属性を指定し、最新の変更がランタイムに反映されるようにします。 キャンバス アプリの場合、既存のコード コンポーネントを更新するときに *バージョン* 属性を更新する必要はありません。 設計上、キャンバス アプリは最新のコード コンポーネントを取得して実行時に表示します。 同じコンポーネントは単一バージョンのみがキャンバス アプリに存在できます。
 
 > [!NOTE]
-> 既存のコードコンポーネントが更新されるのは、アプリが PowerApps Studio で閉じられた場合、または開かれていない場合のみです。 アプリを再度開くと、コードコンポーネントを更新するように求められます。 コードコンポーネントを削除したり、コードコンポーネントをアプリに追加し直したりするだけで、コンポーネントは更新されません。
+> 既存のコード コンポーネントが更新されるのは PowerApps Studio でアプリを閉じたとき、または再度開いたときだけです。 アプリを再度開くと、コード コンポーネントを更新するように求められます。 コード コンポーネントを削除したり、コード コンポーネントをアプリに追加し直すだけでは、コンポーネントは更新されません。
 
 ## <a name="see-also"></a>関連項目
 
-[PowerApps コンポーネントフレームワークの概要](overview.md)<br/>
-[サンプルコンポーネントの実装](implementing-controls-using-typescript.md)
+[PowerApps Component Framework の概要](overview.md)<br/>
+[サンプル コンポーネントを実装する](implementing-controls-using-typescript.md)
 

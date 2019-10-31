@@ -1,7 +1,7 @@
 ---
-title: Control State API |Microsoft Docs
-description: ''
-keywords: PowerAppsPowerApps コンポーネントフレームワーク
+title: コントロールの状態 API | Microsoft Docs
+description: null
+keywords: PowerApps; PowerApps component framework
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -11,25 +11,20 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4a77bf37-8ea0-4fe3-9fe7-2769387167c3
-ms.openlocfilehash: 57982a4e9a4ee50954eb7b5f12e75a8ca43544ef
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72340531"
 ---
-# <a name="implementing-control-state-api-component"></a>コントロール状態 API コンポーネントの実装
 
-PowerApps コンポーネントフレームワークを使用すると、同じセッション内のコンポーネントの複数のレンダリングで、コンポーネントの状態を永続化できます。 これにより、ユーザーがコンポーネントとの間でナビゲートするときに、ユーザーのセッション全体でユーザー状態を維持できるコンポーネントを構築することができます。
+# <a name="implementing-control-state-api-component"></a>コントロールの状態 API コンポーネントの実装
 
-たとえば、コードコンポーネントがユーザーがスクロールできる長いリストである場合は、 **_Setcontrolstate_** 機能を利用して、ユーザーがフォームから移動したときに表示されているリスト内のポイントを記憶することができます。 次に、コンポーネントの初期化にロジックを追加して、保存されている状態を確認し、ユーザーが以前に読み込んだ時点でコンポーネントの一覧を表示することができます。
+PowerApps component framework を使用すると、同一のセッション内におけるコンポーネントの複数のレンダリングを横断してコンポーネントの状態を保持できます。 ユーザーがコンポーネント間を移動する際に、そのセッション全体を通した状態を維持することができるコンポーネントを構築することが可能となります。
+
+たとえば、コード コンポーネントがスクロールが必要なほど長いリストである場合、 **_SetControlState_** 機能を活用してユーザーがフォームから離れたときに見ていたリストの位置を記憶することができます。 その後、コンポーネントの初期化にロジックを追加して、保存された状態を確認し、ユーザーが以前読んだ位置のコンポーネントのリストを表示できます。
 
 > [!div class="mx-imgBorder"] 
-> ![Control STATE api](../media/control-state-api.png "コントロール状態 api")
+> ![コントロールの状態 API](../media/control-state-api.png "コントロールの状態 API")
 
-## <a name="available-for"></a>利用可能な対象
+## <a name="available-for"></a>以下に使用できます
 
-モデル駆動型アプリとキャンバスアプリ (試験段階プレビュー)
+モデル駆動型アプリとキャンバス アプリ (実験的プレビュー)
 
 ## <a name="manifest"></a>マニフェスト
 
@@ -46,7 +41,7 @@ PowerApps コンポーネントフレームワークを使用すると、同じ�
 </manifest>
 ```
 
-## <a name="code"></a>コード
+## <a name="code"></a>Code
 
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
@@ -58,7 +53,7 @@ export class TSControlStateAPI
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
   // Flag if control view has been rendered
   private _controlViewRendered: Boolean;
-  // reference to the control container HTMLDivElement
+  // Reference to the control container HTMLDivElement
   // This element contains all elements of our custom control example
   private _container: HTMLDivElement;
   // Div element to show the current selected color
@@ -71,7 +66,7 @@ export class TSControlStateAPI
   private _persistedSelectedLabel: string;
   // Data type used to store the various information as part of the state object.
   private _stateDictionary: ComponentFramework.Dictionary = {};
-  // references to HTML Button Elements rendered on the control
+  // References to HTML Button Elements rendered on the control
   private _buttonRed: HTMLButtonElement;
   private _buttonBlue: HTMLButtonElement;
   private _buttonGreen: HTMLButtonElement;
@@ -213,7 +208,6 @@ export class TSControlStateAPI
    * @param selectedColorElement The HTML Div Element that the results should be injected into
    */
   private onButtonClick(event: Event, selectedColorElement: HTMLDivElement) {
-    const eventTarget: Element = event.srcElement as Element;
     if (event.srcElement) {
       // Get the label and the selected color attributes from the div element that was clicked
       let label: string = event.srcElement.attributes.getNamedItem("value")!
@@ -298,6 +292,6 @@ export class TSControlStateAPI
 
 ### <a name="related-topics"></a>関連トピック
 
-[サンプルコンポーネントのダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps コンポーネントフレームワーク API リファレンス](../reference/index.md)<br/>
-[PowerApps コンポーネントフレームワークマニフェストスキーマリファレンス](../manifest-schema-reference/index.md)
+[サンプル コンポーネントをダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[PowerApps Component Framework API の参照](../reference/index.md)<br/>
+[PowerApps Component Framework のマニフェスト スキーマの参照](../manifest-schema-reference/index.md)

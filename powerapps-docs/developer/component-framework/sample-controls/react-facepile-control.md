@@ -1,6 +1,6 @@
 ---
-title: Facepile を反応する |Microsoft Docs
-description: 反応を使用した Facepile の実装
+title: リアクト フェイスパイル コンポーネント| Microsoft Docs
+description: リアクトを使用したフェイスパイル コンポーネントの実装
 ms.custom: ''
 author: ghurlman
 manager: kvivek
@@ -9,27 +9,22 @@ ms.service: powerapps
 ms.topic: article
 ms.author: grhurl
 ms.reviewer: nkrb
-ms.openlocfilehash: 62a46acf98c8cdd93524f17b8a3a28ac999e325b
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72340117"
 ---
-# <a name="implementing-the-facepile-component"></a>FacePile コンポーネントの実装
 
-このサンプルでは、PowerApps コンポーネントフレームワークを使用して、対応を使用してコンポーネントを作成する方法を示します。  Facepile サンプルコンポーネントは、応答と Office UI ファブリックによるコンポーネントの応答に基づいて実装されます。 このコードでは、記載されているサードパーティ製のライブラリのベストプラクティスを明らかにすることはできません。
+# <a name="implementing-the-facepile-component"></a>フェイスパイル コンポーネントの実装
+
+このサンプルは、PowerApps component framework を利用してコンポーネントを作成するリアクトの使用方法を示します。  フェイスパイル サンプルコンポーネントは、リアクトと Office UI Fabric リアクト コンポーネントに基づいて実装されます。 このコードは、言及したサードパーティ製ライブラリのベスト プラクティスを明らかにしない場合があります。
 
 > [!div class="mx-imgBorder"]
-> ![Facepile](../media/react-facepile.png "反応する")
+> ![リアクト フェイスパイル](../media/react-facepile.png "リアクト フェイスパイル")
 
-## <a name="available-for"></a>利用可能な対象 
+## <a name="available-for"></a>以下に使用できます 
 
-モデル駆動型アプリとキャンバスアプリ (試験段階プレビュー) 
+モデル駆動型アプリとキャンバス アプリ (実験的プレビュー) 
 
 
 > [!IMPORTANT]
-> PowerApps ホストアプリケーションは、反応の上で機能しますが、バンドルに対応するバージョンはホストバージョンとは通信せず、そのバージョンに依存しません。 反応する新しいコピー (または、コンポーネントにバンドルするすべてのサードパーティライブラリ) は、そのコントロールのすべてのインスタンスのホストページに読み込まれるため、コンポーネントを追加するときにページを作成する大きさに注意してください。 今後のリリースでは、この問題に対する解決策があります。
+> PowerApps ホスト アプリケーションは、リアクト上で機能しますが、バンドルするリアクトのバージョンはホストバージョンとは通信せず、そのバージョンにも依存しません。 リアクトの新規コピー (または自分のコンポーネントでバンドルしたサードパーティ ライブラリ) は、そのコントロールのすべてのインスタンスのホストページに読み込まれます。そのため、コンポーネントを追加する際に、どの程度の大きさのページを作成するかに注意してください。 この問題に対するソリューションは将来のリリースに含まれます。
 
 ## <a name="manifest"></a>マニフェスト
 
@@ -49,17 +44,17 @@ ms.locfileid: "72340117"
 
 ## <a name="overview"></a>概要
 
-このサンプルでは、サードパーティ製ライブラリと Office UI ファブリックの依存関係を追加する方法の例を示します。この例では、Office UI Fabric コンポーネントを使用して UI に対応し、PowerApps コンポーネントフレームワーク間で双方向のデータバインディングを実行する方法を紹介します。および対応状態モデル。
+このサンプルは、サードパーティ製ライブラリに依存関係を追加する方法の例を示し、リアクトのために Office UI Fabric コンポーネントを活用する方法と PowerApps component framework とリアクト状態モデル間で双方向のデータ バインディングを実行する方法を紹介します。
 
-コンポーネントサンプルは、3つの Office UI Fabric コンポーネント (facepile スライダー、チェックボックス、ドロップダウンリスト) で構成されています。 スライダーを移動すると、facepile 存在する顔の数が変化します。 チェックボックスは、面のフェードインとフェードアウトを行うか、単に表示または非表示にするかを指定し、ドロップダウンリストのオプションは顔のサイズを制御します。 値が設定されていない場合、[顔の数] の既定値は3になります。
+コンポーネントサンプルは 3 つの Office UI Fabric コンポーネントから構成されます: フェイスパイル、スライダー、チェックボックスとドロップダウンメニューです。 スライダーを移動すると、フェイスパイルのフェイスの数が変わります。 チェックボックス コンポーネントは、フェイスのフェードインやアウト、あるいは単に表示や非表示をコントロールし、ドロップダウンリストのオプションはフェイスのサイズをコントロールします。 値が設定されていない場合、フェイス番号は 3 に既定で設定されます。
 
-- コンポーネントが読み込まれると、スライダーはバインドされた属性値に設定されます。 @No__t_0 プロパティには、関連付けられているメタデータが含まれます。
-- イベントハンドラーは、対応するコンポーネントの props で渡されます。これにより、応答コンポーネントは、値が変更されたことをホスト PowerApps component framework コントロールに通知できます。 次に、イベントハンドラーは、 **notifyOutputEvents**メソッドの呼び出しが必要かどうかを判断します。
-- スライダーをスライドすると、バインドされた値を更新し、渡されたイベントハンドラーを呼び出すために、反応が発生します。 そのハンドラー内で、 **notifyOutputEvents**メソッドに対して呼び出しが行われると、コントロールの[getoutputs](../reference/control/getoutputs.md)メソッドが非同期に呼び出され、PowerApps コンポーネントフレームワークに送られます。 
-- フレームワークホストは、バインドされた属性値を更新し、更新された値はコンポーネントにフローして、コントロールの[Updateview](../reference/control/updateview.md)メソッドをトリガーします。 次に、コントロールは、応答コンポーネントに新しい値をれします。
+- コンポーネントが読み込まれると、スライダーはバインド属性値に設定されます。 `context.parameters.[property_name].attributes` プロパティは関連するメタデータを含みます。
+- イベント ハンドラーは、リアクト コンポーネントのプロップ内を通過されます。これにより、リアクト コンポーネントは値が変更されたホスト PowerApps component framework コントロールを通知できます。 イベント ハンドラーは、 **notifyOutputEvents** メソッドへの呼び出しが必要かどうかを判断します。
+- スライダーをスライドさせると、リアクトはバインド値を更新し、イベントハンドラーに応答しますバインド値を更新して、渡されたイベントハンドラーを呼び出します。 このハンドラー内では、呼び出しが **notifyOutputEvents** メソッドに実行されると、コントロールの [getOutputs](../reference/control/getoutputs.md) メソッドが非同期的に呼び出され、 PowerApps component framework に流れます。 
+- フレームワーク ホストはバインド属性値を更新し、更新された値は [updateView](../reference/control/updateview.md) メソッドをトリガーするコンポーネントへと流れます。 その後コントロールは新しい値を持つリアクト コンポーネントを再表示します。
 
 
-## <a name="code"></a>コード
+## <a name="code"></a>Code
 
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
@@ -69,11 +64,11 @@ import { FacepileBasicExample, IFacepileBasicExampleProps } from "./Facepile";
 
 export class ReactStandardControl
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-  // reference to the notifyOutputChanged method
+  // Reference to the notifyOutputChanged method
   private notifyOutputChanged: () => void;
-  // reference to the container div
+  // Reference to the container div
   private theContainer: HTMLDivElement;
-  // reference to the React props, prepopulated with a bound event handler
+  // Reference to the React props, prepopulated with a bound event handler
   private props: IFacepileBasicExampleProps = {
     numberFacesChanged: this.numberFacesChanged.bind(this)
   };
@@ -154,7 +149,7 @@ export class ReactStandardControl
 
 ```
 
-### <a name="facepiletsx"></a>Facepile
+### <a name="facepiletsx"></a>Facepile.tsx
 
 ```TSX
 import * as React from "react";
@@ -282,7 +277,7 @@ export class FacepileBasicExample extends React.Component<IFacepileBasicExampleP
 }
 ```
 
-### <a name="facepileexampledatats"></a>FacepileExampleData
+### <a name="facepileexampledatats"></a>FacepileExampleData.ts
 
 ```TypeScript
 import * as React from 'react';
@@ -363,7 +358,7 @@ export const facepilePersonas: IFacepilePersona[] = [
   // Trimmed for display; full file in the downloadable sample code
 ```
 
-### <a name="testimagests"></a>TestImages. ts
+### <a name="testimagests"></a>TestImages.ts
 
 ```TypeScript
 const baseProductionCdnUrl = 'https://static2.sharepointonline.com/files/fabric/office-ui-fabric-react-assets/';
@@ -385,7 +380,7 @@ export const TestImages = {
 
 ## <a name="resources"></a>リソース
 
-### <a name="cssreactstandardcontrolcss"></a>css/ReactStandardControl
+### <a name="cssreactstandardcontrolcss"></a>css/ReactStandardControl.css
 
 ```css
 .msFacepileExample {
@@ -420,6 +415,6 @@ export const TestImages = {
 
 ### <a name="related-topics"></a>関連トピック
 
-[PowerApps コンポーネントフレームワークマニフェストスキーマリファレンス](../manifest-schema-reference/index.md)<br />
-[PowerApps コンポーネントフレームワーク API リファレンス](../reference/index.md)<br />
-[PowerApps コンポーネントフレームワークの概要](../overview.md)
+[PowerApps Component Framework のマニフェスト スキーマの参照](../manifest-schema-reference/index.md)<br />
+[PowerApps Component Framework API の参照](../reference/index.md)<br />
+[PowerApps Component Framework の概要](../overview.md)

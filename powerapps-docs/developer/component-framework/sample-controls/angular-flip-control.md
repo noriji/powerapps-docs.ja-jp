@@ -1,6 +1,6 @@
 ---
-title: " コンポーネントの反転 |Microsoft Docs"
-description: 角度 JS を使用したフリップコンポーネントの実装
+title: ' フリップ コンポーネント | Microsoft Docs'
+description: Angular JS を使用したフリップ コンポーネントの実装
 ms.custom: ''
 manager: kvivek
 ms.date: 10/01/2019
@@ -8,23 +8,18 @@ ms.service: powerapps
 ms.topic: article
 ms.author: nabuthuk
 author: Nkrb
-ms.openlocfilehash: 90d74124e21fe74a96ca31830508f3bbb99e17b9
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72340669"
 ---
-# <a name="implementing-flip-component"></a>実装 (フリップコンポーネントを)
 
-このサンプルでは、サードパーティのライブラリを使用して、PowerApps component framework でコンポーネントを作成する方法を示します。  フリップサンプルコンポーネントは、角速度、角度 ui、角のアニメーション、角度のサニタイズ、bootstrap に基づいて実装されます。 このコードでは、記載されているサードパーティ製のライブラリのベストプラクティスを明らかにすることはできません。
+# <a name="implementing-flip-component"></a>フリップ コンポーネントの実装
+
+このサンプルでは、PowerApps Component Framework でサードパーティ製ライブラリを使用してコンポーネントを作成する方法を説明します。  フリップのサンプル コンポーネントは、angular.js、angular-ui、angle-animate、angle-sanitize、bootstrap に基づいて実装されます。 このコードは、言及したサードパーティ製ライブラリのベスト プラクティスを明らかにしない場合があります。
 
 > [!div class="mx-imgBorder"]
-> ![角度フリップ]の(../media/angular-flip.png "角度フリップ")
+> ![Angular フリップ](../media/angular-flip.png "Angular フリップ")
 
-## <a name="available-for"></a>利用可能な対象 
+## <a name="available-for"></a>以下に使用できます 
 
-モデル駆動型アプリとキャンバスアプリ (試験段階プレビュー) 
+モデル駆動型アプリとキャンバス アプリ (実験的プレビュー) 
 
 ## <a name="manifest"></a>マニフェスト
 
@@ -43,17 +38,17 @@ ms.locfileid: "72340669"
 
 ## <a name="overview"></a>概要
 
-このサンプルでは、サードパーティ製ライブラリの依存関係を追加する方法の例を示します。 PowerApps コンポーネントフレームワーク、コンポーネントモデル、サードパーティの内部データモデルの間で双方向のデータバインディングを実行する方法について説明します。
+このサンプルは、サードパーティ製ライブラリに依存関係を追加する方法の例を示し、PowerApps Component Framework、コンポーネント モデル、そしてサードパーティの内部データモデル間で双方向のデータ バインドを実行する方法を紹介します。
 
-フリップコンポーネントのサンプルは、ラベルとボタンで構成されています。 ボタンをクリックすると、ラベルのテキストが切り替わります。
+フリップ コンポーネントのサンプルは、ラベルとボタンで構成されます。 ボタンをクリックすると、ラベルのテキストが切り替わります。
 
-- コンポーネントが読み込まれると、ラベルにバインド属性値に基づいてテキストが表示されます。 @No__t_0 には、関連付けられているメタデータが含まれます。
-- 2つのオプションフィールドについては、`context.parameters.[property_name].Options` に true と false の両方の値オプションが含まれます。 
-- [反転] ボタンをクリックすると、ラベルは**notifyOutputEvents**メソッドを使用して値を更新します。 [getoutputs](../reference/control/getoutputs.md)メソッドは非同期に呼び出され、PowerApps component framework に送られます。 
-- ClientAPI はバインド属性値を更新し、更新された値はコンポーネントラベルにフローします。 @No__t_0 を使用して、トリガーコントロールの[Updateview](../reference/control/updateview.md)メソッドに属性値を更新することもできます。 次に、コンポーネントはサードパーティモデルを更新し、ラベルが更新されます。
+- コンポーネントがロードされると、ラベルはバインド属性値に基づいてテキストを表示します。 `context.parameters.[property_name].attributes` は関連するメタデータを含みます。
+- TwoOptions フィールドに対して、`context.parameters.[property_name].Options` は true と false の両方の値のオプションを含みます。 
+- フリップ ボタンをクリックすると、ラベルは **notifyOutputEvents** メソッドを使用して値を更新し、[getOutputs](../reference/control/getoutputs.md) メソッドは非同期に呼び出されて PowerApps Component Framework にフローします。 
+- Client API はバインド属性値を更新し、更新された値はコンポーネント ラベルにフローします。 `ClientAPI` を使用して属性値を更新し、コントロールの [updateView](../reference/control/updateview.md) メソッドをトリガーすることもできます。 その後、コンポーネントがサードパーティ モデルを更新して、ラベルが更新されます。
 
 
-## <a name="code"></a>コード
+## <a name="code"></a>Code
 
 ```TypeScript
 
@@ -360,6 +355,6 @@ fieldset[disabled].btn-primary:hover {
 
 ### <a name="related-topics"></a>関連トピック
 
-[PowerApps コンポーネントフレームワークマニフェストスキーマリファレンス](../manifest-schema-reference/index.md)<br />
-[PowerApps コンポーネントフレームワーク API リファレンス](../reference/index.md)<br />
-[PowerApps コンポーネントフレームワークの概要](../overview.md)
+[PowerApps Component Framework のマニフェスト スキーマの参照](../manifest-schema-reference/index.md)<br />
+[PowerApps Component Framework API の参照](../reference/index.md)<br />
+[PowerApps Component Framework の概要](../overview.md)

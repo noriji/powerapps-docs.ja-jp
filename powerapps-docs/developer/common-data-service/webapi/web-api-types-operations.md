@@ -24,9 +24,6 @@ search.app:
 
 Web API を使用するには、使用できるものに関する情報を検索する必要があります。 サービスについては、ユーザーがアクセスできるサービスおよびメタデータ ドキュメントで説明されています。 このトピックでは重要な概念を紹介し、サービスおよびメタデータ ドキュメントから生成されたドキュメント、メタデータ ドキュメント、およびシステム エンティティの種類、関数、アクションのドキュメントから必要な情報を検索する方法を説明します。 
 
-> [!NOTE]
-> このトピックの情報は Dynamics 365 for Customer Engagement アプリのユーザー (オンラインおよび設置型) にも適用されます。
-  
 <a name="bkmk_terminology"></a>
   
 ## <a name="terminology"></a>用語 
@@ -378,4 +375,4 @@ Web API の使用時は、一対多と多対多の関連付けの違いは重要
 [Common Data Service Web API の使用](overview.md)<br />
 [Web API を使用して Common Data Service を認証する](authenticate-web-api.md)<br />
 [Web API を使用して演算を実行する](perform-operations-web-api.md)<br/>
-[Dynamics 365 for Customer Engagement アプリの開発者ガイド](/dynamics365/customer-engagement/developer/developer-guide)
+

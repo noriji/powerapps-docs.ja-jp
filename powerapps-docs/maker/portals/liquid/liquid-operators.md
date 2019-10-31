@@ -1,40 +1,35 @@
 ---
-title: ポータルでの液体演算子の使用 |MicrosoftDocs
-description: ポータルで使用可能な液体演算子について説明します。
+title: ポータルの Liquid の演算子を使用する | MicrosoftDocs
+description: ポータルで使用可能な Liquid の演算子について説明します。
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: ''
-ms.date: 10/07/2019
+ms.custom: null
+ms.date: 08/30/2019
 ms.author: shjais
-ms.reviewer: ''
-ms.openlocfilehash: 4a27a5364a4ae12fecc3a72dbb52115e415dcdb8
-ms.sourcegitcommit: 5338e01d2591f76d71f09b1fb229d405657a0c1c
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72976532"
+ms.reviewer: null
 ---
-# <a name="understand-liquid-operators"></a>液体演算子について
 
-液体は、すべての一般的な論理演算子と比較演算子にアクセスできます。 これら**は、など**のタグで使用できます **。**
+# <a name="understand-liquid-operators"></a>Liquid の演算子の認識
 
-## <a name="basic-operators"></a>基本的な演算子
+Liquid は、すべての一般的な論理演算子および比較演算子を使用できます。 これらは、**if**や**unless**などのタグで使用できます。
 
-| ==    | str                          |
+## <a name="basic-operators"></a>基本演算子
+
+| ==    | 次の値に等しい                          |
 |-------|---------------------------------|
-| !=    | 等しくない                  |
-| &gt;  | 超                    |
-| &lt;  | 未満                       |
-| &gt;= | 以上        |
-| &lt;= | 以下           |
-| または    | 条件 A **or**条件 B  |
-| そして   | 条件 A**および**条件 B |
+| !=    | が次の値と等しくない                  |
+| &gt;  | より大きい                    |
+| &lt;  | より小さい                       |
+| &gt;= | 指定の値以上        |
+| &lt;= | 指定の値以下           |
+| または    | 条件 A **または**条件 B  |
+| および   | 条件 A **および**条件 B |
 
-## <a name="contains"></a>は
+## <a name="contains"></a>が次の値を含む
 
-文字列内に部分文字列が存在するかどうかのテストを含みます。
+contains は、文字列内のサブストリングの有無をテストします。
 
 ```
 {% if page.title contains 'Product' %}
@@ -44,11 +39,11 @@ The title of this page contains the word Product.
 {% endif %}
 ```
 
-contains は、文字列の配列内に文字列が存在するかどうかをテストすることもできます。
+contains は、文字列の配列内の文字列の有無もテストできます。
 
-## <a name="startswith"></a>startswith
+## <a name="startswith"></a>指定の値で始まる
 
-startswith は、文字列が特定の部分文字列で始まるかどうかをテストします。
+startswith は、文字列が指定のサブストリングで始まるかどうかをテストします。
 
 ```
 {% if page.title startswith 'Profile' %}
@@ -58,9 +53,9 @@ This is a profile page.
 {% endif %}
 ```
 
-## <a name="endswith"></a>endswith
+## <a name="endswith"></a>指定の値で終わる
 
-endswith は、文字列が特定の部分文字列で終わるかどうかをテストします。
+endswith は、文字列が指定のサブストリングで終わるかどうかをテストします。
 
 ```
 {% if page.title endswith 'Forum' %}
@@ -72,9 +67,9 @@ This is a forum page.
 
 ### <a name="see-also"></a>関連項目
 
-[Web テンプレートを使用してソースコンテンツを保存する](store-content-web-templates.md)  
-[液体の種類](liquid-types.md)  
-[付](liquid-conditional-operators.md)  
-[液体オブジェクト](liquid-objects.md)  
-[液体タグ](liquid-tags.md)  
-[液体フィルター](liquid-filters.md) 
+[Web テンプレートを使用したソース コンテンツの保存](store-content-web-templates.md)  
+[Liquid の種類](liquid-types.md)  
+[条件](liquid-conditional-operators.md)  
+[Liquid オブジェクト](liquid-objects.md)  
+[Liquid タグ](liquid-tags.md)  
+[Liquid フィルター](liquid-filters.md) 

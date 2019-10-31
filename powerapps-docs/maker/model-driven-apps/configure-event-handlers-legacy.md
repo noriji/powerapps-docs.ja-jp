@@ -1,12 +1,7 @@
 ---
-title: PowerApps でのモデル駆動型アプリのメイン フォームのイベント ハンドラーの構成 | MicrosoftDocs
-description: Dynamics 365 for Customer Engagement でイベント ハンドラーを構成する方法について
-Keywords: メイン フォーム; イベント ハンドラーの構成; Dynamics 365
+title: PowerApps にてモデル駆動型アプリのメイン フォームのイベント ハンドラーを構成する | MicrosoftDocs
+description: イベント ハンドラーを構成する方法
 author: Mattp123
-applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - powerapps
 ms.author: matp
 manager: kvivek
 ms.date: 06/27/2018

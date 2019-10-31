@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: モデル駆動型アプリで最初のクライアント スクリプトを記述する | MicrosoftDocs'
 ms.date: 10/31/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.topic: conceptual
 applies_to: Dynamics 365 (online)
 ms.assetid: 73dfc13c-a18c-42fc-b511-a37896c2f893
@@ -16,13 +16,12 @@ search.app:
 ---
 # <a name="walkthrough-write-your-first-client-script"></a>チュートリアル: 最初のクライアント スクリプトを記述する
 
-
-
 最初のクライアント スクリプトを記述して物事を把握することができます。 では始めましょう。
 
 ## <a name="objective"></a>目標
 
 このチュートリアルを完了すると、モデル駆動型アプリで JavaScript コードを使用することができます。これには、次のハイレベルなステップが関係します。
+
 - ビジネス上の課題の解決するために JavaScript コードを記述する
 - モデル駆動型アプリで Web リソースとして JavaScript コードをアップロードする
 - モデル駆動型アプリの異なるクライアント側のイベントに Webリソース で Javascript 関数を関連付ける。
@@ -33,13 +32,14 @@ search.app:
 
 最初のステップは、クライアント スクリプトを使用して解決するビジネス上の課題を特定します。 特定した後、ビジネス上の課題に対処できるカスタム ビジネス ロジックを含む JavaScript コードを記述する必要があります。 
 
-モデル駆動型アプリには、JavaScript エディタがありません。 そのため、[Notepad++](https://notepad-plus-plus.org/)、[Visual Studio Code](https://code.visualstudio.com/docs/languages/javascript)、[Microsoft Visual Studio](https://docs.microsoft.com/en-us/scripting/javascript/) など、JavaScript ファイルの編集機能をサポートする外部作成ツールを活用する必要があります。
+モデル駆動型アプリには、JavaScript エディタがありません。 そのため、[Notepad++](https://notepad-plus-plus.org/)、[Visual Studio Code](https://code.visualstudio.com/docs/languages/javascript)、[Microsoft Visual Studio](https://docs.microsoft.com/scripting/javascript/) など、JavaScript ファイルの編集機能をサポートする外部作成ツールを活用する必要があります。
 
 このトピックのチュートリアルで使用する完全なコード サンプルを確認できます。
 
 コードの詳細を確認しましょう。
  
 ### <a name="detailed-code-explanation"></a>コードの詳細な説明
+
 - **名前空間の定義**: コードはカスタム スクリプトの名前空間を定義することから開始します。 ベスト プラクティスとして、他のライブラリの関数によって関数が上書きされるのを避けるために名前空間を使用した JavaScript ライブラリを必ず作成します。
 
     ```JavaScript
@@ -71,7 +71,7 @@ search.app:
         window.setTimeout(function () { formContext.ui.clearFormNotification(myUniqueId); }, 5000);        
     }
     ```
-- **OnChangeイベントで実行するコード**: このセクションのコードは、取引先企業フォームの**取引先企業名**フィールドに関連付けられるため、取引先企業名の値を変更した場合に**のみ**実行されます。
+- **OnChange イベントで実行するコード**: このセクションのコードは、取引先企業フォームの**取引先企業名**フィールドに関連付けられるため、取引先企業名の値を変更した場合に**のみ**実行されます。
 
     コードは、取引先企業名で「Contoso」について大文字小文字を区別しない検索を行い、存在すれば、取引先企業フォームの一部のフィールドで値を自動的に設定します。
 

@@ -1,6 +1,6 @@
 ---
 title: 構築ツールのタスク| Microsoft Docs
-description: 'PowerApps 構築 ツールは、一連のPowerApps 固有の Azure DevOps 構築タスクです。これを使用することで PowerApps のアプリケーション ライフサイクルの管理にあたって、ツールやスクリプトを手動でダウンロードする必要がなくなります。 このトピックでは、利用可能なタスクについて説明します。 '
+description: 'PowerApps Build Tools は、一連の PowerApps 固有の Azure DevOps 構築タスクです。これを使用することで PowerApps のアプリケーション ライフサイクルの管理にあたって、ツールやスクリプトを手動でダウンロードする必要がなくなります。 このトピックでは、利用可能なタスクについて説明します。 '
 ms.custom: ''
 ms.date: 07/21/2019
 ms.reviewer: Dean-Haas
@@ -20,11 +20,11 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-PowerApps 構築ツールの一部として、数種類の構築タスクを利用することができ、これによって Azure DevOpsを使用してアプリケーションのライフサイクルを自動化することができます。
+PowerApps Build Tools の一部として、数種類の構築タスクを利用することができ、これによって Azure DevOps を使用してアプリケーションのライフサイクルを自動化することができます。
   
 ## <a name="helper-task"></a>ヘルパー タスク
 
-PowerAppsツールのインストーラは、構築とパイプラインのリリースにおける最初のタスクとして必要になります。 このタスクでは、エージェントに必要となる一連のPowerAppsのツールをインストールし、PowerApps 構築タスクを実行します。 このタスクには、追加の構成は不要です。
+PowerApps ツールのインストーラは、構築とパイプラインのリリースにおける最初のタスクとして必要になります。 このタスクでは、エージェントに必要となる一連の PowerApps のツールをインストールし、PowerApps 構築タスクを実行します。 このタスクには、追加の構成は不要です。
 
 ## <a name="quality-check"></a>品質のチェック
 
@@ -32,16 +32,16 @@ PowerApps チェッカー タスクは、一連の最良の規則に対してソ
 
 | **パラメーター** | **説明** |
 | --- | --- |
-| PowerApps チェッカーサービス  |   PowerApps チェッカー の サービス エンドポイントを選択します。 サービス エンドポイントは **プロジェクト設定** 配下の **サービスの接続** で定義されています。  **注意** この特定のタスクにのみ使用するサービスの接続の種類は、 「PowerApps Checker」 であり、これはサービス プリンシパル接続となります。 タスクが使用する前に、サービスプリンシパルを構成する方法の詳細情報については [こちら](https://aka.ms/buildtoolsconnection)を参照してください。  |
+| PowerApps チェッカーサービス  |   PowerApps チェッカーのサービス エンドポイントを選択します。 サービス エンドポイントは **プロジェクト設定** 配下の **サービスの接続** で定義されています。  **注意:** この特定のタスクにのみ使用する必要があるサービス接続の種類は「PowerApps チェッカー」であり、これはサービス プリンシパル接続です。 タスクが使用する前に、サービスプリンシパルを構成する方法の詳細情報については [こちら](https://aka.ms/buildtoolsconnection)を参照してください。  |
 | 分析を行うファイルの場所  | ローカルのファイルを参照するか、SASのURLから参照するかを指定します。 
 | 分析を行うローカルファイル/解析するファイルのSAS URI |  分析を行うzipファイルのパスとファイル名を指定します。   ワイルドカードを使用することができます。 たとえば、すべてのサブフォルダのzipファイルを指定するには **\*.zip と入力します。 ファイルを直接指定するか、Sasのuriからファイルを参照することができます。   |
 |  ルールセット |   適用するルールセットを指定します。 次の二つのルールセットを使用できます:  **ソリューションのチェッカー:** [メーカー ポータル](https://make.powerapps.com/) から実行するルールセットと同じです。    **AppSource:** これは、 [AppSource](https://appsource.microsoft.com/en-US/)に公開されるに先立って、アプリケーションを認証するために使用される拡張ルールセットです。   |
 
 ### <a name="configure-service-connection-for-powerapps-checker"></a>PowerApps チェッカーのサービス接続を構成する
 
-PowerApps タスク チェッカーを設定する前に、PowerApps チェッカー サービスへの接続に使用されるサービス プリンシパルを定義する必要があります。 PowerApps チェッカーサービスの根幹および認証については [こちら](https://docs.microsoft.com/en-us/powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module) を参照してください。ただし、開始するにあたっての必要となるすべての情報は以下にて解説しています。
+PowerApps タスク チェッカーを構成する前に、PowerApps チェッカー サービスへの接続に使用するサービス プリンシパルを定義する必要があります。 PowerApps チェッカーサービスの基盤と認証については [こちら](https://docs.microsoft.com/en-us/powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module) を参照してください。ただし、開始するにあたっての必要となるすべての情報は以下にて解説しています。
 
-以下では、 [AzureAD PowerShell モジュール](https://docs.microsoft.com/en-us/powershell/module/azuread/?view=azureadps-2.0) を使用して必要な Azure Active Directory (AAD) アプリケーションを生成し、クライアント シークレットを追加後に、それを使用して PowerApps チェッカー接続文字列の構成を行います。
+以下では、[AzureAD PowerShell モジュール](https://docs.microsoft.com/en-us/powershell/module/azuread/?view=azureadps-2.0) を使用して必要な Azure Active Directory (AAD) アプリケーションを生成し、クライアント シークレットを追加後に、それを使用して PowerApps チェッカー接続文字列の構成を行います。
 
 > [!NOTE]
 > この手順を完了するには、PowerApps (P1/P2) または D365 CE にライセンスされた AAD テナントにサービスプリンシパルを作成するための権限が必要となります。 
@@ -54,7 +54,8 @@ PowerApps タスク チェッカーを設定する前に、PowerApps チェッ�
 3.  このコマンドでは、PSGalleryのモジュールを信頼するように求められます。 **A (すべて はい)** を選択します。
 1. 以下の内容をコピーし、 PowerShell プロンプトに貼り付けます:
 
-``` function New-PowerAppsCheckerAzureADApplication
+```powershell 
+function New-PowerAppsCheckerAzureADApplication
 {
     [CmdletBinding()]
     param(
@@ -117,7 +118,7 @@ $newApp = New-PowerAppsCheckerAzureADApplication -ApplicationDisplayName "PowerA
 6. ログイン ダイアログが表示されます。 サインインしてください。 場合によっては2回サインインする必要があるかもしれない点に留意してください。
 7. スクリプトが完了すると、アプリケーションID と テナントがコマンド ウィンドウに表示されます。
 8. 次に、 [Azure AD](https://portal.azure.com) にログインしてクライアント シークレットを取得します。
-9. Microsoft Azureにて、 **Azure Active Directory –> アプリ 登録 -> PowerApps チェッカー クライアント**と選択します。
+9. Microsoft Azure で **Azure Active Directory –> アプリ 登録 -> PowerApps チェッカー クライアント** と順に選択します。
 ![Azureでチェッカークライアントを選択する](media/azure-select-checker.png "Azure のスクリーンショット")
 10. 左のナビゲーション ウィンドウの **管理**配下にある **証明書とシークレット** を選択します。
 11. **証明書とシークレット** 画面の **証明書とシークレット**配下の **新規クライアント シークレット**を選択します。 
@@ -126,9 +127,9 @@ $newApp = New-PowerAppsCheckerAzureADApplication -ApplicationDisplayName "PowerA
 ![クライアント シークレットを値コピーする](media/client-secret-copy.png "クライアント シークレットのスクリーンショット")
     > [!NOTE]
     > クライアント シークレットが表示されるのはこの時だけです。
-14. PowerApps チェッカー サービス 接続を開いて、 **サービス プリンシパル キー** フィールドにクライアント シークレットを貼り付け、 **OK**をクリックします。
+14. PowerApps チェッカー サービス接続を開いて、**サービス プリンシパル キー** フィールドにクライアント シークレットを貼り付けて **OK** をクリックします。
 
-以上で接続を [PowerApps チェッカー タスク構築](https://aka.ms/buildtoolsdoc)で使用する準備が完了しました。 
+これで [PowerApps チェッカー ビルド タスク](https://aka.ms/buildtoolsdoc) で接続を使用する準備が整いました。 
 
 ## <a name="solution-tasks"></a>ソリューション タスク
 
@@ -140,26 +141,26 @@ $newApp = New-PowerAppsCheckerAzureADApplication -ApplicationDisplayName "PowerA
 
 | **パラメーター** | **説明** |
 |----|----|
-| PowerApps 環境のURL  | ソリューションのインポートを行う対象の環境のサービス エンドポイント。 たとえば、*https://powerappsbuildtools.crm.dynamics.com* などとします。  サービス エンドポイントは **プロジェクト設定** 配下の **サービスの接続** で定義することができます。 |
+| PowerApps 環境 URL  | ソリューションのインポートを行う対象の環境のサービス エンドポイント。 たとえば、*https://powerappsbuildtools.crm.dynamics.com* などとします。  サービス エンドポイントは **プロジェクト設定** 配下の **サービスの接続** で定義することができます。 |
 | ソリューション入力ファイル  | 対象の環境へのインポートを行う solution.zip ファイルのパスとファイル名称。 例: *$(Build.ArtifactStagingDirectory)\$(SolutionName).zip*。
  |
 > [!NOTE] 
 > 変数を使用することで、パイプラインのさまざまな部分に重要なデータを簡単に取り込むことができます。 事前定義された変数の包括的なリストは、 [こちら](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml)で確認することができます。
 
-### <a name="powerapps-export-solution"></a>PowerAppsのエクスポート ソリューション
+### <a name="powerapps-export-solution"></a>PowerApps エクスポート ソリューション
 
 ソリューションのエクスポート タスクは、元となる環境からソリューションをエクスポートします。
 
 | **パラメーター** | **説明** |
 |----------|-------------|
-| PowerApps 環境のURL | ソリューションのエクスポートを行う対象の環境のサービス エンドポイント。  **プロジェクト設定**の **サービスの接続 -> 一般的なサービスの接続** で定義されています。 |
+| PowerApps 環境 URL | ソリューションのエクスポートを行う対象の環境のサービス エンドポイント。  **プロジェクト設定**の **サービスの接続 -> 一般的なサービスの接続** で定義されています。 |
 | ソリューション名 | エクスポートを行うソリューションの名称。 ここでは常にソリューションの「名称」を使用します。 「表示名称」ではありません。 |
 | ソリューション出力ファイル | 対象の環境へのエクスポートを行う solution.zip ファイルのパスとファイル名称。 例: *$(Build.ArtifactStagingDirectory)\$(SolutionName).zip*。 |
 
 > [!NOTE] 
 > 変数を使用することで、パイプラインのさまざまな部分に重要なデータを簡単に取り込むことができます。 事前定義された変数の包括的なリストは、 こちらで確認することができます。
  
-### <a name="powerapps-unpack-solution"></a>PowerAppsの展開 ソリューション
+### <a name="powerapps-unpack-solution"></a>PowerApps 展開ソリューション
 
 ソリューションの展開タスクでは、圧縮されたソリューションファイルを複数のXMLファイルやその他形式のファイルへの分解を行うことで、これらファイルをソース コントロール システムでより簡単に管理できるようになります。
 
@@ -170,7 +171,7 @@ $newApp = New-PowerAppsCheckerAzureADApplication -ApplicationDisplayName "PowerA
 | ソリューションの種類 | 展開するソリューションの種類:  **管理されていないソリューション** (推奨) : *管理されていないソリューションのみをリポジトリ*、 **管理対象のソリューション**、 **またはその両方** へと展開する必要があります。 |
 
 
-### <a name="powerapps-pack-solution"></a>PowerAppsの圧縮 ソリューション
+### <a name="powerapps-pack-solution"></a>PowerApps 圧縮ソリューション
 
 ソース コントロールに表示されているソリューションを solution.zip へと圧縮すると、このファイルを、目的の環境へとインポートすることができます。
 
@@ -186,31 +187,31 @@ $newApp = New-PowerAppsCheckerAzureADApplication -ApplicationDisplayName "PowerA
 
 | **パラメーター** | **説明** |
 |------------|---------|
-| PowerApps 環境のURL | カスタマイズの発行をする環境のサービス エンドポイントです。  これは、 **プロジェクト設定** 配下の **サービスの接続** で定義されています。 |
+| PowerApps 環境 URL | カスタマイズの発行をする環境のサービス エンドポイントです。  これは、 **プロジェクト設定** 配下の **サービスの接続** で定義されています。 |
 
-### <a name="powerapps-set-solution-version"></a>PowerApps セット ソリューションのバージョン 
+### <a name="powerapps-set-solution-version"></a>PowerApps セット ソリューション バージョン 
 
 セット ソリューション バージョンのタスクは、ソリューションのバージョンを更新します。
 
 | **パラメーター** | **説明** |
 |---------------------------|----|
-| PowerApps 環境のURL  | パッケージを展開する対象とする環境のサービス エンドポイントです。  これは、 **プロジェクト設定** 配下の **サービスの接続** で定義されています。 |
+| PowerApps 環境 URL  | パッケージを展開する対象とする環境のサービス エンドポイントです。  これは、 **プロジェクト設定** 配下の **サービスの接続** で定義されています。 |
 | パッケージ ファイル  | 展開するパッケージのパスとファイル名称です。 |
 
-### <a name="powerapps-deploy-package"></a>PowerApps のパッケージの展開
+### <a name="powerapps-deploy-package"></a>PowerApps 展開パッケージ
 
 パッケージの展開タスクでは環境にパッケージを展開します。 パッケージの展開を行うと、単一のソリューションがいるの場合とは異なり、複数のソリューション、データ、コードを環境に展開するオプションが提供されます。
 
 | **パラメーター** | **説明** |
 |---------------------------|----|
-| PowerApps 環境のURL  | 更新を行うソリューションを含む環境のサービス エンドポイントです。  これは、 **プロジェクト設定** 配下の **サービスの接続** で定義されています。 |
+| PowerApps 環境 URL  | 更新を行うソリューションを含む環境のサービス エンドポイントです。  これは、 **プロジェクト設定** 配下の **サービスの接続** で定義されています。 |
 | ソリューション名  | バージョン番号を設定するソリューションの名称です。 |
 
 ## <a name="environment-management-tasks"></a>環境管理のタスク
 
 環境管理タスクは、共通の環境管理機能を自動化するために使用され、これには以下のタスクが含まれます:
 
-### <a name="powerapps-create-environment"></a>PowerApps 環境作成
+### <a name="powerapps-create-environment"></a>PowerApps 環境の作成
 
 環境作成のタスクは、環境の作成を行います。
 
@@ -231,7 +232,7 @@ $newApp = New-PowerAppsCheckerAzureADApplication -ApplicationDisplayName "PowerA
 
 | **パラメーター** | **説明** |
 |---------|-----------|
-| PowerApps 環境のURL  | 削除する環境のサービス エンドポイントです。  これは、 **プロジェクト設定** 配下の **サービスの接続** で定義されています。 |
+| PowerApps 環境 URL  | 削除する環境のサービス エンドポイントです。  これは、 **プロジェクト設定** 配下の **サービスの接続** で定義されています。 |
 
 ### <a name="powerapps-backup-environment"></a>PowerApps 環境のバックアップ
 
@@ -239,7 +240,7 @@ $newApp = New-PowerAppsCheckerAzureADApplication -ApplicationDisplayName "PowerA
 
 | **パラメーター** | **説明** |
 |---------|-----------|
-| PowerApps 環境のURL  | バックアップをする環境のサービス エンドポイントです。  これは、 **プロジェクト設定** 配下の **サービスの接続** で定義されています。 |
+| PowerApps 環境 URL  | バックアップをする環境のサービス エンドポイントです。  これは、 **プロジェクト設定** 配下の **サービスの接続** で定義されています。 |
 | バックアップ ラベル  | バックアップを割り当てるラベルです。  |
 
 ### <a name="powerapps-copy-environment"></a>PowerApps 環境のコピー
@@ -251,5 +252,5 @@ $newApp = New-PowerAppsCheckerAzureADApplication -ApplicationDisplayName "PowerA
 
 | **パラメーター** | **説明** |
 |---------|-----------|
-| PowerApps ソースとする環境のURL  | コピー元の環境のサービス エンドポイントです。  これは、 **プロジェクト設定** 配下の **サービスの接続** で定義されています。 |
-| PowerApps 対象とする環境のURL  | コピー先の環境のサービス エンドポイントです。  これは、 **プロジェクト設定** 配下の **サービスの接続** で定義されています。 |
+| PowerApps ソース環境の URL  | コピー元の環境のサービス エンドポイントです。  これは、 **プロジェクト設定** 配下の **サービスの接続** で定義されています。 |
+| PowerApps ターゲット環境の URL  | コピー先の環境のサービス エンドポイントです。  これは、 **プロジェクト設定** 配下の **サービスの接続** で定義されています。 |

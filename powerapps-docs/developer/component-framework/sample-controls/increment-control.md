@@ -1,6 +1,6 @@
 ---
-title: " 要素の増分 |Microsoft Docs"
-description: インクリメントコンポーネントの実装
+title: ' 増分コンポーネント | Microsoft Docs'
+description: 増分コンポーネントの実装
 ms.custom: ''
 manager: kvivek
 ms.date: 10/01/2019
@@ -8,25 +8,20 @@ ms.service: powerapps
 ms.topic: article
 ms.author: nabuthuk
 author: Nkrb
-ms.openlocfilehash: 0b26e8a7b12aef9801413b5290e361a99413918f
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72340186"
 ---
-# <a name="implementing-increment-component"></a>インクリメントコンポーネントの実装
 
-このサンプルコンポーネントでは、PowerApps コンポーネントフレームワークとエラー処理にデータをバインドする方法を示します。 このコンポーネントは、ランタイムの `Increment` ボタンを持つテキストボックスとしてレンダリングされます。 テキストボックスに現在の値が表示され、`Increment` ボタンがクリック可能になります。 ボタンをクリックするたびに、テキストボックス内の値が1ずつ増加します。 インクリメント値は任意の数に変更できます。
+# <a name="implementing-increment-component"></a>増分コンポーネントの実装
 
-このコンポーネントを実装するには、最初に[マニフェスト](../manifest-schema-reference/manifest.md)ファイルを定義し、次に TypeScript にカスタムロジックを実装する必要があります。
+このサンプル コンポーネントは、 PowerApps Component Framework とエラー処理を使用してデータをバインドする方法を示します。 このコンポーネントは実行時に `Increment` ボタンを持つテキストボックスとして表示します。 テキストボックスは現在の値を示し `Increment` ボタンはクリック可能です。 ボタンをクリックするたびに、テキストボックスの値は 1 ずつ増えます。 増加する値は任意の数に変更できます。
+
+このコンポーネントを実装するには、まず最初に [マニフェスト](../manifest-schema-reference/manifest.md) ファイルを定義し、TypeScript でカスタム ロジックを実装します
 
 > [!div class="mx-imgBorder"]
-> ![コンポーネント]のインクリメント(../media/increment-control.png "コンポーネント")のインクリメント
+> ![増分コンポーネント](../media/increment-control.png "増分コンポーネント")
 
-## <a name="available-for"></a>利用可能な対象 
+## <a name="available-for"></a>以下に使用できます 
 
-モデル駆動型アプリとキャンバスアプリ (試験段階プレビュー) 
+モデル駆動型アプリとキャンバス アプリ (実験的プレビュー) 
 
 ## <a name="manifest"></a>マニフェスト
 
@@ -50,7 +45,7 @@ ms.locfileid: "72340186"
 </manifest>
 ```
 
-## <a name="code"></a>コード
+## <a name="code"></a>Code
 
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
@@ -64,7 +59,7 @@ export class TSIncrementControl
   private label: HTMLInputElement;
   // button element created as part of this control
   private button: HTMLButtonElement;
-  // reference to the control container HTMLDivElement
+  // Reference to the control container HTMLDivElement
   // This element contains all elements of our custom control example
   private _container: HTMLDivElement;
   /**
@@ -247,15 +242,15 @@ export class TSIncrementControl
 </root>
 ```
 
-このボタンをクリックすると、テキストボックスの値が1ずつ増加します。 更新された値は、`notifyOutputChanged` メソッドによって PowerApps component framework に送られます。
+ボタンをクリックすると、テキストボックスの値は 1 ずつ増えます。 更新された値は `notifyOutputChanged` メソッドを通して、PowerApps Component Framework にフローします。
 
 > [!NOTE]
-> フォーム上のフィールドにコンポーネントを構成する場合は、増分値を変更できます。
+> コンポーネントをフォーム上のフィールドに構成するときに、増加する値を変更できます。
 
-テキストボックスの値を編集します。有効な整数の場合は、値が PowerApps component framework に更新されます。 @No__t_0 ボタンを継続的にクリックして更新することができます。 無効な整数の場合は、エラーメッセージが表示されます。
+テキストボックスの値を編集し、それが有効な整数であれば、値を PowerApps Component Framework に更新します。 継続的に `Increment` ボタンをクリックして更新できます。 無効な整数の場合はエラー メッセージが表示されます。
 
 ### <a name="related-topics"></a>関連トピック
 
-[サンプルコンポーネントのダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps コンポーネントフレームワーク API リファレンス](../reference/index.md)<br/>
-[PowerApps コンポーネントフレームワークマニフェストスキーマリファレンス](../manifest-schema-reference/index.md)
+[サンプル コンポーネントをダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[PowerApps Component Framework API の参照](../reference/index.md)<br/>
+[PowerApps Component Framework のマニフェスト スキーマの参照](../manifest-schema-reference/index.md)

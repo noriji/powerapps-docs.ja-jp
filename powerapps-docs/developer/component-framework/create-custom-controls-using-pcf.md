@@ -1,7 +1,7 @@
 ---
-title: コードコンポーネントを作成してビルドする |Microsoft Docs
-description: PowerApps component framework ツールを使用してコンポーネントの作成を開始する
-keywords: PowerApps コンポーネントフレームワーク、コードコンポーネント、コンポーネントフレームワーク
+title: コードコンポーネントの作成と構築 | Microsoft Docs
+description: PowerApps component framework ツールを使用してコンポーネントを作成する
+keywords: PowerApps component framework、コード コンポーネント、コンポーネント フレームワーク
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -11,67 +11,61 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
-ms.openlocfilehash: 9a02b64321564b0a09e6b53223f13748358d76cf
-ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025774"
 ---
-# <a name="create-and-build-a-code-component"></a>コードコンポーネントの作成とビルド
 
-このトピックでは、PowerApps CLI を使用してコードコンポーネントを作成および配置する方法について説明します。 [MICROSOFT POWERAPPS CLI](https://aka.ms/PowerAppsCLI)がインストールされていることを確認します。
+# <a name="create-and-build-a-code-component"></a>コードコンポーネントを作成、構築する
+
+このトピックでは、 PowerApps CLIコンポーネントを使用してコードを作成および展開する方法を説明します。 [Microsoft PowerApps CLI](https://aka.ms/PowerAppsCLI) がインストールされていることが前提となります。
 
 ## <a name="create-a-new-component"></a>新しいコンポーネントの作成
 
-開始するには、PowerApps CLI をインストールした後で、 **FOR VS 2017 の開発者コマンドプロンプトを**開きます。
+開始するには、 PowerApps CLI をインストールした後で **開発者向けコマンド プロンプト for Visual Studio 2017** を開きます。
 
-1. VS 2017 の開発者コマンドプロンプトで、name\Documents\My_code_Component `mkdir <Specify the folder name>`コマンドを使用して*C:\Users\your*など、ローカルコンピューター上に新しいフォルダーを作成します。
-2. コマンド `cd <specify your new folder path>` を使用して、新しく作成したフォルダーにアクセスします。
-3. コマンドを使用していくつかの基本パラメーターを渡すことによって、新しいコンポーネントプロジェクトを作成します。
+1. 開発者向けコマンド プロンプト for Visual Studio 2017 で、ローカルにに新規フォルダを作成します。作成例としては、 *C:\Users\your name\Documents\My_PCF_Component* using the command `mkdir <Specify the folder name>`です。
+2. コマンド `cd <specify your new folder path>` を使用して、新しく作成したフォルダに移動します。
+3. 以下のコマンドを実行し、いくつかの基本パラメータを渡して新しいコンポーネントプロジェクトを作成します:
 
-    `pac pcf init --namespace <specify your namespace here> --name <Name of the code component> --template <component type>`
+    `pac pcf init --namespace <specify your namespace here> --name <put component name here> --template <component type>`
  
    > [!NOTE]
-   > 現在、PowerApps CLI は、モデル駆動型アプリ用の**フィールド**と**データセット**という2種類のコンポーネントをサポートしています。  キャンバスアプリの場合、この実験的なプレビューでサポートされているのは**フィールド**の種類のみです。
+   > 現在 PowerApps CLI supports では、次の2つのコンポーネントに対応しています: **フィールド** 、 **データセット**.  キャンバスのアプリケーションの場合、 **フィールド** タイプはこのプレビューでサポートされています。
 
-4. 必要なすべてのプロジェクトの依存関係を取得するには、コマンド `npm install` を実行します。
-5. 任意の開発環境でプロジェクトフォルダー `C:\Users\<your name>\Documents\<My_code_Component>` を開き、コードコンポーネントの開発を開始します。 開始する最も簡単な方法は、`C:\Users\<your name>\Documents\<My_code_Component>` ディレクトリにアクセスした後、コマンドプロンプトから `code .` を実行することです。 このコマンドにより、コンポーネントプロジェクトが Visual Studio Code で開きます。
-6. マニフェスト、コンポーネントロジック、スタイルなど、コンポーネントに必要なアーティファクトを実装し、コンポーネントプロジェクトをビルドします。 詳細情報:[サンプルコンポーネントの実装](implementing-controls-using-typescript.md)
+4. 必要なプロジェクトの依存関係をすべて取得するには、コマンド `npm install` を実行します。
+5. 任意の開発者環境でプロジェクト フォルダ ( `C:\Users\<your name>\Documents\<My_PCF_Component>` ) を開き、コード コンポーネントの開発を始めます。 最も手軽に開始するには、 `C:\Users\<your name>\Documents\<My_PCF_Component>` に移動してコマンド プロンプトで `code .` を実行する方法があります。 このコマンドは、 Visual Studio コードにあるコンポーネントプロジェクトを開きます。
 
-## <a name="build-your-component"></a>コンポーネントをビルドする
+## <a name="build-your-component"></a>コンポーネントを構築する
 
-コンポーネントプロジェクトをビルドするには、Visual Studio Code の `package.json` が含まれているプロジェクトフォルダーを開き、(Ctrl + Shift + B) コマンドを使用して、ビルドオプションを選択します。 または、[開発者コマンドプロンプト for VS 2017] ウィンドウの [`npm run build`] コマンドを使用して、コンポーネントをすばやくビルドすることもできます。
+コンポーネント プロジェクト を構築するには、 Visual Studio コードで `package.json` を含むプロジェクトのフォルダを開きます。(Ctrl-Shift-B) コマンドを使用して、構築オプションを選択します。 あるいは、VS 2017 ウィンドウの開発者向けコマンド プロンプトで `npm run build` コマンドを使用して、簡単にコンポーネントを構築することができます。
 
 > [!TIP]
-> ビルド操作中またはビルド操作後にコンポーネントをデバッグする方法については、「[コードコンポーネントのデバッグ](debugging-custom-controls.md)」を参照してください。
+> 構築中、または構築完了後にコンポーネントのデバッグを行うには、 [コード コンポーネントのデバッグ](debugging-custom-controls.md) を参照してください。
 
-TypeScript でコンポーネントロジックの実装が完了したら、ソリューションを Common Data Service にインポートできるように、すべてのコードコンポーネント要素をソリューションファイルにバンドルする必要があります。 詳細情報:[コードコンポーネントのパッケージ化](import-custom-controls.md)
+タイプスクリプトでコンポーネントロジックの実装が完了したら、すべてのコード コンポーネント要素をソリューション ファイルにバンドルする必要があります。それによって Common Data Service にソリューションをインポートすることが出来ます。 詳細: [コード コンポーネントをパッケージ化する](import-custom-controls.md)
 
-## <a name="known-configuration-issues-and-workarounds"></a>既知の構成の問題と回避策
+## <a name="known-configuration-issues-and-workarounds"></a>設定に関する既知の問題と回避策
 
 **Msbuild エラー MSB4036:**
 
-1. プロジェクトファイル内のタスクの名前は、タスククラスの名前と同じになります。
-2. Task クラスは public で、ITask インターフェイスを実装しています。
-3. タスクは、プロジェクトファイル内の *\<UsingTask >* または path ディレクトリにある *. tasks ファイルで正しく宣言されています。
+1. プロジェクト ファイルのタスク名はタスク クラスの名前と同じです。
+2. タスク クラスはパブリックで Microsoft.Build.Framework.ITask インターフェイスを実装しています。
+3. タスクは、プロジェクト ファイルの *\<UsingTask>* または、 パス ディレクトリに格納されている、 *.tasks ファイルにて正しく宣言されています。
 
-**解決**
+**解決方法:**
 
 1. Visual Studio インストーラーを開きます。 
-1. Visual Studio 2017 の場合は、 **[変更]** を選択します。 
-1. **個々のコンポーネント**を選択します。
-1. コードツール で、 **NuGet ターゲット & ビルドタスク** をオンにします。
+1. For VS 2017 では、 **修正** を選択します。 
+1. 個々のコンポーネント をクリックします。
+1. コード ツール配下の **NuGet ターゲットと構築タスク** を確認します。
 
-**パブリッシャープレフィックス**
+**発行元の接頭辞**
 
-0\.4.3 よりも前の PowerApps CLI ツールバージョンを使用してコンポーネントを作成した場合は、ソリューションファイルを Common Data Service に再インポートしようとするとエラーが発生します。 新しくインポートされたコンポーネント名には、その一意性を確保し、競合を回避するために、パブリッシャーのプレフィックスを追加するため、このエラーがスローされます。
+コンポーネントが、 PowerApps CLI ツールの 0.4.3, よりも低いバージョンで作成されている場合は、ソリューション ファイルを Common Data Service へと再インポートする際にエラーが表示されます。 このエラーが表示されるのは、新しくインポートされたコンポーネントの名称に、その一意性と競合を回避する目的で発行元の接頭辞が付加されてるためです。
 
 **回避策**:
 
-- 関連するコンポーネントを含むソリューションを Common Data Service から削除します。 コンポーネントが既にフォームまたはグリッドで構成されている場合は、コンポーネントソリューションが構成に依存していたため、最初にコンポーネントを削除する必要があります。  
-- 最新の CLI バージョンでビルドされたコンポーネントの更新プログラムを使用して、新しいソリューションをインポートします。
-- 新しくインポートされたコンポーネントは、フォームまたはグリッドで構成できるようになりました。  
+- Common Data Serviceから関連するコンポーネントを含むソリューションを削除します。 コンポーネントが既にフォームまたはグリッドに構成されている場合は、コンポーネントソリューションは構成に依存しているため、最初にコンポーネントソリューションを削除する必要があります。  
+- 最新のCLIバージョンで構築されたコンポーネントを含む、新たなソリューションをインポートしてください。
+- 新たに読み込まれたコンポーネントは、フォームまたはグリッド上で設定できるようになっています。  
 
 
 <!--2. When the components are created with the publisher prefix in mixed or upper case using the new CLI tooling version, it throws an error while importing the solution. This happens because the updated tooling version (0.4.3 and newer) now enforces the platform standard for lower case publisher prefix.
@@ -83,9 +77,9 @@ TypeScript でコンポーネントロジックの実装が完了したら、ソ
 
 ### <a name="see-also"></a>関連項目
 
-[コードコンポーネントのデバッグ](debugging-custom-controls.md)<br/>
-[コードコンポーネントのパッケージ化](import-custom-controls.md)<br/>
-[フィールドまたはエンティティへのコードコンポーネントの追加](add-custom-controls-to-a-field-or-entity.md)<br/>
-[既存のコードコンポーネントの更新](updating-existing-controls.md)<br/>
-[PowerApps コンポーネントフレームワーク API リファレンス](reference/index.md)<br/>
-[PowerApps コンポーネントフレームワークの概要](overview.md)
+[コード コンポーネントのデバッグ](debugging-custom-controls.md)<br/>
+[コード コンポーネントをパッケージ化する](import-custom-controls.md)<br/>
+[コード コンポーネントをフィールドやエンティティに追加する](add-custom-controls-to-a-field-or-entity.md)<br/>
+[既存のコード コンポーネントを更新する](updating-existing-controls.md)<br/>
+[PowerApps Component Framework API の参照](reference/index.md)<br/>
+[PowerApps Component Framework の概要](overview.md)

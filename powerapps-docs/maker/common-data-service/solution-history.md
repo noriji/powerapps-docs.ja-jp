@@ -6,10 +6,6 @@ ms.date: 05/19/2019
 ms.service: powerapps
 ms.custom: null
 ms.topic: article
-applies_to:
-  - Dynamics 365 for Customer Engagement (online)
-  - Dynamics 365 for Customer Engagement Version 9.x
-  - powerapps
 ms.assetid: null
 author: Mattp123
 ms.author: matp
@@ -39,7 +35,7 @@ search.app:
      > ![](media/solution-history-sitemap.png "ソリューション履歴エリア")
 
      > [!NOTE]
-     > PowerApps 統一インターフェイスのモデル駆動型アプリから、 **設定** 領域を取得するには、 アプリのツールバーにある **設定** ![設定](../model-driven-apps/media/powerapps-gear.png) を選択してから、 **詳細設定**を選択します。 
+     > PowerApps 統一インターフェイスのモデル駆動型アプリから、**設定** 領域を取得するには、アプリのツールバーにある **設定** ![設定](../model-driven-apps/media/powerapps-gear.png) を選択してから、**詳細設定** を選択します。 
 
 2. 既定では、**カスタム ソリューションの履歴** ビューが表示されます。 次のビューは、 **ソリューション履歴** 領域で利用できます。 
 - **すべてのソリューション履歴**。 内部システムとカスタムソリューション両方のソリューション履歴の表示。 

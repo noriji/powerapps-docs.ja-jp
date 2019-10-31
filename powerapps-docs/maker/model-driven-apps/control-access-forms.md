@@ -1,6 +1,6 @@
 ---
-title: PowerApps でモデル駆動型アプリへのアクセスを制御する | MicrosoftDocs
-description: メイン フォームへのアクセスを制御する方法を学習する
+title: PowerApps でモデル駆動型アプリのフォームへのアクセスを制御する | MicrosoftDocs
+description: メイン フォームへのアクセスを制御する方法
 ms.custom: ''
 ms.date: 06/18/2019
 ms.reviewer: ''
@@ -8,10 +8,6 @@ ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - powerapps
 author: Mattp123
 ms.assetid: 15d123e0-b604-45dd-ab34-0b37787a04bb
 caps.latest.revision: 33
@@ -30,7 +26,7 @@ search.app:
   
 - **メイン フォームを非アクティブにする**  
   
-     メイン フォームはアクティブまたは非アクティブな状態に設定することができます。 この機能は、Dynamics 365 Customer Engagement 組織のアップグレード時に含まれる新しいフォームを管理するために元々は組み込まれていましたが、これを使用して、ユーザーがどのメイン フォームも使用できないようにすることができます。   
+     メイン フォームはアクティブまたは非アクティブな状態に設定することができます。 この機能は、主に Common Data Service 環境アップグレードに含まれている新しいフォームを管理する目的で実装されていますが、ユーザーにメインフォームを使用させない用途で使用することもできます。   
   
 - **メイン フォームへセキュリティ ロールを割り当てる**  
   
@@ -74,7 +70,7 @@ search.app:
 クライアント API フォーム コンテキスト (formContext) は、フォームまたは、現在のコードが実行される、簡易表示コントロールまたは編集可能グリッドの列などの、フォーム上のアイテムへの参照を提供します。 詳細: [クライアント API フォーム コンテキスト](/dynamics365/customer-engagement/developer/clientapi/clientapi-form-context)
 
 > [!IMPORTANT]
-> Dynamics 365 Customer Engagement アプリのバージョン9.0では、Xrm.Page object は [非推奨](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated) であるため、適切なフォームまたはフォーム上のアイテムへの参照を返すには、実行コンテキストオブジェクトで渡された [getFormContext](/dynamics365/customer-engagement/developer/clientapi/reference/executioncontext/getformcontext) メソッドを使用する必要があります。
+> Xrm.Page オブジェクトは[非推奨](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated)となっているため、渡された実行コンテキスト・オブジェクトの [getFormContext](/powerapps/developer/model-driven-apps/clientapi/reference/executioncontext/getformcontext) メソッドを使用して、該当するフォームまたはフォーム上の項目へと参照を戻す必要があります。
 <!-- 
  Finally, in the web application it is possible, but not recommended, for a developer to use scripts in the form Onload event to use the [Xrm.Page.ui.formSelector.items collection](http://go.microsoft.com/fwlink/p/?LinkID=513300) to query available forms and use the navigate method to direct users to a specific form. Remember that the [navigate method](http://go.microsoft.com/fwlink/p/?LinkID=513301) will cause the form to load again (and the Onload event to occur again). Your logic in the event handler should always check some condition before you use the navigate method to avoid an endless loop or unnecessarily restrict users options to navigate between forms.  
   

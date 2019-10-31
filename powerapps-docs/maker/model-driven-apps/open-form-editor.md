@@ -3,7 +3,7 @@ title: PowerApps でモデル駆動型アプリのフォーム エディター�
 ms.custom: ''
 ms.date: 06/27/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -55,9 +55,9 @@ search.app:
   
 4.  **フォーム エディター** を選択します。  
 
-## <a name="access-the-form-editor-from-within-dynamics-365-customer-engagement"></a>Dynamics 365 Customer Engagement 内からフォーム エディターにアクセスする
+## <a name="access-the-form-editor-from-within-app"></a>アプリからフォーム エディターにアクセスする
   
- Dynamics 365 Customer Engagement でフォーム エディターにはコマンド バーまたはリボンからアクセスできます。これは、エンティティによって異なります。 これらの方法の両方とも、既定のソリューションのコンテキストでフォームを開きます。 
+ フォーム エディターにはコマンド バーまたはリボンからアクセスできます。これは、エンティティによって異なります。 これらの方法の両方とも、既定のソリューションのコンテキストでフォームを開きます。 
 
 ## <a name="access-the-form-editor-for-an-unmanaged-solution"></a>アンマネージド ソリューションのフォーム エディターにアクセスする  
   

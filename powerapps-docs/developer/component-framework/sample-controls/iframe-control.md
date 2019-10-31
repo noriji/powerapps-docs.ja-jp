@@ -1,5 +1,5 @@
 ---
-title: " IFRAME コンポーネント |Microsoft Docs"
+title: ' IFRAME コンポーネント | Microsoft Docs'
 description: IFRAME コンポーネントの実装
 ms.custom: ''
 manager: kvivek
@@ -8,23 +8,17 @@ ms.service: powerapps
 ms.topic: article
 ms.author: nabuthuk
 author: Nkrb
-ms.openlocfilehash: d10b03c478f238df02ee7e1309c0e39e758ce4c9
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72340462"
 ---
 # <a name="implementing-a-iframe-component"></a>IFRAME コンポーネントの実装
 
-このサンプルでは、コードコンポーネントをフォームの別のフィールドにバインドし、これらのフィールドの値をコンポーネントの入力プロパティとして使用する方法について説明します。  
+このサンプルでは、コード コンポーネントをフォーム上の異なるフィールドにバインドし、それらのフィールドの値をコンポーネントの入力プロパティとして使用する方法を説明します。  
 
 > [!div class="mx-imgBorder"]
-> ![Iframe コンポーネント](../media/iframe-control.png "iframe コンポーネント")
+> ![IFRAME コンポーネント](../media/iframe-control.png "IFRAME コンポーネント")
 
-## <a name="available-for"></a>利用可能な対象 
+## <a name="available-for"></a>以下に使用できます 
 
-モデル駆動型アプリとキャンバスアプリ (試験段階プレビュー) 
+モデル駆動型アプリとキャンバス アプリ (実験的プレビュー) 
 
 ## <a name="manifest"></a>マニフェスト
 
@@ -43,15 +37,15 @@ ms.locfileid: "72340462"
 </manifest>
 ```
 
-## <a name="code"></a>コード
+## <a name="code"></a>Code
 
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 export class TSIFrameControl
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-  // reference to Bing Map IFrame HTMLElement
+  // Reference to Bing Map IFrame HTMLElement
   private _bingMapIFrame: HTMLElement;
-  // reference to the control container HTMLDivElement
+  // Reference to the control container HTMLDivElement
   // This element contains all elements of our custom control example
   private _container: HTMLDivElement;
   // Flag if control view has been rendered
@@ -147,12 +141,12 @@ export class TSIFrameControl
 ```
 
 > [!NOTE]
-> PowerApps component framework では、複合フィールドがまだサポートされていないため、このコンポーネントを既定の緯度および経度のアドレスフィールドにバインドすることはできません。 コードコンポーネントを別の浮動小数点フィールドにバインドする必要があります。
+> PowerApps Component Framework はコンポジット フィールドをまだサポートしていないため、このコンポーネントを既定の緯度と経度の住所フィールドにバインドできません。 コード コンポーネントを別の浮動小数点フィールドにバインドする必要があります。
 
-このサンプルコンポーネントは、`Bing Maps URL` を表示する `IFRAME` をレンダリングします。 コンポーネントは、フォーム上の2つの浮動小数点フィールドにバインドされます。このフィールドはコンポーネントにパラメーターとして渡され、`IFRAME URL` に挿入されて、指定された入力の緯度と経度に Bing マップを更新します。  
+このサンプル コンポーネントは `Bing Maps URL` を表示する `IFRAME` を表示します。 コンポーネントはフォームのふたつの浮動小数点フィールドにバインドされています。これらはパラメータとしてコンポーネントに渡され `IFRAME URL` に挿入されて Bing Map を提供された緯度と経度の入力に更新します。  
 
-フォーム上の2つのフィールドへのバインドを含めるように `Manifest` ファイルを更新します。  
-この変更は、初期化中にこれらのバインドされたフィールドをコンポーネントに渡す必要があることと、値のいずれかが更新されるたびに、PowerApps コンポーネントフレームワークに通知します。
+`Manifest` ファイルを更新して、フォーム上のふたつの追加フィールドにバインドを含めます  
+この変更は、初期化中および値のどれかひとつが更新される時に、これらの限界のあるフィールドをコンポーネントに渡す必要があることを PowerApps Component Framework に通知します。
   
 ```xml
 
@@ -160,9 +154,9 @@ export class TSIFrameControl
 <property name="longitudeValue" display-name-key="Bing_Maps_Longitude_Value" description-key="longitude" of-type="FP" usage="bound" required="true" />  
 ```
 
-追加のバインドされたプロパティが必要な場合があります。 コンポーネントがフォームにバインドされている場合、コンポーネントの構成時にこの設定が適用されます。 これは、コンポーネントマニフェストのプロパティノードの `required` 属性を設定することによって構成できます。 コンポーネントのプロパティがフィールドにバインドされないようにする場合は、値を false に設定します。 
+追加のバインド プロパティが必要になる可能性があります。 これは、コンポーネントがフォームにバインドされるとき、コンポーネント構成中に強制されます。 これはコンポーネント マニフェストのプロパティ ノードで `required` 属性を設定することで構成できます。 コンポーネント プロパティをフィールドにバインドする必要がない場合は、値を false に設定します。 
  
-`IInputs` インターフェイスに2つのフィールドを追加するには、`ControlFramework.d.ts` を更新する必要があります。 これは、PowerApps コンポーネントフレームワークによってフィールド値が渡される形式です。 これらの値を `IInputs` インターフェイスに追加すると、TypeScript ファイルが値を参照して正常にコンパイルできるようになります。  
+`IInputs` インターフェイスにふたつフィールドを追加するために `ControlFramework.d.ts` を更新する必要があります。 これは PowerApps Component Framework がフィールド値を渡す形式です。 これらの値を `IInputs` インタフェースに追加することで、TypeScript ファイルがその値を参照して正常にコンパイルできます。  
 
 ```TypeScript
     export interface IInputs 
@@ -171,13 +165,13 @@ export class TSIFrameControl
     }  
  ```
 
-初期レンダリングでは `IFRAME` 要素が生成され、コントロールコンテナーに追加されます。 この `IFRAME` は、 **Bing マップ**を表示するために使用されます。 @No__t_0 の url は `Bing Map URL` に設定され、バインドされたフィールド (latitudeValue と longitudeValue) を url に含めて、マップを指定した場所に中央揃えで配置します。 
+最初の表示では `IFRAME` 要素を生成しそれをコントロール コンテナに追加します。 この `IFRAME` は **Bing Map** の表示に使用されます。 `IFRAME` の URL は `Bing Map URL` に設定され、提供された位置をマップを中央にするために URL のバインド フィールド (緯度値と経度値) を含みます。 
 
-これらのフィールドのいずれかがフォームで更新されるたびに、 [Updateview](../reference/control/updateview.md)メソッドが呼び出されます。 このメソッドは、コンポーネントに渡された新しい緯度と経度の値を使用するように、 **Bing マップ**の IFRAME の url を更新します。 このコンポーネントを実行時に表示するには、他のコードコンポーネントと同様に、コンポーネントをフォーム上のフィールドにバインドします。
+フォーム上でこれらのフィールドのひとつが更新されるたびに [updateView](../reference/control/updateview.md) メソッドが呼び出されます。 このメソッドは、コンポーネントに渡された新しい緯度と経度の値を使用するために **Bing Map** IFRAME の URL を更新します。 このコンポーネントを実行時に表示するには、他のコード コンポーネントと同様に、コンポーネントをフォーム上のフィールドにバインドします。
 
 ### <a name="related-topics"></a>関連トピック
 
-[サンプルコンポーネントのダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps コンポーネントフレームワークマニフェストスキーマリファレンス](../manifest-schema-reference/index.md)<br />
-[PowerApps コンポーネントフレームワーク API リファレンス](../reference/index.md)<br />
-[PowerApps コンポーネントフレームワークの概要](../overview.md)
+[サンプル コンポーネントをダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[PowerApps Component Framework のマニフェスト スキーマの参照](../manifest-schema-reference/index.md)<br />
+[PowerApps Component Framework API の参照](../reference/index.md)<br />
+[PowerApps Component Framework の概要](../overview.md)

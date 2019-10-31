@@ -1,6 +1,6 @@
 ---
 title: 変更の追跡を使用してデータを外部システムに同期する (Common Data Service)| Microsoft Docs
-description: Dynamics 365 Customer Engagement の新しい変更追跡機能では、データが最初に抽出されてから、または最後に同期されてからどのデータが変更されたかを検出して、同期されるデータを効率の良い方法で維持する方法を提供します
+description: 新しい変更追跡機能では、データが最初に抽出されてから、または最後に同期されてからどのデータが変更されたかを検出して、同期されるデータを効率の良い方法で維持する方法を提供します
 ms.custom: ''
 ms.date: 10/31/2018
 ms.reviewer: ''

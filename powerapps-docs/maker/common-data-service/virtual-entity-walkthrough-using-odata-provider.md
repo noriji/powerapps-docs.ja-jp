@@ -1,5 +1,5 @@
 ---
-title: Common Data Service で OData データ プロバイダーを使用する仮想エンティティのチュートリアル | MicrosoftDocs
+title: Common Data Service で OData データ プロバイダーを使用した仮想エンティティ チュートリアル | MicrosoftDocs
 description: 仮想エンティティで OData v4 データ プロバイダーを使用する方法について学習
 ms.custom: ''
 ms.date: 06/04/2018
@@ -26,7 +26,7 @@ search.app:
 
 # <a name="virtual-entity-walkthrough-using-the-odata-v4-data-provider"></a>OData v4 データ プロバイダーを使用してエンティティ チュートリアルを仮想
 
-モデル駆動型アプリまたは Customer Engagement のための Dynamics 365 for Customer Engagement のサービス領域内で、外部データ ソースからのチケット情報にアクセスするとします。 この単純なチュートリアルでは、実行時にチケット データを OData Web サービスから取得する、外部スキーマにマップされたフィールドを持つ仮想エンティティをモデル化します。
+モデル駆動型アプリ内で、外部データ ソースからのチケット情報にアクセスするとします。 この単純なチュートリアルでは、実行時にチケット データを OData Web サービスから取得する、外部スキーマにマップされたフィールドを持つ仮想エンティティをモデル化します。
 
 ## <a name="data-source-details"></a>データ ソースの詳細
 
@@ -152,7 +152,7 @@ OASIS オープン データ プロトコル (OData) のサンプル Web サー�
     ![すべてのカスタマイズの公開](media/publishall.png)
 1. すべてのカスタマイズの公開後、ソルーション エクスプローラー ウィンドウを閉じます。
 
-## <a name="view-the-virtual-entity-in-action-with-dynamics-365-customer-engagement"></a>Dynamics 365 Customer Engagement でアクションの仮想エンティティを表示する
+## <a name="view-the-virtual-entity-in-action-with-dynamics-365"></a>Dynamics 365 のアクションで仮想エンティティを表示
 
 1. **サービス** > **拡張** > **チケット**へ移動します。
     

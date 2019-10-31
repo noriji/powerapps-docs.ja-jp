@@ -1,43 +1,38 @@
 ---
-title: ポータルに液体フィルターを使用する |MicrosoftDocs
-description: ポータルで使用できる液体フィルターについて説明します。
+title: ポータル用 Liquid フィルターを使用する | MicrosoftDocs
+description: ポータルで使用可能な Liquid のフィルターについて説明します。
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: ''
-ms.date: 10/07/2019
+ms.custom: null
+ms.date: 08/30/2019
 ms.author: shjais
-ms.reviewer: ''
-ms.openlocfilehash: 68a595ee72704cf81241ecfee19f90728fb95aeb
-ms.sourcegitcommit: 5338e01d2591f76d71f09b1fb229d405657a0c1c
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72975152"
+ms.reviewer: null
 ---
-# <a name="available-liquid-filters"></a>使用可能な液体フィルター
 
-液体フィルターは、文字列、数値、変数、およびオブジェクトの出力を変更するために使用されます。 これらは、| によって適用されている値から分離されています。
+# <a name="available-liquid-filters"></a>使用可能な Liquid フィルター
+
+Liquid フィルターは文字列、数字、変数、およびオブジェクトの出力を変更するために使用されます。 これらは、| によって適用される値とは区切られています。
 
 `{{ 'hal 9000' | upcase }} <!-- Output: HAL 9000 -->`
 
-一部のフィルターではパラメーターを受け取ります。 また、フィルターを組み合わせて、左から右に適用することもできます。
+パラメーターを受け入れるフィルターもあります。 またフィルターを組み合わせて左から右の順序に適用することもできます。
 
 ```
 {{ 2 | times: 2 | minus: 1 }} <!-- Output: 3 -->
 
 {{ "Hello, " | append: user.firstname }} <!-- Output: Hello, Dave -->
 ```
-以下のセクションでは、さまざまなフィルターについて説明します。 
+下のセクションでは、さまざまなフィルターについて説明します。 
 
-## <a name="array-filters"></a>配列フィルター
+## <a name="array-filters"></a>配列のフィルター
 
-配列フィルターは、配列を操作するために使用さ[れます。](liquid-types.md#array)  
+配列のフィルターは、[配列](liquid-types.md#array)の操作をする際に使用します。  
 
 ### <a name="batch"></a>バッチ
 
-配列を指定されたサイズの複数の配列に分割します。
+配列を、指定したサイズの複数の配列に分割します。
 
 **コード**
 
@@ -59,7 +54,7 @@ ms.locfileid: "72975152"
 {% endfor %}
 ```
 
-**Output**
+**出力**
 
 ```
 <ul>
@@ -79,11 +74,11 @@ ms.locfileid: "72975152"
 </ul>
 ```
 
-### <a name="concat"></a>concat
+### <a name="concat"></a>concat (連結)
 
-2つの配列を連結して1つの新しい配列を作成します。
+2 つの配列を 1 つの新しい配列に連結します。
 
-1つの項目がパラメーターとして指定されている場合、concat は、指定された項目を最後の要素として、元の配列で構成される新しい配列を返します。
+パラメーターとして 1 つの要素がある場合、concat は、指定の要素を最後に置く、元の配列から構成される新しい配列を返します。
 
 **コード**
 
@@ -97,7 +92,7 @@ Group #1 + Group #2: {{ group1 | concat: group2 | join: ', ' }}
 Group #1 + Leslie: {{ group1 | concat: 'Leslie' | join: ', ' }}
 ```
 
-**Output**
+**出力**
 
 ```
 Group #1: John, Pete, Hannah
@@ -109,9 +104,9 @@ Group #1 + Group #2: John, Pete, Hannah, Joan, Bill
 Group #1 + Leslie: John, Pete, Hannah, Leslie
 ```
 
-### <a name="except"></a>ば
+### <a name="except"></a>except (除外)
 
-指定した属性に値が指定されていない配列内のすべてのオブジェクトを選択します。 (これは**where**の逆です)。
+配列内で、指定した属性について指定した値を持たない、すべてのオブジェクトを選択します。 (これは **where** の反対です。)
 
 **コード**
 
@@ -125,17 +120,17 @@ Group #1 + Leslie: John, Pete, Hannah, Leslie
 {% endfor %}
 ```
 
-**Output**
+**出力**
 
 ```
 Jack Robinson
 ```
 
-### <a name="first"></a>まずは
+### <a name="first"></a>第 1
 
 配列の最初の要素を返します。
 
-最初は、タグ内で使用する必要がある場合に、特殊なドット表記で使用することもできます。
+タグ内で使用する必要がある場合など、ドットを使用する特殊表記でも first を使用することができます。
 
 **コード**
 
@@ -151,7 +146,7 @@ The first word is This.
 {% endif %}
 ```
 
-**Output**
+**出力**
 
 ```
 This
@@ -159,9 +154,9 @@ This
 The first word is This.
 ```
 
-### <a name="group_by"></a>group_by
+### <a name="group_by"></a>グループ化
 
-指定された属性で配列内の項目をグループ化します。
+指定した属性で、配列の項目をグループ化します。
 
 **コード**
 
@@ -181,7 +176,7 @@ The first word is This.
 {% endfor %}
 ```
 
-**Output**
+**出力**
 
 ```
 Redmond:
@@ -197,9 +192,9 @@ New York:
 Jack Robinson
 ```
 
-### <a name="join"></a>結合
+### <a name="join"></a>join (結合)
 
-パラメーターとして渡された文字で配列の要素を結合します。 結果は1つの文字列になります。
+パラメーターで渡される文字を使用して、配列の要素を結合します。 結果は、単一の文字列になります。
 
 **コード**
 
@@ -209,17 +204,17 @@ Jack Robinson
 {{ words | join: ,  }}
 ```
 
-**Output**
+**出力**
 
 ```
 This, is, a, run, of, text
 ```
 
-### <a name="last"></a>前の
+### <a name="last"></a>最終
 
 配列の最後の要素を返します。
 
-last は、タグ内で使用する必要がある場合に、特殊なドット表記でも使用できます。
+タグ内で使用する必要がある場合など、ドットを使用する特殊表記でも last を使用することができます。
 
 **コード**
 
@@ -235,7 +230,7 @@ The last word is text.
 {% endif -%}
 ```
 
-**Output**
+**出力**
 
 ```
 text
@@ -243,11 +238,11 @@ text
 The last word is text.
 ```
 
-### <a name="order_by"></a>\_順序
+### <a name="order_by"></a>order\_by
 
-配列の要素の指定した属性によって並べ替えられた配列の要素を返します。
+指定した属性で配列要素を並べ替えた配列要素を返します。
 
-必要に応じて、desc を2番目のパラメーターとして指定すると、昇順ではなく降順で要素を並べ替えることができます。
+オプションで、2 番目のパラメーターとして desc を指定すると、昇順のかわりに降順で要素を並べ替えます。
 
 **コード**
 
@@ -257,7 +252,7 @@ The last word is text.
 {{ entityview.records | order_by: 'fullname', 'desc' | join: ', ' }}
 ```
 
-**Output**
+**出力**
 
 ```
 Dave Thomas, Jack Robinson, Jake Johnson, John Smith
@@ -265,9 +260,9 @@ Dave Thomas, Jack Robinson, Jake Johnson, John Smith
 John Smith, Jake Johnson, Jack Robinson, Dave Thomas
 ```
 
-### <a name="random"></a>無作為
+### <a name="random"></a>random (ランダム)
 
-配列からランダムに選択された単一の項目を返します。
+配列から、ランダムに選択された単一の項目を返します。
 
 **コード**
 
@@ -277,7 +272,7 @@ John Smith, Jake Johnson, Jack Robinson, Dave Thomas
 {{ group1 | random }}
 ```
 
-**Output**
+**出力**
 
 ```
 John, Pete, Hannah
@@ -285,9 +280,9 @@ John, Pete, Hannah
 Pete
 ```
 
-### <a name="select"></a>クリック
+### <a name="select"></a>select (選択)
 
-配列内の各項目について、指定した属性の値を選択し、これらの値を配列として返します。
+配列の各項目について指定した属性の値を選択し、これらの値を配列として返します。
 
 **コード**
 
@@ -295,15 +290,15 @@ Pete
 {{ entityview.records | select: 'address1_city' | join: ', ' }}
 ```
 
-**Output**
+**出力**
 
 ```
 Redmond, New York
 ```
 
-### <a name="shuffle"></a>シャッフル
+### <a name="shuffle"></a>shuffle (シャッフル)
 
-配列に適用され、同じ項目を持つ新しい配列をランダムな順序で返します。
+配列に使用すると、同じ項目を含んだ、ランダムな順で並び替えられた新しい配列を返します。
 
 **コード**
 
@@ -313,7 +308,7 @@ Redmond, New York
 {{ group1 | shuffle | join: ', ' }}
 ```
 
-**Output**
+**出力**
 
 ```
 John, Pete, Hannah
@@ -321,11 +316,11 @@ John, Pete, Hannah
 Hannah, John, Pete
 ```
 
-### <a name="size"></a>幅
+### <a name="size"></a>size (サイズ)
 
 配列内の項目の数を返します。
 
-また、サイズは、タグ内で使用する必要がある場合に、特殊なドット表記で使用することもできます。
+タグ内で使用する必要がある場合など、ドットを使用する特殊表記でも size を使用することができます。
 
 **コード**
 
@@ -341,7 +336,7 @@ The text contains 6 words.
 {% endif -%}
 ```
 
-**Output**
+**出力**
 
 ```
 6
@@ -349,9 +344,9 @@ The text contains 6 words.
 The text contains 6 words.
 ```
 
-### <a name="skip"></a>skip
+### <a name="skip"></a>skip (スキップ)
 
-配列内の指定された数の項目をスキップし、残りの項目を返します。
+配列内で指定した数の項目をスキップし、残りの配列を返します。
 
 **コード**
 
@@ -361,15 +356,15 @@ The text contains 6 words.
 {{ words | skip: 3 | join: ', ' }}
 ```
 
-**Output**
+**出力**
 
 ```
 run, of, text
 ```
 
-### <a name="take"></a>長時間
+### <a name="take"></a>take (取り出し)
 
-配列から指定された数の項目を取得し、取得した項目を返します。
+配列から指定した数の項目を取り出し、取り出した項目を返します。
 
 **コード**
 
@@ -378,18 +373,18 @@ run, of, text
 
 {{ words | take: 3 | join: ', ' }}
 ```
-**Output**
+**出力**
 
 ```
 
 This, is, a
 ```
 
-### <a name="then_by"></a>その後、\_
+### <a name="then_by"></a>then\_by
 
-に**よって\_順序**に従って既に並べ替えられている配列に後続の順序を追加します。
+すでに **order\_by** で並び替えられている配列に、後続の並び替え基準を追加します。
 
-必要に応じて、desc を2番目のパラメーターとして指定すると、昇順ではなく降順で要素を並べ替えることができます。
+オプションで、2 番目のパラメーターとして desc を指定すると、昇順のかわりに降順で要素を並べ替えます。
 
 **コード**
 
@@ -399,7 +394,7 @@ This, is, a
 {{ entityview.records | order_by: 'address1_city' | then_by: 'fullname', 'desc' | join: ', ' }}
 ```
 
-**Output**
+**出力**
 
 ```
 Dave Thomas, Jack Robinson, Jake Johnson, John Smith
@@ -407,9 +402,9 @@ Dave Thomas, Jack Robinson, Jake Johnson, John Smith
 John Smith, Jake Johnson, Jack Robinson, Dave Thomas
 ```
 
-### <a name="where"></a>どこ
+### <a name="where"></a>ここで、
 
-指定された属性の値が指定されている配列内のすべてのオブジェクトを選択します。
+配列内で、指定した属性について指定した値を持つ、すべてのオブジェクトを選択します。
 
 **コード**
 
@@ -423,7 +418,7 @@ John Smith, Jake Johnson, Jack Robinson, Dave Thomas
 {% endfor %}
 ```
 
-**Output**
+**出力**
 
 ```
 John Smith
@@ -436,15 +431,15 @@ Jake Johnson
 
 ## <a name="date-filters"></a>日付フィルター
 
-日付フィルターを使用して、日付の算術計算や、DateTime 値からさまざまな形式への変換を行うことができます。
+日付フィルターは、日付の計算や、DateTime 値のさまざまな形式への変換に使用します。
 
-### <a name="date"></a>予定
+### <a name="date"></a>日付
 
-.NET 書式指定文字列を使用して DateTime 値の書式を設定します。
+.NET の書式設定文字列を使用して DateTime 値を書式設定します。
 
-[標準の日付と時刻の書式指定文字列](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings)  
+[標準の日付および時刻の書式設定文字列](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings)  
 
-[カスタム日時書式指定文字列](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings)  
+[カスタムの日付および時刻の書式設定文字列](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings)  
 
 **コード**
 
@@ -454,7 +449,7 @@ Jake Johnson
 {{ now | date: 'MMMM dd, yyyy' }}
 ```
 
-**Output**
+**出力**
 
 ```
 5/7/2018 7:20 AM
@@ -462,9 +457,9 @@ Jake Johnson
 May 07, 2018
 ```
 
-### <a name="date_add_days"></a>\_日\_追加日
+### <a name="date_add_days"></a>date\_add\_days
 
-DateTime 値に、指定された整数部と小数部から成る日数を加算します。 パラメーターには、正または負の値を指定できます。
+DateTime 値に、整数または小数の日数を加算します。 パラメーターは正および負を使用できます。
 
 **コード**
 
@@ -476,7 +471,7 @@ DateTime 値に、指定された整数部と小数部から成る日数を加�
 {{ now | date_add_days: -2.5 }}
 ```
 
-**Output**
+**出力**
 
 ```
 5/7/2018 7:20:46 AM
@@ -486,9 +481,9 @@ DateTime 値に、指定された整数部と小数部から成る日数を加�
 5/4/2018 7:20:46 PM
 ```
 
-### <a name="date_add_hours"></a>\_時間\_追加する日付
+### <a name="date_add_hours"></a>date\_add\_hours
 
-DateTime 値に、指定された整数部と小数部から成る時間数を加算します。 パラメーターには、正または負の値を指定できます。
+DateTime 値に、整数または小数の時間を加算します。 パラメーターは正および負を使用できます。
 
 **コード**
 
@@ -500,7 +495,7 @@ DateTime 値に、指定された整数部と小数部から成る時間数を�
 {{ now | date_add_hours: -2.5 }}
 ```
 
-**Output**
+**出力**
 
 ```
 5/7/2018 7:20:46 AM
@@ -510,9 +505,9 @@ DateTime 値に、指定された整数部と小数部から成る時間数を�
 5/7/2018 4:50:46 AM
 ```
 
-### <a name="date_add_minutes"></a>\_分を追加\_日付
+### <a name="date_add_minutes"></a>date\_add\_minutes
 
-DateTime 値に、指定された整数部と小数部から成る分数を加算します。 パラメーターには、正または負の値を指定できます。
+DateTime 値に、整数または小数の分を加算します。 パラメーターは正および負を使用できます。
 
 **コード**
 
@@ -525,7 +520,7 @@ DateTime 値に、指定された整数部と小数部から成る分数を加�
 ```
 
 
-**Output**
+**出力**
 
 ```
 5/7/2018 7:20:46 AM
@@ -535,9 +530,9 @@ DateTime 値に、指定された整数部と小数部から成る分数を加�
 5/7/2018 7:18:16 AM
 ```
 
-### <a name="date_add_months"></a>\_月を追加\_日付
+### <a name="date_add_months"></a>date\_add\_months
 
-指定された月数を DateTime 値に加算します。 パラメーターには、正または負の値を指定できます。
+DateTime 値に、整数の月を加算します。 パラメーターは正および負を使用できます。
 
 **コード**
 
@@ -549,7 +544,7 @@ DateTime 値に、指定された整数部と小数部から成る分数を加�
 {{ now | date_add_months: -2 }}
 ```
 
-**Output**
+**出力**
 
 ```
 5/7/2018 7:20:46 AM
@@ -559,9 +554,9 @@ DateTime 値に、指定された整数部と小数部から成る分数を加�
 3/7/2018 7:20:46 AM
 ```
 
-### <a name="date_add_seconds"></a>\_秒数を加算\_日付
+### <a name="date_add_seconds"></a>date\_add\_seconds
 
-DateTime 値に、指定された整数部と小数部から成る秒数を加算します。 パラメーターには、正または負の値を指定できます。
+DateTime 値に、整数または小数の秒を加算します。 パラメーターは正および負を使用できます。
 
 **コード**
 
@@ -573,7 +568,7 @@ DateTime 値に、指定された整数部と小数部から成る秒数を加�
 {{ now | date_add_seconds: -1.25 }}
 ```
 
-**Output**
+**出力**
 
 ```
 5/7/2018 7:20:46 AM
@@ -583,9 +578,9 @@ DateTime 値に、指定された整数部と小数部から成る秒数を加�
 5/7/2018 7:20:45 AM
 ```
 
-### <a name="date_add_years"></a>\_年を追加\_日付
+### <a name="date_add_years"></a>date\_add\_years
 
-指定された年単位の数を DateTime 値に加算します。 パラメーターには、正または負の値を指定できます。
+DateTime 値に、整数の年を加算します。 パラメーターは正および負を使用できます。
 
 **コード**
 
@@ -597,7 +592,7 @@ DateTime 値に、指定された整数部と小数部から成る秒数を加�
 {{ now | date_add_years: -2 }}
 ```
 
-**Output**
+**出力**
 
 ```
 5/7/2018 7:20:46 AM
@@ -607,9 +602,9 @@ DateTime 値に、指定された整数部と小数部から成る秒数を加�
 5/7/2016 7:20:46 AM
 ```
 
-### <a name="date_to_iso8601"></a>\_に\_日付
+### <a name="date_to_iso8601"></a>date\_to\_iso8601
 
-[ISO 8601](http://en.wikipedia.org/wiki/ISO_8601)標準に従って DateTime 値の書式を設定します。 [*Atom フィード*](http://tools.ietf.org/html/rfc4287)、または HTML5 &lt;time&gt; 要素を作成するときに便利です。  
+DateTime 値を [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) 標準に従って書式設定します。 [*Atom フィード*](http://tools.ietf.org/html/rfc4287) や HTML5 の &lt;時間&gt; 要素を作成する場合に役立ちます。  
 
 **コード**
 
@@ -617,15 +612,15 @@ DateTime 値に、指定された整数部と小数部から成る秒数を加�
 {{ now | date_to_iso8601 }}
 ```
 
-**Output**
+**出力**
 
 ```
 2018-05-07T07:20:46Z
 ```
 
-### <a name="date_to_rfc822"></a>\_rfc822 に\_日付
+### <a name="date_to_rfc822"></a>date\_to\_rfc822
 
-[RFC 822](https://www.ietf.org/rfc/rfc0822.txt)標準に従って DateTime 値の書式を設定します。 [*RSS フィード*](http://cyber.law.harvard.edu/rss/rss.html)を作成するときに便利です。  
+DateTime 値を [RFC 822](https://www.ietf.org/rfc/rfc0822.txt) 標準に従って書式設定します。 [*RSS フィード*](http://cyber.law.harvard.edu/rss/rss.html) を作成する場合に役立ちます。  
 
 **コード**
 
@@ -633,20 +628,20 @@ DateTime 値に、指定された整数部と小数部から成る秒数を加�
 {{ now | date_to_rfc822 }}
 ```
 
-**Output**
+**出力**
 
 ```
 Mon, 07 May 2018 07:20:46 Z
 ```
 
 
-## <a name="entity-list-filters"></a>エンティティリストフィルター
+## <a name="entity-list-filters"></a>エンティティ リスト フィルター
 
-エンティティリストフィルターは、特定の[entitylist](liquid-objects.md#entitylist)属性値を操作するために使用され、エンティティリストビューを作成するのに役立ちます。  
+特定の [entitylist](liquid-objects.md#entitylist) 属性値を使用するため、およびエンティティ リスト ビューを作成するために、エンティティ リスト フィルターを使用します。  
 
-### <a name="current_sort"></a>現在の\_並べ替え
+### <a name="current_sort"></a>current\_sort
 
-並べ替え式を指定すると、指定された属性の現在の並べ替え方向が返されます。
+指定された並べ替えを定義する式は、指定された属性を並べ替える現在方向を返します。
 
 **コード**
 
@@ -654,17 +649,17 @@ Mon, 07 May 2018 07:20:46 Z
 {{ 'name ASC, createdon DESC' | current_sort: 'createdon' }}
 ```
 
-**Output**
+**出力**
 
 ```
 DESC
 ```
 
-### <a name="metafilters"></a>メタフィルター
+### <a name="metafilters"></a>metafilters
 
-[Entitylist](liquid-objects.md#entitylist)フィルター\_definition JSON 値をフィルターオプショングループオブジェクトに解析します。  
+[entitylist](liquid-objects.md#entitylist) filter\_definition JSON 値を解析してフィルター オプション グループ オブジェクトにします。  
 
-メタフィルターは、必要に応じて、現在の属性フィルタークエリと現在の[entitylist](liquid-objects.md#entitylist)を使用して指定することができます。これにより、返されたフィルターオブジェクトのフラグをオンまたはオフにすることができます。
+metafilters には現在の属性フィルター クエリと現在の [entitylist](liquid-objects.md#entitylist) がオプションで提供され、返されたフィルター オブジェクトを選択または選択解除のいずれかにフラグ設定できるようになります。
 
 **コード**
 
@@ -721,9 +716,9 @@ DESC
 {% endif %}
 ```
 
-### <a name="reverse_sort"></a>逆順\_並べ替え
+### <a name="reverse_sort"></a>reverse\_sort
 
-並べ替えの方向を指定した場合は、逆の並べ替え方向が返されます。
+指定された並べ替えの向きとは逆の向きを返します。
 
 **コード**
 
@@ -735,7 +730,7 @@ DESC
 {{ 'desc' | reverse_sort }}
 ```
 
-**Output**
+**出力**
 
 ```
 DESC
@@ -744,11 +739,11 @@ ASC
 ```
 
 
-## <a name="math-filters"></a>数値演算フィルター
+## <a name="math-filters"></a>Math フィルター
 
-数値演算フィルターを使用すると、[数値](liquid-types.md#number)に対して数値演算を実行できます。  
+Math フィルターは、[数値](liquid-types.md#number) による、数学的操作の実行を可能にします。  
 
-すべてのフィルターと同様に、数値演算フィルターを連結して、左から右へ順に適用できます。
+すべてのフィルターと同じように、Math フィルターはつなげることが可能で、左から右の順に適用されます。
 
 **コード**
 
@@ -756,7 +751,7 @@ ASC
 {{ 10 | times: 2 | minus: 5 | divided_by: 3 }}
 ```
 
-**Output**
+**出力**
 
 ```
 5
@@ -764,7 +759,7 @@ ASC
 
 ### <a name="ceil"></a>ceil
 
-最も近い整数に値を丸めます。
+最近似値の整数に最も近い上の値に四捨五入します。
 
 **コード**
 
@@ -774,7 +769,7 @@ ASC
 {{ 4.3 | ceil }}
 ```
 
-**Output**
+**出力**
 
 ```
 5
@@ -782,9 +777,9 @@ ASC
 5
 ```
 
-### <a name="divided_by"></a>分割された\_
+### <a name="divided_by"></a>divided\_by
 
-数値を別の数値で除算します。
+異なる数で数を分けます。
 
 **コード**
 
@@ -796,7 +791,7 @@ ASC
 {{ 10.0 | divided_by: 3 }}
 ```
 
-**Output**
+**出力**
 
 ```
 5
@@ -806,9 +801,9 @@ ASC
 3.333333
 ```
 
-### <a name="floor"></a>階数
+### <a name="floor"></a>floor
 
-最も近い整数に値を丸めます。
+最近似値の整数に最も近い下の値に四捨五入します。
 
 **コード**
 
@@ -818,7 +813,7 @@ ASC
 {{ 4.3 | floor }}
 ```
 
-**Output**
+**出力**
 
 ```
 4
@@ -826,9 +821,9 @@ ASC
 4
 ```
 
-### <a name="minus"></a>除く
+### <a name="minus"></a>minus
 
-数値を別の数値から減算します。
+別の数から数を減算します。
 
 **コード**
 
@@ -842,7 +837,7 @@ ASC
 {{ 10.1 | minus: 1 }}
 ```
 
-**Output**
+**出力**
 
 ```
 10
@@ -852,9 +847,9 @@ ASC
 9.1
 ```
 
-### <a name="modulo"></a>剰余
+### <a name="modulo"></a>modulo
 
-数値を別の数値で除算し、剰余を返します。
+別の数で数を分割し、残りの数を返します。
 
 **コード**
 
@@ -862,15 +857,15 @@ ASC
 {{ 12 | modulo: 5 }}
 ```
 
-**Output**
+**出力**
 
 ```
 2
 ```
 
-### <a name="plus"></a>プラス
+### <a name="plus"></a>plus
 
-数値を別の数値に加算します。
+他の数に数を追加します。
 
 **コード**
 
@@ -884,7 +879,7 @@ ASC
 {{ 10.1 | plus: 1 }}
 ```
 
-**Output**
+**出力**
 
 ```
 12
@@ -894,9 +889,9 @@ ASC
 11.1
 ```
 
-### <a name="round"></a>誤差
+### <a name="round"></a>round
 
-最も近い整数または指定した小数点以下の桁数に値を丸めます。
+最近似値の整数、または指定された小数点で値を四捨五入します。
 
 **コード**
 
@@ -908,7 +903,7 @@ ASC
 {{ 4.5612 | round: 2 }}
 ```
 
-**Output**
+**出力**
 
 ```
 5
@@ -918,9 +913,9 @@ ASC
 4.56
 ```
 
-### <a name="times"></a>複数
+### <a name="times"></a>times
 
-数値を別の数値で乗算します。
+異なる数で数を乗数します。
 
 **コード**
 
@@ -932,7 +927,7 @@ ASC
 {{ 10.1 | times: 2 }}
 ```
 
-**Output**
+**出力**
 
 ```
 20
@@ -945,11 +940,11 @@ ASC
 
 ## <a name="string-filters"></a>文字列フィルター
 
-文字列フィルターは[文字列](liquid-types.md#string)を操作します。  
+文字列フィルタは、[文字列](liquid-types.md#string) を処理します。  
 
-### <a name="append"></a>追記
+### <a name="append"></a>追加
 
-文字列を別の文字列の末尾に追加します。
+別の文字列の末尾に文字列を追加します。
 
 **コード**
 
@@ -957,15 +952,15 @@ ASC
 {{ 'filename' | append: '.js' }}
 ```
 
-**Output**
+**出力**
 
 ```
 filename.js
 ```
 
-### <a name="capitalize"></a>**文字**
+### <a name="capitalize"></a>**capitalize**
 
-文字列の最初の単語を大文字にします。
+文字列の最初の単語の先頭を大文字にします。
 
 **コード**
 
@@ -973,7 +968,7 @@ filename.js
 {{ 'capitalize me' | capitalize }}
 ```
 
-**Output**
+**出力**
 
 ```
 Capitalize Me
@@ -989,15 +984,15 @@ Capitalize Me
 {{ 'MIxed Case TExt' | downcase }}
 ```
 
-**Output**
+**出力**
 
 ```
 mixed case text
 ```
 
-### <a name="escape"></a>**付ける**
+### <a name="escape"></a>**escape**
 
-文字列を HTML でエスケープします。
+HTML のエスケープ文字列。
 
 **コード**
 
@@ -1005,15 +1000,15 @@ mixed case text
 {{ '<p>test</p>' | escape }}
 ```
 
-**Output**
+**出力**
 
 ```
 &lt;p&gt;test&lt;/p&gt;
 ```
 
-### <a name="newline_to_br"></a>**改行\_\_br**
+### <a name="newline_to_br"></a>**newline\_to\_br**
 
-文字列内の改行のたびに、&lt;br/&gt; 改行 HTML タグを挿入します。
+文字列の中の改行位置に、改行の HTML タグ &lt;br /&gt; を挿入します。
 
 **コード**
 
@@ -1031,7 +1026,7 @@ C
 {{ text | newline_to_br }}
 ```
 
-**Output**
+**出力**
 
 ```
 A<br />
@@ -1041,9 +1036,9 @@ B<br />
 C<br />
 ```
 
-### <a name="prepend"></a>**ド**
+### <a name="prepend"></a>**prepend**
 
-文字列を別の文字列の先頭に付加します。
+別の文字列の先頭に文字列を追加します。
 
 **コード**
 
@@ -1051,15 +1046,15 @@ C<br />
 {{ 'Jane Johnson' | prepend: 'Dr. ' }}
 ```
 
-**Output**
+**出力**
 
 ```
 Dr. Jane Johnson
 ```
 
-### <a name="remove"></a>**から**
+### <a name="remove"></a>**remove**
 
-文字列からすべての部分文字列を削除します。
+文字列から特定のサブストリングをすべて削除します。
 
 **コード**
 
@@ -1067,15 +1062,15 @@ Dr. Jane Johnson
 {{ 'Hello, Dave. How are you, Dave?' | remove: 'Dave' }}
 ```
 
-**Output**
+**出力**
 
 ```
 Hello, . How are you, ?
 ```
 
-### <a name="remove_first"></a>**最初に\_を削除する**
+### <a name="remove_first"></a>**remove\_first**
 
-文字列から最初に見つかった部分文字列を削除します。
+文字列から最初の特定のサブストリングを削除します。
 
 **コード**
 
@@ -1083,15 +1078,15 @@ Hello, . How are you, ?
 {{ 'Hello, Dave. How are you, Dave?' | remove_first: 'Dave' }}
 ```
 
-**Output**
+**出力**
 
 ```
 Hello, . How are you, Dave?
 ```
 
-### <a name="replace"></a>**ら**
+### <a name="replace"></a>**replace**
 
-文字列のすべての出現箇所を部分文字列に置換します。
+文字列から特定のサブストリングをすべて別の文字列に置換します。
 
 **コード**
 
@@ -1099,15 +1094,15 @@ Hello, . How are you, Dave?
 {{ 'Hello, Dave. How are you, Dave?' | replace: 'Dave', 'John' }}
 ```
 
-**Output**
+**出力**
 
 ```
 Hello, John. How are you, John?
 ```
 
-### <a name="replace_first"></a>**最初\_置換**
+### <a name="replace_first"></a>**replace\_first**
 
-文字列の最初の出現箇所を部分文字列で置換します。
+文字列から最初の特定のサブストリングを別の文字列に置換します。
 
 **コード**
 
@@ -1115,15 +1110,15 @@ Hello, John. How are you, John?
 {{ 'Hello, Dave. How are you, Dave?' | replace_first: 'Dave', 'John' }}
 ```
 
-**Output**
+**出力**
 
 ```
 Hello, John. How are you, Dave?
 ```
 
-### <a name="split"></a>**分配**
+### <a name="split"></a>**split**
 
-分割フィルターは、パラメーターとして部分文字列を受け取ります。 文字列を配列に分割するには、区切り記号として部分文字列を使用します。
+split フィルタは、サブストリングをパラメーターとして受け取ります。 そのサブストリングは、文字列を配列に分割する際の区切り文字として使用されます。
 
 **コード**
 
@@ -1141,7 +1136,7 @@ Last word: {{ words.last }}
 All words: {{ words | join: ', ' }}
 ```
 
-**Output**
+**出力**
 
 ```
 First word: This
@@ -1155,9 +1150,9 @@ Last word: filter
 All words: This, is, a, demo, of, the, split, filter
 ```
 
-### <a name="strip_html"></a>**\_html のストリップ**
+### <a name="strip_html"></a>**strip\_html**
 
-文字列からすべての HTML タグを取り除きます。
+文字列のすべての HTML タグを除去します。
 
 **コード**
 
@@ -1165,15 +1160,15 @@ All words: This, is, a, demo, of, the, split, filter
 <p>Hello</p>
 ```
 
-**Output**
+**出力**
 
 ```
 Hello
 ```
 
-### <a name="strip_newlines"></a>**\_改行の削除**
+### <a name="strip_newlines"></a>**strip\_newlines**
 
-文字列から改行を取り除きます。
+文字列からすべての改行を除去します。
 
 **コード**
 
@@ -1191,15 +1186,15 @@ C
 {{ text | strip_newlines }}
 ```
 
-**Output**
+**出力**
 
 ```
 ABC
 ```
 
-### <a name="text_to_html"></a>**html\_するテキスト\_**
+### <a name="text_to_html"></a>**text\_to\_html**
 
-プレーンテキスト文字列を単純な HTML として書式設定します。 すべてのテキストは HTML エンコードされ、空白行で区切られたテキストのブロックは段落 &lt;p&gt; タグに折り返されます。1つの改行は &lt;br&gt;に置き換えられ、Url はハイパーリンクに変換されます。
+プレーン テキストを単純な HTML として整形します。 すべてのテキストが HTML にエンコードされます。改行で区切られたテキストのブロックは、パラグラフ タグ &lt;p&gt; で囲われます。単一の改行は &lt;br&gt; に置換されます。URL はハイパーリンクに変換されます。
 
 **コード**
 
@@ -1207,7 +1202,7 @@ ABC
 {{ note.notetext | text_to_html }}
 ```
 
-**Output**
+**出力**
 
 ```
 <p>This is the first paragraph of notetext. It contains a URL: <a href="http://example.com/" rel="nofollow">http://example.com</a></p>
@@ -1215,9 +1210,9 @@ ABC
 <p>This is a second paragraph.</p>
 ```
 
-### <a name="truncate"></a>**切捨て**
+### <a name="truncate"></a>**truncate**
 
-文字列を指定された文字数まで切り捨てます。 文字列に省略記号 (...) が追加され、文字数に含まれています。
+文字列を指定された文字数で切り出します。 省略記号 (...) が文字列に付けられ、これも文字数に含まれます。
 
 **コード**
 
@@ -1225,15 +1220,15 @@ ABC
 {{ 'This is a long run of text.' | truncate: 10 }}
 ```
 
-**Output**
+**出力**
 
 ```
 This is...
 ```
 
-### <a name="truncate_words"></a>**\_語の切り捨て**
+### <a name="truncate_words"></a>**truncate\_words**
 
-文字列を指定された数の単語まで切り捨てます。 省略記号 (...) が切り捨てられた文字列に追加されます。
+文字列を指定された単語数で切り出します。 切り出した文字列には省略記号 (...) が付けられます。
 
 **コード**
 
@@ -1241,7 +1236,7 @@ This is...
 {{ 'This is a long run of text.' | truncate_words: 3 }}
 ```
 
-**Output**
+**出力**
 
 ```
 This is a...
@@ -1257,15 +1252,15 @@ This is a...
 {{ 'MIxed Case TExt' | upcase }}
 ```
 
-**Output**
+**出力**
 
 ```
 MIXED CASE TEXT
 ```
 
-### <a name="url_escape"></a>**url\_エスケープ**
+### <a name="url_escape"></a>**url\_escape**
 
-URI-URL に含める文字列をエスケープします。
+文字列を URL エスケープして、URL として含められるようにします。
 
 **コード**
 
@@ -1273,15 +1268,15 @@ URI-URL に含める文字列をエスケープします。
 {{ 'This & that//' | url_escape }}
 ```
 
-**Output**
+**出力**
 
 ```
 This+%26+that%2F%2F
 ```
 
-### <a name="xml_escape"></a>**xml\_エスケープ**
+### <a name="xml_escape"></a>**xml\_escape**
 
-Xml-XML 出力に含める文字列をエスケープします。
+文字列を XML エスケープして、XML 出力の中で使用できるようにします。
 
 **コード**
 
@@ -1289,22 +1284,22 @@ Xml-XML 出力に含める文字列をエスケープします。
 {{ '<p>test</p>' | xml_escape }}
 ```
 
-**Output**
+**出力**
 
 ```
 &lt;p&gt;test&lt;/p&gt;
 ```
 
 
-## <a name="type-filters"></a>型フィルター
+## <a name="type-filters"></a>フィルターの入力
 
-型フィルターを使用すると、ある型の値を他の型に変換できます。
+型のフィルターにより、ある型の値を他の型の値に変換することができます。
 
-### <a name="boolean"></a>**演算**
+### <a name="boolean"></a>**boolean**
 
-文字列値からブール値への変換を試みます。 値が既にブール値の場合は、そのまま返されます。 値をブール値に変換できない場合は null が返されます。
+文字列値をブール値に変換しようとします。 この値がすでにブール値である場合は、変更されずに返されます。 値がブール値に変換できない場合は、null が返されます。
 
-このフィルターでは、on、enabled、または yes を true として、off、disabled、および no を false として使用することもできます。
+また、このフィルターは"on"、"有効化"、または "はい" を "true" として、"off"、"無効"、および "いいえ" を "false" として受け取ります。
 
 **コード**
 
@@ -1330,9 +1325,9 @@ true
 false
 ```
 
-### <a name="decimal"></a>**位**
+### <a name="decimal"></a>**decimal**
 
-文字列値から10進数への変換を試みます。 値が既に10進数である場合は、変更されずに返されます。 値を10進数値に変換できない場合は、null が返されます。
+文字列値を 10 進数に変換しようとします。 この値がすでに 10 進数である場合は、変更されずに返されます。 値が 10 進数に変換できない場合は、null が返されます。
 
 **コード**
 
@@ -1344,7 +1339,7 @@ false
 {{ 'text' | decimal | default: 3.14 }}
 ```
 
-**Output**
+**出力**
 
 ```
 10.1
@@ -1354,9 +1349,9 @@ false
 3.14
 ```
 
-### <a name="integer"></a>**以外**
+### <a name="integer"></a>**integer**
 
-文字列値を整数に変換しようとします。 値が既に整数である場合は、変更されずに返されます。 値を整数に変換できない場合は、null が返されます。
+文字列値を整数に変換しようとします。 この値がすでに整数である場合は、変更されずに返されます。 値が整数に変換できない場合は、null が返されます。
 
 **コード**
 
@@ -1370,7 +1365,7 @@ false
 {{ 'text' | integer | default: 2 }}
 ```
 
-**Output**
+**出力**
 
 ```
 10
@@ -1381,21 +1376,21 @@ false
 2
 ```
 
-### <a name="string"></a>**文字列**
+### <a name="string"></a>**string**
 
-値から文字列形式への変換を試みます。 値が既に文字列の場合は、変更されずに返されます。 値が null の場合は null が返されます。
+値を文字列に変換しようとします。 この値がすでに文字列である場合は、変更されずに返されます。 値が null である場合、null 値が返されます。
 
 
 
 ## <a name="url-filters"></a>URL フィルター
 
-URL フィルターを使用すると、Url の一部を構築または抽出できます。
+URL フィルターにより、URL の一部の構築または抽出ができます。
 
-### <a name="add_query"></a>**\_クエリの追加**
+### <a name="add_query"></a>**add\_query**
 
-URL にクエリ文字列パラメーターを追加します。 パラメーターが URL に既に存在する場合は、パラメーター値が更新されます。
+URL にクエリ文字列パラメーターを追加します。 URL にパラメーターが既に存在する場合は、パラメーター値が更新されます。
 
-このフィルターを完全絶対 URL に適用すると、更新された絶対 URL が結果になります。 パスに適用されている場合は、更新されたパスが結果になります。
+このフィルターが完全な絶対 URL に適用される場合、更新された絶対 URL が結果です。 パスに適用される場合、更新されたパスが結果です。
 
 **コード**
 
@@ -1405,7 +1400,7 @@ URL にクエリ文字列パラメーターを追加します。 パラメータ
 {{ '/path?page=1' | add_query: 'page', 2 }}
 ```
 
-**Output**
+**出力**
 
 ```
 http://example.com/path?page=1&foo=bar
@@ -1413,7 +1408,7 @@ http://example.com/path?page=1&foo=bar
 /path?page=2
 ```
 
-### <a name="base"></a>**常用**
+### <a name="base"></a>**base**
 
 指定された URL のベース URL を取得します。
 
@@ -1423,15 +1418,15 @@ http://example.com/path?page=1&foo=bar
 {{ 'http://example.com/path?foo=bar&page=2' | base }}
 ```
 
-**Output**
+**出力**
 
 ```
 http://example.com
 ```
 
-### <a name="host"></a>**ホスト**
+### <a name="host"></a>**host**
 
-URL のホスト部分を取得します。
+URL のホスト パーツを取得します。
 
 **コード**
 
@@ -1439,15 +1434,15 @@ URL のホスト部分を取得します。
 {{ 'http://example.com/path?foo=bar&page=2' | host }}
 ```
 
-**Output**
+**出力**
 
 ```
 example.com
 ```
 
-### <a name="path"></a>**道**
+### <a name="path"></a>**path**
 
-URL のパス部分を取得します。
+URL のパス パーツを取得します。
 
 **コード**
 
@@ -1457,7 +1452,7 @@ URL のパス部分を取得します。
 {{ '/path?foo=bar&page=2' | path }}
 ```
 
-**Output**
+**出力**
 
 ```
 /path
@@ -1465,9 +1460,9 @@ URL のパス部分を取得します。
 /path
 ```
 
-### <a name="path_and_query"></a>**パス\_と\_クエリ**
+### <a name="path_and_query"></a>**path\_and\_query**
 
-URL のパスとクエリ部分を取得します。
+URL のパスとクエリ パーツを取得します。
 
 **コード**
 
@@ -1477,7 +1472,7 @@ URL のパスとクエリ部分を取得します。
 {{ '/path?foo=bar&page=2' | path_and_query }}
 ```
 
-**Output**
+**出力**
 
 ```
 /path?foo=bar&page=2
@@ -1485,7 +1480,7 @@ URL のパスとクエリ部分を取得します。
 /path?foo=bar&page=2
 ```
 
-### <a name="port"></a>**ポート**
+### <a name="port"></a>**port**
 
 URL のポート番号を取得します。
 
@@ -1499,7 +1494,7 @@ URL のポート番号を取得します。
 {{ 'https://example.com:9000/path?foo=bar&page=2' | port }}
 ```
 
-**Output**
+**出力**
 
 ```
 80
@@ -1509,11 +1504,11 @@ URL のポート番号を取得します。
 9000
 ```
 
-### <a name="remove_query"></a>**\_クエリの削除**
+### <a name="remove_query"></a>**remove\_query**
 
 URL からクエリ文字列パラメーターを削除します。 URL にパラメーターが存在しない場合、URL は変更されずに返されます。
 
-このフィルターを完全絶対 URL に適用すると、更新された絶対 URL が結果になります。 パスに適用されている場合は、更新されたパスが結果になります。
+このフィルターが完全な絶対 URL に適用される場合、更新された絶対 URL が結果です。 パスに適用される場合、更新されたパスが結果です。
 
 **コード**
 
@@ -1523,7 +1518,7 @@ URL からクエリ文字列パラメーターを削除します。 URL にパ�
 {{ '/path?page=1' | remove_query: 'page' }}
 ```
 
-**Output**
+**出力**
 
 ```
 http://example.com/path
@@ -1531,9 +1526,9 @@ http://example.com/path
 /path
 ```
 
-### <a name="scheme"></a>**体系**
+### <a name="scheme"></a>**scheme**
 
-URL のスキーム部分を取得します。
+URL のスキーム パーツを取得します。
 
 **コード**
 
@@ -1543,7 +1538,7 @@ URL のスキーム部分を取得します。
 {{ 'https://example.com/path?foo=bar&page=2' | scheme }}
 ```
 
-**Output**
+**出力**
 
 ```
 http
@@ -1552,13 +1547,13 @@ https
 ```
 
 
-## <a name="additional-filters"></a>追加のフィルター
+## <a name="additional-filters"></a>追加フィルター
 
-これらのフィルターは、便利な一般的な機能を提供します。
+これらのフィルターは便利な一般的機能を提供します。
 
-### <a name="default"></a>**標準**
+### <a name="default"></a>**default**
 
-値が割り当てられていない変数 (つまり null) の既定値を返します。
+割り当てられた値 (例 null) なしで、すべての変数の既定値を返します
 
 **コード**
 
@@ -1566,7 +1561,7 @@ https
 {{ snippets[Header] | default: 'My Website' }}
 ```
 
-**Output**
+**出力**
 
 ```
 <!-- If a snippet with the name Header returns null -->
@@ -1574,11 +1569,11 @@ https
 My Website
 ```
 
-### <a name="file_size"></a>**ファイル\_サイズ**
+### <a name="file_size"></a>**file\_size**
 
-バイト数を表す数値に適用された場合は、適切なスケールの単位を使用して、書式設定されたファイルサイズを返します。
+バイト数を表わしている数値に適用され、適切なスケール単位で書式設定されたファイルの数を返します。
 
-必要に応じて、有効桁数のパラメーターを渡して、結果の小数点以下の桁数を制御できます。 既定の有効桁数は1です。
+オプションでは、結果における小数点以下の桁数を管理するために、詳細な precision パラメーターを渡すことができます。 既定の precision は 1 です。
 
 **コード**
 
@@ -1590,7 +1585,7 @@ My Website
 {{ entity.notes.first.filesize | file_size: 2 }}
 ```
 
-**Output**
+**出力**
 
 ```
 9.5 MB
@@ -1600,9 +1595,9 @@ My Website
 207.14 KB
 ```
 
-### <a name="has_role"></a>**ロールが\_**
+### <a name="has_role"></a>**has\_role**
 
-[ユーザーに](liquid-objects.md#user)適用されます。ユーザーが特定のロールに属している場合は true を返します。 そうでない場合は false を返します。  
+[ユーザー](liquid-objects.md#user) に適用され、ユーザーが指定されたロールに属している場合は true を返します。 そうではない場合、false が返されます。  
 
 **コード**
 
@@ -1616,12 +1611,12 @@ User is an administrator.
 {% endif %}
 ```
 
-### <a name="liquid"></a>**計**
+### <a name="liquid"></a>**liquid**
 
-文字列を液体コードとしてレンダリングします。 このコードは、現在の液体実行コンテキスト (変数など) にアクセスできます。
+流動コードとして文字列を表示します。 このコードは現在の流動実行コンテキスト (変数など) にアクセスできます。
 
 > [!Note] 
-> このフィルターは注意して使用する必要があります。通常、このフィルターは、ポータルコンテンツの作成者の排他制御下にある値、または液体コードを記述するために信頼できる他のユーザーにのみ適用する必要があります。
+> このフィルターは注意して使用する必要があり、一般的に、ポータル コンテンツの作成者または流動コードを記述する信頼できるその他のユーザーの排他的管理下にある値のみが適用されます。
 
 **コード**
 
@@ -1631,9 +1626,9 @@ User is an administrator.
 
 ### <a name="see-also"></a>関連項目
 
-[Web テンプレートを使用してソースコンテンツを保存する](store-content-web-templates.md)  
-液体の 
-液体[型](liquid-types.md)に[つい](liquid-operators.md)て  
-[液体オブジェクト](liquid-objects.md)  
-[液体タグ](liquid-tags.md)  
-[液体フィルター](liquid-filters.md)  
+[Web テンプレートを使用したソース コンテンツの保存](store-content-web-templates.md)  
+[Liquid の演算子の認識](liquid-operators.md) 
+[Liquid の種類](liquid-types.md)  
+[Liquid オブジェクト](liquid-objects.md)  
+[Liquid タグ](liquid-tags.md)  
+[Liquid フィルター](liquid-filters.md)  

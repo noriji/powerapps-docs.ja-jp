@@ -1,6 +1,6 @@
 ---
 title: QueryExpression クラスの使用 (Common Data Service) | Microsoft Docs
-description: Dynamics 365 (online)Customer Engagement では、IOrganizationService.QueryBase) メソッドまたは RetrieveMultipleRequest メッセージで使用するための複雑なクエリを作成するために QueryExpression クラスを使用できます。
+description: QueryExpression クラスを使用して、IOrganizationService.QueryBase) メソッドまたは RetrieveMultipleRequest メッセージで使用する複雑なクエリを作成します。
 ms.custom: ''
 ms.date: 10/31/2018
 ms.reviewer: ''
@@ -17,7 +17,7 @@ search.app:
 ---
 # <a name="use-the-queryexpression-class"></a>QueryExpression クラスの使用
 
-Common Data Service では、<xref:Microsoft.Xrm.Sdk.Query.QueryExpression> クラスを使用して <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> で使用する複雑なクエリを作成できます。 メソッドまたは <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> メッセージによってクエリの結果セットを絞り込むことができます。 <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> に対するクエリ パラメーターは、<xref:Microsoft.Xrm.Sdk.Query.ConditionExpression>、<xref:Microsoft.Xrm.Sdk.Query.ColumnSet>、および <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> の各クラスを使用して設定できます。  
+Common Data Service では、<xref:Microsoft.Xrm.Sdk.Query.QueryExpression> クラスを使用して、<xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> メソッドまたは <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> メッセージによってクエリの結果セットを絞り込むことができます。 <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> に対するクエリ パラメーターは、<xref:Microsoft.Xrm.Sdk.Query.ConditionExpression>、<xref:Microsoft.Xrm.Sdk.Query.ColumnSet>、および <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> の各クラスを使用して設定できます。  
   
  <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> クラスを使用すると、複雑なクエリを作成できます。 <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> クラスは、指定した値と属性が一致するエンティティを簡単に検索できるように設計されています。  
   

@@ -1,12 +1,12 @@
 ---
 title: 独自のアクションの作成 (Common Data Service) | Microsoft Docs
-description: アクションは Dynamics 365 Customer Engagement の機能を拡張するために役立つカスタム メッセージです。 独自のアクションの作成方法について学習する
+description: アクションは Common Data Service の機能を拡張するために役立つカスタム メッセージです。 独自のアクションの作成方法について学習する
 ms.custom: ''
-ms.date: 10/31/2018
+ms.date: 09/20/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.topic: article
-author: brandonsimons
+author: JimDaly
 ms.author: jdaly
 manager: ryjones
 search.audienceType:
@@ -17,11 +17,10 @@ search.app:
 ---
 # <a name="create-your-own-actions"></a>独自のアクションの作成
 
-*アクション* というカスタム メッセージを作成することで Common Data Service の機能を拡張できます。 これらの操作に要求と応答のクラスが関連付けられ、Web API アクションが生成されます。 アクションの一般的な使用方法は、新しいドメイン特有の機能を組織の Web サービスに追加すること、または組織の複数の Web サービス メッセージ要求を 1 つの要求に結合することです。 たとえば、サポートコール センターで、作成、割り当て、および Setstate メッセージを単一の新しい「エスカレート」メッセージと結合することがあります。  
+*アクション*と呼ばれるユーザー定義メッセージを作成することで、Common Data Service の機能を拡張できます。 これらの操作に要求と応答のクラスが関連付けられ、Web API アクションが生成されます。 アクションの一般的な使用方法は、新しいドメイン特有の機能を組織の Web サービスに追加すること、または組織の複数の Web サービス メッセージ要求を 1 つの要求に結合することです。 たとえば、サポートコール センターで、作成、割り当て、および 更新メッセージを単一の新しいエスカレート メッセージと結合することがあります。  
   
- アクションのビジネス ロジックには、ワークフローを使用して実行されます。 アクションを作成するときは、関連をリアルタイムワークフローが、実行パイプラインのステージ 30(コア操作)の実行が自動的に登録されます。 リアルタイム ワークフローの詳細については、[ワークフローの種類](/dynamics365/customer-engagement/developer/process-categories) を参照してください。  
+アクションのビジネス ロジックには、ワークフローを使用して実行されます。 アクションが作成されると、関連リアルタイム ワークフローが自動的に登録され、実行パイプラインのメイン操作ステージで実行されます。 
   
- アクションは両方の Common Data Service でサポートされますが、コードで (XAML を使用して) アクションを作成するのは、設置型および IFD 展開によってのみサポートされます。 オンラインのお客様は、Web アプリケーションで操作を対話的に作成する必要があります。  
   
 <a name="about_actions"></a>   
 
@@ -31,7 +30,7 @@ search.app:
   
 - 一つのエンティティに関連付けることも、グローバル(任意の特定のエンティティに関連付けられない場合)とすることもできます。  
   
-- イベント実行パイプラインのコア操作のステージ 30 で実行されます。  
+- イベント実行パイプラインのメイン操作ステージで実行されます。  
   
 - イベント実行パイプラインの操作前および操作後の段階で登録されたプラグインの起動がサポートされています。  
   
@@ -39,7 +38,7 @@ search.app:
   
 - Web API または `organization.svc` および `organization.svc/web` エンドポイントを介して使用可能です。  
   
-- JavaScript の Web リソースを使用して実装できます。 詳細: [JavaScript の Web リソースを使用して操作を実行する](/dynamics365/customer-engagement/developer/create-own-actions#BKMK_JavaScript)  
+- JavaScript の Web リソースを使用して実装できます。 
   
 - 呼び出し元ユーザーのセキュリティ コンテキストで常に実行します。  
   
@@ -65,13 +64,12 @@ search.app:
   
  アクションのリアルタイム ワークフローをアクティブ化して、実行するには、リアルタイム プロセスのアクティブ化 (`prvActivateSynchronousWorkflow`) というセキュリティ特権が必要です。 これは、ワークフローの作成に必要な特権への追加です。  
 
-<!-- Removed much content about creating a custom action using code-->
   
 <a name="bkmk_package"></a>   
 
 ## <a name="package-an-action-for-distribution"></a>配布の操作をパッケージする
 
- Common Data Service 組織にインポートできるようにアクションを配布するには、Common Data Service ソリューションにアクションを追加します。 これは、Web アプリケーションを使用して、**設定** > **カスタマイズ** > **ソリューション**と移動して容易に実行できます。 ソリューションを作成するコードを記述できます。 ソリューションの使用に関する詳細については、[拡張機能のパッケージ化および配布](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions) を参照してください。  
+ Common Data Service 組織にインポートできるように操作を配布するには、Common Data Service ソリューションに操作を追加します。 これは、Web アプリケーションを使用して、**設定** > **カスタマイズ** > **ソリューション**と移動して容易に実行できます。 ソリューションを作成するコードを記述できます。 ソリューションについての詳細は、 [ソリューションの概要](introduction-solutions.md) を参照してください。  
   
 <a name="bkmk_gentypes"></a>
 
@@ -80,20 +78,18 @@ search.app:
  CrmSvcUtil ツールを使用して、アプリケーション コードに含めるアクションに対する要求と応答クラスを生成することができます。 ただし、これらのクラスを生成する前に、操作をアクティブ化してください。  
   
 CrmSvcUtil.exe をダウンロードするには、[NuGet からツールをダウンロード](download-tools-NuGet.md) を参照してください。
-  
- 次のサンプルは、設置型の Common Data Service 環境でツールをコマンド ラインから実行するときの構文を示しています。 環境で実際に使用されるパラメーター値を指定してください。  
-  
-```ms-dos  
-CrmSvcUtil.exe /url:http://<serverName>/<organizationName>/XRMServices/2011/Organization.svc /out:<outputFilename>.cs /username:<username> /password:<password> /domain:<domainName> /namespace:<outputNamespace> /serviceContextName:<serviceContextName> /generateActions  
-```  
-  
- 次のサンプルは Common Data Service でツールをコマンド ラインから実行するときの構文を示しています。 取引先企業およびサーバーに適したパラメーター値を指定します。  
+ 
+ 次のサンプルは Common Data Service のコマンド ラインからツールを実行するときの構文を示しています。 取引先企業およびサーバーに適したパラメーター値を指定します。  
   
 ```ms-dos  
-CrmSvcUtil.exe /url:https://<organizationUrlName>.api.crm.dynamics.com/XRMServices/2011/Organization.svc /out:<outputFilename>.cs /username:<username> /password:<password> /namespace:<outputNamespace> /serviceContextName:<serviceContextName> /generateActions  
+CrmSvcUtil.exe /interactivelogin ^
+/out:<outputFilename>.cs ^
+/namespace:<outputNamespace> ^
+/serviceContextName:<serviceContextName> ^
+/generateActions
 ```  
   
- `/generateActions` パラメーターを使用していることに注意してください。 詳細: [コード生成ツール (CrmSvcUtil.exe) を使用して事前バインド型エンティティ クラスを作成する](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)。  
+ `/generateActions` パラメーターを使用していることに注意してください。 詳細: [組織サービスの事前バインドクラスを生成する](org-service/generate-early-bound-classes.md)  
   
  実行する操作に対して生成された要求および応答クラスの事前バインドまたは遅延バインド型を使用できます。  
   
@@ -101,7 +97,7 @@ CrmSvcUtil.exe /url:https://<organizationUrlName>.api.crm.dynamics.com/XRMServic
 
 ## <a name="execute-an-action-using-the-web-api"></a>Web API を使用してアクションを実行する
 
-新しいアクションを作成すると、そのアクションは Web API で作成されます。 アクションがエンティティのコンテキストで作成される場合、アクションはそのエンティティにバインドされます。 それ以外の場合は、バインドされていないアクションです。 詳細: [Web API アクションの使用](/dynamics365/customer-engagement/developer/webapi/use-web-api-actions) を参照してください。  
+新しいアクションを作成すると、そのアクションは Web API で作成されます。 アクションがエンティティのコンテキストで作成される場合、アクションはそのエンティティにバインドされます。 それ以外の場合は、バインドされていないアクションです。 詳細: [Web API アクションの使用](webapi/use-web-api-actions.md) を参照してください。  
   
 <a name="bkmk_execute"></a>
 
@@ -121,9 +117,8 @@ CrmSvcUtil.exe /url:https://<organizationUrlName>.api.crm.dynamics.com/XRMServic
 
 ### <a name="execute-an-action-using-a-javascript-web-resource"></a>JavaScript の Web リソースを使用して操作を実行する
 
-すべてのシステム操作と同じように Web API を使用してアクションを実行できます。 詳細: [Web API アクションの使用](/dynamics365/customer-enagagement/developer/webapi/use-web-api-actions) を参照してください。  
+すべてのシステム操作と同じように Web API を使用してアクションを実行できます。 詳細: [Web API アクションの使用](webapi/use-web-api-actions.md) を参照してください。  
 
-[Sdk.Soap.js](http://code.msdn.microsoft.com/SdkSoapjs-9b51b99a) サンプル ライブラリは、JavaScript Web リソースと組織サービス (organization.svc/web) で、メッセージをどのように使用できるかを示します。 [Sdk.Soap.js Action Message Generator](http://code.msdn.microsoft.com/SdkSoapjs-Action-Message-971be943) サンプルを使用して、サンプルで提供されるシステム メッセージ用のライブラリを使用するのと同じ方法で、Sdk.Soap.js で使用できる JavaScript ライブラリを生成します。 `Sdk.Soap.js`Action Message Generator を使用して生成されたファイルは、各アクションの個別の JavaScript ライブラリです。 各ライブラリには、CrmSvcUtil によって生成されるクラスに対応する、要求クラスおよび応答クラスが含まれます。  
   
 <a name="bkmk_execute-process"></a>
 
@@ -146,8 +141,7 @@ CrmSvcUtil.exe /url:https://<organizationUrlName>.api.crm.dynamics.com/XRMServic
 >  ベスト プラクティスとして、長時間かかる操作は、.NET の非同期操作やバックグラウンド プロセスを使用して Common Data Service 外で実行することをお勧めします。  
   
 ### <a name="see-also"></a>関連項目  
- [リアルタイム ワークフローの作成](/dynamics365/customer-engagement/developer/create-real-time-workflows)   
- [ガイド プロセスでダイアログを使用する](/dynamics365/customer-engagement/developer/use-dialogs-guided-processes)   
- [イベント実行パイプライン](event-framework.md#event-execution-pipeline)   
- [ビジネス プロセスを自動化するワークフローの記述](/dynamics365/customer-engagement/developer/automate-business-processes-customer-engagement)   
- [システムのカスタマイズ](https://technet.microsoft.com/library/dn531158.aspx)
+ [アクションの使用](/flow/actions)<br />
+ [イベント実行パイプライン](event-framework.md#event-execution-pipeline)<br />
+ [従来の Common Data Service ワークフロー](/flow/workflow-processes)<br />
+

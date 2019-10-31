@@ -1,46 +1,42 @@
 ---
-title: テンプレートを操作する |Microsoft Docs
-description: ポータルでテンプレートを操作する方法について説明します。
+title: テンプレートに関する作業 | Microsoft Docs
+description: ポータルでテンプレートを使用する手順。
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: ''
-ms.date: 10/07/2019
+ms.custom: null
+ms.date: 07/18/2019
 ms.author: shjais
-ms.reviewer: ''
-ms.openlocfilehash: fd28794a343489ece7d4ea5abe6bebd1f71cd992
-ms.sourcegitcommit: 5338e01d2591f76d71f09b1fb229d405657a0c1c
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72974462"
+ms.reviewer: null
 ---
-# <a name="work-with-templates"></a>テンプレートを操作する
 
-組み込みテンプレートは、プロビジョニングしたポータルに応じて利用できます。 テンプレートを編集するには、コードエディターを使用します。 たとえば、Common Data Service starter ポータルをプロビジョニングするときに使用できる組み込みテンプレートは次のとおりです。
+# <a name="work-with-templates"></a>テンプレートに関する作業
 
-- 既定の studio テンプレート
-- タイトル付きページ
-- 子リンクがあるページ
+コード エディターを使用して、組み込みテンプレートを編集できます。 次のテンプレートが編集可能です。
 
+- 100% 空白ページ
+- 空白ページ
+- タイトルを含む空白ページ
+- ランディング ページ
+- 子リンクのあるページ
+- サイド ナビゲーションのあるページ
 
 > [!NOTE]
-> **既定の studio テンプレート**、**プロファイル**、および**検索**テンプレートを編集しないことをお勧めします。
+> **プロファイル** および **検索** テンプレートは編集しないことをお勧めします。
 
-コードエディターでテンプレートを開くには、次のようにします。
+コード エディターでテンプレートを開くには
 
-1.  [ポータルを編集](manage-existing-portals.md#edit)して PowerApps ポータル Studio で開きます。  
+1.  [ポータルを編集](manage-existing-portals.md#edit)して、ポータル デザイナーで開きます。  
 
-2.  画面の左側にある toolbelt から、 **[テンプレート]** テンプレート ![アイコン]] [テンプレート] [(media/templates-icon.png "アイコン")] を選択します。 使用可能なテンプレートが表示されます。  
+2.  画面左側のツールベルトから、**テンプレート** ![テンプレート アイコン](media/templates-icon.png "テンプレート アイコン")を選択します。 使用可能なテンプレートが表示されます。  
 
     > [!div class=mx-imgBorder]
-    > ![テンプレートペイン]の(media/templates-pane.png "テンプレートペイン")  
+    > ![テンプレート ウィンドウ](media/templates-pane.png "テンプレート ウィンドウ")  
 
-3.  コードエディターで開くには、必要なテンプレートを選択します。
+3.  目的のテンプレートを選択してコード エディターで開きます。
 
-4.  コードを編集し、変更を保存します。
+4.  コードを編集して変更を保存します。
 
 > [!NOTE]
-> - また、詳細な構成のために、ソースコードエディターで液体タグを追加することもできます。 詳細情報:[水冷テンプレートの使用](liquid/liquid-overview.md)
-> - [ポータル管理アプリ](configure/configure-portal.md)を使用して作成したページテンプレートは、 **[テンプレート]** ウィンドウにも表示されます。
+> また、ソース コード エディターに Liquid タグを追加して、高度な構成を行うこともできます。 詳細: [Liquid テンプレートに関する作業](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/custom-templates-dynamic-content)

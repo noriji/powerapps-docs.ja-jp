@@ -1,7 +1,7 @@
 ---
 title: モデル駆動型アプリにおけるクライアント API のオブジェクト モデルを理解する | Microsoft Docs
 ms.date: 10/31/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.topic: conceptual
 applies_to:
   - Dynamics 365 (online)
@@ -37,7 +37,7 @@ Customer Engagement で JavaScript コードを効果的に記述して使用す
 |--|--|
 |**executionContext**|モデル駆動型アプリにおけるフォームおよびグリッド内の、イベントの実行コンテキストを表します。<br/>詳細については、「[クライアント API 実行コンテキスト](clientapi-execution-context.md)」を参照してください。|
 |**formContext** |現在のコードが実行されるフォームまたはフォーム上のアイテムへの参照を提供します。 **formContext** オブジェクトを使用するには、**executionContext**.[getFormContext](reference/executioncontext/getFormContext.md) メソッドを使用します。<br/>詳細については、「[クライアント API フォーム実行コンテキスト](clientapi-form-context.md)」を参照してください。|
-|**gridContext** |現在のコードが実行されるフォーム上のグリッドまたはサブグリッドへの参照を提供します。<br/>詳細については、「[クライアント API グリッド コンテキスト](clientapi-form-context.md)」を参照してください。|
+|**gridContext** |現在のコードが実行されるフォーム上のグリッドまたはサブグリッドへの参照を提供します。<br/>詳細については、「[クライアント API グリッド コンテキスト](clientapi-grid-context.md)」を参照してください。|
 |**Xrm**| フォーム、グリッド、サブグリッド、コントロール、または属性のデータや UI に直接影響しない操作を実行するためのグローバル オブジェクトを提供します。 たとえば、Web API を使用してフォームをナビゲートし、レコードを作成および管理します。<br/>詳細: 「[クライアント API Xrmオブジェクト](clientapi-xrm.md)」|
 
 ### <a name="related-topics"></a>関連トピック

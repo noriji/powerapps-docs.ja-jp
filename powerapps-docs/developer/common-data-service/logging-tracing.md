@@ -2,7 +2,7 @@
 title: ログおよびトレース (Common Data Service) | Microsoft Docs
 description: プラグインのデバッグを支援するために、トレース ログを使用してプラグイン実行情報を保存します。
 ms.custom: ''
-ms.date: 07/18/2019
+ms.date: 09/19/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.topic: article
@@ -91,7 +91,7 @@ Common Data Service の実行時のトレース情報の記録は、<xref:Micros
 
  ### <a name="plug-in-trace-viewer"></a>プラグイン追跡ビューア
 
-**プラグイン追跡ビューア** は、XrmToolbox コミュニティが開発したツールです。 コミュニティ開発ツールのトピック、[開発者ツール](developer-tools.md) を参照してください。
+**プラグイン追跡ビューア** は、XrmToolbox コミュニティが開発したツールです。 コミュニティ開発ツールの詳細については、[Common Data Service のコミュニティ](community-tools.md) を参照してください。
 
 > [!NOTE]
 > コミュニティ ツールは Microsoft の製品ではなく、コミュニティ ツールに対するサポートは提供されません。 このツールに関するご質問は、その発行元にお問い合わせください。 詳細: [XrmToolBox](https://www.xrmtoolbox.com)。  

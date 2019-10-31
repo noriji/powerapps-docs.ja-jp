@@ -1,5 +1,5 @@
 ---
-title: " Web API コンポーネント |Microsoft Docs"
+title: ' Web API コンポーネント | Microsoft Docs'
 description: Web API コンポーネントの実装
 ms.custom: ''
 manager: kvivek
@@ -8,21 +8,15 @@ ms.service: powerapps
 ms.topic: article
 ms.author: nabuthuk
 author: nkrb
-ms.openlocfilehash: 4e893466a5a7404926942b4e297cdc4ecb1affef
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72340163"
 ---
 # <a name="implementing-web-api-component"></a>Web API コンポーネントの実装
 
-Web API コンポーネントは、作成、取得、更新、削除の各操作を実行するように設計されています。 コンポーネントでは、4つのボタンが表示されます。これらのボタンをクリックすると、さまざまな Web API アクションを呼び出すことができます。 Web API 呼び出しの結果は、コードコンポーネントの下部にある HTML div 要素に挿入されます。  
+Web API コンポーネントは、作成、取得、更新、および削除機能を実行するように設計されています。 コンポーネントは 4 つのボタンを表示して、これらのボタンをクリックして異なる Web API のアクションを呼び出せます。 Web API 呼び出しの結果は、コード コンポーネント下部の HTML div 要素に挿入されます。  
 
 > [!div class="mx-imgBorder"]
-> ![WEB api コンポーネント](../media/web-api-control.png "web api コンポーネント")
+> ![Web API コンポーネント](../media/web-api-control.png "Web API コンポーネント")
 
-## <a name="available-for"></a>利用可能な対象 
+## <a name="available-for"></a>以下に使用できます 
 
 モデル駆動型アプリ
 
@@ -44,16 +38,16 @@ Web API コンポーネントは、作成、取得、更新、削除の各操作
 </manifest>
 ```
 
-## <a name="code"></a>コード
+## <a name="code"></a>Code
 
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 export class TSWebAPI
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-  // reference to the control container HTMLDivElement
+  // Reference to the control container HTMLDivElement
   // This element contains all elements of our custom control example
   private _container: HTMLDivElement;
-  // reference to ComponentFramework Context object
+  // Reference to ComponentFramework Context object
   private _context: ComponentFramework.Context<IInputs>;
   // Name of entity to use for example Web API calls performed by this control
   private static _entityName: string = "account";
@@ -70,14 +64,14 @@ export class TSWebAPI
   private static _currencyAttributeNameFriendlyName: string = "annual revenue";
   // Flag if control view has been rendered
   private _controlViewRendered: Boolean;
-  // references to button elements rendered by example custom control
+  // References to button elements rendered by example custom control
   private _createEntity1Button: HTMLButtonElement;
   private _createEntity2Button: HTMLButtonElement;
   private _createEntity3Button: HTMLButtonElement;
   private _deleteRecordButton: HTMLButtonElement;
   private _fetchXmlRefreshButton: HTMLButtonElement;
   private _oDataRefreshButton: HTMLButtonElement;
-  // references to div elements rendered by the example custom control
+  // References to div elements rendered by the example custom control
   private _odataStatusContainerDiv: HTMLDivElement;
   private _resultContainerDiv: HTMLDivElement;
   /**
@@ -290,7 +284,7 @@ export class TSWebAPI
     var thisRef = this;
     // Invoke the Web API to creat the new record
     this._context.webAPI.createRecord(TSWebAPI._entityName, data).then(
-      function(response: ComponentFramework.Entityreference) {
+      function(response: ComponentFramework.EntityReference) {
         // Callback method for successful creation of new record
         // Get the ID of the new record created
         let id: string = response.id;
@@ -330,14 +324,14 @@ export class TSWebAPI
     lookUpPromise.then(
       // Callback method - invoked after user has selected an item from the lookup dialog
       // Data parameter is the item selected in the lookup dialog
-      (data: ComponentFramework.Entityreference[]) => {
+      (data: ComponentFramework.EntityReference[]) => {
         if (data && data[0]) {
           // Get the ID and entityType of the record selected by the lookup
           let id: string = data[0].id;
           let entityType: string = data[0].entityType!;
           // Invoke the deleteRecord method of the WebAPI to delete the selected record
           this._context.webAPI.deleteRecord(entityType, id).then(
-            function(response: ComponentFramework.Entityreference) {
+            function(response: ComponentFramework.EntityReference) {
               // Record was deleted successfully
               let responseId: string = response.id;
               let responseEntityType: string = response.entityType!;
@@ -614,9 +608,9 @@ export class TSWebAPI
 }
 ```
 
-このサンプルでは、既定で、コンポーネントは `Account` エンティティに対して作成、取得、更新操作を実行し、Web API の例では名前と収益のフィールドを設定するように構成されています。
+既定では、サンプルのコンポーネントは作成、取得、更新の各アクションを `Account` エンティティで実行するように構成され、Web API の例では名前と売上フィールドを設定します。
 
-既定の構成をエンティティまたはフィールドに変更するには、次のように、以下の構成値を更新します。  
+デフォルト設定を任意のエンティティやフィールドに変更するには、下記に示すように構成を更新します  
 
  ```TypeScript
   private static _entityName:string = "account";  
@@ -625,20 +619,20 @@ export class TSWebAPI
   private static _currencyAttributeName: string = "revenue";  
  ```
 
-@No__t_0 メソッドでは、3つのボタンが表示されます。このボタンを使用すると、収益フィールドを異なる値 (100、200、300) に設定したアカウントレコードを作成できます。
+`createRecord` メソッドは、さまざまな値 (100、200、300) に設定した売上フィールドを追加した取引先企業レコードを作成できる 3 つのボタンを表示します。
 
-[作成] ボタンのいずれかをクリックすると、ボタンの `onClick` イベントハンドラーがボタンの値を確認し、Web API アクションを使用して、[収益] フィールドがボタンの値に設定されたアカウントレコードを作成します。 アカウントレコードの [名前] フィールドは、文字列の末尾にランダム `int` が付加された `Web API code component (Sample)` に設定されます。 Web API 呼び出しのコールバックメソッドは、Web API 呼び出しの結果 (成功または失敗) をカスタムコントロールの結果 div に挿入します。  
+作成ボタンのうちひとつをクリックすると、ボタンの `onClick` イベント ハンドラはクリックされたボタンの値を確認し、Web API アクションを使用して、ボタンの値を設定した売上フィールドを追加した取引先企業レコードを作成します。 取引先企業レコードの名前フィールドは文字列の末尾にランダムな `int` を追加した `Web API code component (Sample)` に設定されます。 Web API 呼び出しからのコールバック メソッドは、Web API 呼び出しの結果 (成功または失敗) をカスタム コントロールの結果 div に挿入します。  
  
-@No__t_0 メソッドは、クリックすると参照ダイアログを開くボタンを表示します。 [参照] ダイアログボックスでは、削除するアカウントレコードを選択できます。 [参照] ダイアログボックスからアカウントレコードを選択すると、データベースからレコードを削除するために `deleteRecord` に渡されます。 Web API 呼び出しのコールバックメソッドは、Web API 呼び出しの結果 (成功または失敗) をカスタムコントロールの結果 div に挿入します。  
+`deleteRecord` メソッドはボタンを表示し、これをクリックすると検索ダイアログが開きます。 検索ダイアログで削除したい取引先企業レコードを選択できます。 取引先企業レコードが検索ダイアログから選択されると、データベースからレコードを削除するために `deleteRecord` に渡されます。 Web API 呼び出しからのコールバック メソッドは、Web API 呼び出しの結果 (成功または失敗) をカスタム コントロールの結果 div に挿入します。  
 
-FetchXML `retrieveMultiple` メソッドは、コードコンポーネント内のボタンを表示します。 このボタンを `onClick` すると、FetchXML が生成され、`retrieveMultiple` 関数に渡され、すべてのアカウントレコードの収益フィールドの平均値が計算されます。 Web API 呼び出しのコールバックメソッドは、Web API 呼び出しの結果 (成功または失敗) をカスタムコントロールの結果 div に挿入します。  
+FetchXMLの `retrieveMultiple` メソッドはコード コンポーネントのボタンを表示します。 このボタンの `onClick` で FetchXML が生成されて `retrieveMultiple` 関数に渡され、すべての取引先企業レコードに対する売上フィールドの平均値が計算されます。 Web API 呼び出しからのコールバック メソッドは、Web API 呼び出しの結果 (成功または失敗) をカスタム コントロールの結果 div に挿入します。  
 
-OData `retrieveMultiple` メソッドは、コードコンポーネント内のボタンを表示します。 このボタンの `onClick`、OData 文字列が生成され、`retrieveMultiple` 関数に渡され、"コードコンポーネント Web API (サンプル)" のような名前フィールドを持つすべてのアカウントレコードを取得します。これは、このコードコンポーネントの例で作成したすべてのアカウントレコードに対して true です。  
+OData の `retrieveMultiple` メソッドはコード コンポーネントのボタンを表示します。 このボタンの `onClick` で OData 文字列が生成され、‘コード コンポーネント Web API (サンプル)’ のような名前フィールドを持つすべての取引先企業レコードを取得するために `retrieveMultiple` 関数に渡されます。これはコード コンポーネントのこの例で作成された、すべての取引先企業レコードに当てはまります。  
 
-レコードが正常に取得された場合、コードコンポーネントには、収益フィールドが100、200、または300に設定されているアカウントレコードの数をカウントし、コードコンポーネントの odata ステータスコンテナーの div にこの数を表示するロジックがあります。  Web API 呼び出しのコールバックメソッドは、Web API 呼び出しの結果 (成功または失敗) をカスタムコントロールの結果 div に挿入します。  
+レコードが正常に取得されると、コード コンポーネントには売上フィールドが 100、200、または 300 に設定された取引先企業レコードを数えるロジックがあり、この数をコード コンポーネント上で odata ステータスのコンテナ div に表示します。  Web API 呼び出しからのコールバック メソッドは、Web API 呼び出しの結果 (成功または失敗) をカスタム コントロールの結果 div に挿入します。  
 
 ### <a name="related-topics"></a>関連トピック
 
-[サンプルコンポーネントのダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps コンポーネントフレームワーク API リファレンス](../reference/index.md)<br/>
-[PowerApps コンポーネントフレームワークマニフェストスキーマリファレンス](../manifest-schema-reference/index.md)
+[サンプル コンポーネントをダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[PowerApps Component Framework API の参照](../reference/index.md)<br/>
+[PowerApps Component Framework のマニフェスト スキーマの参照](../manifest-schema-reference/index.md)

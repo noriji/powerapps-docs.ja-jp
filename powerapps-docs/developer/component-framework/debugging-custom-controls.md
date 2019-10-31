@@ -1,6 +1,6 @@
 ---
-title: コードコンポーネントのデバッグ |MicrosoftDocs
-description: Fiddler とネイティブデバッグを使用してコードコンポーネントをデバッグする方法
+title: コード コンポーネントのデバッグ | MicrosoftDocs
+description: Fiddler とネイティブ デバッグを使用してコード コンポーネントをデバッグする方法
 manager: kvivek
 ms.date: 10/01/2019
 ms.service: powerapps
@@ -8,90 +8,84 @@ ms.topic: article
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: nabuthuk
 author: Nkrb
-ms.openlocfilehash: 088792a32f401ddaf7d3a3cd4fd4d5aa9fa472ff
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72346925"
 ---
-# <a name="debug-code-components"></a>コードコンポーネントのデバッグ
+# <a name="debug-code-components"></a>コード コンポーネントのデバッグ
 
-コードコンポーネントロジックの実装が完了したら、`npm start` コマンドを使用して、コードコンポーネントのテストとデバッグを開始できます。 これにより、コードコンポーネントがビルドされ、ローカルのテストハーネスで開かれます。
+コード コンポーネント ロジックの実装が完了したら、 `npm start` コマンドを使用してコード コンポーネントのテストとデバッグを開始します。 これにより、コード コンポーネントが構築され、ローカル テスト ハーネスで開きます。
 
 > [!div class="mx-imgBorder"]
-> ![テストハーネス 1](media/test-harness-1.png "テストハーネス 1")
+> ![テスト ハーネス 1](media/test-harness-1.png "テスト ハーネス 1")
 
-上の図に示すように、ブラウザーウィンドウには4つのセクションが表示されます。 コードコンポーネントは左ペインに表示され、右ペインには**コンテキスト入力**、**データ入力**、および**出力**セクションがあります。
+上記の図に示されているように、ブラウザ ウィンドウが4つのセクションで開きます。 コード コンポーネントは左側のウィンドウで表示されますが、右側のウィンドウには **コンテキストの入力**、 **データの入力** 、 **データの出力** セクションが表示されます。
 
-- **コンテキスト入力**は、フォームファクターを指定し、各フォームファクター (web、タブレット、電話) を使用してコードコンポーネントをテストする方法を提供します。 これは、コードコンポーネントが特定のフォームファクターの機能に依存している場合に便利です。
-- **データ入力**は、[マニフェスト](manifest-schema-reference/manifest.md)ファイルで定義されているすべてのプロパティとその[型](manifest-schema-reference/types.md)または[型グループ](manifest-schema-reference/type-group.md)を表示する対話型 UI です。 これにより、各プロパティのモックデータ内でキーを使用できるようになります。 
-- **出力は**、コンポーネントの[getoutputs](reference/control/getoutputs.md)メソッドが呼び出されるたびに出力をレンダリングします。  
+- **コンテキストの入力** では、フォームファクターを指定する方法、および各フォームファクター (Web、タブレット、電話) でコード コンポーネントをテストする方法が記載されています。 これは、コード コンポーネントが特定のフォームファクター機能に依存している場合に有用です。 次期リリースでは、高さと幅を指定する機能が実装されます。
+- **データの入力** は、[マニフェスト](manifest-schema-reference/manifest.md) ファイルで定義されている、すべてのプロパティと [種別](manifest-schema-reference/types.md) あるいは [種別グループ](manifest-schema-reference/type-group.md) を表示する対話型の UI です。 これにより、各プロパティの模擬データを入力することができます。 
+- **出力** はコンポーネントの [getOutputs](reference/control/getoutputs.md) メソッドが呼ばれるたびに出力を表示します。  
 
      > [!div class="mx-imgBorder"]
-     > ![テストハーネス 2](media/test-harness-2.png "テストハーネス 2")
+     > ![テスト ハーネス 2](media/test-harness-2.png "テスト ハーネス 2")
 
 > [!NOTE]
-> @No__t_0 ファイルを変更するか、追加のプロパティを作成する場合は、デバッグプロセスを再起動してから [入力] セクションに表示する必要があります。
+> `ControlManifest.Input.xml` ファイルの修正または新規プロパティを作成する場合は、それらを入力セクションに表示させるにはデバッグ プロセスを再起動する必要があります。
 
-## <a name="test-code-components-with-mock-data"></a>モックデータを使用してコードコンポーネントをテストする
+## <a name="test-code-components-with-mock-data"></a>擬似データを使用してコード コンポーネントをテストします。
 
-- *フィールド*型のコンポーネントの場合は、次に示すように、 **controlmanifest**に定義されているすべてのプロパティに対して、値と型を入力できます。
-
-   > [!div class="mx-imgBorder"]
-   > ![テストハーネス 2.5](media/test-harness-2.5.png "テストハーネス 2.5")
-
-- *データセット*の種類のコンポーネントでは、テストデータを含む CSV ファイルを読み込むことができます。 お使いの環境から直接、.csv 形式で手動で作成またはエクスポートします。 有効な CSV ファイルが使用可能になると、次に示すように、そのファイルを読み込むことができます。
+- *フィールド* 型コンポーネントの場合、以下に示すように **ControlManifest.Input.xml** に定義されている各プロパティの値とタイプを入力することができます。
 
    > [!div class="mx-imgBorder"]
-   > ![テストハーネス 3](media/test-harness-3.png "テストハーネス 3")
+   > ![テスト ハーネス 2.5](media/test-harness-2.5.png "テスト ハーネス 2.5")
 
-- CSV ファイルを読み込んだ後、 **Controlmanifest. .xml**に定義されている各プロパティを csv ファイルの列にバインドします。 これを行うには、次に示すように、各プロパティの列を選択します。
+- *データセット* 型コンポーネントの場合は、テストデータを含むCSVファイルを読み込むことができます。 ご利用の環境から直接、 .csv 形式のファイルを手動で作成またはエクスポートします。 有効なCSVファイルが使用可能になると、以下の図のように読み込むことができます。
+
+   > [!div class="mx-imgBorder"]
+   > ![テスト ハーネス 3](media/test-harness-3.png "テスト ハーネス 3")
+
+- CSVファイルの読み込みが完了すると、 **ControlManifest.Input.xml** に定義されている各プロパティーをCSVファイルの列にバインドします。 これを行うには、以下のように各プロパティの列を選択します:
 
     > [!div class="mx-imgBorder"]
-    > ![テストハーネス 4](media/test-harness-4.png "テストハーネス 4")
+    > ![テスト ハーネス 4](media/test-harness-4.png "テスト ハーネス 4")
 
-- **Controlmanifest .xml**ファイルにプロパティが定義されていない場合は、すべての列が自動的にテストハーネスに読み込まれます。
+- **ControlManifest.Input.xml** ファイルで定義されたプロパティがない場合は、すべての列が自動的にテスト ハーネスに読み込まれます。
 
    > [!div class="mx-imgBorder"]
-   > ![テストハーネス 5](media/test-harness-5.png "テストハーネス 5")
+   > ![テスト ハーネス 5](media/test-harness-5.png "テスト ハーネス 5")
 
 
-## <a name="watch-mode-in-test-harness"></a>テストハーネスのウォッチモード
+## <a name="watch-mode-in-test-harness"></a>テスト ハーネスの視聴モード
 
-テストハーネスは `watch` モードをサポートしており、PowerApps component framework プロジェクトで利用できます。 @No__t_0 モードを有効にするには、コマンド `npm start watch` を使用してテストハーネスを起動します。 @No__t_0 モードでは、次のコンポーネントアセットに加えられた変更は、再起動しなくても、テストハーネスに自動的に反映されます。
+テスト ハーネスは、 PowerApps component framework プロジェクトで使用できる `watch` モードをサポートします。 `watch` モードを有効にするには、コマンド `npm start watch` を使用してテスト ハーネスを起動します。 `watch` モードでは、以下のコンポーネン資産のいずれかに加えられた変更は、 再起動せずにテスト ハーネスに自動的に反映されます:
 
 1.  `index.ts` ファイル。
 2.  `ControlManifest.Input.xml` ファイル。
-3.  @No__t_0 にインポートされたライブラリ。
-4.  マニフェストファイルに一覧表示されているすべてのリソース。
+3.  `index.ts` でインポートされたライブラリ。
+4.  マニフェスト ファイルにリストされているすべてのリソース。
 
-## <a name="debug-code-components-using-native-browsers"></a>ネイティブブラウザーを使用してコードコンポーネントをデバッグする
+## <a name="debug-code-components-using-native-browsers"></a>ネイティブ ブラウザーを使用してコード コンポーネントをデバッグする
 
-ブラウザーのデバッグ機能を使用して、コンポーネントの動作を確認できます。 各ブラウザーには、ブラウザーでネイティブにコードをデバッグするのに役立つデバッグツールが用意されています。 通常、デバッグに使用するネイティブ開発者ツールを表示するには、 **F12**キーを押して、ブラウザーでデバッグをアクティブ化します。
+ブラウザのデバッグ機能を使用して、コンポーネントの動作を観察することができます。 各ブラウザには、ブラウザでコードをネイティブにデバッグするための、デバッグ ツールが用意されています。 通常は **F12** キーを押すことでブラウザのデバッグを有効にでき、デバッグに使用されるネイティブ開発者ツールを表示します。
 
-たとえば、 **Microsoft Edge**の場合は、次のようになります。
+たとえば、**Microsoft Edge** です。
 
-- **F12**キーを押して、インスペクターを開きます。
-- コンポーネントを選択します。
-- 上部のバーで **[デバッガー]** にアクセスし、検索バーのマニフェストファイルで説明されているコンポーネント名を検索します。 たとえば、`Hello World component` のようなコンポーネント名を入力します。
+- **F12** を押下してインスペクターを開きます。
+- コンポーネントをクリックします
+- 上部のバーで **デバッガー** に移動し、検索バーでマニフェスト ファイルに記述されているコンポーネント名の検索を開始します。 たとえば、コンポーネント名を `Hello World component` のように入力します。
 
      > [!div class="mx-imgBorder"]
-     > ![デバッグ]コンポーネント(media/debug-control.png "デバッグコンポーネント")
+     > ![デバッグ コンポーネント](media/debug-control.png "デバッグ コンポーネント")
 
 > [!NOTE]
-> [Init](reference/control/init.md)や[updateview](reference/control/updateview.md)などのコンポーネントのライフサイクルメソッドにブレークポイントを設定することを常にお勧めします。
+> [init](reference/control/init.md) と [updateView](reference/control/updateview.md) のようなコンポーネントのライフ サイクル メソッドにブレークポイントを設定することを推奨します。
 
-また、次に示すように、[*ソース*] タブでブレークポイントを設定することにより、コンポーネントとローカルでリアルタイムで対話し、DOM 内の要素を観察することもできます。
+以下のようにソース タブにブレークポイントを設定することで、ローカルでリアルタイムにコンポーネントを操作したり、DOM の要素を確認することもできます
 
 > [!div class="mx-imgBorder"]
-> ![デバッグ]コンポーネント(media/debug-control-1.png "デバッグコンポーネント 1")
+> ![デバッグ コンポーネント](media/debug-control-1.png "デバッグ コンポーネント 1")
 
 ## <a name="fiddler-autoresponder"></a>Fiddler AutoResponder
 
-Fiddler AutoResponder を使用して、コードコンポーネントをすばやくデバッグします。 [Fiddler](https://www.telerik.com/download/fiddler)をインストールし、手順に従って[AutoResponder](https://docs.microsoft.com/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder)を構成します。
+Fiddler AutoResponder を使用することで、迅速にコード コンポーネントのデバッグをおこないます。 [Fiddler](https://www.telerik.com/download/fiddler) をインストールして [AutoResponder](https://docs.microsoft.com/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder) を構成するには以下の手順に従います。
 
 ### <a name="related-topics"></a>関連トピック
 
-[PowerApps コンポーネントフレームワーク API リファレンス](reference/index.md)<br/>
-[PowerApps コンポーネントフレームワークの概要](overview.md)
+[PowerApps Component Framework API の参照](reference/index.md)<br/>
+[PowerApps Component Framework の概要](overview.md)

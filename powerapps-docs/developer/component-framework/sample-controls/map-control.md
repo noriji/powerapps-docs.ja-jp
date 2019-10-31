@@ -1,6 +1,6 @@
 ---
-title: " Map コンポーネント |Microsoft Docs"
-description: 角速度を使用したマップコンポーネントの実装
+title: ' マップ コンポーネント | Microsoft Docs'
+description: Angular JS を使用したマップ コンポーネントの実装
 ms.custom: ''
 manager: kvivek
 ms.date: 10/01/2019
@@ -8,23 +8,18 @@ ms.service: powerapps
 ms.topic: article
 ms.author: nabuthuk
 author: Nkrb
-ms.openlocfilehash: f4b8702ef39688bdfc5f3ce9a51bf5c8c6e0ff20
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72341336"
 ---
-# <a name="implementing-map-component"></a>マップコンポーネントの実装
 
-このサンプルコンポーネントは、フォーム上のアドレスフィールドと対話するユーザーエクスペリエンスを変更します。 このコンポーネントは、アドレスのテキスト値と共に、別のタブや画面に移動せずに、マップ上の特定のアドレスを視覚的に識別できるようにします。 
+# <a name="implementing-map-component"></a>マップ コンポーネントの実装
+
+このサンプル コンポーネントは、フォームの住所フィールドを操作する際のユーザー エクスペリエンスを変更します。 住所のテキスト値とともに、このコンポーネントは別のタブや画面に移動せずに地図上で特定の住所を視覚的に識別する機能を提供します。 
 
 > [!div class="mx-imgBorder"]
-> ![コンポーネント](../media/map-control.png "マップ")コンポーネントのマップ
+> ![マップ コンポーネント](../media/map-control.png "マップ コンポーネント")
 
-## <a name="available-for"></a>利用可能な対象 
+## <a name="available-for"></a>以下に使用できます 
 
-モデル駆動型アプリとキャンバスアプリ (試験段階プレビュー) 
+モデル駆動型アプリとキャンバス アプリ (実験的プレビュー) 
 
 ## <a name="manifest"></a>マニフェスト
 
@@ -41,7 +36,7 @@ ms.locfileid: "72341336"
 </manifest>
 ```
 
-## <a name="code"></a>コード 
+## <a name="code"></a>Code 
 
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
@@ -51,7 +46,7 @@ export class TSMapControl
   private _iFrameElement: HTMLIFrameElement;
   // PowerApps component framework framework delegate which will be assigned to this object which would be called whenever an update happens.
   private _notifyOutputChanged: () => void;
-  // reference to ComponentFramework Context object
+  // Reference to ComponentFramework Context object
   private _context: ComponentFramework.Context<IInputs>;
   // API Key used to activate and embed the maps automatically
   // NOTE: You can follow the documentation at https://developers.google.com/maps/documentation/embed/get-api-key to generate your own API Key
@@ -147,15 +142,15 @@ export class TSMapControl
 }
 ```
 
-マニフェストファイルには、`Single line of Text` 型のプロパティが定義されています。 これを使用して、フォームの address フィールドにバインドします。  
+マニフェスト ファイルで `Single line of Text` 種類のプロパティを定義します。 これを使用してフォームの住所フィールドにバインドします。  
 
 > [!NOTE]
-> 市場で利用できる任意の map API を使用できます。 この例では、Google Map API を使用してこれを行う方法を示します。 Google Map API にアクセスするには、コンポーネントの API キーを作成する必要があります。 指示に従って操作します (https://developers.google.com/maps/documentation/embed/get-api-key を生成します)。
+> 市販の地図 API はどれでも使用できます。  この例では Google Map API を使用する方法を説明します。 Google Map API にアクセスするにはコンポーネントの API キーを作成する必要があります。  それを生成する手順 (https://developers.google.com/maps/documentation/embed/get-api-key) に従ってください。
 
 コンポーネントのコンテキストでアクセスできる変数名 `MAPS_API_KEY` を作成します。
-Google Map API では、`IFRAME` 内にマップを表示することのみが可能です。 そのため、生成した URL を使用してマップを表示する `IFRAME` 要素を作成する必要があります。 既定では、マップは非表示に設定され、住所値がフォームに存在する場合にのみ表示されます。
+Google Map API を使用すると `IFRAME` にマップを表示することのみ可能です。 そのため、生成した URL を使用して地図を表示する `IFRAME` 要素を作る必要があります。 既定では、地図を非表示に設定し、住所の値がフォームに存在する場合にのみ表示するようにします。
 
-`buildMapUrl` と `renderMap` (これらを1つにマージすることもできます) では、アドレス文字列をエンコードしてマップ URL に埋め込みます。これにより、アドレス文字列がエンコードされ、IFRAME 要素の src 要素が URL にそれぞれ設定されます。 また、 **notifyOutputChanged**メソッドを呼び出して、レンダリングが変更されたことをコンポーネントに通知します。 
+`buildMapUrl` および `renderMap` (ひとつにまとめることもできます) は住所の文字列を受け取り、それをエンコードしてマップ URL に埋め込み、次に IFRAME 要素の src 要素をそれぞれ URL に設定します。 また、**notifyOutputChanged** メソッドを呼び出して、表示が変更されたことをコンポーネントに通知します。 
  
 ```TypeScript
  public renderMap(mapUrl: string) {
@@ -169,10 +164,10 @@ Google Map API では、`IFRAME` 内にマップを表示することのみが�
   }
 ```
 
-ビューが更新されるたびにコントロールが更新されるように、 [Updateview](../reference/control/updateview.md)関数内で `renderMap` 関数を呼び出してください。 
+ビューが更新されるたびにコントロールが更新されるように、必ず [updateView](../reference/control/updateview.md) 関数から `renderMap` 関数を呼び出してください。 
 
 ### <a name="related-topics"></a>関連トピック
 
-[サンプルコンポーネントのダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps コンポーネントフレームワーク API リファレンス](../reference/index.md)<br/>
-[PowerApps コンポーネントフレームワークマニフェストスキーマリファレンス](../manifest-schema-reference/index.md)
+[サンプル コンポーネントをダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[PowerApps Component Framework API の参照](../reference/index.md)<br/>
+[PowerApps Component Framework のマニフェスト スキーマの参照](../manifest-schema-reference/index.md)

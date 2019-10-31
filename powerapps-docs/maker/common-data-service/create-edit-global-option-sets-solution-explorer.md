@@ -1,5 +1,5 @@
 ---
-title: ソリューション エクスプローラーを使用した Common Data Service のグローバル オプション セットの作成および編集 | MicrosoftDocs
+title: ソリューション エクスプローラーを使用して、 Common Data Service にグローバル オプション セットを作成、編集する | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/26/2018
 ms.reviewer: ''
@@ -12,18 +12,19 @@ applies_to:
   - Dynamics 365 Version 9.x
   - PowerApps
 ms.author: matp
-manager: brycho
+manager: kvivek
+author: Mattp123
 search.audienceType:
   - maker
 search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="create-and-edit-global-option-sets-for-common-data-service-using-solution-explorer"></a>ソリューション エクスプローラーを使用したCommon Data Service のグローバル オプション セットの作成および編集
+# <a name="create-and-edit-global-option-sets-for-common-data-service-using-solution-explorer"></a>ソリューション エクスプローラーを使用して、 Common Data Service にグローバル オプション セットを作成、編集する
 
 ソリューション エクスプローラーは Common Data Service のグローバル オプション セットの作成および編集を行う方法を提供します。
 
-[PowerApps ポータル](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)では一般的なオプションのほどんとを構成できますが、特定のオプションはソリューション エクスプローラーを使用してのみ設定できます。 <br />詳細: 
+[PowerApps ポータル](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ではほとんどの一般的なオプションを構成することができますが、ソリューション エクスプローラーを使用して設定する必要があるオプションもあります。 <br />詳細: 
 - [Common Data Service のグローバル オプション セットの作成および編集](create-edit-global-option-sets.md)
 - [オプション セットの作成](custom-picklists.md)
 
@@ -40,7 +41,7 @@ search.app:
 ![グローバル オプション セットを表示](media/view-global-option-sets-solution-explorer.png)
 
 > [!NOTE]
-> 一部のシステム グローバル オプション セットはカスタマイズできません。 これらのオプションは更新や新しいバージョンにより変更されるため、要件は Common Data Service がこれらの値を使用する方法と一致していることが定かでない場合、それらを使用しないようにお勧めします。
+> 一部のシステム グローバル オプション セットはカスタマイズできません。 これらのオプションは更新や新しいバージョンにより変更がされるため、ご利用に当たっての要件と Common Data Service の値の使用方法が一致していることが定かでない場合は、これをご利用にならないことを推奨します。
 
 ## <a name="create-a-global-option-set"></a>グローバル オプション セットの作成
 

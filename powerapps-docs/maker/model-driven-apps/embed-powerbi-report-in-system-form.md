@@ -26,7 +26,7 @@ search.app:
 ---
 
 # <a name="embed-a-power-bi-report-in-a-model-driven-system-form"></a>Power BI レポートをモデル駆動型システム フォームに埋め込む
-PowerApps のモデル駆動型アプリで Power BI レポートを使用して、システム フォームに豊富なレポート作成と分析を導入して、ユーザーがより多くを達成するよう強化します。 これでシステム間でデータを集約できるようになり、単一レコードのコンテキストに合わせて調整します。
+PowerApps モデル駆動型アプリで Power BI レポートを使用して、システム フォームに豊富なレポート作成と分析を導入して、ユーザーがより多くを達成するよう強化します。 これでシステム間でデータを集約できるようになり、単一レコードのコンテキストに合わせて調整します。
  
 ## <a name="prerequisites"></a>前提条件
 Power BI コンテンツの埋め込みはオプション機能で、すべての環境において既定で無効になっています。 Power BI コンテンツを埋め込む前に、それを有効にする必要があります。 詳細: [組織で Power BI ビジュアル化を有効にする](https://docs.microsoft.com/dynamics365/customer-engagement/admin/use-power-bi?#enable--visualizations-in-the-organization)。
@@ -120,13 +120,13 @@ Power BI コンテンツの埋め込みはオプション機能で、すべて�
             }
     }
 
-前の式の対象部分はフィルタを適用するテーブルと列を識別します。 演算子はロジックを識別し、値は PowerApps のモデル駆動型アプリから渡されたデータを識別します。 汎用な方法でパラメータ化するために、値はエイリアスによって作成されます。 前の式では、取引先企業の **名** と **姓** が渡され、どちらも Power BI レポートの **取引先企業名** 列で検索されます。 **名** と **姓** はここで渡される取引先企業エンティティの属性の一意の名前であることに注意してください。 
+前の式の対象部分はフィルタを適用するテーブルと列を識別します。 オペレーターはロジックを識別し、値は PowerApps モデル駆動型アプリから渡されたデータを識別します。 汎用な方法でパラメータ化するために、値はエイリアスによって作成されます。 前の式では、取引先企業の **名** と **姓** が渡され、どちらも Power BI レポートの **取引先企業名** 列で検索されます。 **名** と **姓** はここで渡される取引先企業エンティティの属性の一意の名前であることに注意してください。 
 
 [フィルターの作成](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Filters#contructingfilters) の例を見て $schema と filterType に適切な値を指定することにより、もっと複雑なフィルター式を作成できます。 JSON が正しく生成されるように、フィルター部分で *\"* を使用して各リテラルを確実にエスケープしてください。
 
 ## <a name="known-issues-and-limitations"></a>既知の問題と制限
 1. この統合はサポートされている Web ブラウザおよびモバイル デバイス上の、統一インターフェイスのクライアントでのみ利用可能です。
-2. PowerApps フォーム デザイナーでこのフォームを開いても、コントロールが意味のある方法で表示されません。 これはコントロールがフォーム デザイナーの外部でカスタマイズされているためです。
+2.  PowerApps フォーム デザイナーでこのフォームを開いても、コントロールが意味のある方法では表示されません。 これはコントロールがフォーム デザイナーの外部でカスタマイズされているためです。
 3. ユーザーは PowerApps のユーザー名とパスワードで自動的に Power BI に認証されます。 資格情報が一致する Power BI アカウントが存在しない場合は、ここに示すようなサインイン プロンプトが表示されます。 
 
    > [!div class="mx-imgBorder"] 
@@ -140,14 +140,14 @@ Power BI コンテンツの埋め込みはオプション機能で、すべて�
    > [!div class="mx-imgBorder"] 
    > ![](media/embed-powerbi/embed-powerbi-report-in-system-form-auth-3.png "Embed-powerbi-report-in-system-form-auth-3")
 
-5. PowerApps 内部のレポート データの表示は Power BI のものと同じであり、PowerApps のセキュリティ ロールと権限は表示されるデータに影響しません。 したがって、データは Power BI データセットの作成者が見るものと基本的に同じです。 PowerApps のセキュリティ ロールおよびチームと同様のデータ アクセス制限を適用するには [Power BI と行レベル セキュリティ (RLS)](https://docs.microsoft.com/power-bi/service-admin-rls) を使用します。
+5. PowerApps 内部で示されるレポート データのビューは Power BI のものと同じであり、PowerAppsのセキュリティ ロールと権限は表示されるデータに影響しません。 したがって、データは Power BI データセットの作成者が見るものと基本的に同じです。 PowerApps のセキュリティ ロールとチームと同様のデータ アクセス制限を適用するには、[Power BI を使った行レベルセキュリティ (RLS)](https://docs.microsoft.com/power-bi/service-admin-rls) を使用します。
 6. ソリューションをインポートしてカスタマイズを公開した後でフォームに Power BI レポートが表示されない場合、モデル駆動型フォーム エディターで開いて保存するとフォーム JSON が再生成されます。
 
 
 ### <a name="see-also"></a>関連項目
 
-[PowerApps のモデル駆動型個人用ダッシュボードに Power BI ダッシュボードを埋め込む](https://docs.microsoft.com/dynamics365/customer-engagement/basics/add-edit-power-bi-visualizations-dashboard)
+[PowerApps モデル駆動型個人用ダッシュボードに Power BI ダッシュボードを埋め込む](https://docs.microsoft.com/dynamics365/customer-engagement/basics/add-edit-power-bi-visualizations-dashboard)
 
-[Dynamics 365 for Customer Engagement と Power BI の活用](https://docs.microsoft.com/dynamics365/customer-engagement/admin/use-power-bi)
+[Dynamics 365 アプリで Power BI を使用する](https://docs.microsoft.com/dynamics365/customer-engagement/admin/use-power-bi)
 
 [ソリューションのインポート、更新およびエクスポート](../common-data-service/import-update-export-solutions.md)

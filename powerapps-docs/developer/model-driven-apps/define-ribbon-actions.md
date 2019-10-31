@@ -34,14 +34,15 @@ search.app:
   
      リボンを使用してパラメーターを URL に渡すための選択肢はいくつかあります。 詳細: [リボンを使用して URL にパラメーターを渡す](pass-parameters-url-by-using-ribbon.md)  
   
-### <a name="passing-parameters-to-ribbon-actions"></a>パラメーターをリボン アクションに渡す  
+## <a name="passing-parameters-to-ribbon-actions"></a>パラメーターをリボン アクションに渡す  
+
  ユーザー定義のアクションに渡すデータを定義するには、以下の要素を使用します。  
   
  `<BoolParameter>`  
 [!INCLUDE[ribbon_element_BoolParameter](../../includes/ribbon-element-boolparameter.md)]
   
  `<CrmParameter>`  
- [!INCLUDE[ribbon_element_CrmParameter](../../includes/ribbon-element-crmparameter.md)] 詳細: [データをページからパラメーターとしてリボン操作に渡す](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actionsd) <!-- TODO need to update the relevant link from the powerapps repo>
+ [!INCLUDE[ribbon_element_CrmParameter](../../includes/ribbon-element-crmparameter.md)] 詳細: [データをページからパラメーターとしてリボン操作に渡す](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actionsd)  <!-- TODO need to update the relevant link from the powerapps repo -->
   
  `<DecimalParameter>`  
  [!INCLUDE[ribbon_element_DecimalParameter](../../includes/ribbon-element-decimalparameter.md)]
@@ -56,7 +57,9 @@ search.app:
   
  `<JavaScriptFunction>` に渡すパラメーターに名前は必要ありませんが、これらのパラメーターは、関数が必要とする順序で指定し、正しいデータ型を使用する必要があります。  
   
-### <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目  
+
  [コマンド、およびリボンをカスタマイズする](customize-commands-ribbon.md)   
  [リボンの表示ルールの定義](define-ribbon-display-rules.md)   
- [データをページからパラメーターとしてリボン操作に渡す](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actionsd)  <!-- TODO need to update the relevant link from the powerapps repo-->
+ [データをページからパラメーターとしてリボン操作に渡す](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actionsd)  
+<!-- TODO need to update the relevant link from the powerapps repo-->

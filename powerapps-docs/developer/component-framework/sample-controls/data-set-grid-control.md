@@ -1,7 +1,7 @@
 ---
-title: データセットグリッドコンポーネント |Microsoft Docs
-description: ''
-keywords: ''
+title: データセット グリッド コンポーネント | Microsoft Docs
+description: null
+keywords: null
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -11,21 +11,16 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 356561d0-a36b-4b93-8b76-3e1abf9414e9
-ms.openlocfilehash: ca13ef7758bb21853f9c1411c641bd1ae88115b6
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72340508"
 ---
-# <a name="implementing-data-set-component"></a>データセットコンポーネントの実装
 
-このサンプルコンポーネントは、データセットと対話するユーザーエクスペリエンスを変更する方法を示しています。 たとえば、エンティティのホームページには、テーブルとしてホームページのグリッドのみが表示されます。 選択した内容に従ってデータを表示できるコードコンポーネントをビルドできます。 このサンプルでは、通常の表形式のグリッドではなく、レコードをタイルとして表示します。
+# <a name="implementing-data-set-component"></a>データセット コンポーネントの実装
+
+このサンプル コンポーネントは、データセットを操作する際のユーザー エクスペリエンスを変更する方法を示します。 たとえば、エンティティ ホームページのホームページ グリッドはテーブルとしてのみ表示されます。 独自の選択によってデータを表示できるコード コンポーネントを構築できます。 このサンプルは、通常の表形式グリッドではなく、タイルとしてレコードを表示します。
 
 > [!div class="mx-imgBorder"]
-> ![データセットグリッドコンポーネント]の(../media/data-set-grid.png "データセットグリッドコンポーネント")
+> ![データセット グリッド コンポーネント](../media/data-set-grid.png "データセット グリッド コンポーネント")
 
-## <a name="available-for"></a>利用可能な対象 
+## <a name="available-for"></a>以下に使用できます 
 
 モデル駆動型アプリ
 
@@ -46,7 +41,7 @@ ms.locfileid: "72340508"
 </manifest>
 ```
 
-## <a name="code"></a>コード 
+## <a name="code"></a>Code 
 
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
@@ -241,12 +236,12 @@ export class TSDataSetGrid
       RowRecordId
     );
     if (rowRecordId) {
-      let entityreference = this.contextObj.parameters.dataSetGrid.records[
+      let entityReference = this.contextObj.parameters.dataSetGrid.records[
         rowRecordId
-      ].getNamedreference();
+      ].getNamedReference();
       let entityFormOptions = {
-        entityName: entityreference.name,
-        entityId: entityreference.id
+        entityName: entityReference.name,
+        entityId: entityReference.id
       };
       this.contextObj.navigation.openForm(entityFormOptions);
     }
@@ -424,24 +419,24 @@ export class TSDataSetGrid
 </root>
 ```
 
-このサンプルでは、データセットタグを持つコンポーネントマニフェストファイルで定義されている入力パラメーターを使用しています。 これは、コンポーネントにバインドされる入力プロパティです。  
+このサンプルでは、データセット タグでコンポーネント マニフェスト ファイルに定義された入力パラメータを使用します。 これはコンポーネントにバインドされる入力プロパティです。  
  
-このコンポーネントには、コンポーネントに渡される div に追加されるメインの div に追加される2つの重要なコンテナーがあります。  最初のコンテナーは、ビューのレコードデータを表示するタイルを保持します。2番目のコンテナーは、1ページに収めることができるより多くの領域を必要とするレコードがある場合を示す `Load More button` 用です。 
+このコンポーネントには、コンポーネントに渡される div に追加される main div に追加されるふたつの重要なコンテナがあります。  最初のコンテナはビューからのレコード データを表示するタイルを保持し、2 番目のコンテナは 1 ページに収まるように多くの領域を必要とするレコードがある時に表示される `Load More button` 用です。 
  
-[Updateview](../reference/control/updateview.md)メソッドが呼び出されるたびに、両方のコンテナーが生成され、更新されます。 最初のコンテナーでは、列の情報とレコードの数に基づいてタイルが生成されます。 これにより、各レコードのタイルとその情報が表示されます。  
+両方のコンテナが生成され [updateView](../reference/control/updateview.md) メソッドが呼び出されるたびに更新されます。 最初のコンテナでは、列の情報とレコード数に基づいてタイルを生成します。 これにより、各レコードとその情報とともにタイルを確実に表示します。  
  
-レコードの次のページが存在する場合は、[さらに読み込む] ボタンが表示されます。つまり、2番目のコンテナーが表示され、結果セットに他のページがない場合は非表示になります。  
+レコードに次のページがある場合、さらに読み込むボタンが表示されます。すなわち 2 番目のコンテナが表示され、結果セットにもうページがない場合は非表示になります。  
  
-[その他の読み込み] ボタンをクリックすると、レコードの次のページが読み込まれ、既存の結果セットに追加されます。また、ボタンの表示/非表示を切り替えるロジックは、コードに示されているように、前と同じままになります。 これは、ボタンにバインドされている***Onloadmorebuttonclick***メソッドによって処理されます。
+さらに読み込むボタンをクリックすると、レコードの次のページが読み込まれ、既存の結果セットに追加されます。ボタンを非表示や表示するロジックは、先にコードに示したものと同じです。 これはボタンにバインドされた ***onLoadMoreButtonClick*** メソッドで行われます。
  
-***ToggleLoadMoreButtonWhenNeeded***関数は、入力をデータセットとチェックし、データセットに次のページがあるかどうか、およびボタンが非表示または表示されているかどうか、またボタンを非表示にするか表示するかを指定します。  
+***toggleLoadMoreButtonWhenNeeded*** 関数は入力をデータセットとして受け取り、データセット、次のページがあるか、ボタンが非表示か表示かを確認し、ボタンを非表示や表示にします。  
  
-***OnRowClick***関数は、GUID 値を使用してレコードのコンテキストをアタッチし、`NavigationAPI` の[openForm](../reference/navigation/openform.md)メソッドを呼び出して、それぞれのレコードを開きます。 このメソッドは、 ***createGridBody***メソッドの一部として生成される各タイルにバインドされます。
+***onRowClick*** 関数はその GUID 値を使用してレコードのコンテキストを添付して、`NavigationAPI` の [openForm](../reference/navigation/openform.md) メソッドを呼び出してそれぞれのレコードを開きます。 このメソッドは、***createGridBody*** メソッドの一部として生成される各タイルにバインドされます。
  
-***Getsortedcolumnsonview***メソッドは、ビューで定義されている順序に基づいて列の一覧を返します。
+***getSortedColumnsOnView*** メソッドはビューに定義された順序に基づいて列の一覧を返します。
 
 ### <a name="related-topics"></a>関連トピック
 
-[サンプルコンポーネントのダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps コンポーネントフレームワーク API リファレンス](../reference/index.md)<br/>
-[PowerApps コンポーネントフレームワークマニフェストスキーマリファレンス](../manifest-schema-reference/index.md)
+[サンプル コンポーネントをダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[PowerApps Component Framework API の参照](../reference/index.md)<br/>
+[PowerApps Component Framework のマニフェスト スキーマの参照](../manifest-schema-reference/index.md)

@@ -4,7 +4,7 @@ description: 電話およびタブレット PC 用 Dynamics 365 で使用する�
 ms.custom: ''
 ms.date: 06/18/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -149,7 +149,7 @@ search.app:
  URL フィールドをマップし、Web サイトのプレビューを表示するには、Web サイト プレビュー コントロールを使用します。  
   
 > [!IMPORTANT]
->  このコントロールを有効にすることで、ユーザーがデバイスを特定できる特定の情報を外部システムと共有することに同意するものとします。 外部システムから PowerApps アプリまたは Dynamics 365 Customer Engagement にインポートされるデータには、[Microsoft のプライバシーと Cookie](http://go.microsoft.com/fwlink/p/?LinkId=521839) にあるプライバシーに関する声明が適用されます。  
+>  このコントロールを有効にすることで、ユーザーがデバイスを特定できる特定の情報を外部システムと共有することに同意するものとします。 外部システムから PowerApps アプリ、Dynamics 365 Sales、Dynamics 365 Customer Service などの Dynamics 365アプリにインポートされたデータは、[Microsoft のプライバシーと Cookie](http://go.microsoft.com/fwlink/p/?LinkId=521839) のプライバシーに関する声明の対象となります。  
 >   
 >  [プライバシーに関する声明](use-the-form-editor-legacy.md#BKMK_PrivacyNotices)  
   
@@ -212,7 +212,7 @@ search.app:
   
  [プライバシーに関する声明](use-the-form-editor-legacy.md#BKMK_PrivacyNotices)  
   
-|プロパティ|内容|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |メディア|このコントロールで再生するメディアの URL を入力します。|  
   

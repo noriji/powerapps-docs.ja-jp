@@ -1,35 +1,32 @@
 ---
-title: ポータルの公開キーをダウンロードする |MicrosoftDocs
-description: ポータルの公開キーをダウンロードする方法について説明します。
+title: ポータルの公開キーのダウンロード | MicrosoftDocs
+description: ポータルの公開キーのダウンロード方法を説明します。
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: ''
-ms.date: 10/07/2019
+ms.custom: null
+ms.date: 09/16/2019
 ms.author: shjais
-ms.reviewer: ''
-ms.openlocfilehash: 39e909acb325bd870f73e16a72da78b4bec07c79
-ms.sourcegitcommit: 5338e01d2591f76d71f09b1fb229d405657a0c1c
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72975980"
+ms.reviewer: null
 ---
-# <a name="download-public-key-of-portal"></a>ポータルの公開キーをダウンロードする
 
-ポータルの公開キーは、Dynamics 365 のモデル駆動型アプリに対して、ポータルの認証された訪問者と連携するようにライブアシスタンスを構成するために使用されます。 CafeX による[Live Assist](https://www.cafex.com/en/products/live-assist-dynamics-365/)は、ユーザーがポータルにライブチャットアシスタントを埋め込むためのチャットソリューションを提供します。 公開キーを使用してポータルにチャットを埋め込む方法の詳細については[、「Dynamics Customer ポータルでの認証](https://www.liveassistfor365.com/en/support/authenticated-visitors-in-the-dynamics-customer-portal/)された訪問者」を参照してください。
+# <a name="download-public-key-of-portal"></a>ポータルの公開キーのダウンロード
 
-1. [PowerApps ポータル管理センター](admin-overview.md)を開きます。
+[!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-2.  **[ポータルアクション]**  >  **[公開キーの取得]** に移動します。 キーが表示されます。
+ポータルの公開キーは、ポータルの認証済み訪問者と作業する Dynamics 365 のモデル駆動型アプリの Live Assist を構成するために使用します。 CafeX の [Live Assist](https://www.cafex.com/en/products/live-assist-dynamics-365/) は、ユーザーが自分のポータルにライブ チャット アシスタンスを埋め込むことができる、チャット ソリューションを提供します。 ポータルにチャットを埋め込む公開キーの使用方法については、[Dynamics カスタマー ポータルの認証済みビジター](https://www.liveassistfor365.com/en/support/authenticated-visitors-in-the-dynamics-customer-portal/)を参照してください
+
+1. [PowerApps ポータル管理センター](admin-overview.md) を開きます。
+
+2.  **ポータル アクション** > **公開キーの取得**の順に移動します。 キーが表示されます。
 
     > [!div class=mx-imgBorder]
-    > ポータルの公開キー![を取得する]ポータル(../media/get-public-key.png "の公開")キーを取得する
+    > ![ポータルの公開キーの取得](../media/get-public-key.png "ポータルの公開キーの取得")
 
-3.  テキストファイルでキーをダウンロードするには、 **[テキストとしてダウンロード]** を選択します。
+3.  **テキストとしてダウンロード**を選択してテキスト ファイルでキーをダウンロードします。
 
-または、次の URL に移動して公開キーを取得することもできます: `<portal_base_URL>/_ services/auth/publickey` 
+または、URL: `<portal_base_URL>/_ services/auth/publickey` に移動することで公開キーを取得することもできます。 
 
 > [!NOTE]
-> ポータルが現在プロビジョニングされている場合、または組織でパッケージのインストールが完了していない場合は、公開キーをダウンロードしようとするとエラーが表示されます。 ポータルのプロビジョニングが完了し、ポータルが起動して実行されるまで待つ必要があります。
+> ポータルが現在プロビジョニング中である場合、またはパッケージのインストールが組織内で終了していない場合に、公開キーのダウンロードを試みるとエラーが表示されます。 ポータルのプロビジョニングが完了してポータルが稼働するまで待機する必要があります。

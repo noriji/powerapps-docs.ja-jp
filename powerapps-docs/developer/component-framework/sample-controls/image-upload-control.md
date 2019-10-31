@@ -1,6 +1,6 @@
 ---
-title: " イメージのアップロードコンポーネント |Microsoft Docs"
-description: Typescript を使用したイメージアップロードコンポーネントの実装
+title: ' 画像アップロード コンポーネント | Microsoft Docs'
+description: Typescript を使用した画像アップロード コンポーネントの実装
 ms.custom: ''
 manager: kvivek
 ms.date: 10/01/2019
@@ -8,23 +8,18 @@ ms.service: powerapps
 ms.topic: article
 ms.author: nabuthuk
 author: nkrb
-ms.openlocfilehash: 755fff0934d74178cdb0546a222d9ca7a3c5d124
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72340715"
 ---
-# <a name="implementing-an-image-upload-component"></a>イメージアップロードコンポーネントの実装
 
-このサンプルコンポーネントは、コンポーネントの初回読み込み時にイメージと既定のイメージをアップロードするための `Upload` ボタンとしてレンダリングします。 @No__t_0 をクリックすると、ファイルエクスプローラーが表示され、イメージを選択できます。
+# <a name="implementing-an-image-upload-component"></a>画像アップロード コンポーネントの実装
+
+このサンプル コンポーネントは、画像と既定の画像をアップロードする `Upload` ボタンとしてコンポーネントが初めて読み込まれたとき表示されます。 `Upload` をクリックすると、 画像を選択するファイル エクスプローラがポップアップします。
  
-選択したイメージがコンポーネント内に表示されます。 一方、リセットする必要がある場合は、[`Remove`] ボタンが表示されます。 [@No__t_0] ボタンをクリックすると、既定の画像が表示されます。  
+選択した画像はコンポーネント内に表示されます。 同時に、リセットする必要がある場合は `Remove` ボタンが表示されます。 `Remove` ボタンをクリックすると、既定の画像が表示されます。  
 
 > [!div class="mx-imgBorder"]
-> ![イメージアップロード]コンポーネント(../media/image-upload-control.png "イメージアップロードコンポーネント")
+> ![画像アップロード コンポーネント](../media/image-upload-control.png "画像アップロード コンポーネント")
 
-## <a name="available-for"></a>利用可能な対象 
+## <a name="available-for"></a>以下に使用できます 
 
 モデル駆動型アプリ 
 
@@ -48,7 +43,7 @@ ms.locfileid: "72340715"
 </manifest>
 ```
 
-## <a name="code"></a>コード
+## <a name="code"></a>Code
 
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
@@ -370,9 +365,9 @@ export class TSImageUploadControl
 </root>
 ```
 
-このサンプルでは、イメージピッカーを作成し、デバイス API とリソース API を表示して、マニフェストで定義されているイメージを読み込む方法を示します。 イメージコンテンツは base64 エンコードで格納され、保存して、再検討することができます。  
+このサンプルはイメージ選択を作成する方法を示し、マニフェストで定義されたイメージを読み込むデバイス API とリソース API を紹介します。 画像コンテンツは base64 エンコーディングで格納されており、保存して再参照できます。  
 
-@No__t_0 メソッドは、コンポーネントマニフェストで定義されている webresource.axd 名として入力を受け取り、その webresource.axd を読み込みます。 コンポーネントは、初期レンダリングの `Upload` ボタンと既定のイメージをレンダリングします。 イメージは、マニフェストの[リソース](../reference/resources.md)ノードで定義されます。  
+`resources.getResource` メソッドは、コンポーネント マニフェストで定義された Web リソース名として入力を受け取り、その Web リソースをロードします。 コンポーネントは最初の描画で `Upload` ボタンと既定の画像を表示します。 画像はマニフェストの [リソース](../reference/resources.md) ノードで定義されます。  
 
 ```xml
     <resources>
@@ -383,15 +378,15 @@ export class TSImageUploadControl
     </resources> 
  ```
  
-@No__t_0 がトリガーされ、リソースコンテンツが `successCallback` に挿入されます。 次に、イメージ要素 "src" を使用して、コンテンツをポイントし、既定のイメージを読み込みます。
+`successCallback` がトリガーされ、リソース コンテンツが `successCallback` に挿入されます。 画像要素 'src' でコンテンツを指定すると、既定の画像が読み込まれます。
  
-@No__t_0 メソッドを使用すると、コンピューター (web クライアント) またはモバイルデバイス (モバイルクライアント) からファイルを選択するためのダイアログボックスが開きます。 デスクトップの場合は、ファイルエクスプローラーが開き、モバイルクライアントの場合は、写真のライブラリが開きます。 [@No__t_0] ボタンをクリックすると、デバイス API  `pickFile` トリガーされ、ユーザーはファイルを取得します。 ファイルが正常に選択されると、ファイルのファイル名、ファイルの内容が `successCallback` に挿入されます。 
+`device.pickFile` メソッドがダイアログ ボックスを開き、コンピューター (Web クライアント) またはモバイル デバイス (モバイル クライアント) からファイルを選びます。 デスクトップではファイル エクスプローラを開き、モバイル クライアントでは写真のライブラリを開きます。  `upload` ボタンをクリックすると、デバイス API  `pickFile` がトリガーして、ユーザーはファイルを選択します。 ファイルが正しく選択されると、ファイルのファイル名、ファイルの内容が `successCallback` に挿入されます。 
 
 > [!NOTE]
-> 従来の web クライアントで同じフォームまたはエンティティが使用されている場合、このフィールドには、UX の問題がある可能性がある従来の web クライアント上の既定のテキストコンポーネントが表示されます。  レガシ web クライアントで非表示にするには、 **[表示]** チェックボックスをオフにし、 **[既定のコントロールを非表示]** にする チェックボックスをオンにします。 
+> 同じフォームまたはエンティティがレガシ Web クライアントで使用されている場合は、UX 問題がある可能性があるレガシ Web クライアントでフィールドにそのままテキスト コンポーネントが表示されます。  レガシ Web クライアントでそれを隠すために **表示** チェック ボックスをオフにして、**既定のコントロールを表示しない** チェック ボックスを一緒にオンにできます。 
 
 ### <a name="related-topics"></a>関連トピック
 
-[サンプルコンポーネントのダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps コンポーネントフレームワーク API リファレンス](../reference/index.md)<br/>
-[PowerApps コンポーネントフレームワークマニフェストスキーマリファレンス](../manifest-schema-reference/index.md)
+[サンプル コンポーネントをダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[PowerApps Component Framework API の参照](../reference/index.md)<br/>
+[PowerApps Component Framework のマニフェスト スキーマの参照](../manifest-schema-reference/index.md)

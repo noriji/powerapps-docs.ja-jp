@@ -27,7 +27,7 @@ Visual Studio を使用して、.NET Framework 4.6.2 以降を使用したマネ
 > ユーザー定義のクライアント アプリケーションを作成するには、Microsoft .NET フレームワーク 4.6.2 またはそれ以降を使用します。
 > Transport Level Security (TLS) 1.2 またはそれより優れたセキュリティを使用するアプリのみが Common Data Service への接続を許可されます。 TLS 1.2 は .NET Framework 4.5.2 で使用される既定のプロトコルではありませんが、.NET Framework 4.6.2 内にあります。 
 > 
-> 詳細: [ブログ投稿: Dynamics 365 Customer Engagement 接続のセキュリティに関する更新](https://blogs.msdn.microsoft.com/crm/2017/09/28/updates-coming-to-dynamics-365-customer-engagement-connection-security/)
+> 詳細: <https://<blogs.msdn.microsoft.com/crm/2017/09/28/updates-coming-to-dynamics-365-customer-engagement-connection-security/>
 > 
 > [!TIP]
 > 開発用コンピューターに .NET Framework 4.6.2 をインストールする場合、ランタイムだけでなく開発者パックのインストールを実行してください。 これにより、4.6.2 フレームワークを、Visual Studio の**新しいプロジェクト**ダイアログ ボックスおよびプロジェクトのプロパティのターゲット フレームワーク ドロップダウン メニューで選択できるようになります。  

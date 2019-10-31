@@ -1,6 +1,6 @@
 ---
-title: " テーブルコンポーネント |Microsoft Docs"
-description: テーブルコンポーネントの実装
+title: ' テーブル コンポーネント | Microsoft Docs'
+description: テーブル コンポーネントの実装
 ms.custom: ''
 manager: kvivek
 ms.date: 10/01/2019
@@ -8,21 +8,16 @@ ms.service: powerapps
 ms.topic: article
 ms.author: nabuthuk
 author: Nkrb
-ms.openlocfilehash: d25283531665a0e1c534bd0e797cbaa722c44bba
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72340094"
 ---
-# <a name="implementing-table-component"></a>テーブルコンポーネントの実装
 
-このサンプルコンポーネントでは、2つの列を含むテーブルをレンダリングします。 左側の列には、API メソッドまたはプロパティの名前が表示され、右側の列には API によって返される値が表示されます。 このコンポーネントを別の種類のデバイスで開くか、または言語またはユーザー設定を変更して、テーブル内で値が正しく調整されることを確認できます。
+# <a name="implementing-table-component"></a>テーブル コンポーネントの実装
+
+このサンプル コンポーネントは 2 列のテーブルを表示します。 左側の列は API メソッドやプロパティの名前を示し、右側の列は API によって返される値を示します。 値がテーブル内で正しく調整されていることを確認するには、さまざまな種類のデバイスでこのコンポーネントを開くか、言語やユーザー設定を変更します。
 
 > [!div class="mx-imgBorder"]
-> ![テーブルコンポーネント](../media/table-control.png "テーブルコンポーネント")
+> ![テーブル コンポーネント](../media/table-control.png "テーブル コンポーネント")
 
-## <a name="available-for"></a>利用可能な対象 
+## <a name="available-for"></a>以下に使用できます 
 
 モデル駆動型アプリ
 
@@ -41,26 +36,26 @@ ms.locfileid: "72340094"
 </manifest>
 ```
 
-## <a name="code"></a>コード
+## <a name="code"></a>Code
 
 ```TypeScript
 export class TSTableControl
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
   // Flag to track if control is in full screen mode or not
   private _isFullScreen: boolean;
-  // reference to HTMLTableElement rendered by control
+  // Reference to HTMLTableElement rendered by control
   private _tableElement: HTMLTableElement;
-  // reference to 'Set Full Screen' HTMLButtonElement
+  // Reference to 'Set Full Screen' HTMLButtonElement
   private _setFullScreenButton: HTMLButtonElement;
-  // reference to 'Lookup Objects' HTMLButtonElement
+  // Reference to 'Lookup Objects' HTMLButtonElement
   private _lookupObjectsButton: HTMLButtonElement;
-  // reference to 'Lookup Result Div' HTMLDivElement
+  // Reference to 'Lookup Result Div' HTMLDivElement
   // Used to display information about the item selected by the lookup
   private _lookupObjectsResultDiv: HTMLDivElement;
-  // reference to the control container HTMLDivElement
+  // Reference to the control container HTMLDivElement
   // This element contains all elements of our custom control example
   private _container: HTMLDivElement;
-  // reference to ComponentFramework Context object
+  // Reference to ComponentFramework Context object
   private _context: ComponentFramework.Context<IInputs>;
   // Flag if control view has been rendered
   private _controlViewRendered: Boolean;
@@ -431,18 +426,18 @@ export class TSTableControl
 }
 ```
 
-このサンプルでは、`IClient, IUserSettings, IUtility, IFormatting interfaces` からメソッドを使用する方法の例を示します。
+このサンプルは `IClient, IUserSettings, IUtility, IFormatting interfaces` からメソッドを使用する方法の例を提供します。
 
-また、このコンポーネントは、`setFullScreen` と `lookupObjects` という2つのユーティリティ関数も紹介します。 これらの関数は、コードコンポーネントの一部として表示されるボタンをクリックすることによって呼び出されます。 [@No__t_0] ボタンをクリックすると、コンポーネントが全画面表示モードで切り替わります。 [@No__t_0] ボタンをクリックすると、ルックアップダイアログが開き、選択したレコードがテキストとして div に挿入されます。
+また、このコンポーネントはふたつのユーティリティ関数を紹介します、`setFullScreen` と `lookupObjects`。 これらの関数はコード コンポーネントの一部として表示されるボタンをクリックすると呼び出されます。 `setFullScreen` ボタンはコンポーネントの全画面モードをオンとオフに切り替えます。 `lookupObjects` ボタンは検索ダイアログを開き、選択したレコードをテキストとして div に挿入します。
 
-このサンプルでは、HTML ボタンを表示し、ボタンに `onLookupObjectsButtonClick` JavaScript `onClick` イベントハンドラーをアタッチします。 このボタンをクリックすると `context.utils.lookupObjects()` メソッドが呼び出され、エンティティ名の配列としてパラメーターとして渡されます。 
+このサンプルは HTML ボタンを表示して、そのボタンに JavaScript `onClick` イベント ハンドラである `onLookupObjectsButtonClick` を追加します。 このボタンをクリックすると `context.utils.lookupObjects()` メソッドが呼び出され、パラメータとしてエンティティ名の配列が渡されます。 
 
-このメソッドは、検索ダイアログの呼び出しの完了または失敗を表す JavaScript Promise オブジェクトを返します。 Promise が正常に解決された場合、ユーザーが選択した参照オブジェクトは、パラメーターとしてコールバックメソッドに渡され、data.id、data.name、データ entityType として参照できます。
+このメソッドは、検索ダイアログの呼び出しの完了または失敗を表す JavaScript の Promise オブジェクトを返します。 Promise が正常に解決されると、ユーザーが選択した検索オブジェクトがパラメータとしてコールバック メソッドに渡され、data.id、data.name、data.entityType として参照できます。
 
-コールバックメソッドは、コードコンポーネントに表示される div にこの情報を HTML として挿入し、選択した結果をユーザーに紹介します。 Promise が拒否された場合は、エラーのコールバックメソッドが呼び出されます。このメソッドは、コンポーネントがエラーシナリオを適切に処理できます。
+コールバック メソッドはこの情報を HTML としてコード コンポーネントに表示された div に挿入して、選択した結果をユーザーに提示します。 Promise が拒否された場合は、コンポーネントがエラー シナリオを適切に処理できるところでエラー コールバック メソッドが呼び出されます。
 
 ### <a name="related-topics"></a>関連トピック
 
-[サンプルコンポーネントのダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps コンポーネントフレームワーク API リファレンス](../reference/index.md)<br/>
-[PowerApps コンポーネントフレームワークマニフェストスキーマリファレンス](../manifest-schema-reference/index.md)
+[サンプル コンポーネントをダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[PowerApps Component Framework API の参照](../reference/index.md)<br/>
+[PowerApps Component Framework のマニフェスト スキーマの参照](../manifest-schema-reference/index.md)

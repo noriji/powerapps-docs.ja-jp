@@ -2,7 +2,7 @@
 title: WebHooks を使用してサーバー イベントの外部ハンドラーを作成する (Common Data Service)| Microsoft Docs
 description: webhook を使用してサーバーで発生するイベントに関するデータを Web アプリケーションに送信できます。 ｗebhook は、Web API およびサービスをパブリッシュ/サブスクライブ モデルと接続するためのライトウェイト HTTP パターンです。 ｗebhook の送信側は、イベントに関する情報を使用して受信側のエンドポイントに要求を行うことで、受信側にイベントについて通知します。
 ms.custom: ''
-ms.date: 10/31/2018
+ms.date: 09/04/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.topic: article
@@ -19,7 +19,7 @@ search.app:
 
 Common Data Service により、webhooks を使用してサーバーで発生するイベントに関するデータを Web アプリケーションに送信できます。 ｗebhook は、Web API およびサービスをパブリッシュ/サブスクライブ モデルと接続するためのライトウェイト HTTP パターンです。 ｗebhook の送信側は、イベントに関する情報を使用して受信側のエンドポイントに要求を行うことで、受信側にイベントについて通知します。
 
-ｗebhook を使用すると、開発者と ISV は Customer Engagement のデータを、外部サービスでホストされている自らのカスタム コードに統合できます。 ｗebhook モデルを使用することにより、認証ヘッダーまたはクエリ文字列パラメーター キーを使用してエンドポイントを保護できます。 これは、Azure Service Bus 統合用に現在使用できる SAS 認証モデルよりも簡単です。
+ｗebhook を使用すると、開発者と ISV は Common Data Service のデータを、外部サービスでホストされている自らのカスタム コードに統合できます。 ｗebhook モデルを使用することにより、認証ヘッダーまたはクエリ文字列パラメーター キーを使用してエンドポイントを保護できます。 これは、Azure Service Bus 統合用に現在使用できる SAS 認証モデルよりも簡単です。
 
 webhook モデルと Azure Service Bus 統合とのどちらを選ぶか選択する場合、次の点に留意します。
 
@@ -364,7 +364,7 @@ webhook が非同期的で実行するために登録されている場合、エ
 [プラグインを記述する](write-plug-in.md)<br />
 [プラグインの登録](register-plug-in.md)<br />
 [Common Data Service での非同期サービス](asynchronous-service.md)<br />
-[サンプル: Azure 対応のカスタム プラグイン](/org-service/samples/azure-aware-custom-plugin.md)<br />
+[サンプル: Azure 対応のカスタム プラグイン](org-service/samples/azure-aware-custom-plugin.md)<br />
 [サンプル: Azure 対応のユーザー定義ワークフロー活動](org-service/samples/azure-aware-custom-workflow-activity.md)<br />
 [Azure Functions](https://azure.microsoft.com/services/functions/)<br />
 [ServiceEndpoint エンティティ](reference/entities/serviceendpoint.md)<br />

@@ -1,7 +1,7 @@
 ---
 title: フォーム デザイナーのツリー ビューを使用 | MicrosoftDocs
 ms.custom: ''
-ms.date: 04/21/2019
+ms.date: 08/26/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -24,15 +24,14 @@ search.app:
 ---
 
 # <a name="using-the-tree-view-in-the-form-designer"></a>フォーム デザイナーのツリー ビューを使用
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+**ツリー ビュー** ウィンドウには、フォーム上のコンポーネントのビジュアル階層が表示されます。 ツリー ビュー内のアイコンは、フィールドまたはコンポーネントの種類を素早く識別するために役立ちます。 
 
-**ツリー ビュー** ウィンドウには、フォーム上のコントロールおよびフィールドのビジュアル階層が表示されます。 ツリー ビュー内のアイコンは、フィールドまたはコントロールの種類を素早く識別するために役立ちます。 
-
-また、ツリー ビューを使用してフォーム上に存在するフィールドおよびコントロールを選択することができます。 フォーム プレビューで可視ではない非表示要素を選択するときに、ツリー ビューは便利です。 
+また、ツリー ビューを使用してフォーム上に存在するフィールドおよびコンポーネントを選択することができます。 フォーム プレビューで可視ではない非表示要素を選択するときに、ツリー ビューは便利です。 
 
 ツリー ビュー内のノードを展開または折畳み、ノード内の要素を表示または非表示にすることができます。 ツリー ビューで要素を選択すると、フォーム プレビューでハイライト表示になり、プロパティ ウィンドウにはその要素のプロパティが表示されます。 
 
-   ![ツリー ビュー](media/tree-view.png)
+> [!div class="mx-imgBorder"] 
+> ![](media/FormDesignerTreeView.png "ツリー ビュー")
 
 ### <a name="open-the-tree-view"></a>ツリー ビューを開く 
 1. フォーム デザイナーを開いてフォームを作成または編集します。 
@@ -41,10 +40,13 @@ search.app:
 
 ## <a name="see-also"></a>関連項目
 [モデル駆動型フォーム デザイナーの概要](form-designer-overview.md)  
-[フォーム デザイナーを使用してフォームを作成または編集](create-and-edit-forms.md)  
-[フォーム デザイナーを使用してフォームのフィールドを追加、移動、または削除](add-move-or-delete-fields-on-form.md)  
-[フォーム デザイナーを使用してフォームのセクションを追加、移動、または削除](add-move-or-delete-sections-on-form.md)  
-[フォーム デザイナーを使用してフォームのタブを追加、移動、または削除](add-move-or-delete-tabs-on-form.md)  
-[フォーム デザイナーで使用可能なプロパティ](form-designer-properties.md)  
-[フォーム デザイナーでヘッダーのプロパティを構成する](form-designer-header-properties.md)   
-[フィールドの作成および編集](../common-data-service/create-edit-field-portal.md)
+[フォーム デザイナーを使用してフォームを作成、編集、構成する](create-and-edit-forms.md)  
+[フォーム上のフィールドを追加、構成、移動、削除する](add-move-or-delete-fields-on-form.md)  
+[フォーム上のコンポーネントを追加、構成、移動、削除する](add-move-configure-or-delete-components-on-form.md)  
+[フォーム上のセクションを追加、構成、移動、削除する](add-move-or-delete-sections-on-form.md)  
+[フォーム上のタブを追加、構成、移動、削除する](add-move-or-delete-tabs-on-form.md)  
+[フォーム デザイナーでヘッダーのプロパティを構成する](form-designer-header-properties.md)  
+[フォームでサブグリッド コンポーネントを追加して構成する](form-designer-add-configure-subgrid.md)  
+[フォームで簡易表示コンポーネントを追加して構成する](form-designer-add-configure-quickview.md)  
+[フォームの検索コンポーネントを構成する](form-designer-add-configure-lookup.md)  
+[フィールドの作成および編集](../common-data-service/create-edit-field-portal.md)  

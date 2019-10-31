@@ -1,5 +1,5 @@
 ---
-title: エンティティへの SLA の適用 (Common Data Service) | Microsoft Docs
+title: エンティティに SLA を適用する (Common Data Service) | Microsoft Docs
 description: SLA を適用するエンティティを有効にすることによって、カスタム エンティティにSLAを適用する方法について。 また、SLA KPI を作成することもできます。
 ms.custom: ''
 ms.date: 10/31/2018
@@ -57,20 +57,19 @@ Common Data Service のサービス レベル契約 (SLA) は、サービス レ
    
 ## <a name="apply-slas-to-entity-records"></a>エンティティ レコードに SLA を適用する  
 
- Common Data Service の Web クライアントを使用して、SLA 対応エンティティの SLA を作成し、新しいエンティティ レコードに自動的に適用されるように、そのエンティティに対する既定として SLA を設定できます。  
+ Common Data Service Web クライアントを使用して、SLA 対応エンティティの SLA を作成し、新しいエンティティ レコードに自動的に適用されるように、そのエンティティに対する既定として SLA を設定できます。  
   
  ただし、ユーザー定義ビジネス要件に基づいてエンティティ レコードに SLA を手動で適用する場合は、プログラム的にエンティティ レコードを更新して、必要な有効な SLA レコードに `SLAId` 属性値を設定できます。  
   
 <a name="Limitations"></a>   
 
-## <a name="limitations-to-applying-slas-in-dynamics-365-online"></a>Dynamics 365 (オンライン) での SLA 適用の制限  
+## <a name="limitations-to-applying-slas-in-dynamics-365-online"></a>Dynamics 365 (online) での SLA の適用の制限  
 
- Common Data Service で、次の制限が Common Data Service インスタンス (組織) ごとの SLA に適用されます:  
+ Common Data Service では、次の制限が、Common Data Service インスタンス (組織) 単位で、SLA に適用されます。  
   
 -   アクティブな SLA を適用できる最大 7 つのエンティティを持つことができます。 この制限を超えた場合、SLA をアクティブ化するとエラーが発生します。  
   
 -   アクティブな SLA のエンティティごとに、最大 5 つの SLA KPI を持つことができます。 この制限を超えた場合、SLA をアクティブ化するとエラーが発生します。 この制限は、`Incident` エンティティには適用されません。  
   
 ### <a name="see-also"></a>関連項目  
- [Customer Engagement のサービス エンティティ](/dynamics365/customer-engagement/developer/service-entities)   
  [拡張サービス レベル アグリーメント (SLA)](/dynamics365/customer-engagement/admin/enhanced-service-level-agreements)

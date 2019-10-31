@@ -1,6 +1,6 @@
 ---
-title: TypeScript を使用したコードコンポーネントの実装 |MicrosoftDocs
-description: TypeScript を使用してコードコンポーネントを実装する方法
+title: TypeScript を使用したコード コンポーネントの実装 | MicrosoftDocs
+description: TypeScript を使用してコード コンポーネントを実装する方法
 manager: kvivek
 ms.date: 10/01/2019
 ms.service: powerapps
@@ -8,60 +8,45 @@ ms.topic: index-page
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: nabuthuk
 author: Nkrb
-ms.openlocfilehash: 669bf03d7869d6fd625288a65a305a3a458cfde4
-ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025752"
 ---
-# <a name="implement-components-using-typescript"></a>TypeScript を使用してコンポーネントを実装する
 
-このトピックでは、PowerApps CLI を使用して TypeScript で新しいコードコンポーネントを作成する手順について説明します。 このチュートリアルでは、ユーザーがフィールドに値を入力する代わりに、視覚スライダーを使用して数値を変更できるようにするサンプルの線形コードコンポーネントを作成します。 
+# <a name="implement-components-using-typescript"></a>TypeScript を使ってコンポーネントを実装する
 
-コードコンポーネントをビルドするために必要な成果物は次のとおりです。
+このチュートリアルでは、Typescript で新しいコード コンポーネントを作成する手順を説明します。 サンプル コンポーネントは、ユーザーがフィールドに値を入力する代わりに、ビジュアル スライダーを使用して数値を入力できる線形入力コンポーネントです。 
 
-1. [新しいコンポーネントプロジェクトを作成する](#creating-a-new-component-project)
-2. [実装 (マニフェストを)](#implementing-manifest)
-3. [TypeScript を使用してコンポーネントロジックを実装する](#implementing-component-logic)
-4. [コードコンポーネントにスタイルを追加する](#adding-style-to-the-code-component)
-5. [パッケージ化 (コードコンポーネントを)](#packaging-your-code-components)
-
-## <a name="creating-a-new-component-project"></a>新しいコンポーネントプロジェクトの作成
+## <a name="creating-a-new-component-project"></a>新しいコンポーネント プロジェクトを作成する
 
 新しいプロジェクトを作成するには:
 
-1. **VS 2017 ウィンドウの開発者コマンドプロンプト**を開きます。
-1. 次のコマンドを使用して、プロジェクト用の新しいフォルダーを作成します。 
+1. **VS 2017 のコマンド プロンプトの作成** ウィンドウを開きます。
+1. コマンドを使用してプロジェクトの新規フォルダを作成する 
     ```CLI
     mkdir LinearComponent
     ```
 
-1. コマンド `cd LinearComponent`を使用して、コンポーネントフォルダーにアクセスします。 
+1. `cd LinearComponent` コマンドを使用して、新規ディレクトリに移動します。 
    
-1. コマンドを使用して基本パラメーターを渡すことによって、新しいコンポーネントプロジェクトを作成します。
+1. 以下のコマンドを実行し、基本パラメータを渡す新しいコンポーネントプロジェクトを作成します。
 
    ```CLI
     pac pcf init --namespace SampleNamespace --name TSLinearInputComponent --template field
     ``` 
 
-1. コマンド `npm install` を使用して、プロジェクトビルドツールをインストールします。 
-1. プロジェクトフォルダーを任意の開発者環境で開き、コードコンポーネントの開発を開始します。 `C:\Users\<your name>\Documents\<My_code_Component>` します。 最も簡単に開始するには、`C:\Users\<your name>\Documents\<My_code_Component>` ディレクトリにあるコマンドプロンプトから `code .` を実行します。 このコマンドにより、コンポーネントプロジェクトが Visual Studio Code で開きます。
+1. `npm install` コマンドを使用して、プロジェクトのビルド ツールをインストールします。 
+2. 任意の開発者環境でプロジェクト フォルダー `C:\Users\<your name>\Documents\<My_PCF_Component` ) を開き、コード コンポーネントの開発を始めます。 最も簡単に始めるには、`C:\Users\<your name>\Documents\<My_PCF_Component>` ディレクトリに入ったら、コマンド プロンプトから `code .` を実行する方法です。 このコマンドは、**Visual Studio コード**にあるコンポーネント プロジェクトを開きます。
 
-## <a name="implementing-manifest"></a>実装 (マニフェストを)
+## <a name="implementing-manifest"></a>マニフェストの実装
 
-マニフェストは、コードコンポーネントのメタデータを含む XML ファイルです。 また、コードコンポーネントの動作も定義します。 このチュートリアルでは、このマニフェストファイルを `<Your component Name>` サブフォルダーの下に作成します。 Visual Studio Code で `ControlManifest.Input.xml` ファイルを開くと、マニフェストファイルがいくつかのプロパティで事前に定義されていることがわかります。 詳細については、「 [Manifest](manifest-schema-reference/manifest.md)」を参照してください。
+マニフェストは、コード コンポーネントのメタデータを含む XML ファイルです。 また、コード コンポーネントの動作も定義します。 このチュートリアルでは、`<Your component Name>` サブフォルダーでマニフェスト ファイルが作成されます。 Visual Studio コードで `ControlManifest.Input.xml` ファイルを開くと、ファイル マニフェストの一部のプロパティが既に定義済みであることがわかります。 以下に示すように、これらのあらかじめ定義されたマニフェスト ファイルに変更を加えます。
 
-次に示すように、定義済みのマニフェストファイルに変更を加えます。
+1. [コントロール](manifest-schema-reference/control.md) ノードは、コード コンポーネントの名前空間、バージョン、および表示名を定義します。 次に、以下に示すように、[コントロール](manifest-schema-reference/control.md)ノードの各プロパティを定義します。
 
-1. [コントロール](manifest-schema-reference/control.md)ノードは、コードコンポーネントの名前空間、バージョン、および表示名を定義します。 ここで、次に示すように、[コントロール](manifest-schema-reference/control.md)ノードの各プロパティを定義します。
-
-   - **名前空間**: コードコンポーネントの名前空間。 
-   - **コンストラクター**: コードコンポーネントのコンストラクター。
-   - **バージョン**: コンポーネントのバージョン。 コンポーネントを更新するたびに、ランタイムの最新の変更を表示するにはバージョンを更新する必要があります。
-   - **表示名-キー**: UI に表示されるコードコンポーネントの名前。
-   - **description-name-key**: UI に表示されるコードコンポーネントの説明。
-   - **コントロールの種類**: コードコンポーネントの型。 サポートされているのは、*標準*型のコードコンポーネントのみです。
+   - **名前空間**: コード コンポーネントの名前空間。 
+   - **コンストラクター**: コード コンポーネントのコンストラクター。
+   - **バージョン**: コンポーネントのバージョン。 コンポーネントを更新すると、ランタイムで変更を表示するにはバージョンを更新する必要があります。
+   - **display-name-key**: UI で表示するコード コンポーネントの名前。
+   - **description-name-key**: UI に表示されるコード コンポーネントの説明。
+   - **control-type**: コード コンポーネントの種類。 コード コンポーネントの *標準*タイプのみサポートされています。
 
      ```XML
       <?xml version="1.0" encoding="utf-8" ?>
@@ -69,21 +54,21 @@ ms.locfileid: "73025752"
       <control namespace="SampleNameSpace" constructor="TSLinearInputComponent" version="1.0.0" display-name-key="Linear Input Component" description-key="Allows you to enter the numeric values using the visual slider." control-type="standard">
      ```
 
-2. [プロパティ](manifest-schema-reference/property.md)ノードは、フィールドのデータ型の定義など、コードコンポーネントのプロパティを定義します。 プロパティノードは、`control` 要素の下に子要素として指定されます。 次に示すように、[プロパティ](manifest-schema-reference/property.md)ノードを定義します。
+2. [プロパティ](manifest-schema-reference/property.md) ノードは、フィールドのデータ型の定義など、コード コンポーネントのプロパティを定義します。 プロパティ ノードは、コントロール要素の下の子要素として指定されます。 [プロパティ](manifest-schema-reference/property.md) ノードを下記に示す通り定義します。
 
-   - **name**: プロパティの名前。
-   - **表示名-キー**: UI に表示されるプロパティの表示名。
+   - **名前**: プロパティの名前。
+   - **display-name-key**: UI に表示されるプロパティの表示名。
    - **description-name-key**: UI に表示されるプロパティの説明。 
-   - **-type-group**: 3 つ以上のデータ型フィールドを使用する場合は、 [-type-group](manifest-schema-reference/type-group.md)を使用します。 マニフェスト内の `property` 要素に、 [-type-group](manifest-schema-reference/type-group.md)要素を兄弟として追加します。 `of-type-group` には、コンポーネントの値を指定し、整数、通貨、浮動小数点、または10進値を含めることができます。
-   - **使用法**:*バインド*と*入力*の2つのプロパティがあります。 バインドされたプロパティは、フィールドの値にのみバインドされます。 入力プロパティは、フィールドにバインドされているか、静的な値が許可されています。
-   - **必須**: プロパティが必須かどうかを定義します。
+   - **of-type-group**: [of-type-group](manifest-schema-reference/type-group.md) は、2 つ以上のデータ フィールドが必要な場合に使用されます。 [of-type-group](manifest-schema-reference/type-group.md) 要素をマニフェストの `property` 要素の兄弟として追加します。 `of-type-group` はコンポーネント値を指定し、整数、通貨、浮動小数点、または 10 進数値を含めることができます。
+   - **使用**: *バインド*と*入力*の 2 つのプロパティがあります。 バインドされたプロパティは、フィールドの値にのみバインドされたものです。 入力プロパティはフィールドにバインドされたか、静的な値を有効にするものです。
+   - **必須**: プロパティが必要かどうかを定義します。
 
      ```XML
       <property name="sliderValue" display-name-key="sliderValue_Display_Key" description-key="sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
       ```
-3. [Resources](manifest-schema-reference/resources.md)ノードでは、コードコンポーネントの視覚化を定義します。 これには、コードコンポーネントの視覚化とスタイル設定を構築するすべてのリソースが含まれます。 [コード](manifest-schema-reference/code.md)は resources 要素の下に子要素として指定されます。 次に示すように、[リソース](manifest-schema-reference/resources.md)を定義します。
+3. [リソース](manifest-schema-reference/resources.md)ノードは、コード コンポーネントのビジュアル化を定義します。 コード コンポーネントを構成するすべてのリソースが含まれています。 [コード](manifest-schema-reference/code.md)は、リソース要素の下の子要素として指定されます。 [リソース](manifest-schema-reference/resources.md)を下記に示す通り定義します。
 
-   - **code**: すべてのリソースファイルが配置されているパスを参照します。
+   - **コード**: すべてのリソース ファイルが設置されるファイル パスを参照します。
  
       ```XML
       <resources>
@@ -91,7 +76,7 @@ ms.locfileid: "73025752"
         <css path="css/TS_LinearInputComponent.css" order="1" />
         </resources>
         ```
-      マニフェストファイル全体は次のようになります。 
+      マニフェスト ファイル全体は、次のように表示されます。 
 
      ```XML
       <?xml version="1.0" encoding="utf-8" ?>
@@ -112,18 +97,18 @@ ms.locfileid: "73025752"
      </manifest>
      ```
 
-4. 変更内容を `ControlManifest.Input.xml` ファイルに保存します。
-5. ここで、`TSLinearInputComponent` フォルダー内に新しいフォルダーを作成し、 **css**という名前を付けます。
-6. CSS ファイルを作成し[て、コードコンポーネントにスタイルを追加](#adding-style-to-the-code-component)します。
-7. コマンド `npm run build` を使用して、コンポーネントプロジェクトをビルドします。
-8. ビルドによって、更新された TypeScript 型宣言ファイルが `TSLinearInputComponent/generated` フォルダーに生成されます。
+4. `ControlManifest.Input.xml` ファイルに加えた変更を保存します。
+5. 次に、 `TSLinearInputComponent` フォルダー内に新しいフォルダーを作成し、 **css** という名前を付けます。
+6. CSS ファイルを[コード コンポーネントにスタイルを追加する](#adding-style-to-the-code-component)に作成します。
+7. コマンド `npm run build` を使用してコンポーネント プロジェクトをビルドします
+8. このビルドは、`TSLinearInputComponent/generated` フォルダーにある更新された Typescript 型宣言ファイルを生成します。
 
-## <a name="implementing-component-logic"></a>実装 (コンポーネントロジックを)
+## <a name="implementing-component-logic"></a>コンポーネント ロジックの実装
 
-マニフェストファイルを実装した後の次の手順では、TypeScript を使用してコンポーネントロジックを実装します。 コンポーネントロジックは `index.ts` ファイル内に実装する必要があります。 Visual Studio Code で `index.ts` ファイルを開くと、4つの必須クラスが事前に定義されていることがわかります。 では、コードコンポーネントのロジックを実装してみましょう。 
+マニフェスト ファイルを実行した後の次の手順は、TypeScript を使用してマニフェスト ファイルをコンポーネントのロジックに実装することです。 コンポーネントのロジックは、`index.ts` ファイル内で実装する必要があります。 `index.ts` ファイルを Visual Studio コード内で開く場合、4 つの重要なクラスがあらかじめ定義されていることがわかります。 次に、コード コンポーネントのロジックを実装します。 
 
-1. 任意のコードエディターで `index.ts` ファイルを開きます。
-2. 次のコードを使用して、`TSLinearInputComponent` クラスを更新します。
+1. 任意のコードエディタで `index.ts` ファイルを開きます。
+2. 次のコードで `TSLinearInputComponent` クラスを更新します。
 
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
@@ -137,10 +122,10 @@ export class TSLinearInputComponent
   private labelElement: HTMLLabelElement;
   // input element that is used to create the range slider
   private inputElement: HTMLInputElement;
-  // reference to the component container HTMLDivElement
+  // Reference to the component container HTMLDivElement
   // This element contains all elements of our code component example
   private _container: HTMLDivElement;
-  // reference to PowerApps component framework Context object
+  // Reference to PowerApps component framework Context object
   private _context: ComponentFramework.Context<IInputs>;
   // Event Handler 'refreshData' reference
   private _refreshData: EventListenerOrEventListenerObject;
@@ -170,7 +155,7 @@ export class TSLinearInputComponent
     this.labelElement = document.createElement("label");
     this.labelElement.setAttribute("class", "TS_LinearRangeLabel");
     this.labelElement.setAttribute("id", "lrclabel");
-    // retrieving the latest value from the component and setting it to the HTML elements.
+    // retrieving the latest value from the component and setting it to the HTMl elements.
     this._value = context.parameters.sliderValue.raw
       ? context.parameters.sliderValue.raw
       : 0;
@@ -230,20 +215,20 @@ export class TSLinearInputComponent
 
 ```
 
-3. コマンド `npm run build` を使用して、プロジェクトをリビルドします。 
+3. コマンド `npm run build` を使用してコントロール プロジェクトを再構築します。 
  
-4. コンポーネントは、`out/controls/TSLinearInputComponent` フォルダーにコンパイルされます。 ビルド成果物には次のものが含まれます。
+4. コンポーネントは `out/controls/TSLinearInputComponent` フォルダにコンパイルされます。 構築アーティファクトには以下が含まれます:
 
-   - node.js –バンドルコンポーネントのソースコード。 
-   - ControlManifest .xml – Common Data Service 組織にアップロードされる実際のコンポーネントマニフェストファイルです。
+   - bundle.js – バンドルされたコンポーネントのソースコード 
+   - ControlManifest.xml – Common Data Service にアップロードされるコンポーネント マニフェスト ファイル。
 
-## <a name="adding-style-to-the-code-component"></a>コードコンポーネントへのスタイルの追加
+## <a name="adding-style-to-the-code-component"></a>コード コンポーネントにスタイルを追加する
 
-開発者やアプリメーカーは、CSS を使用してコードコンポーネントを視覚的に表現するスタイルを定義できます。 CSS を使用すると、開発者はスタイル、色、レイアウト、フォントなどのコードコンポーネントの表現を記述できます。 線形入力コンポーネントの[init](reference/control/init.md)メソッドは、入力要素を作成し、class 属性を `linearslider` に設定します。 `linearslider` クラスのスタイルは、別の `CSS` ファイルで定義されています。 その他のカスタマイズをサポートするために、コードコンポーネントには `CSS` ファイルなどの追加コンポーネントリソースを含めることができます。
+開発者およびアプリ作成者は、CSS を使用してコード コンポーネントを表するためのスタイルを定義できます。 CSS は、スタイル、、色、レイアウトやフォントを含む、コード コンポーネントのプレゼンテーションを開発者が説明できるようにします。 線形入力コンポーネントの [init](reference/control/init.md) メソッドは、入力の要素を作成し、クラス属性を `linearslider` に設定します。 `linearslider` クラスのスタイルは別に `CSS` ファイルで定義されます。 `CSS` ファイルのような追加のコンポーネント リソースをコード コンポーネントに含め、さらにカスタマイズをサポートすることができます。
 
-1. `TSLinearInputComponent` フォルダーの下に新しい `css` サブフォルダーを作成します。 
-2. `css` サブフォルダー内に新しい `TS_LinearInputComponent.css` ファイルを作成します。 
-3. 次のスタイルコンテンツを `TS_LinearInputComponent.css` ファイルに追加します。
+1. `TSLinearInputComponent` フォルダの下に新しい `css` サブフォルダを作成します。 
+2. `css` サブ フォルダの中に新しい `TS_LinearInputComponent.css` ファイルを作成します。 
+3. 以下のスタイル コンテンツを `TS_LinearInputComponent.css` ファイルに追加します
 
     ```CSS
     .SampleNamespace\.TSLinearInputComponent input[type=range].linearslider {
@@ -315,7 +300,7 @@ export class TSLinearInputComponent
     ```
 
 5. `TS_LinearInputComponent.css` ファイルを保存します。
-6. `ControlManifest.Input.xml` ファイルを編集して、resources 要素内に `CSS` リソースファイルを含めます。
+6. `ControlManifest.Input.xml` ファイルを編集して、 `CSS` リソース ファイルをリソース要素内に追加します。
  
     ```XML
     <resources> 
@@ -323,72 +308,72 @@ export class TSLinearInputComponent
       <css path="css/TS_LinearInputComponent.css" order="1"/> 
     </resources> 
      ```
-7. 次のコマンドを使用して、プロジェクトをリビルドします。 
+7. コマンド  を使ってコントロール プロジェクトを再構築します。 
    ```CLI
    npm run build
    ```
-8. **/Out/controls/TSLinearInputComponent**の下のビルド出力を調べ、 **TS_LinearInputComponent**ファイルがコンパイル済みのビルド成果物に含まれていることを確認します。 
+8. **./out/controls/TSLinearInputComponent** にあるビルド出力を調査して、**TS_LinearInputComponent.css** ファイルがコンパイル済みビルド生成物に含まれていることを確認します。 
 
-## <a name="debugging-your-code-component"></a>コードコンポーネントのデバッグ
+## <a name="debugging-your-code-component"></a>コード コンポーネントのデバッグ
 
-コードコンポーネントロジックの実装が完了したら、次のコマンドを実行してデバッグプロセスを開始します。 詳細情報:[デバッグコードコンポーネント](debugging-custom-controls.md)
+コード コンポーネント ロジックの実装が完了したら、次のコマンドを実行してデバッグ処理を開始します。 詳細: [コード コンポーネントのデバッグ](debugging-custom-controls.md)
 
 ```CLI
 npm start
 ```
 
-## <a name="packaging-your-code-components"></a>コードコンポーネントのパッケージ化
+## <a name="packaging-your-code-components"></a>コード コンポーネントのパッケージ化
 
-[ソリューション](https://docs.microsoft.com/powerapps/maker/common-data-service/solutions-overview)ファイルを作成してインポートするには、次の手順に従います。
+[ソリューション](https://docs.microsoft.com/dynamics365/customer-engagement/customize/solutions-overview) ファイルを作成してインポートするには、次の手順に従います。
 
-1. **LinearComponent**フォルダー内に新しいフォルダー**ソリューション**を作成し、フォルダーに移動します。 
-2. 次のコマンドを使用して、 **LinearComponent**フォルダーに新しいソリューションプロジェクトを作成します。
+1. **LinearComponent** フォルダー内の新しい フォルダー **ソリューション** 作成し、フォルダーに移動します。 
+2. コマンドを使用して、**LinearComponent** フォルダに新しいソリューション プロジェクトを作成します。
  
     ```CLI
      pac solution init --publisher-name developer --publisher-prefix dev 
     ```
 
    > [!NOTE]
-   > [発行者名](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/entities/publisher)と[発行者のプレフィックス](https://docs.microsoft.com/powerapps/maker/common-data-service/change-solution-publisher-prefix)値は、環境によって一意である必要があります。
+   > [publisher-name](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/entities/publisher) と [publisher-prefix](https://docs.microsoft.com/powerapps/maker/common-data-service/change-solution-publisher-prefix) の値は環境に特化したものである必要があります。
  
-3. 新しいソリューションプロジェクトが作成されたら、作成したコンポーネントが配置されている場所を参照する必要があります。 次のコマンドを使用して、参照を追加できます。
+3. 新しいソリューション プロジェクトを作成したら、その作成したコンポーネントが配置される場所を参照する必要があります。 コマンドを使用して参照を追加できます。
 
     ```CLI
      pac solution add-reference --path c:\users\LinearComponent
     ```
 
-4. ソリューションプロジェクトから zip ファイルを生成するには、ソリューションプロジェクトディレクトリに `cd` し、次のコマンドを使用してプロジェクトをビルドする必要があります。 
+4. ソリューションプロジェクトから zip ファイルを生成するには、ソリューション プロジェクトのディレクトリ内に `cd` が必要で、以下のコマンドを使用してプロジェクトを構築する必要があります。 
 
     ```CLI
      msbuild /t:restore
     ```
 
-5. ここでも、次のコマンドを実行して msbuild を実行します。
+5. 次の msbuild コマンドを再度実行します。
     ```CLI
      msbuild
     ```
 
     > [!NOTE]
-    > **ビルドタスク & NuGet ターゲット**がオンになっていることを確認します。 有効にするには:
-    > - **Visual Studio インストーラー**を開きます。
-    > - Visual Studio 2017 の場合は、 **[変更]** を選択します。
-    > - **個々のコンポーネント**を選択します。
-    > - **[コードツール]** で、 **[NuGet ターゲット & ビルドタスク]** をオンにします。
+    > **NuGet ターゲットおよび構成タスク** を確認してください。 有効にするには、次の手順を行います。
+    > - **Visual Studio インストーラー** 開きます。
+    > - VS 2017 の場合は、 **変更** をクリックします。
+    > - **個別のコンポーネン** をクリックします。
+    > - **コード ツール** の **NuGetターゲットとビルド タスク** を参照してください。
 
-6. 生成されたソリューション zip ファイルは、`Solution\bin\debug` フォルダーにあります。
-7. Zip ファイルの準備ができたら、web ポータルを使用して[ソリューションを Common Data Service に](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions)手動でインポートします。また、PowerApps CLI コマンドを使用してインポートするには、「[組織への認証](import-custom-controls.md#authenticating-to-your-organization)」と「[デプロイ](import-custom-controls.md#deploying-code-components)」セクションを参照してください。
+6. 生成されたソリューションの zip ファイルは `Solution\bin\debug` フォルダーにあります。
+7. [zip ファイルの準備ができたら、ソリューションをCommon Data Service](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/import-update-upgrade-solution) に Web ポータルを使用して手動でインポートする、または[組織に対する認証](import-custom-controls.md#authenticating-to-your-organization)と[デプロイ](import-custom-controls.md#deploying-code-components)セクションを参照して、PowerApps CLI コマンドを使用してインポートします。
 
-## <a name="adding-code-components-in-model-driven-apps"></a>モデル駆動型アプリでのコードコンポーネントの追加
+## <a name="adding-code-components-in-model-driven-apps"></a>モデル駆動型のアプリのコード コンポーネントの追加
 
-線形入力コンポーネントのようなコードコンポーネントを追加するには、「[フィールドとエンティティへのコンポーネントの追加](add-custom-controls-to-a-field-or-entity.md)」に記載されている手順に従います。
+線形入力コンポーネントのようなコード コンポーネントを追加するには、トピック[エンティティおよびフィールドにコンポーネントを追加する](add-custom-controls-to-a-field-or-entity.md)で説明されている手順に従います。
 
-## <a name="adding-code-components-to-a-canvas-app"></a>キャンバスアプリへのコードコンポーネントの追加
+## <a name="adding-code-components-to-a-canvas-app"></a>キャンバス アプリにコード コンポーネントを追加する
 
-キャンバスアプリにコードコンポーネントを追加するには、「[キャンバスアプリへのコードコンポーネントの追加](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)」の手順に従います。
+コード コンポーネントをキャンバス アプリに追加するには、このトピック[コード コンポーネントをキャンバス アプリに追加する](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)で説明されている手順を実行します。
 
 ### <a name="see-also"></a>関連項目
 
-[サンプルコンポーネントのダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[既存の PowerApps コンポーネントフレームワークコンポーネントの更新](updating-existing-controls.md)<br/>
-[PowerApps コンポーネントフレームワーク API リファレンス](reference/index.md)<br/>
-[PowerApps コンポーネントフレームワークの概要](overview.md)
+[サンプル コンポーネントをダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[既存の PowerApps Component Framework のコントロールを更新する](updating-existing-controls.md)<br/>
+[PowerApps Component Framework API の参照](reference/index.md)<br/>
+[PowerApps Component Framework の概要](overview.md)

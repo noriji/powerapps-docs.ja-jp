@@ -1,5 +1,5 @@
 ---
-title: " 線形入力コンポーネント |Microsoft Docs"
+title: ' 線形入力コンポーネント | Microsoft Docs'
 description: 線形入力コンポーネントの実装
 ms.custom: ''
 manager: kvivek
@@ -8,25 +8,20 @@ ms.service: powerapps
 ms.topic: article
 ms.author: nabuthuk
 author: Nkrb
-ms.openlocfilehash: f7dcc3fef22c354b1fed684a09fb091f2d2c6cb7
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72347132"
 ---
+
 # <a name="implementing-linear-input-component"></a>線形入力コンポーネントの実装
 
-このサンプルコンポーネントは、フォームで数値型と対話するユーザーエクスペリエンスを変更します。 線形入力コンポーネントには、数値を入力する代わりに、属性の値をフォームに設定できる線形スライダーが用意されています。  
+このサンプル コンポーネントは、フォームの数値型を操作する際のユーザー エクスペリエンスを変更します。 数値をタイプ入力する代わりに、線形入力コンポーネントは線形スライダーを提供し、その属性の値を使用してフォームに設定できます。  
 
-このコンポーネントを実装するには、最初に[マニフェスト](../manifest-schema-reference/manifest.md)ファイルを定義し、カスタムロジックを TypeScript に実装する必要があります。
+このコンポーネントを実装するには、まず[マニフェスト](../manifest-schema-reference/manifest.md)ファイルを定義し、TypeScript でカスタム ロジックを実装します
 
 > [!div class="mx-imgBorder"]
-> ![線形入力コンポーネント]の(../media/linear-input-control.png "線形入力コンポーネント")
+> ![線形入力コンポーネント](../media/linear-input-control.png "線形入力コンポーネント")
 
-## <a name="available-for"></a>利用可能な対象 
+## <a name="available-for"></a>以下に使用できます 
 
-モデル駆動型アプリとキャンバスアプリ (試験段階プレビュー) 
+モデル駆動型アプリとキャンバス アプリ (実験的プレビュー) 
 
 ## <a name="manifest"></a>マニフェスト
 
@@ -49,7 +44,7 @@ ms.locfileid: "72347132"
 </manifest>
 ```
 
-## <a name="code"></a>コード
+## <a name="code"></a>Code
 
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
@@ -63,10 +58,10 @@ export class TSLinearInputControl
   private labelElement: HTMLLabelElement;
   // input element that is used to create the range slider
   private inputElement: HTMLInputElement;
-  // reference to the control container HTMLDivElement
+  // Reference to the control container HTMLDivElement
   // This element contains all elements of our custom control example
   private _container: HTMLDivElement;
-  // reference to ComponentFramework Context object
+  // Reference to ComponentFramework Context object
   private _context: ComponentFramework.Context<IInputs>;
   // Event Handler 'refreshData' reference
   private _refreshData: EventListenerOrEventListenerObject;
@@ -237,13 +232,13 @@ export class TSLinearInputControl
 }
 ```
 
-このサンプルでは、[型グループ](../manifest-schema-reference/type-group.md)を定義し、それを `numbers` として指定します。これには、マニフェスト内のそのグループに10進数、整数、および通貨の値型が含まれます。 このグループは、コンポーネントのプロパティをバインドするために使用されます。
+このサンプルでは [種類のグループ](../manifest-schema-reference/type-group.md) が定義され、マニフェストのそのグループに10進数、整数型、浮動小数点型、通貨値型を含む `numbers` として名前が付けられます。 このグループはコンポーネント プロパティをバインドするために使用されます。
 
-@No__t_1 と `max` 値が1と1000に設定された `range` 型の入力要素がそれぞれ作成されます。 ラベル要素が作成され、スライダーの位置を基準とした相対的な値が表示されます。 コンポーネントの入力の `eventlistener` に関数 `refreshData` をアタッチします。
+`min` と` `max` の値がそれぞれ 1 と 1000 に設定されたタイプ `range` の入力要素が作成されます。 スライダの位置に関する値を示すラベル要素が作成されます。 コンポーネントの入力の `eventlistener` に関数 `refreshData` を追加します。
 
-[コンテキスト](../reference/context.md)を保存するためのローカル変数を作成し、`notifyOutputChanged` します。 Init 関数の一部として渡されるパラメーターからコンテキストと notifyOutputChanged を割り当てます。
+[コンテキスト](../reference/context.md) と `notifyOutputChanged` を保存するローカル変数を作成します。 init 関数の一部として渡されるパラメータから 、コンテキストと notifyOutputChanged を割り当てます。
 
-@No__t_0 関数のロジックを実装します。 このサンプルでわかるように、`inputElement` の値を取得し、`labelElement` のコンポーネントの値を設定し `innerHTML` `notifyOutputChanged` を呼び出して、変更がフレームワークレイヤーの上に重ねて表示されるようにします。
+`refreshData` 関数のロジックを実装します。 サンプルで明らかなように、`inputElement` から値を取得して、コンポーネントの値と `labelElement` の `innerHTML` プロパティを設定し、そして変更がフレームワーク層の上に伝播されるように `notifyOutputChanged` を呼び出します。
 
 ```TypeScript
 public refreshData(context: ControlFramework.IPropBag<InputsOutputs.IInputBag>) 
@@ -254,7 +249,7 @@ public refreshData(context: ControlFramework.IPropBag<InputsOutputs.IInputBag>)
 } 
 ```
 
-@No__t_0 メソッドでは、コンテキストから属性の値を取得してから、コンポーネントの値とコンポーネントの入力要素を格納する値変数に設定します。 
+`updateView` 関数で、context.parameters から属性の値を取得して、コンポーネント値とコンポーネントの入力要素を格納する値変数に設定します。 
 
 ```TypeScript
 
@@ -269,6 +264,6 @@ public updateView(context: ControlFramework.IPropBag<InputsOutputs.IInputBag>): 
 
 ### <a name="related-topics"></a>関連トピック
 
-[サンプルコンポーネントのダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps コンポーネントフレームワーク API リファレンス](../reference/index.md)<br/>
-[PowerApps コンポーネントフレームワークマニフェストスキーマリファレンス](../manifest-schema-reference/index.md)
+[サンプル コンポーネントをダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[PowerApps Component Framework API の参照](../reference/index.md)<br/>
+[PowerApps Component Framework のマニフェスト スキーマの参照](../manifest-schema-reference/index.md)

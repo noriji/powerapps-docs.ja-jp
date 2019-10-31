@@ -21,78 +21,68 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="web-api--data-operations-samples-client-side-javascript"></a>Web API データ操作のサンプル (クライアント側の JavaScript)
+# <a name="web-api-data-operations-samples-client-side-javascript"></a>Web API データ操作のサンプル (クライアント側の JavaScript)
 
 
-
-<!-- TODO: > [!NOTE]
-> ![This page is under construction. Check back soon!](../../media/under_construction.png "Coming soon") [!INCLUDE[cc-under-construction](../../includes/cc-under-construction.md)]
-
-With the availability of the new [Xrm.WebApi](../clientapi/reference/xrm-webapi.md) client API methods, we are working on updating the client-side JavaScript samples to use the new client API methods. Check back soon. -->
-
-Common Data Service Customer Engagement の以前のバージョンを使用している場合は、「[Web API のサンプル (クライアント側の JavaScript)](https://msdn.microsoft.com/library/mt770370.aspx)」を参照してください。
-
-<!--This topic provides common understanding about Web API samples using client-side JavaScript. While each sample focuses on a different aspect of Common Data Service Web API, they all follow similar process and structure described in this topic.  
+このトピックでは、クライアント側 JavaScript を使用する Web API サンプルに関する一般的な理解を深めます。 各サンプルは、Common Data Service Web API のさまざまな部分に注目しますが、それらはすべて、このトピックで説明されている類似したプロセスと構造をフォローします。  
 
 <a name="bkmk_listOfSamples"></a>   
-## Web API Samples using client-side JavaScript  
- The following samples use the patterns described here:  
+## <a name="web-api-samples-using-client-side-javascript"></a>クライアント側の JavaScript を使用する Web API のサンプル  
+ 次のサンプルは、ここで説明されるパターンを使用します:  
   
-|Sample|Sample Group|Description|  
+|サンプル|サンプル グループ|説明|  
 |------------|------------------|-----------------|  
-|[Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)|[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|Demonstrates how to create, retrieve, update, delete, associate and disassociate Common Data Service entity records.|  
-|[Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)|[Web API Query Data Sample](web-api-query-data-sample.md)|Demonstrates how to use OData v4 query syntax and functions as well as Common Data Service query functions. Includes demonstration of working with pre-defined queries and using FetchXML to perform  queries.|  
-|[Web API Conditional Operations Sample (Client-side JavaScript)](samples/conditional-operations-client-side-javascript.md)|[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)|Demonstrates how to perform conditional operations. The behavior of these operations depends on criteria you specify.|  
-|[Web API Functions and Actions Sample (Client-side JavaScript)](samples/functions-actions-client-side-javascript.md)|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)|Demonstrates how to use bound and unbound functions and actions, including custom actions.|  
+|[Web API 基本操作のサンプル (クライアント側の JavaScript)](samples/basic-operations-client-side-javascript.md)|[Web API Operations 操作のサンプル](web-api-basic-operations-sample.md)|Common Data Service エンティティ レコードの作成、取得、更新、削除、関連付け、および関連付け解除の各操作を実行する方法を説明します。|  
+|[Web API クエリ データのサンプル (クライアント側の JavaScript)](samples/query-data-client-side-javascript.md)|[Web API クエリ データのサンプル](web-api-query-data-sample.md)|OData v4 クエリ構文と機能および Common Data Service クエリ機能を使用する方法を説明します。 定義済みクエリに関する作業のデモンストレーションを含み、FetchXML を使用してクエリを実行します。|  
+|[Web API 条件付き演算のサンプル (クライアント側の JavaScript)](samples/conditional-operations-client-side-javascript.md)|[Web API 条件付き演算サンプル](web-api-conditional-operations-sample.md)|条件付きの操作の実行方法を示します。 これらの操作の動作は、指定した条件によって異なります。|  
+|[Web API 機能およびアクションのサンプル (クライアント側 JavaScript)](samples/functions-actions-client-side-javascript.md)|[Web API 機能およびアクションのサンプル](web-api-functions-actions-sample.md)|ユーザー定義アクションを含む、バインドされた関数とバインドされていない関数およびアクションの使用方法を説明します。|  
   
 <a name="bkmk_howToDownload"></a>   
-## How to download the source code for the sample.  
- The source code for each sample is available on [MSDN Code Gallery](https://code.msdn.microsoft.com/site/search?f%5b0%5d.type=user&f%5b0%5d.value=microsoft%20dynamics%20crm%20sdk%20documentation%20team). The link to download each sample is included in the individual page for that sample.  
+## <a name="how-to-download-the-source-code-for-the-sample"></a>サンプルのソース コードのダウンロード方法。  
+ 各サンプルのソース・コードは [MSDN コード ギャラリー](https://code.msdn.microsoft.com/site/search?f%5b0%5d.type=user&f%5b0%5d.value=microsoft%20dynamics%20crm%20sdk%20documentation%20team) で入手可能です。 各サンプルをダウンロードするリンクが、そのサンプルの各ページに含まれています。  
   
- After you download the sample, extract the compressed file. Find the [!INCLUDE[pn_visual_studio_2015](../../includes/pn-visual-studio-2015.md)] solution for each sample within the C# folder because the project is an empty [!INCLUDE[pn_ASP.NET_short](../../includes/pn-asp-net-short.md)] web application project. A Common Data Service solution is also provided in the download that you can import and run.  
+ サンプルをダウンロードした後で、圧縮されたファイルを解凍します。 C# フォルダー内の各サンプルで Microsoft Visual Studio 2015 ソリューションを検索します。プロジェクトは空の ASP.NET Web アプリケーション プロジェクトだからです。 Common Data Service ソリューションは、インポートして実行できるようにダウンロード形式でも提供されます。  
   
 > [!NOTE]
->  Neither Visual Studio or [!INCLUDE[pn_ASP.NET_short](../../includes/pn-asp-net-short.md)] is required to develop  client-side JavaScript for Common Data Service, however the MSDN Code Gallery site requires files be included in a Visual Studio as a container.  However, Visual Studio does provide a good experience for writing JavaScript.  
+>  Visual Studio または ASP.NET のどちらも Common Data Service 用にクライアント サイドの JavaScript を開発するために必要ではありませんが、MSDN コード ギャラリー サイトではコンテナとして Visual Studio にファイルが含まれている必要があります。  ただし、Visual Studio は JavaScript の記述に関して向上したエクスペリエンスを提供します。  
   
 <a name="bkmk_HowToImport"></a>   
-## How to import the Common Data Service solution that contains the sample.  
- Within each project you will find a Common Data Service managed solution file. The name of this file will depend on the sample's project name, but the file name will end with `_managed.zip`.  
+## <a name="how-to-import-the-common-data-service-solution-that-contains-the-sample"></a>サンプルを含む Common Data Service のソリューションをインポートする方法。  
+ それぞれのプロジェクトの中に、Common Data Service 管理ソリューションのファイルがあります。 このファイルの名前は、サンプルのプロジェクト名によって異なりますが、ファイル名は `_managed.zip` で終わります。  
   
- To import the Common Data Service solution to your Common Data Service server, do the following:  
+ Common Data Service ソリューションを Common Data Service サーバーにインポートするには、次の手順を実行してください。  
   
-1.  Extract the contents of the downloaded zip file and locate the Common Data Service solution file, which will also be a zip file. For example, if you downloaded the `Basic Operations` sample, look for the Common Data Service solution zip file with the name `WebAPIBasicOperations\WebAPIBasicOperations_1_0_0_0_managed.zip`.  
+1.  ダウンロードした ZIP ファイルの中身を解凍して、Common Data Service ソリューション ファイルを見つけます。このファイルも ZIP 形式のファイルです。 たとえば `Basic Operations` サンプルをダウンロードした場合は、`WebAPIBasicOperations\WebAPIBasicOperations_1_0_0_0_managed.zip` という名前の Common Data Service ソリューション ZIP ファイルを見つけます。  
   
-2.  In the Common Data Service UI, go to **Settings > Solutions**. This page lists all solutions on your Common Data Service server. After you finished importing this solution, the solution name for that sample will appear in this list (e.g.: **Web API Basics Operations**).  
+2.  Common Data Service UI で、**設定 > ソリューション** に移動します。 このページには、Common Data Service サーバーのソリューションの一覧が表示されます。 このソリューションのインポートを完了した後、そのサンプルのソリューション名が一覧に表示されます (例: **Web API の基本操作**)。  
   
-3.  Click **Import** and follow the instructions on the import dialog to complete this action.  
+3.  **インポート** をクリックして、インポート ダイアログの指示に従って、このアクションを完了します。  
   
 <a name="bkmk_howToRunSample"></a>   
-## How to run the sample to see the script in action  
- The sample program runs as a web resource within Common Data Service. The imported solution provides a configuration page that gives you an option to keep or delete sample data and a button to start the sample program.  For the `Basic Operations` sample, this interface looks like the following.  
+## <a name="how-to-run-the-sample-to-see-the-script-in-action"></a>サンプルを実行して実行中のスクリプトを確認する方法  
+ サンプル プログラムは、Common Data Service 内から Web リソースとして実行します。 インポートされたソリューションには、サンプル データを使用するか、または削除するかを選択できるオプションがある構成ページがあります。またサンプル プログラムを開始するためのボタンもあります。
   
- ![Common Data Service Web API Sample Configuration page](../media/crm-web-api-js-sample-configuration.png "Common Data Service Web API Sample Configuration page")  
+ サンプルを実行するには、次の手順を実行します。  
   
- To run the sample, do the following:  
+1.  Common Data Service の **すべてのソリューション** ページで、ソリューションの名前をクリックします (例: **Web API の基本操作** リンク)。 これにより、新しいウィンドウのソリューションのプロパティが開きます。  
   
-1.  From the **All Solutions** page in Common Data Service, click the solution name (e.g.: **Web API Basics Operations** link). This will open the solution's properties in a new window.  
+2.  左側のナビゲーション メニューで **構成** をクリックします。  
   
-2.  From the left navigation menu, click **Configuration**.  
-  
-3.  Click **Start Sample** button to execute the sample code.  
+3.  **サンプルの開始** ボタンをクリックしてサンプル コードを実行します。  
   
 <a name="bkmk_commonElements"></a>   
-## Common elements found in each sample  
- The following list highlights some common elements found in each of these samples.  
+## <a name="common-elements-found-in-each-sample"></a>各サンプルの共通要素  
+ 次の一覧は、これらのサンプルでの共通要素に注目しています。  
   
--   The `Sdk.startSample` function is called when a user clicks the **Start Sample** button from the  HTML page. The `Sdk.startSample` function initializes global variables and kicks off the first operation in the chain.  
+-   `Sdk.startSample` 機能は、ユーザーが HTML ページの **サンプルの開始** ボタンをクリックすると呼ばれます。 `Sdk.startSample` 関数はグローバル変数を初期化し、チェーン内の最初の操作を開始します。  
   
--   Program output and error messages are sent to the browser’s debugger console. To see these output, open the console window first before running the sample.  Press F12 to access the developer tools, including the console window, in the [!INCLUDE[pn_Windows_Internet_Explorer](../../includes/pn-windows-internet-explorer.md)] and [!INCLUDE[pn_microsoft_edge](../../includes/pn-microsoft-edge.md)] browsers.  
+-   プログラム出力およびエラー メッセージは、ブラウザーのデバッガー コンソールに送信されます。 これらの出力を表示するには、サンプルを実行する前に、コンソール ウィンドウを開きます。  Internet Explorer および Microsoft Edge のコンソール ウィンドウを含む開発者ツールにアクセスするには F12 キーを押します。  
   
--   These samples use the browser native [ES6-Promise](https://msdn.microsoft.com/library/dn802826\(v=vs.94\).aspx) implementation for modern browsers that support it. For [!INCLUDE[pn_ie_11](../../includes/pn-ie-11.md)], this sample uses the [ES6-Promise polyfill](https://github.com/stefanpenner/es6-promise) because [!INCLUDE[pn_ie_11](../../includes/pn-ie-11.md)] is the only browser supported by Common Data Service which does not have native support for this feature.  
+-   これらのサンプルは、モダンなブラウザーでサポートされている、ブラウザーにネイティブな [ES6-Promise](https://msdn.microsoft.com/library/dn802826\(v=vs.94\).aspx) の実装を使用します。 Internet Explorer の場合、このサンプルは [ES6-Promise polyfill](https://github.com/stefanpenner/es6-promise) を使用します。Internet Explorer が Common Data Service によりサポートされている唯一のブラウザーであり、この機能のネイティブ サポートがないからです。  
   
-     Promises are not required. Similar interactions can be performed using callback functions. For more information, see [Create a re-usable function using promises](get-started-web-api-client-side-javascript.md#bkmk_createPromiseFunction).  
+     Promise は、必要ありません。 類似のやり取りはコールバック関数を使用して実行できます。  
   
--   The `Sdk.request` function handles the request based on the information passed in as parameters. Depending on the need of each sample, the parameters passed in may be different. See the source code of that sample for more details.  
+-   `Sdk.request` 関数は、パラメーターとして渡される情報に基づく要求を処理する必要があります。 各サンプルの必要に応じて、渡されるパラメータは異なる場合があります。 詳細についてはそのサンプルのソース コードを参照してください。  
   
     ```javascript  
     /**  
@@ -153,7 +143,7 @@ Common Data Service Customer Engagement の以前のバージョンを使用し�
     };  
     ```  
   
-     The `Sdk.request` function returns a promise. When the request wrapped by the promise is completed, the promise is either resolved or rejected. If it is resolved, the function in the following `then` method will be called. If it is rejected, the function in the following `catch` method will be called. If the function within the `then` method itself returns a promise, the chain of operations within consecutive `then` methods can continue. Returning a promise allows us to chain these sample operations together in a way that is preferred by many developers to traditional callback functions. For more information about promise, see [JavaScript Promise](https://msdn.microsoft.com/library/dn802826\(v=vs.94\).aspx).-->  
+     `Sdk.request` 関数は Promise を返します。 Promise によってラップされた要求が完了した場合、Promise は解決されるか、または拒否されます。 解決される場合、次の `then` メソッドの関数が呼び出されます。 拒否される場合、次の `catch` メソッドの関数が呼び出されます。 `then` メソッド内の関数自体が Promise を返す場合は、連続する `then` メソッドの一連の操作が続行します。 Promise を返すことにより、これらのサンプル操作を共に、多くの開発者に好まれる方法で、従来のコールバック関数にチェインします。 Promise に関する詳細については、[JavaScript Promise](https://msdn.microsoft.com/library/dn802826\(v=vs.94\).aspx)を参照してください。  
   
 ### <a name="see-also"></a>関連項目
 

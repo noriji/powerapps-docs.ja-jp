@@ -1,6 +1,6 @@
 ---
-title: Common Data Service Web API の使用 (Common Data Service) | Microsoft Docs
-description: Common Data Service Web API は OData v4 を導入し、各種のプログラミング言語、プラットフォーム、およびデバイスで使用できる開発環境を提供します。
+title: Common Data Service Web API を使用する (Common Data Service)| Microsoft Docs
+description: Common Data Service Web API は OData v4 を実装し、各種のプログラミング言語、プラットフォーム、およびデバイスで使用できる開発環境を提供します。
 ms.custom: ''
 ms.date: 04/22/2019
 ms.service: powerapps
@@ -25,11 +25,9 @@ search.app:
 
 Web API は、Common Data Service でデータとメタデータを連携するために使用できる 2 つの Web サービスのひとつです。 もう一方は[組織サービス](../org-service/overview.md)です。
 
-Common Data Service Web API は、各種のプログラミング言語、プラットフォーム、およびデバイスで使用できる開発作業を提供します。 Web API は、多様なデータ ソースに対して RESTful API を構築して使用するための OASIS 標準規格 OData (オープン データ プロトコル)、バージョン 4.0 を実装します。 このプロトコルの詳細については、[http://www.odata.org/](http://www.odata.org/) を参照してください。 この標準規格の詳細については、[https://www.oasis-open.org/standards#odatav4.0](https://www.oasis-open.org/standards#odatav4.0) を参照してください。 
+Common Data Service は、各種のプログラミング言語、プラットフォーム、およびデバイスで使用できる開発作業を提供します。 Web API は、多様なデータ ソースに対して RESTful API を構築して使用するための OASIS 標準規格 OData (オープン データ プロトコル)、バージョン 4.0 を実装します。 このプロトコルの詳細については、[http://www.odata.org/](http://www.odata.org/) を参照してください。 この標準規格の詳細については、[https://www.oasis-open.org/standards#odatav4.0](https://www.oasis-open.org/standards#odatav4.0) を参照してください。 
 
-> [!NOTE]
-> [!INCLUDE[cc-d365ce-note-section](../includes/cc-d365ce-note-section.md)] [Dynamics 365 for Customer Engagement Web API の使用](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api)
-  
+
 Web API はオープン スタンダードに基づいて構築されるので、特定の開発者環境用のアセンブリを提供しません。 特定の操作に対する HTTP 要求を作成でき、サードパーティのライブラリを使用して必要な任意の言語またはプラットフォームに対応するクラスを生成することができます。 OData バージョン 4.0 をサポートするライブラリ一覧については、[http://www.odata.org/libraries/](http://www.odata.org/libraries/) を参照してください。  
 
 ## <a name="web-api-and-the-organization-service"></a>Web API および組織サービス

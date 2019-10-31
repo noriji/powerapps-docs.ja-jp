@@ -95,14 +95,11 @@ Microsoftが対応している Azure Active Directory 認証 ライブラリ (AD
 
 ## <a name="adal-net-client-library-versions"></a>ADAL .NET クライアント ライブラリ バージョン
 
-.NET クライアントをサポートする 2 つのライブラリがあります。 ADAL .NET v3 ライブラリは最新ですが ADAL .NET v2 ライブラリを置き換えるものではありません。
+Common Data Service は、OAuth 2.0 プロトコルを使用した Web API エンドポイントを使用したアプリケーション認証をサポートしています。 Azure Active Directory 認証ライブラリ (ADAL) は、カスタム .NET アプリケーションのプロトコルに対する推奨 API インターフェイスです。 ADAL v2.x は SDK API で長い間サポートされており、実際に多くの SDK コード サンプルがそのバージョンのライブラリを使用しています。 ADAL v3 が公開された時点で、アプリケーションのセキュリティを改善するために ADAL API 呼び出しでユーザー資格情報を渡すことができない破損変更が導入されました。
 
-> [!IMPORTANT]
-> .NET フレームワーク アプリケーションに Xrm.Tooling を使用している場合、ADAL .NET v2 ライブラリを使用する必要があります。
+カスタム .NET アプリケーションの場合、Web API エンドポイントを使用したアプリケーション認証に ADAL v2 以降を使用します。 [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) NuGet パッケージ内の XrmTooling API を使用すると、適切なバージョンの ADAL ライブラリが Visual Studio プロジェクトに自動的にインポートされます。 XrmTooling API の ADAL v2 から ADAL v3 への移行は、[v9.1.0.13](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/9.1.0.13) NuGet パッケージが対象であることにご注意ください。 詳細はパッケージのリリース ノートを参照してください。  
 
-.NET クライアント バージョン間の大きな違いの 1 つは、v2 ライブラリがユーザー資格情報を渡すサポートを提供していることです。 v3 ライブラリでは、ブラウザーのポップアップを使用して対話形式でユーザ資格情報を取得する必要があります。
-
-Xrm.Tooling を使用していない場合、Web API で ADAL .NET v2 または v3 クライアント ライブラリを使用する場合があります。 v3 クライアント ライブラリを使用する例に関しては、[ADAL v3 WhoAmI サンプル](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/ADALV3WhoAmI/ADALV3WhoAmI) を参照してください。
+v3 ADAL ライブラリを使用するコード サンプルは、[ADAL v3 WhoAmI サンプル](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/ADALV3WhoAmI/ADALV3WhoAmI) を参照してください。
 
 ## <a name="use-the-accesstoken-with-your-requests"></a>要求で AccessToken を使用します
 
@@ -110,7 +107,7 @@ ADAL ライブラリを使用するポイントは、要求に含めることが
 
 ### <a name="simple-example"></a>単純な例
 
-単一の Web API 要求を実行するために必要な最小コード数は次のとおりですが、推奨されている方法ではありません。
+単一の Web API 要求を実行するために必要な最小コード数は次のとおりですが、推奨されている方法ではありません。 これは、クライアント資格情報を使用する ADAL v2 サンプルであることにご注意ください。
 
 ```csharp
 class SampleProgram
@@ -269,6 +266,23 @@ class SampleProgram
 
 その場合この例では、<xref:System.Net.Http.HttpClient> を使用します。<xref:System.Net.Http.HttpClient.GetAsync*> <xref:System.Net.Http.HttpClient.SendAsync*> を上書きするのではなく、要求に送信される <xref:System.Net.Http.HttpClient> メソッドのいずれかを適用します。
 
+### <a name="discover-the-authority-at-run-time"></a>実行時の権限を確認します
+
+認証の権限 URL、およびリソース URLは、次の ADAL コードを使用して実行時に動的に検出されます。 これは上記のコード スニペットで表示されている有名な権限 URL ("https://login.microsoftonline.com/common") と比較して使用するための、推奨されている方法です。  
+  
+```csharp    
+AuthenticationParameters ap = AuthenticationParameters.CreateFromResourceUrlAsync(  
+                        new Uri("https://mydomain.crm.dynamics.com/api/data/")).Result;  
+  
+String authorityUrl = ap.Authority;  
+String resourceUrl  = ap.Resource;  
+```  
+  
+Web API の場合、権限 URL を取得する別の方法は、Web サービスに、アクセス トークンを指定しないメッセージ要求を送信することです。 これを *ベアラー チャレンジ* と呼びます。 反応は、権限 URL を取得するために解析されます。  
+  
+```csharp  
+httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "");  
+```  
 
 ## <a name="connect-as-an-app"></a>アプリとして接続
 

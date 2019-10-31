@@ -1,10 +1,10 @@
 ---
-title: PowerApps でのモデル駆動型アプリのメイン フォームに関する設計考慮事項 | MicrosoftDocs
+title: PowerApps でのモデル駆動型アプリのメイン フォームに関する設計上の考慮事項 | MicrosoftDocs
 description: メイン フォームの設計方法を説明します
 ms.custom: ''
 ms.date: 06/27/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -27,7 +27,7 @@ search.app:
 
 メイン フォームは、ユーザーデータを表示したりデータとやり取りする、主たるユーザー インターフェイスです。 メイン フォームは、広い範囲のオプションを提供し、モデル駆動型アプリが使用できます。例外は Dynamics 365 for phones です。  
   
- メイン フォームの主要な設計の目的の 1 つは、1 回設計し、それをすべての場所に導入することです。 モデル駆動型アプリまたは Dynamics 365 Customer Engagement Web アプリケーション用に設計した同じメイン フォームが、Dynamics 365 for Outlook と Dynamics 365 for tablets でも使用されます。 この方法の利点は、複数のフォームに変更を統合する必要がないことです。 ただし、これらのフォームの設計で考慮する必要のある、いくつか重要な要因があります。  
+ メイン フォームの主要な設計の目的の 1 つは、1 回設計し、それをすべての場所に導入することです。 モデル駆動型アプリ用に設計した同じメイン フォームが、 Dynamics 365 for Outlook とタブレット PC 用 Dynamics 365でも使用されます。 この方法の利点は、複数のフォームに変更を統合する必要がないことです。 ただし、これらのフォームの設計で考慮する必要のある、いくつか重要な要因があります。  
   
 <a name="BKMK_CustomFormsForGroups"></a>   
 
@@ -52,7 +52,7 @@ search.app:
   
 -   DOM 要素とやり取りするサポートされていないスクリプトが Web アプリケーションに見つかった場合、同じ DOM 要素は使用できないので、そのスクリプトは Dynamics 365 for tablets のフォームでは機能しません。  
   
-- Dynamics 365 for Outlook 閲覧ウィンドウのフォームでは、スクリプトを使用することはできません。 フォーム要素の表示は既定の設定によって決まり、スクリプトを使用して実行時に変更することはできません。  
+- Dynamics 365 for Outlook 閲覧ウィンドウのフォームではスクリプトは使用できません。 フォーム要素の表示は既定の設定によって決まり、スクリプトを使用して実行時に変更することはできません。  
   
 <a name="BKMK_FormPerformance"></a>   
 ## <a name="form-performance"></a>フォームのパフォーマンス  

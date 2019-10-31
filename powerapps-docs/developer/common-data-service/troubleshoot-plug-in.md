@@ -2,7 +2,7 @@
 title: プラグインのトラブルシューティング (アプリの場合Common Data Service)| Microsoft Docs
 description: プラグインが原因で発生する可能性があるエラーと、その修正方法に関する情報が含まれます。
 ms.custom: ''
-ms.date: 04/26/2019
+ms.date: 09/18/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.topic: article
@@ -19,12 +19,20 @@ search.app:
 
 このトピックには、プラグインが原因で発生する可能性があるエラーと、その修正方法に関する情報が含まれます。
 
-## <a name="error-there-is-no-active-transaction"></a>エラー: アクティブなトランザクションがありません。 
+## <a name="transaction-errors"></a>トランザクション エラー
+
+トランザクションに関連する 2 種類の一般的なエラーがあります。 
+
+エラー コード: `-2146893812`<br />
+エラー メッセージ: `ISV code reduced the open transaction count. Custom plug-ins should not catch exceptions from OrganizationService calls and continue processing.`
 
 エラー コード: `-2147220911`<br />
 エラー メッセージ: `There is no active transaction. This error is usually caused by custom plug-ins that ignore errors from service calls and continue processing.`
 
-他人のコードが原因の場合があり、これは対処が難しいエラーになる可能性があります。 このメッセージを理解するには、同期プラグイン内でデータ操作に関連したエラーが発生した場合に、操作全体のトランザクションが終了することを認識する必要があります。
+> [!NOTE]
+> 上位エラーが最近追加されました。 これは、問題を含むプラグイン内のコンテキスト内ですぐに発生します。 下位エラーは、引き続きさまざまな状況で発生する可能性があります (通常はユーザー定義ワークフロー活動が関係する状況)。 別のプラグインの問題が原因の可能性があります。
+
+このメッセージを理解するには、同期プラグイン内でデータ操作に関連したエラーが発生した場合に、操作全体のトランザクションが終了することを認識する必要があります。
 
 詳細: [Common Data Serviceで拡張可能なカスタマイズ設計](scalable-customization-design/overview.md)
 

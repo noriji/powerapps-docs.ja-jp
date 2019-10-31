@@ -1,5 +1,5 @@
 ---
-title: Web API をメタデータで使用する (Common Data Service) | Microsoft Docs
+title: Web API とメタデータの使用 (Common Data Service) | Microsoft Docs
 description: このセクションでは、Web API を Web API メタデータ EntityType リファレンス に含まれているエンティティの種類と一緒に使用する方法に関するガイダンスを提供しています。
 ms.custom: ''
 ms.date: 04/22/2019
@@ -19,8 +19,7 @@ search.app:
 # <a name="use-the-web-api-with-metadata"></a>Web API をメタデータで使用する
 
 組織サービスを使用して実行できるすべてのメタデータ操作を、Web API を使用して実行できます。 このセクションでは、Web API を <xref:Microsoft.Dynamics.CRM.MetadataEntityTypeIndex> に含まれているエンティティの種類と一緒に使用する方法に関するガイダンスを提供しています。  
-> [!NOTE]
-> このセクションの情報は Dynamics 365 for Customer Engagement アプリのユーザー (オンラインおよび設置型) にも適用されます。
+
 
  次の表に示すように、メタデータ エンティティを使用して操作を実行するための、4 つの公開エンティティ セット パスがあります。  
   
@@ -58,5 +57,4 @@ Web API を使用してエンティティや属性を作成および更新して
 ### <a name="see-also"></a>関連項目
 
 [環境のメタデータの参照](../browse-your-metadata.md)<br />
-[Common Data Service Web API を使用する](overview.md)
-[Dynamics 365 for Customer Engagement アプリの開発者ガイド](/dynamics365/customer-engagement/developer/developer-guide)
+[Common Data Service Web API の使用](overview.md)

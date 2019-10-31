@@ -25,9 +25,7 @@ search.app:
 
 XRMツールでは、次の **Windows PowerShell** cmdletsを使用して Common Data Service に接続し、現在のユーザーがアクセス権を持つ組織を取得できます: cmdletsは `Get-CrmConnection` と `Get-CrmOrganizations` です。  
 
-> [!NOTE]
-> [!INCLUDE[cc-d365ce-note-topic](../includes/cc-d365ce-note-topic.md)] [XRM ツールの PowerShell コマンドレットを使用して Customer Engagement に接続する](/dynamics365/customer-engagement/developer/xrm-tooling/use-powershell-cmdlets-xrm-tooling-connect)
-  
+ 
 <a name="Prereq"></a>   
 
 ## <a name="prerequisites"></a>前提条件  

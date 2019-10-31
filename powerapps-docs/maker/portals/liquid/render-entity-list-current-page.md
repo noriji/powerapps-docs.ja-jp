@@ -1,24 +1,19 @@
 ---
-title: ポータルで現在のページに関連付けられているエンティティの一覧を表示する |MicrosoftDocs
-description: ポータルの現在のページに関連付けられているエンティティの一覧を表示するサンプルコードです。
+title: ポータル内の現在のページに関連付けられたエンティティ リストをレンダリングする | MicrosoftDocs
+description: ポータル内の現在のページに関連付けられたエンティティ リストをレンダリングするためのサンプルコード。
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: ''
-ms.date: 10/07/2019
+ms.custom: null
+ms.date: 08/30/2019
 ms.author: shjais
-ms.reviewer: ''
-ms.openlocfilehash: e31f83efb7cedfa42b6c4c9e7da83280b261d9c8
-ms.sourcegitcommit: 5338e01d2591f76d71f09b1fb229d405657a0c1c
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72974876"
+ms.reviewer: null
 ---
-# <a name="render-the-entity-list-associated-with-the-current-page"></a>現在のページに関連付けられているエンティティの一覧を表示します
 
-現在のページに関連付けられているエンティティリストを、改ページ調整された並べ替え可能なテーブルとして表示します。 [Entitylist](liquid-objects.md#entitylist)、 [entitylist](liquid-objects.md#entityview)、 [PowerApps Common Data Service エンティティタグ](portals-entity-tags.md)、[ページ](liquid-objects.md#page)、および[要求](liquid-objects.md#request)パラメーターを使用し、検索と複数ビューの選択を含みます。  
+# <a name="render-the-entity-list-associated-with-the-current-page"></a>現在のページに関連付けられているエンティティの表示
+
+現在のページに関連付けられたエンティティの一覧を、ページ分けされたソート可能なテーブルで表示します。 Uses [エンティティ リスト](liquid-objects.md#entitylist)、[エンティティ表示](liquid-objects.md#entityview)、[PowerApps Common Data Service エンティティ タグ](portals-entity-tags.md)、[ページ](liquid-objects.md#page)、[要求](liquid-objects.md#request) パラメーターを使用すると、検索および複数の選択内容の表示が含まれます。  
 
 ```xml
 {% entitylist id:page.adx_entitylist.id %}
@@ -242,7 +237,7 @@ ms.locfileid: "72974876"
 
 ### <a name="see-also"></a>関連項目
 
-[液体と web テンプレートページテンプレートを使用してカスタムページテンプレートを作成する](create-custom-template.md)  
-[RSS フィードを表示するカスタムページテンプレートを作成する](render-rss-custom-page-template.md)  
-[Web サイトヘッダーとプライマリナビゲーションバーを表示する](render-site-header-primary-navigation.md)  
-[ハイブリッドナビゲーションを使用して、最大3レベルのページ階層を表示します](hybrid-navigation-render-page-hierachy.md)
+[流動テンプレートと Web テンプレート ページ テンプレートの使用によるカスタム ページ テンプレートの作成](create-custom-template.md)  
+[RSS フィードを表示するカスタム ページ テンプレートの作成](render-rss-custom-page-template.md)  
+[Web サイト ヘッダーとプライマリ ナビゲーション バーの表示](render-site-header-primary-navigation.md)  
+[ハイブリッド ナビゲーションの使用により、ページ階層のレベルを 3 つまで描画](hybrid-navigation-render-page-hierachy.md)

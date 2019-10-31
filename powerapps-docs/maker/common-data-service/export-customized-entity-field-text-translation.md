@@ -1,10 +1,10 @@
 ---
-title: PowerAppsを使用したカスタマイズされたエンティティとフィールド テキストの変換用のエクスポート| MicrosoftDocs
+title: PowerApps で翻訳用にカスタマイズされたエンティティとフィールド テキストをエクスポートする | MicrosoftDocs
 description: エンティティとフィールド テキストの変換のエクスポート方法を説明する
 ms.custom: ''
 ms.date: 06/19/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -36,7 +36,7 @@ search.app:
 
 ## <a name="community-tools"></a>コミュニティ ツール
 
-[Easy Translator](https://www.xrmtoolbox.com/plugins/MsCrmTools.Translator/) は Dynamics 365 Customer Engagement 用に XrmToolbox コミュニティが開発したツールです。 Easy Translator を使用して、翻訳をコンテキスト情報と共にエクスポートおよびインポートします。 
+[Easy Translator](https://www.xrmtoolbox.com/plugins/MsCrmTools.Translator/) は PowerApps 向けに XrmToolbox コミュニティが開発したツールです。 Easy Translator を使用して、翻訳をコンテキスト情報と共にエクスポートおよびインポートします。 
 
 > [!NOTE]
 > このコミュニティ ツールは Microsoft ではサポートされていません。 このツールに関するご質問は、その発行元にお問い合わせください。 詳細: [XrmToolBox](https://www.xrmtoolbox.com)。

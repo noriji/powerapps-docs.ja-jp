@@ -1,7 +1,7 @@
 ---
 title: カスタム仮想エンティティ データ プロバイダ (Common Data Service) | Microsoft Docs
 description: Common Data Service Data SDK の使用により、.NET Developers には、既存のデータ プロバイダーがサポートしていない外部データ ソースの種類を統合するために役立つ、カスタム仮想エンティティ データ プロバイダーを作成するオプションがあります。
-ms.date: 10/31/2018
+ms.date: 09/05/2019
 ms.service: powerapps
 ms.topic: article
 applies_to:
@@ -30,18 +30,11 @@ Common Data Service Data SDK の使用により、.NET Developers には、既�
 カスタム データ プロバイダーには、作成および管理のための実質的開発リソースが必要です。 次の領域の基本的な知識が必要です。
 
 - 外部データ ソース スキーマおよび関連するデータ アクセスの技術。  このドメインに関する知識は、外部データ ソースの種類特有です。
-
-
-<!-- TODO:
-- Common Data Service metadata schema: More information: [The metadata and data models in Microsoft Dynamics 365](../metadata-data-models.md).
-- Common Data Service event system: More information: [Introduction to the event framework](../introduction-event-framework.md). 
-- Common Data Service plug-in architecture and development: More information: [Plug-in development](../plugin-development.md). -->
+- Common Data Service メタデータ スキーマ: 詳細: [コードを使用してメタデータを扱う](../metadata-services.md)。
+- Common Data Service イベント フレームワーク: 詳細: [イベント フレームワーク](../event-framework.md)。 
+- Common Data Service プラグイン アーキテクチャと開発: 詳細: [ビジネス プロセスを拡張するためのプラグインの使用](../plug-ins.md)。
 
 `Microsoft.Xrm.Sdk.Data.dll` アセンブリは NuGet パッケージとして次から入手可能です: [Microsoft.CrmSdk.Data](https://www.nuget.org/packages/Microsoft.CrmSdk.Data/)
-
-<!-- ## Data Provider Architecture -->
-<!-- TODO: it would be nice to have a more detailed architecture diagram of a data provider and add discussion. -->
-
 
 ## <a name="categories-of-providers"></a>プロバイダのカテゴリ
 
@@ -96,11 +89,6 @@ Common Data Service アプリケーションにインポートすることがで
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.ObjectNotFoundException>|外部データ ソースで指定されたレコードが存在しません。|
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.TimeoutException>|許容時間内に外部オペレーションが完了しませんでした。たとえば、外部データ サービスからの HTTP ステータス 408 の結果です。|
 
-<!-- 
-  TODO:
-  To assist you in plug-in development, the Data SDK contains the _Plugin Profiler and Debugger_; for more information see [TBD]TODO: Obtain information on this tool, create subtopic. 
--->
-
 
 ### <a name="plug-in-registration"></a>プラグイン登録
 
@@ -113,6 +101,11 @@ Common Data Service アプリケーションにインポートすることがで
 |[EntityDataSource](../reference/entities/entitydatasource.md)|認証に必要な秘密情報を含め、外部データ ソースに必要なエンティティ コンテキストと接続情報を提供します。|
 
 仮想エンティティのメタデータが構成されると、プラグインは PRT を使用して登録されて、正確な構成データが **EntityDataProvider** および **EntityDataSource** エンティティのにセットされ、仮想エンティティは要求に対する応答を開始します。
+
+### <a name="debugging-plug-ins"></a>プラグインのデバッグ
+
+カスタム仮想エンティティ プロバイダーは、プラグインの種類です。 これらのトピックの情報を使用して、カスタム仮想エンティティ プロバイダーのためのプラグインをデバッグします: [プラグインのデバッグ](../debug-plug-in.md) と [チュートリアル: プラグインのデバッグ](../tutorial-debug-plug-in.md)。
+
 
 ### <a name="see-also"></a>関連項目
 

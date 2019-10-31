@@ -35,7 +35,7 @@ ISV Studioは、独立系ソフトウェアベンダー(ISV)がアプリケー�
 
 ISV Studioは、 [AppSource](https://appsource.microsoft.com/)で公開、導入された Common Data Service 上に構築されたアプリケーションに対応しています。 AppSourceを介して展開されていないサイドロードされたソリューションでは、テレメトリは提供されません。
 
-Common Data Service で現在利用可能なアプリケーションには、 Dynamics 365 for Sales、マーケティング、サービス、タレントに加えて、PowerAppsが含まれています。
+このアプリケーションは現在、PowerApps などの Common Data Service、ならびに Dynamics 365 for Sales、Marketing、Service、および Talent で利用可能です。
 
 エンド ユーザーが AppSource からアプリケーションをインストールすると、連絡先、使用率、トランザクション情報がアプリケーションプロバイダーと共有される可能性があることに対する確認を求める、同意ダイアログが表示されます。 この情報は、プロバイダが課金やその他のトランザクション処理をサポートし、ISVがISV Studioから遠隔的にデータを計測して学習する目的で使用されます。
 
@@ -45,7 +45,7 @@ ISV Studio の共有プレビューにアクセスするには、ブラウザで
 
 ## <a name="pre-requisites"></a>前提条件
 
-1. ISVは、 [AppSource](https://appsource.microsoft.com/)で公開された1つまたは複数のサポート対象アプリケーションを持つ、Microsoft登録パートナーの組織 [ISV] と関連付けられている必要があります。 対応しているアプリには、Dynamics 365 for Customer Engagement apps と PowerApps が含まれています。
+1. ISVは、 [AppSource](https://appsource.microsoft.com/)で公開された1つまたは複数のサポート対象アプリケーションを持つ、Microsoft登録パートナーの組織 [ISV] と関連付けられている必要があります。 サポートされているアプリには、PowerApps と Dynamics 365 Sales や Dynamics 365 Customer Service などの Dynamics 365 のモデル駆動型アプリがあります。
 
 2. ISVは [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) (AAD) アカウントを持っている必要があり、そのアカウントは ISV の クラウド パートナー ポータル(CPP) で、アプリのコントリビューターまたはオーナーとして設定されている必要があります。
 

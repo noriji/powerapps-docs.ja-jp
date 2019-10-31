@@ -23,7 +23,7 @@ https://docs.microsoft.com/dynamics365/customer-engagement/developer/supported-e
 
 # <a name="supported-customizations-for-common-data-service"></a>Common Data Service のサポートされているカスタマイズ
 
-PowerApps ポータルにあるツールまたは公式ドキュメントで説明されているツールを使用して、Common Data Service をカスタマイズできます。 これらのカスタマイズはサポートされており、アップグレードが可能です。
+PowerApps ポータルで入手できるツール、または公式ドキュメントに説明されているツールを使用して、Common Data Service をカスタマイズすることができます。 これらのカスタマイズはサポートされており、アップグレードが可能です。
 
 ここに記述されている以外の方法を使用して行われたカスタマイズについてはサポートされず、更新時や Common Data Service へのアップグレード時に問題が生じる場合があります。 詳細については、「[サポートされていないカスタマイズ](#unsupported-customizations)」を参照してください。
 
@@ -32,15 +32,15 @@ docs.microsoft.com、msdn.microsoft.com、または technet.microsoft.com のよ
 
 ## <a name="customizations-using-powerapps-portal"></a>PowerApps ポータルを使用したカスタマイズ
 
-Common Data Service には、カスタマイズに使用できるさまざまなツールが用意されています。 PowerApps ポータル ツールおよび Web アプリケーションを使用したカスタマイズは完全にサポートされており、すべてアップグレード可能です。
+Common Data Service には、カスタマイズに使用できるさまざまなツールが用意されています。 PowerApps ポータルおよび Web アプリケーションを使用したカスタマイズは完全にサポートされており、すべてアップグレード可能です。
 
 次のカスタマイズ方法を使用すると、完全にサポートされるカスタマイズを実行できます。
 
-- PowerApps ポータルまたはソリューション エクスプローラーのカスタマイズ。 詳細については、[Common Data Service とは](../../maker/common-data-service/data-platform-intro.md)を参照してください
+- PowerApps ポータルまたはソリューション エクスプローラーのカスタマイズ。 詳細については、[Common Data Service とは](../../maker/common-data-service/data-platform-intro.md)を参照してください。
 
 - Web アプリケーションの設定。 詳細については、[PowerApps の管理](../../administrator/admin-guide.md)を参照してください。
 
-- Reporting Services。 詳細については、[Dynamics 365 Customer Engagement のレポートと分析ガイド](/dynamics365/customer-engagement/analytics/reporting-analytics-with-dynamics-365)を参照してください。
+- Reporting Services。 詳細については、[モデル駆動型アプリにレポートを追加](/powerapps/maker/model-driven-apps/add-reporting-to-app)を参照してください。
 
 > [!NOTE]
 > 完全なサポートとは、開発者サポートでカスタマイズをサポートできること、およびアプリケーション サポートでそれらの変更を実行する顧客をサポートできることを意味します。
@@ -52,7 +52,7 @@ Web アプリケーションのカスタマイズ ツールを使用する方法
 
 開発者受けのこのサイトのドキュメント、技術記事、およびこのサイトのサンプル コードと、Common Data Service 開発者サポート チームによってリリースされる情報は、コードを使用して適用されるカスタマイズの領域に含まれます。 具体的な操作とそのサポートおよびアップグレードのレベルは後ほどこのトピックで説明します。
 
-### <a name="common-data-service-web-services"></a>Common Data Service Web サービス
+### <a name="common-data-service-web-services"></a>Common Data Service の Web サービス
 
 Web サービスの使用が完全にサポートされます。 これには、Web API、組織サービス、検出サービス、および組織データ サービスが含まれます。 Microsoft では API の下位互換性の維持に努めていますが、機能の追加のために API が変更される場合もあります。 また、エンティティの属性も将来のバージョンで変更される可能性があります。
 
@@ -82,20 +82,19 @@ Web サービスの使用が完全にサポートされます。 これには、
 
 ### <a name="workflow-extensions"></a>ワークフローの拡張機能
 
-ワークフロー ルールから呼び出されるユーザー定義ワークフロー活動 (アセンブリ) の作成は完全にサポートされており、アップグレード可能です。 ユーザー定義ワークフロー活動は、サンドボックス (分離モード) で登録および実行のみできます。 詳細: [ワークフロー拡張機能](workflow/workflow-extensions.md) Customer Engagement でのビジネス プロセスの自動化
+ワークフロー ルールから呼び出されるユーザー定義ワークフロー活動 (アセンブリ) の作成は完全にサポートされており、アップグレード可能です。 ユーザー定義ワークフロー活動は、サンドボックス (分離モード) で登録および実行のみできます。 詳細: [ワークフロー拡張](workflow/workflow-extensions.md)
 
 ## <a name="support-for-net-framework-versions"></a>.NET Framework バージョンのサポート
 
-次で、Microsoft .NET Framework 4.6.2 で記述されたカスタム コードのサポートに関して考慮すべき事項について説明します。
+次で、Microsoft .NET Framework 4.6.2. を使用して記述されたカスタム コードのサポートに関して考慮すべき事項について説明します。
 
-- Web サービスを呼び出す Microsoft .NET Framework 4.6.2 以上を使用して作成された Web サービスクライアントは、Common Data Service で完全にサポートされています。
+- Web サービスを呼び出す Microsoft .NET Framework 4.6.2 以上を使用して作成された Web サービス クライアントは、Common Data Service で完全にサポートされています。
 
-> [!IMPORTANT]
-> ユーザー定義のクライアント アプリケーションを作成するには、Microsoft .NET Framework 4.6.2 またはそれ以降を使用する必要があります。 Transport Level Security (TLS) 1.2 またはそれより優れたセキュリティを使用するアプリケーションのみが接続を許可されます。 TLS 1.2 は .NET Framework 4.5.2 で使用される既定のプロトコルではありませんが、.NET Framework 4.6.2 内にあります。
-> 
-> 以前のバージョンの Dynamics 365 Customer Engagement 向けに設計されたクライアントが、任意のバージョンまたは展開形式に接続するように設計されている場合、.NET Framework 4.6.2 を使用するようにアプリケーションを再コンパイルして準備できます。 詳細情報: [ブログ投稿: Dynamics 365 Customer Engagement 接続のセキュリティに予定されている更新](https://blogs.msdn.microsoft.com/crm/2017/09/28/updates-coming-to-dynamics-365-customer-engagement-connection-security/)
+    > [!IMPORTANT]
+    > ユーザー定義のクライアント アプリケーションを作成するには、Microsoft .NET フレームワーク 4.6.2 またはそれ以降を使用します。 Transport Level Security (TLS) 1.2 またはそれより優れたセキュリティを使用するアプリケーションのみが接続を許可されます。 TLS 1.2 は .NET Framework 4.5.2 で使用される既定のプロトコルではありませんが、.NET Framework 4.6.2 内にあります。
 
-- プライグイン アセンブリまたは カスタム ワークフロー活動として Common Data Service で使用する Microsoft .NET Framework 4.6.2 を使用して作成された .NET アセンブリはすべてサポートされています。
+
+- プラグイン アセンブリまたはユーザー定義ワークフロー活動として Common Data Service で使用される Microsoft .NET Framework 4.6.2 を使用して作成された .NET アセンブリはすべてサポートされています。
 
 ## <a name="unsupported-customizations"></a>サポートされていないカスタマイズ
 

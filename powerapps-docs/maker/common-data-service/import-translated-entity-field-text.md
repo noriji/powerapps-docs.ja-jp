@@ -1,5 +1,5 @@
 ---
-title: PowerAppsを使用した翻訳済みエンティティとフィールド テキストのインポート| MicrosoftDocs
+title: PowerApps を使って翻訳済みエンティティおよびフィールド テキストをインポートする | MicrosoftDocs
 description: 翻訳済みエンティティおよびフィールド テキストのインポート方法について説明する
 ms.custom: ''
 ms.date: 06/19/2018
@@ -30,7 +30,7 @@ search.app:
  翻訳後、ユーザーが変更を利用できるようにするには、環境に翻訳済みのテキスト文字列をインポートする必要があります。  
   
 > [!IMPORTANT]
-> - インポートするファイルは、ルートの CrmTranslations.xml と [Content_Types].xml ファイルを含む圧縮ファイルである必要があります。  
+> - インポートするファイルは、ルートに CrmTranslations.xml と [Content_Types].xml ファイルを含む圧縮ファイルである必要があります。  
 > - 500文字を超える長さの翻訳済みテキストをインポートすることはできません。 翻訳ファイル内の任意のアイテムが 500 文字を超える長さの場合、インポート プロセスは失敗します。 インポート プロセスが失敗した場合は、失敗の原因となったファイル中の行を確認し、文字数を減らしてから再度インポートを試みてください。 翻訳済みのテキストのインポートが終了したら、カスタマイズを再公開する必要があることにも注意してください。  
   
 1. [ソリューション エクスプローラー](../model-driven-apps/advanced-navigation.md#solution-explorer)を開きます。  
@@ -45,7 +45,7 @@ search.app:
 
 ## <a name="community-tools"></a>コミュニティ ツール
 
-[Easy Translator](https://www.xrmtoolbox.com/plugins/MsCrmTools.Translator/) は Dynamics 365 Customer Engagement 用に XrmToolbox コミュニティが開発したツールです。 Easy Translator を使用して、翻訳をコンテキスト情報と共にエクスポートおよびインポートします。 
+[Easy Translator](https://www.xrmtoolbox.com/plugins/MsCrmTools.Translator/) は PowerApps 向けに XrmToolbox コミュニティが開発したツールです。 Easy Translator を使用して、翻訳をコンテキスト情報と共にエクスポートおよびインポートします。 
 
 > [!NOTE]
 > このコミュニティ ツールは Microsoft ではサポートされていません。 このツールに関するご質問は、その発行元にお問い合わせください。 詳細: [XrmToolBox](https://www.xrmtoolbox.com)。

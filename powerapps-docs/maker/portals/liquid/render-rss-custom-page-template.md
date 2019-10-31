@@ -1,35 +1,30 @@
 ---
-title: ポータルのカスタムページテンプレートを使用して RSS フィードを表示する |MicrosoftDocs
-description: カスタムページテンプレートを作成し、それを使用して RSS フィードを表示する方法について説明します。
+title: ポータルのカスタム ページ テンプレートを使用する RSS フィードをレンダリングする | MicrosoftDocs
+description: カスタム ページ テンプレートを作成して RSS フィードをレンダリングする手順。
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: ''
-ms.date: 10/07/2019
+ms.custom: null
+ms.date: 08/30/2019
 ms.author: shjais
-ms.reviewer: ''
-ms.openlocfilehash: 9ad14cb5e3385f559ded6e3ac18b0455f93178d5
-ms.sourcegitcommit: 5338e01d2591f76d71f09b1fb229d405657a0c1c
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72974761"
+ms.reviewer: null
 ---
-# <a name="create-a-custom-page-template-to-render-an-rss-feed"></a>RSS フィードを表示するカスタムページテンプレートを作成する
-この例では、液体と Web テンプレートページテンプレートを使用して、ニュース記事の[RSS フィード](http://en.wikipedia.org/wiki/RSS)を表示するカスタムページテンプレートを作成します。 [web テンプレートを使用してソースコンテンツを格納 [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] に](store-content-web-templates.md)は  
 
-## <a name="step-1-create-a-new-powerapps-view"></a>手順 1: 新しい PowerApps ビューを作成する
+# <a name="create-a-custom-page-template-to-render-an-rss-feed"></a>RSS フィードを表示するカスタム ページ テンプレートを作成する
+この例では、ニュース記事の [RSS フィード](http://en.wikipedia.org/wiki/RSS) を表示するカスタム ページ テンプレートを Liquid および Web テンプレート ページ テンプレートを使用して作成します。 [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Web テンプレートを使用したソース コンテンツの保存](store-content-web-templates.md)  
 
-まず、フィードのデータを読み込むために使用する新しい PowerApps ビューを作成します。 この例では、Web ページのビューを作成し、このエンティティを使用して記事を格納します。 このビューを使用して、結果の並べ替えとフィルター処理を構成し、水冷テンプレートで使用するエンティティ属性を列として含めることができます。
+## <a name="step-1-create-a-new-powerapps-view"></a>ステップ 1: PowerApps ビューの新規作成
 
-![ページテンプレートを編集]する(../media/edit-page-template.png "ページテンプレートを編集する")  
+最初に、フィードのデータを読み込むのに使用する新しい PowerApps ビューを作成します。 この例では、Web ページのビューとし、このエンティティを使用して記事を保存します。 このビューを使用して、結果の並べ替えやフィルタリングの構成、Liquid テンプレートとして使用するエンティティ属性を列として含めることができます。
 
-## <a name="step-2-create-a-web-template-for-rss-feed"></a>手順 2: RSS フィード用の web テンプレートを作成する
+![ページ テンプレートを編集する](../media/edit-page-template.png "ページ テンプレートを編集する")  
 
-この手順では、RSS フィード用の web テンプレートを作成します。 このテンプレートは、web サイトの特定の web ページに適用されます。そのため、このページのタイトルと概要をフィードのタイトルと説明として使用します。 ここでは、entityview タグを使用して、新しく作成したニュース記事ビューを読み込みます。 [PowerApps common data service エンティティタグ](portals-entity-tags.md)を [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] します。 また、Web テンプレートの **[MIME の種類]** フィールドを application/rss + xml に設定します。 これは、テンプレートがレンダリングされるときに応答のコンテンツの種類がどのようになるかを示します。  
+## <a name="step-2-create-a-web-template-for-rss-feed"></a>ステップ 2: RSS フィードの Web テンプレートを作成する
 
-![Rss フィード用に web テンプレートを構成]する(../media/web-template-rss-feed.png "rss フィード用に web テンプレートを構成")する  
+このステップでは、RSS フィードに対して Web テンプレートを作成します。 このテンプレートは、Web サイトの特定の Web ページに適用されるため、そのページのタイトルおよび概要をフィードのタイトルおよび説明に使用します。 次に entityview タグを使用して、新しく作成されたニュース記事ビューを読み込みます。 [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [PowerApps Common Data Service エンティティ タグ](portals-entity-tags.md)。 Web テンプレートの **MIME の種類**フィールドも application/rss+xml に設定することに注意してください。 これは、テンプレートが描画された時の応答のコンテンツ タイプを示します。  
+
+![RSS フィードに Web テンプレートを設定する](../media/web-template-rss-feed.png "RSS フィードに Web テンプレートを設定する")  
 
 ### <a name="rss-feed-web-template"></a>RSS フィード (Web テンプレート)
 
@@ -55,24 +50,24 @@ ms.locfileid: "72974761"
 </rss>
 ```
 
-## <a name="step-3-create-a-page-template-to-assign-rss-feed-template"></a>手順 3: RSS フィードテンプレートを割り当てるページテンプレートを作成する
+## <a name="step-3-create-a-page-template-to-assign-rss-feed-template"></a>ステップ 3: RSS フィード テンプレートを割り当てるページ テンプレートを作成する
 
-次に、新しいページテンプレートを作成します。これにより、web サイトの任意の web ページに RSS フィードテンプレートを割り当てることができます。 フィードのページ全体の応答を表示するために、[ **Web サイトのヘッダーとフッターを使用**する] の選択を解除することに注意してください。
+ここでは、RSS フィード テンプレートを Web サイトの任意の Web ページに割り当てることができる新しいページ テンプレートを作成します。 フィードのページ応答全体の描画を引き継ぐため、**Web サイト ヘッダーとフッターの使用**を選択解除することに注意してください。
 
-![Rss フィードのページテンプレートを構成]する(../media/page-template-rss-feed.png "rss フィードのページテンプレートを構成")する  
+![RSS フィードに Web テンプレートを設定する](../media/page-template-rss-feed.png "RSS フィードに Web テンプレートを設定する")  
 
-## <a name="step-4-create-a-web-page-to-host-rss-feed"></a>手順 4: RSS フィードをホストする web ページを作成する
+## <a name="step-4-create-a-web-page-to-host-rss-feed"></a>ステップ 4: RSS フィードをホストする Web ページを作成
 
-次に、フィードをホストする RSS フィードテンプレートを使用して新しい web ページを作成します。 この新しい web ページを要求すると、RSS フィード XML が送信されます。
+最後に、フィードをホストするため、RSS フィード テンプレートを使用して新しい Web ページを作成します。 この新しい Web ページを要求した場合、RSS フィード XML が表示されます。
 
-Rss フィードの例![(]rss フィード(../media/rss-feed-example.png "の")例)  
+![RSS フィードの例](../media/rss-feed-example.png "RSS フィードの例")  
 
-この例では、液体、Web テンプレート、PowerApps ビュー、ポータルコンテンツ管理機能を組み合わせて、カスタム RSS フィードを作成する方法を説明しました。 これらの機能を組み合わせることにより、あらゆるポータルアプリケーションに強力なカスタマイズ機能を追加できます。
+この例では、カスタム RSS フィードを作成するために Lipuid、Web テンプレート、PowerApps ビュー、およびポータルのコンテンツ管理機能組み合わせる方法を紹介しました。 これらの機能の組み合わせは、任意のポータル アプリケーションに強力なカスタマイズ機能を追加します。
 
 ### <a name="see-also"></a>関連項目
 
-[液体と web テンプレートページテンプレートを使用してカスタムページテンプレートを作成する](create-custom-template.md)  
-[現在のページに関連付けられているエンティティの一覧を表示します](render-entity-list-current-page.md)  
-[Web サイトヘッダーとプライマリナビゲーションバーを表示する](render-site-header-primary-navigation.md)  
-[ハイブリッドナビゲーションを使用して、最大3レベルのページ階層を表示します](hybrid-navigation-render-page-hierachy.md)  
+[流動テンプレートと Web テンプレート ページ テンプレートの使用によるカスタム ページ テンプレートの作成](create-custom-template.md)  
+[現在のページに関連付けられているエンティティの表示](render-entity-list-current-page.md)  
+[Web サイト ヘッダーとプライマリ ナビゲーション バーの表示](render-site-header-primary-navigation.md)  
+[ハイブリッド ナビゲーションの使用により、ページ階層のレベルを 3 つまで描画](hybrid-navigation-render-page-hierachy.md)  
 

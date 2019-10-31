@@ -1,28 +1,23 @@
 ---
-title: ハイブリッドナビゲーションを使用してポータルのページ階層を表示する |MicrosoftDocs
-description: ハイブリッドナビゲーションを使用して、ポータルのページ階層を表示する方法について説明します。
+title: ハイブリッド ナビゲーションを使用してポータルのページ階層をレンダーする | MicrosoftDocs
+description: ハイブリッド ナビゲーションを使用してポータルのページ階層を描画する手順
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: ''
-ms.date: 10/07/2019
+ms.custom: null
+ms.date: 08/30/2019
 ms.author: shjais
-ms.reviewer: ''
-ms.openlocfilehash: aace949be3cc191af5edd95c461e422b9c3217f5
-ms.sourcegitcommit: 5338e01d2591f76d71f09b1fb229d405657a0c1c
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72975037"
+ms.reviewer: null
 ---
-# <a name="render-up-to-three-levels-of-page-hierarchy-by-using-hybrid-navigation"></a>ハイブリッドナビゲーションを使用して、最大3レベルのページ階層を表示します
 
-この例では、ポータルサイトマップに基づいて、3レベルまでのページ階層を表示するハイブリッドナビゲーションの種類をレンダリングします。 このコンポーネントの規則は次のとおりです。
+# <a name="render-up-to-three-levels-of-page-hierarchy-by-using-hybrid-navigation"></a>ハイブリッド ナビゲーションの使用により、ページ階層のレベルを 3 つまで描画
 
-* 現在のページの先祖ページがホームページ (または省略可能な深さ\_オフセットパラメーターで指定された最大深度) に表示されます。 
-* 現在のページに子がある場合は、それらの子ページが表示されます。
-* 現在のページに子がない場合は、現在のページの兄弟が表示されます。
+この例では、ページ階層のレベルを 3 つまで描画するポータル サイト マップに基づいて、ハイブリッド ナビゲーションの種類を描画します。 このコンポーネントのルールは次のとおりです。
+
+* 現在のページの上位ページが表示され、[ホーム] ページに (またはオプションの depth\_offset パラメーターで指定された最大の深層まで) 戻ります。 
+* 現在のページに子が存在する場合、それら子ページが表示されます。
+* 現在のページに子が存在しなければ、現在のページの兄弟が表示されます。
 
 ```xml
 {% assign depth_offset = depth_offset | default: 0 %}
@@ -253,7 +248,7 @@ ms.locfileid: "72975037"
 ```
 ### <a name="see-also"></a>関連項目
 
-[液体と web テンプレートページテンプレートを使用してカスタムページテンプレートを作成する](create-custom-template.md)  
-[RSS フィードを表示するカスタムページテンプレートを作成する](render-rss-custom-page-template.md)  
-[現在のページに関連付けられているエンティティの一覧を表示します](render-entity-list-current-page.md)  
-[Web サイトヘッダーとプライマリナビゲーションバーを表示する](render-site-header-primary-navigation.md)  
+[流動テンプレートと Web テンプレート ページ テンプレートの使用によるカスタム ページ テンプレートの作成](create-custom-template.md)  
+[RSS フィードを表示するカスタム ページ テンプレートの作成](render-rss-custom-page-template.md)  
+[現在のページに関連付けられているエンティティの表示](render-entity-list-current-page.md)  
+[Web サイト ヘッダーとプライマリ ナビゲーション バーの表示](render-site-header-primary-navigation.md)  

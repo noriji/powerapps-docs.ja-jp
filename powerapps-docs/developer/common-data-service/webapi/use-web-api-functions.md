@@ -1,8 +1,8 @@
 ---
-title: Web API 関数 (Common Data Service) | Microsoft Docs
+title: Web API 関数を使用する (Common Data Service)| Microsoft Docs
 description: 関数は Common Data Service からデータを取得する GET 要求で使用される再利用可能な操作です
 ms.custom: ''
-ms.date: 10/31/2018
+ms.date: 09/05/2019
 ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -197,7 +197,33 @@ OData-Version: 4.0
 ```http
 GET [Organization URI]/api/data/v9.0/accounts?$select=name,accountnumber&$filter=Microsoft.Dynamics.CRM.LastXHours(PropertyName=@p1,PropertyValue=@p2)&@p1='modifiedon'&@p2=12  
 ```  
-  
+
+#### <a name="limitations-of-query-functions"></a>クエリ関数の制限
+
+クエリ関数の制限の 1 つは、`not` 演算子を使ってクエリ関数を否定できない点です。
+
+たとえば、<xref href="Microsoft.Dynamics.CRM.EqualUserId?text=EqualUserId Function" /> を使用した次のクエリはエラー `Not operator along with the Custom Named Condition operators is not allowed` で失敗します。
+
+```http
+GET [Organization URI]/api/data/v9.1/systemusers?$select=fullname,systemuserid&$filter=not Microsoft.Dynamics.CRM.EqualUserId(PropertyName=@p1)&@p1='systemuserid'
+```
+いくつかのクエリ関数には、コンパニオンにによって拒否されたクエリ関数があります。 たとえば、<xref href="Microsoft.Dynamics.CRM.NotEqualUserId?text=NotEqualUserId Function" /> を使用できます。 次のクエリは、正しい結果を返します。
+
+```http
+GET [Organization URI]/api/data/v9.1/systemusers?$select=fullname,systemuserid&$filter=Microsoft.Dynamics.CRM.NotEqualUserId(PropertyName=@p1)&@p1='systemuserid'
+```
+
+他のクエリ関数は、さまざまな方法で拒否することができます。 たとえば、次のような <xref href="Microsoft.Dynamics.CRM.Last7Days?text=Last7Days Function" /> を否定するとします (上記と同じエラーで失敗します)。
+
+```http
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=not Microsoft.Dynamics.CRM.Last7Days(PropertyName=@p1)&@p1='createdon'
+```
+代わりに、次のような <xref href="Microsoft.Dynamics.CRM.OlderThanXDays?text=OlderThanXDays Function" /> を使用します。
+
+```http
+GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Microsoft.Dynamics.CRM.OlderThanXDays(PropertyName=@p1,PropertyValue=@p2)&@p1='createdon'&@p2=7
+```
+
 ### <a name="see-also"></a>関連項目
 
 [Web API 機能およびアクションのサンプル (C#)](samples/functions-actions-csharp.md)<br />

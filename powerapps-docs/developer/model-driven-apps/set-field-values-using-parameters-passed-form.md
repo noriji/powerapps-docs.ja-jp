@@ -17,7 +17,7 @@ search.app:
 ---
 # <a name="set-field-values-using-parameters-passed-to-a-form"></a>フォームに渡すパラメーターを使用してフィールド値を設定する
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/set-field-values-using-parameters-passed-form -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/set-field-values-using-parameters-passed-form -->
 
 ユーザーによって作成される新規のレコードの既定値を設定するには、そのフォームを開くために使われる URL 内に属性値を指定します。 既定で、これらの値はフォーム内に設定されますが、ユーザーがレコードを保存する前に変更することもできます。  
   
@@ -44,6 +44,7 @@ search.app:
 - DateTime フィールドでは、日付のテキスト値を使用すること。  
   
 <a name="BKMK_ExampleSetValueStringFields"></a>   
+
 ## <a name="example-set-the-value-for-string-fields"></a>例: 文字列フィールドの値を設定する  
  次のサンプルでは、新規の取引先企業レコードの**名前**フィールドに値 "New Account" を設定します。  
   
@@ -54,6 +55,7 @@ search.app:
 ```  
   
 <a name="BKMK_SetLookupFieldValues"></a>   
+
 ## <a name="set-values-for-lookup-fields"></a>検索フィールドの値の設定  
  次の表に、5 種類の検索フィールドを示します。 検索フィールドの使用例については、「[例: 検索フィールドの値を設定する](set-field-values-using-parameters-passed-form.md#BKMK_setValueLookupfields)」および「[例: Xrm.Navigation.openForm で新しいウィンドウを開く](set-field-values-using-parameters-passed-form.md#BKMK_ExampleXrmNavigationOpentForm)」を参照してください。  
   
@@ -76,6 +78,7 @@ search.app:
 -   関係者リストまたは関連の検索には値を設定できません。  
   
 <a name="BKMK_setValueLookupfields"></a>   
+
 ## <a name="example-set-the-value-for-lookup-fields"></a>例: 検索フィールドの値を設定する  
  検索フィールドの値を設定するには、データ値と名前値を使用し、顧客または所有者の検索の場合にのみ、各フィールドの種類値を指定します。 次のサンプルは "Mark Folkerts" という名前のユーザーに所有者フィールドを設定します。  
   
@@ -95,6 +98,7 @@ search.app:
 >  このような簡易検索の場合、種類の値を設定する必要はありません。  
   
 <a name="BKMK_SetValueDateFields"></a>   
+
 ## <a name="example-set-the-value-for-date-fields"></a>例: 日付フィールドの値を設定する  
  次の例では、新しい営業案件の**予測クローズ日**フィールドを 2011 年 1 月 31 日に設定します。 `extraqs` パラメーターのエンコード前の値は "estimatedclosedate=01/31/11" です。  
   
@@ -103,6 +107,7 @@ search.app:
 ```  
   
 <a name="BKMK_SampleSEtValueOptionSetFields"></a>   
+
 ## <a name="example-set-the-value-for-option-set-fields"></a>例: オプション セット フィールドの値を設定する  
  **オプション セット**フィールドの値を設定するには、オプションに整数値を設定します。 次の例では、新しい取引先担当者レコードの値の**ロール**フィールドの値を "意思決定者" に設定します。  
   
@@ -112,7 +117,8 @@ search.app:
 /main.aspx?etn=contact&extraqs=accountrolecode%3D1&pagetype=entityrecord  
 ``` 
 
-<a name="BKMK_SampleSEtValueMultiSelectOptionSetFields"></a>   
+<a name="BKMK_SampleSEtValueMultiSelectOptionSetFields"></a> 
+  
 ## <a name="example-set-the-value-for-multi-select-option-set-fields"></a>例: 複数選択オプション セット フィールドの値の設定
 
 **複数選択オプション セット**フィールドの値を設定するには、フォームを開くために使用される URL にオプションの整数値を指定します。 たとえば、**Hobbies** フィールドのオプションを設定する場合、extraqs パラメーターのエンコード前の値は "hobbies=[1,3,4]" です。   
@@ -122,10 +128,11 @@ search.app:
 ``` 
   
 <a name="BKMK_ExampleXrmNavigationOpentForm"></a>   
+
 ## <a name="example-use-xrmnavigationopenform-to-open-a-new-window"></a>例: Xrm.Navigation.openForm で新しいウィンドウを開く  
  次の例では、いくつかのフィールドの既定値を設定します。これを見ると、`Xrm.Navigation`.[openForm](clientapi/reference/Xrm-Navigation/openForm.md) 関数の使用方法がわかります。 この例は、`window.open` メソッドを使用した前の例と同じです。  
   
-```javascript  
+```Javascript  
 function OpenNewContact() {  
  var parameters = {};  
  //Set the Parent Customer field value to “Contoso”.  
@@ -155,10 +162,11 @@ function OpenNewContact() {
 ```  
   
 <a name="BKMK_ExampleWindowOpen"></a>   
+
 ## <a name="example-use-windowopen-to-open-a-new-window"></a>例: window.open で新しいウィンドウを開く  
  次のサンプルでは、いくつかのフィールドの既定値を設定します。これを見ると、[encodeURIComponent](https://msdn.microsoft.com/library/aeh9cef7\(VS.85\).aspx) で `extraqs` パラメーターの値をエンコードする方法がわかります。 [window.open](https://msdn.microsoft.com/library/ms536651\(VS.85\).aspx) メソッドでは、開くウィンドウの機能を制御できます。  
   
-```jscript  
+```Javascript  
 function OpenNewContact() {  
     //Set the Parent Customer field value to “Contoso”.  
     var extraqs = "parentcustomerid={F01F3F6D-896E-DF11-B414-00155DB1891A}";  
@@ -179,6 +187,7 @@ function OpenNewContact() {
 ```  
   
 ### <a name="see-also"></a>関連項目  
+
  [URL を使用してフォームおよびビューを開く](open-forms-views-dialogs-reports-url.md)   
  [openForm](clientapi/reference/Xrm-Navigation/openForm.md)  
  [カスタム クエリストリング パラメーターが許可されるフォームの構成](configure-form-accept-custom-querystring-parameters.md)

@@ -12,7 +12,8 @@ applies_to:
   - Dynamics 365 Version 9.x
   - PowerApps
 ms.author: matp
-manager: brycho
+manager: kvivek
+author: Mattp123
 search.audienceType:
   - maker
 search.app:
@@ -21,7 +22,7 @@ search.app:
 ---
 # <a name="configure-connection-roles"></a>つながりロールの構成
 
-Common Data Service でエンティティ関係を作成せずにエンティティ レコード間の **つながり** を定義できます。 モデル駆動型アプリでは、レコード間の名前付きのリンクを確立し、実際のエンティティ関係を作成することを正当化しないそれほど形式的でない関連を確立することができます。 たとえば、*友人*、*兄弟*、*配偶者*、*出席者*、*利害関係者*が含まれます。 つながりには *子* と *親*、*夫* と *妻*、*医師* と *患者* など、相互的関係にできるものもあります。
+Common Data Service を使用することで、エンティティの関係性を作成することなくエンティティ レコード間の **接続** を定義することができます。 モデル駆動型アプリでは、レコード間の名前付きのリンクを確立し、実際のエンティティ関係を作成することを正当化しないそれほど形式的でない関連を確立することができます。 たとえば、*友人*、*兄弟*、*配偶者*、*出席者*、*利害関係者*が含まれます。 つながりには *子* と *親*、*夫* と *妻*、*医師* と *患者* など、相互的関係にできるものもあります。
 
 ユーザーが 2 種類のレコードの間に接続を設定すると、関係の開始日と終了日などの説明や補足情報を追加することができます。 詳細: [レコード間の関連付けを定義および表示するために接続を作成する](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records).
 
@@ -29,7 +30,7 @@ Common Data Service でエンティティ関係を作成せずにエンティテ
 
 ## <a name="view-connection-roles"></a>つながりロールの表示
 
-Common Data Service で既に構成されているさまざまな標準つながりロールがあります。 これらを表示するには、設定領域に移動する必要があります。 
+Common Data Service には、標準的な接続に関するロールが多く含まれています。 これらを表示するには、設定領域に移動する必要があります。 
 
 ### <a name="navigate-to-the-settings-area"></a>設定領域への移動
 
@@ -49,11 +50,11 @@ Common Data Service で既に構成されているさまざまな標準つなが
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
-**設定** 領域で表示できるつながりロールのほとんどは、*内部*の**既定のソリューション**内で定義されます (**Common Data Service の既定のソリューション**と混同しないでください)。 この内部の**既定のソリューション**には、システム内のすべてのカスタマイズが含まれます。 **既定のソリューション**を表示するには、**すべてのソリューション - 内部**ビューを選択します。
+**設定** に表示されているほとんどの接続に関する役割は、 *内部***既定のソリューション** にて定義されています。( **Common Data Service既定のソリューション**と混同しないようにしてください)。 この内部の**既定のソリューション**には、システム内のすべてのカスタマイズが含まれます。 **既定のソリューション**を表示するには、**すべてのソリューション - 内部**ビューを選択します。
 
 ## <a name="add-connection-roles-to-a-solution"></a>ソリューションへのつながりロールの追加
 
-通常、内部の**既定のソリューション**のコンポーネントを編集することはお勧めしません。 **Common Data Service の既定のソリューション**または作業するために作成したソリューション内で、**既存の追加**コマンドを使用して既定のつながりロールのいずれかをソリューションに取り込むことができます。
+通常、内部の**既定のソリューション**のコンポーネントを編集することはお勧めしません。 **Common Data Service既定のソリューション** 、あるいは作業をするに当たって作成されたソリューションは、 **既存に追加** コマンドを使用することで接続役割をソリューションに取り込むことができます。
 
 ![既存のつながりロールの追加](media/add-existing-connection-role.png)
 
@@ -91,7 +92,7 @@ Common Data Service で既に構成されているさまざまな標準つなが
 - 営業チーム
 - サービス
 
-**カテゴリ** グローバル オプション セットを編集することで、新しいカテゴリを追加したり、既存のカテゴリを変更できます。 詳細: [Common Data Service のグローバル オプション設定の作成および編集 (候補リスト)](create-edit-global-option-sets.md)
+**カテゴリ** グローバル オプション セットを編集することで、新しいカテゴリを追加したり、既存のカテゴリを変更できます。 詳細: [Common Data Service グローバル オプション設定の作成および編集](create-edit-global-option-sets.md)
 
 ### <a name="select-record-types"></a>レコードの種類の選択
 
@@ -125,7 +126,7 @@ Common Data Service で既に構成されているさまざまな標準つなが
 ### <a name="see-also"></a>関連項目
 <!-- This is in the basics guide. It needs to be migrated -->
 [レコード間の関連付けを定義および表示するために接続を作成する](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)<br />
-[Common Data Service のグローバル オプション設定の作成および編集 (候補リスト)](create-edit-global-option-sets.md)<br />
+[Common Data Service グローバル オプション セットの作成および編集](create-edit-global-option-sets.md)<br />
 [エンティティ間の関連付けの作成および編集](create-edit-entity-relationships.md)
 
 

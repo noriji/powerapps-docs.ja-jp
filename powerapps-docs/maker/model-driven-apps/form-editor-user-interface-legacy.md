@@ -1,7 +1,6 @@
 ---
-title: PowerAppsのモデル駆動型アプリ フォーム エディターのユーザー インターフェイスの概要 | MicrosoftDocs
-description: PowerAppsのフォームを編集するフォーム エディターのユーザー インターフェイスを把握する
-keywords: フォーム; メイン フォーム; 統一インターフェイス アプリ; Dynamics 365 for customer engagement
+title: PowerApps のモデル駆動型アプリ フォーム エディターのユーザー インターフェイスに関する概要 | MicrosoftDocs
+description: フォーム エディターのユーザー インターフェイスを把握して PowerApps でフォームを編集する
 author: Mattp123
 applies_to:
   - Dynamics 365 (online)
@@ -137,8 +136,8 @@ search.app:
 ||**IFRAME**|IFRAME をフォームに追加して、フォーム内の別の Web サイトからコンテンツを統合できます。| 
 ||**タイムライン**|タイムライン コントロールをフォームに挿入します。 このコントロールは、フォーム上のエンティティに関連する活動のタイムラインを表示します。|  
 ||**ナビゲーション リンク**|このオプションを使用して、フォーム ナビゲーションにリンクを挿入できます。|  
-||**タイマー**|エンティティ フォームにタイマー コントロールを追加し SLA に対する時間を追跡します。 詳細: [タイマー コントロールの追加](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customer-service/add-timer-control-case-form-track-time-against-sla)|
-||**サポート技術情報の検索**|サポート情報記事を検索するためにユーザーが使用できる検索コントロールを挿入します。 詳細情報: [サポート情報の検索コントロール](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customer-service/add-knowledge-base-search-control-forms)|  
+||**タイマー**|エンティティ フォームにタイマー コントロールを追加し SLA に対する時間を追跡します。 詳細: [タイマー コントロールの追加](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/add-timer-control-case-form-track-time-against-sla)|
+||**サポート技術情報の検索**|サポート情報記事を検索するためにユーザーが使用できる検索コントロールを挿入します。 詳細情報: [サポート情報の検索コントロール](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/add-knowledge-base-search-control-forms)|  
 ||**リレーションシップ アシスタント**|このオプションを使用して、リレーションシップ アシスタント コントロールをフォームに挿入できます。|
 
 >[!Note] 

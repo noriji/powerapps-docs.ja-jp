@@ -27,11 +27,14 @@ search.app:
 
 自動付番フィールドは、作成されるたびに自動的に英数字文字列を生成するフィールドです。 作成者はこれらのフィールドのフォーマットを好みに合わせてカスタマイズし、そして実行時に自動的に入力される一致する値の生成をシステムに頼ることができます。
 
-自動付番フィールドは正式にはその上に追加機能を構築したテキストフィールドですが、[PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) は **自動付番** を **テキスト** カテゴリの下に個別のデータ型として単純に公開することでこの概念を単純化しています。 [クラシック ソリューション エクスプローラー](use-solution-explorer.md#classic-solution-explorer) が自動付番フィールドの作成または管理をサポートしていないことに注意する必要があります。
+自動付番フィールドは正式にはその上に追加機能を構築したテキスト フィールドですが、[PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) は **自動付番** を **テキスト** カテゴリの下に個別のデータ型として単純に公開することでこの概念を単純化しています。 [クラシック ソリューション エクスプローラー](use-solution-explorer.md#classic-solution-explorer) が自動付番フィールドの作成または管理をサポートしていないことに注意する必要があります。
 
 自動付番フィールドを作成するには、[フィールドの作成](create-edit-field-portal.md#create-a-field) まで同じ手順に従って、**データの種類** ドロップダウン リスト ボックスから単純に **自動付番** を選択します。 
 
 フィールドを開いて **データの種類** ドロップダウン リスト ボックスから **自動付番** を選択して、既存のテキストフィールドの自動付番機能を有効にすることもできます。 同様に、このフィールドを開いて **データの種類** ドロップダウン リスト ボックスで異なるオプションを選択することで、いつでも自動付番機能を無効にもできます。
+
+> [!NOTE]
+>自動付番の値は、レコードの開始時にデータベースによって事前に選択されます。 レコードを開始してからキャンセルした場合、割り当てられた番号は使用されません。 この間に次の連続番号を持つ別のレコードが完了した場合は、レコードの自動付番にギャップが生じます。
 
 ## <a name="autonumber-types"></a>自動付番の種類
 
@@ -83,4 +86,4 @@ search.app:
 9. **完了**を選択します。
 
 ## <a name="see-also"></a>関連項目
- [PowerApps ポータルを使用して Common Data Service のフィールドの作成、編集を行う](create-edit-field-portal.md)
+ [PowerApps ポータルを使用して Common Data Service のフィールドの作成、編集を行います](create-edit-field-portal.md)

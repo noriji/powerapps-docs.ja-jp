@@ -32,7 +32,7 @@ search.app:
 > - ソリューション チェッカーでは、ECMAScript 6 (2015) 以降のバージョンを使用した JavaScript を含むソリューションを使用しません。 これらのバージョンのいずれかを使用した JavaScript が検出されると、Web リソースの JS001 構文は問題報告されます。
 
 ## <a name="enable-the-solution-checker"></a>ソリューション チェッカーを有効にする
-すべての Common Data Service 環境では、既定でソリューションチェッカーが有効となっています。 **ソリューション チェッカー** のメニュー項目は、PowerAppsの **ソリューション** 領域で非管理ソリューションを選択した場合に使用することができます。 **ソリューション チェッカー** メニューで、 **実行** オプションが使用できない場合は、PowerAppsのチェッカーソリューションをインストールすることで有効にすることができます。 これをインストールするには、次の手順を実行します。   
+すべての Common Data Service 環境では、既定でソリューションチェッカーが有効となっています。 **ソリューション チェッカー**のメニュー項目は、PowerApps の **ソリューション** 領域で非管理ソリューションを選択した場合に使用することができます。 **ソリューション チェッカー** メニューで、**実行** オプションが使用できない場合は、PowerApps のチェッカーソリューションをインストールすることで有効にすることができます。 これをインストールするには、次の手順を実行します。   
 
 1. [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) にサインインし、ソリューション チェッカーを有効にする Common Data Service 環境を選択します。 
 2. 左のナビゲーション ウィンドウで、**ソリューション** を選択します。
@@ -44,7 +44,7 @@ search.app:
 4. AppSource ページで **無料試用版** を選択します。 
 
 5. 同意した場合、契約条件に同意し、PowerApps チェッカー ソリューションをインストールする環境を選択します。 
-6. インストールが完了したら、PowerAppsサイトの **ソリューション** リストを更新して、リューション チェッカーが使用可能であることを確認してください。  
+6. インストールが完了したら、PowerApps サイトの **ソリューション** リストを更新して、リューション チェッカーが使用可能であることを確認してください。  
 7. ソリューションを確認するには、[ソリューション チェッカーを実行します](#run-the-solution-checker)。
 
 
@@ -78,7 +78,7 @@ When you install the PowerApps checker these solution specific components are cr
     
     - この間、**実行…**  状態と、**ソリューション** リストの **ソリューション チェック** 列に表示されます。 
     
-    - チェックが完了したら、電子メール通知を受け取り、PowerApps サイトの**通知**領域に通知が表示されます。  
+    - チェックが完了したら、電子メール通知を受け取り、PowerApps サイトの **通知** 領域に通知が表示されます。  
 
 5.  チェックが完了したら、[レポートを表示します](#review-the-solution-checker-report)。
 
@@ -140,24 +140,24 @@ When you install the PowerApps checker these solution specific components are cr
 
 |ソリューション コンポーネント   |ルール名  |ルールの説明  |
 |---------|---------|---------|
-|プラグインまたはワークフロー活動   | [il-specify-column](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-specify-column&client=PAChecker&source=featuredocs)  | Dynamics 365 for Customer Engagement クエリ API を使用してすべての列を選択しないでください。     |
-|プラグインまたはワークフロー活動   | [meta-remove-dup-reg](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-dup-reg&client=PAChecker&source=featuredocs)     | 重複する Dynamics 365 for Customer Engagement プラグイン登録を避けてください。     |
-|プラグインまたはワークフロー活動   | [il-turn-off-keepalive](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-turn-off-keepalive&client=PAChecker&source=featuredocs)   | Dynamics 365 for Customer Engagement プラグインで外部ホストを操作するときは、キープアライブを false に設定します。     |
-|プラグインまたはワークフロー活動   | [il-avoid-unpub-metadata](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-unpub-metadata&client=PAChecker&source=featuredocs)   | 非公開 Dynamics 365 for Customer Engagement メタデータを取得しないでください。     |
-|プラグインまたはワークフロー活動   | [il-avoid-batch-plugin](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-batch-plugin&client=PAChecker&source=featuredocs)   | Dynamics 365 Customer Engagement プラグインおよびワークフロー活動では、バッチ要求の型は使用しないでください。    |
-|プラグインまたはワークフロー活動   | [meta-avoid-reg-no-attribute](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-reg-no-attribute&client=PAChecker&source=featuredocs)  | Dynamics 365 for Customer Engagement プラグイン登録にフィルター属性を含めます。    |
-|プラグインまたはワークフロー活動   | [meta-avoid-reg-retrieve](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-reg-retrieve&client=PAChecker&source=featuredocs)  | Retrieve および RetrieveMultiple メッセージに登録された Dynamics 365 for Customer Engagement プラグインは注意して使用してください。    |
-|プラグインまたはワークフロー活動   | [meta-remove-inactive](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-inactive&client=PAChecker&source=featuredocs)    | Dynamics 365 for Customer Engagement で非アクティブな構成を削除します。    |
+|プラグインまたはワークフロー活動   | [il-specify-column](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-specify-column&client=PAChecker&source=featuredocs)  | Common Data Service クエリ API を通じてすべての列を選択しないでください。     |
+|プラグインまたはワークフロー活動   | [meta-remove-dup-reg](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-dup-reg&client=PAChecker&source=featuredocs)     | 重複する Common Data Service プラグインの登録を避けてください。     |
+|プラグインまたはワークフロー活動   | [il-turn-off-keepalive](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-turn-off-keepalive&client=PAChecker&source=featuredocs)   | Common Data Service プラグインで外部ホストを操作するときは、キープアライブを false に設定します。     |
+|プラグインまたはワークフロー活動   | [il-avoid-unpub-metadata](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-unpub-metadata&client=PAChecker&source=featuredocs)   | 非公開 Common Data Service メタデータの取得を避けてください。     |
+|プラグインまたはワークフロー活動   | [il-avoid-batch-plugin](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-batch-plugin&client=PAChecker&source=featuredocs)   | Common Data Service プラグインおよびワークフロー活動では、バッチ要求の型は使用しないでください。    |
+|プラグインまたはワークフロー活動   | [meta-avoid-reg-no-attribute](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-reg-no-attribute&client=PAChecker&source=featuredocs)  | Common Data Service プラグイン登録にフィルター属性を含めます。    |
+|プラグインまたはワークフロー活動   | [meta-avoid-reg-retrieve](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-reg-retrieve&client=PAChecker&source=featuredocs)  | Retrieve および RetrieveMultiple メッセージ用に登録された Common Data Service プラグインを使用するときは注意してください。    |
+|プラグインまたはワークフロー活動   | [meta-remove-inactive](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-inactive&client=PAChecker&source=featuredocs)    | Common Data Service で非アクティブ構成を削除します。    |
 |プラグインまたはワークフロー活動   | [il-meta-avoid-crm2011-depr-message](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-crm2011-depr-message&client=PAChecker&source=featuredocs)  | Microsoft Dynamics CRM 2011 の削除済みメッセージを使用しないでください。     |
 |プラグインまたはワークフロー活動   | [meta-avoid-crm4-event](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-crm4-event&client=PAChecker&source=featuredocs) | Microsoft Dynamics CRM 4.0 プラグイン登録ステージを使用しないでください。    |
-|プラグインまたはワークフロー活動   | [il-avoid-specialized-update-ops](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-specialized-update-ops&client=PAChecker&source=featuredocs)  | Dynamics 365 for Customer Engagement で特殊な更新操作要求を使用しないでください。    | 
+|プラグインまたはワークフロー活動   | [il-avoid-specialized-update-ops](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-specialized-update-ops&client=PAChecker&source=featuredocs)  | Common Data Service で特殊な更新操作要求を使用しないでください。    | 
 | プラグインまたはワークフロー活動 |  [il-use-autonumber-feature](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-use-autonumber-feature&client=PAChecker)  |カスタム自動付番ではなく、自動付番機能ソリューションを使用します。 | 
 | プラグインまたはワークフロー活動  | [il-avoid-parallel-plugin](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-parallel-plugin&client=PAChecker)  | 並列パターンは、プラグイン内では使用しないでください。  |
 | プラグインまたはワークフロー活動  | [il-avoid-lock-plugin](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-lock-plugin&client=PAChecker)  | プラグインの静的メンバーのロックをしないでください。  |
 | プラグインまたはワークフロー活動  | [meta-avoid-retrievemultiple-annotation](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-retrievemultiple-annotation&client=PAChecker)  | アノテーションの RetrieveMultiple でプラグインを登録しないでください。  |
 |Web リソース  | [web-use-async](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-async&client=PAChecker&source=featuredocs)  |  HTTP および HTTPS リソースを非同期に操作します。   |
-|Web リソース  | [meta-remove-invalid-form-handler](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-invalid-form-handler&client=PAChecker&source=featuredocs)  | 無効な Dynamics 365 for Customer Engagement フォーム イベント登録を修正するか、削除してください。   |
-|Web リソース  | [meta-remove-orphaned-form-element](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-orphaned-form-element&client=PAChecker&source=featuredocs)  | 孤立した Dynamics 365 for Customer Engagement フォーム イベント登録を修正するか、削除してください。   |
+|Web リソース  | [meta-remove-invalid-form-handler](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-invalid-form-handler&client=PAChecker&source=featuredocs)  | 無効な Common Data Service フォーム イベント登録を修正するか、または削除します。   |
+|Web リソース  | [meta-remove-orphaned-form-element](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-orphaned-form-element&client=PAChecker&source=featuredocs)  | 孤立した Common Data Service フォーム イベント登録を修正するか、または削除します。   |
 |Web リソース  | [web-avoid-modals](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-modals&client=PAChecker&source=featuredocs)  | モーダル ダイアログを使用しないでください。   |
 |Web リソース  | [web-avoid-crm2011-service-odata](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-crm2011-service-odata&client=PAChecker&source=featuredocs)   | Microsoft Dynamics CRM 2011 OData 2.0 エンドポイントをターゲットにしないでください。     |
 |Web リソース  | [web-avoid-crm2011-service-soap](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-crm2011-service-soap&client=PAChecker&source=featuredocs)  | Microsoft Dynamics CRM 2011 SOAP サービスをターゲットにしないでください。   |

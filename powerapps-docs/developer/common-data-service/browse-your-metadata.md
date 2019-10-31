@@ -1,6 +1,6 @@
 ---
 title: 組織のメタデータの参照 (Common Data Service) | Microsoft Docs
-description: エンティティ メタデータ ブラウザーを使用して、Dynamics 365 Customer Engagement のエンティティとそのプロパティを表示することができます。 エンティティ メタデータ ブラウザーは、ダウンロードして組織にインストール可能な管理ソリューションです。
+description: エンティティ メタデータ ブラウザーを使用して、Common Data Service のエンティティとそのプロパティを表示できます。 エンティティ メタデータ ブラウザーは、ダウンロードして組織にインストール可能な管理ソリューションです。
 ms.custom: ''
 ms.date: 10/31/2018
 ms.reviewer: ''
@@ -27,7 +27,7 @@ search.app:
 ソリューションをダウンロードした後、インストールする必要があります。 管理ソリューションをインストールする方法の詳細については、「[ソリューションのインポート、更新およびエクスポート](/dynamics365/customer-engagement/developer/customize/import-update-export-solutions)」を参照してください。  
 
 ## <a name="open-as-an-app"></a>アプリとして開く
-Common Data Service はアプリとして構成されます。 **エンティティ メタデータ ブラウザー**ソリューションをインストールした後、**メタデータ ツール**アプリケーションを見つけて開きます。 既定のビューは**エンティティ**です。 **ツール**のナビゲーション領域から**エンティティ メタデータ**を選択して個別のエンティティを検査します。
+Common Data Service はアプリとして構成されています。 **エンティティ メタデータ ブラウザー**ソリューションをインストールした後、**メタデータ ツール**アプリケーションを見つけて開きます。 既定のビューは**エンティティ**です。 **ツール**のナビゲーション領域から**エンティティ メタデータ**を選択して個別のエンティティを検査します。
 
 ## <a name="open-from-the-solution-configuration-page"></a>ソリューション構成ページから開く
 以前のバージョンでは次の手順を使用する必要がありますが、最新のバージョンにも対応しています。  
@@ -80,10 +80,10 @@ Common Data Service はアプリとして構成されます。 **エンティテ
 
 ## <a name="community-tools"></a>コミュニティ ツール
 
-**メタデータ ブラウザ** は Common Data Service 用に XrmToolbox コミュニティが開発したツールです。 コミュニティ開発ツールのトピック、[開発者ツール](developer-tools.md) を参照してください。
+**メタデータ ブラウザー** は Common Data Service に対して XrmToolbox コミュニティが開発したツールです。 コミュニティ開発ツールのトピック、[開発者ツール](developer-tools.md) を参照してください。
 
 > [!NOTE]
-> コミュニティ ツールは Common Data Service の製品ではなく、コミュニティ ツールに対するサポートは提供されません。 このツールに関するご質問は、その発行元にお問い合わせください。 詳細: [XrmToolBox](https://www.xrmtoolbox.com)。
+> コミュニティ ツールは Common Data Service の製品ではなく、コミュニティ ツールに対するサポートは提供しません。 このツールに関するご質問は、その発行元にお問い合わせください。 詳細: [XrmToolBox](https://www.xrmtoolbox.com)。
 
 ### <a name="see-also"></a>関連項目
 

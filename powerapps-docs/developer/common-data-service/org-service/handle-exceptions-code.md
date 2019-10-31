@@ -1,6 +1,6 @@
 ---
 title: コードで例外を処理する (Common Data Service) | Microsoft Docs
-description: この記事では、 Dynamics 365 Customer Engagement web サービス メソッド呼び出しで返される例外について説明します。 この記事のサンプルでは、アプリケーション デザインで処理する必要がある一般的なフォールトと例外を重点的に示しています。
+description: この記事では、 Common Data Service web サービス メソッド呼び出しで返される例外について説明します。 この記事のサンプルでは、アプリケーション デザインで処理する必要がある一般的なフォールトと例外を重点的に示しています。
 ms.custom: ''
 ms.date: 06/17/2019
 ms.reviewer: ''

@@ -1,51 +1,48 @@
 ---
-title: ポータルのベース URL を変更する |MicrosoftDocs
-description: ポータルのベース URL を変更する方法について説明します。
+title: ポータルの基本 URL を変更する | MicrosoftDocs
+description: ポータルの基本 URL の変更方法を説明します。
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: ''
-ms.date: 10/07/2019
+ms.custom: null
+ms.date: 07/18/2019
 ms.author: shjais
-ms.reviewer: ''
-ms.openlocfilehash: cfc2fd0ca753aebfe7bc77b73c7e7ec1ca011387
-ms.sourcegitcommit: 5338e01d2591f76d71f09b1fb229d405657a0c1c
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72977475"
+ms.reviewer: null
 ---
-# <a name="change-the-base-url-of-a-portal"></a>ポータルのベース URL を変更する
 
-ポータルのベース URL は、プロビジョニング後に変更できます。 たとえば、ポータルのプロビジョニング時にベース URL として `contosocommunity.microsoftcrmportals.com` を選択した場合は、後で要件を満たすように `contosocommunityportal.microsoftcrmportals.com` に変更できます。
+# <a name="change-the-base-url-of-a-portal"></a>ポータルの基本 URL を変更する
+
+[!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
+プロビジョニングの後、ポータルの基本 URL を変更することができます。 たとえば、ポータルをプロビジョニングするときに `contosocommunity.microsoftcrmportals.com` を基本 URL として選択する場合、要件を満たすように後から `contosocommunityportal.microsoftcrmportals.com` に変更することができます。
 
 > [!NOTE]
-> ポータルのベース URL を変更すると、古い URL はアクセスできなくなり、他の顧客がポータルで使用できるようになります。
+> ポータルの基本 URL を変更すると、古い URL にアクセスすることはできなくなり、それらのポータルを使用する他の顧客に対して使用可能になります。
 
-1.  [PowerApps ポータル管理センター](admin-overview.md)を開きます。
+1.  [PowerApps ポータル管理センター](admin-overview.md) を開きます。
 
-2.  **[ポータルアクション]**  >  **[ベース URL の変更]** に移動します。 
-
-    > [!div class=mx-imgBorder]
-    > ポータルの![ベース url の変更](../media/change-base-url-action.png "ポータルのベース url")の変更
-
-3.  [ベース URL の変更] ウィンドウで、ポータルの新しいベース URL を入力します。
+2.  **ポータル アクション** > **基本 URL の変更**の順に移動します。 
 
     > [!div class=mx-imgBorder]
-    > ![ポータルの新しいベース url を指定]するポータル(../media/change-base-url.png "の新しいベース url を指定")する
+    > ![ポータルの基本 URL の変更](../media/change-base-url-action.png "ポータルの基本 URL の変更")
 
-4.  確認ウィンドウで **[URL の変更]** を選択します。
+3.  基本 URL ウィンドウで、ポータルの新しい基本 URL を入力します。
 
-## <a name="troubleshooting"></a>トラブルシューティング
+    > [!div class=mx-imgBorder]
+    > ![ポータルの新しい基本 URL の指定](../media/change-base-url.png "ポータルの新しい基本 URL の指定")
 
-このセクションでは、ポータルのベース URL を変更する際の問題のトラブルシューティングについて説明します。
+4.  確認メッセージで**URL の変更**を選択します。
 
-### <a name="changing-the-base-url-fails"></a>ベース URL の変更が失敗する
+## <a name="troubleshooting"></a>トラブルシューティング​​
 
-ポータルのベース URL を変更できない場合は、次の図のようなエラーが表示されます。
+このセクションは、ポータルの基本 URL を変更するときの問題のトラブルシューティングに関する情報を提供します。
+
+### <a name="changing-the-base-url-fails"></a>基本 URL を変更が失敗する
+
+ポータルの基本 URL の変更が失敗する場合、次の画像に示すようにエラーが表示されます。
 
 > [!div class=mx-imgBorder]
-> ポータル(../media/change-base-url-error.png "のベース url を変更しているときに") ![、ポータルのベース url を変更中にエラーが発生し]ました
+> ![ポータルの基本 URL の変更中のエラー](../media/change-base-url-error.png "ポータルの基本 URL の変更中のエラー")
 
-通常、これらは一時的なエラーであり、ベース url の変更を再試行するには **[ベース url の変更]** を選択する必要があります。 問題が解決しない場合は、Microsoft サポートにお問い合わせください。
+通常、これらは一次的エラーであり、**基本 URL の変更**を選択して基本 URL の変更を再試行する必要があります。 イシューが解決しない場合は、Microsoft サポートにお問い合わせください。

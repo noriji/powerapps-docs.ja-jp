@@ -1,30 +1,25 @@
 ---
-title: ポータルにイテレーションタグを使用する |MicrosoftDocs
-description: ポータルで使用できるイテレーションタグについて説明します。
+title: ポータルで反復タグを使用する | MicrosoftDocs
+description: ポータルで使用可能な反復タグについて説明します
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: ''
-ms.date: 10/07/2019
+ms.custom: null
+ms.date: 08/30/2019
 ms.author: shjais
-ms.reviewer: ''
-ms.openlocfilehash: 600ddb0ac6e016acf057e592ac638b4e07ddf8ba
-ms.sourcegitcommit: 5338e01d2591f76d71f09b1fb229d405657a0c1c
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72976509"
+ms.reviewer: null
 ---
-# <a name="iteration-tags"></a>イテレーション タグ
 
-イテレーションタグは、コードのブロックを繰り返し実行または表示するために使用されます。
+# <a name="iteration-tags"></a>反復タグ
 
-## <a name="for"></a>の
+反復タグは、コードのブロックを繰り返し実行/表示するのに使用します。
 
-コードのブロックを繰り返し実行します。 これは、配列またはディクショナリ内の項目を反復処理するために最も一般的に使用されます。
+## <a name="for"></a>用
 
-For タグブロック内では、 [forloop オブジェクト](liquid-objects.md#forloop)を使用できます。  
+コードのブロックを繰り返し実行します。 最も一般的な用途は、配列またはディクショナリの項目の反復です。
+
+for タグ ブロック内では [forloop オブジェクト](liquid-objects.md#forloop)が使用可能です。  
 
 **コード**
 
@@ -36,7 +31,7 @@ For タグブロック内では、 [forloop オブジェクト](liquid-objects.m
 {% endfor %}
 ```
 
-**Output**
+**出力**
 
 ```
 <a href=/parent/child1/>Child 1</a>
@@ -48,11 +43,11 @@ For タグブロック内では、 [forloop オブジェクト](liquid-objects.m
 
 ### <a name="parameters"></a>パラメーター
 
-ののこれらのパラメーターは、単独で、または組み合わせて使用できます。
+これらの for のパラメーターは、単独または組み合わせて使用できます。
 
-**制限**
+**リミット**
 
-指定された数の項目の後にループを終了します。
+特定の項目数の後、ループが終了します。
 
 **コード**
 
@@ -64,7 +59,7 @@ For タグブロック内では、 [forloop オブジェクト](liquid-objects.m
 {% endfor %}
 ```
 
-**Output**
+**出力**
 
 ```
 <a href=/parent/child1/>Child 1</a>
@@ -72,9 +67,9 @@ For タグブロック内では、 [forloop オブジェクト](liquid-objects.m
 <a href=/parent/child2/>Child 2</a>
 ```
 
-**影**
+**オフセット**
 
-指定されたインデックスでループを開始します。
+特定のインデックスでループを開始します。
 
 **コード**
 
@@ -86,7 +81,7 @@ For タグブロック内では、 [forloop オブジェクト](liquid-objects.m
 {% endfor %}
 ```
 
-**Output**
+**出力**
 
 ```
 <a href=/parent/child2/>Child 2</a>
@@ -96,7 +91,7 @@ For タグブロック内では、 [forloop オブジェクト](liquid-objects.m
 
 **範囲**
 
-ループする数値の範囲を定義します。
+ループする値の範囲を定義します。
 
 **コード**
 
@@ -116,7 +111,7 @@ For タグブロック内では、 [forloop オブジェクト](liquid-objects.m
 {% endfor }}
 ```
 
-**Output**
+**出力**
 
 ```
 2 3 4
@@ -124,9 +119,9 @@ For タグブロック内では、 [forloop オブジェクト](liquid-objects.m
 10 11 12 14
 ```
 
-**逆**
+**予約済み**
 
-最後の項目から順に、ループを逆順に反復処理します。
+ループを最後の項目から逆に反復します。
 
 **コード**
 
@@ -138,7 +133,7 @@ For タグブロック内では、 [forloop オブジェクト](liquid-objects.m
 {% endfor %}
 ```
 
-**Output**
+**出力**
 
 ```
 <a href=/parent/child3/>Child 3</a>
@@ -148,9 +143,9 @@ For タグブロック内では、 [forloop オブジェクト](liquid-objects.m
 <a href=/parent/child1/>Child 1</a>
 ```
 
-## <a name="cycle"></a>切っ
+## <a name="cycle"></a>サイクル
 
-文字列のグループをループし、パラメーターとして渡された順序で出力します。 各サイクルが呼び出されるたびに、パラメーターとして渡された次の文字列が出力されます。
+文字列のグループをループし、パラメーターとして渡された順序で出力されます。 サイクルが呼び出されるたびに、パラメーターとして渡された次の文字列が出力されます。
 
 **コード**
 
@@ -162,7 +157,7 @@ For タグブロック内では、 [forloop オブジェクト](liquid-objects.m
 {% end %}
 ```
 
-**Output**
+**出力**
 
 ```
 <div class=red> Item one </div>
@@ -176,11 +171,11 @@ For タグブロック内では、 [forloop オブジェクト](liquid-objects.m
 <div class=green> Item five</div>
 ```
 
-## <a name="tablerow"></a>tablerow
+## <a name="tablerow"></a>テーブル行
 
-HTML テーブルを生成します。 &gt; &lt;テーブルを開始し、&lt;/テーブル&gt; HTML タグを閉じる必要があります。
+HTML テーブルを生成します。 開始 &lt;table&gt; と終了 &lt;/table&gt; HTML タグで囲う必要があります。
 
-Tablerow タグブロック内では、 [tablerowloop](liquid-objects.md#tablerowloop)を使用できます。  
+テーブル行のタグ ブロック内では [tablerowloop](liquid-objects.md#tablerowloop) が利用できます。  
 
 **コード**
 
@@ -196,7 +191,7 @@ Tablerow タグブロック内では、 [tablerowloop](liquid-objects.md#tablero
 </table>
 ```
 
-**Output**
+**出力**
 
 ```
 <table>
@@ -234,9 +229,9 @@ Child Page 4
 
 ### <a name="parameters"></a>パラメーター
 
-Tablerowcan のこれらのパラメーターは、単独で、または組み合わせて使用します。
+これらの tablerowcan のパラメーターは、単独または組み合わせて使用できます。
 
-**Output**
+**出力**
 
 ```
 <table>
@@ -290,13 +285,13 @@ Child Page 4
 </table>
 ```
 
-生成されたテーブルに必要な行の数を指定します。
+生成されたテーブルに必要な行数を指定します。
 
 **cols**
 
-**制限**
+**リミット**
 
-指定された数の項目の後にループを終了します。
+特定の項目数の後、ループが終了します。
 
 **コード**
 
@@ -312,7 +307,7 @@ Child Page 4
 </table>
 ```
 
-**Output**
+**出力**
 
 ```
 <table>
@@ -338,7 +333,7 @@ Child Page 2
 offset
 ```
 
-指定されたインデックスでループを開始します。
+特定のインデックスでループを開始します。
 
 **コード**
 
@@ -354,7 +349,7 @@ offset
 </table>
 ```
 
-**Output**
+**出力**
 
 ```
 <table>
@@ -380,7 +375,7 @@ Child Page 4
 
 **範囲**
 
-ループする数値の範囲を定義します。
+ループする値の範囲を定義します。
 
 **コード**
 
@@ -398,7 +393,7 @@ Child Page 4
 
 ### <a name="see-also"></a>関連項目
 
-[コントロールフロータグ](control-flow-tags.md)
+[制御フロー タグ](control-flow-tags.md)
 [変数タグ](variable-tags.md)
-[テンプレートタグ](template-tags.md)
-[PowerApps common data Service エンティティタグ](portals-entity-tags.md)
+[テンプレート タグ](template-tags.md)
+[PowerApps Common Data Serviceエンティティ タグ](portals-entity-tags.md)

@@ -1,6 +1,6 @@
 ---
-title: " テーブルグリッドコンポーネント |Microsoft Docs"
-description: テーブルグリッドコンポーネントの実装
+title: ' テーブル グリッド コンポーネント | Microsoft Docs'
+description: テーブル グリッド コンポーネントの実装
 ms.custom: ''
 manager: kvivek
 ms.date: 10/01/2019
@@ -8,22 +8,17 @@ ms.service: powerapps
 ms.topic: article
 ms.author: nabuthuk
 author: Nkrb
-ms.openlocfilehash: 2a24ae9cb7e37acfa2be4ef975e3c52eebce3e37
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72340209"
 ---
-# <a name="implementing-table-grid-component"></a>テーブルグリッドコンポーネントの実装
 
-このサンプルでは、単純なデータセットコンポーネント、ビューの列メタデータのバインド、レコードバインディング、ページングからのレコードの追加、およびフォームへのレコードの移動を作成する方法を示します。
-コンポーネントヘッダー列と内部レコード値は、既存のビューにバインドされます。
+# <a name="implementing-table-grid-component"></a>テーブル グリッド コンポーネントの実装
+
+このサンプルでは、簡単なデータセット コンポーネントの作成方法、ビューの列メタデータのバインド、レコード バインド、ページングからのレコード追加、フォームへのレコード ナビゲーションを紹介します。
+コンポーネント ヘッダー列と内部レコード値は既存のビューにバインドされています。
 
 > [!div class="mx-imgBorder"]
-> ![テーブルグリッドコンポーネント](../media/table-grid-control.png "テーブルグリッドコンポーネント")
+> ![テーブル グリッド コンポーネント](../media/table-grid-control.png "テーブル グリッド コンポーネント")
 
-## <a name="available-for"></a>利用可能な対象 
+## <a name="available-for"></a>以下に使用できます 
 
 モデル駆動型アプリ  
 
@@ -44,7 +39,7 @@ ms.locfileid: "72340209"
 </manifest>
 ```
 
-## <a name="code"></a>コード
+## <a name="code"></a>Code
 
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
@@ -284,12 +279,12 @@ export class TSTableGrid
       RowRecordId
     );
     if (rowRecordId) {
-      let entityreference = this.contextObj.parameters.simpleTableGrid.records[
+      let entityReference = this.contextObj.parameters.simpleTableGrid.records[
         rowRecordId
-      ].getNamedreference();
+      ].getNamedReference();
       let entityFormOptions = {
-        entityName: entityreference.entityType!,
-        entityId: entityreference.id
+        entityName: entityReference.entityType!,
+        entityId: entityReference.id
       };
       this.contextObj.navigation.openForm(entityFormOptions);
     }
@@ -481,29 +476,29 @@ export class TSTableGrid
 </root>
 ```
 
-ビューにバインドする列ヘッダー:
+列ヘッダーをビューにバインド:
 
-列情報の表示は `context.parameters.[dataset_property_name].columns` にあります。 これは配列型です。
+ビューの列情報は `context.parameters.[dataset_property_name].columns` にあります。 それは配列の種類です。
 
 レコードのバインド:
 
-- 並べ替えられたレコード Id は `context.parameters.[dataset_property_name].sortedRecordIds`
-- すべてのレコード情報は `context.parameters.[dataset_property_name].records` 
-- レコードオブジェクトごとに、`context.parameters.[dataset_property_name].records[record_Id]` 
-- 書式設定された値は `getFormattedValue` で取得できます 
+- 並べ替えたレコード ID は `context.parameters.[dataset_property_name].sortedRecordIds` にあります。
+- すべてのレコード情報は `context.parameters.[dataset_property_name].records` にあります。 
+- 各レコード オブジェクトについては `context.parameters.[dataset_property_name].records[record_Id]` 
+- フォーマットされた値は `getFormattedValue` で取得できます。 
 
-必要に応じて、さらにデータページを読み込みます。
+必要に応じてデータのページを読み込んでください:
 
-`context.parameters.[dataset_property_name].paging` は、`hasNextPage` や `loadNextPage` データなどのページング機能を提供します。 次のページデータがある場合は、[`Load More`] ボタンが表示されます。
+`context.parameters.[dataset_property_name].paging` は `hasNextPage` および `loadNextPage` データのようなページング機能を提供します。 次のページ データがある場合は `Load More` ボタンが表示されます。
 
-このサンプルでは、コンポーネントがコンテナーのサイズ変更をリッスンする方法も示しています。 
+このサンプルでは、コンポーネントがコンテナのサイズ変更をリスニングする方法も紹介します。 
 
-[Updateview](../reference/control/updateview.md)が呼び出されるたびに `mode.allocatedWidth` と `mode.allocatedHeight` が提供されるように、 [init](../reference/control/init.md)メソッド内で `trackContainerResize` メソッドを呼び出す必要があります。 このメソッドが最初に呼び出されていない場合は、`allocatedWidth` と `allocatedHeight` 提供されません。
+[updateView](../reference/control/updateview.md) が呼び出されるごとに `mode.allocatedWidth` と `mode.allocatedHeight` が提供されるように、`trackContainerResize` メソッドは [init](../reference/control/init.md) メソッド内で呼び出す必要があります。 最初にこのメソッドが呼び出されないと `allocatedWidth` と `allocatedHeight` が提供されません。
 
-AllocatedHeight が-1 の場合は、高さに制限がないことを意味します。 コンポーネントは、指定された幅に基づいて高さを調整する必要があります。
+allocatedHeight が –1 の場合、高さに制限がありません。 コンポーネントは提供された幅に基づいて高さを調整する必要があります。
 
 ### <a name="related-topics"></a>関連トピック
 
-[サンプルコンポーネントのダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps コンポーネントフレームワーク API リファレンス](../reference/index.md)<br/>
-[PowerApps コンポーネントフレームワークマニフェストスキーマリファレンス](../manifest-schema-reference/index.md)
+[サンプル コンポーネントをダウンロード](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[PowerApps Component Framework API の参照](../reference/index.md)<br/>
+[PowerApps Component Framework のマニフェスト スキーマの参照](../manifest-schema-reference/index.md)

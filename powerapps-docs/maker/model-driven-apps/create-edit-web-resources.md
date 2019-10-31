@@ -1,5 +1,5 @@
 ---
-title: PowerApps でモデル駆動型アプリ Web リソースを作成または編集 | MicrosoftDocs
+title: PowerApps でモデル駆動型アプリ Web リソースを作成、編集する | MicrosoftDocs
 description: Web リソースの作成または編集の方法を学習する
 ms.custom: ''
 ms.date: 06/02/2018
@@ -28,7 +28,7 @@ search.app:
 Web リソースは、通常、Web 開発で使用されるファイルを使用してアプリを拡張するために、開発者によって使用されます。 アプリ ユーザーとして、開発者またはデザイナーによって提供される Web リソースを管理する必要がある場合があります。  
 
 > [!TIP]
-> Web リソースの包括的な説明については、[開発者ドキュメント: Customer Engagement の Web リソース](/dynamics365/customer-engagement/developer/web-resources) を参照してください。<br /> PowerApps で追加された Web リソースの依存関係の詳細については、「[開発者ドキュメント: Web リソースの依存関係](/dynamics365/customer-engagement/developer/web-resources)」を参照してください。
+> Web リソースの包括的な説明については、 [開発者ドキュメント: モデル駆動型アプリ の Web リソース](/powerapps/developer/model-driven-apps/web-resources) を参照してください。<br /> PowerAppsで追加された Web リソースの依存関係の詳細については、 [開発者ドキュメント: Web リソースの依存関係](/dynamics365/customer-engagement/developer/web-resources)を参照してください。
    
 <a name="BKMK_WhatAreWebResources"></a>
 
@@ -74,7 +74,7 @@ Web リソースの作成または編集するには、フォームに入力し�
 |**種類**|*必須*。 これは、Web リソースの種類です。 いったん Web リソースを保存したら、これを変更することはできません。|  
 |**テキスト エディター**|Web リソースの種類が一種のテキスト ファイルを表す場合は、このボタンを選択してページを開き、テキスト エディターを使用してコンテンツを編集します。<br />詳細: [テキスト エディターの適切な使用](#use-the-text-editor-appropriately)| 
 |**言語**|言語を選択できます。 このオプションは、Web リソースのデータが格納されているレコードをタグ付けするだけです。 Web リソースの動作は変更されません。|  
-|**ファイルのアップロード**|**参照...** を選択します。 を押して、Web リソースとしてアップロードするファイルを選択します。<br />&bull; 新しい Web リソースを作成する場合、または、既存の Web リソースを上書きする場合に、ファイルをアップロードすることができます。<br />&bull; ファイル名の拡張子は、許可されている拡張子と一致していなければなりません。<br />&bull;デフォルトでは、Web リソースとしてアップロードできるファイルの最大サイズは 5 MB です。 この値は、**システムの設定** > **電子メール**タブ > **添付ファイルのサイズ制限の設定**の設定を使用して、Dynamics 365 Customer Engagement で変更できます。 詳細: [[システムの設定] ダイアログ ボックス - [電子メール] タブ](https://docs.microsoft.com/dynamics365/customer-engagement/admin/system-settings-dialog-box-email-tab) |  
+|**ファイルのアップロード**|**参照...** を選択します。 を押して、Web リソースとしてアップロードするファイルを選択します。<br />&bull; 新しい Web リソースを作成する場合、または、既存の Web リソースを上書きする場合に、ファイルをアップロードすることができます。<br />&bull; ファイル名の拡張子は、許可されている拡張子と一致していなければなりません。<br />&bull;デフォルトでは、Web リソースとしてアップロードできるファイルの最大サイズは 5 MB です。 この値は、 **システム設定** > **電子メール** タブ > **添付ファイルのサイズ制限の設定** の設定を使用して変更できます。 詳細: [[システムの設定] ダイアログ ボックス - [電子メール] タブ](https://docs.microsoft.com/dynamics365/customer-engagement/admin/system-settings-dialog-box-email-tab) |  
 |**URL**|Web リソースを保存した後、Web リソースへの URL がここに表示されます。 ブラウザーで Web リソースを表示するには、このリンクを選択します。|  
   
 変更を追加した後、**保存**、**公開**を順に選択します。  
@@ -136,4 +136,4 @@ Web リソース用のアプリケーションで提供されているテキス�
 [Web リソースのプロパティ](web-resource-properties-legacy.md) <br /> 
 [フォームの作成および設計](create-design-forms.md) <br />
 [モデル駆動型アプリのコンポーネントについて](model-driven-app-components.md) <br /> 
-[開発者ドキュメント: Customer Engagement の Web リソース](/dynamics365/customer-engagement/developer/web-resources)
+[開発者ドキュメント: モデル駆動型のアプリケーションでWebリソース](/powerapps/developer/model-driven-apps/web-resources)

@@ -1,76 +1,73 @@
 ---
-title: IP アドレス | を使用してポータルへのアクセスを制限するMicrosoftDocs
-description: IP アドレスによってポータルアクセスを制限する手順。
+title: IP アドレスを使用したポータルへのアクセスに対する制限 | MicrosoftDocs
+description: IP アドレスによるポータル アクセスを制限するための手順。
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: ''
-ms.date: 10/07/2019
+ms.custom: null
+ms.date: 08/30/2019
 ms.author: shjais
-ms.reviewer: ''
-ms.openlocfilehash: ba3315ed9ba6f2a0c89b6710debc55c4be00a427
-ms.sourcegitcommit: 5338e01d2591f76d71f09b1fb229d405657a0c1c
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72975934"
+ms.reviewer: null
 ---
-# <a name="restrict-portal-access-by-ip-address"></a>ポータルアクセスを IP アドレスで制限する
 
-ポータルは、任意のコンピューターのすべてのユーザーによってプロビジョニングされ、アクセスできる場合にパブリックになります。 これで、IP アドレスの一覧からポータルへのアクセスを制限できるようになりました。 たとえば、政府組織は、自社の企業ネットワーク内にのみコンテンツを公開したい場合があります。 商用組織では、データの漏洩を防ぐために、ポータルを公開したときにのみポータルを表示し、開発中には表示しないようにすることができます。
+# <a name="restrict-portal-access-by-ip-address"></a>IP アドレスによるポータル アクセスの制限
 
-ポータルへの要求が任意のユーザーから生成されると、その IP アドレスが許可リストに対して評価されます。 IP アドレスが一覧に表示されていない場合、ポータルには HTTP 403 ステータスコードを含む web ページが表示されます。
+[!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-IP アドレスを追加または削除するには、次のいずれかのロールが割り当てられている必要があります。
-- Office 365 全体管理者 
-- サービス管理者。 詳細情報:[サービス管理者ロールを使用してテナントを管理する](https://technet.microsoft.com/en-us/library/mt793847.aspx)  
-- ポータル用に選択された Common Data Service 環境のシステム管理者
+このポータルは、プロビジョニングされどのコンピュータからでも誰でもアクセスが可能な場合に、公開されます。 IP アドレスの一覧から、ポータルへのアクセスを制限できます。 たとえば、政府機関ではコンテンツを組織内ネットワークのみに表示する必要がある場合があります。 商用組織の場合、データのリークを避けるため、開発中ポータルではなく公開済みポータルのみを表示する場合があります。
 
-## <a name="add-an-ip-address"></a>IP アドレスを追加する
+ポータルへの要求がユーザーから発生した場合、IP アドレスは許可リストに対して評価されます。 IP アドレスが一覧にない場合、ポータルには HTTP 403 状態コードの Web ページが表示されます。
 
-Ip アドレスまたは一連の IP アドレスからポータルにアクセスできるようにするには、IP アドレスを一覧に追加します。 これにより、追加された IP アドレスの一覧からのみポータルにアクセスできるようになります。 IP アドレスを追加しない場合、ポータルにはすべての IP アドレスからアクセスできるようになります。
+IP アドレスを追加、または削除するには、次のロールのいずれかを割り当てる必要があります。
+- Office 365 グローバル管理者 
+-  サービス管理者。 詳細: [サービス管理者ロールを使用してテナントを管理する](https://technet.microsoft.com/en-us/library/mt793847.aspx)  
+- ポータル用に選択された環境のシステム管理者
 
-制限リストに IP アドレスを追加すると、指定した IP アドレスのみにポータルにアクセスできるようになります。 他の IP アドレスからポータルにアクセスしようとすると、アクセスが拒否され、HTTP 403 状態コードを含む web ページが表示されます。 この web ページの内容は静的であり、変更することはできません。
+## <a name="add-an-ip-address"></a>IP アドレスを追加
+
+IP アドレスからポータルにアクセスまたは一連のIPアドレスを使用するには、IP アドレスを一覧に追加します。 これは、ポータルが追加された IP アドレス リストからのみアクセスできるようにします。 IP アドレスを追加しない場合、ポータルはすべての IP アドレスからアクセスできます。
+
+制限リストに IP アドレスを追加すると、ポータルには指定された IP アドレスのみがアクセスできます。 その他の IP アドレスからポータルにアクセスしようとすると、アクセスは拒否され、HTTP 403 状態 コードの Web ページが表示されます。 この Web ページのコンテンツは静的で、変更することはできません。
 
 > [!div class=mx-imgBorder]
-> ![Html 403 エラー](../media/ip-address-page-error.png "html 403 エラー")  
+> ![HTML 403 エラー](../media/ip-address-page-error.png "HTML 403 エラー")  
 
 > [!NOTE]
-> ポータルからアクセスできるパブリック IP アドレスを指定する必要があります。 ポータルでプライベート IP アドレスにアクセスすることはできません。
+> ポータルからアクセスできるパブリック IP アドレスを指定する必要があります。 プライベート IP アドレスは、ポータルからはアクセスできません。
 
-1.  [PowerApps ポータル管理センター](admin-overview.md)を開きます。
+1.  [PowerApps ポータル管理センター](admin-overview.md) を開きます。
 
-2.  **IP アドレス制限の設定**に関するページを参照してください。 IP アドレスとその種類の一覧が表示されます。
+2.  **IP アドレス制限の設定**に移動します。 IP アドレスおよびその種類の一覧が表示されます。
 
     > [!div class=mx-imgBorder]
-    > Ip![アドレスの制限]を設定する(../media/set-up-ip-address-restrict.png "ip アドレスの制限を")設定する
+    > ![IP アドレス制限の設定](../media/set-up-ip-address-restrict.png "IP アドレス制限の設定")
 
-3.  IP アドレス制限の設定 ページで、**新規追加** を選択します。
+3.  セットアップ IP アドレスの制限のページで、**新規追加**を選択します。
 
-4.  [IP アドレスの追加] ウィンドウで、次の値を入力します。
+4.  IP アドレスを追加するウィンドウで、次の値を入力します。
 
-    - **Ip アドレスの種類の選択**: ip アドレスが IPv4 と IPv6 のどちらであるかを選択します。
+    - **IP アドレスの種類を選択**: IP アドレスは IPv4 または IPv6 を選択します。
 
-    - **Ip アドレスを cidr 表記で指定する**: ip アドレスを cidr 表記で指定します。 詳細情報:[クラスレスドメイン間ルーティング](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+    - **CIDR 表記で IP アドレスを指定します**: CIDR 表記で IP アドレスを指定します。 詳細: [クラスレス ドメイン間ルーティング](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
 
       > [!div class=mx-imgBorder]
-      > Ip アドレス![を追加]する(../media/add-ip-address.png "ip アドレスを追加")する    
+      > ![IP アドレスの追加](../media/add-ip-address.png "IP アドレスの追加")    
 
-5.  **[構成]** を選択します。
+5.  **構成**を選択します。
 
-## <a name="remove-an-ip-address"></a>IP アドレスを削除する
+## <a name="remove-an-ip-address"></a>IP アドレスを削除
 
-以前に許可されていた IP アドレスからポータルへのアクセスを削除するには、一覧から IP アドレスを削除します。 すべての IP アドレスを削除すると、ポータルにすべての IP アドレスからアクセスできるようになります。
+以前に許可した IP アドレスからポータルへのアクセス権を削除するには、リストの IP アドレスを削除します。 どの IP アドレスも削除しない場合、ポータルはすべての IP アドレスからアクセスできます。
 
-1.  [PowerApps ポータル管理センター](admin-overview.md)を開きます。
+1.  [PowerApps ポータル管理センター](admin-overview.md) を開きます。
 
-2.  **IP アドレス制限の設定**に関するページを参照してください。 IP アドレスとその種類の一覧が表示されます。
+2.  **IP アドレス制限の設定**に移動します。 IP アドレスおよびその種類の一覧が表示されます。
 
     > [!div class=mx-imgBorder]
-    > Ip![アドレスの制限]を設定する(../media/set-up-ip-address-restrict.png "ip アドレスの制限を")設定する
+    > ![IP アドレス制限の設定](../media/set-up-ip-address-restrict.png "IP アドレス制限の設定")
 
-3.  削除する IP アドレスの横にある [ **ip アドレス (x) を削除**する] を選択します。
+3.  削除するには、IP アドレスの横の **IP アドレスを削除(x)** を選択します。
 
-4.  確認メッセージで **[削除]** を選択します。
+4.  確認メッセージの**削除**を選択します。
 

@@ -26,7 +26,7 @@ search.app:
 ---
 # <a name="create-business-rules-and-recommendations-to-apply-logic-in-a-model-driven-app-form"></a>モデル駆動型アプリ フォームでロジックを適用するための業務ルールと推奨事項を作成
 
-このトピックでは、業務ルールおよびビジネス レコメンデーションを作成し、JavaScript コードの記述またはプラグインの作成を行わずにモデル駆動型アプリでフォーム ロジックを適用する方法を示します。業務ルールは、変化が急速で、よく使用される業務ルールを実装および保守するための、単純なインターフェイスを提供します。 これらは メイン フォームと クイック作成 フォームに適用でき、モデル駆動型アプリケーション、Dynamics 365 customer engagement webアプリケーション、 Dynamics 365 for tablets 、 Dynamics 365 for Outlook (オンライン、オフラインモード) で動作します。
+このトピックでは、業務ルールおよびビジネス レコメンデーションを作成し、JavaScript コードの記述またはプラグインの作成を行わずにモデル駆動型アプリでフォーム ロジックを適用する方法を示します。業務ルールは、変化が急速で、よく使用される業務ルールを実装および保守するための、単純なインターフェイスを提供します。 これらは メイン フォームと クイック作成 フォームに適用でき、モデル駆動型アプリケーション、旧式のwebアプリケーション、Dynamics 365 タブレット、 Dynamics 365 for Outlook (オンライン、オフラインモード) で動作します。
 
 > [!NOTE]
 > エンティティに対する業務ルールを定義し、すべてのフォームおよびサーバーに適用される用にするには、[エンティティの業務ルールの作成](/powerapps/maker/common-data-service/data-platform-create-business-rule) を参照してください。
@@ -150,12 +150,12 @@ search.app:
      > [!div class="mx-imgBorder"] 
      > ![](media/account-name-on-form.png "フォーム上のアカウント名フィールド")
 
-## <a name="frequently-asked-questions-faq"></a>よく寄せられる質問 (FAQ)
-*ビジネス ルールは読み取り専用フォームのフィールドのロックを解除できるか*
-- ビジネス ルールは、読み取り専用フォームのフィールドのロックを解除し、編集をすることができます。
+## <a name="frequently-asked-questions-faq"></a>よくあるご質問 (FAQ)
+*業務ルールは読み取り専用フォームのフィールドのロックを解除できますか。*
+- はい、業務ルールはフィールドをロック解除して、読み取り専用フォームのアクションを編集可能にします。
 
-*うまく動作しないビジネスルールをどのように解消できるか* 
-- 本トピックの [ビジネス ルールは、フォームに対して有効になっていますか？](#is-your-business-rule-not-firing-for-a-form) を参照してください。
+*実行していない業務ルールはどうトラブルシューティングしますか。* 
+- このトピックの[ビジネス ルールがフォームに対して実行されない場合](#is-your-business-rule-not-firing-for-a-form)を参照してください。
 
 ## <a name="see-also"></a>関連項目  
  [プロセスを通じてカスタム ビジネス ロジックを作成する](guide-staff-through-common-tasks-processes.md)   

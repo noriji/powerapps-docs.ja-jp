@@ -1,7 +1,7 @@
 ---
 title: フォーム デザイナーで使用可能なプロパティ | MicrosoftDocs
 ms.custom: ''
-ms.date: 02/19/2019
+ms.date: 08/26/2019
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -25,13 +25,12 @@ search.app:
 
 # <a name="properties-available-in-the-form-designer"></a>フォーム デザイナーで使用可能なプロパティ
 
-モデル駆動型フォーム デザイナーの右ペインにあるプロパティ ウィンドウでは、プレビューまたはナビゲーション ウィンドウから選択した任意の要素のプロパティをすばやく表示および更新できます。 
+モデル駆動型フォーム デザイナーの右ウィンドウにあるプロパティ ウィンドウでは、プレビューまたはツリー ビューから選択した任意の要素のプロパティをすばやく表示および更新できます。 
 
 > [!div class="mx-imgBorder"] 
 > ![](media/form-designer-property-pane.png "フォーム デザイナーのプロパティ ウィンドウ")
 
 ## <a name="form-properties"></a>フォームのプロパティ
-
 
 |Name  |説明  |
 |---------|---------|
@@ -52,8 +51,8 @@ search.app:
 | **表示オプション**      | **電話の非表示**     |  電話画面のこのフォームの要約版では、タブを非表示にすることができます。     |
 | **形式**   | **レイアウト**     |  タブには最大 3 つの列があります。 これらのオプションを使用して、タブの数とそのタブが占める幅全体の割合を定義します。      |
 
-## <a name="section-properties"></a>セクションのプロパティ
 
+## <a name="section-properties"></a>セクションのプロパティ
 
 |面積   |Name  |説明  |
 |---------|---------|---------|
@@ -67,7 +66,6 @@ search.app:
 
 ## <a name="field-properties"></a>フィールドのプロパティ
 
-
 |面積  |Name  |説明  |
 |---------|---------|---------|
 |**表示オプション**     | **フィールド ラベル**    | 既定で、ラベルはフィールドの表示名と一致します。 別ラベルをここに入力することによって、そのフォームの名前を上書きできます。       |
@@ -77,15 +75,17 @@ search.app:
 |**表示オプション**     |  **フィールドのロック**   |  削除されないようにこのフィールドをロックします。     |
 |**表示オプション**     |  **フィールドの非表示**     | 選択すると、フィールドは既定で非表示になり、コードを使用して表示できます。      |
 |**表示オプション**     |  **電話の非表示**    | 電話画面のこのフォームの要約版では、フィールドを非表示にすることができます。         |
-|**表示オプション**     | **フィールドの幅**      |  フィールドを含むセクションに複数の列があるとき、フィールドがセクションにある列の数まで占めるように設定できます。       |
-
+|**形式**     | **フィールドの幅**      |  フィールドを含むセクションに複数の列があるとき、フィールドがセクションにある列の数まで占めるように設定できます。       |
 
 ## <a name="see-also"></a>関連項目
 [モデル駆動型フォーム デザイナーの概要](form-designer-overview.md)  
-[フォーム デザイナーを使用してフォームを作成または編集](create-and-edit-forms.md)  
-[フォーム デザイナーを使用してフォームのフィールドを追加、移動、または削除](add-move-or-delete-fields-on-form.md)  
-[フォーム デザイナーを使用してフォームのセクションを追加、移動、または削除](add-move-or-delete-sections-on-form.md)  
-[フォーム デザイナーを使用してフォームのタブを追加、移動、または削除](add-move-or-delete-tabs-on-form.md)  
+[フォーム デザイナーを使用してフォームを作成、編集、構成する](create-and-edit-forms.md)  
+[フォーム上のフィールドを追加、構成、移動、削除する](add-move-or-delete-fields-on-form.md)  
+[フォーム上のコンポーネントを追加、構成、移動、削除する](add-move-configure-or-delete-components-on-form.md)  
+[フォーム上のセクションを追加、構成、移動、削除する](add-move-or-delete-sections-on-form.md)  
+[フォーム上のタブを追加、構成、移動、削除する](add-move-or-delete-tabs-on-form.md)  
 [フォーム デザイナーでヘッダーのプロパティを構成する](form-designer-header-properties.md)  
+[フォームでサブグリッド コンポーネントを追加して構成する](form-designer-add-configure-subgrid.md)  
+[フォームで簡易表示コンポーネントを追加して構成する](form-designer-add-configure-quickview.md)  
 [フォーム デザイナーのツリー ビューを使用](using-tree-view-on-form.md)  
-[フィールドの作成および編集](../common-data-service/create-edit-field-portal.md)
+[フィールドの作成および編集](../common-data-service/create-edit-field-portal.md)  

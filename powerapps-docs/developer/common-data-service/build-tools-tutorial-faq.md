@@ -1,6 +1,6 @@
 ---
 title: 構築ツールのチュートリアルと、よく寄せられる質問| Microsoft Docs
-description: 'PowerApps 構築ツールは、PowerApps固有の Azure DevOps 構築タスクの集合です。これにより PowerApps の開発管理において、スクリプトを手動でダウンロードする必要がなくなります。 このトピックでは、これらのツールの詳細情報を提供するチュートリアルとFAQについて説明します。 '
+description: 'PowerApps build tools は、一連の PowerApps 固有の Azure DevOps 構築タスクです。これを使用することで PowerApps の開発を管理するためにスクリプトを手動でダウンロードする必要がなくなります。 このトピックでは、これらのツールの詳細情報を提供するチュートリアルとFAQについて説明します。 '
 ms.custom: ''
 ms.date: 07/21/2019
 ms.reviewer: Dean-Haas
@@ -20,7 +20,7 @@ search.app:
 
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-Azure DevOps に向けた PowerApps 構築ツールの詳細については、チュートリアルとFAQを参照してください。 
+チュートリアルと FAQ を使用して Azure DevOps の PowerApps Build Tools の詳細を参照してください。 
 
 ## <a name="hands-on-lab"></a>ハンズオン ラボ
 
@@ -42,20 +42,20 @@ Azure DevOps に向けた PowerApps 構築ツールの詳細については、�
 
 ## <a name="frequently-asked-question-faq"></a>よくあるご質問 (FAQ)
 
-**PowerApps の構築ツール PowerApps のみで動作しますか?**  
+**PowerApps Build Tools は PowerApps のみで動作しますか。**  
 
-*PowerApps の構築ツールは Customer Engagement の PowerApps と Dynamics CRM の両方で機能します (Dynamics 365 CE Apps はモデル駆動型の PowerAppsです)。また、他の構構築タスクを Microsoft Dynamics for Finance and Operations で使用することができます*
+*PowerApps Build Tools は、PowerApps と、Dynamics 365 Sales や Dynamics 365 Customer Service など Dynamics 365 のモデル駆動型アプリの両方で動作します。Microsoft Dynamics for Finance and Operations には個別の構築タスクを使用できます。*
 
 **FlowとCanvasアプリを含めることはできますか?**
 
 *はい、Flows と Canvas アプリはソリューションに対応しているため、ソリューションに追加をすることでアプリのライフサイクルに登録することができます。ただし、一部の手順では手動設定が必要となります。これについては、今年の後半に環境変数とコネクタの導入をする際に同時に対応する予定です。*
 
-**PowerApps 構築ツールの価格を教えてください**
+**PowerApps Build Tools の価格を教えてください。**
 
-*PowerAppsの構築ツールは無料で使用することができます。ただし、構築ツールを使用するためは Azure DevOps の有効なサブスクリプションが必要となります。詳細については [こちら](https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/)を参照してください。*
+*PowerApps Build Tools は無料で使用することができます。ただし、Build Tools を使用するためは Azure DevOps の有効なサブスクリプションが必要となります。詳細については [こちら](https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/) を参照してください。*
 
 **拡張機能が表示されますが、それをインストールするオプションがないのはなぜですか?**
 
-***インストール** オプション (以下のスクリーンショットに概要を表示しています) が表示されていない場合は、 Azure DevOps で必要なインストール権限が付与されていないことが考えられます。詳細については [こちら](https://docs.microsoft.com/en-us/azure/devops/marketplace/how-to/grant-permissions?view=azure-devops)を参照してください*。
+***インストール** オプション (以下のスクリーンショットに概要を表示しています) が表示されていない場合は、Azure DevOps で必要なインストール権限が付与されていないことが考えられます。詳細については [こちら](https://docs.microsoft.com/en-us/azure/devops/marketplace/how-to/grant-permissions?view=azure-devops) を参照してください*。
 
 ![タスクの構築画面](media/build-tasks.png)

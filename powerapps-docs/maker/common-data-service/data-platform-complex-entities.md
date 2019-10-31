@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: reference
-ms.date: 07/17/2018
+ms.date: 09/26/2019
 ms.author: lanced
 search.audienceType:
   - maker
@@ -16,21 +16,25 @@ search.app:
 ---
 
 # <a name="complex-entities-and-licensing"></a>複雑なエンティティとライセンス付与
+
+> [!IMPORTANT]
+> このトピックは最新ではなく、2019 年 10 月 1 日から適用される最新のライセンス変更を反映するため、間もなく更新されます。 エンティティに対するライセンス要件の最新情報については、 [PowerApps ライセンス ガイド](https://go.microsoft.com/fwlink/?linkid=2085130) を参照してください。
+
 次の複数のサーバー側ロジックを含むエンティティは、これらのエンティティを使用するアプリまたはフローのユーザーに、PowerApps Plan 2 または Microsoft Flow Plan 2 ライセンスを要求します。
 
-* コード プラグイン。詳細情報: [プラグイン開発](https://docs.microsoft.com/dynamics365/customer-engagement/developer/plugin-development)
-* リアルタイム ワークフロー。 詳細情報: [ワークフロー プロセス](https://docs.microsoft.com/dynamics365/customer-engagement/customize/workflow-processes)
+* コード プラグイン。詳細情報: [プラグイン開発](/powerapps/developer/common-data-service/plug-ins)
+* リアルタイム ワークフロー。 詳細情報: [ワークフロー プロセス](/flow/workflow-processes)
 
     > [!IMPORTANT]
-    >  リアルタイムのワークフローに変換されるワークフローのみ、リアルタイムおよび同期と見なされます。 バックグラウンドで実行されるワークフローは、適切な PowerApps プラン計画でも使用でき、追加ライセンスは必要ありません。
+    >  リアルタイムのワークフローに変換されるワークフローのみ、リアルタイムおよび同期と見なされます。 バックグラウンドで実行されるワークフローは、適切な PowerApps プランでも使用でき、追加ライセンスは必要ありません。
 
 エンティティに複雑なビジネス ロジックを追加するかどうかを調べるには、環境で設定されたプラグイン アセンブリおよびワークフローの一覧を確認します。
 
-## <a name="complex-entities-installed-with-dynamics-365"></a>Dynamics 365 とともにインストールされる複雑なエンティティ
-次の表に、Dynamics 365 アプリのインストールの一環として複雑なサーバー側ロジックの標準を含むエンティティの一覧を示します。 この一覧がガイドとして使用されます。 環境にインストールされている Dynamics 365 のアプリケーションおよびバージョンに応じて、複雑なエンティティの一覧が異なる場合があります。
+## <a name="complex-entities-installed-with-dynamics-365-apps"></a>Dynamics 365 アプリ とともにインストールされる複雑なエンティティ
+次のテーブルに、Dynamics 365 Sales や Dynamics 365 Customer Service など、Dynamics 365 でモデル駆動型アプリのインストールの一環として複雑なサーバー側ロジックの標準を含むエンティティの一覧を示します。 この一覧がガイドとして使用されます。 環境にインストールされている Dynamics 365 のアプリおよびバージョンに応じて、複雑なエンティティの一覧が異なる場合があります。
 
 > [!NOTE]
->  Common Data Service を使用してて、Dynamics 365 アプリケーションやサードパーティのソリューションがインストールされていない場合、複雑なサーバー側ロジックを含むエンティティは環境に存在しません。
+>  Common Data Service を使用して、Dynamics 365 アプリケーションやサードパーティがインストールされていない場合、複雑なサーバー側ロジックを含むエンティティは環境に存在しません。
 
 * 取引先企業
 * 契約
@@ -169,5 +173,5 @@ search.app:
 
 
 ## <a name="licensing"></a>ライセンス
-PowerApps と Dynamics 365 ライセンスの詳細については、「[ライセンスの概要](../../administrator/pricing-billing-skus.md)」ページをご覧ください。
+PowerApps と Dynamics 365 ライセンスの詳細については、 [ライセンスの概要](../../administrator/pricing-billing-skus.md) ページをご覧ください。
 

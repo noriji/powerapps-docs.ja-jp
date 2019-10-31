@@ -1,7 +1,7 @@
 ---
-title: PowerApps component framework | のツールを入手するMicrosoft Docs
-description: Microsoft PowerApps CLI を取得して、PowerApps コンポーネントフレームワークを使用してコードコンポーネントを作成、デバッグ、および配置します。
-keywords: PowerApps コンポーネントフレームワーク、コードコンポーネント、コンポーネントフレームワーク
+title: PowerApps Component Framework のツールの入手 | Microsoft Docs
+description: Microsoft PowerApps CLI を取得して、PowerApps Component Framework を使用した、コード コンポーネントを作成、デバッグおよび展開します。
+keywords: PowerApps component framework、コード コンポーネント、コンポーネント フレームワーク
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -11,65 +11,59 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
-ms.openlocfilehash: 496b7d443775da075dd8da52ac4b0a754121bf28
-ms.sourcegitcommit: 4c35aedde46380d5438687ae6f61a3b0cc7e7e2f
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "72340025"
 ---
-# <a name="get-tooling-for-powerapps-component-framework"></a>PowerApps コンポーネントフレームワークのツールを入手する
 
-**MICROSOFT POWERAPPS CLI** (コマンドラインインターフェイス) を使用して、PowerApps コンポーネントフレームワークを使用してコードコンポーネントを作成、デバッグ、および配置します。 PowerApps CLI を使用すると、開発者はコードコンポーネントをすばやく作成できます。 今後、開発およびアプリケーションライフサイクル管理 (ALM) の追加のエクスペリエンスをサポートするように拡張される予定です。 
+# <a name="get-tooling-for-powerapps-component-framework"></a>PowerApps Component Framework のツールを入手します。
+
+PowerApps Component Framework を使用して、コード コンポーネントを作成、デバッグ、および展開するには、**Microsoft PowerApps CLI** (コマンドライン インターフェイス) を使用します。 PowerApps CLI により開発者はコード コンポーネントを迅速に作成できます。そして将来的には追加の開発やアプリケーション ライフサイクル管理 (ALM) のエクスペリエンスに対するサポートを含むように拡張されます。 
 
 ## <a name="what-is-microsoft-powerapps-cli"></a>Microsoft PowerApps CLI とは 
 
-Microsoft PowerApps CLI は、開発者とアプリの開発者がコードコンポーネントを作成できるようにする、単純な単一ストップの開発者コマンドラインインターフェイスです。 PowerApps CLI ツールは、企業の開発者や Isv が拡張機能とカスタマイズを迅速かつ効率的に作成、ビルド、デバッグ、公開できる包括的な ALM に向けた第一歩です。  
+Microsoft PowerApps CLIは、開発者やアプリ作成者にコード コンポーネントを作成するための能力を与える、シンプルでワンストップな開発コマンドライン インターフェイスです。 PowerApps CLI ツールは、エンタープライズ開発者と ISV が拡張機能とカスタマイズを、すばやく効率的に作成、構築、デバッグ、および公開できる、包括的な ALM ストーリーへの最初のステップです。  
 
 ## <a name="install-microsoft-powerapps-cli"></a>Microsoft PowerApps CLI のインストール
 
-CLI Microsoft PowerApps を取得するには、次の手順を実行します。
+Microsoft PowerApps CLI を取得するには、次の手順を実行します。
 
-1. [Npm](https://www.npmjs.com/get-npm) (node.js 付属) または[node.js](https://nodejs.org/en/) (npm 付属) をインストールします。 LTS (長期的なサポート) バージョン 10.15.3 LTS をお勧めします。これは、最も安定しているように見えます。
+1. [Npm](https://www.npmjs.com/get-npm)(Node.js に含まれる) または [Node.js](https://nodejs.org/en/) (npm に含まれる) をインストールします。 最も安定している LTS (長期サポート) バージョン 10.15.3 LTS をお勧めします。
 
-1. [.NET Framework 4.6.2 Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework/net462)をインストールします。 
+1. [.NET Framework4.6.2開発者パック](https://dotnet.microsoft.com/download/dotnet-framework/net462) をインストールします 。 
 
-1. Visual Studio 2017 以降をまだ持っていない場合は、次のいずれかのオプションを実行します。
-   - オプション 1: [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017)以降をインストールします。
-   - オプション 2: [.Net Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2)をインストールし、 [Visual Studio Code](https://code.visualstudio.com/Download)をインストールします。
+1. Visual Studio 2017 以降をお持ちでない場合、以下のいずれかの方法に従ってください:
+   - オプション1: [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017)以降をインストールします。
+   - オプション 2: [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) をインストールしてから、 [Visual Studioコード](https://code.visualstudio.com/Download) をインストールします。
 
-1. [MICROSOFT POWERAPPS CLI](https://aka.ms/PowerAppsCLI)をインストールします。
-1. 最新の機能をすべて活用するには、次のコマンドを使用して PowerApps CLI ツールを最新バージョンに更新します。
+1. [Microsoft PowerApps CLI](https://aka.ms/PowerAppsCLI) のインストール
+1. すべての最新機能を最大限に活用するには、コマンドを使用して PowerApps CLI ツールを最新版に更新します。
 
     ```CLI
     pac install latest
     ```
 
 > [!NOTE]
-> - PowerApps CLI を使用してコードコンポーネントを配置するには、システム管理者またはシステムカスタマイザーの特権を持つ Common Data Service 環境が必要です。
+> - PowerApps CLI を使用してコード コンポーネントを展開するには、システム管理者またはシステム カスタマイザー特権を持つ Common Data Service 環境が必要です。
 > - 現在、PowerApps CLI は Windows 10 でのみサポートされています。
 
-## <a name="microsoft-powerapps-cli-telemetry"></a>CLI テレメトリの Microsoft PowerApps
+## <a name="microsoft-powerapps-cli-telemetry"></a>Microsoft PowerApps CLI テレメトリ
 
-機能チームはテレメトリを集計して、PowerApps CLI ツールで最も頻繁に使用される機能や機能を理解します。 集計データを使用すると、重要なものに焦点を当てることによって、顧客に最適なエクスペリエンスを提供できます。
+PowerApps CLI ツールで開発者によってどの機能や能力が最も頻繁に使用されるかを理解するために、この機能のチームは匿名化したテレメトリを集約しています。 集計データは本当に重要なことに焦点を合わせて、顧客に最高のエクスペリエンスを提供することを可能にします。
 
 > [!NOTE]
-> テレメトリの収集を無効にするには、コマンド `pac telemetry disable` を実行します。 テレメトリを再び有効にするには、コマンド `pac telemetry enable` を使用します。
+> テレメトリ収集を無効にするには、次のコマンド `pac telemetry disable` を実行します。 テレメトリを元に戻すには、次のコマンド `pac telemetry enable` を使用します。
 
+## <a name="uninstall-microsoft-powerapps-cli"></a>Microsoft PowerApps CLI をアンインストールします。
 
-## <a name="uninstall-microsoft-powerapps-cli"></a>Microsoft PowerApps CLI のアンインストール
+PowerApps CLI ツールをアンインストールするには、[こちら](https://aka.ms/PowerAppsCLI)から MSI を実行してください。 
 
-PowerApps CLI ツールをアンインストールするには、[ここ](https://aka.ms/PowerAppsCLI)から MSI を実行します。 
+プライベート プレビューの参加者の方で、CLI の古いバージョンをお持ちの場合は、以下の手順を実行します:
 
-プライベートプレビュー参加要素で、古いバージョンの CLI を使用している場合は、次の手順を実行します。
-
-1. PowerApps CLI がインストールされている場所を確認するには、コマンドプロンプトを開き、「`where pac`」と入力します。
-1. PowerAppsCLI フォルダーを削除します。
-1. コマンドプロンプトで `rundll32 sysdm.cpl,EditEnvironmentVariables` コマンドを実行して、環境変数ツールを開きます。
-1. [@No__t_1] セクションの `Path` をダブルクリックします。
-1. PowerAppsCLI パスを含む行を選択し、右側にある **[削除]** ボタンを選択します。
-1. [ **OK]** を2回選択します。
+1. PowerApps CLI がインストールされた場所を見つけるには、コマンド プロンプトを開いて `where pac` と入力します。
+1. PowerAppsCLI フォルダを削除します。
+1. コマンド プロンプトでコマンド `rundll32 sysdm.cpl,EditEnvironmentVariables` を実行して、環境変数ツールを開きます。
+1. `User variable for...` セクションの `Path` をダブルクリックします。
+1. PowerApps CLI のパスを含む行を選択して、右側の削除ボタンをクリックします。
+1. **OK** を 2 回クリックします。
 
 ### <a name="see-also"></a>関連項目
 
-[TypeScript を使用してコンポーネントを実装する](implementing-controls-using-typescript.md)<br/>
+[TypeScript でコンポーネントを実装する](implementing-controls-using-typescript.md)<br/>

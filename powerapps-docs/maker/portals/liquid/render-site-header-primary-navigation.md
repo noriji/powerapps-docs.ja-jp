@@ -1,27 +1,22 @@
 ---
-title: ポータルで web サイトヘッダーとプライマリナビゲーションバーを表示する |MicrosoftDocs
-description: ポータルで web サイトヘッダーとプライマリナビゲーションバーを表示するための手順とサンプルコードです。
+title: ポータルにおける Web サイト ヘッダーとプライマリ ナビゲーション バーをレンダリングする | MicrosoftDocs
+description: ポータル上に Web サイトのヘッダーと主なナビゲーション バーを表示するための手順とサンプルコード。
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: ''
-ms.date: 10/07/2019
+ms.custom: null
+ms.date: 08/30/2019
 ms.author: shjais
-ms.reviewer: ''
-ms.openlocfilehash: 3cfd5ced4da80cae70b4f51d81e30b0d909a81c3
-ms.sourcegitcommit: 5338e01d2591f76d71f09b1fb229d405657a0c1c
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72974439"
+ms.reviewer: null
 ---
-# <a name="render-a-website-header-and-primary-navigation-bar"></a>Web サイトヘッダーとプライマリナビゲーションバーを表示する
 
-ポータルの設定、スニペット、web リンク、および sitemarkers を使用して、web サイトヘッダーとプライマリナビゲーションバーを表示します。 [web テンプレートを使用してソースコンテンツを格納 [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] に](store-content-web-templates.md)は  
+# <a name="render-a-website-header-and-primary-navigation-bar"></a>Web サイト ヘッダーとプライマリ ナビゲーション バーの表示
+
+ポータル設定、スニペット、Web リンク、およびサイト マーカーを使用して、Web サイト ヘッダーとプライマリ ナビゲーション バーを表示します。 [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Web テンプレートを使用したソース コンテンツの保存](store-content-web-templates.md)  
 
 > [!Note]
-> このトピックの例は、アプリケーションに対してクロス要求ヘッダーキャッシュが無効になっている場合にのみ、正常に機能します。 バージョン7.0.0019 以降では、既定で有効になっています。 Header/OutputCache/Enabled という名前のサイト設定を作成し、その値を false に設定することによって無効にすることができます。
+> このトピックの例は、クロス リクエスト ヘッダーのキャッシュがアプリケーションで無効の場合のみ正しく機能します。 バージョン 7.0.0019 以降では、既定で有効になります。 サイトの設定を Header/OutputCache/Enabled という名前で作成し、値を false に設定することにより、無効にすることができます。
 
 
 ```xml
@@ -195,8 +190,8 @@ ms.locfileid: "72974439"
 
 ### <a name="see-also"></a>関連項目
 
-[液体と web テンプレートページテンプレートを使用してカスタムページテンプレートを作成する](create-custom-template.md)  
-[RSS フィードを表示するカスタムページテンプレートを作成する](render-rss-custom-page-template.md)  
-[現在のページに関連付けられているエンティティの一覧を表示します](render-entity-list-current-page.md)  
-[ハイブリッドナビゲーションを使用して、最大3レベルのページ階層を表示します](hybrid-navigation-render-page-hierachy.md)  
+[流動テンプレートと Web テンプレート ページ テンプレートの使用によるカスタム ページ テンプレートの作成](create-custom-template.md)  
+[RSS フィードを表示するカスタム ページ テンプレートの作成](render-rss-custom-page-template.md)  
+[現在のページに関連付けられているエンティティの表示](render-entity-list-current-page.md)  
+[ハイブリッド ナビゲーションの使用により、ページ階層のレベルを 3 つまで描画](hybrid-navigation-render-page-hierachy.md)  
 

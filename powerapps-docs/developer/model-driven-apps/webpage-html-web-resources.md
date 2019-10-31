@@ -78,13 +78,13 @@ HTML Web リソースはユーザーのブラウザーにストリームされ�
 
 ## <a name="reference-other-web-resources-from-an-html-web-resource"></a>HTML Web リソースからの他の Web リソースの参照
 
- いずれかの Web リソース ファイルの種類を使用する一連の関連ファイルをモデル駆動型アプリ外で作成できます。 常に相対パスを使用し、Web サイトのフォルダー構造を反映する一貫性のある命名規則を使用して各 Web リソースをインポートすると、Web リソースとしてインポートされた関連する CSS、XML、JScript、イメージ、および Silverlight のファイルへのリンクが HTML Web リソースで維持されます。  
+ いずれかの Web リソース ファイルの種類を使用する一連の関連ファイルをモデル駆動型アプリ外で作成できます。 常に相対パスを使用し、Web サイトのフォルダー構造を反映する一貫性のある命名規則を使用して各 Web リソースをインポートすると、Web リソースとしてインポートされた関連する CSS、JScript、イメージ、および Silverlight のファイルへのリンクが HTML Web リソースで維持されます。  
 
  たとえば、次の [フォルダー]/ファイル構造を使用する Web アプリケーション プロジェクトを作成するとします。  
 
 -   page.htm
 
--   [Styles]
+-   [スタイル]
 
     -   style.css
   
@@ -133,15 +133,15 @@ HTML Web リソースはユーザーのブラウザーにストリームされ�
 |formid|フォーム ID|フォーム ID を表す GUID です。|
 |entrypoint|エントリ ポイント|文字列値。 このパラメーターは、エンティティのユーザー定義のヘルプ コンテンツとして開かれる Web リソースにオプション値として渡されます。 有効にした場合、ユーザー定義のヘルプ URL は、「form」または「hierarchychart」のいずれかの値を含みます。|
 |pagemode||内部のみで使用|
-|セキュリティ||内部のみで使用|
-|tabSet||内部のみで使用|
+|セキュリティ||社外秘。|
+|tabSet||社外秘。|
 
- data パラメーターの複数の値を渡すには、data パラメーターの値でパラメーターをエンコードしてから、スクリプトを使用して複数のパラメーターをデコードするロジックを HTML Web リソースに含める必要があります。 「[サンプル: データ パラメーターを使用した Web リソースへの複数の値の引き渡し](sample-pass-multiple-values-web-resource-through-data-parameter.md)」トピックでは、複数のパラメーター値の引き渡しに対処する 1 つの方法を示しています。  
+ 複数の値がデータ パラメーターで渡された場合、自動的にエンコードされます。 ロジックも、HTML Web リソースのスクリプトを使用して複数のパラメーターをデコードするために含める必要があります。 「[サンプル: データ パラメーターを使用した Web リソースへの複数の値の引き渡し](sample-pass-multiple-values-web-resource-through-data-parameter.md)」トピックでは、複数のパラメーター値の引き渡しに対処する 1 つの方法を示しています。  
 
 ### <a name="see-also"></a>関連項目
  [Web リソース](web-resources.md)   
  [アクセス可能な Web リソースの作成](create-accessible-web-resources.md)   
- [スタイル シート (CSS) Web リソースの使用](css-web-resources.md)   
+ [スタイルシート (CSS) ウェブ リソースを使用する](css-web-resources.md)   
  [スクリプト (JScript) Web リソースの使用](script-jscript-web-resources.md)   
  [データ (XML) Web リソースの使用](data-xml-web-resources.md)   
  [画像 (JPG、PNG、GIF、ICO) Web リソースの使用](image-web-resources.md)   

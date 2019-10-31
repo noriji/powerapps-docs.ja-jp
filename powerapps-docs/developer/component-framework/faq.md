@@ -1,6 +1,6 @@
 ---
-title: FAQ |MicrosoftDocs
-description: コンポーネントフレームワークに関してよく寄せられる質問
+title: よくあるご質問 | MicrosoftDocs
+description: コンポーネント フレームワークに関してよく寄せられる質問
 manager: kvivek
 ms.date: 10/01/2019
 ms.service: powerapps
@@ -8,34 +8,29 @@ ms.topic: index-page
 ms.assetid: 9f940264-d7d5-4930-8052-1bd582445d37
 ms.author: nabuthuk
 author: Nkrb
-ms.openlocfilehash: dd5b6701c28e91ba2f0a2b99041446d0e2c45204
-ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72346879"
 ---
-# <a name="faq"></a>FAQ
+
+# <a name="faq"></a>よくあるご質問
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-## <a name="multiple-components-in-single-manifest-file"></a>単一のマニフェストファイル内の複数のコンポーネント
+## <a name="multiple-components-in-single-manifest-file"></a>ひとつのマニフェスト ファイルに複数のコンポーネント
 
-1つのマニフェストファイルで複数のコンポーネントを定義することはできません。 
+単一のマニフェスト ファイルに複数のコンポーネントを定義できません。 
 
-## <a name="calling-processesactions"></a>呼び出し (プロセス/アクションを)
+## <a name="calling-processesactions"></a>プロセス / 操作の呼び出し
 
-これはサポートされていません。 現在のところ、[ナビゲーション](reference/navigation.md)メソッドを使用してダイアログボックスを呼び出すことはできません。
+これはサポートされていません。 今日の時点では [ナビゲーション](reference/navigation.md) メソッドを使用することでだけ、ダイアログ ボックスを呼び出すことができます。
 
-## <a name="calling-components-within-another-component"></a>呼び出し (別のコンポーネント内のコンポーネントを)
+## <a name="calling-components-within-another-component"></a>別のコンポーネント内からコンポーネントを呼び出す
 
 これはサポートされていません。
 
-## <a name="font-resource"></a>フォントリソース
+## <a name="font-resource"></a>フォント リソース
 
-現在、PowerApps コンポーネントフレームワークではフォントリソース (tff) はサポートされていません。
+現在、フォント リソース (.tff) は PowerApps Component Framework ではサポートされていません。
 
 ## <a name="related-topics"></a>関連トピック
 
-[PowerApps コンポーネントフレームワーク API リファレンス](reference/index.md)<br/>
-[PowerApps コンポーネントフレームワークの概要](overview.md)
+[PowerApps Component Framework API の参照](reference/index.md)<br/>
+[PowerApps Component Framework の概要](overview.md)

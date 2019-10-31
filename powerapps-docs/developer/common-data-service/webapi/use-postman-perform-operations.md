@@ -1,5 +1,5 @@
 ---
-title: Postman を使用してその Web API で操作を実行する (アプリ用 Common Data Service) | MicrosoftDocs
+title: Postman を使用して Web API で演算を実行する (アプリ用 Common Data Service) | MicrosoftDocs
 description: Postman を使用して Web API 要求を構成して送信する方法を説明します。
 ms.custom: null
 ms.date: 03/22/2019
@@ -8,8 +8,6 @@ ms.service: powerapps
 ms.suite: null
 ms.tgt_pltfrm: null
 ms.topic: article
-applies_to:
-  - Dynamics 365 for Customer Engagement (online)
 ms.assetid: AB50128B-D8E3-47A3-A0F8-9594EF6B7022
 caps.latest.revision: 7
 author: susikka

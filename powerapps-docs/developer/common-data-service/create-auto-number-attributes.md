@@ -118,6 +118,8 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0
 OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)
 ```
+> [!NOTE]
+>自動付番の値は、レコードの開始時にデータベースによって事前に選択されます。 レコードを開始してからキャンセルした場合、割り当てられた番号は使用されません。 この間に次の連続番号を持つ別のレコードが完了した場合は、レコードの自動付番にギャップが生じます。
 
 ## <a name="autonumberformat-options"></a>AutoNumberFormatオプション
 

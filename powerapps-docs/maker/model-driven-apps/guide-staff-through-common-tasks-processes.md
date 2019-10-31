@@ -55,7 +55,7 @@ Microsoft Flow にはいくつかの種類のプロセスがあり、それぞ�
   
 -   業務プロセス フロー。  業務プロセス フローを作成することによって、データを一貫して入力し、アプリで作業するたびに同じステップを実行するように確認します。 詳細: [業務プロセス フローの概要](/flow/business-process-flows-overview)
 
--   ワークフローおよびアクション Dynamics 365 Customer Engagement カスタマイザーは、ワークフローと操作である従来の Common Data Service プロセスを使い慣れていると考えられます。 詳細: [ワークフロー プロセスの使用](/flow/workflow-processes)と[操作の概要](/flow/actions)
+-   ワークフローおよびアクション Dynamics 365 カスタマイザーは、ワークフローと動作である従来の Common Data Service プロセスを使い慣れていることが考えられます。 詳細: [ワークフロー プロセスの使用](/flow/workflow-processes)と[操作の概要](/flow/actions)
   
 ## <a name="next-step"></a>次の手順
 
@@ -63,4 +63,4 @@ Microsoft Flow にはいくつかの種類のプロセスがあり、それぞ�
 
 ### <a name="see-also"></a>関連項目
 
-[Common Data Service を使用したビジネス ロジックの適用](../common-data-service/cds-processes.md)
+[ビジネス ロジックを Common Data Service に適用する](../common-data-service/cds-processes.md)

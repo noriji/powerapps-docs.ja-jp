@@ -1,6 +1,6 @@
 ---
-title: QueryExpression による大量の結果セットのページング (Common Data Service) | Microsoft Docs
-description: Dynamics 365 (オンライン) および Customer Engagement では、ページング Cookie 機能を使用して、アプリケーション内での大きなデータセットのページングを高速化できます。 この機能は、FetchXML クエリと QueryExpression クエリの両方で使用できます。
+title: QueryExpression 使用して大量の結果セットをページングする (Common Data Service) | Microsoft Docs
+description: ページング Cookie 機能を使用すると、アプリケーションの大きなデータセットのページングを高速化できます。 この機能は、FetchXML クエリと QueryExpression クエリの両方で使用できます。
 ms.custom: ''
 ms.date: 10/31/2018
 ms.reviewer: ''

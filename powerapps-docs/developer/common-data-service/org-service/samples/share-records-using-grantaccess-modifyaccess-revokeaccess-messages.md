@@ -1,5 +1,5 @@
 ---
-title: 'サンプル: GrantAccess、ModifyAccess、RevokeAccess を使用してレコードを共有する (Common Data Service) | Microsoft Docs'
+title: 'サンプル: GrantAccess、ModifyAccess、および RevokeAccess を使用したレコードの共有 (Common Data Service) | Microsoft Docs'
 description: このサンプルでは、アクセス許可を使用してレコードを共有し、アクセス メッセージを変更および取り消す方法を示します。
 ms.custom: ''
 ms.date: 10/31/2018
@@ -60,7 +60,7 @@ Change sample to make sure it works with Common Data Service
 
 1. 組織の現在のバージョンをチェックします。
 2. 名前の競合を回避する一意の識別子を作成します。
-3. このサンプルの **Office 365**で手動で作成されたユーザーを取得します。
+3. このサンプルの **Office 365** で手動で作成されたユーザーを取得します。
 4. サンプルのチームを作成するためのルート部署を取得します。
 5. `WhoAMIRequest` は、現在のユーザー情報を取得します。
 6. チームを作成し、ユーザーをチームに追加します。 

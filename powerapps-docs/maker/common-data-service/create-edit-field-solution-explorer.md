@@ -1,5 +1,5 @@
 ---
-title: PowerApps ソリューション エクスプローラーを使用した Common Data Service のフィールドの作成および編集 | MicrosoftDocs
+title: PowerApps ソリューション エクスプローラーを使用して、 Common Data Service のフィールドを作成、編集する | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/18/2018
 ms.reviewer: ''
@@ -12,20 +12,21 @@ applies_to:
   - Dynamics 365 Version 9.x
   - PowerApps
 ms.author: matp
-manager: brycho
+manager: kvivek
+author: Mattp123
 search.audienceType:
   - maker
 search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="create-and-edit-fields-for-common-data-service-using-powerapps-solution-explorer"></a>PowerApps ソリューション エクスプローラーを使用した Common Data Service のフィールドの作成および編集
+# <a name="create-and-edit-fields-for-common-data-service-using-powerapps-solution-explorer"></a>PowerApps ソリューション エクスプローラーを使用して、 Common Data Service のフィールドを作成、編集する
 
-ソリューション エクスプローラーでは Common Data Service のフィールドの作成および編集を行うことができます。
+ソリューション エクスプローラーは Common Data Serviceの フィールドを作成、編集することができます。
 
-[PowerApps ポータル](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)では一般的なオプションのほどんとを構成できますが、特定のオプションはソリューション エクスプローラーを使用してのみ設定できます。 <br />詳細: 
-- [Common Data Service のフィールドの作成および編集](create-edit-fields.md)
-- [PowerApps ポータルを使用した Common Data Service のフィールドの作成および編集](create-edit-field-portal.md)
+[PowerApps ポータル](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ではほとんどの一般的なオプションを構成することができますが、ソリューション エクスプローラーを使用して設定する必要があるオプションもあります。 <br />詳細: 
+- [Common Data Serviceのフィールドの作成と編集](create-edit-fields.md)
+- [PowerApps ポータルを使用して Common Data Service のフィールドの作成、編集を行います](create-edit-field-portal.md)
   
 ## <a name="open-solution-explorer"></a>ソリューション エクスプローラーを開きます
 
@@ -142,7 +143,7 @@ search.app:
 
 ![グローバル オプション セットの構成](media/global-option-set-solution-explorer.png)
 
-グローバル オプション設定を個別に設定することもできます。 詳細: [Common Data Service のグローバル オプション設定の作成および編集 (候補リスト)](create-edit-global-option-sets.md)
+グローバル オプション設定を個別に設定することもできます。 詳細: [Common Data Service グローバル オプション設定の作成および編集](create-edit-global-option-sets.md)
 
 > [!NOTE]
 > すべてのオプション セットをグローバル オプション セットとして定義した場合、グローバル オプション セットの一覧が大きくなり、管理しくくなることがあります。 オプションのセットが 1 か所でのみ使用されることがわかっている場合は、ローカル オプション セットを使用します。
@@ -260,8 +261,8 @@ search.app:
 
 
 ### <a name="see-also"></a>関連項目  
-[Common Data Service のフィールドの作成および編集](create-edit-fields.md)<br />
-[PowerApps ポータルを使用した Common Data Service のフィールドの作成および編集](create-edit-field-portal.md)<br />
+[Common Data Serviceのフィールドの作成と編集](create-edit-fields.md)<br />
+[PowerApps ポータルを使用して Common Data Service のフィールドの作成、編集を行います](create-edit-field-portal.md)<br />
 [フィールドの種類とフィールド データの種類](types-of-fields.md)<br />
 [計算フィールドを定義して手動計算を自動化する](define-calculated-fields.md)<br />
 [値を集約するロールアップ フィールドを定義](define-rollup-fields.md)<br />

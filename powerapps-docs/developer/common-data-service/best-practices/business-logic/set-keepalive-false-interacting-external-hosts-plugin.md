@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/12/2018
+ms.date: 8/21/2019
 ms.author: jowells
 search.audienceType:
   - developer
@@ -31,7 +31,7 @@ search.app:
 
 ## <a name="symptoms"></a>現象
 
-プラグインが外部の Web 要求を行い、クローズドな接続で `KeepAlive` を使用しようとしている場合、最終的には、プラグインによる Web 要求の実行は失敗します。 ただし、次のようなプラグインが登録されている場合は、
+プラグインが外部の Web 要求を行い、クローズドな接続で `KeepAlive` を使用しようとしている場合、最終的には、プラグインによる Web 要求の実行は失敗します。 プラグインが登録されている場合:
 
 - 同期的に、次のことが発生することがあります。
 

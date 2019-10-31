@@ -1,6 +1,6 @@
 ---
 title: 分析の呼び出し | Microsoft Docs
-description: 分析要求のジョブを開始するために PowerApps チェッカー Web API を使用して POST 要求を形成する方法を説明します。
+description: PowerApps チェッカーの Web API を使用して POST 要求を構成し、分析要求ジョブを開始する方法を説明します。
 ms.custom: ''
 ms.date: 06/04/2019
 ms.service: powerapps
@@ -26,7 +26,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-分析ジョブは、`POST` 要求を `analyze` ルートに送信することによって開始されます。 分析は、通常 1 分以上続く長時間のプロセスです。 API はまず何らかの基本的な検証を行い、ジョブを送信することでバックエンドで要求を開始し、そしてス状態コード 202 と `Location` ヘッダー、あるいは適切なエラーの詳細で応答します。 `Location` ヘッダー値は、要求の状態を確認し、その結果の URL を取得するために使うことができます。 ルールやルールセットのリスト、分析から除外するファイルなど、基準に基づいてジョブを仕立てるための `POST` アクションによるさまざまなオプションがあります。 次を使用して分析を開始できます。`[Geographical URL]/api/analyze?api-version=1.0`。
+分析ジョブは、`POST` 要求を `analyze` ルートに送信することによって開始されます。 分析は、通常 1 分以上続く長時間のプロセスです。 API はまず何らかの基本的な検証を行い、ジョブを送信することでバックエンドで要求を開始し、そしてス状態コード 202 と `Location` ヘッダー、あるいは適切なエラーの詳細で応答します。 `Location` ヘッダー値は、要求の状態を確認し、その結果の URL を取得するために使うことができます。 ルールやルールセットのリスト、分析から除外するファイルなど、基準に基づいてジョブを調整する `POST` アクションによるさまざまなオプションがあります。 次を使用して分析を開始できます。`[Geographical URL]/api/analyze?api-version=1.0`。
 
 
 > [!NOTE]
@@ -108,7 +108,7 @@ Location: [Geographical URI]/api/status/9E378E56-6F35-41E9-BF8B-C0CC88E2B832&api
 
 ### <a name="see-also"></a>関連項目
 
-[PowerApps チェッカー Web API の使用](overview.md)<br />
+[PowerApps チェッカーの Web API を使用する](overview.md)<br />
 [ルールセットの一覧の取得](retrieve-rulesets.md)<br />
 [ルールの一覧の取得](retrieve-rules.md)<br />
 [ファイルのアップロード](upload-file.md)<br />

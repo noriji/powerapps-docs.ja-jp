@@ -25,8 +25,7 @@ Common Data Service で使用されるワークフローのデザイナー内で
 > 可能な限り、ビジネスロジックを定義するいくつかの宣言型オプションの 1 つを適用することを最初に検討する必要があります。 詳細情報: [Common Data Service でビジネスロジックを適用](../../../maker/common-data-service/cds-processes.md)
 > 
 > 宣言型プロセスが要件を満たさない場合、ワークフローの拡張機能を使用します。
-> 
-> この内容は、Common Data Service ワークフロー アセンブリ向けのものであり、また Customer Engagement アプリ (オンライン) 向けの Dynamics 365 にも適用されます。 これは、Customer Engagement のアプリ用 Dynamics 365 のオンプレミス展開のためのオプションを示しています[オンプレミス オプション](/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies#on-premises-options)。
+
 
 ## <a name="when-to-create-a-workflow-extension"></a>ワークフローの拡張機能を作成するとき
 
@@ -56,7 +55,7 @@ Common Data Service で使用されるワークフローのデザイナー内で
 |AddToQueue|AddUserToRecordTeam|RemoveUserFromRecordTeam|
 |SetProcess|SetWordTemplate||
 
-Dynamics 365 Customer Engagement の営業またはサービス ソリューションがある場合、ソリューションに応じて他のコマンド アクションを見つけることができます。
+Dynamics 365 Sales または Service ソリューションがある場合、ソリューションに応じて他のコマンド アクションを見つけることができます。
 
 ||||
 |--|--|--|

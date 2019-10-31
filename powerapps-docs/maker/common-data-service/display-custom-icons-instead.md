@@ -94,7 +94,7 @@ search.app:
 <a name="SampleJavascript"></a>   
 
 ### <a name="sample-javascript-function"></a>サンプル JavaScript 関数  
- ユーザー定義アイコンとヒントを表示する JavaScript 関数には、次の 2 つの引数が表示されます: layoutxml で指定された行オブジェクト全体と呼び出し側ユーザーのロケール ID (LCID)。 LCID パラメーターでは、複数の言語でツールヒントのテキストを指定できます。 環境によってサポートされている言語の詳細については、[言語を有効にする](/dynamics365/customer-engagement/admin/enable-languages)および [Dynamics 365 for Customer Engagement の言語パックのインストールまたはアップグレード](/dynamics365/customer-engagement/on-premises/install-or-upgrade-language-packs)を参照してください。 コードで使用できるロケール ID (LCID) 値の一覧については、「[Microsoft によって割り当てられるロケール ID](https://go.microsoft.com/fwlink/?linkid=829588)」を参照してください。
+ ユーザー定義アイコンとヒントを表示する JavaScript 関数には、次の 2 つの引数が表示されます: layoutxml で指定された行オブジェクト全体と呼び出し側ユーザーのロケール ID (LCID)。 LCID パラメーターでは、複数の言語でツールヒントのテキストを指定できます。 環境によってサポートされている言語の詳細については、 [言語を有効にする](/dynamics365/customer-engagement/admin/enable-languages) および [言語パックのインストールまたはアップグレード](/dynamics365/customer-engagement/on-premises/install-or-upgrade-language-packs)を参照してください。 コードで使用できるロケール ID (LCID) 値の一覧については、「[Microsoft によって割り当てられるロケール ID](https://go.microsoft.com/fwlink/?linkid=829588)」を参照してください。
 
   
  事前定義された限定のオプション セットを持つオプション セット型の属性にカスタムアイコンを追加する可能性が最も高いと想定される場合は、ラベルの代わりにオプションの整数値を使用して、ローカライズ問題を回避することを確認します。  
@@ -102,7 +102,7 @@ search.app:
  次のサンプル コードは、3 つの値 (1: 高、2: 中、3: 低) のうち 1 つに基づいて、opportunityratingcode (評価) 属性でアイコンおよびヒントを表示します。 サンプル コードは、ローカライズしたツールヒントのテキストを表示する方法についても示します。 このサンプルを機能させるには、new_Hot、new_Warm、および new_Cold の名前で、16 x 16イメージの3つのイメージWebリソースを作成する必要があります。  
 
 > [!IMPORTANT]
-> このサンプルでは、Dynamics 365 for Customer Engagement アプリとともに使用できる営業案件エンティティが必要になります。
+> このサンプルでは、Dynamics 365 Sales アプリとともに使用できる営業案件エンティティが必要になります。
   
 ```javascript
 function displayIconTooltip(rowData, userLCID) {      
