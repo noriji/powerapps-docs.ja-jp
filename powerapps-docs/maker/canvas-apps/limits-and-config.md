@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/24/2019
+ms.date: 10/30/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 68e702156b0a5b820dd23076551cf7970efc65a3
-ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
+ms.openlocfilehash: 2a1696437f434063b4297df220f1cb406bc993f8
+ms.sourcegitcommit: 98f6ce1531e69e2aae1000eda7548434d77cafe0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025104"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142618"
 ---
 # <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>キャンバス アプリのシステム要件、制限、構成値
 このトピックには、PowerApps についての、デバイス プラットフォーム、Web ブラウザーの要件、制限と構成値が含まれています。
@@ -27,8 +27,8 @@ ms.locfileid: "73025104"
 
 | **最小構成** | **推奨** |
 | --- | --- |
-| iOS 9.3 以降 |iOS 10 以降と少なくとも 2 GB の RAM |
-| Android 5 以降 |Android 7 以降と少なくとも 4 GB の RAM |
+| iOS 12 以降 |iOS 12 以降|
+| Android 7 以降 |Android 7 以降 |
 | Windows 8.1 以降 (PC のみ) |Windows 10 Fall Creators Update と少なくとも 8 GB の RAM)|
 
 > [!NOTE]
