@@ -741,7 +741,7 @@
           href: ./canvas-apps/share-app-resources.md
         - name: Power BI でアプリを埋め込む
           href: ./canvas-apps/embed-powerapps-powerbi.md
-        - name: チーム アプリを埋め込む
+        - name: Teams にアプリを埋め込む
           href: ./canvas-apps/embed-teams-app.md
     - name: アプリを管理する
       items:
