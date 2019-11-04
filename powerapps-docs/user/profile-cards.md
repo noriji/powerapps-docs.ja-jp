@@ -16,10 +16,10 @@ search.app:
 - PowerApps
 - D365CE
 ms.openlocfilehash: 67441e506ba2715a9994f6b81cd08426e37e0fc8
-ms.sourcegitcommit: 7c46e7ce889e2f1c5352ed2e705b0bb8968f2a89
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 10/29/2019
 ms.locfileid: "71950912"
 ---
 # <a name="view-the-profile-card-for-a-contact-or-user"></a>連絡先またはユーザーのプロファイルカードを表示する
@@ -41,7 +41,7 @@ ms.locfileid: "71950912"
 4. 詳細を表示するには、 **[さらに表示]** を選択して連絡先のプロファイルを展開します。
  
     > [!div class="mx-imgBorder"] 
-    > ![連絡先プロファイルカードの詳細を展開]し、(media/profile1.png "連絡先プロファイルカードの詳細を展開")します
+    > ![連絡先プロファイルカードの詳細を展開する](media/profile1.png "連絡先プロファイルカードの詳細を展開する")
    
  ## <a name="view-a-users-profile"></a>ユーザーのプロファイルを表示する
  
@@ -51,7 +51,7 @@ ms.locfileid: "71950912"
 4.  ユーザーとの電子メールや共有ファイルなどの詳細を表示するには、 **[詳細を表示]** を選択して連絡先のプロファイルを展開します。
  
     > [!div class="mx-imgBorder"] 
-    > [![ユーザープロファイルカードの詳細]] を展開し、[(media/profile2.png "ユーザープロファイルカードの詳細")] を展開します。
+    > ![ユーザープロファイルカードの詳細を展開する](media/profile2.png "ユーザープロファイルカードの詳細を展開する")
 
 
  ## <a name="faqs"></a>ら

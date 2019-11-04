@@ -16,10 +16,10 @@ search.app:
 - PowerApps
 - D365CE
 ms.openlocfilehash: a4d81b9adff165267fe3e3d4d08384133aeae032
-ms.sourcegitcommit: 9a16bb75c856f7c84cd385811b7135ab2804ae69
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 10/29/2019
 ms.locfileid: "71924431"
 ---
 # <a name="create-a-new-record"></a>新しいレコードの作成
@@ -31,7 +31,7 @@ ms.locfileid: "71924431"
 > [!NOTE]
 > **[簡易作成]** オプションは、管理者が有効にしたレコードに対してのみ使用できます。
     
-1. ナビゲーション バーで、**プラス記号** ![[レコードの作成] ボタン](media/create-record-button.png "[レコードの作成] ボタン") を選択してから、希望のアイテムを選択します。  
+1. ナビゲーションバーで、**プラス記号**[![レコードの作成] ボタン](media/create-record-button.png "[レコードの作成] ボタン")を選択し、目的の項目を選択します。  
 
     > [!div class="mx-imgBorder"] 
     > ![[レコードの作成] ボタン](media/newrecord1.png "[レコードの作成] ボタン")
@@ -42,9 +42,9 @@ ms.locfileid: "71924431"
      > ![レコードを保存する](media/quick_create.png "レコードを保存する")
   
 > [!NOTE]
-> 画面上のフィールドの横のアスタリスク ![必須フィールドのボタン](media/required-field-button.png "必須フィールドのボタン") は、そのフィールドが必須であることを意味します。 必須フィールドに入力する前に、 **[保存して閉じる]** を選択すると、エラー メッセージが表示されます。また、情報を入力し **[キャンセル]** を選択した場合、警告が表示されます。
+> 画面のフィールドの横にアスタリスクが![必要なフィールドボタン](media/required-field-button.png "必須フィールドボタン")は、フィールドが必須であることを示します。 必須フィールドに入力する前に、 **[保存して閉じる]** を選択すると、エラー メッセージが表示されます。また、情報を入力し **[キャンセル]** を選択した場合、警告が表示されます。
 >   
-> 画面上のフィールドの横のプラス記号 ![推奨フィールドのボタン](media/recommended-field-button.png "推奨フィールドのボタン") は、ご自分の組織でそのフィールドへの入力が推奨されていることを意味します。  
+> 画面のフィールドの横にあるプラス記号の [![推奨フィールド] ボタンをクリック](media/recommended-field-button.png "[推奨フィールド] ボタン")すると、フィールドに入力することをお勧めします。  
 
 
 ## <a name="create-a-new-record-using-the-new-button"></a>[新規作成] ボタンを使用して新しいレコードを作成する 

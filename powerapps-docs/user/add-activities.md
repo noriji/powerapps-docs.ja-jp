@@ -16,10 +16,10 @@ search.app:
 - PowerApps
 - D365CE
 ms.openlocfilehash: 9ba051395e99dc6f2079d033c10a727a2e95da67
-ms.sourcegitcommit: 9a16bb75c856f7c84cd385811b7135ab2804ae69
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 10/29/2019
 ms.locfileid: "71924564"
 ---
 # <a name="add-an-appointment-email-phone-call-note-or-task-activity-to-the-timeline"></a>モデル駆動型アプリのタイムラインに予定、電子メール、電話、メモ、またはタスクのアクティビティを追加する 
@@ -34,16 +34,16 @@ ms.locfileid: "71924564"
 - 画像が添付された電子メールは、電子メールの本文と共にインラインで表示されます。
 
   > [!div class="mx-imgBorder"]
-  > ![PowerApps のアクティビティのタイムライン ビュー](media/TimelineViewOfActivity.png "PowerApps のアクティビティのタイムライン ビュー")  
+  > ![PowerApps のアクティビティのタイムラインビュー](media/TimelineViewOfActivity.png "PowerApps のアクティビティのタイムラインビュー")  
  
 ## <a name="add-an-activity-from-the-nav-bar"></a>ナビゲーション バーからアクティビティを追加する
  
 アクティビティを追加する最も簡単な方法は、ナビゲーション バーのショートカットを使用し、それをレコードにリンクすることです。 たとえば、電話アクティビティを作成し、 **[関連]** フィールドを使用してそれをシステム内の連絡先にリンクすることができます。
 
-1. ナビゲーション バーで、**プラス記号** ![[レコードの作成] ボタン](media/create-record-button.png "[レコードの作成] ボタン") を選択してから、 **[アクティビティ]** を選択します。 
+1. ナビゲーションバーで、**プラス記号**[![レコードの作成] ボタン](media/create-record-button.png "[レコードの作成] ボタン")を選択し、 **[活動]** を選択します。 
 
    > [!div class="mx-imgBorder"]
-   > ![PowerApps でアクティビティを追加するショートカット](media/QuickCreate.png "PowerApps でアクティビティを追加するショートカット")  
+   > ![PowerApps でアクティビティを追加するためのショートカット](media/QuickCreate.png "PowerApps でアクティビティを追加するためのショートカット")  
  
 2. 追加するアクティビティの種類を選択します。
 
@@ -60,7 +60,7 @@ ms.locfileid: "71924564"
 
 
    > [!div class="mx-imgBorder"]
-   > ![PowerApps で電話アクティビティを追加する](media/addphonecall.png "PowerApps で電話アクティビティを追加する")
+   > ![PowerApps で phone アクティビティを追加する](media/addphonecall.png "PowerApps で phone アクティビティを追加する")
   
 3. 電話の **[件名]** を入力します
 
@@ -100,13 +100,13 @@ ms.locfileid: "71924564"
 
 
     > [!NOTE]
-    > メッセージ交換ビューで電子メールの一覧を表示するには、 **[設定]**  >  **[個人用設定]**  >  **[電子メール]** タブの順に選択し、 **[タイムラインのメッセージ交換として電子メールを表示]** する を選択します。 個人設定の詳細については、「[個人用オプションを設定](https://docs.microsoft.com/en-us/powerapps/user/set-personal-options#email-tab-options)する」を参照してください。 有効にすると、タイムラインを持つ任意のフォームを開くことができます。メールは、上部の最新の電子メールを使用して、メッセージ交換スレッドにグループ化されます。
+    > メッセージ交換ビューで電子メールの一覧を表示するには、 **[設定]**  >  **[個人用]** 設定 >  **[電子メール]** タブの順に選択し、 **[タイムラインのメッセージ交換として電子メールを表示]** する を選択 個人設定の詳細については、「[個人用オプションを設定](https://docs.microsoft.com/en-us/powerapps/user/set-personal-options#email-tab-options)する」を参照してください。 有効にすると、タイムラインを持つ任意のフォームを開くことができます。メールは、上部の最新の電子メールを使用して、メッセージ交換スレッドにグループ化されます。
 
    > [!div class="mx-imgBorder"]
-   > 個人用![オプションの]設定(media/emailsettings1.png "個人用オプション")の設定
+   > ![個人用オプションの設定](media/emailsettings1.png "個人用オプションを設定する")
    
     > [!div class="mx-imgBorder"]
-    > ![個人用オプションを設定](media/emailsettings2.png "する電子メールの個人用オプションを設定する")
+    > ![個人用オプションの電子メールの設定](media/emailsettings2.png "電子メールの個人用オプションを設定する")
 
   
 ## <a name="add-an-appointment"></a>予定を追加する  
@@ -163,7 +163,7 @@ ms.locfileid: "71924564"
 
 [タイムライン] ウォールを更新して、最新の情報を確認することができます。
 
-**[タイムライン]** ウォールで、![[その他] ボタン](media/MoreButton.png "[その他] ボタン")を選択してから、 **[タイムラインの更新]** を選択します。
+**タイムライン**の壁面で [ ![More] ボタン](media/MoreButton.png "その他のボタン")を選択し、 **[タイムラインの更新]** を選択します。
 
 > [!div class="mx-imgBorder"]
 > ![タイムラインを更新する](media/refresh.png "タイムラインを更新する")
@@ -176,7 +176,7 @@ ms.locfileid: "71924564"
 - **タイムライン**の壁面で、 **[フィルターウィンドウを開く]** じょうごアイコンを選択します。
 
 > [!div class="mx-imgBorder"]
-> ![[タイムライン] のフィルター ウィンドウ](media/filterpane.png "[タイムライン] のフィルター ウィンドウ")
+> ![タイムラインのフィルターウィンドウ](media/filterpane.png "タイムラインのフィルターウィンドウ")
 
 
 ## <a name="manage-activities"></a>アクティビティを管理する
@@ -184,7 +184,7 @@ ms.locfileid: "71924564"
 
 
 > [!div class="mx-imgBorder"]
-> ![Manage Activities.png](media/ManageActivities.png "ManageActivities.png")
+> ![活動の管理 .png](media/ManageActivities.png "ManageActivities .png")
 
 
 

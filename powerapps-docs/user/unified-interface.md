@@ -16,10 +16,10 @@ search.app:
 - PowerApps
 - D365CE
 ms.openlocfilehash: 76241ae2e26752a98e32e7ad72c54780da3934ae
-ms.sourcegitcommit: 60fd1792430b9f3da08ec161cb2277506d795e3a
+ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 10/29/2019
 ms.locfileid: "71705327"
 ---
 # <a name="enhanced-user-experience-with-the-unified-interface-for-model-driven-apps"></a>モデル駆動型アプリ用の統合インターフェイスによるユーザーエクスペリエンスの向上 
@@ -30,14 +30,14 @@ ms.locfileid: "71705327"
 > ![統合インターフェイスが画面に適合](media/Reflow.png "統合インターフェイスが画面に適合")
 
 > [!NOTE]
-> レガシ web クライアントは非推奨となり、2020年10月1日より前に、お客様は統合インターフェイスに移行する必要があります。 詳細については、「[Blog」を参照してください。統合インターフェイス に移動するタイムラインを発表します](https://cloudblogs.microsoft.com/dynamics365/it/2019/09/10/announcing-the-timeline-to-move-to-unified-interface/)。 移行方法の詳細については、「[移行のクイックスタート](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/transition-web-app)」を参照してください。
+> レガシ web クライアントは非推奨となり、2020年10月1日より前に、お客様は統合インターフェイスに移行する必要があります。 詳細については、「[ブログ: 統合インターフェイスに移動するタイムラインの発表](https://cloudblogs.microsoft.com/dynamics365/it/2019/09/10/announcing-the-timeline-to-move-to-unified-interface/)」を参照してください。 移行方法の詳細については、「[移行のクイックスタート](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/transition-web-app)」を参照してください。
 
 ## <a name="navigation"></a>領域
 
 メニューオプションを使用すると、システム内のさまざまなアプリを迅速に移動できます。 これらの機能により、最近表示したレコードとお気に入りにピン留めされたお気に入りにすばやくアクセスできます。 
 
 > [!div class="mx-imgBorder"]
-> ![モデル駆動型アプリでのナビゲーション](media/nav.png "モデル駆動型アプリでのナビゲーション")
+> ![モデル駆動型アプリの nav](media/nav.png "モデル駆動型アプリの nav")
 
 1. 既定では、サイトマップが展開され、保持されます。
 2. 現在のサブエリアは、アプリ内の場所を示すために強調表示されています。

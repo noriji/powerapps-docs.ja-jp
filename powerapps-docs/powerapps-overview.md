@@ -12,12 +12,12 @@ ms.reviewer: kvivek
 searchScope:
 - GetStarted
 - PowerApps
-ms.openlocfilehash: 23eb64171c1f339b423bdf56b53b186d2c9e14b5
-ms.sourcegitcommit: 073d8534d7ff0093370ee17a1b9b63c10c7f050c
+ms.openlocfilehash: 625629826d2fb0d39c0569b2a757fbfc46118acc
+ms.sourcegitcommit: 133c51f10fc4fe6cd105c2a6af83fc15634143d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041303"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068774"
 ---
 # <a name="what-is-powerapps"></a>PowerApps とは
 
@@ -33,7 +33,7 @@ PowerApps はまた、プラットフォームの拡張性に優れ、プロの�
 
 PowerApps を使用すると、**キャンバス**、**モデル駆動**、**ポータル**の3種類のアプリを作成できます。 詳細情報: [PowerApps でのアプリ作成の概要](maker/index.md)。
 
-アプリを作成するには、[web.powerapps.com](https://web.powerapps.com) から始めます。
+アプリを作成するには、まず[make.powerapps.com](https://make.powerapps.com)を使用します。
 
 - **PowerApps Studio** はキャンバス アプリの作成に使用されているアプリ デザイナーです。 このアプリ デザイナーでは、Microsoft PowerPoint のスライド デッキ作成に近い感覚でアプリを作成できます。 詳細情報:[データからアプリを生成する](/powerapps/maker/canvas-apps/data-platform-create-app)  
 
