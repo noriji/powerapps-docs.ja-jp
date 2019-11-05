@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1e5c90fcc6e4f8d4c8e1d73eadc9a31fdbfe48ef
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: bb39701a61bcfb75c6fd66e90fc7a5002efcc410
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71988301"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541645"
 ---
 # <a name="start-a-flow-in-a-canvas-app"></a>キャンバス アプリでフローを開始する
 
@@ -34,7 +34,7 @@ Microsoft Flow を使用すると、キャンバス アプリでイベントが�
 
 ## <a name="create-a-flow"></a>フローの作成
 
-1. [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) にサインインします。
+1. [PowerApps にサインインします](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。
 
 1. 左側のナビゲーションバーで **[ビジネスロジック]** を選択し、 **[フロー]** を選択します。
 

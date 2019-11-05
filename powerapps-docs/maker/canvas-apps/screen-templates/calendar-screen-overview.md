@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 470aa0671eddc5f4d3621c4dbdd8d81036c358e4
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 9ca7e5f14508a2dcd70967e77b29989819bfe7ba
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71989404"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541595"
 ---
 # <a name="overview-of-the-calendar-screen-template-for-canvas-apps"></a>キャンバスアプリのカレンダー画面テンプレートの概要
 
@@ -42,11 +42,11 @@ Canvas アプリで、Office 365 Outlook アカウントからの今後のイベ
 
 テンプレートから予定表画面を追加するには、次のようにします。
 
-1. PowerApps に[サインイン](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)し、PowerApps Studio でアプリを作成するか、既存のアプリを開きます。
+1. PowerApps に[サインイン](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)し、PowerApps Studio でアプリを作成するか、既存のアプリを開きます。
 
     このトピックでは phone アプリについて説明しますが、同じ概念がタブレットアプリにも当てはまります。
 
-1. リボンの **[ホーム]** タブで、 **[新しい画面]** @no__t 2 **[カレンダー]** を選択します。
+1. リボンの **[ホーム]** タブで、[**新しい画面** > **カレンダー**] を選択します。
 
     既定では、画面は次のようになります。
 
@@ -113,7 +113,7 @@ Canvas アプリで、Office 365 Outlook アカウントからの今後のイベ
     > [!NOTE]
     > この数式は、カレンダーを選択するためのドロップダウンリストの**Onselect**プロパティの既定値から若干編集されています。 このコントロールの詳細については、[カレンダー画面リファレンス](./calendar-screen-reference.md#calendar-drop-down)のセクションを参照してください。
 
-1. 中かっこを含む `{YourCalendarNameHere}` を、表示する予定のカレンダーの名前 ( **calendar**など) に置き換えます。
+1. 中かっこを含む `{YourCalendarNameHere}`を、表示する予定のカレンダーの名前 (たとえば**calendar**) に置き換えます。
 
     > [!IMPORTANT]
     > 次の手順では、アプリに予定表の画面を1つだけ追加したことを前提としています。 複数のコントロールを追加した場合、制御名 ( **iconCalendar1**など) は異なる数値で終了し、それに応じて数式を調整する必要があります。
@@ -235,7 +235,7 @@ Calendar screen は独自の機能を備えた強力なコントロールです�
 
     この数式は、 **_selectedCalendarEvent**のフィールド値に設定された動的データのギャラリーを作成します。これは、ユーザーが**CalendarEventsGallery**コントロールでイベントを選択するたびに設定されます。 このギャラリーを拡張して、さらに多くのフィールドを含めることができます。ただし、このセットには適切な開始点が用意されています。
 
-1. ギャラリー項目を配置した状態で、**ラベル**コントロールの**Text**プロパティを `ThisItem.Title` に設定し、 **HTML テキスト**コントロールの**HtmlText**プロパティを `ThisItem.Value` に設定します。
+1. ギャラリー項目を配置した状態で、 **Label**コントロールの**Text**プロパティを `ThisItem.Title`に設定し、 **HTML テキスト**コントロールの**HtmlText**プロパティを `ThisItem.Value`に設定します。
 
 1. **CalendarEventsGallery**で、 **Title**コントロールの**onselect**プロパティを次の数式に設定します。
 
@@ -249,7 +249,7 @@ Calendar screen は独自の機能を備えた強力なコントロールです�
 
 ### <a name="show-event-attendees"></a>イベント出席者を表示する
 
-@No__t 0 の操作は、各イベントのさまざまなフィールドを取得します。これには、セミコロンで区切られた必須出席者と任意出席者のセットが含まれます。 この手順では、各参加者のセットを解析し、組織内の参加者を特定して、そのユーザーの Office 365 プロファイルを取得します。
+`Office365.GetEventsCalendarViewV2` 操作は、セミコロンで区切られた必須出席者とオプションの出席者のセットを含む、各イベントのさまざまなフィールドを取得します。 この手順では、各参加者のセットを解析し、組織内の参加者を特定して、そのユーザーの Office 365 プロファイルを取得します。
 
 1. アプリに Office 365 Users コネクタが含まれていない場合は、[それを追加](../add-data-connection.md)します。
 
@@ -306,11 +306,11 @@ Calendar screen は独自の機能を備えた強力なコントロールです�
     ```
     この数式は、参加者が組織内にあるかどうかを大まかに判断します。 **Userdomain**の定義は、アプリを実行しているユーザーの電子メールアドレスのドメイン URL にすぎません。 この行では、 **AttendeeEmailsTemp**コレクションに**inorg**という名前の追加の true/false 列が作成されます。 この列には、 **Userdomain**が、その特定の行の**AttendeeEmailsTemp**の電子メールアドレスのドメイン URL と等しい場合に**true**が格納されます。
 
-    この方法は常に正確ではありませんが、かなり近いものになります。 たとえば、組織内の特定の参加者は Jane@OnContoso.com のような電子メールアドレスを持つことがありますが、 **Userdomain**は Contoso.com です。 アプリのユーザーと加藤さんは同じ会社で仕事をしているかもしれませんが、電子メールアドレスに多少の違いがあります。 次のような場合は、次の式を使用することをお勧めします。
+    この方法は常に正確ではありませんが、かなり近いものになります。 たとえば、組織内の特定の参加者は Jane@OnContoso.comのような電子メールアドレスを持つことがありますが、 **Userdomain**は Contoso.com です。 アプリのユーザーと加藤さんは同じ会社で仕事をしているかもしれませんが、電子メールアドレスに多少の違いがあります。 次のような場合は、次の式を使用することをお勧めします。
 
     `Upper(_userDomain) in Upper(Right(Result, Len(Result) - Find("@", Result)))`
 
-    ただし、この数式は、Jane@NotTheContosoCompany.com のような電子メールアドレスと Contoso.com のような名前で一致しますが、これらの**ユーザーは同じ**会社では動作しません。
+    ただし、この数式は、Jane@NotTheContosoCompany.com のような電子メールアドレスと Contoso.com のような**Userdomain**を照合し、それらのユーザーが同じ会社で作業しないようにします。
 
 - ClearCollect (MyPeople)
 

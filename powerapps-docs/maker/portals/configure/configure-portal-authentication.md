@@ -9,18 +9,18 @@ ms.custom: ''
 ms.date: 10/18/2019
 ms.author: shjais
 ms.reviewer: ''
-ms.openlocfilehash: 12e85a0233ca596fa5daf09a05b111564c2a7a24
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.openlocfilehash: b285ce6e3a93efb72ed867149ce0740f7ee96579
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72977958"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73542764"
 ---
 # <a name="configure-portal-authentication"></a>ポータル認証を構成する
 
 ポータルアプリケーションでは、認証されたポータルユーザーが連絡先またはシステムユーザーに関連付けられます。 既定のポータル構成は、連絡先に基づいています。 ログインするには、適切な web 認証情報が連絡先に設定されている必要があります。 認証されていないユーザー以外のアクセス許可を取得するには、ポータルユーザーが web ロールに割り当てられている必要があります。 Web ロールのアクセス許可を構成するには、web ページアクセスと web サイトアクセス制御規則を構成します。
 
-最新のポータル認証エクスペリエンスでは、ポータルユーザーは、ローカルの連絡先メンバーシッププロバイダーベースのアカウントまたは[ASP.NET Identity](http://www.asp.net/identity)に基づく外部アカウントを選択してサインインできます。   
+最新のポータル認証エクスペリエンスでは、ポータルユーザーは、ローカルの連絡先メンバーシッププロバイダーベースのアカウントまたは[ASP.NET Identity](https://www.asp.net/identity)に基づく外部アカウントを選択してサインインできます。   
 
 - **ローカル認証**: ローカル認証は、一般的なフォームベースの認証で、Common Data Service 環境の連絡先レコードを認証に使用します。 カスタム認証エクスペリエンスを構築するために、開発者は ASP.Net Identity API を使用して、カスタムログインページとツールを作成できます。
 - **外部認証**: 外部認証は ASP.NET Identity API によって提供されます。 この場合、アカウントの資格情報とパスワードの管理は、サードパーティの id プロバイダーによって処理されます。 これには、Yahoo! などの OpenID based プロバイダーが含まれます。 および Google および OAuth 2.0 ベースのプロバイダー (Twitter、Facebook、[!INCLUDE[cc-microsoft](../../../includes/cc-microsoft.md)]など)。 ポータルに登録する外部 id を選択することで、ユーザーはポータルにサインアップします。 登録後、外部 id はローカルアカウントと同じ機能にアクセスできます。 

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f201d1fbad574174e4427698ae28439f26419514
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
-ms.translationtype: HT
+ms.openlocfilehash: 7b6f1056a6d2b5ceaf1fcefe1ccc7d583470450c
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63318378"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541718"
 ---
 # <a name="how-to-save-images-in-an-excel-file-and-then-add-these-images-to-your-app"></a>画像を Excel ファイルに保存してアプリに追加する方法
 
@@ -35,12 +35,12 @@ ms.locfileid: "63318378"
 
 ## <a name="create-the-excel-file-as-a-table"></a>Excel ファイルをテーブルとして作成する
 
-1. 空の Excel ファイルで、列に "**Image [image]**" という名前を付けます。
+1. 空の Excel ファイルで、列に "**Image [image]** " という名前を付けます。
 2. 次の手順を使用してテーブルを作成します。    
    
-   1. 任意の行の任意の列のデータを選択します。 たとえば、**[Image]** を選択します。
+   1. 任意の行の任意の列のデータを選択します。 たとえば、 **[Image]** を選択します。
    2. **[挿入]** リボンの **[テーブル]** を選択します。
-   3. ダイアログ ウィンドウで、**[先頭行をテーブルの見出しとして使用する]** を選択し、**[OK]** を選択します。
+   3. ダイアログ ウィンドウで、 **[先頭行をテーブルの見出しとして使用する]** を選択し、 **[OK]** を選択します。
       
       Excel ファイルがテーブル形式になりました。 Excel におけるテーブルの書式設定について詳しくは、[データをテーブルとして書式設定](https://support.office.com/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370)する方法についてのページを参照してください。
    4. テーブルに、**Drawings** と名前を付けます。  
@@ -54,12 +54,12 @@ ms.locfileid: "63318378"
    ![接続](./media/tutorial-working-with-images-in-excel/savepen.png)  
    
    Drawings テーブルが、データ ソースとして一覧表示されます。
-3. **[挿入]** メニューで、**[テキスト]**、**[ペン入力]** の順に選択します。 名前を **MyPen** に変更します。  
+3. **[挿入]** メニューで、 **[テキスト]** 、 **[ペン入力]** の順に選択します。 名前を **MyPen** に変更します。  
    
    ![名前の変更](./media/tutorial-working-with-images-in-excel/rename-mypen.png)
-4. **ボタン** コントロールを追加し (**[挿入]** メニュー)、その **OnSelect** プロパティを次の数式に設定します。  
+4. **ボタン** コントロールを追加し ( **[挿入]** メニュー)、その **OnSelect** プロパティを次の数式に設定します。  
    `Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})`
-5. **イメージ ギャラリー** コントロールを追加し (**[挿入]** メニューの **[ギャラリー]**)、その **Items** プロパティを `Drawings` に設定します。 ギャラリー コントロールの **Image** プロパティが自動的に `ThisItem.Image` に設定されます。
+5. **イメージ ギャラリー** コントロールを追加し ( **[挿入]** メニューの **[ギャラリー]** )、その **Items** プロパティを `Drawings` に設定します。 ギャラリー コントロールの **Image** プロパティが自動的に `ThisItem.Image` に設定されます。
    
    画面は次のようになります。  
    
@@ -74,18 +74,18 @@ ms.locfileid: "63318378"
 ## <a name="add-the-image-in-an-excel-file-to-your-app"></a>Excel ファイル内の画像をアプリに追加する
 もう 1 つ例を紹介します。画像をクラウド ストレージ アカウントに保存し、アプリから Excel テーブルを使って画像を表示することができます。
 
-この例では、いくつかの .jpeg ファイルを格納している [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) を使用します。
+この例では、いくつかの .jpeg ファイルを格納している [CreateFirstApp.zip](https://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) を使用します。
 
 > [!NOTE]
 > Excel ファイルから画像を表示するときは、それらの画像のパスにスラッシュを使う必要があります。 PowerApps で (前の手順のように) 画像を Excel テーブルに保存すると、パスに円記号が使用されます。 前の例で使用した **SavePen_images** を使用することもできますが、 その場合は、円記号ではなくスラッシュを使用するように Excel テーブル内のパスを変更してください。 そうしないと、画像は表示されません。  
 
-1. [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) をダウンロードし、**Assets** フォルダーをクラウド ストレージ アカウントに抽出します。
+1. [CreateFirstApp.zip](https://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) をダウンロードし、**Assets** フォルダーをクラウド ストレージ アカウントに抽出します。
 2. Excel スプレッドシートで、次のようなテーブルを作成します。
    
     ![Jackets テーブル](./media/tutorial-working-with-images-in-excel/jackets.png)
 3. テーブルに **Jackets** という名前を付けます。 Excel ファイルに **Assets.xlsx** という名前を付けます。 また、**Assets** フォルダーの名前も **Assets_images** に変更してください。
 4. アプリで、データ ソースとして、**Jackets** テーブルを追加します。  
-5. **イメージのみ**コントロールを追加し (**[挿入]** メニューの **[ギャラリー]**)、その **Items** プロパティを `Jackets` に設定します。  
+5. **イメージのみ**コントロールを追加し ( **[挿入]** メニューの **[ギャラリー]** )、その **Items** プロパティを `Jackets` に設定します。  
    
     ![Items プロパティ](./media/tutorial-working-with-images-in-excel/items-jackets.png)
    
@@ -95,7 +95,7 @@ ms.locfileid: "63318378"
 
 Items プロパティを設定すると、Excel テーブルが、**PowerAppsId** という新しい列で自動的に更新されます。
 
-Excel テーブル内の画像のパスは、URL になっていてもかまいません。 [Flooring Estimates](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) サンプル ファイルをクラウド ストレージ アカウントにダウンロードして、`FlooringEstimates` テーブルをデータ ソースとしてアプリに追加し、ギャラリー コントロールを `FlooringEstimates` に設定してください。 対応する画像でギャラリーが自動的に更新されます。
+Excel テーブル内の画像のパスは、URL になっていてもかまいません。 [Flooring Estimates](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) サンプル ファイルをクラウド ストレージ アカウントにダウンロードして、`FlooringEstimates` テーブルをデータ ソースとしてアプリに追加し、ギャラリー コントロールを `FlooringEstimates` に設定してください。 ギャラリーは自動的にイメージで更新されます。
 
 ## <a name="learn-more"></a>詳細情報
 [画像、ビデオ、またはサウンドを追加する](add-images-pictures-audio-video.md)  

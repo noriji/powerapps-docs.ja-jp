@@ -9,12 +9,12 @@ ms.custom: ''
 ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer: ''
-ms.openlocfilehash: c2ee82be5526cce41451c8a703971c0f97d32ea0
-ms.sourcegitcommit: 5338e01d2591f76d71f09b1fb229d405657a0c1c
+ms.openlocfilehash: 5476bb0306b5d9e0767f451fba36a567a70c4c54
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72977314"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73542945"
 ---
 # <a name="about-portal-lifecycle"></a>ポータルのライフサイクルについて
 
@@ -30,7 +30,7 @@ ms.locfileid: "72977314"
 
 ポータルは、常に試用版ポータルとして作成されます。 必要なライセンスを持っている場合は、PowerApps ポータル管理センターから運用環境に変換することができます。 試用版ポータルを運用環境に変換する方法については、「[試用版ポータルから運用環境への変換](#convert-a-trial-portal-to-production)」を参照してください。
 
-試用版ポータルを運用環境に変換するには、外部ユーザーのために必要なアドオン、または内部ユーザーのライセンスが必要です。 ライセンスの詳細については、 [powerapps と Microsoft Flow ライセンス](https://docs.microsoft.com/en-us/power-platform/admin/powerapps-flow-licensing-faq)に関する Faq と[powerapps ポータルライセンス](https://docs.microsoft.com/en-us/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-powerapps-portals-licensing)に関する説明を参照してください。
+試用版ポータルを運用環境に変換するには、外部ユーザーのために必要なアドオン、または内部ユーザーのライセンスが必要です。 ライセンスの詳細については、 [powerapps と Microsoft Flow ライセンス](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq)に関する Faq と[powerapps ポータルライセンス](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-powerapps-portals-licensing)に関する説明を参照してください。
 
 ### <a name="suspended-portal"></a>中断されたポータル
 
@@ -54,12 +54,12 @@ PowerApps ポータル管理センターに表示される通知から、試用�
 [PowerApps ポータル管理センター](admin-overview.md)を開き、[[ポータルの詳細](portal-details.md)] タブに移動すると、 **[種類]** フィールドの下に表示される評価版の有効期限に関する通知が表示されます。
 
 > [!div class=mx-imgBorder]
-> ポータルの [![詳細] タブ]の評価版の通知 ((../media/admin-center-convert-notif.png "ポータルの [詳細] タブ"))
+> ![ポータルの [詳細] タブの評価版通知](../media/admin-center-convert-notif.png "ポータルの [詳細] タブの評価版通知")
 
 管理センターの他のページでは、通知がページの上部に表示されます。
 
 > [!div class=mx-imgBorder]
-> 他のタブの評価版の![通知](../media/admin-center-convert-notif-all.png "他のタブでの通知")
+> ![他のタブの評価版通知](../media/admin-center-convert-notif-all.png "他のタブの評価版通知")
 
 試用版ポータルを運用環境に変換するには:
 
@@ -68,4 +68,4 @@ PowerApps ポータル管理センターに表示される通知から、試用�
 2.  **[確認]** を選択します。
 
     > [!div class=mx-imgBorder]
-    > 運用環境の試用版から(../media/trial-to-prod-confirm.png "運用環境への")評価![の]確認
+    > ![運用環境への評価の確認](../media/trial-to-prod-confirm.png "運用環境への評価の確認")

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f03240e2fb2e850df0f1b18fb126833fb5759326
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 7a979944d25d683c5b2b4c772cd6859e6ac52f0e
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71989700"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541558"
 ---
 # <a name="create-a-canvas-app-from-a-sample-in-powerapps"></a>PowerApps のサンプルからキャンバスアプリを作成する
 このクイックスタートでは、設計の可能性を調査したり、独自のキャンバス アプリを開発するときに適用できる概念を検出したりできるように、サンプルからキャンバス アプリを作成します。
@@ -28,7 +28,7 @@ ms.locfileid: "71989700"
 PowerApps のライセンスを持っていない場合は、[無料でサインアップ](../signup-for-powerapps.md)できます。
 
 ## <a name="open-a-sample-app"></a>サンプル アプリを開く
-1. [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) にサインインします。
+1. [PowerApps にサインインします](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。
 
 1. サンプル アプリの一覧で、サンプル アプリ (**Cost Estimator** など) の上にマウスを移動します。
 
@@ -55,7 +55,7 @@ PowerApps のライセンスを持っていない場合は、[無料でサイン
 1. アプリの確認が済んだら、Esc キーを押して (または、PowerApps のタイトル バーの下の右上隅にある閉じるアイコンをクリックまたはタップして)、プレビュー モードを終了します。
 
 ## <a name="save-the-app"></a>アプリの保存
-1. 左上隅にある **[ファイル]** タブをクリックまたはタップします。
+1. 左上隅にある **[ファイル]** タブをタップします。
 
 1. **[アプリ設定]** ページで、既定の設定を確認します。
 

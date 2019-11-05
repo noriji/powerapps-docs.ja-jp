@@ -9,12 +9,12 @@ ms.custom: ''
 ms.date: 10/18/2019
 ms.author: shjais
 ms.reviewer: ''
-ms.openlocfilehash: 339a8b221474bd9d98ed8e425f730bab1dbb1e0a
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.openlocfilehash: 19dca44c26565bc55dcfaace48987b69dd0a195f
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72978326"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73542724"
 ---
 # <a name="configure-site-settings-for-portals"></a>ポータルのサイト設定を構成する
 
@@ -64,10 +64,10 @@ PowerApps ポータルのインストールに用意されているサンプル�
 |検索/有効化|本来|検索が有効かどうかを示すブール値です。|
 |検索/フィルター|コンテンツ: adx_webpage;イベント: adx_event、adx_eventschedule<br>ブログ: adx_blog、adx_blogpost、adx_blogpostcomment;<br>フォーラム: adx_communityforum、adx_communityforumthread、adx_communityforumpost;<br>アイデア: adx_ideaforum、adx_idea、adx_ideacomment;<br>問題: adx_issueforum、adx_issue、adx_issuecommentヘルプデスク: インシデント|検索論理名フィルターオプションのコレクション。 ここで値を定義すると、サイト全体の検索にドロップダウンフィルターオプションが追加されます。 この値は、名前と値のペアの形式で、コロンで区切られた名前と値、およびセミコロンで区切られたペアである必要があります。<br>例: "フォーラム: adx_communityforum, adx_communityforumthread, adx_communityforumpost;ブログ: adx_blog、adx_blogpost、adx_blogpostcomment|
 |検索/IndexQueryName|ポータルの検索|ポータル検索クエリで使用されるシステムビューの名前。 既定: ポータル検索|
-|検索/クエリ|\+ (@Query) タイトル:(@Query) logicalname: adx_webpage ~ 0.9 ^ 0.2<br> -adx_webfile ~ 0.9 adx_partialurl:(@Query)<br> logicalname: adx_blogpost ~ 0.9 ^ 0.1-logicalname: adx_communityforumthread ~ 0.9|サイト検索のクエリを上書きして、追加の重みとフィルターを適用します。 @Query は、ユーザーが入力したクエリテキストです。 Lucene クエリ構文リファレンス: [http://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html](http://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html)| 
+|検索/クエリ|\+ (@Query) タイトル:(@Query) logicalname: adx_webpage ~ 0.9 ^ 0.2<br> -adx_webfile ~ 0.9 adx_partialurl:(@Query)<br> logicalname: adx_blogpost ~ 0.9 ^ 0.1-logicalname: adx_communityforumthread ~ 0.9|サイト検索のクエリを上書きして、追加の重みとフィルターを適用します。 @Query は、ユーザーが入力したクエリテキストです。 Lucene クエリ構文リファレンス: [https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html](https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html)| 
 |検索/ステマー|英語|ポータル検索のステミングアルゴリズムで使用される言語です。 既定値: 英語|
 |顧客サポート/DisplayAllUserActivitiesOnTimeline|FALSE| |
-|Authentication/[Protocol]/[Provider]/allowcontactmappingwithemail| |電子メールに基づく連絡先レコードへの自動関連付けを許可します。 詳細については、[ここ](https://docs.microsoft.com/en-us/dynamics365/portals/azure-ad-b2c#allow-auto-association-to-a-contact-record-based-on-email)をクリックしてください。|
+|Authentication/[Protocol]/[Provider]/allowcontactmappingwithemail| |電子メールに基づく連絡先レコードへの自動関連付けを許可します。 詳細については、[ここ](azure-ad-b2c.md#allow-auto-association-to-a-contact-record-based-on-email)をクリックしてください。|
 |||
 
 ポータルのさまざまな機能に関連したサイト設定については、以下を参照してください。
@@ -79,10 +79,9 @@ PowerApps ポータルのインストールに用意されているサンプル�
 - [WS-FEDERATION](configure-ws-federation-settings.md)
 - [SAML 2.0](configure-saml2-settings.md)
 - [Id プロバイダーを Azure AD B2C に移行する](migrate-identity-providers.md)
-- [添付ファイルのコンテンツ内を検索する](https://docs.microsoft.com/dynamics365/customer-engagement/portals/search-file-attachment)
-- [日付と時刻フィールドの動作と形式](https://docs.microsoft.com/dynamics365/customer-engagement/portals/behavior-format-date-time-field)
-- [位置情報の追加](https://docs.microsoft.com/dynamics365/customer-engagement/portals/add-geolocation)
-- [フィールドサービスの統合](https://docs.microsoft.com/dynamics365/customer-engagement/portals/integrate-field-service)
+- [添付ファイルのコンテンツ内を検索する](search-file-attachment.md)
+- [日付と時刻フィールドの動作と形式](behavior-format-date-time-field.md)
+- [位置情報の追加](add-geolocation.md)
 - [一般的なデータ保護規則の実装](https://docs.microsoft.com/dynamics365/customer-engagement/portals/implement-gdpr)
 - [ヘッダーとフッターの出力キャッシュを有効にする](https://docs.microsoft.com/dynamics365/customer-engagement/portals/enable-header-footer-output-caching)
 

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d7783113c7102d9c8b292d0ee84d4329709eeaa7
-ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
+ms.openlocfilehash: 9cff6054c9c238aeceaff63b5f178f5db3b16727
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "71705257"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73542326"
 ---
 # <a name="working-with-environments-and-microsoft-powerapps"></a>Microsoft PowerApps で環境を使用する
 PowerApps では、異なる環境での作業が可能で、それらを簡単に切り替えることができます。 環境の概要については、[環境の概要](../../administrator/environments-overview.md) を参照してください。なぜ複数環境を使うのか、どのように環境の作成と管理を行えばよいか、を詳しく説明しています。 この記事では、環境に関する次のトピックを取り上げます。
@@ -45,13 +45,13 @@ PowerApps では、異なる環境での作業が可能で、それらを簡単�
 
 適切な環境でアプリを作成するには、次のようにします。
 
-1. [PowerApps にサインインします](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。
+1. [PowerApps にサインインします](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。
 
 1. 前のセクションで説明したように、アプリを作成する環境を選択します。
 
 1. 左端近くにある **[アプリ]** を選択し、 **[アプリの作成]** を選択します。
 
 ## <a name="view-apps-in-the-right-environment"></a>適切な環境でアプリを作成する
-[powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) と PowerApps Studio のどちらで作業しているかに関係なく、アプリや接続などの一覧は常に、ドロップダウン リストで選択されている環境に基づいてフィルター表示されます。 探しているアプリが表示されない場合は、適切な環境が選択されているかどうかを必ず確認してください。
+[powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) と PowerApps Studio のどちらで作業しているかに関係なく、アプリや接続などの一覧は常に、ドロップダウン リストで選択されている環境に基づいてフィルター表示されます。 探しているアプリが表示されない場合は、適切な環境が選択されているかどうかを必ず確認してください。
 
 環境の詳細については、 [この概要](../../administrator/environments-overview.md)を参照してください。

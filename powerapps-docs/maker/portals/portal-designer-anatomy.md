@@ -1,29 +1,32 @@
 ---
-title: ポータル デザイナー構造分析 | Microsoft Docs
-description: ポータル デザイナーの構造分析について説明します。
+title: ポータル PowerApps ポータル Studio の構造 |Microsoft Docs
+description: PowerApps ポータル Studio の構造について説明します。
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: null
-ms.date: 07/18/2019
+ms.custom: ''
+ms.date: 10/07/2019
 ms.author: shjais
-ms.reviewer: null
+ms.reviewer: ''
+ms.openlocfilehash: a007dccdd82b4297b7bee245d4036d9e00b48244
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73542386"
 ---
+# <a name="powerapps-portals-studio-anatomy"></a>PowerApps ポータル Studio の構造
 
-# <a name="portal-designer-anatomy"></a>ポータル デザイナー構造分析
+PowerApps ポータル Studio を使用して、web サイトの作成とカスタマイズを行うことができます。 これには、web ページ、コンポーネント、フォーム、およびリストを追加および構成するためのさまざまなオプションが含まれています。 PowerApps ポータル Studio の構造は次のとおりです。
 
-[!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+![PowerApps ポータル Studio の構造](media/maker-anatomy.png "PowerApps ポータル Studio の構造")  
 
-Web サイトの作成とカスタマイズを行う場合はポータル デザイナーを使用します。 これには、Web ページ、コンポーネント、フォーム、リストを追加したり構成したりするための多様なオプションが含まれています。 ポータル デザイナーの構造分析について説明します。
-
-![ポータル デザイナー構造分析](media/maker-anatomy.png "ポータル デザイナー構造分析")  
-
-| **Annotation** | **名前**        | **説明**                                                                              |
+| **ゴム** | **Name**        | **Description**                                                                              |
 |----------------|-----------------|----------------------------------------------------------------------------------------------|
-| 1              | コマンド バー     | Web ページを作成し、コンポーネントを削除し、作成中の Web サイトを閲覧できます。  |
-| 2              | ツールベルト        | これにより以下が可能となります。<ul><li>Web ページの表示と管理</li><li>コンポーネントを追加</li><li>テンプレートの編集</li></ul>  |
-| 3              | キャンバス          | Web ページをビルドするコンポーネントが含まれています。                                                    |
-| 4              | [フッター]          | ソース コード エディターを開くには、オートセーブ状態を表示します。                         |
-| 5              | プロパティ ウィンドウ | Web ページのプロパティおよび選択したコンポーネントを表示し、必要に応じて編集します。 |
+| 1              | コマンド バー     | Web ページを作成し、コンポーネントを削除して、作成している web サイトを参照できます。  |
+| 2              | Toolbelt        | では、次のことができます。<ul><li>Web ページの表示と管理</li><li>コンポーネントの追加</li><li>テンプレートの編集</li></ul>  |
+| 3              | キャンバス          | Web ページを構築するコンポーネントが含まれています。                                                    |
+| 4              | フッター          | 自動保存の状態を表示し、ソースコードエディターを開くことができます。                         |
+| 5              | プロパティペイン | Web ページと選択したコンポーネントのプロパティを表示し、必要に応じて編集できます。 |
 

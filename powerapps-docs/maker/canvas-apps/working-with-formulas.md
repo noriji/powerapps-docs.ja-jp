@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 7865b2123f0d179d5d132cca838684f0c83cfd31
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 715f82a1db2c8a4bb495e41b45a3911182024158
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71994804"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541604"
 ---
 # <a name="get-started-with-canvas-app-formulas-in-powerapps"></a>PowerApps でキャンバス アプリの数式を使用する
 
@@ -35,7 +35,7 @@ ms.locfileid: "71994804"
 
 ## <a name="prerequisites"></a>前提条件
 
-* PowerApps に[サインアップ](../signup-for-powerapps.md)し、サインアップに使用したのと同じ資格情報を入力して[サインイン](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)します。
+* PowerApps に[サインアップ](../signup-for-powerapps.md)し、サインアップに使用したのと同じ資格情報を入力して[サインイン](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)します。
 * PowerApps で[コントロールを構成する](add-configure-controls.md)方法について確認します。
 
 ## <a name="show-a-simple-value"></a>単純な値の表示
@@ -51,8 +51,8 @@ Excel では、「**42**」という数字や「**Hello World**」というフ�
 
     このバーには、2 つの部分があります。
 
-   * *プロパティリスト*:各コントロールと画面には、[一連のプロパティ](reference-properties.md)があります。  この一覧を使って特定のプロパティを選択します。  
-   * *式*:このプロパティに対して計算される式。[値、演算子、および関数](formula-reference.md)で構成されます。
+   * "*プロパティの一覧*": 各コントロールと画面には[プロパティ](reference-properties.md)があります。  この一覧を使って特定のプロパティを選択します。  
+   * "*数式*": 上記のプロパティの計算に使用される数式。[値、演算子、関数](formula-reference.md)で構成されます。
 
      数式バーで、選択したコントロールのプロパティを表示して編集できます。また、コントロールが選択されていない場合は、画面のプロパティを表示して編集できます。  選択されたコントロールの名前は、 **[Content (コンテンツ)]** タブで確認できます。
 

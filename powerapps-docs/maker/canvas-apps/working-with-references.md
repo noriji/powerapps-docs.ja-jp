@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: deea21dd97ee71a74973393b7d6714a8c55ba969
-ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
+ms.openlocfilehash: 0b1c81dd808b224ca30d9de3d4bab252a2676cf4
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "71989466"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73542308"
 ---
 # <a name="understand-record-references-and-polymorphic-lookups-in-canvas-apps"></a>キャンバスアプリでのレコード参照とポリモーフィックな参照について
 
@@ -50,7 +50,7 @@ Common Data Service のすべてのエンティティには、**所有者**フ�
 
 このフィールドを**Account**エンティティに表示するには、次のようにします。
 
-1. [この PowerApps サイト](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)を開きます。
+1. [この PowerApps サイト](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)を開きます。
 1. 左側のナビゲーションバーで、[**データ** > **エンティティ**] を選択します。
 1. エンティティの一覧で [Account] \ (**アカウント**\) を選択します。
 1. 右上隅にあるフィルター一覧 (既定では**既定値**に設定されています) を開き、 **[すべて]** を選択します。

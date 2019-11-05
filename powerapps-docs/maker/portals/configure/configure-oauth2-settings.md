@@ -9,12 +9,12 @@ ms.custom: ''
 ms.date: 10/18/2019
 ms.author: shjais
 ms.reviewer: ''
-ms.openlocfilehash: 25a26e6298fa3257f3db6d04ffd2937e8e71d3a1
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.openlocfilehash: be576425067079549d3174e6d6306814a6ddb13a
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72978533"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73542820"
 ---
 # <a name="configure-oauth2-provider-settings-for-portals"></a>ポータルの OAuth2 プロバイダー設定を構成する
 
@@ -31,7 +31,7 @@ OAuth 2.0 ベースの外部 id プロバイダーでは、"クライアント I
 
 ## <a name="create-oauth-applications"></a>OAuth アプリケーションの作成
 
-一般に、OAuth プロバイダーがリダイレクト URI 値を必要とするアプリ設定を使用する場合は、プロバイダーがリダイレクト URI 検証を実行する方法に応じて <http://portal.contoso.com/or> http://portal.contoso.com/signin-\ [プロバイダー\] を指定します (一部のプロバイダーでは、完全な URL パスをと共に指定する必要があります。ドメイン名)。 リダイレクト URI で \[プロバイダーの\] の代わりにプロバイダーの名前を置き換えます。
+一般に、OAuth プロバイダーがリダイレクト URI 値を必要とするアプリ設定を使用する場合は、プロバイダーがリダイレクト URI 検証を実行する方法に応じて <https://portal.contoso.com/or> https://portal.contoso.com/signin-\ [プロバイダー\] を指定します (一部のプロバイダーでは、完全な URL パスをと共に指定する必要があります。ドメイン名)。 リダイレクト URI で \[プロバイダーの\] の代わりにプロバイダーの名前を置き換えます。
 
 ### <a name="google"></a>Google
 
@@ -46,8 +46,8 @@ OAuth 2.0 ベースの外部 id プロバイダーでは、"クライアント I
     - **[保存]** を選択します。
 5. [**Api & auth** &gt;の**資格情報**] にアクセスし、新しいクライアント ID を作成します。
    - アプリケーションの種類:**Web アプリケーション**
-   - 承認された [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)] オリジン: http://portal.contoso.com
-   - 承認されたリダイレクト Uri: http://portal.contoso.com/signin-google 
+   - 承認された [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)] オリジン: https://portal.contoso.com
+   - 承認されたリダイレクト Uri: https://portal.contoso.com/signin-google 
    - **[クライアント ID の作成]** を選択します。
 
 ### <a name="facebook-app-settings"></a>Facebook アプリの設定
@@ -64,7 +64,7 @@ OAuth 2.0 ベースの外部 id プロバイダーでは、"クライアント I
     - アプリケーションドメイン (オプション): portal.contoso.com 
     - 連絡先の電子メール:*選択した電子メールアドレス&lt;&gt;* 
     - **[プラットフォームの追加]** を選択し、 **[web サイト]** を選択します。 
-    - サイトの URL: http://portal.contoso.com/ または http://portal.contoso.com/signin-facebook
+    - サイトの URL: https://portal.contoso.com/ または https://portal.contoso.com/signin-facebook
 
 6. **[変更の保存]** を選択します。
 7. [**状態] & [確認**&gt; の**状態**] タブを開きます。
@@ -75,7 +75,7 @@ OAuth 2.0 ベースの外部 id プロバイダーでは、"クライアント I
 1. [[!INCLUDE[cc-microsoft](../../../includes/cc-microsoft.md)] アカウントデベロッパーセンター](https://account.live.com/developers/applications/index)を開く  
 2. **[アプリケーションの作成]** を選択し、**アプリケーション名**を指定します。
 3. [**同意**する] を選択して、使用条件に同意します。
-4. [**設定**&gt;**API 設定**] にアクセスし、[リダイレクト URL] を http://portal.contoso.com/signin-microsoft に設定します。 
+4. [**設定**&gt;**API 設定**] にアクセスし、[リダイレクト URL] を https://portal.contoso.com/signin-microsoft に設定します。 
 
 ### <a name="twitter-apps-settings"></a>Twitter アプリの設定
 
@@ -83,8 +83,8 @@ OAuth 2.0 ベースの外部 id プロバイダーでは、"クライアント I
 2. **[新しいアプリの作成]** を選択します。
 
     - アプリの**名前**と**説明**を指定します。
-    - Web サイトの URL を http://portal.contoso.com として設定します。
-    - コールバック URL を http://portal.contoso.com または http://portal.contoso.com/signin-twitter として設定します。
+    - Web サイトの URL を https://portal.contoso.com として設定します。
+    - コールバック URL を https://portal.contoso.com または https://portal.contoso.com/signin-twitter として設定します。
 
 3. **[Twitter アプリケーションの作成]** を選択します。
 
@@ -94,9 +94,9 @@ OAuth 2.0 ベースの外部 id プロバイダーでは、"クライアント I
 2. **[新しいアプリケーションの追加]** を選択します。
 
     - **アプリケーション名**、**説明**などを指定します。
-    - Web サイトの URL を http://portal.contoso.com として設定します。
+    - Web サイトの URL を https://portal.contoso.com として設定します。
     - OAuth ユーザーアグリーメント/既定のスコープを設定する: r\_basicprofie と r\_emailaddress
-    - Set OAuth 2.0 リダイレクト url: http://portal.contoso.com/signin-linkedin 。
+    - Set OAuth 2.0 リダイレクト url: https://portal.contoso.com/signin-linkedin 。
 
 3. **[アプリケーションの追加]** を選択します。
 

@@ -9,12 +9,12 @@ ms.custom: ''
 ms.date: 10/18/2019
 ms.author: shjais
 ms.reviewer: ''
-ms.openlocfilehash: aead447bbab7f6e5758cdea0a9c6be5c0e8f41e2
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.openlocfilehash: 5f902dd900e074c2e6b3f08f8848475dcd907ee4
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72978395"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73542842"
 ---
 # <a name="azure-ad-b2c-provider-settings-for-portals"></a>ポータルの Azure AD B2C プロバイダーの設定
 
@@ -497,7 +497,7 @@ Common Data Service に存在しない新しい顧客がプロビジョニング
 
 **形式**: attribute1 = claim1、attribute2 = claim2、attribute3 = claim3
 
-例: firstname =<http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname,lastname=http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname,jobtitle=jobTitle>
+例: firstname =<https://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname,lastname=https://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname,jobtitle=jobTitle>
 
 > [!NOTE]
 > 電子メールアドレスが連絡先のプライマリ電子メール (emailaddress1) にマップされていることを確認します。 連絡先レコードにセカンダリ電子メール (emailaddress2) または連絡用電子メール (emailaddress3) を追加して電子メールにマップした場合、id 情報は連絡先に追加されず、の登録に使用された電子メールアドレスを使用して新しいアドレス帳が作成されます。プライマリ電子メール (emailaddress1)。
@@ -512,7 +512,7 @@ Common Data Service と id プロバイダーのデータは直接リンクさ�
 
 **形式**: attribute1 = claim1、attribute2 = claim2、attribute3 = claim3
 
-例: firstname =<http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname,lastname=http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname,jobtitle=jobTitle> 
+例: firstname =<https://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname,lastname=https://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname,jobtitle=jobTitle> 
 
 要求名は、サインインポリシーのアプリケーション要求の属性の横に表示される [要求の種類] フィールドです。
 

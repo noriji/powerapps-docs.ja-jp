@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 64a26fbd0e36937427bc679869d5bc942f254130
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: ed4b729926cc8a818f8c2d47b98656c91b934788
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61531735"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73542482"
 ---
 # <a name="walk-end-to-end-through-the-completed-sharepoint-online-integration-scenario"></a>完成した SharePoint Online 統合シナリオ全体の説明
 > [!NOTE]
@@ -26,8 +26,8 @@ ms.locfileid: "61531735"
 
 このチュートリアル シリーズでは、キャンバス アプリとフローの構築からレポートの作成と SharePoint への埋め込みに至るまで、幅広い内容を説明しました。 多くのことを学び、これらのテクノロジの統合の仕組みをしっかりと理解し、お客様自身のニーズに応じてキャンバス アプリやフロー、レポートを SharePoint に統合できるようになっていただきたいと思います。 このチュートリアル シリーズを終える前にシナリオ全体をおさらいして、すべての部分がどのように連携しているかを見ていきましょう。
 
-## <a name="step-1-add-a-project-to-the-project-requests-list"></a>手順 1:Project Requests リストにプロジェクトを追加します。
-1. **Project Requests** リストで、**[All Items]\(すべての項目\)**、**[Project Requests アプリ]** の順にクリックまたはタップします。
+## <a name="step-1-add-a-project-to-the-project-requests-list"></a>手順 1: Project Requests リストにプロジェクトを追加する
+1. **Project Requests** リストで、 **[All Items]\(すべての項目\)** 、 **[Project Requests アプリ]** の順にクリックまたはタップします。
    
     ![Project Requests アプリの表示](./media/sharepoint-scenario-summary/09-00-01-view-app.png)
 2. **[開く]** をクリックすると、新しいブラウザー タブでアプリが開きます。
@@ -52,14 +52,14 @@ ms.locfileid: "61531735"
      
      ![Project Requests 編集フォーム](./media/sharepoint-scenario-summary/09-01-01-app-new.png)
 5. 右上にある ![チェック マーク アイコン](./media/sharepoint-scenario-summary/icon-check-mark.png)をクリックまたはタップし、ブラウザーのタブを閉じます。
-6. **Project Requests** リストに戻り、**[Project Requests アプリ]**、**[All Items]\(すべての項目\)** の順にクリックまたはタップします。
+6. **Project Requests** リストに戻り、 **[Project Requests アプリ]** 、 **[All Items]\(すべての項目\)** の順にクリックまたはタップします。
    
     ![すべての項目を表示する](./media/sharepoint-scenario-summary/09-01-01a-view-all.png)
 7. リストで新しいエントリを確認します。
    
     ![新しいエントリが追加された SharePoint リスト](./media/sharepoint-scenario-summary/09-01-02-list-new.png)
 
-## <a name="step-2-approve-the-project"></a>手順 2:プロジェクトを承認します。
+## <a name="step-2-approve-the-project"></a>手順 2: プロジェクトを承認する
 1. 手順 1 で項目が追加されると、フローが実行されて承認メールが送信されます。 承認者の電子メール アカウントの受信トレイを確認します。
    
     ![承認依頼メール](./media/sharepoint-scenario-summary/09-02-01-allan-email.png)
@@ -73,12 +73,12 @@ ms.locfileid: "61531735"
    
     ![エントリが更新された SharePoint リスト](./media/sharepoint-scenario-summary/09-02-03-yes.png)
 
-## <a name="step-3-assign-a-manager-to-the-project"></a>手順 3:プロジェクト マネージャーに割り当てる
+## <a name="step-3-assign-a-manager-to-the-project"></a>手順 3: プロジェクトに管理者を割り当てる
 1. 最初に、SharePoint の **Project Details** リストを見てみましょう。 新しいプロジェクトの **[PMAssigned]** 列の値が **[未割り当て]** になっています。
    
     ![未割り当ての SharePoint リスト項目](./media/sharepoint-scenario-summary/09-03-01-unassigned.png)
-2. SharePoint サイトの左側のナビゲーションで、**[Project Management アプリ]** をクリックまたはタップします。
-3. 最初の画面で、**[Assign Manager]** をクリックまたはタップします。
+2. SharePoint サイトの左側のナビゲーションで、 **[Project Management アプリ]** をクリックまたはタップします。
+3. 最初の画面で、 **[Assign Manager]** をクリックまたはタップします。
    
     ![プロジェクトへの管理者の割り当て](./media/sharepoint-scenario-summary/09-03-02-intro-screen.png)
 4. **[Assign Manager]** 画面で、リストに 2 つの未割り当てプロジェクトが表示されています。 **設計チームのモバイル デバイス** プロジェクトを選択します。
@@ -93,8 +93,8 @@ ms.locfileid: "61531735"
    
     ![割り当て済みの SharePoint リスト項目](./media/sharepoint-scenario-summary/09-03-05-assigned.png)
 
-## <a name="step-4-add-time-estimates-for-the-project"></a>手順 4.プロジェクトの時間の見積もりを追加します。
-1. ![戻るアイコン](./media/sharepoint-scenario-summary/icon-back.png) をクリックまたはタップして最初の画面に戻り、**[Update Details]** をクリックまたはタップします。
+## <a name="step-4-add-time-estimates-for-the-project"></a>手順 4: プロジェクトの時間の見積を追加する
+1. ![戻るアイコン](./media/sharepoint-scenario-summary/icon-back.png) をクリックまたはタップして最初の画面に戻り、 **[Update Details]** をクリックまたはタップします。
    
     ![プロジェクトの詳細の更新](./media/sharepoint-scenario-summary/09-04-00-intro-screen.png)
 2. **[プロジェクトの表示]** 画面で、検索ボックスに「モバイル」と入力します。
@@ -119,8 +119,8 @@ ms.locfileid: "61531735"
    
    ![情報が更新された SharePoint リスト](./media/sharepoint-scenario-summary/09-04-04-updated-list.png)
 
-## <a name="step-5-review-report-data-for-existing-projects"></a>手順 5.既存のプロジェクトのレポート データを確認してください。
-1. SharePoint Online で、**[サイト コンテンツ]**、**[サイト ページ]** の順にクリックまたはタップします。
+## <a name="step-5-review-report-data-for-existing-projects"></a>手順 5: 既存のプロジェクトのレポート データを確認する
+1. SharePoint Online で、 **[サイト コンテンツ]** 、 **[サイト ページ]** の順にクリックまたはタップします。
 2. 以前に作成した **[プロジェクト分析]** ページを開きます。
    
     ![埋め込まれたプロジェクト分析レポート](./media/sharepoint-scenario-summary/09-05-01-report-complete.png)
@@ -138,8 +138,8 @@ ms.locfileid: "61531735"
    
     この視覚エフェクトを作成したときにも気がつきましたが、Irvin Sayers が担当したプロジェクトは開始までの期間が長く、特に 2 つのプロジェクトは他のプロジェクトよりも大幅に時間がかかっています。
 
-## <a name="step-6-respond-to-pending-project-delays"></a>手順 6:保留中のプロジェクトの遅延に対応します。
-1. Power BI サービスで、**project-analysis** のデータセットをクリックまたはタップし、**[今すぐ更新]** をクリックまたはタップします。 更新することで、保留中のプロジェクトに設定したアラートがトリガーされます。
+## <a name="step-6-respond-to-pending-project-delays"></a>手順 6: 保留中のプロジェクトの遅延に対応する
+1. Power BI サービスで、**project-analysis** のデータセットをクリックまたはタップし、 **[今すぐ更新]** をクリックまたはタップします。 更新することで、保留中のプロジェクトに設定したアラートがトリガーされます。
    
     ![データセットを今すぐ更新](./media/sharepoint-scenario-summary/09-06-01-refresh.png)
 2. 更新が完了すると、右上の**通知センター**に新しい通知アイコンが表示されます。
@@ -160,11 +160,11 @@ ms.locfileid: "61531735"
 
 今回の一通りの手順と、このチュートリアル シリーズはこれで終了です。 引き続き次のサイトもぜひご覧ください。
 
-* [PowerApps](http://www.powerapps.com/)
-* [Microsoft Flow](http://flow.microsoft.com)
-* [Power BI](http://www.powerbi.com)
+* [PowerApps](https://www.powerapps.com/)
+* [Microsoft Flow](https://flow.microsoft.com)
+* [Power BI](https://www.powerbi.com)
 * [Power Users Community](https://powerusers.microsoft.com/)
-* [SharePoint](http://sharepoint.microsoft.com)
+* [SharePoint](https://sharepoint.microsoft.com)
 * [Microsoft Tech Community](https://techcommunity.microsoft.com/)
 
 このシリーズのフィードバック、追加事項のご提案、または今回ご紹介したテクノロジの活用に役立つ追加のコンテンツに関してご意見のある方は、下のコメント欄にご記入ください。

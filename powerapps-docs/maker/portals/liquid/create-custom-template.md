@@ -1,31 +1,36 @@
 ---
-title: ポータル向けのLiquid とWeb テンプレート ページを使用してユーザー定義ページのテンプレートを作成する | MicrosoftDocs
-description: Liquid の演算子を使用してカスタム ページ テンプレートを作成するための手順。
+title: カスタムページテンプレートを作成するには、ポータルの液体と web テンプレートページテンプレートを使用します。MicrosoftDocs
+description: 液体演算子を使用してカスタムページテンプレートを作成する方法について説明します。
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: null
-ms.date: 08/30/2019
+ms.custom: ''
+ms.date: 10/07/2019
 ms.author: shjais
-ms.reviewer: null
+ms.reviewer: ''
+ms.openlocfilehash: 8fe2d6f6496c609a9811ddb4ca28c3df47d8e04d
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73542474"
 ---
+# <a name="create-a-custom-page-template"></a>カスタム ページ テンプレートを作成する
 
-# <a name="create-a-custom-page-template"></a>ユーザー定義ページ テンプレートを作成する
+この例では、液体と、web テンプレートに基づくページテンプレートを使用して、カスタムページテンプレートを作成します。 [web テンプレートを使用してソースコンテンツを格納](store-content-web-templates.md)[!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] ます。 私たちの目標は、 [web リンク](../configure/manage-web-links.md)を左側のナビゲーションとして使用する単純な2列のテンプレートを作成することです。ページの内容は右側にあります。 
 
-この例では、流動および Web テンプレートに基づくページ テンプレートを使用することにより、カスタム ページ テンプレートを作成します。 [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Web テンプレートを使用したソース コンテンツの保存](store-content-web-templates.md)。 目標は、左側のナビゲーションとして [Web リンク セット](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-web-links)を使用し、右側にページの内容のあるシンプルな 2 列のテンプレートを作成することです。 
+## <a name="step-1-create-a-web-template-and-write-the-liquid-template-code"></a>手順 1: web テンプレートを作成し、液体テンプレートコードを記述する
 
-## <a name="step-1-create-a-web-template-and-write-the-liquid-template-code"></a>ステップ 1: Web テンプレートを作成し、流動テンプレート コードを記述
-
-まず、Web テンプレートを作成し、流動テンプレート コードを記述します。 将来のテンプレートでこのテンプレートのいくつかの共通要素を再利用する可能性があります。 したがって、特定のテンプレートで拡張する共通の基本テンプレートを作成します。 基本テンプレートでは、階層リンクとページ タイトル / ヘッダーを提供し、かつ 1 列レイアウトを定義します:
+まず、Web テンプレートを作成し、液体テンプレートコードを記述します。 このテンプレートの一般的な要素は、今後のテンプレートで再利用される可能性があります。 ここでは、特定のテンプレートを使用して拡張する共通の基本テンプレートを作成します。 この基本テンプレートでは、階層リンクとページタイトル/ヘッダーを提供し、1列のレイアウトを定義します。
 
 > [!div class=mx-imgBorder]
-![Web テンプレート 1 列レイアウト](../media/web-template-two-column-layout.png "Web テンプレート 1 列レイアウト")
+![Web テンプレートの1列のレイアウト](../media/web-template-two-column-layout.png "Web テンプレートの1列のレイアウト")
 
 > [!TIP]
-> ブロックおよび拡張タグを使用してテンプレートの継承を読み取ります: [テンプレート タグ](template-tags.md#extends)
+> ブロックと拡張タグ:[テンプレートタグ](template-tags.md#extends)を使用したテンプレートの継承について説明します。
 
-### <a name="two-column-layout-web-template"></a>2 列レイアウト (Web テンプレート)
+### <a name="two-column-layout-web-template"></a>2列のレイアウト (Web テンプレート)
 
 ```xml
 <div class=container>
@@ -53,17 +58,17 @@ ms.reviewer: null
 </div>
 ```
 
-## <a name="step-2-create-a-new-web-template-that-extends-our-base-layout-template"></a>ステップ 2: 基本のレイアウト テンプレートを拡張する新しい Web テンプレートを作成
+## <a name="step-2-create-a-new-web-template-that-extends-our-base-layout-template"></a>手順 2: 基本レイアウトテンプレートを拡張する新しい web テンプレートを作成する
 
-ナビゲーション リンクの現在のページに関連付けられているナビゲーション Web リンクのセットを使用して、基本レイアウト テンプレートを拡張する新しい Web テンプレートを作成します。
+ナビゲーションリンクの現在のページに関連付けられているナビゲーション web リンクセットを使用して、基本レイアウトテンプレートを拡張する新しい web テンプレートを作成します。
 
 > [!div class=mx-imgBorder]
-![Web テンプレート Web リンク左側のナビゲーション レイアウト](../media/web-template-weblinks-left-navigation-layout.png "Web テンプレート Web リンク左側のナビゲーション レイアウト")  
+![Web テンプレート web リンクの左側のナビゲーションレイアウト](../media/web-template-weblinks-left-navigation-layout.png "Web テンプレート web リンクの左側のナビゲーションレイアウト")  
 
 > [!TIP]
-> [Web リンク](liquid-objects.md#weblinks) オブジェクトを用いて Web リンク セットを読み込む方法について理解してください。
+> [Weblinks](liquid-objects.md#weblinks)オブジェクトを使用して web リンクセットを読み込む方法について理解を深めます。
 
-### <a name="weblinks-left-navigation-web-template"></a>Web リンクの左ナビゲーション (Web テンプレート)
+### <a name="weblinks-left-navigation-web-template"></a>Web リンクの左側のナビゲーション (Web テンプレート)
 
 ```xml
 {% extends 'Two Column Layout' %}
@@ -91,24 +96,24 @@ ms.reviewer: null
 {% endblock %}
 ```
 
-## <a name="step-3-create-a-new-page-template-based-on-the-web-template"></a>ステップ 3: この Web テンプレートに基づき新しいページ テンプレートを作成
+## <a name="step-3-create-a-new-page-template-based-on-the-web-template"></a>手順 3: web テンプレートに基づいて新しいページテンプレートを作成する
 
-このステップでは、前の手順で作成した Web テンプレートに基づく新しいページ テンプレートを作成します。
-
-> [!div class=mx-imgBorder]
-![ページ テンプレート Web リンク左側のナビゲーション レイアウト](../media/page-template-weblinks-left-navigation-layout.png "ページ テンプレート Web リンク左側のナビゲーション レイアウト")  
-
-## <a name="step-4-create-a-web-page-to-display-content"></a>ステップ 4: コンテンツを表示する Web ページを作成
-
-今、残っている作業は、ページ テンプレートを使用した、関連する Web リンク セットのある Web ページを作成し、結果を得ることです。
+この手順では、前の手順で作成した web テンプレートに基づいて新しいページテンプレートを作成します。
 
 > [!div class=mx-imgBorder]
-![左側のナビゲーションのある Web ページ](../media/web-page-left-navigation.png "左側のナビゲーションのある Web ページ")  
+![ページテンプレート web リンクの左側のナビゲーションレイアウト](../media/page-template-weblinks-left-navigation-layout.png "ページテンプレート web リンクの左側のナビゲーションレイアウト")  
+
+## <a name="step-4-create-a-web-page-to-display-content"></a>手順 4: コンテンツを表示する web ページを作成する
+
+次に、ページテンプレートを使用する web ページを作成し、関連付けられた Web リンクを設定して、結果を取得します。
+
+> [!div class=mx-imgBorder]
+![左側のナビゲーションがある Web ページ](../media/web-page-left-navigation.png "左側のナビゲーションがある Web ページ")  
 
 ### <a name="see-also"></a>関連項目
 
-[RSS フィードを表示するカスタム ページ テンプレートの作成](render-rss-custom-page-template.md)  
-[現在のページに関連付けられているエンティティの表示](render-entity-list-current-page.md)  
-[Web サイト ヘッダーとプライマリ ナビゲーション バーの表示](render-site-header-primary-navigation.md)  
-[ハイブリッド ナビゲーションの使用により、ページ階層のレベルを 3 つまで描画](hybrid-navigation-render-page-hierachy.md)  
+[RSS フィードを表示するカスタムページテンプレートを作成する](render-rss-custom-page-template.md)  
+[現在のページに関連付けられているエンティティの一覧を表示します](render-entity-list-current-page.md)  
+[Web サイトヘッダーとプライマリナビゲーションバーを表示する](render-site-header-primary-navigation.md)  
+[ハイブリッドナビゲーションを使用して、最大3レベルのページ階層を表示します](hybrid-navigation-render-page-hierachy.md)  
 

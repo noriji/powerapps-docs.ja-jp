@@ -9,16 +9,16 @@ ms.custom: ''
 ms.date: 10/18/2019
 ms.author: shjais
 ms.reviewer: ''
-ms.openlocfilehash: 0dba1794f15a710e43feaec3ca6d4d2dbc9c5fc3
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.openlocfilehash: 2b4d31165ccd12b2cb5c8c2a4c8ec6f9dd04a7c7
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72978487"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73542783"
 ---
 # <a name="configure-open-id-connect-provider-settings-for-portals"></a>ポータルの Open ID Connect プロバイダーの設定を構成する
 
-[OpenID connect](http://openid.net/connect/)外部 id プロバイダーは、Open ID Connect[仕様](http://openid.net/developers/specs/)に準拠するサービスです。 プロバイダーを統合するには、プロバイダーに関連付けられている機関 (または発行者) の URL を検索する必要があります。 構成 URL は、認証ワークフロー中に必要なメタデータを提供する機関から特定できます。 プロバイダーの設定は、 [Openidconnectauthenticationoptions](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.aspx)クラスのプロパティに基づいています。
+[OpenID connect](https://openid.net/connect/)外部 id プロバイダーは、Open ID Connect[仕様](https://openid.net/developers/specs/)に準拠するサービスです。 プロバイダーを統合するには、プロバイダーに関連付けられている機関 (または発行者) の URL を検索する必要があります。 構成 URL は、認証ワークフロー中に必要なメタデータを提供する機関から特定できます。 プロバイダーの設定は、 [Openidconnectauthenticationoptions](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.aspx)クラスのプロパティに基づいています。
 
 権限の Url の例を次に示します。
 
@@ -40,7 +40,7 @@ ms.locfileid: "72978487"
 4. **[サインオン URL]** と **[アプリ ID URI]** には、両方のフィールドにポータルの url を指定し https://portal.contoso.com/
 5. この時点で、新しいアプリケーションが作成されます。 メニューの **[構成]** セクションに移動します。
 
-    [Single sign-on] \ (**シングルサインオン**\) セクションで、最初の**応答 url**エントリを更新して、url: http://portal.contoso.com/signin-azure-ad にパスを含めます。 これは、 **Redirecturi**サイト設定値に対応します。
+    [Single sign-on] \ (**シングルサインオン**\) セクションで、最初の**応答 url**エントリを更新して、url: https://portal.contoso.com/signin-azure-ad にパスを含めます。 これは、 **Redirecturi**サイト設定値に対応します。
 
 6. **[プロパティ]** セクションで、 **[クライアント ID]** フィールドを見つけます。 これは、 **ClientId**サイト設定値に対応しています。
 7. フッターメニューで、 **[エンドポイントの表示]** を選択し、 **[フェデレーションメタデータドキュメント]** フィールドをメモします。
@@ -94,13 +94,13 @@ URL の左側の部分は**Authority**の値であり、次のいずれかの形
 |       Authentication/OpenIdConnect/\[プロバイダー\]/nameclaimtype        |                                                                                                                                                                              名前クレームを格納するために ClaimsIdentity によって使用される要求の種類。                                                                                                                                                                              |
 |       Authentication/OpenIdConnect/\[プロバイダー\]/roleclaimtype        |                                                                                                                                                                              ロール要求を格納するために ClaimsIdentity によって使用される要求の種類。                                                                                                                                                                              |
 |   Authentication/OpenIdConnect/\[プロバイダー\]/RequireExpirationTime    |                                                                                                                                                                              トークンが "有効期限" の値を持つ必要があるかどうかを示す値。                                                                                                                                                                              |
-|    Authentication/OpenIdConnect/\[プロバイダー\]/requiresignedtoken     |                                                                                                                               署名されていない場合に、<http://ddue.schemas.microsoft.com/authoring/2003/5> が有効であるかどうかを示す値。                                                                                                                                |
+|    Authentication/OpenIdConnect/\[プロバイダー\]/requiresignedtoken     |                                                                                                                               署名されていない場合に、<https://ddue.schemas.microsoft.com/authoring/2003/5> が有効であるかどうかを示す値。                                                                                                                                |
 |      Authentication/OpenIdConnect/\[プロバイダー\]/savesignintoken       |                                                                                                                                                                        セッションの作成時に元のトークンが保存されるかどうかを制御するブール値。                                                                                                                                                                        |
 |       Authentication/OpenIdConnect/\[プロバイダー\]/validateactor        |                                                                                                                                                            JwtSecurityToken を検証する必要があるかどうかを示す値。                                                                                                                                                            |
 |      Authentication/OpenIdConnect/\[プロバイダー\]/validateaudience      |                                                                                                                                                                       トークンの検証中に対象ユーザーを検証するかどうかを制御するブール値。                                                                                                                                                                        |
 |       Authentication/OpenIdConnect/\[プロバイダー\]/validateissuer       |                                                                                                                                                                        トークンの検証中に発行者が検証されるかどうかを制御するブール値。                                                                                                                                                                         |
 |      Authentication/OpenIdConnect/\[プロバイダー\]/ValidateLifetime      |                                                                                                                                                                       トークンの検証中に有効期間が検証されるかどうかを制御するブール値。                                                                                                                                                                        |
-|  Authentication/OpenIdConnect/\[プロバイダー\]/ValidateIssuerSigningKey  |                                                                                                                  (SecurityToken xmlns =<http://ddue.schemas.microsoft.com/authoring/2003/5> に署名されている、system.servicemodel. SecurityKey) の検証が呼び出されるかどうかを制御するブール値。                                                                                                                  |
+|  Authentication/OpenIdConnect/\[プロバイダー\]/ValidateIssuerSigningKey  |                                                                                                                  (SecurityToken xmlns =<https://ddue.schemas.microsoft.com/authoring/2003/5> に署名されている、system.servicemodel. SecurityKey) の検証が呼び出されるかどうかを制御するブール値。                                                                                                                  |
 |                                                                      |                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 ## <a name="enable-authentication-using-a-multi-tenant-azure-active-directory-application"></a>マルチテナント Azure Active Directory アプリケーションを使用して認証を有効にする

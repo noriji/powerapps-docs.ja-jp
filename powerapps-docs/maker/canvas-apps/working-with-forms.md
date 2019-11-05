@@ -13,18 +13,18 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 401d32f3d3cacee4b9b1a23a5fceb7d159623086
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 476964166a57bea23469baf0c1e7497be10ab73f
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71994907"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541662"
 ---
 # <a name="understand-canvas-app-forms-in-microsoft-powerapps"></a>Microsoft PowerApps のキャンバス アプリ フォームについて
 
 ユーザーがレコードの閲覧、そのレコードの詳細の表示、レコードの編集または作成を実行できるように 3 種類のコントロールをキャンバス アプリに追加します。
 
-| アクティビティ | コントロール | 説明 |
+| アクティビティ | コントロール | Description |
 | --- | --- | --- |
 | **レコードを閲覧する** |**[ギャラリー](controls/control-gallery.md)** コントロール |データ ソースのレコードをフィルター処理、並べ替え、検索、スクロールして、特定のレコードを選択します。 小さな画面上でも、各レコードからごく少数のフィールドを表示して、一度に複数のレコードを表示します。 |
 | **レコードの詳細を表示する** |**[表示フォーム](controls/control-form-detail.md)** コントロール |単一のレコードの場合、そのレコードの複数またはすべてのフィールドが表示されます。 |
@@ -38,7 +38,7 @@ ms.locfileid: "71994907"
 
 ## <a name="prerequisites"></a>前提条件
 
-* PowerApps に[サインアップ](../signup-for-powerapps.md)し、サインアップに使用したのと同じ資格情報を入力して[サインイン](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)します。
+* PowerApps に[サインアップ](../signup-for-powerapps.md)し、サインアップに使用したのと同じ資格情報を入力して[サインイン](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)します。
 * PowerApps で[コントロールを構成する](add-configure-controls.md)方法について確認します。
 
 ## <a name="explore-a-generated-app"></a>生成されたアプリの詳細
@@ -137,7 +137,7 @@ PowerApps では、指定したデータ ソースに基づいて自動的にア
 
 ![作成環境で選択された編集カードとカード コントロール](./media/working-with-forms/afd-edit-card-controls.png)
 
-前の画像で選択されているカードには、**AssetID** フィールドが表示されていて、ユーザーがそのフィールドの値を編集できるように **[テキスト入力](controls/control-text-input.md)** コントロールが含まれています (これに対して、詳細画面では、同じフィールドが読み取り専用の **[ラベル](controls/control-text-box.md)** コントロールに表示されます)。 **[テキスト入力](controls/control-text-input.md)** コントロールには **[Default](controls/properties-core.md)** プロパティがあります。このプロパティは、**Parent.Default** に設定されています。 ユーザーがレコードを編集ではなく作成していた場合、そのコントロールには初期値が表示されます。ユーザーは、新しいレコード用にこの値を変更できます。
+前の画像で選択されているカードには、**AssetID** フィールドが表示されていて、ユーザーがそのフィールドの値を編集できるように **[テキスト入力](controls/control-text-input.md)** コントロールが含まれています (これに対して、詳細画面では、読み取り専用の **[ラベル](controls/control-text-box.md)** コントロールに同じフィールドが表示されます)。 **[テキスト入力](controls/control-text-input.md)** コントロールには **[既定](controls/properties-core.md)** のプロパティがあり、これは**Parent. default**に設定されています。 ユーザーがレコードを編集ではなく作成していた場合、そのコントロールには初期値が表示されます。ユーザーは、新しいレコード用にこの値を変更できます。
 
 右側のウィンドウでは、各カードの表示と非表示を切り替えたり、カードを並べ替えたりできるほか、さまざまな種類のコントロールにフィールドを表示するように構成することもできます。
 
@@ -334,7 +334,7 @@ PowerApps によってデータから生成されたアプリでは、閲覧画�
 
 ![閲覧画面でのコントロールの並べ替えと検索](./media/working-with-forms/afd-browse-search-sort.png)
 
-ユーザーが並べ替えボタンを選択すると、ギャラリーの並べ替え順序が逆になります。 この動作を作成するには、"*コンテキスト変数*" を使用して、ギャラリーの並べ替え方向を追跡します。 ユーザーがボタンを選択すると、変数が更新され、方向が逆になります。 並べ替えボタンの **[Onselect](controls/properties-core.md)** プロパティは、次の数式に設定されます。**UpdateContext ({SortDescending1:!SortDescending1})**
+ユーザーが並べ替えボタンを選択すると、ギャラリーの並べ替え順序が逆になります。 この動作を作成するには、"*コンテキスト変数*" を使用して、ギャラリーの並べ替え方向を追跡します。 ユーザーがボタンを選択すると、変数が更新され、方向が逆になります。 並べ替えボタンの **[OnSelect](controls/properties-core.md)** プロパティは、**UpdateContext( {SortDescending1: !SortDescending1} )** という数式に設定されています。
 
 **[UpdateContext](functions/function-updatecontext.md)** 関数は、**SortDescending1** コンテキスト変数がまだ存在しない場合に作成します。 この関数は、変数の値を読み取り、 **!** 演算子を使用してその反対の論理値に設定します 。 値が *true* の場合は *false* になります。 値が *false* の場合は *true* になります。
 
