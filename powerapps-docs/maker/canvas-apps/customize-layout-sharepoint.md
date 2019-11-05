@@ -13,14 +13,14 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d12f667c1ff1fbf8424840b887e0f9394197ee2c
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 6b3a33f327aab7e4f02c954dbd31c412e35dd661
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71986051"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73539176"
 ---
-# <a name="tutorial-customize-a-gallery-in-powerapps"></a>ヒントPowerApps でギャラリーをカスタマイズする
+# <a name="tutorial-customize-a-gallery-in-powerapps"></a>チュートリアル: PowerApps でのギャラリーのカスタマイズ
 
 このチュートリアルでは、Microsoft PowerApps で自動的に生成されたアプリで、ギャラリーと呼ばれるレコードの一覧をカスタマイズし、他の変更を行います。 これらの変更を行わなくてもユーザーはアプリ内のデータを管理できますが、組織のニーズに合わせてカスタマイズすれば、アプリが使いやすくなります。
 
@@ -43,7 +43,7 @@ ms.locfileid: "71986051"
 
 このチュートリアルでは、特定のデータ ソースから既に生成されているアプリを使います。 ただし、SharePoint リスト、Excel テーブル、または他のデータ ソースのいずれが基になっていても、PowerApps で生成するすべてのアプリに、同じ概念が適用されます。
 
-PowerApps にサインアップしていない場合は、始める前に[無料でサインアップ](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)してください。
+PowerApps にサインアップしていない場合は、始める前に[無料でサインアップ](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)してください。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -51,7 +51,7 @@ Common Data Service の**Accounts**エンティティから[アプリを生成](
 
 ## <a name="open-the-generated-app"></a>生成されたアプリを開く
 
-1. [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) にサインインし、左端近くにある **[アプリ]** を選びます。
+1. [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) にサインインし、左端近くにある **[アプリ]** を選びます。
 
 1. 生成したアプリを探し、その省略記号アイコン **[...]** を選んで、 **[編集]** を選びます。
 

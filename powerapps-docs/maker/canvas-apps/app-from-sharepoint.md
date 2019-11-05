@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 101c77b7bdd84e2d2ed31febc441e54944eb9fa3
-ms.sourcegitcommit: fa6ad01cf6d025d46564d755915caaa9db517c41
+ms.openlocfilehash: 50f84e06206a73c39feaee286ce1f4c9258c4958
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72902445"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541102"
 ---
 # <a name="generate-a-canvas-app-in-powerapps-from-a-sharepoint-list"></a>PowerApps で SharePoint リストからキャンバス アプリを作成する
 
@@ -42,7 +42,7 @@ ms.locfileid: "72902445"
 
 ## <a name="generate-an-app-from-within-powerapps"></a>PowerApps 内からアプリを作成する
 
-1. [PowerApps にサインインします](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。
+1. [PowerApps にサインインします](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。
 
 1. **[Make your own app]\(独自アプリの作成\)** の下の **[Start from data]\(データから開始\)** にポインターを合わせ、 **[このアプリの作成]** を選択します。
 

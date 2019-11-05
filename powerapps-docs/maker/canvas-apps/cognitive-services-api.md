@@ -1,6 +1,6 @@
 ---
 title: PowerApps の Cognitive Services を使用する | Microsoft Docs
-description: Azure Cognitive Services Text Analytics API を使用してテキストを分析する基本的なキャンバス アプリをビルドします。
+description: Azure Cognitive Services Text Analytics API を使用してテキストを分析する基本的なキャンバスアプリを作成します。
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -13,21 +13,21 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ee3f7684ed1636cf2445945d1d01507733c18625
-ms.sourcegitcommit: dd74c98f48587730466e6669fc94da250d5c631e
+ms.openlocfilehash: a998ca743fe693645adaabbd32d4d3110c12068a
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2019
-ms.locfileid: "66224935"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73540853"
 ---
 # <a name="use-cognitive-services-in-powerapps"></a>PowerApps の Cognitive Services を使用する
-この記事では、使用する基本的なキャンバス アプリを構築する方法を示します、 [Azure Cognitive Services Text Analytics API](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview)テキストを分析します。 Text Analytics API の設定方法と、[Text Analytics コネクタ](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/)を使って、Text Analytics API に接続する方法を説明します。 次に、API を呼び出すキャンバス アプリを作成する方法を説明します。
+この記事では、 [Azure Cognitive Services Text Analytics API](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview)を使用してテキストを分析する基本的なキャンバスアプリを作成する方法について説明します。 Text Analytics API の設定方法と、[Text Analytics コネクタ](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/)を使って、Text Analytics API に接続する方法を説明します。 次に、API を呼び出すキャンバス アプリを作成する方法を説明します。
 
 > [!NOTE]
 > PowerApps でアプリを構築するのに慣れていない場合は、この記事を読み進める前に、「[アプリを最初から作成する](get-started-create-from-blank.md)」を読まれることをお勧めします。
 
 ## <a name="introduction-to-azure-cognitive-services"></a>Azure Cognitive Services の概要
-Azure Cognitive Services では、Api、Sdk、およびサービスをアプリケーションをよりインテリジェントで魅力的にすると、利用可能な探索可能のセットです。 これらのサービスを利用すると、感情や動画の検出、顔や音声および画像の認識、音声や言語の理解などのインテリジェントな機能を簡単にアプリケーションに追加できます。
+Azure Cognitive Services は、アプリケーションをよりインテリジェント、魅力的、検出可能にするために使用できる Api、Sdk、およびサービスのセットです。 これらのサービスを利用すると、感情や動画の検出、顔や音声および画像の認識、音声や言語の理解などのインテリジェントな機能を簡単にアプリケーションに追加できます。
 
 この記事では "言葉の理解" に注目して、Text Analytics API を使用します。 この API を使用すると、テキストからセンチメント、キー フレーズ、トピックおよび言語を検出できます。 まず API のデモを試したあと、プレビュー版にサインアップしてみましょう。
 
@@ -40,14 +40,14 @@ API のオンライン デモが用意されています。このデモでは、
    
     ![Text Analytics API デモ](./media/cognitive-services-api/text-analytics-demo.png)
 
-3. ページの **[分析されたテキスト]** タブには一定の形式に変換された結果が表示され、 **[JSON]** タブには JSON の応答が表示されます。[JSON](http://json.org/) はデータ (ここでは、Text Analytics API によって返されるデータ) の表現方法です。
+3. ページには、[分析された**テキスト**] タブに書式設定された結果と、 **json の json**応答が表示されます[。 json は](https://json.org/)、データ (この場合は、Text Analytics API によって返されるデータ) を表す方法です。
 
 ## <a name="sign-up-for-the-text-analytics-api"></a>Text Analytics API へのサインアップ
 API は無料のプレビュー版として利用でき、Azure サブスクリプションに関連付けられます。 API は Azure Portal から管理します。
 
 1. Azure サブスクリプションをまだお持ちでない場合は、[無料のサブスクリプションにサインアップします](https://azure.microsoft.com/free/)。
 
-2. [このページ](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesTextAnalytics)、この画像に示すように、Text Analytics API の情報を入力します。 **[F0]** (無料) 価格レベルを選択します。
+2. この[ページ](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesTextAnalytics)では、このイメージに示されているように、Text Analytics API の情報を入力します。 **[F0]** (無料) 価格レベルを選択します。
    
     ![Text Analytics API の作成](./media/cognitive-services-api/azure-create.png)
 
@@ -71,7 +71,7 @@ Text Analytics API が起動し、実行中になったため、PowerApps から
 ### <a name="create-the-app-and-add-a-connection"></a>アプリの作成と接続の追加
 まず、空の携帯電話アプリを作成し、**Text Analytics** コネクタを使って接続を追加します。 これらのタスクの詳細については、「[アプリを最初から作成する](get-started-create-from-blank.md)」と「[PowerApps で接続を管理する](add-manage-connections.md)」をご覧ください。
 
-1. [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) で、 **[空白から開始]**  > ![電話アプリのアイコン ](./media/cognitive-services-api/icon-phone-app.png) (電話) > **[Make this app]\(このアプリの作成\)** の順に選択します。
+1. [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) で、 **[空白から開始]**  > ![電話アプリのアイコン ](./media/cognitive-services-api/icon-phone-app.png) (電話) > **[Make this app]\(このアプリの作成\)** の順に選択します。
 
     ![空白から開始](./media/cognitive-services-api/start-from-blank.png)
 
@@ -172,7 +172,7 @@ If( chkSentiment.Value = true,
 
   * **DetectLanguage()** で、**numberOfLanguagesToDetect** を 1 にハードコーディングしますが、アプリ内のロジックに基づいて、このパラメーターを渡すこともできます。
 
-  * **KeyPhrases()** と**DetectSentiment()** 、**言語**ハード コーディングされたは"en"が、アプリ内のロジックに基づいて、このパラメーターを渡すこともできます。 たとえば、まず言語を検出し、次に **DetectLanguage()** が返すものに基づいて、このパラメーターを設定できます。
+  * で**は、"(** )" と " **()** " を使用すると、**言語**は "en" としてハードコーディングされますが、アプリのロジックに基づいてこのパラメーターを渡すことができます。 たとえば、まず言語を検出し、次に **DetectLanguage()** が返すものに基づいて、このパラメーターを設定できます。
 
 * 呼び出しが行われるごとに、結果を適切なコレクションに追加します。
 

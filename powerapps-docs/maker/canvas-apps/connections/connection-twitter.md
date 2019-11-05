@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 476285021e6a65a32c2e16e4ff95c74be9da933a
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: f58f8e15d1bd522bd9c24d7e3e1dfe9a69b4d257
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71987234"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541025"
 ---
 # <a name="connect-to-twitter-from-powerapps"></a>PowerApps から Twitter に接続する
 ![Twitter](./media/connection-twitter/twittericon.png)
@@ -172,13 +172,13 @@ Twitter 接続が作成され、アプリに追加されます。 これで、�
 1. テキスト入力コントロールを追加し、名前を **MyTweet** に変更します。
 2. ボタンを追加し、その **[OnSelect](../controls/properties-core.md)** プロパティを次の式に設定します。  
     `Twitter.Tweet({tweetText: MyTweet.Text})`
-3. F5 キーを押すか、[プレビュー] ボタン (![](./media/connection-twitter/preview.png)) を選択します。 **MyTweet** にテキストを入力し、ボタンを選択して入力したテキストをツイートします。
+3. F5 キーを押すか、[プレビュー] ボタン (![](./media/connection-twitter/preview.png)) を選びます。 **MyTweet** にテキストを入力し、ボタンを選択して入力したテキストをツイートします。
 4. Esc キーを押して既定のワークスペースに戻ります。
 
 ## <a name="view-the-available-functions"></a>使用可能な関数の確認
 この接続には、次の関数が含まれています。
 
-| 関数名 | 説明 |
+| 関数名 | Description |
 | --- | --- |
 | [UserTimeline](connection-twitter.md#usertimeline) |指定したユーザーが投稿した最も最近のツイートのコレクションを取得します |
 | [HomeTimeline](connection-twitter.md#hometimeline) |最近のツイートを取得し、自分と自分のフォロワーに投稿をリツイートします |
@@ -192,18 +192,18 @@ Twitter 接続が作成され、アプリに追加されます。 これで、�
 | [OnNewTweet](connection-twitter.md#onnewtweet) |検索クエリに一致するツイートが新しく投稿されたときに、ワークフローをトリガーします |
 
 ### <a name="usertimeline"></a>UserTimeline
-ユーザーのタイムラインを取得します。指定したユーザーが投稿した最も最近のツイートのコレクションを取得します
+ユーザーのタイムラインを取得する: 指定したユーザーが投稿した最も最近のツイートのコレクションを取得します
 
 #### <a name="input-properties"></a>入力プロパティ
 
-| 名前 | データ型 | 必須 | 説明 |
+| 名前 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | userName |string |はい |Twitter ハンドルです |
 | maxResults |整数 |いいえ |取得するツイートの最大数です (例: {maxResults:5}) |
 
 #### <a name="output-properties"></a>出力プロパティ
 
-| プロパティ名 | データ型 | 必須 | 説明 |
+| プロパティ名 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | TweetText |string |はい | |
 | TweetId |string |いいえ | |
@@ -213,17 +213,17 @@ Twitter 接続が作成され、アプリに追加されます。 これで、�
 | MediaUrls |配列 |いいえ | |
 
 ### <a name="hometimeline"></a>HomeTimeline
-ホームタイムラインの取得:最近のツイートを取得し、自分と自分のフォロワーに投稿をリツイートします
+ホーム タイムラインを取得する: 最近のツイートを取得し、自分と自分のフォロワーに投稿をリツイートします
 
 #### <a name="input-properties"></a>入力プロパティ
 
-| 名前 | データ型 | 必須 | 説明 |
+| 名前 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | maxResults |整数 |いいえ |取得するツイートの最大数です (例: {maxResults:5}) |
 
 #### <a name="output-properties"></a>出力プロパティ
 
-| プロパティ名 | データ型 | 必須 | 説明 |
+| プロパティ名 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | TweetText |string |はい | |
 | TweetId |string |いいえ | |
@@ -233,18 +233,18 @@ Twitter 接続が作成され、アプリに追加されます。 これで、�
 | MediaUrls |配列 |いいえ | |
 
 ### <a name="searchtweet"></a>SearchTweet
-検索ツイート:指定したクエリに一致する、関連するツイートのコレクションを取得します
+ツイートを検索する: 指定したクエリに一致する、関連するツイートのコレクションを取得します
 
 #### <a name="input-properties"></a>入力プロパティ
 
-| 名前 | データ型 | 必須 | 説明 |
+| 名前 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
-| searchQuery |string |はい |クエリ テキストです (Twitter でサポートされている任意のクエリ演算子を使用できます: http://www.twitter.com/search) |
+| searchQuery |string |はい |クエリ テキストです (Twitter でサポートされている任意のクエリ演算子を使用できます: https://www.twitter.com/search) |
 | maxResults |整数 |いいえ |取得するツイートの最大数です (例: {maxResults:5}) |
 
 #### <a name="output-properties"></a>出力プロパティ
 
-| プロパティ名 | データ型 | 必須 | 説明 |
+| プロパティ名 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | TweetText |string |はい | |
 | TweetId |string |いいえ | |
@@ -254,145 +254,145 @@ Twitter 接続が作成され、アプリに追加されます。 これで、�
 | MediaUrls |配列 |いいえ | |
 
 ### <a name="followers"></a>Followers
-フォロワーを取得します。指定したユーザーをフォローしているユーザーを取得します
+フォロワーを取得する: 指定したユーザーをフォローしているユーザーを取得します
 
 #### <a name="input-properties"></a>入力プロパティ
 
-| 名前 | データ型 | 必須 | 説明 |
+| 名前 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | userName |string |はい |ユーザーの Twitter ハンドルです |
 | maxResults |整数 |いいえ |取得するユーザーの最大数です (例: {maxResults:5}) |
 
 #### <a name="output-properties"></a>出力プロパティ
 
-| プロパティ名 | データ型 | 必須 | 説明 |
+| プロパティ名 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | FullName |string |はい | |
 | Location |string |はい | |
 | Id |整数 |いいえ | |
 | UserName |string |はい | |
 | FollowersCount |整数 |いいえ | |
-| 説明 |string |はい | |
+| Description |string |はい | |
 | StatusesCount |整数 |いいえ | |
 | FriendsCount |整数 |いいえ | |
 
 ### <a name="myfollowers"></a>MyFollowers
-自分のフォロワーを取得します。自分をフォローしているユーザーを取得します
+自分のフォロワーを取得する: 自分をフォローしているユーザーを取得します
 
 #### <a name="input-properties"></a>入力プロパティ
 
-| 名前 | データ型 | 必須 | 説明 |
+| 名前 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | maxResults |整数 |いいえ |取得するユーザーの最大数です (例: {maxResults:5}) |
 
 #### <a name="output-properties"></a>出力プロパティ
 
-| プロパティ名 | データ型 | 必須 | 説明 |
+| プロパティ名 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | FullName |string |はい | |
 | Location |string |はい | |
 | Id |整数 |いいえ | |
 | UserName |string |はい | |
 | FollowersCount |整数 |いいえ | |
-| 説明 |string |はい | |
+| Description |string |はい | |
 | StatusesCount |整数 |いいえ | |
 | FriendsCount |整数 |いいえ | |
 
 ### <a name="following"></a>Following
-次の情報を取得します。指定したユーザーがフォローしているユーザーを取得します
+フォローしているユーザーを取得する: 指定したユーザーがフォローしているユーザーを取得します
 
 #### <a name="input-properties"></a>入力プロパティ
 
-| 名前 | データ型 | 必須 | 説明 |
+| 名前 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | userName |string |はい |ユーザーの Twitter ハンドルです |
 | maxResults |整数 |いいえ |取得するユーザーの最大数です (例: {maxResults:5}) |
 
 #### <a name="output-properties"></a>出力プロパティ
 
-| プロパティ名 | データ型 | 必須 | 説明 |
+| プロパティ名 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | FullName |string |はい | |
 | Location |string |はい | |
 | Id |整数 |いいえ | |
 | UserName |string |はい | |
 | FollowersCount |整数 |いいえ | |
-| 説明 |string |はい | |
+| Description |string |はい | |
 | StatusesCount |整数 |いいえ | |
 | FriendsCount |整数 |いいえ | |
 
 ### <a name="myfollowing"></a>MyFollowing
-次の情報を取得します。自分がフォローしているユーザーを取得します
+自分がフォローしているユーザーを取得する: 自分がフォローしているユーザーを取得します
 
 #### <a name="input-properties"></a>入力プロパティ
 
-| 名前 | データ型 | 必須 | 説明 |
+| 名前 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | maxResults |整数 |いいえ |取得するユーザーの最大数です (例: {maxResults:5}) |
 
 #### <a name="output-properties"></a>出力プロパティ
 
-| プロパティ名 | データ型 | 必須 | 説明 |
+| プロパティ名 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | FullName |string |はい | |
 | Location |string |はい | |
 | Id |整数 |いいえ | |
 | UserName |string |はい | |
 | FollowersCount |整数 |いいえ | |
-| 説明 |string |はい | |
+| Description |string |はい | |
 | StatusesCount |整数 |いいえ | |
 | FriendsCount |整数 |いいえ | |
 
 ### <a name="user"></a>User
-ユーザーの取得:指定したユーザーに関する詳細情報を取得します (例: ユーザー名、説明、フォロワー数など)
+ユーザーを取得する: 指定したユーザーに関する詳細情報を取得します (例: ユーザー名、説明、フォロワー数など)
 
 #### <a name="input-properties"></a>入力プロパティ
 
-| 名前 | データ型 | 必須 | 説明 |
+| 名前 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | userName |string |はい |ユーザーの Twitter ハンドルです |
 
 #### <a name="output-properties"></a>出力プロパティ
 
-| プロパティ名 | データ型 | 必須 | 説明 |
+| プロパティ名 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | FullName |string |はい | |
 | Location |string |はい | |
 | Id |整数 |いいえ | |
 | UserName |string |はい | |
 | FollowersCount |整数 |いいえ | |
-| 説明 |string |はい | |
+| Description |string |はい | |
 | StatusesCount |整数 |いいえ | |
 | FriendsCount |整数 |いいえ | |
 
 ### <a name="tweet"></a>ツイートします
-新しいツイートを投稿します。ツイートします
+新しいツイートを投稿する: ツイートします
 
 #### <a name="input-properties"></a>入力プロパティ
 
-| 名前 | データ型 | 必須 | 説明 |
+| 名前 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | tweetText |string |いいえ |投稿するテキストです (例: {tweetText:"こんにちは"} |
 | body |string |いいえ |投稿するメディアです |
 
 #### <a name="output-properties"></a>出力プロパティ
 
-| プロパティ名 | データ型 | 必須 | 説明 |
+| プロパティ名 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | TweetId |string |はい | |
 
 ### <a name="onnewtweet"></a>OnNewTweet
-新しいツイートが表示された場合:検索クエリに一致するツイートが新しく投稿されたときに、ワークフローをトリガーします
+新しいツイートがあったときの処理: 検索クエリに一致するツイートが新しく投稿されたときに、ワークフローをトリガーします
 
 #### <a name="input-properties"></a>入力プロパティ
 
-| 名前 | データ型 | 必須 | 説明 |
+| 名前 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
-| searchQuery |string |はい |クエリ テキストです (Twitter でサポートされている任意のクエリ演算子を使用できます: http://www.twitter.com/search) |
+| searchQuery |string |はい |クエリ テキストです (Twitter でサポートされている任意のクエリ演算子を使用できます: https://www.twitter.com/search) |
 
 #### <a name="output-properties"></a>出力プロパティ
 
-| プロパティ名 | データ型 | 必須 | 説明 |
+| プロパティ名 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | 値 |配列 |いいえ | |
 

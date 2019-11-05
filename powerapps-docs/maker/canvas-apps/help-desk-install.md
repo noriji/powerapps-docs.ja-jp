@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6c9195bb9256c3d977300e61efe3f2cc88cfbf67
-ms.sourcegitcommit: 0e7bdaea83adaa15da4d5c9ddbcd0b2bcbee01df
+ms.openlocfilehash: dd5d8b8e6757b18feb5da03c503b19e689ca3efe
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73063396"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541244"
 ---
 # <a name="install-and-configure-the-help-desk-sample-in-powerapps"></a>PowerApps で Help Desk サンプルをインストールして構成する
 
@@ -40,7 +40,7 @@ PowerApps でキャンバス アプリ用の Help Desk サンプルをインス�
 
 ## <a name="prerequisites"></a>前提条件
 
-- PowerApps に[サインアップ](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。
+- PowerApps に[サインアップ](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。
 - 有効な SharePoint Online ライセンスと、リストを作成するアクセス許可を持っている必要があります。
 
 ## <a name="create-the-helpdesk-sharepoint-list"></a>HelpDesk (ヘルプデスク) SharePoint リストを作成する
@@ -140,11 +140,11 @@ PowerApps でキャンバス アプリ用の Help Desk サンプルをインス�
 
 ## <a name="download-the-app"></a>アプリをダウンロードする
 
-1.  PowerApps パッケージを[ダウンロード](http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip)し、コンピューターに保存します。
+1.  PowerApps パッケージを[ダウンロード](https://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip)し、コンピューターに保存します。
 
 ## <a name="create-connections"></a>接続を作成する
 
-1.  Web ブラウザーで [web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) に移動します。
+1.  Web ブラウザーで、 [make.powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)に移動します。
 2.  サインアップに使用したものと同じ資格情報でサインインします。
 3.  左側のメニューで **[データ]** 、 **[接続]** の順に選択します。
     
@@ -174,7 +174,7 @@ PowerApps でキャンバス アプリ用の Help Desk サンプルをインス�
 
 ## <a name="import-the-app"></a>アプリをインポートする
 
-1. Web ブラウザーで、 https://web.powerapps.com に移動します。
+1. Web ブラウザーで、 https://make.powerapps.com に移動します。
 2. サインアップに使用したものと同じ資格情報でサインインします。
 3. 左側のメニューで **[アプリ]** を選択します。 
 4. **[パッケージのインポート (プレビュー)]** をクリックします。

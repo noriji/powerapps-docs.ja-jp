@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 2a1696437f434063b4297df220f1cb406bc993f8
-ms.sourcegitcommit: 98f6ce1531e69e2aae1000eda7548434d77cafe0
+ms.openlocfilehash: 69d29136f5184ed50be6380ee1a91847d4506d6a
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142618"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541194"
 ---
 # <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>キャンバス アプリのシステム要件、制限、構成値
 このトピックには、PowerApps についての、デバイス プラットフォーム、Web ブラウザーの要件、制限と構成値が含まれています。
@@ -98,10 +98,10 @@ PowerApps からの要求では、アプリが存在する[環境](../../adminis
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph-ユーザー情報を取得する場合 (例: プロファイル写真) |
 | gallery.azure.com |https |サンプルおよびテンプレート アプリ |
 | \*。 azure-apim.net |https |API のハブ - ロケールごとに異なるサブドメイン |
-| \*。 powerapps.com |https | create.powerapps.com、make.powerapps.com、content.powerapps.com、および web.powerapps.com |
-| \*。 azureedge.net |https | create.powerapps.com、make.powerapps.com、content.powerapps.com、および web.powerapps.com |
+| \*。 powerapps.com |https | create.powerapps.com、make.powerapps.com、content.powerapps.com、および make.powerapps.com |
+| \*。 azureedge.net |https | create.powerapps.com、make.powerapps.com、content.powerapps.com、および make.powerapps.com |
 | \*。 blob.core.windows.net |https | Blob Storage |
-| \*。 flow.microsoft.com | https | create.powerapps.com、make.powerapps.com、content.powerapps.com、および web.powerapps.com |
+| \*。 flow.microsoft.com | https | create.powerapps.com、make.powerapps.com、content.powerapps.com、および make.powerapps.com |
 | *. dynamics.com | https | Common Data Service |
 | vortex.data.microsoft.com |https |製品利用統計情報 |
 | localhost | https | PowerApps Mobile

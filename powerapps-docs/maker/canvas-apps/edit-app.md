@@ -13,18 +13,18 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ecbe46f28d7be215a5ec9d8efecebde5dc4656d4
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 71cb3318ceb83b5c18ebce621a07be08fc60e9c8
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71993013"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536989"
 ---
 # <a name="edit-a-canvas-app-in-powerapps"></a>PowerApps でキャンバス アプリを編集する
 自分で作成したキャンバス アプリ、所有しているキャンバス アプリ、または "**編集可能**" アクセス許可を持っているキャンバス アプリを編集できます。 アプリは PowerApps Studio で編集することができます。 別の場所で編集するために開かれているアプリを編集しようとすると、自分または別のユーザーがそのアプリを既に開いているという通知メッセージが表示されます。
 
 ## <a name="verify-your-permissions"></a>アクセス許可の確認
-1. [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) にサインインし、 **[ファイル]** メニュー (左端) の **[アプリ]** をクリックまたはタップします。
+1. [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) にサインインし、 **[ファイル]** メニュー (左端) の **[アプリ]** をクリックまたはタップします。
    
     ![[ファイル] メニューの [アプリ] オプション](./media/edit-app/file-apps.png)
 

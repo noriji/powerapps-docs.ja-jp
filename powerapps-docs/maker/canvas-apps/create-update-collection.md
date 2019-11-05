@@ -13,20 +13,20 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 375c4f19ed7715eed662c8456c539d5590c9f1ec
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 1c930c233f96a481700748960f90d731be397af0
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71993216"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73540337"
 ---
 # <a name="create-and-update-a-collection-in-a-canvas-app"></a>キャンバスアプリでのコレクションの作成と更新
 
-コレクションを使用して、ユーザーがアプリで管理できるデータを格納します。 コレクションは、製品リスト内の製品など、類似した項目のグループです。 コレクションなどのさまざまな種類の変数の詳細については、次を参照してください。[キャンバスアプリの変数につい](working-with-variables.md)て説明します。
+コレクションを使用して、ユーザーがアプリで管理できるデータを格納します。 コレクションは、製品リスト内の製品など、類似した項目のグループです。 コレクションなどのさまざまな種類の変数の詳細については[、「キャンバスアプリ変数](working-with-variables.md)について」を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
-- PowerApps に[サインアップ](../signup-for-powerapps.md)し、サインアップに使用したのと同じ資格情報を入力して[サインイン](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)します。
+- PowerApps に[サインアップ](../signup-for-powerapps.md)し、サインアップに使用したのと同じ資格情報を入力して[サインイン](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)します。
 - PowerApps で、アプリを作成するか既存のアプリを開きます。
 - PowerApps で[コントロールを構成する](add-configure-controls.md)方法について確認します。
 
@@ -128,7 +128,7 @@ ms.locfileid: "71993216"
 
 1. optional作成したコレクションをプレビューするには、 **[ファイル]** メニューの **[コレクション]** を選択します。
 
-SharePoint リストのデータ (日付、選択肢、people など) をギャラリーに表示する方法については、次を参照してください。[ギャラリーにリスト列を表示](connections/connection-sharepoint-online.md#show-list-columns-in-a-gallery)します。 フォームにデータを表示する方法 (ドロップダウンリスト、日付のピッカー、および people ピッカー) については、次を参照してください。[フォームコントロールと表示フォームコントロールを編集](controls/control-form-detail.md)します。
+SharePoint リストのデータ (日付、選択肢、people など) をギャラリーに表示する方法の詳細については[、「ギャラリーでリスト列を表示する」](connections/connection-sharepoint-online.md#show-list-columns-in-a-gallery)を参照してください。 フォームにデータを表示する方法 (ドロップダウンリスト、日付のピッカー、および people ピッカー) については、「[フォームコントロールと表示フォームコントロールを編集](controls/control-form-detail.md)する」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 

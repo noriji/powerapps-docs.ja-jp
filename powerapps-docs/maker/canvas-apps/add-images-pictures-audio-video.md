@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b544b03fbe181265599bab520eddc2a2a646c477
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 78f091705a01a54b7e6eb008630949796ffac453
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71994356"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541178"
 ---
 # <a name="using-multimedia-files-in-powerapps"></a>PowerApps でマルチ メディア ファイルを使用する
 
@@ -26,7 +26,7 @@ ms.locfileid: "71994356"
 
 ## <a name="prerequisites"></a>前提条件
 
-PowerApps に[サインアップ](../signup-for-powerapps.md)し、サインアップに使用したのと同じ資格情報で[サインイン](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)します。
+PowerApps に[サインアップ](../signup-for-powerapps.md)し、サインアップに使用したのと同じ資格情報で[サインイン](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)します。
 
 ## <a name="add-media-from-a-file-or-the-cloud"></a>ファイルまたはクラウドからメディアを追加する
 
@@ -78,12 +78,12 @@ PowerApps に[サインアップ](../signup-for-powerapps.md)し、サインア�
 ## <a name="add-images-from-the-cloud-to-your-app"></a>クラウドからアプリにイメージを追加する
 このシナリオでは、クラウド ストレージ アカウントの OneDrive for Business にイメージを保存します。 Excel テーブルを使用して、イメージのパスを格納し、アプリのギャラリー コントロールにイメージを表示します。
 
-このシナリオでは、いくつかの .jpeg ファイルを格納している [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) を使用します。
+このシナリオでは、いくつかの .jpeg ファイルを格納している [CreateFirstApp.zip](https://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) を使用します。
 
 > [!NOTE]
 > Excel ファイル内のこれらのイメージのパスでは、スラッシュを使用する必要があります。 PowerApps で Excel テーブルにイメージのパスを保存すると、パスに円記号が使われます。 このようなテーブルからのイメージのパスを使用する場合は、Excel テーブル内のパスを円記号ではなくスラッシュを使用するように変更します。 そうしないと、イメージは表示されません。  
 
-1. [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) をダウンロードし、**Assets** フォルダーをクラウド ストレージ アカウントに抽出します。
+1. [CreateFirstApp.zip](https://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) をダウンロードし、**Assets** フォルダーをクラウド ストレージ アカウントに抽出します。
 
 2. **Assets** フォルダーの名前を **Assets_images** に変更します。
 
@@ -101,11 +101,11 @@ PowerApps に[サインアップ](../signup-for-powerapps.md)し、サインア�
 
     ギャラリーがそれらの画像で自動的に更新されます。  
 
-    ![ジャケット イメージ](./media/add-images-pictures-audio-video/images.png)
+    ![ジャケット画像](./media/add-images-pictures-audio-video/images.png)
 
     **Items** プロパティを設定すると、 **[PowerAppsId]** という名前の列が Excel テーブルに自動的に追加されます。
 
-    Excel テーブル内のイメージのパスは、イメージの URL にすることもできます。 例として、[Flooring Estimates](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) サンプル ファイルがあります。 クラウド ストレージ アカウントにそれをダウンロードして、`FlooringEstimates` テーブルをデータ ソースとして、アプリに追加し、ギャラリー コントロールを `FlooringEstimates` に設定できます。 ギャラリーは自動的にイメージで更新されます。
+    Excel テーブル内の画像のパスは、URL になっていてもかまいません。 例として、[Flooring Estimates](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) サンプル ファイルがあります。 クラウド ストレージ アカウントにそれをダウンロードして、`FlooringEstimates` テーブルをデータ ソースとして、アプリに追加し、ギャラリー コントロールを `FlooringEstimates` に設定できます。 ギャラリーは自動的にイメージで更新されます。
 
 ## <a name="upload-pen-drawings-to-the-cloud"></a>ペン画をクラウドにアップロードする
 このシナリオでは、データ ソース OneDrive for Business にペン画をアップロードする方法を説明し、ペン画をそこに格納する方法を確認します。
@@ -122,7 +122,7 @@ PowerApps に[サインアップ](../signup-for-powerapps.md)し、サインア�
 
        ![テーブルの作成](./media/add-images-pictures-audio-video/create-table.png)
 
-       Excel ファイルは、現在表形式です。 Excel の表の書式設定の詳細については、「[Excel のテーブルの書式を設定する](https://support.office.com/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370)」を参照してください。
+       Excel ファイルがテーブル形式になりました。 Excel の表の書式設定の詳細については、「[Excel のテーブルの書式を設定する](https://support.office.com/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370)」を参照してください。
 
    4. テーブルに、**Drawings** と名前を付けます。
 
@@ -170,11 +170,11 @@ PowerApps に[サインアップ](../signup-for-powerapps.md)し、サインア�
 
 11. MyPen で何かを描画し、ボタンを選択します。
 
-    ギャラリー コントロールの最初のイメージに、描画したものが表示されます。
+    ギャラリー コントロールの最初の画像に、描画したものが表示されます。
 
 12. 他の何かを絵に追加して、ボタンを選択します。
 
-    ギャラリー コントロールの 2 番目のイメージに、描画したものが表示されます。
+    ギャラリー コントロールの 2 番目の画像に、描画したものが表示されます。
 
 13. Esc キーを押して、プレビュー ウィンドウを閉じます。
 

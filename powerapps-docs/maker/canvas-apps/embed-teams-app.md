@@ -13,14 +13,14 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 42075fbaee40ec98bec0d47e6bfd3c00dc6f9ef6
-ms.sourcegitcommit: 8185f87dddf05ee256491feab9873e9143535e02
+ms.openlocfilehash: e2cce61533bf86063d907882024a5a83c2e03fb7
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73182495"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73538992"
 ---
-# <a name="embed-an-app-in-teams"></a>チームへのアプリの埋め込み
+# <a name="embed-an-app-in-teams"></a>Teams にアプリを埋め込む
 
 作成した PowerApps は、Microsoft Teams に直接埋め込むことによって共有できます。 完了すると、ユーザーは [ **+** ] を選択して、チーム内**のチームチャネル**または会話にアプリを追加できます。 アプリは、**チームのタブ**の下にタイルとして表示されます。
 
@@ -36,7 +36,7 @@ ms.locfileid: "73182495"
 
 ## <a name="download-the-app"></a>アプリをダウンロードする
 
-1. [Web.powerapps.com](https://web.powerapps.com)にサインインし、メニューの **[アプリ]** を選択します。
+1. [Make.powerapps.com](https://make.powerapps.com)にサインインし、メニューの **[アプリ]** を選択します。
 
     ![アプリの一覧を表示する](./media/embed-teams-app/file-apps2.png "アプリの一覧を表示する")
 

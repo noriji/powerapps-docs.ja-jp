@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d0a7a164210fcfd9593455f825092417bd31a692
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 81426f24eea958b40f6d03da787a729603ec6f7f
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71983652"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73537024"
 ---
 # <a name="create-a-canvas-app-from-scratch-based-on-excel-data"></a>Excel データを基にして最初からキャンバス アプリを作成する
 
@@ -43,16 +43,14 @@ Excel データを基にしてテーブルとして書式設定された独自�
 
     詳細については、「[Excel でテーブルを書式設定する](how-to-excel-tips.md)」をご覧ください。
 
-
-3. ファイルを **eventsignup.xlsx** という名前で保存してから、ファイルを閉じ、OneDrive などの[クラウド ストレージ アカウント](connections/cloud-storage-blob-connections.md)にアップロードします。
-
+3. ファイルを「 **eventsignup .xlsx**」という名前で保存し、閉じてから、OneDrive などの[クラウドストレージアカウント](connections/cloud-storage-blob-connections.md)にアップロードします。
 
 > [!IMPORTANT]
 > 独自の Excel ファイルを使って、このチュートリアルの一般的な概念だけを確認できます。 ただし、Excel ファイル内のデータは、テーブルとして書式設定されている必要があります。 詳細については、「[Excel でテーブルを書式設定する](how-to-excel-tips.md)」をご覧ください。
 
 ## <a name="open-a-blank-app"></a>空のアプリを開く
 
-1. [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) にサインインします。
+1. [PowerApps にサインインします](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。
 
 1. **[自分のアプリを作成する]** で **[キャンバス アプリを一から作成]** を選択します。
 
@@ -131,9 +129,7 @@ Excel データを基にしてテーブルとして書式設定された独自�
 
 1. 右側のウィンドウの **[プロパティ]** タブで **[フィールド]** ラベルの横の **[編集]** を選択します。
 
-
-1. **[Title2]** ボックスに、**Volunteer** 、**[Subtitle2]** ボックスに、**StartDay**、**[Body1]** ボックスに、**StartTime**を選択します。
-
+1. **[Title2]** ボックスで、 **[ボランティア]** を選択し、 **[Subtitle2]** ボックスで **[Startday]** を選択し、 **[Body1]** ボックスで **[StartTime]** を選択します。
 
 1. **[データ]** ウィンドウの右上隅の閉じるアイコン (X) を選択してそれを閉じます。
 

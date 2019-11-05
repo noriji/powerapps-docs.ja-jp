@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 8b7b718564ec62d9a7fa2ca78d52727831635c1c
-ms.sourcegitcommit: dd74c98f48587730466e6669fc94da250d5c631e
+ms.openlocfilehash: 2c1cce350c394d2809de4c3354b7b471af987236
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2019
-ms.locfileid: "66224950"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541404"
 ---
 # <a name="how-to-link-sharepoint-lists-using-a-lookup-field-in-powerapps"></a>PowerApps でルックアップ フィールドを使用して SharePoint リストをリンクする方法
 
@@ -96,7 +96,7 @@ SharePoint には、次の 2 種類のルックアップ フィールドがあ�
 ## <a name="create-an-app-from-the-assets-list"></a>Assets リストからアプリを作成する
 このアプリを使用して **Assets** リストにデータを追加します。
 
-1. [PowerApps Studio にサインインします](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。 PowerApps を初めて利用する場合は、組織の電子メール アドレスを使って[無料でサインアップします](https://powerapps.microsoft.com)。
+1. [PowerApps Studio にサインインします](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。 PowerApps を初めて利用する場合は、組織の電子メール アドレスを使って[無料でサインアップします](https://powerapps.microsoft.com)。
 
 2. **[ファイル]** メニュー (画面左側) の **[新規]** をクリックまたはタップし、 **[SharePoint]** をクリックまたはタップします。
 

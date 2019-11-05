@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 2ce09240aa30c1f98926fb109a57f63c230e8d4b
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 420728d60555c3aeaf5fd5e844a900d412b0c3ef
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71987649"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73540963"
 ---
 # <a name="add-a-data-connection-to-a-canvas-app-in-powerapps"></a>PowerApps でキャンバス アプリにデータ接続を追加する
 
@@ -33,7 +33,7 @@ PowerApps で、既存のキャンバス アプリまたはゼロから作成す
 
 ## <a name="prerequisites"></a>前提条件
 
-PowerApps に[サインアップ](../signup-for-powerapps.md)し、サインアップに使用したのと同じ資格情報を入力して[サインイン](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)します。
+PowerApps に[サインアップ](../signup-for-powerapps.md)し、サインアップに使用したのと同じ資格情報を入力して[サインイン](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)します。
 
 ## <a name="open-a-blank-app"></a>空のアプリを開く
 
@@ -47,7 +47,7 @@ PowerApps に[サインアップ](../signup-for-powerapps.md)し、サインア�
 
 1. 中央のペインで、 **[データに接続]** を選択して**データ**ペインを開きます。
 
-    これが既存のアプリで、画面に既にコントロールが含まれている場合は、[ > **データソース**を**表示**] を選択して同じウィンドウを開きます。
+    これが既存のアプリで、画面に既にコントロールが含まれている場合は、[**データソース**の > **表示**] を選択して同じウィンドウを開きます。
 
 1. **[データソースの追加]** を選択します。
 

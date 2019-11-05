@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 22260480d24cea999128f3c85cdf99e839d5f740
-ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
+ms.openlocfilehash: c78057118a1546c781ea813552650045ab357321
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025914"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541355"
 ---
 # <a name="share-a-canvas-app-in-powerapps"></a>PowerApps でのキャンバス アプリの共有
 
@@ -37,7 +37,7 @@ ms.locfileid: "73025914"
 
 ## <a name="share-an-app"></a>アプリを共有する
 
-1. PowerApps に[サインイン](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)し、左端近くにある **[アプリ]** を選びます。
+1. PowerApps に[サインイン](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)し、左端近くにある **[アプリ]** を選びます。
 
     ![アプリの一覧を表示する](./media/share-app/file-apps.png)
 
@@ -79,7 +79,7 @@ ms.locfileid: "73025914"
 
 1. 共有 パネルの下部にある **共有** を選択します。
 
-    アプリを共有したすべてのユーザーは、モバイルデバイスの PowerApps Mobile またはブラウザーで[Dynamics 365](https://home.dynamics.com)の appsource で実行できます。 共同所有者は、 [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)でアプリを編集および共有できます。
+    アプリを共有したすべてのユーザーは、モバイルデバイスの PowerApps Mobile またはブラウザーで[Dynamics 365](https://home.dynamics.com)の appsource で実行できます。 共同所有者は、 [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)でアプリを編集および共有できます。
 
     電子メールの招待状を送信した場合、アプリを共有した相手は全員、招待内のリンクを選択することで実行できます。
 
@@ -125,11 +125,7 @@ Common Data Service に基づいてアプリを作成する場合は、アプリ
 以前のバージョンの Common Data Service に基づくアプリを共有する場合は、ランタイムアクセス許可をサービスに個別に共有する必要があります。 この操作を行うためのアクセス許可がない場合は、環境管理者に問い合わせてください。
 
 ## <a name="share-with-guests"></a>ゲストと共有する
-
-> [!IMPORTANT]
-> - プレビュー機能は、運用環境で使用するためのものではなく、機能が制限されている可能性があります。 これらの機能は、お客様が機能にいち早くアクセスして、フィードバックをお送りいただけるように、正式なリリースの前に利用できるようになっています。 
-> - プレビュー機能のサポートは Microsoft サポートによって制限されており、選択した地域でのみ使用できます。 
-
+ 
 PowerApps キャンバスアプリは、Azure Active Directory テナントのゲストユーザーと共有できます。 これにより、外部のビジネスパートナー、請負業者、およびサードパーティが会社のキャンバスアプリを実行するための招待を行うことができます。 
 
 > [!NOTE]
@@ -190,7 +186,7 @@ PowerApps キャンバスアプリは、Azure Active Directory テナントの�
 > [!div class="mx-imgBorder"]  
 > ![ゲストの SharePoint にキャンバスアプリを埋め込む](media/share-app/guest_access_doc_5.PNG "ゲストの SharePoint にキャンバスアプリを埋め込む")
 
-IFrame HTML タグを使用して SharePoint にキャンバスアプリを埋め込む場合は、完全な web URL を使用してアプリを参照します。 URL を検索するには、[http://make.powerapps.com ] にアクセスしてアプリを選択し、 **[詳細]** タブを選択します。 **[Web リンク]** の下に url が表示されます。
+IFrame HTML タグを使用して SharePoint にキャンバスアプリを埋め込む場合は、完全な web URL を使用してアプリを参照します。 URL を検索するには、[https://make.powerapps.com ] にアクセスしてアプリを選択し、 **[詳細]** タブを選択します。 **[Web リンク]** の下に url が表示されます。
 
 > [!div class="mx-imgBorder"]  
 > ![キャンバスアプリの詳細](media/share-app/guest_access_doc_6.PNG "キャンバスアプリの詳細")
@@ -199,7 +195,7 @@ IFrame HTML タグを使用して SharePoint にキャンバスアプリを埋�
 ゲスト以外の場合と同様に、アプリによってアクセスされる基になるデータソースもゲストにアクセスできるようにする必要があります。
 
 #### <a name="what-license-must-be-assigned-to-my-guest-so-they-can-run-an-app-shared-with-them"></a>ゲストに割り当てられているアプリを実行できるようにするには、どのライセンスを割り当てる必要がありますか。
-ゲスト以外がアプリを実行するために必要なものと同じライセンス。 たとえば、アプリが premium の登録を使用していない場合、PowerApps P1 ライセンスはゲストに割り当てるのに十分です。  
+ゲスト以外がアプリを実行するために必要なものと同じライセンス。 たとえば、アプリでプレミアム接続が使用されている場合、アプリプランごとの PowerApps またはユーザープランごとの PowerApps がゲストに割り当てられている必要があります。  
 
 |                                 | SharePoint カスタマイズフォーム | Premium 以外のコネクタを使用するスタンドアロンキャンバスアプリ | Premium コネクタを使用したスタンドアロンのキャンバスアプリ | モデル駆動型アプリ |
 |---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|

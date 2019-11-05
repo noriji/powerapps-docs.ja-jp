@@ -13,21 +13,21 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 758d986660137d4e513919911589cbbc0dc304a2
-ms.sourcegitcommit: 7016ff837eff2cb0985fc71edab95cbf99335677
+ms.openlocfilehash: 8456e82cfd2680fcbb722c8b4b2b5b32ef73dbde
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71160163"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73540291"
 ---
 # <a name="container-control-in-powerapps-experimental"></a>PowerApps のコンテナーコントロール (試験段階)
 階層を作成する機能を提供します。
 
 > [!IMPORTANT]
 > これは試験的な機能です。 試験的な機能は大幅に変更されたり、いつでもまったく表示されなくなったりする可能性があります。
-> 詳細については、「 [PowerApps の実験的およびプレビュー機能に](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-experimental-preview)ついて」を参照してください。
+> 詳細については、「 [PowerApps の実験的およびプレビュー機能に](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview)ついて」を参照してください。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
  コンテナーは、一連のコントロールを保持し、独自のプロパティを持つことができます。 
 
 空のコンテナーを挿入してから、コントロールを追加し、サイズを変更し、移動し、非表示にし、その他の変更を加えることによって、コンテナーをカスタマイズすることができます。 また、さまざまなコントロールから開始し、それらを選択してコンテナーに追加することもできます。これを行うには、ツリービューのコンテキストメニューを使用するか、キャンバスを右クリックします。 

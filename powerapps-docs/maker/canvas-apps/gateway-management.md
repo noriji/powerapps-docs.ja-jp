@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 90a0bd777e808bb3aaab10b249d4fd765fbad654
-ms.sourcegitcommit: 6984ce43cc5653ccb957219d2a687907ebb5520c
+ms.openlocfilehash: 54d8fb369cb63721de16c5bf280660dbd15796b5
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72560918"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541287"
 ---
 # <a name="manage-an-on-premises-data-gateway-in-powerapps"></a>PowerApps でのオンプレミス データ ゲートウェイの管理
 
@@ -46,7 +46,7 @@ ms.locfileid: "72560918"
 
 ## <a name="view-and-manage-gateway-permissions"></a>ゲートウェイ アクセス許可の表示と管理
 
-1. [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) の左側のナビゲーション バーで、 **[ゲートウェイ]** をクリックまたはタップし、ゲートウェイをクリックまたはタップします。
+1. [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) の左側のナビゲーション バーで、 **[ゲートウェイ]** をクリックまたはタップし、ゲートウェイをクリックまたはタップします。
 
 2. **[ユーザー]** をクリックまたはタップしてユーザーまたはグループを指定し、権限レベルを指定してゲートウェイにユーザーを追加します。
 
@@ -58,7 +58,7 @@ ms.locfileid: "72560918"
 
 ## <a name="view-and-manage-gateway-connections"></a>ゲートウェイ接続の表示と管理
 
-1. [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) の左側のナビゲーション バーで、 **[ゲートウェイ]** をクリックまたはタップし、ゲートウェイをクリックまたはタップします。
+1. [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) の左側のナビゲーション バーで、 **[ゲートウェイ]** をクリックまたはタップし、ゲートウェイをクリックまたはタップします。
 
 2. **[接続]** をクリックまたはタップし、詳細の表示、設定の編集、または接続の削除を行います。
 

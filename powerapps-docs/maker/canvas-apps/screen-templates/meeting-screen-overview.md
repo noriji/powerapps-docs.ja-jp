@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c53857acfdcb44faa26b2ec3e04b904e25c09aee
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 2b300b0d90803ae08aaf262dde5642f4d448c05f
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71995659"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541433"
 ---
 # <a name="overview-of-the-meeting-screen-template-for-canvas-apps"></a>キャンバスアプリのミーティング画面テンプレートの概要
 
@@ -38,7 +38,7 @@ ms.locfileid: "71995659"
 
 テンプレートからミーティング画面を追加するには、次のようにします。
 
-1. PowerApps に[サインイン](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)し、PowerApps Studio でアプリを作成するか、既存のアプリを開きます。
+1. PowerApps に[サインイン](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)し、PowerApps Studio でアプリを作成するか、既存のアプリを開きます。
 
     このトピックでは phone アプリについて説明しますが、同じ概念がタブレットアプリにも当てはまります。
 

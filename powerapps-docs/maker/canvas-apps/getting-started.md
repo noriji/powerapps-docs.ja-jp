@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a104638ad365ae58a1c3b8c5fbd0c7fef5b2b792
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 8b352cb4a30c090d01b2ec1b34fa8ba119265204
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71990167"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541261"
 ---
 # <a name="what-are-canvas-apps-in-powerapps"></a>PowerApps のキャンバス アプリとは
 C# などの従来のプログラミング言語でコードを記述することなく、Microsoft PowerApps のキャンバスからビジネス アプリを設計して構築します。 PowerPoint のスライドを設計する場合と同じように、要素をキャンバスにドラッグ アンド ドロップして、アプリを設計します。 ロジックを指定し、データを処理するための Excel のような式を作成します。 [Microsoft とサード パーティのさまざまなソース](connections-list.md)からビジネス データを統合するアプリを構築します。 アプリを共有して、ユーザーがブラウザーやモバイル デバイスで実行できるようにします。また、アプリを埋め込んで、ユーザーが SharePoint、Power BI、Teams で実行できるようにします。
@@ -33,7 +33,7 @@ C# などの従来のプログラミング言語でコードを記述するこ�
 - [SharePoint](app-from-sharepoint.md)
 - [Excel](get-started-create-from-data.md)
 
-PowerApps に[サインイン](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)してから、 **[Start from data]\(データから開始\)** または **Service Desk** や **Budget Tracker** などのサンプル アプリを選びます。
+PowerApps に[サインイン](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)してから、 **[Start from data]\(データから開始\)** または **Service Desk** や **Budget Tracker** などのサンプル アプリを選びます。
 
 ![PowerApps サイト](./media/getting-started/create-page-samples.png)
 
@@ -58,5 +58,5 @@ PowerApps に[サインイン](https://web.powerapps.com?utm_source=padocs&utm_m
 
 ## <a name="next-steps"></a>次の手順
 - [無料ライセンスにサインアップします。](../signup-for-powerapps.md)
-- [PowerApps にサインインします。](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+- [PowerApps にサインインします。](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 - [サンプル アプリを開きます。](open-and-run-a-sample-app.md)

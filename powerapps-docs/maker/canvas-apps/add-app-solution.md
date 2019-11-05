@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c908e3d25530b52b103ef58989545e46b931e791
-ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
+ms.openlocfilehash: 0748f78665b389d57989c9170ca21077721f6633
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "71987701"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73540997"
 ---
 # <a name="create-a-canvas-app-from-within-a-solution"></a>ソリューション内からキャンバスアプリを作成する
 
@@ -34,7 +34,7 @@ ms.locfileid: "71987701"
 
 アプリを作成する、またはアプリをリンクするソリューションが既にある場合は、この手順を省略できます。
 
-1. PowerApps に[サインイン](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)し、必要に応じて適切な環境に切り替えます。
+1. PowerApps に[サインイン](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)し、必要に応じて適切な環境に切り替えます。
 
     - ソリューション内からアプリを作成する場合は、Common Data Service データベースを含む任意の環境に切り替えます。
     - 既存のアプリをソリューションにリンクする場合は、そのアプリを含む環境に切り替えます。
@@ -65,7 +65,7 @@ ms.locfileid: "71987701"
 
 ソリューション内から空のキャンバスアプリを作成できます。 3画面アプリを自動的に生成したり、ソリューション内からテンプレートやサンプルアプリをカスタマイズしたりすることはできません。
 
-1. PowerApps に[サインイン](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)します。
+1. PowerApps に[サインイン](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)します。
 
 1. 必要に応じて、キャンバスアプリを作成するソリューションを含む環境に切り替えます。
 
@@ -96,7 +96,7 @@ ms.locfileid: "71987701"
 
 アプリをソリューションにリンクする場合は、両方が同じ環境に存在し、アプリがソリューション内から作成されている必要があります。
 
-1. PowerApps に[サインイン](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)します。
+1. PowerApps に[サインイン](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)します。
 
 1. 必要に応じて、アプリをリンクするソリューションを含む環境に切り替えます。
 

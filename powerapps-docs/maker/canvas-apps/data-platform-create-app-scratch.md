@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c058e5f5710c090c39c2971974d57aacd40923a8
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: bec8524ac6afc265eba5d9a6edf381c5ebf2c340
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71986014"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73540382"
 ---
 # <a name="create-a-canvas-app-from-scratch-using-common-data-service"></a>Common Data Service を使用してキャンバス アプリを最初から作成する
 
@@ -34,7 +34,7 @@ Common Data Service からアプリを構築する場合、SharePoint、Dynamics
 
 ## <a name="open-a-blank-app"></a>空のアプリを開く
 
-1. [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) にサインインします。
+1. [PowerApps にサインインします](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。
 
 1. **[自分のアプリを作成する]** で **[キャンバス アプリを一から作成]** を選択します。
 
@@ -97,14 +97,14 @@ Common Data Service からアプリを構築する場合、SharePoint、Dynamics
 1. **[フィールドの追加]** を選択し、次のフィールドのチェックボックスをオンにします。
 
     - **アカウント名**
-    - **住所 1: 番地 1**
+    - **住所 1: 番地1**
     - **住所 1: 市区町村**
     - **住所 1: 郵便番号**
     - **従業員数**
     - **年間売上高**
 
     > [!NOTE]
-    > このシナリオ以外では、カスタムフィールドを作成するには、 **[新しいフィールド]** を選択し、必要な情報を入力して、 **[完了]** を選択します。 詳細情報:[フィールドを作成](../common-data-service/create-edit-field-portal.md#create-a-field)します。<br><br>![](media/data-platform-create-app-scratch/choose-or-add-fields.png "フィールドを選択して追加する")
+    > このシナリオ以外では、カスタムフィールドを作成するには、 **[新しいフィールド]** を選択し、必要な情報を入力して、 **[完了]** を選択します。 詳細については[、「フィールドを作成する」を](../common-data-service/create-edit-field-portal.md#create-a-field)参照してください。<br><br>![](media/data-platform-create-app-scratch/choose-or-add-fields.png "Select and add a field")
 
 1. **[追加]** を選択します。
 

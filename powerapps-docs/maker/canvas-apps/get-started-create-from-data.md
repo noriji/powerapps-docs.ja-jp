@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 576e61e6e4ea1aad317fdec8f49f76bfcd1e0b6a
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: cb1757da9a5b0a99dad22a43ac844b192651f6df
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71990261"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541305"
 ---
 # <a name="generate-a-canvas-app-from-excel-in-powerapps"></a>PowerApps で Excel からキャンバス アプリを生成する
 
@@ -37,7 +37,7 @@ PowerApps のライセンスを持っていない場合は、[無料でサイン
 
 ## <a name="generate-the-app"></a>アプリを生成する
 
-1. [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) にサインインします。
+1. [PowerApps にサインインします](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。
 
 1. **[Make your own app]\(独自アプリの作成\)** の下の **[Start from data]\(データから開始\)** にポインターを合わせ、 **[このアプリの作成]** を選択します。
 
@@ -112,4 +112,4 @@ PowerApps のライセンスを持っていない場合は、[無料でサイン
 ニーズに合わせて既定のブラウザー画面をカスタマイズします。 たとえば、カテゴリや概要ではなく、製品名のみで一覧を並べ替えることができます。
 
 > [!div class="nextstepaction"]
-> [既定のブラウザー画面のカスタマイズ](customize-layout-sharepoint.md).
+> [既定のブラウザー画面をカスタマイズします](customize-layout-sharepoint.md)。

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ba852093da05c3fa69cc47b219a0bef65908c170
-ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
+ms.openlocfilehash: 13219dad84e693582ee649a11013d78b6fc69544
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "71992629"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73538921"
 ---
 # <a name="json-function-in-powerapps"></a>PowerApps の JSON 関数
 
@@ -26,7 +26,7 @@ ms.locfileid: "71992629"
 
 ## <a name="description"></a>Description
 
-**Json**関数は、データ構造の JAVASCRIPT OBJECT NOTATION (json) 表現をテキストとして返します。これにより、ネットワーク上での格納や転送に適しています。 [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)および[IETF RFC 8259](https://tools.ietf.org/html/rfc8259)では、JavaScript やその他のプログラミング言語で広く使用されている形式について説明しています。
+**Json**関数は、データ構造の JAVASCRIPT OBJECT NOTATION (json) 表現をテキストとして返します。これにより、ネットワーク上での格納や転送に適しています。 [ECMA-404](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)および[IETF RFC 8259](https://tools.ietf.org/html/rfc8259)では、JavaScript やその他のプログラミング言語で広く使用されている形式について説明しています。
 
 キャンバスアプリは、次の表に示す[データ型](data-types.md)をサポートしており、テキスト表現の詳細が示されています。
 

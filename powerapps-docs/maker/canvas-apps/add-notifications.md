@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 22dfcb085c2de4aabd849e0a1fedc8a231f0e55f
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 4a72fc689fa9b4d7d84f554745e5a04ee2812b70
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71987366"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541144"
 ---
 # <a name="send-a-push-notification-in-powerapps"></a>PowerApps でプッシュ通知を送信する
 プッシュ通知は、主にアプリのユーザーに注意を促したり、ユーザーが重要なタスクを優先したりできるようにするため、コンシューマー向けおよびビジネス向けのシナリオにおいてモバイル アプリで使用されます。 PowerApps では PowerApps Notification コネクタを使用して通知を送信できます。 PowerApps で作成したすべてのアプリに、ネイティブのプッシュ通知を送信できます。 通知の種類は今後追加される予定です。
@@ -60,7 +60,7 @@ ms.locfileid: "71987366"
 ## <a name="send-a-notification-from-an-app"></a>アプリから通知を送信する
 プッシュ通知は別のアプリにも、同じアプリにも送信できます。
 
-1. [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) で、プッシュ通知を送信するアプリに移動します。
+1. [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) で、プッシュ通知を送信するアプリに移動します。
 2. **[詳細]** タブで、そのアプリの **[アプリ ID]** をコピーします。
 
     ![アプリ ID を取得する](./media/add-notifications/grab-id.png)
@@ -98,13 +98,13 @@ ms.locfileid: "71987366"
 
 ## <a name="syntax"></a>構文
 
-| 名前 | 説明 |
+| 名前 | Description |
 | --- | --- |
 | SendPushNotification |通知の接続設定に指定されたアプリに、プッシュ通知を送信します。 |
 
 ### <a name="parameters"></a>パラメーター
 
-| 名前 | 種類 | 説明 |
+| 名前 | 種類 | Description |
 | --- | --- | --- |
 | recipients |文字列配列、必須 |以下の一覧: <ul> <li>ユーザーまたはセキュリティ グループの電子メール アドレス</li> <li>Azure Active Directory のユーザーまたはセキュリティ グループのオブジェクト ID</li></ul> |
 | message |文字列、必須 |プッシュ通知のメッセージの本文。 |

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3df6227ed33c5154e1e5dd700e6a87c3e8305f01
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 6d48b7b6ef1d9d691b733bea9af6ce74d0f2b07a
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71987570"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73540927"
 ---
 # <a name="show-a-list-of-items-in-powerapps"></a>PowerApps の項目の一覧の表示
 
@@ -34,7 +34,7 @@ ms.locfileid: "71987570"
     2. Excel ファイルを OneDrive for Business などの[クラウド ストレージ アカウント](connections/cloud-storage-blob-connections.md)にアップロードします。
 
 - 空のアプリを開きます。
-    1. [PowerApps にサインインします](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。
+    1. [PowerApps にサインインします](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。
 
     1. **[自分のアプリを作成する]** で **[キャンバス アプリを一から作成]** を選択します。
 
@@ -58,7 +58,7 @@ ms.locfileid: "71987570"
 
 ## <a name="add-a-gallery-in-a-screen"></a>画面でのギャラリーの追加
 
-1. **ホーム** タブで、**新しい画面** を選択し  > **リスト画面** をクリックします。
+1. **[ホーム]** タブで、[**新しい画面** > **リスト画面**] を選択します。
 
     **ギャラリー**コントロールや、検索バーなどのその他のコントロールを含む画面が表示されます。
 

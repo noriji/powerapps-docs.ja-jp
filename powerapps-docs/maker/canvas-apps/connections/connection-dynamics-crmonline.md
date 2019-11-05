@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3c061d43a766bfdcd0a560c5959756f79751a7f2
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 48605d97a8b311f806ff3556474d9bc5f32260e1
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61547513"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541096"
 ---
 # <a name="connect-to-dynamics-365-from-powerapps"></a>PowerApps から Dynamics 365 に接続する
 PowerApps を使うと、ほとんどまたはまったくコードを記述しないで、モバイル アプリをすばやく生成、カスタマイズ、共有、実行することができます。 Dynamics 365 コネクタを使うことにより、組織と共有する便利なモバイル アプリをほんの数分で作成できます。
@@ -29,17 +29,17 @@ PowerApps を使うと、ほとんどまたはまったくコードを記述し�
 このチュートリアルに従って作業するには、Dynamics 365 サブスクリプションを含む Microsoft Office 365 アカウントが必要です。
 
 ## <a name="create-a-connection"></a>接続を作成する
-1. [PowerApps にサインインします](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。
-2. 左のナビゲーション ウィンドウで、**[接続]** をクリックします。
+1. [PowerApps にサインインします](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)。
+2. 左のナビゲーション ウィンドウで、 **[接続]** をクリックします。
    
     ![[ファイル] メニューの [接続] オプション](./media/connection-dynamics-crmonline/file-connections.png)
 3. 右上隅にある **[新しい接続]** をクリックします。
    
     ![新しい接続](./media/connection-dynamics-crmonline/new-connection.png)
-4. 接続の一覧で、**[Dynamics 365]** をクリックまたはタップします。
+4. 接続の一覧で、 **[Dynamics 365]** をクリックまたはタップします。
    
     ![[ファイル] メニューの [接続] オプション](./media/connection-dynamics-crmonline/connection-d365.png)
-5. ダイアログ ボックスで、**[作成]** をクリックします。
+5. ダイアログ ボックスで、 **[作成]** をクリックします。
    
     ![接続の作成](./media/connection-dynamics-crmonline/create-connection.png)
 6. **[Sign in to your account]** (アカウントにサインイン) ダイアログ ボックスで、Dynamics 365 (オンライン) テナントの資格情報を入力します。
@@ -47,14 +47,14 @@ PowerApps を使うと、ほとんどまたはまったくコードを記述し�
     接続が作成されます。
 
 ## <a name="generate-an-app-automatically"></a>アプリを自動的に生成する
-1. [PowerApps にサインイン](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)し、左下隅の **[新しいアプリ]** をクリックします。
+1. [PowerApps にサインイン](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)し、左下隅の **[新しいアプリ]** をクリックします。
    
     ![新しいアプリ](./media/connection-dynamics-crmonline/new-app.png)
-2. **[データを使用して開始]** で、**[Dynamics 365]** タイルの **[携帯電話レイアウト]** をクリックします。
+2. **[データを使用して開始]** で、 **[Dynamics 365]** タイルの **[携帯電話レイアウト]** をクリックします。
    
     ![PowerApps によって Dynamics 365 コネクタが選択される](./media/connection-dynamics-crmonline/phonelayout.png)
 3. **[接続]** で、使う接続を選び、アプリで管理する Dynamics 365 のインスタンスに対応するデータセットを選びます。
-4. **[テーブルの選択]** で **[連絡先]** をクリックし、**[接続]** をクリックします。
+4. **[テーブルの選択]** で **[連絡先]** をクリックし、 **[接続]** をクリックします。
 5. 左側のナビゲーション バーで、右上のアイコンをクリックまたはタップしてサムネイル表示に切り替えます。
    
     ![表示の切り替え](./media/connection-dynamics-crmonline/toggle-view.png)
@@ -73,21 +73,21 @@ PowerApps で、連絡先のレコードに基づいた 3 画面のアプリが�
 1. **BrowseScreen1** で、1 つ目以外の任意のレコードをクリックして、ギャラリーを選びます。
    
     ![レイアウトを選択する](./media/connection-dynamics-crmonline/select-gallery.png)
-2. 右側のウィンドウで、**[データ]** タブをクリックまたはタップします。
+2. 右側のウィンドウで、 **[データ]** タブをクリックまたはタップします。
 3. レイアウトの一覧で、2 列のグリッドに画像とテキストが表示されるレイアウトをクリックまたはタップします。
    
     このオプションを表示するにはスクロールする必要があるかもしれません。
    
     ![レイアウトを選択する](./media/connection-dynamics-crmonline/select-layout.png)
-4. 次の式をコピーし、ギャラリーを選択したまま、数式バーに式を貼り付けます (**[fx]** ボタンの右側)。
+4. 次の式をコピーし、ギャラリーを選択したまま、数式バーに式を貼り付けます ( **[fx]** ボタンの右側)。
    
     `SortByColumns(Search(Filter(Contacts,statuscode=1), TextSearchBox1.Text, "lastname"), "lastname", If(SortDescending1, Descending, Ascending))`
 5. 右側のウィンドウで、上のドロップダウン リストを **[firstname]** に設定し、真ん中のドロップダウン リストを **[lastname]** に設定します。
    
     ![Body1 を選択する](./media/connection-dynamics-crmonline/firstname-lastname.png)
-6. (省略可能) **[ファイル]** メニューの **[名前を付けて保存]** をクリックし、アプリの名前を入力して、**[保存]** をクリックします。
+6. (省略可能) **[ファイル]** メニューの **[名前を付けて保存]** をクリックし、アプリの名前を入力して、 **[保存]** をクリックします。
    
-    既定では、アプリはクラウドに保存されます。 ローカルにアプリを保存するには、**[このコンピューター]** をクリックします。
+    既定では、アプリはクラウドに保存されます。 ローカルにアプリを保存するには、 **[このコンピューター]** をクリックします。
 
 ## <a name="customize-detailsscreen1-and-editscreen1"></a>DetailsScreen1 と EditScreen1 をカスタマイズする
 1. 左側のナビゲーション バーで中央のサムネイルをクリックし、**DetailsScreen1** を選びます。

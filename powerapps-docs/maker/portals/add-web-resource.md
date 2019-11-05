@@ -9,12 +9,12 @@ ms.custom: ''
 ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer: ''
-ms.openlocfilehash: ed1053c758f97234ad94a09832683ff00ef17744
-ms.sourcegitcommit: 5338e01d2591f76d71f09b1fb229d405657a0c1c
+ms.openlocfilehash: c735513bc0a8f325aaf0debca2170131d45178dc
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72977567"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73543125"
 ---
 # <a name="add-the-azure-storage-web-resource-to-a-form"></a>Azure Storage Web リソースをフォームに追加する
 
@@ -27,7 +27,7 @@ Common Data Service に直接アップロードするのではなく Azure Stora
 
 ポータルを使用してファイル (たとえば、.zip) を Azure Storage にアップロードすると、エンティティのメモと添付ファイルのプレースホルダーが表示されます。
 
-フォームの(media/notes-attachment-lead-form.png "添付ファイルのフォームプレースホルダー")の![添付ファイル]
+![フォーム上の添付ファイル](media/notes-attachment-lead-form.png "フォーム上の添付ファイルのプレースホルダー")
 
 添付ファイルが .zip という名前になっていることに注意してください。 既定では、Common Data Service には Azure ファイルの構想がないため、このプレースホルダー .txt ファイルは Common Data Service に格納されます。 プレースホルダーファイルの Azure Storage コンテキストには、ファイルの詳細が表示されます。
 ```
@@ -57,11 +57,11 @@ Azure に格納されているファイルを表示して操作するには、we
 
 8. フォームを保存し、変更を発行します。
 
-   Web リソースの![追加](media/add-web-resource.png "web リソースの追加")
+   ![Web リソースの追加](media/add-web-resource.png "Web リソースの追加")
 
 新しいコントロールがページに表示されるようになり、Azure Storage で添付ファイルを管理できるようになります。
 
-フォーム上の azure ファイル(media/azure-file-attachment-lead-form.png "添付")ファイルのフォーム![での azure ファイル添付]ファイル
+![フォーム上の Azure ファイル添付ファイル](media/azure-file-attachment-lead-form.png "フォーム上の Azure ファイル添付ファイル")
 
 このファイルが Azure Storage に格納されていることを示すために、ペーパークリップアイコンがクラウドアイコンに置き換えられました。 添付ファイルは引き続き Common Data Service に保存できます。これらのファイルは、ペーパークリップアイコンで示されます。
 
@@ -80,11 +80,11 @@ Azure に格納されているファイルを表示して操作するには、we
 > [!Note]
 > サムネイル機能は、サイズが 1 MB 未満のイメージに制限されています。
 
-![メモサムネイル](media/notes-thumbnail.png "ノートのサムネイル")
+![メモのサムネイル](media/notes-thumbnail.png "メモのサムネイル")
 
 ## <a name="cors-protocol-support"></a>CORS プロトコルのサポート
 
-[クロスオリジンリソース共有 (CORS)](http://www.w3.org/TR/cors/)プロトコルは、応答を別のドメインと共有できるかどうかを示す一連のヘッダーで構成されます。
+[クロスオリジンリソース共有 (CORS)](https://www.w3.org/TR/cors/)プロトコルは、応答を別のドメインと共有できるかどうかを示す一連のヘッダーで構成されます。
 CORS を構成するには、次のサイト設定を使用します。
 
 |                 名前                  |                                                                            Description                                                                            |

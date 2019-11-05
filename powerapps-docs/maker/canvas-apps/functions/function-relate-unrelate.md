@@ -13,18 +13,18 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d8ba0cef60b268caafb57e18ae80a522905ba45b
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: ca0b81cb1150fb744251b3dfca30c9b6ed8f90a5
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71992750"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73537103"
 ---
 # <a name="relate-and-unrelate-functions-in-powerapps"></a>PowerApps の関連付け関数と関連付け解除関数
 
 一対多または多対多のリレーションシップを通じて、2つのエンティティのレコードを関連付けると、関連付けを解除します。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 
 **関連付け**関数は、Common Data Service で一対多または多対多のリレーションシップを介して2つのレコードをリンクします。 **Unrelate**関数はプロセスを反転し、リンクを削除します。
 
@@ -102,7 +102,7 @@ ms.locfileid: "71992750"
 
 1. **[ビュー]** タブで **[データソース]** を選択します。
 
-1. **データ**ペインで、 **[データソースの追加]** を選択します。  > **Common Data Service** > **Products** > **Connect**を選択します。  
+1. **データ** ウィンドウで、**データ > ソースの追加** を選択し**Common Data Service** > **Products** > **Connect** を選択します。  
 
     Products エンティティは、上記で読み込まれたサンプルデータの一部です。
 
@@ -172,7 +172,7 @@ ms.locfileid: "71992750"
 
 1. **[ビュー]** タブで **[データソース]** を選択します。
 
-1. **データ**ペインで、 **[データソースの追加]** を選択し  > **Common Data Service** > **予約** > **接続**を選択します。
+1. **[データ]** ウィンドウで、 **[データソースの追加]** を選択して**Common Data Service** > **予約** > **接続** > します。
 
 1. **読み込む gallery2**で、 **NextArrow2**の**onselect**式を次の数式に設定します。
 
@@ -211,7 +211,7 @@ ms.locfileid: "71992750"
 
 サンプルデータには多対多リレーションシップは含まれていませんが、Products エンティティと contact エンティティの間に1つ作成されます。 ユーザーは、各製品を複数の連絡先に関連付けることができ、各連絡先を複数の製品に関連付けることができます。
 
-1. [このページ](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)の左側のナビゲーションバーで **[データ]** を選択し、 **[エンティティ]** を選択します。
+1. [このページ](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)の左側のナビゲーションバーで **[データ]** を選択し、 **[エンティティ]** を選択します。
 
     ![エンティティの一覧を開く](media/function-relate-unrelate/entity-list.png)
 
@@ -225,7 +225,7 @@ ms.locfileid: "71992750"
 
     ![Product エンティティの [リレーションシップ] タブ](media/function-relate-unrelate/entity-relationships.png)
 
-1. **[リレーションシップの追加]** @no__t **[多対多]** を選択します。
+1. [**多対多** > **リレーションシップの追加**] を選択します。
 
     ![多対多リレーションシップの追加](media/function-relate-unrelate/entity-manytomany.png)
 
@@ -233,7 +233,7 @@ ms.locfileid: "71992750"
 
     ![Contact エンティティを選択します](media/function-relate-unrelate/entity-contact.png)
 
-1. **[完了]** を選択し  > **エンティティを保存**します。
+1. **[完了]** を選択して**エンティティを保存** > ます。
 
     ![Products エンティティのリレーションシップの一覧](media/function-relate-unrelate/entity-done.png)
 
@@ -273,7 +273,7 @@ ms.locfileid: "71992750"
 
 1. **[ビュー]** タブで **[データソース]** を選択します。
 
-1. **データ**ペインで **[データソースの追加]** を選択し  > **Common Data Service** > **Contacts** > **Connect**を選択します。
+1. **[データ]** ウィンドウで、 **[データソースの追加]** を選択して > **連絡先** > **接続** **Common Data Service** > します。
 
 1. **読み込む gallery2**の下で、**コンボボックス**コントロールを追加し、 **ComboBox1**という名前であることを確認して、その**Items**プロパティを**Contacts**に設定します。
 

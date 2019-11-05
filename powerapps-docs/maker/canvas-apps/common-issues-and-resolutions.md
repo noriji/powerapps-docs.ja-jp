@@ -13,22 +13,22 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ef5da72c39d06d021765500fb5d1e55299dfb1cc
-ms.sourcegitcommit: d6b7f98b4ae011a753c1e72d7708f0f8dfbfb1fb
+ms.openlocfilehash: 2c093adb4b63b5374de118d8d7dbb3421e352f46
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896227"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541068"
 ---
 # <a name="common-issues-and-resolutions-for-powerapps"></a>PowerApps でお問い合わせの多い問題と解決方法
 
 この記事では、PowerApps の使用中に発生することがある一般的な問題の一覧を示します。 回避策がある場合は示します。
 
-1. **認証システムを使用する場合の特定の Android モバイルデバイスでのサインインの問題**(2019 年8月21日)
+1. 認証システム (2019 年8月21日)**を使用する場合の特定の Android モバイルデバイスでのサインインの問題**
 
     特定のデバイスとシナリオでは、認証子を使用するときにサインインエラーが発生する可能性があります。 これは、OEM がこの機能を制限しているためです。 エラーとその対処方法の詳細については、[こちら](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING)を参照してください。    
 
-1. **Android モバイルデバイスでのカメラの問題**(1 月1日、2019)
+1. **Android モバイルデバイスでのカメラの問題**(2019 年1月1日)
 
     カメラコントロールが Android デバイスで動作を停止した場合は、アプリを再発行し、デバイスで再び開きます。 Android オペレーティングシステムの変更に応じてカメラコントロールが更新され、再発行すると、アプリは更新プログラムの恩恵を受けられます。
 
@@ -36,7 +36,7 @@ ms.locfileid: "69896227"
 
     指でスクロールするときに制限が発生した場合は、それをリフトし、もう一度スクロールを開始します。
 
-1. **Windows 用の PowerApps でマウスやタッチ入力による描画がスムーズに行われない**区切り.24、2018)
+1. **Windows 用の PowerApps でマウスやタッチ入力を使用した描画がスムーズに行われない**(Sep. 24, 2018)
 
     ペンコントロールには、Windows アプリでマウスまたはタッチ入力を使用した描画の部分的なサポートのみがあります。 ストロークが断続的になる可能性があります。 スムーズ描画の場合は、ペンを使用するか、ブラウザーでアプリを実行します。
 
@@ -57,7 +57,7 @@ ms.locfileid: "69896227"
 
 1. **埋め込みアプリから Web サイトを起動する** (2018 年 5 月 10 日)
 
-    Internet Explorer および Microsoft Edge ブラウザーでは、保護モードにあるか、アプリが読み込まれる Web サイトよりも低いセキュリティ ゾーン内にある URL または Web サイトの起動がブロックされる可能性があります。 この問題を解決するには、ブラウザーの[セキュリティ設定やプライバシー設定を変更](https://support.microsoft.com/en-us/help/17479/windows-internet-explorer-11-change-security-privacy-settings)します。
+    Internet Explorer および Microsoft Edge ブラウザーでは、保護モードにあるか、アプリが読み込まれる Web サイトよりも低いセキュリティ ゾーン内にある URL または Web サイトの起動がブロックされる可能性があります。 この問題を解決するには、ブラウザーの[セキュリティ設定やプライバシー設定を変更](https://support.microsoft.com/help/17479/windows-internet-explorer-11-change-security-privacy-settings)します。
 
 1. **ギャラリー内のコンボ ボックス コントロール** (2018 年 5 月 3 日)
 
@@ -65,7 +65,7 @@ ms.locfileid: "69896227"
 
 1. **カスタム イメージをアプリ アイコンとして使用する** (2018 年 4 月 11 日)
 
-    PowerApps Studio for Windows バージョン 3.18043 では、カスタム イメージをアップロードしてアプリ アイコンとして使用することはできません。 この問題を回避するには、[Web 用の PowerApps Studio](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) を使用してカスタム イメージをアップロードします。 または、Windows 用の PowerApps Studio に付属しているアイコンのいずれかを使用して、背景色をカスタマイズすることもできます。
+    PowerApps Studio for Windows バージョン 3.18043 では、カスタム イメージをアップロードしてアプリ アイコンとして使用することはできません。 この問題を回避するには、[Web 用の PowerApps Studio](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) を使用してカスタム イメージをアップロードします。 または、Windows 用の PowerApps Studio に付属しているアイコンのいずれかを使用して、背景色をカスタマイズすることもできます。
 
 1. **スクリーンをコピーして複数のアプリに貼り付ける** (2018 年 4 月 4 日)
 
@@ -101,7 +101,7 @@ ms.locfileid: "69896227"
 
 1. **Windows 8.1 でアプリケーションを実行する**
 
-    [Windows 8.1 用の更新プログラム](https://technet.microsoft.com/library/security/ms16-118)をインストールすると、そのオペレーティング システム上では、PowerApps Studio で開いたアプリを実行することはできません。 ただし、[powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) で開いた場合または PowerApps Mobile を使用した場合は、アプリを実行することができます。
+    [Windows 8.1 用の更新プログラム](https://technet.microsoft.com/library/security/ms16-118)をインストールすると、そのオペレーティング システム上では、PowerApps Studio で開いたアプリを実行することはできません。 ただし、[powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) で開いた場合または PowerApps Mobile を使用した場合は、アプリを実行することができます。
 
 1. **スペースを含む列の名前**
 
@@ -157,7 +157,7 @@ ms.locfileid: "69896227"
 
      詳しくは、[SharePoint Online](connections/connection-sharepoint-online.md#known-issues) をご覧ください。
 
-1. **共同編集はサポートされません。同時に編集できるのは 1 人のみです**。
+1. **共同編集はサポートされていません。一度に1人の著者**です。
 
      複数の編集者が同時に同じアプリを編集すると、アプリのエラーを招いたり、他の編集者の変更を上書きしてしまう可能性があります。 同じアプリの編集を他の人が行うときは、事前にアプリを終了してください。
 

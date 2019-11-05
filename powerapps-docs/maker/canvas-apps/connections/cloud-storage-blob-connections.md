@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b89f23ac1dec941fcc2f5d7bd03f927c08691f77
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 41536592493a2f17b187829fb778d2a6ca94134a
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71994060"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73540762"
 ---
 # <a name="connect-to-cloud-storage-from-powerapps"></a>PowerApps からクラウド ストレージに接続する
 PowerApps には、クラウド ストレージ接続がいくつか用意されています。 いずれかの接続を利用し、Excel ファイルを保存したり、それに含まれる情報をアプリ全体で利用したりできます。 接続の種類:  
@@ -37,7 +37,7 @@ PowerApps には、クラウド ストレージ接続がいくつか用意され
   4. 変更を保存します。
 
 ## <a name="connect-to-the-cloud-storage-connection"></a>クラウド ストレージ接続に接続する
-1. [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) で、 **[管理]** を展開し、 **[接続]** を選択します。  
+1. [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) で、 **[管理]** を展開し、 **[接続]** を選択します。  
    
     ![接続を選択する](./media/cloud-storage-blob-connections/connections.png)
 2. **[新しい接続]** を選択し、クラウド ストレージ接続を選択します。 たとえば、 **[OneDrive]** を選択します。

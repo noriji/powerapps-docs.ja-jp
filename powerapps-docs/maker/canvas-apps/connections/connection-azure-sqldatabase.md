@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ca79c60e90c330f21af6ed8a12b98c3667535bb8
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: bcadf4abfd55a317cf67196c9ba2158a001a015a
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71987417"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541132"
 ---
 # <a name="connect-to-sql-server-from-powerapps"></a>PowerApps から SQL Server に接続する
 ![SQL Server アイコン](./media/connection-azure-sqldatabase/sqlicon.png)
@@ -27,7 +27,7 @@ Azure またはオンプレミス データベースで SQL Server に接続し�
 
 ## <a name="prerequisites"></a>前提条件
 
-* PowerApps に[サインアップ](../../signup-for-powerapps.md)し、サインアップに使用したのと同じ資格情報を入力して[サインイン](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)します。
+* PowerApps に[サインアップ](../../signup-for-powerapps.md)し、サインアップに使用したのと同じ資格情報を入力して[サインイン](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)します。
 * 主キーを持つテーブルが 1 つ以上含まれるデータベースに関して次の情報を集めます。
   
   * データベースの名前
@@ -68,7 +68,7 @@ Azure またはオンプレミス データベースで SQL Server に接続し�
 8. アプリのカスタマイズは、「[Create an app from Excel](../get-started-create-from-data.md)」 (Excel からアプリを作成する) にある説明と同様の手法で行います。最初にアプリのレイアウトを変更します。
 
 ## <a name="build-an-app-from-scratch"></a>アプリをゼロから作成
-1. PowerApps のサインアップに使用したものと同じアカウントで [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) にサインインします。
+1. PowerApps のサインアップに使用したものと同じアカウントで [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) にサインインします。
 2. 左側のナビゲーション バーで、 **[接続]** をクリックまたはタップします。  
    
     ![接続を管理する](./media/connection-azure-sqldatabase/manage-connections.png)

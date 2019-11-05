@@ -13,18 +13,18 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 49023d1eb0fadacb62ab985d0fe13e55e28a8da5
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 191bd21b84bfa4a4c1b6c2822a8c957e15164435
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71995733"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541462"
 ---
 # <a name="restore-a-canvas-app-to-a-previous-version-in-powerapps"></a>キャンバス アプリを PowerApps で以前のバージョンに復元します
 この記事では、ご利用の PowerApps アカウントから、クラウドに保存された以前のバージョンにキャンバス アプリを復元する方法を説明します。
 
 ## <a name="restore-an-app-from-your-account"></a>アカウントからのアプリの復元
-1. [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) を開き、左側のナビゲーション バーの **[アプリ]** をクリックまたはタップします。
+1. [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) を開き、左側のナビゲーション バーの **[アプリ]** をクリックまたはタップします。
 
     ![左側のナビゲーション バー](./media/restore-an-app/file-apps.png)
 

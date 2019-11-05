@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5efcc877de7a16524c57121a91488189d4058437
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 100b69583593bd506cb6860890ee3dfcfc82ebdf
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71987154"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73540436"
 ---
 # <a name="connect-to-power-bi-from-powerapps"></a>PowerApps から Power BI に接続する
 ![Power BI](./media/connection-powerbi/powerbiicon.png)
@@ -28,7 +28,7 @@ Power BI は、データを分析し、洞察を共有するビジネス分析�
 このトピックでは、アプリで Power BI の接続を使用する方法を説明し、使用可能な関数の一覧を表示します。
 
 ## <a name="prerequisites"></a>前提条件
-* [サインアップ](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)していること
+* [サインアップ](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)していること
 * Power BI の [接続](https://powerapps.microsoft.com/tutorials/add-manage-connections/) を追加していること
 * [テンプレート](https://powerapps.microsoft.com/tutorials/get-started-test-drive/)、[データ](https://powerapps.microsoft.com/tutorials/get-started-create-from-data/)、または[ゼロ](https://powerapps.microsoft.com/tutorials/get-started-create-from-blank/)からアプリを作成していること
 
@@ -44,7 +44,7 @@ Power BI は、データを分析し、洞察を共有するビジネス分析�
 ### <a name="view-the-status-of-an-alert"></a>アラートの状態を表示します
 アラートの状態を表示するには、上記の手順から取得したアラート ID で CheckAlertStatus 関数を呼び出します。
 
-アラート ID は、リテラル文字列 (例: "1234") として渡すことも、GetAlerts() の呼び出しを使って設定するギャラリー セクションへの参照 (例: Gallery1.Selected.alertId) として渡すこともできます。
+アラート ID は、リテラル文字列 (例: "1234") として、または GetAlerts () 呼び出しを使用して設定されるギャラリーセクションへの参照として渡すことができます (例: Gallery1.selected. alertId)。
 
 続行するには、ラベルを追加し、その [[テキスト]](../controls/properties-core.md) プロパティをこれらの数式のいずれかに設定します。
 
@@ -58,7 +58,7 @@ Power BI は、データを分析し、洞察を共有するビジネス分析�
 ## <a name="view-the-available-functions"></a>使用可能な関数の確認
 この接続には、次の関数が含まれています。
 
-| 関数名 | 説明 |
+| 関数名 | Description |
 | --- | --- |
 | GetAlerts |Power BI サービスで設定したアラートを一覧表示します |
 | CheckAlertStatus |特定のアラートの状態を確認します |
@@ -71,7 +71,7 @@ Power BI サービスで設定したアラートを一覧表示します。
 
 #### <a name="output-properties"></a>出力プロパティ
 
-| プロパティ名 | データ型 | 必須 | 説明 |
+| プロパティ名 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | 値 |配列 |いいえ |Power BI サービスで設定したデータ アラートの配列。 配列内の各要素は次のものを含みます。 <ul><li>alertTitle: アラートのタイトル</li><li>alertId: アラートの ID</li><li>groupId: アラートが作成されたグループの ID</li></ul> |
 
@@ -83,13 +83,13 @@ Power BI サービスで設定したアラートを一覧表示します。
 
 #### <a name="input-properties"></a>入力プロパティ
 
-| プロパティ名 | データ型 | 必須 | 説明 |
+| プロパティ名 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | alertId |整数 |はい |GetAlerts によって返される、アラートの ID |
 
 #### <a name="output-properties"></a>出力プロパティ
 
-| プロパティ名 | データ型 | 必須 | 説明 |
+| プロパティ名 | データ型 | 必須 | Description |
 | --- | --- | --- | --- |
 | tileValue |数 |いいえ |アラートがトリガーされたときのタイルの値 |
 | tileUrl |string |いいえ |アラートがあるタイルの URL |

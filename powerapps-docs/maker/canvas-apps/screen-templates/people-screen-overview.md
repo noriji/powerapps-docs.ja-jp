@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: da7f7c037010df0da30e0363f988ac616f9fb6cc
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: e4c688232e275cee1e285b22dd4885ea2126e7ad
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71995672"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541374"
 ---
 # <a name="overview-of-the-people-screen-template-for-canvas-apps"></a>キャンバスアプリの people 画面テンプレートの概要
 
@@ -42,7 +42,7 @@ ms.locfileid: "71995672"
 
 テンプレートから people 画面を追加するには、次のようにします。
 
-1. PowerApps に[サインイン](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)し、PowerApps Studio でアプリを作成するか、既存のアプリを開きます。
+1. PowerApps に[サインイン](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)し、PowerApps Studio でアプリを作成するか、既存のアプリを開きます。
 
     このトピックでは phone アプリについて説明しますが、同じ概念がタブレットアプリにも当てはまります。
 
@@ -78,7 +78,7 @@ ms.locfileid: "71995672"
 
 1. 目的のフィールドを選択します。
 
-    **Text**プロパティを `ThisItem.{FieldSelection}` に更新する必要があります。
+    **Text**プロパティを `ThisItem.{FieldSelection}`に更新する必要があります。
 
 ## <a name="integrate-the-screen-into-an-app"></a>画面をアプリに統合する
 
@@ -88,10 +88,10 @@ People 画面は独自の機能を備えた強力なコントロールですが�
 
 People 画面では、 **MyPeople**コレクションでのユーザーの選択がキャッシュされます。 ビジネスシナリオでユーザー検索を呼び出す場合は、このコレクションの使用方法を把握しておく必要があります。 ここでは、この画面を基本的な電子メール画面に接続し、 **MyPeople**コレクション内のユーザーに電子メールを送信する方法について説明します。 また、[電子メール画面](./email-screen-overview.md)のしくみについての洞察も得られます。
 
-1. Office 365 Outlook データソースをアプリに追加するには、 **[表示]** タブを選択し、 **[データ]** ソース @no__t、 **[データソースの追加]** の順に選択して、office 365 outlook コネクタを探します。 **[新しい接続]** を選択して検索することが必要になる場合があります。
+1. Office 365 Outlook データソースをアプリに追加するには、 **[表示]** タブを選択し、 **[データソース > ** **追加**] を選択して、office 365 outlook コネクタを探します。 **[新しい接続]** を選択して検索することが必要になる場合があります。
 1. People 画面を挿入した後、新しい空の画面を挿入します。 この画面で、戻る矢印アイコン、2つのテキスト入力ボックス、および [送信] アイコンを追加します。
 1. 画面の名前を**Emailscreen**に、戻る矢印のアイコンを**backicon**に、1つのテキスト入力ボックスを**subjectline**に、もう1つは**Messagebody**に、送信アイコンを**sendicon**に変更します。
-1. **Backicon**の**onselect**プロパティを `Back()` に設定します。
+1. **Backicon**の**onselect**プロパティを `Back()`に設定します。
 1. **Sendicon**の**onselect**プロパティを次の数式に設定します。
 
     ```powerapps-dot
@@ -102,11 +102,11 @@ People 画面では、 **MyPeople**コレクションでのユーザーの選択
     )
     ```
     
-    ここでは、Outlook コネクタを使用して電子メールを送信しています。 この @no__t、受信者の一覧として-0 として渡します。 この数式は、 **MyPeople**コレクション内のすべての電子メールアドレスを、セミコロンで区切られた1つの文字列に連結します。 これは、お気に入りの電子メールクライアントの "宛先" 行に、セミコロンで区切られた電子メールアドレスの文字列を記述することとは異なります。
-    * メッセージの件名として `SubjectLine.Text` を渡し、メッセージの本文として-1 を @no__t しています。
+    ここでは、Outlook コネクタを使用して電子メールを送信しています。 この `Concat(MyPeople, UserPrincipalName & ";")`、受信者の一覧として渡します。 この数式は、 **MyPeople**コレクション内のすべての電子メールアドレスを、セミコロンで区切られた1つの文字列に連結します。 これは、お気に入りの電子メールクライアントの "宛先" 行に、セミコロンで区切られた電子メールアドレスの文字列を記述することとは異なります。
+    * メッセージの件名として `SubjectLine.Text` を渡し、メッセージの本文として `MessageBody.Text` します。
 1. [People] 画面の右上隅に、**メール**アイコンが挿入されます。
    アイコンの色を任意のものに変更します。
-1. **Sendicon**の**onselect**プロパティを `Navigate( EmailScreen, None )` に設定します。
+1. **Sendicon**の**onselect**プロパティを `Navigate( EmailScreen, None )`に設定します。
 
     これで、ユーザーを選択し、電子メールメッセージを作成して送信する、2画面のアプリが作成されました。 テストは自由に行うことができますが、アプリから**MyPeople**コレクションに追加したすべてのユーザーに電子メールが送信されるため、注意してください。
 

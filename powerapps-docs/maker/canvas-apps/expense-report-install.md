@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 20b49aee68b7c8c357b49dac2218d994153da230
-ms.sourcegitcommit: 0e7bdaea83adaa15da4d5c9ddbcd0b2bcbee01df
+ms.openlocfilehash: afdeb89b0bd026b20e0c940b05be60d4d3238b81
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73063380"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73540221"
 ---
 # <a name="install-and-configure-the-expense-report-sample-for-canvas-apps-in-powerapps"></a>PowerApps でキャンバス アプリ用の Expense Report サンプルをインストールして構成する
 
@@ -204,13 +204,13 @@ Expense Report サンプルをインストールして構成する詳細な手�
 
 1. Web ブラウザーで次のリンクに移動します。
 
-    [http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/myexpenses/docs/MyExpenses(SP_List).zip](http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/myexpenses/docs/MyExpenses(SP_List).zip)
+    [https://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/myexpenses/docs/MyExpenses(SP_List).zip](https://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/myexpenses/docs/MyExpenses(SP_List).zip)
 
 2. Expense Report PowerApps サンプル パッケージをダウンロードして、お使いのコンピューターに保存します。
 
 ## <a name="create-connections"></a>接続を作成する
 
-1.  Web ブラウザーで [web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) に移動します。
+1.  Web ブラウザーで、 [make.powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)に移動します。
 2.  サインアップに使用したものと同じ資格情報でサインインします。
 3.  左側のメニューで **[接続]** を選択します。
 
@@ -239,7 +239,7 @@ Expense Report サンプルをインストールして構成する詳細な手�
 
 ## <a name="import-the-app"></a>アプリをインポートする
 
-1. Web ブラウザーで、 https://web.powerapps.com に移動します。
+1. Web ブラウザーで、 https://make.powerapps.com に移動します。
 1. サインアップに使用したものと同じ資格情報でサインインします。
 1. 左側のナビゲーション バーで、 **[アプリ]** 、 **[パッケージのインポート (プレビュー)]** の順に選択します。
 

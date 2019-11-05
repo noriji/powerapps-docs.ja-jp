@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 2c11e05c93d5a505408948178bf3efbd31f2dbf7
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 2e11de4af02347154c65500659df94a6b2183540
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71986166"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73539431"
 ---
 # <a name="accessibility-properties-for-canvas-apps"></a>キャンバスアプリのアクセシビリティプロパティ
 
@@ -43,7 +43,7 @@ ms.locfileid: "71986166"
 - 対話型のコントロールでのみ、タブストップを持ちます。
 - "Z" の順に、または下に "逆順" の順に移動します。
 
-上記の要件は既定の**TabIndex**値で満たされるため、変更しないことをお勧めします。  既定では、ほとんどのユーザーが視覚的に期待しています。スクリーンリーダーでも正常に動作します。  ただし、既定値を上書きすることが必要になる場合もあります。  **TabIndex**プロパティと強化された[**グループ**コントロール](https://powerapps.microsoft.com/en-us/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/)(試験段階) を使用して、ナビゲーション順序を調整します。  
+上記の要件は既定の**TabIndex**値で満たされるため、変更しないことをお勧めします。  既定では、ほとんどのユーザーが視覚的に期待しています。スクリーンリーダーでも正常に動作します。  ただし、既定値を上書きすることが必要になる場合もあります。  **TabIndex**プロパティと強化された[**グループ**コントロール](https://powerapps.microsoft.com/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/)(試験段階) を使用して、ナビゲーション順序を調整します。  
 
 **TabIndex**プロパティには、次の2つの推奨値があります。
 
@@ -54,7 +54,7 @@ ms.locfileid: "71986166"
 
 通常、ナビゲーション順序は左から右、次に上から下に "Z" パターンで移動します。 順序は、コントロールの**X**プロパティと**Y**プロパティの値に基づいています。 コントロールが画面上で動的に移動された場合 (たとえば、タイマーまたは他のコントロールに基づいて**X**または**Y**の数式がある場合)、ナビゲーション順序も動的に変更されます。
 
-強化された[**グループ**コントロール](https://powerapps.microsoft.com/en-us/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/)(試験段階) を使用して、一緒に移動する必要のあるコントロールをバンドルしたり、"逆順 N" パターンで列を作成したりします。  次の例の先頭では、名前フィールドが強化されたグループコントロール内に含まれています。これにより、ナビゲーションが続行されてから移動します。  この例の下部では、グループコントロールは使用されません。ナビゲーションは通常どおりに行われ、その後、コントロールのグループ化がわかりやすくなります。 
+強化された[**グループ**コントロール](https://powerapps.microsoft.com/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/)(試験段階) を使用して、一緒に移動する必要のあるコントロールをバンドルしたり、"逆順 N" パターンで列を作成したりします。  次の例の先頭では、名前フィールドが強化されたグループコントロール内に含まれています。これにより、ナビゲーションが続行されてから移動します。  この例の下部では、グループコントロールは使用されません。ナビゲーションは通常どおりに行われ、その後、コントロールのグループ化がわかりやすくなります。 
 
 ![グループの拡張コントロールを表示して、グループ内で移動する前にナビゲーションを進めるアニメーション](media/properties-accessibility/enhanced-group.gif)
 

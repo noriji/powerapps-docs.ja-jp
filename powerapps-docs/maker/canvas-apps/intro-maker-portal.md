@@ -13,16 +13,16 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: dd50652f0021079b4b9d4d23568ba148a8ce6a5b
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: f4babe6356ab0be34b6b08a3d158462b58cbb0cd
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71989993"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541226"
 ---
 # <a name="sign-in-to-powerapps-for-the-first-time"></a>PowerApps に始めてサインインします
 
-[PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) にサインインすると、独自のアプリを作成したり、ご自分または他のユーザーが作成したアプリを開いたり、関連するタスクを実行したりするためのさまざまなオプションをそのサイトで利用できるようになります。 これらのタスクは、アクセス権が得られる 1 つまたは複数のライセンスの識別などの最もシンプルなものから、特定のデータ ソースへのカスタム接続の作成などのより高度なものまで多岐にわたります。
+[PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) にサインインすると、独自のアプリを作成したり、ご自分または他のユーザーが作成したアプリを開いたり、関連するタスクを実行したりするためのさまざまなオプションをそのサイトで利用できるようになります。 これらのタスクは、アクセス権が得られる 1 つまたは複数のライセンスの識別などの最もシンプルなものから、特定のデータ ソースへのカスタム接続の作成などのより高度なものまで多岐にわたります。
 
 次の 3 つの一般的な領域で、オプションを選択できます。
 

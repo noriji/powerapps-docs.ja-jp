@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: dd5fbbd05ac021b2362c387de845c8a3e1eb33a8
-ms.sourcegitcommit: 80a9f5073eefe8813f672569e452e6af9ee72d79
+ms.openlocfilehash: 652c8d5c67a9f7245ed40be23cc827354d9b1e42
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73050239"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73540890"
 ---
 # <a name="preview-create-a-canvas-app-from-azure-sql-database"></a>プレビュー: Azure SQL Database からキャンバスアプリを作成する
 
@@ -61,7 +61,7 @@ ms.locfileid: "73050239"
 
     ![アプリの情報を指定する](./media/app-from-azure-sql-database/powerapps-create-page-azure-portal.png "アプリの情報を指定する")
 
-    [PowerApps Studio](https://create.powerapps.com/studio/)が新しいタブで開きます。ポップアップがブロックされている場合は、ポップアップを許可して再試行するようにブラウザーを更新します。 作成されると、SQL Database のデータを含む3ページアプリが作成されます。
+    [PowerApps Studio](https://create.powerapps.com/studio/)が新しいタブで開きます。ポップアップがブロックされている場合は、ポップアップを許可するようにブラウザーを更新して、もう一度やり直してください。 作成されると、SQL Database のデータを含む3ページアプリが作成されます。
 
 ## <a name="accessing-your-app"></a>アプリへのアクセス
 
@@ -81,19 +81,19 @@ IP アドレスまたは Azure サービスとして SQL Database に接続す�
 
 このアクセスを構成するには、Transact-sql ストアドプロシージャまたは Azure portal を使用できます。
 
-- SQL Database または SQL Server レベルのファイアウォール規則用のストアドプロシージャ[sp_set_firewall_rule](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database?view=azuresqldb-current) 。
-- SQL Server レベルのファイアウォール規則の[Azure portal](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure) 。
+- SQL Database または SQL Server ファイアウォールルールのストアドプロシージャ[sp_set_firewall_rule](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database?view=azuresqldb-current)
+- SQL Server ファイアウォール規則の[Azure portal](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)
 
 ### <a name="app-access-as-an-azure-service"></a>Azure サービスとしてのアプリアクセス
 
-PowerApps は、Azure portal を使用して**Azure サービスコントロールへのアクセスを許可**SQL Database に接続できます。 このアクセスを構成するには、 [Azure portal](https://portal.azure.com/)にサインインし、ポータル内を**SQL Server**に移動します。 **ファイアウォールと仮想ネットワーク** を選択し、**Azure のサービスとリソースにこのサーバーへのアクセスを許可**する を オン に設定します。 **[保存]** を選択して変更を送信します。
+PowerApps は、Azure portal を使用して**Azure サービスコントロールへのアクセスを許可**SQL Database に接続できます。 このアクセスを構成するには、 [Azure portal](https://portal.azure.com/)にサインインし、ポータル内で**SQL Server**に移動します。 **[ファイアウォールと仮想ネットワーク]** を選択し、 **[Azure のサービスとリソースにこのサーバーへのアクセスを許可]** する を **[オン**] に設定します。 **[保存]** を選択して変更を送信します。
 
 > [!IMPORTANT]
-> このコントロールを [オン] のままにした場合、Azure SQL Database サーバーは、azure の境界内の任意のサブネットからの通信を受け入れます。つまり、Azure のデータセンターに定義されている範囲内にある IP アドレスの1つから発信されます。 コントロールを ON に設定したままにすると、セキュリティの観点からアクセスが過剰になる可能性があります。
+> コントロールを [オン] のままにした場合、Azure SQL Database サーバーは、azure の境界内の任意のサブネットからの通信を受け入れます。これは、Azure のデータセンターに定義されている範囲内の IP アドレスのいずれかから送信されます。 コントロールを ON に設定したままにすると、セキュリティの観点からアクセスが過剰になる可能性があります。
 
 ## <a name="limitations"></a>事項
 
-- アプリ名には、文字、数字、'-'、' ('、') '、または ' _ ' のみを含めることができます。
+- アプリ名には、アルファベット、数字、ハイフン、かっこ、またはアンダースコアのみを含めることができます。
 - PowerApps で SQL Database に接続するには、SQL 認証が必要です。
 - Azure portal からキャンバスアプリを作成するときは、1つのテーブルのみを選択できます。 さらに多くのデータ接続を追加してテーブルやその他のデータソースを追加する場合は、アプリを作成した後でアプリをカスタマイズします。
 - PowerApps は、VNet サービスエンドポイントを使用して SQL Database に接続できません。 詳細については、「 [VNet サービスエンドポイント経由のアクセスの許可](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview)」を参照してください。
@@ -101,7 +101,7 @@ PowerApps は、Azure portal を使用して**Azure サービスコントロー�
 ## <a name="other-considerations"></a>その他の考慮事項
 
 - SQL Database するアプリのアクセスは、[このアプリを共有](share-app.md)するすべてのユーザーに暗黙的に共有されます。 SQL 認証資格情報に、データの読み取りと書き込みのための適切なアクセス権があることを確認します。 </br> たとえば、異なる SQL 認証資格情報を使用して同じ SQL Database に接続し、読み取りと読み取り/書き込みのアクセス権を分離する別のアプリを作成できます。
-- パフォーマンスに関する考慮事項については、スロットルの制限、デリゲート可能関数と操作、既知の問題、およびこの機能が使用する[SQL Database](https://docs.microsoft.com/connectors/sql/)コネクタの制限事項を確認してください。
+- スロットルの制限、デリゲート可能関数と操作、既知の問題、およびこの機能がパフォーマンスに関する考慮事項に使用する[SQL Database](https://docs.microsoft.com/connectors/sql/)コネクタの制限事項を確認します。
 - 既定以外の環境用のアプリを作成する必要がある場合は、 [make.powerapps.com](https://make.powerapps.com)からアプリを作成し、SQL Database のデータを使用してテナント用の別のリージョンを作成します。
 
 ## <a name="next-steps"></a>次の手順

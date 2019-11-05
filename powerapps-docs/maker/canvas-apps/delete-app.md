@@ -13,18 +13,18 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: afc0e231fbc645b0fd1c597ae2776b7b90d28c1b
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: f1f8e2edd92d36ce4c3a2b08b5ae9d2481c339ec
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71993104"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73540238"
 ---
 # <a name="delete-a-canvas-app-from-powerapps"></a>PowerApps からキャンバス アプリを削除する
 この記事では、ご利用の PowerApps アカウントおよびアプリの共有相手のアカウントからアプリを削除する方法について説明します。
 
 ## <a name="delete-an-app-from-your-account"></a>アカウントからアプリを削除する
-1. [Powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)を開き、左側の**ツリービュー**ウィンドウで **[アプリ]** を選択します。
+1. [Powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)を開き、左側の**ツリービュー**ウィンドウで **[アプリ]** を選択します。
    
     ![](./media/delete-app/file-apps.png)
 2. (省略可能) 左上隅で、アプリの一覧を絞り込んで、自分が所有しているアプリのみまたは貢献しているアプリのみを表示します。

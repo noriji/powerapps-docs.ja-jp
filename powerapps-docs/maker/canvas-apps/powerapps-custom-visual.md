@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ea94b076126aca3bc3dd687a853393e20901eeb8
-ms.sourcegitcommit: f296922b8039b573e5adb81423a544f70c56c1ee
+ms.openlocfilehash: 54d8ac3d347c0f60f82fdd73949eb2fd8545519c
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71256131"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541474"
 ---
 # <a name="powerapps-custom-visual-for-power-bi"></a>Power BI 用の PowerApps カスタム ビジュアル
 
@@ -77,7 +77,7 @@ PowerApps のカスタムビジュアルには、次の制限事項が適用さ�
 - PowerApps のカスタム ビジュアルでは、データをフィルター処理したり、データをレポートに送信したりできません。
 - レポートとは別に PowerApps アプリを共有する必要があります。 [PowerApps でのアプリの共有](share-app.md)の詳細を参照してください。
 - Power BI Report Server と Power BI 用のモバイルアプリは、PowerApps のカスタムビジュアルをサポートしていません。
-- PowerBIIntegration. Refresh () 関数を使用する場合は、 [directquery](https://docs.microsoft.com/en-us/power-bi/desktop-directquery-data-sources)をサポートするソースを使用する必要があり、データ接続は directquery メソッドを使用して作成する必要があります。
+- PowerBIIntegration. Refresh () 関数を使用する場合は、 [directquery](https://docs.microsoft.com/power-bi/desktop-directquery-data-sources)をサポートするソースを使用する必要があり、データ接続は directquery メソッドを使用して作成する必要があります。
 - Power BI Desktop の PowerApps は、編集中ではなく、アプリを作成するときに PowerApps Studio するデータを提供します。 Power BI Web を使用して、アプリの編集中にデータをプレビューします。
 
 > [!NOTE]
@@ -85,7 +85,7 @@ PowerApps のカスタムビジュアルには、次の制限事項が適用さ�
 
 ## <a name="browser-support"></a>ブラウザーサポート
 
-次の表に、PowerApps のカスタムビジュアルの表示、作成、および変更アクションのブラウザーのサポートを示します。 サポートされているブラウザーとアクションは、チェック&check;マーク () によって識別されます。
+次の表に、PowerApps のカスタムビジュアルの表示、作成、および変更アクションのブラウザーのサポートを示します。 サポートされているブラウザーとアクションは、チェックマーク (&check;) によって識別されます。
 
 |ブラウザー|モード|生成|更新
 |-|-|-|-
@@ -105,7 +105,7 @@ PowerApps のカスタムビジュアルには、次の制限事項が適用さ�
 3. キーボードの**Ctrl + Right**キーを使用してビジュアルを入力します。
 3. ビジュアルの必要なコンポーネントが選択されるまで、キーボードの**Tab**キーを使用します。
 
-詳細については、次を参照してください。[ユーザー補助ドキュメントの Power BI]( https://docs.microsoft.com/en-us/power-bi/desktop-accessibility)
+詳細については、 [Power BI アクセシビリティのドキュメント]( https://docs.microsoft.com/power-bi/desktop-accessibility)を参照してください。
 
 
 ## <a name="next-steps"></a>次の手順
