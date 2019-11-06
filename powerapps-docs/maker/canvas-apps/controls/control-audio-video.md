@@ -1,29 +1,29 @@
 ---
 title: 'オーディオとビデオのコントロール: リファレンス | Microsoft Docs'
 description: プロパティや例など、オーディオとビデオのコントロールに関する情報です
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: aab2b0bb7b236fe8cc6d7f18beb7a5c8ea8246ae
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 3b8c5ea5ee2784bc1ab97d6943045cee8da6a52f
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71993852"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650783"
 ---
 # <a name="audio-and-video-controls-in-powerapps"></a>PowerApps でのオーディオとビデオのコントロール
 オーディオ ファイル、ビデオ ファイル、または YouTube のビデオを再生するコントロールです。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 **オーディオ** コントロールは、ファイルのサウンド クリップ、 **[マイク](control-microphone.md)** コントロールからの録音、またはビデオ ファイルのオーディオ トラックを再生します。
 
 **ビデオ** コントロールは、ファイルから、または YouTube や Azure Media Services から、ビデオ クリップを再生します。  必要であれば、クローズド キャプションを表示するように指定できます。
@@ -31,7 +31,7 @@ ms.locfileid: "71993852"
 ## <a name="key-properties"></a>主要なプロパティ
 **Loop** – オーディオまたはビデオ クリップを、再生終了と同時に先頭から自動的に再開するかどうかを指定します。
 
-**Media** - オーディオまたはビデオ コントロールが再生するクリップの ID です。
+**Media** – オーディオまたはビデオ コントロールが再生するクリップの ID です。
 
 **ShowControls** – オーディオ プレイヤーまたはビデオ プレイヤーに再生ボタンと音量スライダーなどを表示するかどうか、およびペン コントロールに描画、削除、クリアなどのアイコンを表示するかどうかを指定します。
 
@@ -120,7 +120,7 @@ ms.locfileid: "71993852"
 3. Esc キーを押して既定のワークスペースに戻ります。
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 ### <a name="audio-and-video-alternatives"></a>オーディオおよびビデオの代替手段
 * ユーザーが自分のペースでマルチメディアを視聴できるように、**ShowControls** を true にする必要があります。 これにより、ユーザーはビデオ プレーヤーでクローズド キャプションや全画面モードを切り替えることもできます。
 * クローズド キャプションがビデオに対して提供されている必要があります。

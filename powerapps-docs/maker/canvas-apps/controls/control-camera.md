@@ -1,29 +1,29 @@
 ---
 title: 'カメラ コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含むカメラ コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 88b6b9faf8c4d7c14a09bfc89791a050e3c07ca2
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 14f802a899171dce052c8975f9fc63b07e448afc
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71986866"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650718"
 ---
 # <a name="camera-control-in-powerapps"></a>PowerApps のカメラ コントロール
 ユーザーがデバイスのカメラを使って写真を撮影するために使用できるコントロールです。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 このコントロールを追加した場合、ユーザーは、アプリを実行している任意の場所から 1 枚以上の写真でデータ ソースを更新できます。
 
 ## <a name="key-properties"></a>主要なプロパティ
@@ -96,7 +96,7 @@ ms.locfileid: "71986866"
 **[SaveData](../functions/function-savedata-loaddata.md)** 関数を使用して写真をローカルに保存するか、 **[Patch](../functions/function-patch.md)** 関数を使用してデータ ソースを更新します。
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 カメラのフィードを表示するだけでなく、カメラ コントロール全体も写真を撮るボタンとして機能します。 そのため、ボタンと同様のアクセシビリティの考慮事項があります。
 
 ### <a name="video-alternatives"></a>ビデオの代替手段

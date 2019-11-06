@@ -1,29 +1,29 @@
 ---
 title: '日付の選択コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含む日付の選択コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: eae69ba2337c6b220b4c83a4900846bad6589615
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 4a7def7990723e9531c4c7a3075c3c2259a45a37
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71986769"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650606"
 ---
 # <a name="date-picker-control-in-powerapps"></a>PowerApps の日付の選択コントロール
 クリックまたはタップして日付を指定できるコントロールです。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 **[テキスト入力](control-text-input.md)** コントロールの代わりに**日付の選択**コントロールを追加すると、ユーザーが適切な形式で日付を指定しやすくなります。
 
 ## <a name="key-properties"></a>主要なプロパティ
@@ -67,7 +67,7 @@ ms.locfileid: "71986769"
 
 **[Font](properties-text.md)** – テキストを表記するフォントのファミリー名です。
 
-**[FontWeight](properties-text.md)** –コントロール内のテキストの重み:**Bold**、 **Semibold**、 **Normal**、または**淡い**。
+**[FontWeight](properties-text.md)** – コントロール内のテキストの太さです。**Bold** (太字)、**Semibold** (中太)、**Normal** (標準)、**Lighter** (細字) から指定します。
 
 **[Height](properties-size-location.md)** – コントロールの上端と下端の距離です。
 
@@ -120,7 +120,7 @@ ms.locfileid: "71986769"
 4. 既定のワークスペースに戻るには、Esc キーを押します。
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 ### <a name="color-contrast"></a>色のコントラスト
 * [標準の色のコントラスト要件](../accessible-apps-color.md)が適用されます。
 

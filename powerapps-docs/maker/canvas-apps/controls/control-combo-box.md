@@ -1,29 +1,29 @@
 ---
 title: 'コンボ ボックス コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含むコンボ ボックス コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 09/13/2017
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: dbbff1f85ccc104a1a0f88c6b9670c45c0528592
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 8c4316c8f4aac11903aaad8cb624ff881173b403
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71993478"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650620"
 ---
 # <a name="combo-box-control-in-powerapps"></a>PowerApps のコンボ ボックス コントロール
 ユーザーが、提供された選択肢から選択できるようにするコントロール。  検索と複数選択をサポートしています。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 **コンボ ボックス**コントロールで、選択する項目を検索することができます。  検索は、SearchField プロパティについてサーバー側で実行されるので、パフォーマンスが非常に大規模なデータ ソースによって影響を受けることはありません。  
 
 単一選択モードまたは複数選択モードは SelectMultiple プロパティを介して構成されます。
@@ -100,7 +100,7 @@ ms.locfileid: "71993478"
 
     `First(DataSource)`
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 ### <a name="color-contrast"></a>色のコントラスト
 以下の間には適切な色のコントラストが必要です。
 * **ChevronFill** と **ChevronBackground**

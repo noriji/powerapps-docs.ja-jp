@@ -1,29 +1,29 @@
 ---
 title: '列 コントロール: リファレンス | Microsoft Docs'
 description: このトピックでは、Microsoft PowerApps の列のコントロールに関する情報を示します。
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 06/05/2017
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: bb98295a5ecac6bf12af965e4ae6c668b1900af5
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 21bc7e025515397fa853e5de7f2df574a3768935
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71986835"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650645"
 ---
 # <a name="column-control-in-powerapps"></a>PowerApps の列コントロール
 [**データ テーブル**](control-data-table.md) コントロールの単一フィールドに表示エクスペリエンスを指定します。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 [**データ テーブル**](control-data-table.md) コントロールは、表形式でデータセットを表示し、その表形式の各列は**列**コントロールによって表されます。 **列**コントロールでは、アプリ メーカーが列の外観と動作をカスタマイズするために使用できるプロパティを提供します。
 
 ## <a name="capabilities"></a>機能
@@ -65,6 +65,6 @@ ms.locfileid: "71986835"
     ![サイズが変更された列コントロール](./media/control-column/post-resize-column.png)
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 ### <a name="screen-reader-support"></a>スクリーン リーダーのサポート
 * **DisplayName** が存在する必要があります。

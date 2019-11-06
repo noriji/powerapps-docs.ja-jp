@@ -1,29 +1,29 @@
 ---
 title: 'HTML テキスト コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含む HTML テキスト コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5706b2c1b21c0135cc60678b6cf3f882df6fa56c
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: d514342bc51cdd6aa737da1b893530d702127bd1
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71986624"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650490"
 ---
 # <a name="html-text-control-in-powerapps"></a>PowerApps の HTML テキスト コントロール
 テキストを表示し、書式設定のための HTML タグを変換するボックスです。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 **HTML テキスト** コントロールは、プレーンテキストや数値を表示するだけでなく、HTML タグ (改行なしスペースなど) の変換も行います。
 
 ## <a name="key-properties"></a>主要なプロパティ
@@ -90,12 +90,12 @@ ms.locfileid: "71986624"
      **HTML テキスト** コントロールは **[ラベル](control-text-box.md)** コントロールと同じテキストを表示しますが、タグを適切な文字に変換します。
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 **HTML テキスト**は対話型にするためのものではありません。 テキストの表示目的にのみ使用してください。
 
 ### <a name="color-contrast"></a>色のコントラスト
 以下の間には適切な色のコントラストが必要です。
-* **[Color](properties-color-border.md)** と **[Fill](properties-color-border.md)**
+* **[色](properties-color-border.md)** と **[塗りつぶし](properties-color-border.md)**
 * カスタムの色とその背景があるテキスト
 
 ### <a name="screen-reader-support"></a>スクリーン リーダーのサポート

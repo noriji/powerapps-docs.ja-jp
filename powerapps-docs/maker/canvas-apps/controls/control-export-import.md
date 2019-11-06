@@ -1,29 +1,29 @@
 ---
 title: 'エクスポート コントロールおよびインポート コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含むエクスポート コントロールおよびインポート コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 271d37c5cbd68b41a2818441161572bd9386e107
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 942b4b1f5f10cf17d2a33e9f9604661256d99ea6
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71986734"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650542"
 ---
 # <a name="export-control-and-import-control-in-powerapps"></a>PowerApps のエクスポート コントロールおよびエクスポート コントロール
 ローカル ファイルにデータをエクスポートするコントロールと、そのデータを PowerApps 内の別のアプリにインポートするコントロール。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 同じデータを使用する複数のアプリを作成し、これら以外のアプリとはそのデータを共有しない場合には、**エクスポート** コントロールと**インポート** コントロールを使用してデータをエクスポートおよびインポートできます。 データをエクスポートすると、別のコンピューターにコピー可能な圧縮ファイルが作成されます。このファイルは、PowerApps 以外のプログラムでは読み取ることはできません。
 
 ## <a name="warning"></a>警告
@@ -66,7 +66,7 @@ ms.locfileid: "71986734"
 
 **[Font](properties-text.md)** – テキストを表記するフォントのファミリー名です。
 
-**[FontWeight](properties-text.md)** –コントロール内のテキストの重み:**Bold**、 **Semibold**、 **Normal**、または**淡い**。
+**[FontWeight](properties-text.md)** – コントロール内のテキストの太さです。**Bold** (太字)、**Semibold** (中太)、**Normal** (標準)、**Lighter** (細字) から指定します。
 
 **[Height](properties-size-location.md)** – コントロールの上端と下端の距離です。
 
@@ -131,5 +131,5 @@ ms.locfileid: "71986734"
 8. Esc キーを押し、 **[ファイル]** メニューの **[コレクション]** をクリックまたはタップして、エクスポート済みのデータが現在のアプリに存在することを確認します。
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 **Export** と **Import** は特殊なボタンなので、 **[ボタン](control-button.md)** と同じガイドラインが適用されます。

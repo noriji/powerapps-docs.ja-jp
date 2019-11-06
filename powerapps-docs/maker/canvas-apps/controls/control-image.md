@@ -1,29 +1,29 @@
 ---
 title: 'イメージ コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含むイメージ コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: cc25c16e9d79a80a5a21f793e66ce1cbc38960cb
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: fb0ce1bca968d0e23dc10544a824b340ab336936
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71993465"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650456"
 ---
 # <a name="image-control-in-powerapps"></a>PowerApps のイメージ コントロール
 ローカル ファイルやデータ ソースの画像を表示するコントロールです。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 アプリに**イメージ** コントロールを 1 つまたは複数追加すると、データ セットに含まれていない個々の画像を表示したり、データ ソースのレコードの画像を組み合わせたりすることができます。
 
 ## <a name="key-properties"></a>主要なプロパティ
@@ -137,7 +137,7 @@ ms.locfileid: "71993465"
     **ギャラリー** コントロールに、ダウンロードした Excel ファイルに含まれるリンクに基づくカーペット製品、硬木の製品、およびタイル製品の画像が表示されます。
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 ### <a name="color-contrast"></a>色のコントラスト
 * グラフィックがボタンとして使用される場合、[標準の色のコントラスト要件](../accessible-apps-color.md)が適用されます。
 * 純粋に装飾でないイメージの場合、イメージ内のコントラストの問題を確認すること検討してください。

@@ -1,29 +1,29 @@
 ---
 title: '画像の追加コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含む画像の追加コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 81c96c7a2a23a770acfcc1936147a3b466f8c86d
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 1970c373b7614644897620e2c6d60f4472add568
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71993863"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650815"
 ---
 # <a name="add-picture-control-in-powerapps"></a>PowerApps の画像の追加コントロール
 写真を撮影したり、ローカルのデバイスから画像を読み込んだりします。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 このコントロールを使用すると、ユーザーは写真を撮影したり、デバイスから画像ファイルをアップロードしたりして、このコンテンツでデータ ソースを更新できます。 モバイル デバイスでは、デバイスの選択ダイアログが表示され、ユーザーは写真を撮影するか、既存の画像を使用するかを選択できます。
 
 このコントロールは、 **[イメージ]** と **[メディアの追加] ボタン**の 2 つのコントロールを含むグループ化されたコントロールです。 **イメージ** コントロールには、アップロードされたイメージか、イメージがアップロードされていない場合はプレースホルダーが表示されます。 **[メディアの追加] ボタン**は、イメージをアップロードするように求めます。
@@ -63,7 +63,7 @@ ms.locfileid: "71993863"
 
 **[Font](properties-text.md)** – テキストを表記するフォントのファミリー名です。
 
-**[FontWeight](properties-text.md)** –コントロール内のテキストの重み:**Bold**、 **Semibold**、 **Normal**、または**淡い**。
+**[FontWeight](properties-text.md)** – コントロール内のテキストの太さです。**Bold** (太字)、**Semibold** (中太)、**Normal** (標準)、**Lighter** (細字) から指定します。
 
 **[Height](properties-size-location.md)** – コントロールの上端と下端の距離です。
 
@@ -138,7 +138,7 @@ ms.locfileid: "71993863"
 **[SaveData](../functions/function-savedata-loaddata.md)** 関数を使用して画像をローカルに保存するか、 **[Patch](../functions/function-patch.md)** 関数を使用してデータ ソースを更新します。
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 **[ボタン](control-button.md)** および **[イメージ](control-image.md)** と同じガイドラインが適用されます。 さらに次の点について考慮してください。
 
 ### <a name="color-contrast"></a>色のコントラスト

@@ -1,29 +1,29 @@
 ---
 title: 'ボタン コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含むボタン コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a49e79da6821e814a918722e70daa1b005f28777
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 750b02bdd3363f03ad0f32ae1fcbc59d7c5c3f3e
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71993821"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650735"
 ---
 # <a name="button-control-in-powerapps"></a>PowerApps のボタン コントロール
 クリックまたはタップするとアプリを操作できるコントロールです。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 ユーザーが**ボタン** コントロールをクリックまたはタップしたときに 1 つ以上の数式を実行するように、このコントロールの **[OnSelect](properties-core.md)** プロパティを構成します。
 
 ## <a name="key-properties"></a>主要なプロパティ
@@ -60,7 +60,7 @@ ms.locfileid: "71993821"
 
 **[Font](properties-text.md)** – テキストを表記するフォントのファミリー名です。
 
-**[FontWeight](properties-text.md)** –コントロール内のテキストの重み:**Bold**、 **Semibold**、 **Normal**、または**淡い**。
+**[FontWeight](properties-text.md)** – コントロール内のテキストの太さです。**Bold** (太字)、**Semibold** (中太)、**Normal** (標準)、**Lighter** (細字) から指定します。
 
 **[Height](properties-size-location.md)** – コントロールの上端と下端の距離です。
 
@@ -186,7 +186,7 @@ PowerApps の既定では、角の丸い四角形の**ボタン** コントロ�
 * 作成したいずれかのボタンで、 **[ColorFade](../functions/function-colors.md)** 関数を **[ColorValue](../functions/function-colors.md)** 関数に置き換え、効果を確認します。
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 ### <a name="color-contrast"></a>色のコントラスト
 * [標準の色のコントラスト要件](../accessible-apps-color.md)が適用されます。
 

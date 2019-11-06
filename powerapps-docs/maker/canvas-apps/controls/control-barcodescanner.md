@@ -1,30 +1,30 @@
 ---
 title: 'Web バーコード-スキャナーコントロール: リファレンス |Microsoft Docs'
 description: プロパティと例を含む、バーコードスキャナーコントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d1162c0c9954e67196eb4d3e42b2c91bdc3bf804
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: e80f34917bba942f85e141c382cf3b1caa5e6d44
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71986990"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650751"
 ---
 # <a name="web-barcode-scanner-control-experimental-in-powerapps"></a>Web バーコード-PowerApps でのスキャナーコントロール (試験段階)
 
 従来のバーコードスキャンコントロール。 web ブラウザーでのコードのスキャンに便利な場合があります。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 
 コントロールは、ユーザーがすべてのデバイスでバーコードをスキャンできるように、アプリにカメラフィードを表示します。 パフォーマンスが低下しているため、コントロールは廃止されています。また、モバイル **[バーコードスキャナー](control-new-barcode-scanner.md)** コントロールは、このコントロールを置き換えます。
 
@@ -82,7 +82,7 @@ ms.locfileid: "71986990"
 
     ラベルには、スキャンされたバーコードが表示されます。
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 
 ### <a name="video-alternatives"></a>ビデオの代替手段
 

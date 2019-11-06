@@ -1,29 +1,29 @@
 ---
 title: '縦棒グラフ コントロールと折れ線グラフ コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含む縦棒グラフ コントロールと折れ線グラフ コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d9595a466477f9fc8ac535b08f43fe352ea0fd8b
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 355793d572f6c4b6578d6cabff221c79e0724a93
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71993511"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650671"
 ---
 # <a name="column-chart-and-line-chart-controls-in-powerapps"></a>PowerApps での縦棒グラフ コントロールと折れ線グラフ コントロール
 X 軸と Y 軸からなるグラフとしてデータを表示するコントロールです。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 **縦棒グラフ** コントロールと**折れ線グラフ** コントロールはグループ化されたコントロールです。 各グループには、タイトルの **[ラベル](control-text-box.md)** 、グラフのグラフィック、および**凡例**の 3 つのコントロールが含まれています。
 
 ## <a name="chart-key-properties"></a>グラフの主要なプロパティ
@@ -128,7 +128,7 @@ X 軸と Y 軸からなるグラフとしてデータを表示するコントロ
     コントロールに、過去 3 年間の各製品の売上データが表示されます。
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 ### <a name="color-contrast"></a>色のコントラスト
 以下の間には適切な色のコントラストが必要です。
 * **ItemColorSet** の各項目
