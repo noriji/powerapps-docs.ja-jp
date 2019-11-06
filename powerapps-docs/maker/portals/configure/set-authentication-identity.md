@@ -9,16 +9,16 @@ ms.custom: ''
 ms.date: 10/18/2019
 ms.author: shjais
 ms.reviewer: ''
-ms.openlocfilehash: 3904de43a8e27ca555545cccdf23532970b02edd
-ms.sourcegitcommit: 57b968b542fc43737330596d840d938f566e582a
+ms.openlocfilehash: 44b45a019b786da01dc686ecb69f068ce1d7eef8
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72978142"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73542670"
 ---
 # <a name="set-authentication-identity-for-a-portal"></a>ポータルの認証 id を設定する
 
-ポータルには、 [ASP.NET Identity](http://www.asp.net/identity) API 上に構築された認証機能が用意されています。 ASP.NET Identity は[OWIN](http://www.asp.net/aspnet/overview/owin-and-katana) framework 上に構築されています。これは、認証システムの重要なコンポーネントでもあります。 提供されるサービスは次のとおりです。
+ポータルには、 [ASP.NET Identity](https://www.asp.net/identity) API 上に構築された認証機能が用意されています。 ASP.NET Identity は[OWIN](https://www.asp.net/aspnet/overview/owin-and-katana) framework 上に構築されています。これは、認証システムの重要なコンポーネントでもあります。 提供されるサービスは次のとおりです。
 
 - ローカル (ユーザー名/パスワード) のユーザーサインイン
 - サードパーティの id プロバイダーを使用した外部 (ソーシャルプロバイダー) のユーザーサインイン
@@ -92,7 +92,7 @@ ms.locfileid: "72978142"
 
 **関連プロセス:** 招待状の送信
 
-このワークフローによって送信される電子メールは、ポータルの [使用の招待] ページの URL を使用してカスタマイズする必要があります。 http://portal.contoso.com/register/?returnurl=%2f&invitation={Invitation コード (招待)}
+このワークフローによって送信される電子メールは、ポータルの [使用の招待] ページの URL を使用してカスタマイズする必要があります。 https://portal.contoso.com/register/?returnurl=%2f&invitation={Invitation コード (招待)}
 
 1. 新しい連絡先の招待を作成します。
 
@@ -202,7 +202,7 @@ ms.locfileid: "72978142"
 | 認証/登録/ResetPasswordRequiresConfirmedEmail |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               確認済みの電子メールアドレスに対してのみ、パスワードのリセットを有効または無効にします。 有効にした場合、未確認の電子メールアドレスを使用してパスワードリセットの手順を送信することはできません。 既定値: false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |   Authentication/Registration/Triggerlockouton失敗パスワード    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          失敗したパスワード試行の記録を有効または無効にします。 無効にした場合、ユーザーアカウントはロックアウトされません。既定値: true                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 |             認証/登録/IsDemoMode              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                          開発環境またはデモンストレーション環境でのみ使用するデモモードフラグを有効または無効にします。 運用環境ではこの設定を有効にしないでください。 デモモードでは、web ブラウザーが web アプリケーションサーバーに対してローカルで実行されている必要もあります。 デモモードを有効にすると、パスワードリセットコードと2番目の要素コードがユーザーに表示され、すばやくアクセスできるようになります。 既定値: false                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-|    認証/登録/LoginButtonAuthenticationType    | ポータルで1つの外部 id プロバイダー (すべての認証を処理するため) のみが必要な場合は、ヘッダーナビゲーションバーの **サインイン** ボタンを使用して、外部 id プロバイダーのサインインページに直接リンクすることができます (代わりに、中間にリンクします)。ローカルサインインフォームおよび id プロバイダーの選択 ページ)。 このアクションに対して選択できる id プロバイダーは1つだけです。 プロバイダーの[AuthenticationType](https://msdn.microsoft.com/library/microsoft.owin.security.authenticationoptions.authenticationtype.aspx)値を指定します。<br>OpenIdConnect を使用したシングルサインオン構成 (Azure Active Directory B2C の使用など) の場合、ユーザーは権限を提供する必要があります。<br>OAuth2 ベースのプロバイダーの場合、許容される値は `Facebook, Google, Yahoo, [!INCLUDE[cc-microsoft](../../../includes/cc-microsoft.md)], LinkedIn, Yammer,` または `Twitter`<br>WS-FEDERATION ベースのプロバイダーの場合は、`Authentication/WsFederation/ADFS/AuthenticationType` と `Authentication/WsFederation/[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)]/\[provider\]/AuthenticationType` のサイト設定に指定された値を使用します。 例: http://adfs.contoso.com/adfs/services/trust 、Facebook-0123456789、Google、Yahoo!、uri:[!INCLUDE[pn-ms-windows-short](../../../includes/pn-ms-windows-short.md)] LiveID。 |
+|    認証/登録/LoginButtonAuthenticationType    | ポータルで1つの外部 id プロバイダー (すべての認証を処理するため) のみが必要な場合は、ヘッダーナビゲーションバーの **サインイン** ボタンを使用して、外部 id プロバイダーのサインインページに直接リンクすることができます (代わりに、中間にリンクします)。ローカルサインインフォームおよび id プロバイダーの選択 ページ)。 このアクションに対して選択できる id プロバイダーは1つだけです。 プロバイダーの[AuthenticationType](https://msdn.microsoft.com/library/microsoft.owin.security.authenticationoptions.authenticationtype.aspx)値を指定します。<br>OpenIdConnect を使用したシングルサインオン構成 (Azure Active Directory B2C の使用など) の場合、ユーザーは権限を提供する必要があります。<br>OAuth2 ベースのプロバイダーの場合、許容される値は `Facebook, Google, Yahoo, [!INCLUDE[cc-microsoft](../../../includes/cc-microsoft.md)], LinkedIn, Yammer,` または `Twitter`<br>WS-FEDERATION ベースのプロバイダーの場合は、`Authentication/WsFederation/ADFS/AuthenticationType` と `Authentication/WsFederation/[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)]/\[provider\]/AuthenticationType` のサイト設定に指定された値を使用します。 例: https://adfs.contoso.com/adfs/services/trust 、Facebook-0123456789、Google、Yahoo!、uri:[!INCLUDE[pn-ms-windows-short](../../../includes/pn-ms-windows-short.md)] LiveID。 |
 |                                                                 |                                                                                                                                                                                                                                                                                                  |
 
 ## <a name="enable-or-disable-user-registration"></a>ユーザー登録を有効または無効にする

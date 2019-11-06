@@ -9,12 +9,12 @@ ms.custom: ''
 ms.date: 10/07/2019
 ms.author: shjais
 ms.reviewer: ''
-ms.openlocfilehash: ab51a2b1a309921e32949a806adb4a7bf3273ccf
-ms.sourcegitcommit: 5338e01d2591f76d71f09b1fb229d405657a0c1c
+ms.openlocfilehash: f94dee983d5d2d9cedf417f2843a2c10c46b82c1
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72974692"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73543326"
 ---
 # <a name="manage-sharepoint-documents"></a>SharePoint ドキュメントの管理
 
@@ -38,7 +38,7 @@ Common Data Service 内から [!INCLUDE[pn-sharepoint-short](../../includes/pn-s
 
 ## <a name="step-1-enable-document-management-functionality-in-model-driven-apps-in-dynamics-365"></a>手順 1: Dynamics 365 でモデル駆動型アプリのドキュメント管理機能を有効にする
 
-サーバーベースの [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] 統合を使用して、Dynamics 365 のモデル駆動型アプリでドキュメント管理機能を有効にする必要があります。 サーバーベースの [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] 統合により、Dynamics 365 および [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] のモデル駆動型アプリは、サーバー間接続を実行できます。 既定の [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] サイトレコードは、ポータルで使用されます。 Dynamics 365 でモデル駆動型アプリのドキュメント管理機能を有効にする方法については、「 [dynamics 365 でモデル駆動型アプリを設定して SharePoint Online を使用する](https://docs.microsoft.com/en-us/power-platform/admin/set-up-dynamics-365-online-to-use-sharepoint-online)」を参照してください。
+サーバーベースの [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] 統合を使用して、Dynamics 365 のモデル駆動型アプリでドキュメント管理機能を有効にする必要があります。 サーバーベースの [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] 統合により、Dynamics 365 および [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] のモデル駆動型アプリは、サーバー間接続を実行できます。 既定の [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] サイトレコードは、ポータルで使用されます。 Dynamics 365 でモデル駆動型アプリのドキュメント管理機能を有効にする方法については、「 [dynamics 365 でモデル駆動型アプリを設定して SharePoint Online を使用する](https://docs.microsoft.com/power-platform/admin/set-up-dynamics-365-online-to-use-sharepoint-online)」を参照してください。
 
 ## <a name="step-2-set-up-sharepoint-integration-from-powerapps-portals-admin-center"></a>手順 2: PowerApps ポータル管理センターから SharePoint 統合をセットアップする
 
@@ -52,7 +52,7 @@ Common Data Service 内から [!INCLUDE[pn-sharepoint-short](../../includes/pn-s
 2.  **[!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] 統合を有効に**する >  **[!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] 統合のセットアップ**に関するページを参照してください。
 
     > [!div class=mx-imgBorder]
-    > Sharepoint![統合を有効]にする(media/enable-sharepoint-integration.png "sharepoint 統合を有効にする")
+    > ![SharePoint 統合を有効にする](media/enable-sharepoint-integration.png "SharePoint 統合を有効にする")
 
 3.  確認ウィンドウで **[有効化]** を選択します。 これにより、ポータルは [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)]と通信できるようになります。 [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] 統合が有効になっている間、ポータルは再起動され、数分間利用できなくなります。 [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] 統合が有効になっていると、メッセージが表示されます。
 
@@ -61,12 +61,12 @@ Common Data Service 内から [!INCLUDE[pn-sharepoint-short](../../includes/pn-s
 - **[!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] 統合を無効**にする: ポータルとの [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] 統合を無効にすることができます。 [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] 統合が無効になっている間は、ポータルが再起動され、数分間利用できなくなります。 [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] 統合が無効になると、メッセージが表示されます。
 
     > [!div class=mx-imgBorder]
-    > ![Sharepoint 統合の無効化](media/disable-sharepoint-integration.png "sharepoint 統合の無効化")
+    > ![SharePoint 統合を無効にする](media/disable-sharepoint-integration.png "SharePoint 統合を無効にする")
 
 [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] 統合を有効または無効にすると、ポータルの [!INCLUDE[pn-azure-active-directory](../../includes/pn-azure-active-directory.md)] ([!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD) アプリケーションが更新され、必要な [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] アクセス許可がそれぞれ追加または削除されます。 また、[!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD アプリケーションで行われる変更の同意を得るためにもリダイレクトされます。 
 
 > [!div class=mx-imgBorder]
-> ![Sharepoint 統合の無効化](media/sharepoint-integration-consent.png "sharepoint 統合の無効化")
+> ![SharePoint 統合を無効にする](media/sharepoint-integration-consent.png "SharePoint 統合を無効にする")
 
 同意しない場合:
 
@@ -76,7 +76,7 @@ Common Data Service 内から [!INCLUDE[pn-sharepoint-short](../../includes/pn-s
 
 
 ## <a name="step-3-enable-document-management-for-entities"></a>手順 3: エンティティのドキュメント管理を有効にする
-エンティティのドキュメント管理を有効にして、エンティティレコードに関連するドキュメントを [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)]に格納する必要があります。 エンティティのドキュメント管理を有効にする方法については、「[特定のエンティティに対する SharePoint ドキュメント管理の有効化](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/enable-sharepoint-document-management-specific-entities)」を参照してください。
+エンティティのドキュメント管理を有効にして、エンティティレコードに関連するドキュメントを [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)]に格納する必要があります。 エンティティのドキュメント管理を有効にする方法については、「[特定のエンティティに対する SharePoint ドキュメント管理の有効化](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-sharepoint-document-management-specific-entities)」を参照してください。
 
 ## <a name="step-4-configure-the-appropriate-form-to-display-documents"></a>手順 4: ドキュメントを表示するための適切なフォームを構成する
 
@@ -150,12 +150,12 @@ Common Data Service 内から [!INCLUDE[pn-sharepoint-short](../../includes/pn-s
         c. フォームエディターで**Web-Edit ケース**を開きます。
 
          > [!div class=mx-imgBorder]
-         > ![Web 編集ケースフォーム](media/web-edit-case-form.png "web 編集ケースフォーム")
+         > ![Web 編集ケースフォーム](media/web-edit-case-form.png "Web 編集ケースフォーム")
     
         d. フォームの **[作成日]** フィールドを選択し、 **[挿入]** タブで **[サブグリッド]** を選択します。
 
          > [!div class=mx-imgBorder]
-         > サブ![グリッドを Web 編集ケースフォームに追加]するサブ(media/add-sub-grid.png "グリッドを web 編集ケースフォームに追加する")
+         > ![Web 編集のケースフォームにサブグリッドを追加する](media/add-sub-grid.png "Web 編集のケースフォームにサブグリッドを追加する")
     
         e. **[プロパティの設定]** ダイアログボックスで、次のプロパティを設定し、[ **OK]** を選択します。
 
@@ -168,7 +168,7 @@ Common Data Service 内から [!INCLUDE[pn-sharepoint-short](../../includes/pn-s
          - **既定のビュー**: アクティブなドキュメントの場所
 
          > [!div class=mx-imgBorder]
-         > サブ![グリッドのプロパティ]サブグリッドの(media/sub-grid-properties.png "プロパティ")
+         > ![サブグリッドのプロパティ](media/sub-grid-properties.png "サブグリッドのプロパティ")
 
         f. フォームエディターで、 **[保存]** を選択し、 **[発行]** を選択します。
 
@@ -189,7 +189,7 @@ Common Data Service 内から [!INCLUDE[pn-sharepoint-short](../../includes/pn-s
          - **エンティティアクセス許可**: 有効
     
          > [!div class=mx-imgBorder]
-         > ![カスタマーサービス-ケースフォームの編集](media/customer-service-edit-case-form.png "カスタマーサービス-ケースフォームの")編集
+         > ![カスタマーサービス-ケースフォームの編集](media/customer-service-edit-case-form.png "カスタマーサービス-ケースフォームの編集")
     
         d. フォームに変更を加えた場合は、 **[保存]** を選択します。
 
@@ -218,14 +218,14 @@ Common Data Service 内から [!INCLUDE[pn-sharepoint-short](../../includes/pn-s
     - **特権**: 読み取り、作成、追加、書き込み、削除
 
       > [!div class=mx-imgBorder]
-      > ![カスタマーサービスエンティティアクセス許可](media/customer-service-entity-permission.png "カスタマーサービスエンティティアクセス許可")
+      > ![Customer Service エンティティアクセス許可](media/customer-service-entity-permission.png "Customer Service エンティティアクセス許可")
   
    4. ポータルにサインインして、ドキュメント管理がケースエンティティに対して有効になっていることを確認します。
 
       a. **サポート**ページにアクセスします。
 
       > [!div class=mx-imgBorder]
-      > ![ポータルサポートページ](media/portal-support-page.png "ポータルのサポートページ")
+      > ![ポータルのサポートページ](media/portal-support-page.png "ポータルのサポートページ")
 
       b. 一覧から既存のケースレコードをクリックします。 ページの**ケースドキュメント**セクションにアクセスし、ドキュメントリストが追加されていることを確認します。
 
