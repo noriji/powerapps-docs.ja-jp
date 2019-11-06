@@ -1,30 +1,30 @@
 ---
 title: 'ラベル コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含むラベル コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f62aa84867a3aa4eae582b3fde320e84becdeeff
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 66de4ee34cf52f3c351fe3f9c624596e5dd1211d
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71986304"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73649837"
 ---
 # <a name="label-control-in-canvas-apps"></a>キャンバスアプリのラベルコントロール
 
 テキスト、数値、日付、通貨などのデータを表示するボックスです。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 
 ラベルには、入力した内容がそのまま表示されるリテラル文字列として、またはテキスト文字列に評価される数式として指定したデータが表示されます。 ラベルは通常、他のコントロール (画面を識別するためのバナーなど) の外側に、別のコントロール (評価コントロール、オーディオ コントロールなど) を識別するラベルとして、またはギャラリー内の項目に関する特定の種類の情報を示すために表示されます。
 
@@ -66,7 +66,7 @@ ms.locfileid: "71986304"
 
 **[FocusedBorderThickness](properties-color-border.md)** – コントロールにフォーカスがあるときのコントロールの境界線の太さです。
 
-**[FontWeight](properties-text.md)** –コントロール内のテキストの重み:**Bold**、 **Semibold**、 **Normal**、または**淡い**。
+**[FontWeight](properties-text.md)** – コントロール内のテキストの太さです。**Bold** (太字)、**Semibold** (中太)、**Normal** (標準)、**Lighter** (細字) から指定します。
 
 **[Height](properties-size-location.md)** – コントロールの上端と下端の距離です。
 
@@ -150,7 +150,7 @@ ms.locfileid: "71986304"
   
     **[Today](../functions/function-now-today-istoday.md)** 関数または[その他の関数](../formula-reference.md)については各関連記事を参照してください。
 
-### <a name="show-data-in-a-gallery"></a>ギャラリーにデータを表示する
+### <a name="show-data-in-a-gallery"></a>ギャラリーのデータの表示
 
 この手順では、**CityPopulations** というコレクションを作成し、ヨーロッパのさまざまな都市の人口に関するデータを格納します。 次に、3 つのラベルを含むギャラリーにデータを表示し、各ラベルに表示するデータの種類を指定します。
 
@@ -162,7 +162,7 @@ ms.locfileid: "71986304"
     ギャラリーを選択すると、右側のペインにそのギャラリーのオプションが表示されます。
 4. **Gallery1** ペインで、上部の一覧を **Population** に、中央の一覧を **City** に、下部の一覧を **Country** にそれぞれ設定します。
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 
 名前とは異なり、**ラベル** コントロールを別のコントロールのラベルとして使用する必要はありません。 任意のテキストを表示するために使用できます。
 
@@ -172,7 +172,7 @@ ms.locfileid: "71986304"
 
 以下の間には適切な色のコントラストが必要です。
 
-* **[Color](properties-color-border.md)** と **[Fill](properties-color-border.md)**
+* **[色](properties-color-border.md)** と **[塗りつぶし](properties-color-border.md)**
 * その他の[標準の色のコントラスト要件](../accessible-apps-color.md)が適用されます (ボタンまたはリンクとして使用される場合)
 
 ### <a name="screen-reader-support"></a>スクリーン リーダーのサポート
