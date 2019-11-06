@@ -1,29 +1,29 @@
 ---
 title: 'リッチ テキスト エディター コントロール: リファレンス | Microsoft Docs'
 description: プロパティとサンプルを含むリッチ テキスト エディター コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/24/2018
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c6b94f636ebf6d373c3fc2117b589116b5a4a2fd
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: ec991f54ff4b395026c9a869c315f75a549da79e
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71986361"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73649793"
 ---
 # <a name="rich-text-editor-control-in-powerapps"></a>PowerApps のリッチテキストエディターコントロール
 エンドユーザーが WYSIWYG 編集領域内のテキストを書式設定できるようにします。  出力形式は、HTML です。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 **リッチ テキスト エディター** コントロールにより、アプリのユーザーにテキストの書式設定のための WYSIWYG 編集領域が提供されます。  コントロールの入出力形式は HTML です。
 
 コントロールにより、(Web ブラウザーまたは Word から) コピーしたリッチ テキストを コントロールに貼り付けることができます。  
@@ -64,7 +64,7 @@ ms.locfileid: "71986361"
 **[Y](properties-size-location.md)** – コントロールの上端とその親コンテナー (親コンテナーがない場合は画面) の上端間の距離です。
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 ### <a name="screen-reader-support"></a>スクリーン リーダーのサポート
 * **[AccessibleLabel](properties-accessibility.md)** が存在する必要があります。
 

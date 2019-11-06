@@ -1,29 +1,29 @@
 ---
 title: 'テキスト入力コントロール: リファレンス | Microsoft Docs'
 description: プロパティとサンプルを含むテキスト入力コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b5b8e0b9bae3a7733a8499fb096c04e19c878045
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: e17f580a98013f385080ea1189281607825ce7a8
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71993278"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73649895"
 ---
 # <a name="text-input-control-in-powerapps"></a>PowerApps のテキスト入力コントロール
 ユーザーがテキスト、数値、およびその他のデータを入力できるボックス。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 ユーザーは、テキスト入力コントロールに入力してデータを指定できます。 アプリの構成方法に応じて、そのデータをデータ ソースに追加したり、一時的な値を計算するために使用したり、他の方法で組み込んだりすることができます。
 
 ## <a name="key-properties"></a>主要なプロパティ
@@ -64,7 +64,7 @@ ms.locfileid: "71993278"
 
 **[Font](properties-text.md)** – テキストを表記するフォントのファミリー名です。
 
-**[FontWeight](properties-text.md)** –コントロール内のテキストの重み:**Bold**、 **Semibold**、 **Normal**、または**淡い**。
+**[FontWeight](properties-text.md)** – コントロール内のテキストの太さです。**Bold** (太字)、**Semibold** (中太)、**Normal** (標準)、**Lighter** (細字) から指定します。
 
 **Format** – ユーザー入力を数字のみに制限するか、すべてのテキストを許可するかを指定します。
 
@@ -171,7 +171,7 @@ ms.locfileid: "71993278"
 1. (省略可能) ボタンを追加し、その **[Text](properties-core.md)** プロパティに **Sign in** と表示されるように設定し、タイマーを追加して、ユーザーが間違ったパスワードを入力して、 **[Sign in]** ボタンをクリックまたはタップした場合に、一定の時間テキスト入力コントロールを無効にします。
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 ### <a name="color-contrast"></a>色のコントラスト
 * [標準の色のコントラスト要件](../accessible-apps-color.md)が適用されます。
 

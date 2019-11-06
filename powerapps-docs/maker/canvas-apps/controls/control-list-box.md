@@ -1,29 +1,29 @@
 ---
 title: 'リスト ボックス コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含む、リスト ボックス コントロールに関する情報です
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4b12bb62011e24e2dfdb12d9d355432aa2bcadb6
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: d211af5c34874a0ea0afe80af91c2f65495a7a60
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71986573"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650497"
 ---
 # <a name="list-box-control-in-powerapps"></a>PowerApps のリスト ボックス コントロール
 ユーザーが 1 つまたは複数の項目を選択できるリストです。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 **リスト ボックス** コントロールは、使用可能なすべての選択肢が常に表示されており ( **[ドロップ ダウン](control-drop-down.md)** コントロールと異なる点)、ユーザーは一度に複数の項目を選択できます ( **[ラジオ](control-radio.md)** コントロールと異なる点)。
 
 ## <a name="key-properties"></a>主要なプロパティ
@@ -62,7 +62,7 @@ ms.locfileid: "71986573"
 
 **[Font](properties-text.md)** – テキストを表記するフォントのファミリー名です。
 
-**[FontWeight](properties-text.md)** –コントロール内のテキストの重み:**Bold**、 **Semibold**、 **Normal**、または**淡い**。
+**[FontWeight](properties-text.md)** – コントロール内のテキストの太さです。**Bold** (太字)、**Semibold** (中太)、**Normal** (標準)、**Lighter** (細字) から指定します。
 
 **[Height](properties-size-location.md)** – コントロールの上端と下端の距離です。
 
@@ -144,9 +144,9 @@ ms.locfileid: "71986573"
      ![ドロップダウン リストの床の名前](./media/control-list-box/flooring-names.png)
 4. 各 **[ドロップ ダウン](control-drop-down.md)** コントロールの **[Visible](properties-core.md)** プロパティに、次の値の 1 つを設定します。
    
-   * CarpetList**If (カテゴリ一覧の "カーペット" SelectedItems, true)**
-   * HardwoodList**If (カテゴリの一覧の "SelectedItems, true)**
-   * TileList**If (カテゴリの一覧の "Tile" SelectedItems, true)**
+   * CarpetList: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
+   * HardwoodList: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**
+   * TileList: **If("Tile" in CategoryList.SelectedItems.Value, true)**
      
      **[If](../functions/function-if.md)** 関数や[その他の関数](../formula-reference.md)については各関連記事を参照してください。
 5. F5 キーを押し、**CategoryList** で 1 つまたは複数の項目を選択します。
@@ -157,7 +157,7 @@ ms.locfileid: "71986573"
 6. (省略可能) Esc キーを押して既定のワークスペースに戻ります。
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 ### <a name="color-contrast"></a>色のコントラスト
 以下の間には適切な色のコントラストが必要です。
 * **SelectionColor** と **SelectionFill**

@@ -1,29 +1,29 @@
 ---
 title: '円グラフ コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含む円グラフ コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 7a7c69be8fea874a6d911fa26909a7b3ece0bce5
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 2037de5ab55839b5908fb4789ca3fcda6836f4d9
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71986401"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650342"
 ---
 # <a name="pie-chart-control-in-powerapps"></a>PowerApps の円グラフ コントロール
 互いに比較した相対値を表示するコントロールです。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 左端の列にラベルを、左から 2 番目の列に値を含むテーブルの相対的なデータを表示する場合は、**円グラフ** コントロールを追加します。
 
 このコントロールは、タイトルの **[ラベル](control-text-box.md)** 、グラフのグラフィック、および**凡例**の 3 つのコントロールを含むグループ化されたコントロールです。
@@ -94,7 +94,7 @@ ms.locfileid: "71986401"
     **円グラフ** コントロールには、他の製品に関連した製品ごとの収益データが表示されます。
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 ### <a name="color-contrast"></a>色のコントラスト
 以下の間には適切な色のコントラストが必要です。
 * **ItemColorSet** の各項目

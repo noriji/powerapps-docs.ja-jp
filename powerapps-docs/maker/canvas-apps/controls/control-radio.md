@@ -1,30 +1,30 @@
 ---
 title: '無線コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含むラジオ コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 07/06/2018
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e3a1e1c5a62552f9ef034b6f4985213b65247627
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: cba6b072721efa04ce28606cd027939823c2f7c9
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71986377"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73649771"
 ---
 # <a name="radio-control-in-powerapps"></a>PowerApps のラジオ コントロール
 
 複数のオプションが表示され、ユーザーは一度に 1 つだけ選択できる入力コントロール。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 
 HTML の標準的な入力コントロールである**ラジオ** コントロールは、少数の相互に排他的なオプションに使用するのに最適です。
 
@@ -70,7 +70,7 @@ HTML の標準的な入力コントロールである**ラジオ** コントロ�
 
 **[Font](properties-text.md)** – テキストを表記するフォントのファミリー名です。
 
-**[FontWeight](properties-text.md)** –コントロール内のテキストの重み:**Bold**、 **Semibold**、 **Normal**、または**淡い**。
+**[FontWeight](properties-text.md)** – コントロール内のテキストの太さです。**Bold** (太字)、**Semibold** (中太)、**Normal** (標準)、**Lighter** (細字) から指定します。
 
 **[Height](properties-size-location.md)** – コントロールの上端と下端の距離です。
 
@@ -152,7 +152,7 @@ HTML の標準的な入力コントロールである**ラジオ** コントロ�
 
 4. (省略可能) Alt キーを押しながら他のオプションを選択して、適切なテキストが表示されることを確認します。
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 
 ### <a name="color-contrast"></a>色のコントラスト
 

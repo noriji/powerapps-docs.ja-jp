@@ -1,29 +1,29 @@
 ---
 title: '評価コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含む評価コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 774b5294f9d03564caa658a04aff0f682a7bb43f
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 212fc44b6c1cec981f17d134f4cd8f8131b7af9a
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71993355"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73649910"
 ---
 # <a name="rating-control-in-powerapps"></a>PowerApps の評価コントロール
 ユーザーが 1 から指定された最大数までの値を示すために使用できるコントロールです。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 このコントロールでは、たとえば、ユーザーがあるものをどれだけ気に入ったかを特定数の星を選択して示すことができます。
 
 ## <a name="key-properties"></a>主要なプロパティ
@@ -85,7 +85,7 @@ ms.locfileid: "71993355"
 3. **[テキスト入力](control-text-input.md)** コントロールの **[Default](properties-core.md)** プロパティを **""** に設定し、その **HintText** を次の数式に設定します。
    <br>**If(Quantitative.Value > 3, "何が特に気に入りましたか?", "どのようにした方がいいでしょうか?")**
    
-    **[If](../functions/function-if.md)** 関数または[その他の関数](../formula-reference.md)については各関連記事を参照してください。
+    **[If](../functions/function-if.md)** 関数や[その他の関数](../formula-reference.md)については各関連記事を参照してください。
 4. F5 キーを押して、**評価**コントロールの 4 つか 5 つの星をクリックまたはタップします。
    
     **[テキスト入力](control-text-input.md)** コントロールのヒント テキストが、高い評価を反映して変更されます。
@@ -95,7 +95,7 @@ ms.locfileid: "71993355"
 6. 既定のワークスペースに戻るには、Esc キーを押します。
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 ### <a name="color-contrast"></a>色のコントラスト
 以下の間には適切な色のコントラストが必要です。
 * **RatingFill** と **[Fill](properties-color-border.md)**

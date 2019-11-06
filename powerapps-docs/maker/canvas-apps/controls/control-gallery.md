@@ -1,30 +1,30 @@
 ---
 title: 'ギャラリー コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含むギャラリー コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/25/2017
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 964f57c427b8e9e2e2f7a50e3d6e149ddea8e8b0
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: a532af505e579e66d3dfa0dce22a1c3ac6a4a6cc
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71986684"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650520"
 ---
 # <a name="gallery-control-in-canvas-apps"></a>キャンバスアプリのギャラリーコントロール
 
 その他のコントロールが含まれており、一連のデータを表示するコントロールです。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 
 **ギャラリー** コントロールを使用して、データ ソースの複数のレコードを表示できます。各レコードには、複数の種類のデータを含めることができます。 たとえば、**ギャラリー** コントロールで、名前、住所、電話番号などの項目を含む連絡先情報を複数表示することができます。 各データ フィールドは**ギャラリー** コントロール内に別個のコントロールとして表示され、テンプレートでそれらのコントロールを構成できます。 テンプレートは、水平/ランドスケープ方向の場合は**ギャラリー** コントロールの左端にギャラリー内の最初の項目として表示され、垂直/ポートレート方向の場合は**ギャラリー** コントロールの最上部に表示されます。 テンプレートで行った変更は、**ギャラリー** コントロール全体に反映されます。
 
@@ -111,7 +111,7 @@ ms.locfileid: "71986684"
 * [サウンドを取得します](control-microphone.md#example)
 * [図面を取得します](control-pen-input.md#create-a-set-of-images)
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 
 ### <a name="color-contrast"></a>色のコントラスト
 

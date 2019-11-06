@@ -1,29 +1,29 @@
 ---
 title: 'ペン入力コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含むペン入力コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1600f765e40849b47cb41b29c5d4c3fab86b4caf
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 4da95086c99c03fdd56214a0d2fb637beaa6243c
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71993381"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650376"
 ---
 # <a name="pen-input-control-in-powerapps"></a>PowerApps のペン入力コントロール
 ユーザーが画像の領域を描画、削除、強調表示できるコントロールです。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 ユーザーはこのコントロールをホワイトボードのように使用して、図を描いたり、入力テキストに変換可能な文字を書いたりすることができます。
 
 ## <a name="key-properties"></a>主要なプロパティ
@@ -94,7 +94,7 @@ ms.locfileid: "71993381"
 **[SaveData](../functions/function-savedata-loaddata.md)** 関数を使用して絵をローカルに保存するか、 **[Patch](../functions/function-patch.md)** 関数を使用してデータ ソースに保存します。
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 ### <a name="color-contrast"></a>色のコントラスト
 以下の間には適切な色のコントラストが必要です。
 * **[BorderColor](properties-color-border.md)** とコントロールの外側の色 (境界線がある場合)

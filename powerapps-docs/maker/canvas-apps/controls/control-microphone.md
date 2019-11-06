@@ -1,29 +1,29 @@
 ---
 title: 'マイク コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含むマイク コントロールに関する情報
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 915f5c15af06914cf10a749bf8d995926fd1bf2f
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 2ae158e17873ed7433b301cc5c88d195515a9a5c
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71993419"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650427"
 ---
 # <a name="microphone-control-in-powerapps"></a>PowerApps のマイク コントロール
 アプリのユーザーが自分のデバイスのサウンドを録音できるようにするコントロール。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 アプリのユーザーは、アプリが実行されているデバイスにマイクがある場合、オーディオ録音ができます。
 
 オーディオは、Android では 3gp 形式、iOS では AAC 形式、Web ブラウザーでは OGG 形式で保存されます。
@@ -115,7 +115,7 @@ ms.locfileid: "71993419"
 **[SaveData](../functions/function-savedata-loaddata.md)** 関数を使用して録音をローカルに保存するか、 **[Patch](../functions/function-patch.md)** 関数を使用してデータ ソースを更新します。
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 **マイク**は特殊なボタンなので、 **[ボタン](control-button.md)** と同じガイドラインが適用されます。 さらに次の点について考慮してください。
 
 ### <a name="audio-alternatives"></a>音声の代替手段

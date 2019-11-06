@@ -1,24 +1,24 @@
 ---
 title: 'Power BI タイル コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含む Power BI のタイル コントロールに関する情報です
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 07/07/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f258beee317fcdad46d71b504f9c8a3046bb3641
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 6ec04214bdee40cbe7ed5379a527fcd70d9229e7
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71993368"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73650326"
 ---
 # <a name="power-bi-tile-control-in-powerapps"></a>PowerApps の Power BI タイル コントロール
 
@@ -26,7 +26,7 @@ ms.locfileid: "71993368"
 
 Power BI をお持ちではありませんか? [サインアップ](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi)してください。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 
 アプリ内の **[Power BI タイル](https://docs.microsoft.com/power-bi/service-dashboard-tiles)** を表示して、既存のデータ分析とレポートを活用します。 オプション パネルの **[データ]** タブで **Workspace**、**Dashboard**、**Tile** プロパティを設定して、表示するタイルを指定します。
 
@@ -102,7 +102,7 @@ Power BI コンテンツを含むアプリを共有するときは、アプリ�
 
     コントロールが Power BI タイルを表示します。
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 
 **Power BI タイル**は、Power BI コンテンツの単なるコンテナーです。 アクセシビリティ対応のコンテンツを作成する方法については、[Power BI のアクセシビリティに関するヒント](https://docs.microsoft.com/power-bi/desktop-accessibility)のページを参照してください。
 

@@ -1,29 +1,29 @@
 ---
 title: 'トグル コントロール: リファレンス | Microsoft Docs'
 description: 各種プロパティとサンプルを含むトグル コントロールに関する情報です
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4ec115eecc676a7ec5bea3b04b135eeb63268449
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: be21e2b0c24d7b4aaf9da12b0793899fd95acd06
+ms.sourcegitcommit: 8e42a5996799d9831f8c5a52b0b051a6088d9ce7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71993254"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73649805"
 ---
 # <a name="toggle-control-in-powerapps"></a>PowerApps のトグル コントロール
 ユーザーがハンドルを動かすことでオンまたはオフにできるコントロールです。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
 トグルは最近の GUI 向けのデザインですが、動作はチェック ボックスと同じです。
 
 ## <a name="key-properties"></a>主要なプロパティ
@@ -114,14 +114,14 @@ ms.locfileid: "71993254"
 2. ラベルを追加し、その **[Text](properties-core.md)** プロパティを次の数式に設定します。
    <br>**If(MemberDiscount.Value = true, "Price: $75", "Price: $100")**
 
-    **[If](../functions/function-if.md)** 関数または[その他の関数](../formula-reference.md)の詳細については各関連記事を参照してください。
+    **[If](../functions/function-if.md)** 関数や[その他の関数](../formula-reference.md)については各関連記事を参照してください。
 3. F5 キーを押し、**MemberDiscount** の値を変更します。
 
     **MemberDiscount** がオンかオフかに応じて、ラベルに異なる価格が表示されます。
 4. 既定のワークスペースに戻るには、Esc キーを押します。
 
 
-## <a name="accessibility-guidelines"></a>アクセシビリティのガイドライン
+## <a name="accessibility-guidelines"></a>アクセシビリティ ガイドライン
 ### <a name="color-contrast"></a>色のコントラスト
 以下の間には適切な色のコントラストが必要です。
 * **HandleFill** と **FalseFill**
