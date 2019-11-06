@@ -1054,13 +1054,15 @@
           href: ./model-driven-apps/unified-interface-playbook.md
         - name: 統一インターフェイスの切り替えに取り組む
           href: ./model-driven-apps/approaching-unified-interface.md
+        - name: 'チェックリスト:統一インターフェイスの切り替え'
+          href: ./model-driven-apps/checklist-transition-unified-interface.md
     - name: PowerApps アプリ デザイナーのアクセシビリティ
       href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
     - name: Outlook 用 Dynamics 365 アプリをカスタマイズする
       href: ./model-driven-apps/app-for-outlook-customize.md
     - name: 開発者向け
       href: ../developer/model-driven-apps/overview.md
-- name: ポータル
+- name: Portals
   items:
     - name: PowerApps ポータルとは
       href: ./portals/overview.md
@@ -1072,7 +1074,9 @@
           href: ./portals/create-portal.md
         - name: Dynamics 365 環境でポータルを作成する
           href: ./portals/create-dynamics-portal.md
-        - name: ポータル デザイナーの構造
+        - name: 以前のポータルのアドオンを使ったポータルのプロビジョニング
+          href: ./portals/provision-portal-add-on.md
+        - name: PowerApps ポータル Studio の構造
           href: ./portals/portal-designer-anatomy.md
         - name: ポータル デザイナーでサポートされている Web ブラウザー
           href: ./portals/supported-browser.md
@@ -1150,6 +1154,58 @@
               href: ./portals/configure/configure-saml2-settings.md
             - name: ID プロバイダーを Azure AD B2C に移行する
               href: ./portals/configure/migrate-identity-providers.md
+        - name: Search
+          items:
+            - name: 検索について
+              href: ./portals/configure/search.md
+            - name: ファセット検索を使用した検索機能の向上
+              href: ./portals/configure/improve-portal-search-faceted-search.md
+            - name: 添付ファイル内での検索
+              href: ./portals/configure/search-file-attachment.md
+        - name: 複数言語のサポートを有効にする
+          href: ./portals/configure/enable-multiple-language-support.md
+        - name: Web ファイルの作成と管理
+          href: ./portals/configure/web-files.md
+        - name: Web リンクの管理
+          href: ./portals/configure/manage-web-links.md
+        - name: ページ テンプレートの作成と管理
+          href: ./portals/configure/page-templates.md
+        - name: コンテンツ スニペットの管理
+          href: ./portals/configure/customize-content-snippets.md
+        - name: リダイレクト URL の作成
+          href: ./portals/configure/add-redirect-url.md
+        - name: ショートカットを使用した子ノードの配置
+          href: ./portals/configure/place-child-nodes.md
+        - name: 日付と時刻フィールドの動作と形式
+          href: ./portals/configure/behavior-format-date-time-field.md
+        - name: ポータルの Web ページにグラフを追加する
+          href: ./portals/configure/add-chart.md
+        - name: エンティティ フォームの操作
+          href: ./portals/configure/entity-forms.md
+        - name: エンティティ リストの操作
+          href: ./portals/configure/entity-lists.md
+        - name: Web フォームの操作
+          items:
+            - name: Web フォームのプロパティを定義する
+              href: ./portals/configure/web-form-properties.md
+            - name: Web フォームのステップ
+              items:
+                - name: Web フォームのステップを定義する
+                  href: ./portals/configure/web-form-steps.md
+                - name: フォームの読み込みおよびタブの読み込みのステップの種類を定義する
+                  href: ./portals/configure/load-form-step.md
+                - name: リダイレクトのステップの種類を追加する
+                  href: ./portals/configure/add-redirect-step.md
+                - name: 条件付きのステップの種類を追加する
+                  href: ./portals/configure/add-conditional-step.md
+                - name: カスタム JavaScript の追加
+                  href: ./portals/configure/add-custom-javascript.md
+            - name: Web フォームのメタデータを構成する
+              href: ./portals/configure/configure-web-form-metadata.md
+            - name: Web フォームのサブグリッドを構成する
+              href: ./portals/configure/configure-web-form-subgrid.md
+            - name: 位置情報の追加
+              href: ./portals/configure/add-geolocation.md
     - name: 高度なポータルのカスタマイズ
       items:
         - name: 液体テンプレートを操作する
@@ -1196,6 +1252,20 @@
                   href: ./portals/liquid/render-site-header-primary-navigation.md
         - name: OAuth 2.0 の暗黙の許可フロー
           href: ./portals/oauth-implicit-grant-flow.md
+    - name: ポータルでのユーザー管理とセキュリティ
+      items:
+        - name: 連絡先の構成
+          href: ./portals/configure/configure-contacts.md
+        - name: 連絡先の招待
+          href: ./portals/configure/invite-contacts.md
+        - name: Web ロールの作成
+          href: ./portals/configure/create-web-roles.md
+        - name: エンティティのアクセス許可を割り当てる
+          href: ./portals/configure/assign-entity-permissions.md
+        - name: Web ページのアクセスを制御する
+          href: ./portals/configure/webpage-access-control.md
+        - name: Web サイトのアクセス許可を作成する
+          href: ./portals/configure/website-access-permission.md
     - name: ポータルのドキュメント ストレージ
       items:
         - name: メモの構成

@@ -9,12 +9,12 @@ featureFlags:
 ms.service: powerapps
 ms.custom:
 - powerapps-hub
-ms.openlocfilehash: c91add6569b3a74f26c48a70852df54d0d357657
-ms.sourcegitcommit: 5b623b64fba72dda893c97f497666d0adc39e0c6
+ms.openlocfilehash: 470d8e2a144e708162b886f6127bd6f9a498d093
+ms.sourcegitcommit: 6bec6932071db2411bb4ad1e01c059f57d8c9bca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71709213"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73566965"
 ---
 <div id="main"
    class="v2">
@@ -89,7 +89,7 @@ ms.locfileid: "71709213"
                               </a>
                            </li>
                            <li>
-                              <a href="https://powerapps.microsoft.com/en-us/blog/">
+                              <a href="https://powerapps.microsoft.com/blog/">
                                  <div class="cardSize">
                                     <div class="cardPadding">
                                        <div class="card">
@@ -288,7 +288,7 @@ ms.locfileid: "71709213"
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.15rem">ポータル</h3>
+                                    <h3 style="font-size: 1.15rem">Portals</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/overview">PowerApps ポータルとは</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/create-portal">ポータルを作成する</a></p>
@@ -319,7 +319,7 @@ ms.locfileid: "71709213"
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/cds-processes">ビジネス ロジックを適用する</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/solutions-overview">ソリューション</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/wp-security">Common Data Service のセキュリティ</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://www.microsoft.com/en-us/download/details.aspx?id=57777">ホワイトペーパー:ソリューションを使用した ALM</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://www.microsoft.com/download/details.aspx?id=57777">ホワイトペーパー:ソリューションを使用した ALM</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-powerbi-connector">Common Data Service のデータから Power BI レポートを作成する</a></p>
                                  </div>
                               </div>
@@ -608,7 +608,7 @@ ms.locfileid: "71709213"
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/checker/webapi/overview">PowerApps チェッカーを使用する</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/isv-app-management">ISV アプリの管理と監視</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/publish-app-appsource">AppSource 上にアプリを公開する</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://www.microsoft.com/en-us/download/details.aspx?id=57777">ホワイトペーパー:ソリューションを使用した ALM</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://www.microsoft.com/download/details.aspx?id=57777">ホワイトペーパー:ソリューションを使用した ALM</a></p>
                                  </div>
                               </div>
                            </div>
