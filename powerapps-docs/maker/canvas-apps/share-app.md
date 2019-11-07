@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c78057118a1546c781ea813552650045ab357321
-ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
+ms.openlocfilehash: fa86d8027775bc74178699a18371fc9e2cef2917
+ms.sourcegitcommit: 32542f1d17fee757dcdaf9c247f4051f59b86434
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73541355"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73741311"
 ---
 # <a name="share-a-canvas-app-in-powerapps"></a>PowerApps でのキャンバス アプリの共有
 
@@ -31,7 +31,7 @@ ms.locfileid: "73541355"
 
 アプリを共有するには、そのアプリを (ローカルではなく) クラウドに保存して、アプリを発行する必要があります。
 
-- ユーザーがアプリで行う内容を理解し、リストで簡単に見つけられるように、アプリにわかりやすい名前と明確な説明を追加します。 PowerApps Studio の **[ファイル]** メニューで、 **[アプリの設定]** を選択し、説明を入力するか貼り付けます。
+- ユーザーがアプリで行う内容を理解し、リストで簡単に見つけられるように、アプリにわかりやすい名前と明確な説明を追加します。 PowerApps Studio の **[ファイル]** メニューで、**[アプリの設定]** を選択し、説明を入力するか貼り付けます。
 
 - 変更を加えるたびに、他のユーザーがそれらの変更を表示する必要がある場合は、再度アプリを保存および発行する必要があります。
 
@@ -45,21 +45,21 @@ ms.locfileid: "73541355"
 
     ![アプリを選択する](./media/share-app/select-app.png)
 
-1. バナーで、 **[共有]** を選択します。
+1. バナーで、[**共有**] を選択します。
 
     ![共有画面を開く](./media/share-app/banner-share.png)
 
 1. アプリを共有する Azure Active Directory のユーザーまたはセキュリティグループの名前またはエイリアスを指定します。
 
     - 組織全体でアプリを実行できるようにする (ただし、変更または共有することはできません) には、[共有] パネルで「 **Everyone** 」と入力します。
-    - 項目がセミコロンで区切られている場合は、エイリアスの一覧、フレンドリ名、またはそれらの組み合わせ (たとえば、 **Jane Doe &lt;jane.doe@contoso.com** ) を使用して、アプリを共有できます。 複数の人が同じ名前でエイリアスが異なる場合は、最初に見つかった人がリストに追加されます。 名前またはエイリアスに既にアクセス許可がある場合、または解決できない場合は、ツールヒントが表示されます。 
+    - 項目がセミコロンで区切られている場合は、エイリアスの一覧、フレンドリ名、またはそれらの組み合わせ (たとえば、 **Jane Doe &lt;jane.doe@contoso.com**) を使用して、アプリを共有できます。 複数の人が同じ名前でエイリアスが異なる場合は、最初に見つかった人がリストに追加されます。 名前またはエイリアスに既にアクセス許可がある場合、または解決できない場合は、ツールヒントが表示されます。 
 
     ![ユーザーと共同所有者を指定する](./media/share-app/share-everyone.png)
 
     > [!NOTE]
     > 組織内の配布グループ、または組織外のユーザーまたはグループとアプリを共有することはできません。
 
-1. アプリを共有しているユーザーに対して、アプリの編集と共有を許可する (実行に加えて) 場合は、 **[共同所有者]** チェックボックスをオンにします。
+1. アプリを共有しているユーザーに対して、アプリの編集と共有を許可する (実行に加えて) 場合は、[**共同所有者**] チェックボックスをオンにします。
 
     [ソリューション内からアプリを作成](add-app-solution.md)した場合、**共同所有者**のアクセス許可をセキュリティグループに付与することはできません。
 
@@ -77,7 +77,7 @@ ms.locfileid: "73541355"
 
 1. ユーザーがアプリを見つけられるようにするには、[**新しいユーザーに電子メールの招待を送信**する] チェックボックスをオンにします。
 
-1. 共有 パネルの下部にある **共有** を選択します。
+1. [共有] パネルの下部にある [**共有**] を選択します。
 
     アプリを共有したすべてのユーザーは、モバイルデバイスの PowerApps Mobile またはブラウザーで[Dynamics 365](https://home.dynamics.com)の appsource で実行できます。 共同所有者は、 [PowerApps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)でアプリを編集および共有できます。
 
@@ -90,7 +90,7 @@ ms.locfileid: "73541355"
 
 ユーザーまたはセキュリティグループのアクセス許可を変更するには、その名前を選択して、次のいずれかの手順を実行します。
 
-- 共同所有者がアプリを実行できるようにし、それ以上編集または共有しないようにするには、 **[共同所有者]** チェックボックスをオフにします。
+- 共同所有者がアプリを実行できるようにし、それ以上編集または共有しないようにするには、[**共同所有者**] チェックボックスをオフにします。
 - そのユーザーまたはグループとのアプリの共有を停止するには、[削除 (x)] アイコンを選択します。
 
 ## <a name="security-group-considerations"></a>セキュリティ グループに関する考慮事項
@@ -114,7 +114,7 @@ Common Data Service に基づいてアプリを作成する場合は、アプリ
 
 #### <a name="assign-a-security-group-in-azure-ad-to-a-role"></a>Azure AD のセキュリティグループをロールに割り当てる
 
-1. 共有 パネルで、**データのアクセス許可** で **セキュリティロールの割り当て** を選択します。
+1. [共有] パネルで、[**データのアクセス許可**] で [**セキュリティロールの割り当て**] を選択します。
 
 1. アプリを共有する Azure AD のユーザーまたはセキュリティグループに割り当てる Common Data Service 内のロールを選択します (複数選択)。
      > [!div class="mx-imgBorder"] 
@@ -140,7 +140,7 @@ PowerApps キャンバスアプリは、Azure Active Directory テナントの�
     - ゲストユーザーのホームテナント。
 
 ### <a name="steps-to-grant-guest-access"></a>ゲストアクセスを許可する手順
-1. Azure AD にゲストユーザーを追加するには、 **[新しいゲストユーザー]** を選択します。 詳細については[、「クイックスタート: Azure AD に新しいゲストユーザーを追加する」](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)を参照してください。
+1. Azure AD にゲストユーザーを追加するには、[**新しいゲストユーザー** ] を選択します。 詳細については[、「クイックスタート: Azure AD に新しいゲストユーザーを追加する」](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)を参照してください。
     > [!div class="mx-imgBorder"] 
     > ![Azure AD にゲストを追加する](media/share-app/guest_access_doc_1.png "Azure AD にゲストを追加する")
 2. ゲストユーザーがホームテナントにライセンスを持っていない場合は、ゲストユーザーにライセンスを割り当てます。
@@ -152,7 +152,7 @@ PowerApps キャンバスアプリは、Azure Active Directory テナントの�
 
 3. キャンバスアプリを共有します。 
     1. https://make.powerapps.com にサインインします  
-    2. **[アプリ]** にアクセスし、キャンバスアプリを選択してから、コマンドバーで **[共有]** を選択します。 
+    2. [**アプリ**] にアクセスし、キャンバスアプリを選択してから、コマンドバーで [**共有**] を選択します。 
     3. Azure AD テナントのゲストユーザーの電子メールアドレスを入力します。 詳細情報: [AZURE AD B2B でのゲストユーザーアクセスとは](/azure/active-directory/b2b/what-is-b2b)
           > [!div class="mx-imgBorder"] 
           > ![ゲストと共有する](media/share-app/guest_access_doc_2.png "ゲストと共有する")
@@ -181,12 +181,12 @@ PowerApps キャンバスアプリは、Azure Active Directory テナントの�
 はい。 カスタマイズされたフォームを使用して SharePoint リストにアクセスできるすべてのユーザーは、PowerApps ライセンスなしでフォームを使用して、リスト内の項目を作成および編集できます。
 
 #### <a name="can-guests-access-apps-embedded-in-sharepoint"></a>ゲストは SharePoint に埋め込まれたアプリにアクセスできますか。 
-はい。 ただし、キャンバスのスタンドアロンアプリにアクセスするには、埋め込みのアプリを含む PowerApps ライセンスが必要です。 Microsoft PowerApps 埋め込みコントロールを使用して SharePoint にキャンバスアプリを埋め込む場合は、アプリ id を入力します。これを行うには、 **[アプリの web リンクまたは id]** ボックスにアプリ ID を入力します。 
+はい。 ただし、キャンバスのスタンドアロンアプリにアクセスするには、埋め込みのアプリを含む PowerApps ライセンスが必要です。 Microsoft PowerApps 埋め込みコントロールを使用して SharePoint にキャンバスアプリを埋め込む場合は、アプリ id を入力します。これを行うには、[**アプリの web リンクまたは id** ] ボックスにアプリ ID を入力します。 
 
 > [!div class="mx-imgBorder"]  
 > ![ゲストの SharePoint にキャンバスアプリを埋め込む](media/share-app/guest_access_doc_5.PNG "ゲストの SharePoint にキャンバスアプリを埋め込む")
 
-IFrame HTML タグを使用して SharePoint にキャンバスアプリを埋め込む場合は、完全な web URL を使用してアプリを参照します。 URL を検索するには、[https://make.powerapps.com ] にアクセスしてアプリを選択し、 **[詳細]** タブを選択します。 **[Web リンク]** の下に url が表示されます。
+IFrame HTML タグを使用して SharePoint にキャンバスアプリを埋め込む場合は、完全な web URL を使用してアプリを参照します。 URL を検索するには、[https://make.powerapps.com] にアクセスしてアプリを選択し、[**詳細**] タブを選択します。 [ **Web リンク**] の下に url が表示されます。
 
 > [!div class="mx-imgBorder"]  
 > ![キャンバスアプリの詳細](media/share-app/guest_access_doc_6.PNG "キャンバスアプリの詳細")
@@ -200,7 +200,7 @@ IFrame HTML タグを使用して SharePoint にキャンバスアプリを埋�
 |                                 | SharePoint カスタマイズフォーム | Premium 以外のコネクタを使用するスタンドアロンキャンバスアプリ | Premium コネクタを使用したスタンドアロンのキャンバスアプリ | モデル駆動型アプリ |
 |---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
 | SharePoint ユーザー (PA ライセンスなし) | x                          |                                                    |                                                |                  |
-| Office に含まれる PowerApps    | x                          |                                                    |                                                |                  |
+| Office に含まれる PowerApps    | x                          | x                                                  |                                                |                  |
 | アプリプランごとの PowerApps          | x                          | x                                                  | x                                              | x                |
 | PowerApps Per User プラン         | x                          | x                                                  | x                                              | x                |
 

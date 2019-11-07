@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/25/2019
+ms.date: 11/06/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 7a975669d1e22289b7152b830808631992389a1f
-ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
+ms.openlocfilehash: 010d567369e9c580b57a55ad251ac5ef01da3597
+ms.sourcegitcommit: 32542f1d17fee757dcdaf9c247f4051f59b86434
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "71991628"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73741317"
 ---
 # <a name="create-a-detail-gallery-in-a-canvas-app"></a>キャンバスアプリで詳細ギャラリーを作成する
 
@@ -47,7 +47,7 @@ Northwind Traders データベースで架空のデータを管理するため�
 1. 次のいずれかの方法で、コピーからテキストを削除します。
 
     - テキストをダブルクリックして選択し、Del キーを押します。
-    - ラベルの**Text**プロパティを空の文字列 ( **""** ) に設定します。
+    - ラベルの**Text**プロパティを空の文字列 (**""**) に設定します。
 
     > [!div class="mx-imgBorder"]
     > タイトルバーのコピーからテキストを削除 ![](media/northwind-orders-canvas-part3/details-02.png)
@@ -64,7 +64,7 @@ Northwind Traders データベースで架空のデータを管理するため�
     > [!div class="mx-imgBorder"]
     > ![既定の場所の注文-詳細ギャラリー](media/northwind-orders-canvas-part3/details-04.png)
 
-1. **データ**ペインを閉じ、詳細ギャラリーを新しいタイトルバーの下の右下隅にサイズ変更して移動します。
+1. [データソースの出力] ダイアログボックスを閉じ、詳細ギャラリーを新しいタイトルバーの下の右下隅に移動します。
 
     > [!div class="mx-imgBorder"]
     > ![の注文の最終場所-詳細ギャラリー](media/northwind-orders-canvas-part3/details-05.png)
@@ -94,7 +94,7 @@ Northwind Traders データベースで架空のデータを管理するため�
 
     ギャラリー自体ではなく、ギャラリーテンプレートを選択していることを確認します。 境界ボックスは、ギャラリーの境界内に少しだけ配置する必要があり、ギャラリーの高さよりも短くなる可能性があります。 このテンプレートにコントロールを挿入すると、ギャラリー内の各項目に対してコントロールが繰り返し表示されます。
 
-1. **[挿入]** タブで、詳細ギャラリーにラベルを挿入します。
+1. [**挿入**] タブで、詳細ギャラリーにラベルを挿入します。
 
     ギャラリー内にラベルが表示されます。そうでない場合は、もう一度やり直してください。ただし、ラベルを挿入する前に、ギャラリーのテンプレートを選択してください。
 
@@ -107,7 +107,7 @@ Northwind Traders データベースで架空のデータを管理するため�
     ThisItem.Product.'Product Name'
     ```
 
-    テキストが表示されない場合は、注文書ギャラリーの下部付近にある **[注文 0901]** の矢印を選択します。
+    テキストが表示されない場合は、注文書ギャラリーの下部付近にある [**注文 0901** ] の矢印を選択します。
 
 1. フルテキストが表示されるようにラベルのサイズを変更します。
 
@@ -126,7 +126,7 @@ Northwind Traders データベースで架空のデータを管理するため�
 
 ## <a name="show-product-images"></a>製品イメージの表示
 
-1. **[挿入]** タブで、[**イメージ**](controls/control-image.md)コントロールを詳細ギャラリーに挿入します。
+1. [**挿入**] タブで、[**イメージ**](controls/control-image.md)コントロールを詳細ギャラリーに挿入します。
 
     > [!div class="mx-imgBorder"]
     > ![挿入イメージコントロール](media/northwind-orders-canvas-part3/details-10.png)
@@ -157,7 +157,7 @@ Northwind Traders データベースで架空のデータを管理するため�
 
 ## <a name="show-product-quantity-and-cost"></a>製品の数量とコストを表示する
 
-1. **[挿入]** タブで、詳細ギャラリーに別のラベルを挿入し、そのサイズを変更して、新しいラベルを製品情報の右側に移動します。
+1. [**挿入**] タブで、詳細ギャラリーに別のラベルを挿入し、そのサイズを変更して、新しいラベルを製品情報の右側に移動します。
 
 1. 新しいラベルの**Text**プロパティを次の式に設定します。
 
@@ -170,12 +170,12 @@ Northwind Traders データベースで架空のデータを管理するため�
     > [!div class="mx-imgBorder"]
     > 製品の数量を表示 ![](media/northwind-orders-canvas-part3/details-13b.png) 
 
-1. **[ホーム]** タブで、このコントロールの配置を**右**に変更します。
+1. [**ホーム**] タブで、このコントロールの配置を**右**に変更します。
 
     > [!div class="mx-imgBorder"]
     > 配置](media/northwind-orders-canvas-part3/details-14.png) を変更 ![
 
-1. **[挿入]** タブで、詳細ギャラリーに別のラベルを挿入し、ラベルのサイズを変更して、数量ラベルの右側に移動します。
+1. [**挿入**] タブで、詳細ギャラリーに別のラベルを挿入し、ラベルのサイズを変更して、数量ラベルの右側に移動します。
 
 1. 新しいラベルの**Text**プロパティを次の数式に設定します。
 
@@ -183,17 +183,17 @@ Northwind Traders データベースで架空のデータを管理するため�
     Text( ThisItem.'Unit Price', "[$-en-US]$ #,###.00" )
     ```
 
-    言語タグ ( **[$-en-us]** ) を含めない場合、言語と地域に基づいて追加されます。 別の言語タグを使用する場合は、右角かっこ ( **]** ) の直後にある **$** を削除し、その位置に独自の通貨記号を追加します。
+    言語タグ (**[$-en-us]**) を含めない場合、言語と地域に基づいて追加されます。 別の言語タグを使用する場合は、右角かっこ (**]**) の直後にある**$** を削除し、その位置に独自の通貨記号を追加します。
 
     > [!div class="mx-imgBorder"]
     > ![単価](media/northwind-orders-canvas-part3/details-15.png) を表示する
 
-1. **[ホーム]** タブで、このコントロールの配置を**右**に変更します。
+1. [**ホーム**] タブで、このコントロールの配置を**右**に変更します。
 
     > [!div class="mx-imgBorder"]
     > 配置](media/northwind-orders-canvas-part3/details-16.png) を変更 ![
 
-1. **[挿入]** タブで、詳細ギャラリーに別のラベルコントロールを挿入し、新しいラベルをサイズ変更して、単価の右側に移動します。
+1. [**挿入**] タブで、詳細ギャラリーに別のラベルコントロールを挿入し、新しいラベルをサイズ変更して、単価の右側に移動します。
 
 1. 新しいラベルの**Text**プロパティを次の数式に設定します。
 
@@ -201,28 +201,28 @@ Northwind Traders データベースで架空のデータを管理するため�
     Text( ThisItem.Quantity * ThisItem.'Unit Price', "[$-en-US]$ #,###.00" )
     ```
 
-    ここでも、言語タグ ( **[$-en-us]** ) を含めない場合、言語と地域に基づいて追加されます。 タグが異なる場合は、閉じ角かっこ ( **]** ) の直後に **$** ではなく、独自の通貨記号を使用します。
+    ここでも、言語タグ (**[$-en-us]**) を含めない場合、言語と地域に基づいて追加されます。 タグが異なる場合は、閉じ角かっこ (**]**) の直後に**$** ではなく、独自の通貨記号を使用します。
 
     > [!div class="mx-imgBorder"]
     > 拡張価格を表示 ![](media/northwind-orders-canvas-part3/details-17.png)
 
-1. **[ホーム]** タブで、このコントロールの配置を**右**に変更します。
+1. [**ホーム**] タブで、このコントロールの配置を**右**に変更します。
 
     > [!div class="mx-imgBorder"]
     > 配置](media/northwind-orders-canvas-part3/details-18.png) を変更 ![
 
     これで、詳細ギャラリーにコントロールが追加されました。
 
-1. **[ツリービュー]** ペインで **[Screen1]** を選択し、詳細ギャラリーが選択されていないことを確認します。
+1. [**ツリービュー** ] ペインで [ **Screen1** ] を選択し、詳細ギャラリーが選択されていないことを確認します。
 
 ## <a name="add-text-to-the-new-title-bar"></a>新しいタイトルバーにテキストを追加する
 
-1. **[挿入]** タブで、画面に別のラベルを挿入します。
+1. [**挿入**] タブで、画面に別のラベルを挿入します。
 
     > [!div class="mx-imgBorder"]
     > ラベル](media/northwind-orders-canvas-part3/details-19.png) の挿入 ![
 
-1. 2番目のタイトルバーで、製品の画像の上に新しいラベルのサイズを変更して移動し、 **[ホーム]** タブでテキストの色を白に変更します。
+1. 2番目のタイトルバーで、製品の画像の上に新しいラベルのサイズを変更して移動し、[**ホーム**] タブでテキストの色を白に変更します。
 
 1. ラベルのテキストをダブルクリックし、「 **Product**:」と入力します。
 
@@ -262,7 +262,7 @@ Northwind Traders データベースで架空のデータを管理するため�
     > [!div class="mx-imgBorder"]
     > タイトルバーを ![コピーして、コピーを下の端に移動](media/northwind-orders-canvas-part3/sum-02.png)
 
-1. 中央のタイトルバーから製品ラベルをコピーして貼り付け、 **[Quantity]** 列の左側にある下部のタイトルバーにコピーを移動します。
+1. 中央のタイトルバーから製品ラベルをコピーして貼り付け、[ **Quantity** ] 列の左側にある下部のタイトルバーにコピーを移動します。
 
 1. 新しいラベルのテキストをダブルクリックし、次のテキストを入力します。<br>**注文合計:**
 
@@ -279,7 +279,7 @@ Northwind Traders データベースで架空のデータを管理するため�
 
     この数式は委任の警告を示していますが、1つの注文に500以上の製品が含まれていないため、無視してかまいません。
 
-1. **[ホーム]** タブで、新しいラベルのテキストの配置を**右**に設定します。
+1. [**ホーム**] タブで、新しいラベルのテキストの配置を**右**に設定します。
 
     > [!div class="mx-imgBorder"]
     > 配置](media/northwind-orders-canvas-part3/sum-04.png) を変更 ![
@@ -308,70 +308,33 @@ Northwind Traders データベースで架空のデータを管理するため�
     > [!div class="mx-imgBorder"]
     > 詳細ギャラリーを短く ![](media/northwind-orders-canvas-part3/add-details-01.png)
 
-1. **[挿入]** タブで、ラベルを挿入し、そのサイズを詳細ギャラリーの下に移動します。
+1. [**挿入**] タブで、ラベルを挿入し、そのサイズを詳細ギャラリーの下に移動します。
 
     > [!div class="mx-imgBorder"]
     > ラベルを挿入 ![には](media/northwind-orders-canvas-part3/add-details-02.png)
 
 1. 新しいラベルのテキストをダブルクリックし、del キーを押します。
 
-1. **[ホーム]** タブで、新しいラベルの**塗りつぶし**の色を **[ライトブルー]** に設定します。
+1. [**ホーム**] タブで、新しいラベルの**塗りつぶし**の色を [**ライトブルー**] に設定します。
 
     > [!div class="mx-imgBorder"]
     > ラベルの塗りつぶしを薄い青に変更 ![](media/northwind-orders-canvas-part3/add-details-03.png)
 
-## <a name="add-the-order-details-data-source"></a>Order Details データソースを追加する
-
-1. **[表示]** タブで **[データソース]** を選択し、**データ**ペインで **[データソースの追加]** を選択します。
-
-    > [!div class="mx-imgBorder"]
-    > データソース](media/northwind-orders-canvas-part3/add-details-04.png) の追加 ![
-
-1. **Common Data Service**の選択:
-
-    > [!div class="mx-imgBorder"]
-    > Common Data Service を選択 ![](media/northwind-orders-canvas-part3/add-details-05.png)
-
-1. **データ**ペインの上部にある [検索] ボックスに「 **order** 」と入力し、 **[order Details]** チェックボックスをオンにして、ウィンドウの下部にある **[接続]** を選択します。
-
-    > [!div class="mx-imgBorder"]
-    > ![注文の詳細エンティティの指定](media/northwind-orders-canvas-part3/add-details-06.png)
-
-    アプリに別のデータソースを追加しました。
-
-    > [!div class="mx-imgBorder"]
-    > ![データソースの一覧](media/northwind-orders-canvas-part3/add-details-07.png)
-
-    アプリは1対多の関係を読み取ることができますが、アプリではまだ変更を書き戻すことができないため、このデータソースを追加する必要があります。 アプリは、関連エンティティに直接変更を加える必要があります。
-
-1. **データ**ペインを閉じます。
-
 ## <a name="select-a-product"></a>製品を選択してください
 
-1. **[挿入]** タブで、[**コントロール** > **コンボボックス**] を選択します。
+1. [**挿入**] タブで、[**コントロール** > **コンボボックス**] を選択します。
 
     > [!div class="mx-imgBorder"]
     > コンボボックス](media/northwind-orders-canvas-part3/add-details-08.png) の挿入 ![
 
     左上隅に[**コンボボックス**](controls/control-combo-box.md)コントロールが表示されます。
 
-1. コンボボックスの**Items**プロパティを次の数式に設定します。
-
-    ```powerapps-dot
-    Choices( 'Order Details'.Product )
-    ```
+1. [フライアウト] ダイアログで、[**注文製品**] データソースを選択します。
 
     > [!div class="mx-imgBorder"]
     > コンボボックスの Items プロパティを設定 ![](media/northwind-orders-canvas-part3/add-details-09.png)
 
-    [**Choice**](functions/function-choices.md)関数は、 **Order Details**エンティティの**Product**フィールドに使用可能なすべての値のテーブルを返します。 このフィールドは多対一のリレーションシップで参照されるため、**選択**すると**Order Products**エンティティ内のすべてのレコードが返されます。
-
-    > [!NOTE]
-    > **選択肢**をオプションセットと共に使用して、すべてのオプションのテーブルを返すこともできます。 手順では、この方法については説明しませんでしたが、概要フォームに**注文の状態**を表示するコンボボックスを追加したときに既に使用しています。
-
-1. **データ**ペインで、**プライマリテキスト**リストを開き、 **[nwind_productname]** を選択します。 
-
-1. **[Searchfield]** の一覧を開き、 **[nwind_productname]** を選択します。
+1. コンボボックスの [**プロパティ**] タブで、[**編集**] ([**フィールド**] の横) を選択して**データ**ペインを開きます。  **プライマリテキスト**と**searchfield**が**nwind_productname**に設定されていることを確認します。
 
     この場合、**データ**ペインでは表示名がサポートされていないため、論理名を指定します。
 
@@ -380,7 +343,7 @@ Northwind Traders データベースで架空のデータを管理するため�
 
 1. **データ**ペインを閉じます。
 
-1. 右端の **[プロパティ]** タブで、下にスクロールし、 **[複数選択を許可]** する をオフにして、 **[検索を許可]** する がオンになっていることを確認します。
+1. 右端の [**プロパティ**] タブで、下にスクロールし、[**複数選択を許可**する] をオフにして、[**検索を許可**する] がオンになっていることを確認します。
 
     > [!div class="mx-imgBorder"]
     > 複数の選択を無効にして検索を有効に ![](media/northwind-orders-canvas-part3/add-details-12.png)
@@ -404,7 +367,7 @@ Northwind Traders データベースで架空のデータを管理するため�
 
 ## <a name="add-a-product-image"></a>製品イメージを追加する
 
-1. **[挿入]** タブで、[**メディア** > **イメージ**] を選択します。
+1. [**挿入**] タブで、[**メディア** > **イメージ**] を選択します。
 
     > [!div class="mx-imgBorder"]
     > ![挿入イメージコントロール](media/northwind-orders-canvas-part3/add-details-15.png)
@@ -425,11 +388,11 @@ Northwind Traders データベースで架空のデータを管理するため�
     > [!div class="mx-imgBorder"]
     > イメージの Image プロパティを設定 ![](media/northwind-orders-canvas-part3/add-details-17.png)
 
-    ここでは、従業員の写真を概要フォームに表示するために使用したのと同じトリックを使用しています。 コンボボックスの**選択**したプロパティによって、ユーザーが選択した製品 ( **[画像]** フィールドなど) のすべてのレコードが返されます。
+    ここでは、従業員の写真を概要フォームに表示するために使用したのと同じトリックを使用しています。 コンボボックスの**選択**したプロパティによって、ユーザーが選択した製品 ([**画像**] フィールドなど) のすべてのレコードが返されます。
 
 ## <a name="add-a-quantity-box"></a>数量ボックスの追加
 
-1. **[挿入]** タブで、[**テキスト** > **テキスト入力**] を選択します。
+1. [**挿入**] タブで、[**テキスト** > **テキスト入力**] を選択します。
 
     > [!div class="mx-imgBorder"]
     > テキスト入力ボックスの追加 ![](media/northwind-orders-canvas-part3/add-details-18.png)
@@ -449,16 +412,16 @@ Northwind Traders データベースで架空のデータを管理するため�
 1. このコントロールの**既定**のプロパティを **""** に設定します。
 
     > [!div class="mx-imgBorder"]
-    > ![テキスト入力ボックスの **既定の** プロパティを設定](media/northwind-orders-canvas-part3/add-details-21.png)
+    > テキスト入力ボックスの * * 既定の * * プロパティを設定 ![](media/northwind-orders-canvas-part3/add-details-21.png)
 
-1. **[ホーム]** タブで、このコントロールのテキストの配置を**右**に設定します。
+1. [**ホーム**] タブで、このコントロールのテキストの配置を**右**に設定します。
 
     > [!div class="mx-imgBorder"]
     > 配置](media/northwind-orders-canvas-part3/add-details-22.png) を変更 ![
 
 ## <a name="show-the-unit-and-extended-prices"></a>ユニットと拡張価格を表示する
 
-1. **[挿入]** タブで、**ラベル**コントロールを挿入します。
+1. [**挿入**] タブで、**ラベル**コントロールを挿入します。
 
     ラベルは、画面の左上隅に表示されます。
 
@@ -479,7 +442,7 @@ Northwind Traders データベースで架空のデータを管理するため�
     > [!NOTE]
     > このシナリオでは、値は読み取り専用ですが、他のシナリオでは、アプリユーザーが変更するためにを呼び出すことがあります。 その場合は、**テキスト入力**コントロールを使用し、その**既定**のプロパティを [**価格の表示]** に設定します。
 
-1. **[ホーム]** タブで、リスト価格ラベルのテキストの配置を **[右]** に設定します。
+1. [**ホーム**] タブで、リスト価格ラベルのテキストの配置を [**右**] に設定します。
 
     > [!div class="mx-imgBorder"]
     > 配置](media/northwind-orders-canvas-part3/add-details-25.png) を変更 ![
@@ -506,7 +469,7 @@ Northwind Traders データベースで架空のデータを管理するため�
 
 ## <a name="add-an-add-icon"></a>追加アイコンを追加する
 
-1. **[挿入]** タブで、 **[追加]**  >  **[アイコン]** を選択します。
+1. [**挿入**] タブで、[**追加**]  >  [**アイコン**] を選択します。
 
     > [!div class="mx-imgBorder"]
     > 挿入の追加アイコンを ![](media/northwind-orders-canvas-part3/add-details-29.png)
@@ -545,14 +508,14 @@ Northwind Traders データベースで架空のデータを管理するため�
       - **Order**列には、ユーザーが注文ギャラリーで選択した注文の番号が含まれます。
       - **Product**列には、製品を表示するコンボボックスでユーザーが選択した製品の名前が含まれます。
       - **Quantity**列には、ユーザーがテキスト入力ボックスに指定した値が含まれます。
-      - **[単価]** 列には、ユーザーがこの注文明細に対して選択した製品の表示価格が表示されます。
+      - [**単価**] 列には、ユーザーがこの注文明細に対して選択した製品の表示価格が表示されます。
 
     > [!NOTE]
     > 製品を表示するコンボボックスでアプリユーザーが選択したすべての製品について、( **Order Products**エンティティ内の) 任意の列のデータを使用する数式を作成できます。 ユーザーが**Order Products**エンティティでレコードを選択すると、そのコンボボックスに製品の名前が表示されるだけでなく、製品の単価がラベルに表示されます。 Canvas アプリ内の各参照値は、主キーだけでなく、レコード全体を参照します。
 
     **Refresh**関数を使用すると、 **Orders**エンティティには、**注文の詳細**エンティティに追加したレコードが確実に反映されます。 **Reset**関数を使用すると、製品、数量、および単価データがクリアされ、ユーザーは同じ順序で別の注文明細を簡単に作成できるようになります。
 
-1. F5 キーを押して、 **[追加]** アイコンを選択します。
+1. F5 キーを押して、[**追加**] アイコンを選択します。
 
     順序には、指定した情報が反映されます。
 
@@ -570,7 +533,7 @@ Northwind Traders データベースで架空のデータを管理するため�
     > [!div class="mx-imgBorder"]
     > ギャラリーテンプレートを選択 ![](media/northwind-orders-canvas-part3/remove-details-01.png)
 
-1. **[挿入]** タブで、[**ごみ箱** > **アイコン**] を選択します。
+1. [**挿入**] タブで、[**ごみ箱** > **アイコン**] を選択します。
 
     > [!div class="mx-imgBorder"]
     > ごみ箱アイコンの挿入 ![](media/northwind-orders-canvas-part3/remove-details-02.png)

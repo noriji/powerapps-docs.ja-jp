@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/25/2019
+ms.date: 11/06/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 03411202ecc9c4c04713f7eb9cf6286809109684
-ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
+ms.openlocfilehash: bbc6111800a817ecb71eec60fdba1d2dabd6c698
+ms.sourcegitcommit: 32542f1d17fee757dcdaf9c247f4051f59b86434
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73541533"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73741489"
 ---
 # <a name="create-an-order-gallery-in-a-canvas-app"></a>キャンバスアプリでの注文書ギャラリーの作成
 
@@ -53,39 +53,22 @@ Northwind Traders データベースで架空のデータを管理するため�
     > [!div class="mx-imgBorder"]
     > ![PowerApps Studio](media/northwind-orders-canvas-part1/start-03.png)
 
-1. 数式バーから数式の結果を直接表示するための試験的な[機能](working-with-experimental.md)を有効にします。
-
-    1. **[ファイル]** メニューの **[アプリの設定]** を選択し、 **[詳細設定]** を選択します。
-    1. 機能の一覧の一番下までスクロールし、[**数式バーの結果ビューを有効**にする] をオンにします。
-
-        > [!div class="mx-imgBorder"]
-        > 試験的な機能の一覧を ![](media/northwind-orders-canvas-part1/start-04.png)
-
-1. 左上隅の [戻る] 矢印をクリックして、空白のキャンバスに戻ります。
-
 ## <a name="add-the-data"></a>データを追加する
 
-1. **[表示]** タブで **[データソース]** を選択し、**データ**ペインで **[データソースの追加]** を選択します。
+1. **[表示]** タブの **[データソース]** を選択します。
 
     > [!div class="mx-imgBorder"]
     > ![ビュー、データソース、データソースの追加](media/northwind-orders-canvas-part1/datasource-01.png) を選択します。
 
-1. **[Common Data Service]** を選択します。
-
-    接続の一覧に**Common Data Service**が表示されない場合は、 **[新しい接続]** を選択して追加します。
+1. 検索ボックスに「 **orders** 」と入力します。
 
     > [!div class="mx-imgBorder"]
     > ![接続の一覧](media/northwind-orders-canvas-part1/datasource-02.png)
 
-1. **[エンティティの選択]** で **「orders**」と入力し、 **[注文]** チェックボックスをオンにして、 **[接続]** を選択します。
+1. アプリで使用する**Orders**データソースを選択します。
 
     > [!div class="mx-imgBorder"]
     > エンティティの一覧を ![](media/northwind-orders-canvas-part1/datasource-03.png)
-
-    **注文**データソースをアプリに追加しました。
-
-    > [!div class="mx-imgBorder"]
-    > ![データペイン](media/northwind-orders-canvas-part1/datasource-04.png)
 
     **Orders**エンティティには、さまざまな種類のフィールドが多数含まれています。
 
@@ -94,7 +77,7 @@ Northwind Traders データベースで架空のデータを管理するため�
 
     各フィールドには、**表示名**と**名前**があります。これは、論理名と呼ばれることもあります。 どちらの名前も同じことを意味します。 通常は、アプリをビルドするときに表示名を使用しますが、手順に記載されているように、より暗号化された**名前**が必要になる場合もあります。
 
-1. PowerApps Studio で、右上隅にある閉じるアイコン (x) を選択して**データ**ペインを閉じます。
+1. 次に、画面とコントロールを操作するために、[PowerApps Studio] で、左側にある**ツリービュー**に戻り、3つの積み上げ四角のアイコンを押します。 シリンダーアイコンを押すと、いつでも**データソース**に戻ることができます。
 
 ## <a name="create-the-order-gallery"></a>注文ギャラリーを作成する
 
@@ -103,7 +86,13 @@ Northwind Traders データベースで架空のデータを管理するため�
     > [!div class="mx-imgBorder"]
     > ![挿入、ギャラリー、垂直方向の空白](media/northwind-orders-canvas-part1/orders-01.png)
 
-1. 数式バーで、ギャラリーの**Items**プロパティを次の数式に設定します。
+    コントロールがキャンバスに配置され、[フライアウト] ダイアログボックスが表示され、接続先のデータソースが尋ねられます。  
+
+
+    > [!div class="mx-imgBorder"]
+    > ギャラリーのアイテムの ![プロパティの設定](media/northwind-orders-canvas-part1/orders-02.png)
+
+1. ここで**注文**に直接接続することもできますが、代わりにギャラリーの並べ替え順序を制御したいと考えています。  [フライアウト] ダイアログを無視し、数式バーでギャラリーの**Items**プロパティを次の数式に設定します。
 
     ```powerapps-dot
     Sort( Orders, 'Order Number', Descending )
@@ -112,7 +101,12 @@ Northwind Traders データベースで架空のデータを管理するため�
     Sort 関数は、リストを順に[**並べ替え**](functions/function-sort.md)て、最も新しい順序 (最も高い順序の番号) が最初に表示されるようにします。
 
     > [!div class="mx-imgBorder"]
-    > ギャラリーのアイテムの ![プロパティの設定](media/northwind-orders-canvas-part1/orders-02.png)
+    > ギャラリーのアイテムの ![プロパティの設定](media/northwind-orders-canvas-part1/orders-02b.png)
+
+1. しばらくすると、結果ビューが数式バーの下に表示されます。  左側の矢印を押して、数式の結果を確認します。  右へスクロールして、 **[Order Number]** 列を表示し、目的の順序 (最高から最低) になるように並べ替えます。  
+
+    > [!div class="mx-imgBorder"]
+    > ギャラリーのアイテムの ![プロパティの設定](media/northwind-orders-canvas-part1/orders-02c.png)
 
 1. 右端の **[プロパティ]** タブで、 **[レイアウト]** リストを開きます。
 
@@ -126,7 +120,10 @@ Northwind Traders データベースで架空のデータを管理するため�
 
     ギャラリーのテンプレートに2つの[**ラベル**](controls/control-text-box.md)コントロールが追加されます。 既定では、これらのコントロールは**Orders**エンティティの2つの列を表示します。これは、次に変更します。 ギャラリーのテンプレートは、エンティティ内のレコードごとに垂直方向にレプリケートされます。
 
-1. **データ**ペインを閉じた場合は、右端の **[プロパティ]** タブで、 **[編集]** ( **[フィールド]** の横) を選択します。
+1. 右端の **[プロパティ]** タブで、 **[編集]** (**フィールド**の横) を選択します。
+
+    > [!div class="mx-imgBorder"]
+    > レイアウトを選択 ![には](media/northwind-orders-canvas-part1/orders-04b.png)
 
 1. **データ**ペインで **[Title1]** を選択します (または、ギャラリーのテンプレートで上部のラベルを選択します)。
 
