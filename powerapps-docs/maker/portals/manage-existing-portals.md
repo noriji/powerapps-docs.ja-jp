@@ -1,109 +1,112 @@
 ---
-title: PowerApps の既存ポータルの管理 | Microsoft Docs
-description: PowerApps のポータルを管理するための手順。
+title: PowerApps で既存のポータルを管理する |Microsoft Docs
+description: PowerApps でポータルを管理する方法について説明します。
 author: sbmjais
 manager: shujoshi
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: null
-ms.date: 07/18/2019
+ms.custom: ''
+ms.date: 10/07/2019
 ms.author: shjais
-ms.reviewer: null
+ms.reviewer: ''
+ms.openlocfilehash: 82fbc5d8cafa6af13af63eaff106ea028830bd01
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541922"
 ---
-
 # <a name="manage-existing-portals-in-powerapps"></a>PowerApps で既存のポータルを管理する
 
-[!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-ポータルを作成すると、PowerApps のホームページの **最近のアプリ** セクションに表示されます。
+作成したポータルは、PowerApps ホームページの **[最近使ったアプリ]** セクションに表示されます。
 
 > [!div class=mx-imgBorder]
-> ![最近のアプリ](media/recent-apps.png "最近のアプリ")  
+> ![最近使用したアプリ](media/recent-apps.png "最近使用したアプリ")  
 
-アプリを管理するには、ポータルの **そのほかのコマンド** (**…**) 選択して、コンテキスト メニューからアクションを選択します。
+アプリを管理するには、ポータルの [**その他のコマンド**( **.** .)] を選択し、コンテキストメニューからアクションを選択します。
 
 > [!div class=mx-imgBorder]
-> ![ポータル アプリのオプション](media/portal-app-options.png "ポータル アプリのオプション")  
+> ![ポータルアプリのオプション](media/portal-app-options.png "ポータルアプリのオプション")  
 
 ## <a name="edit"></a>編集
 
-[ポータル デザイナー](portal-designer-anatomy.md) を開き、ポータル コンテンツおよびコンポーネントを編集します。  
+[PowerApps ポータル Studio](portal-designer-anatomy.md)を開いて、ポータルのコンテンツとコンポーネントを編集します。  
 
 > [!div class=mx-imgBorder]
-> ![ポータル作成元](media/portal-maker.png "ポータル作成元")  
+> ![ポータルの作成者](media/portal-maker.png "ポータルの作成者")  
 
 ## <a name="browse"></a>参照
 
-ポータルを開くと、Web サイトを閲覧できます。 これにより、顧客にどう見えるかがポータルで確認できます。
+ポータルを開いて web サイトを参照します。 これにより、顧客に表示されるポータルを確認することができます。
 
 > [!div class=mx-imgBorder]
-> ![ポータル Web サイト](media/portal-website.png "ポータル Web サイト")  
+> ![ポータル web サイト](media/portal-website.png "ポータル web サイト")  
 
-または、 Web サイトでの変更を表示するには、 **Web サイトを閲覧する**を [ポータル デザイナー](portal-designer-anatomy.md) を選択すると、ポータルを開いて Web サイトを閲覧できます。 Web サイトは、Web サイトの URL を含む新しいタブで開きます。
+または、 [PowerApps ポータル Studio](portal-designer-anatomy.md)で **[Web サイトの参照]** を選択して web サイトを参照し、web サイトに加えた変更を表示することもできます。 Web サイトの URL が新しいタブに表示されます。
 
 ## <a name="share"></a>共有
 
-内部または外部ユーザーとポータルを共有できます。 **このポータルを共有する** ウィンドウで説明した手順に従ってください。
+ポータルを内部または外部のユーザーと共有します。 「**このポータルを共有**する」ウィンドウに記載されている手順に従います。
 
 > [!div class=mx-imgBorder]
-> ![ポータルの共有](media/share-portal.png "ポータルの共有")  
+> ![ポータルを共有する](media/share-portal.png "ポータルを共有する")  
 
-### <a name="share-with-internal-users"></a>内部ユーザーと共有します。
+### <a name="share-with-internal-users"></a>内部ユーザーと共有する
 
-内部ユーザーとポータルを共有するには、セキュリティ ロールをまず作成し、該当ユーザーをセキュリティ ロールに割り当てて、ポータルを使用できるようにする必要があります。
+ポータルを内部ユーザーと共有するには、まずセキュリティロールを作成してから、ユーザーをセキュリティロールに割り当てて、ポータルを使用できるようにする必要があります。
 
 > [!NOTE]
-> Common Data Service のユーザーとしてポータルのエンティティに対する適切な特権を持っていないときは、「この環境でソリューションを表示するためのアクセス権を持っていません」などのエラーメッセージが表示される場合があります。 また、「この環境で Web サイトを表示するためのアクセス許可がありません」と表示される場合もあります。 このプレビューでは、ユーザーが、**システム管理者** または、対応する Common Data Service データベース内の少なくとも **システム カスタマイザー** というセキュリティ ロールに含まれるようにすることをお勧めします。
+> Common Data Service のユーザーとして、ポータルエンティティに対する適切な権限がない場合は、"この環境でソリューションを表示するためのアクセス権がありません" などのエラーが表示されることがあります。 または "この環境で Web サイトを表示するためのアクセス権がありません"。 対応する Common Data Service データベースでは、システム管理者のセキュリティロールを使用することをお勧めします。
 
-#### <a name="step-1-create-a-security-role"></a>ステップ 1: セキュリティ ロールを作成する
+#### <a name="step-1-create-a-security-role"></a>手順 1: セキュリティロールを作成する
 
-1.  **このポータルの共有** ウィンドウの **セキュリティ ロールの作成** で、**セキュリティ ロール** を選択します。 すべての構成済みのセキュリティ ロールの一覧が表示されます。
+1.  **[このポータルを共有]** する ウィンドウの **[セキュリティロールの作成]** で、 **[セキュリティロール]** を選択します。 構成されているすべてのセキュリティロールの一覧が表示されます。
 
-2.  [操作] ツール バーで、**新規**を選択します。
+2.  操作 ツールバーで、**新規** を選択します。
 
-3.  **新規のセキュリティ ロール** ウィンドウで、ロールの名前を入力します。
+3.  **[新しいセキュリティロール]** ウィンドウで、ロール名を入力します。
 
 4.  ポータルで使用されるすべてのエンティティの特権を設定します。
 
-5.  セキュリティ ロールの構成を終了する場合、ツール バー上で**保存して閉じる**を選択します。
+5.  セキュリティロールの構成が完了したら、ツールバーの **[保存して閉じる]** を選択します。
 
-セキュリティ ロールおよび特権の詳細については、[セキュリティ ロールおよび特権](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/security-roles-privileges)を参照してください。  
+セキュリティロールと特権の詳細については、「[セキュリティロールと特権](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)」を参照してください。
 
-#### <a name="step-2-assign-users-to-the-security-role"></a>ステップ 2: ユーザーをセキュリティ ロールに割り当てる
+#### <a name="step-2-assign-users-to-the-security-role"></a>手順 2: ユーザーをセキュリティロールに割り当てる
 
-1.  **このポータルの共有** ウィンドウで、**セキュリティ ロールへのユーザーの割り当て** の、**ユーザー** を選択します。 すべてのユーザーの一覧が表示されます。
+1.  **[このポータルを共有]** する ウィンドウの **[ユーザーをセキュリティロールに割り当てる]** で、 **[ユーザー]** を選択します。 すべてのユーザーの一覧が表示されます。
 
-2.  セキュリティ ロールを割り当てるユーザーを選択します。
+2.  セキュリティロールを割り当てるユーザーを選択します。
 
-3.  **ロールの管理**を選択します。
+3.  **[ロールの管理]** を選びます。
 
     > [!NOTE]
-    > コマンド バーの **ロールの管理** ボタンが表示されない場合は、URL の forceUCI を 0 に設定し、クライアントを変更する必要があります。 たとえば、https://&lt;org\_url&gt;/main.aspx?pagetype=entitylist&etn=systemuser&forceUCI=0
+    > コマンドバーに **[ロールの管理]** ボタンが表示されない場合は、URL で forceuci を0に設定してクライアントを変更する必要があります。 たとえば、 https://&lt;org\_url&gt;/main? pagetype = entitylist & etn = & forceUCI = 0
 
-4.  **ユーザー ロールの管理** ダイアログ ボックスで、前に作成したセキュリティ ロールを選び、**OK** を選びます。
+4.  **[ユーザーロールの管理]** ダイアログボックスで、前の手順で作成したセキュリティロールを選択し、[ **OK]** を選択します。
 
 ### <a name="share-with-external-users"></a>外部ユーザーと共有する
 
-ポータルは、匿名で機能させる必要があります。また、外部ユーザーがアクセスできる必要があります。 外部ユーザーのロールおよびアクセス許可を管理する高度な機能を試行する場合、[ポータルでの使用に関する連絡先の構成](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-contacts)、[ポータルに取引先担当者を招待する](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/invite-contacts)、[ポータルの Web ロールの作成](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/create-web-roles)、[エンティティのアクセス許可の割り当て](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/assign-entity-permissions)を参照してください。  
+ポータルは匿名で動作し、外部ユーザーがアクセスできるようにする必要があります。 外部ユーザーのロールとアクセス許可を管理するための高度な機能を試す場合は、「[ポータルで使用する連絡先の構成](configure/configure-contacts.md)、ポータル[への連絡先の招待](configure/invite-contacts.md)、[ポータルの web ロールの作成](configure/create-web-roles.md)、[エンティティのアクセス許可の割り当て」を参照してください。](configure/assign-entity-permissions.md)  
 
 ## <a name="settings"></a>設定
 
-ポータル設定を表示して、ポータルの名前を変更できるようにします。 ポータル管理センターでのポータル管理や、サイト設定を使用する作業するなど、高度な操作も実行できます。 構成では、PowerApps ポータル管理センターとサイトの設定へのリンクが提供されます。 詳細については、[ポータルの管理](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-portal) と [ポータルのサイト設定の構成](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/configure-site-settings)を参照してください。  
+ポータルの設定が表示され、ポータルの名前を変更できます。 PowerApps ポータル管理センターでのポータルの管理や、サイト設定の操作などの高度な操作を実行することもできます。 設定には、PowerApps ポータル管理センターとサイト設定へのリンクが用意されています。 詳細については、 [「高度なポータル管理](admin/admin-overview.md)」と「[サイト設定の構成](configure/configure-site-settings.md)」を参照してください。  
 
 > [!div class=mx-imgBorder]
 > ![ポータルの設定](media/portal-settings.png "ポータルの設定")  
 
-## <a name="delete"></a>削除
+## <a name="delete"></a>デリート
 
-ポータルおよびホスト リソースを削除します。 ポータルを削除すると、URL にアクセスできなくなりなります。 ポータルの削除は、環境に存在するポータルの構成またはソリューションに影響しません。現状のまま残ります。
-環境からポータル組織を削除するには、ポータル構成を手動で削除する必要があります。 これには、ポータル管理アプリを使用し、ポータルに対応する Web レコードを削除します。
+ポータルとホストされているリソースを削除します。 ポータルを削除すると、その URL にアクセスできなくなります。 ポータルを削除しても、使用している環境に存在するポータルの構成やソリューションには影響しません。そのまま残ります。
+ポータルの構成を環境から完全に削除するには、手動でポータルの構成を削除する必要があります。 これを行うには、ポータル管理アプリを使用して、ポータルの対応する web サイトレコードを削除します。
 
 > [!NOTE]
-> ポータルを削除する特権がない場合、エラーが表示されます。 ポータルを削除するには、システム カスタマイザーまたはシステム管理者ロールが必要です。 また、ユーザーは、Azure Active Directory のポータル アプリケーションの所有者である必要があります。 ポータルを作成するユーザーは既定で所有者とされ、ポータルを削除できます。 所有者としてユーザー自身を追加するには、[Azure AD の所有者として自分を追加する](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/manage-portal#to-add-yourself-as-an-owner-of-the-azure-ad-application)を参照してください。
+> ポータルを削除するための十分な特権がない場合は、エラーが表示されます。 ポータルを削除するには、システム管理者ロールが必要です。 また、Azure Active Directory では、ポータルアプリケーションの所有者である必要があります。 ポータルを作成するユーザーは、既定で所有者であり、ポータルを削除できます。 自分自身を所有者として追加する方法については、「 [Azure AD アプリケーションの所有者として自分を追加](admin/admin-overview.md#add-yourself-as-an-owner-of-the-azure-ad-application)する」を参照してください。
 
 ## <a name="details"></a>詳細
 
-ポータルの所有者、作成および最終変更された日付と時刻、ポータルの URL などの詳細表示。
+ポータルの所有者、作成日と最終変更日時、ポータルの URL などの詳細が表示されます。
 
 > [!div class=mx-imgBorder]
 > ![ポータルの詳細](media/portal-details.png "ポータルの詳細")  
