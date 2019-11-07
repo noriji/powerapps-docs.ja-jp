@@ -1006,6 +1006,8 @@
           href: ./model-driven-apps/templates-overview.md
         - name: テーマを使って組織のブランドを適用する
           href: ./model-driven-apps/create-themes-organization-branding.md
+        - name: アプリのガイド付きヘルプを作成する
+          href: ./common-data-service/create-custom-help-pages.md
         - name: レポートをアプリに追加する
           href: ./model-driven-apps/add-reporting-to-app.md
           items:
@@ -1042,6 +1044,8 @@
           href: ./model-driven-apps/change-custom-entity-icons.md
         - name: ソリューションを使用してアプリを配布する
           href: ./model-driven-apps/distribute-model-driven-app.md
+        - name: カスタマイズ可能なヘルプを有効にする
+          href: ./model-driven-apps/use-customizable-help.md
         - name: ガイド付きヘルプを作成する
           href: ./model-driven-apps/create-guided-help-learning-path.md
     - name: 統合インターフェイスへの移行
@@ -1056,6 +1060,8 @@
           href: ./model-driven-apps/approaching-unified-interface.md
         - name: 'チェックリスト:統一インターフェイスの切り替え'
           href: ./model-driven-apps/checklist-transition-unified-interface.md
+        - name: 'よく寄せられる質問: 統一インターフェイスの切り替え'
+          href: ./model-driven-apps/faqs-transition-unified-interface.md
     - name: PowerApps アプリ デザイナーのアクセシビリティ
       href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
     - name: Outlook 用 Dynamics 365 アプリをカスタマイズする
