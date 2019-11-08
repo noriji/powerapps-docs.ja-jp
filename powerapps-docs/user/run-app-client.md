@@ -15,17 +15,17 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 9f951167f56ffd3d211182a89a21d54916ee6b6e
-ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.openlocfilehash: 729d852227b31a6a162fdf94644d1e08c1a401ee
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "61531906"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73543436"
 ---
 # <a name="run-a-canvas-app-on-a-mobile-device"></a>キャンバス アプリをモバイル デバイス上で実行する
-自分でアプリを作成したり、他のユーザーがあなたとアプリを共有したりしたときは、Windows、iOS、Android、または Web ブラウザーでそのアプリを実行できます。 このトピックでは、モバイル デバイス上でキャンバス アプリを実行する方法について説明します。 モバイル デバイスで実行されるアプリでは、位置情報サービスやカメラなどのデバイス機能を活用できます。
+自分でアプリを作成したり、他のユーザーからアプリの共有を受けたりしたときは、Windows、iOS、Android、または Web ブラウザーでアプリを実行できます。 このトピックでは、モバイル デバイス上でキャンバス アプリを実行する方法について説明します。 モバイル デバイスで実行されるアプリでは、位置情報サービスやカメラなどのデバイス機能を活用できます。
 
-この手順を行うには、PowerApps にまだサインアップしていない場合は始める前に[無料でサインアップ](https://web.powerapps.com/signup?redirect=marketing&email=)し、[App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) または [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps) から[サポートされるオペレーティング システム](../maker/canvas-apps/limits-and-config.md)が稼働している iPhone、iPad、または Android デバイスに PowerApps をダウンロードしてください。 自分で作成したキャンバス アプリ、または他のユーザーが作成して共有されたキャンバス アプリにアクセスできることも確認してください。
+この手順を行うには、PowerApps にまだサインアップしていない場合は始める前に[無料でサインアップ](https://make.powerapps.com/signup?redirect=marketing&email=)し、[App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) または [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps) から[サポートされるオペレーティング システム](../maker/canvas-apps/limits-and-config.md)が稼働している iPhone、iPad、または Android デバイスに PowerApps をダウンロードしてください。 自分で作成したキャンバス アプリ、または他のユーザーが作成して共有されたキャンバス アプリにアクセスできることも確認してください。
 
 ## <a name="open-powerapps-and-sign-in"></a>PowerApps を開いてサインインする
 モバイル デバイスで PowerApps を開き、Azure Active Directory の資格情報を使ってサインインします。
@@ -41,13 +41,13 @@ ms.locfileid: "61531906"
 
 次のフィルターを使用できます。
 
-* **すべてのアプリ**:自分が作成したアプリや他のユーザーが共有したアプリなど、アクセス権のあるすべてのアプリが表示されます。
+* **[すべてのアプリ]** : 自分が作成したアプリ、他のユーザーが共有したアプリなど、アクセスできるすべてのアプリが表示されます。
 
-* **マイアプリ**:少なくとも1回実行したアプリを表示します。
+* **[マイ アプリ]** : 少なくとも 1 回実行したことのあるアプリが表示されます。
 
-* **サンプルアプリ**:架空のデータを使用して実際のアプリケーションシナリオを紹介する Microsoft のサンプルアプリが表示されます。これにより、設計の可能性を調査するのに役立ちます。
+* **[サンプル アプリ]** : 設計の可能性を調査できるように、架空のデータを使って実際のアプリケーションのシナリオが紹介されている、Microsoft からのサンプル アプリが表示されます。
 
-* **お気に入り**:アプリタイルの省略記号 (...) をタップし、 **[お気に入り]** をタップしてマークしたアプリを表示します。 この一覧からアプリを削除するには、アプリ タイルの省略記号 [...] をタップして、 **[お気に入りから外す]** をタップします。
+* **[お気に入り]** : アプリ タイルで省略記号 [...] をタップしてから **[お気に入り]** をタップするとマークしたアプリが表示されます。 この一覧からアプリを削除するには、アプリ タイルの省略記号 [...] をタップして、 **[お気に入りから外す]** をタップします。
 
     ![お気に入りとしてマークする](./media/run-app-client/favorite.png)
 
@@ -57,7 +57,7 @@ ms.locfileid: "61531906"
 
 実行するアプリの名前がわかっている場合は、PowerApps の上部にある検索アイコンをタップして、検索ボックスに名前の一部を入力します。
 
-![検索](./media/run-app-client/search.png)
+![Search](./media/run-app-client/search.png)
 
 アプリをフィルター処理した場合は、フィルター処理された一覧が検索されます。
 
@@ -69,7 +69,7 @@ PowerApps を初めて使う場合は、アプリを閉じるためのスワイ�
 ![アプリの起動](./media/run-app-client/run-client-app.png)
 
 ## <a name="give-consent"></a>同意
-アプリでデータ ソースへの接続またはデバイスの機能 (カメラや位置情報サービスなど) を使うためのアクセス許可が必要な場合は、アプリを使う前に同意する必要があります。 通常、これが求められるのは初回のみです。
+アプリでデータ ソースへの接続またはデバイスの機能 (カメラや位置情報サービスなど) を使うためのアクセス許可が必要な場合は、アプリを使う前に同意する必要があります。 通常、このことが求められるのは初回のみです。
 
 ![Connection](./media/run-app-client/app-connection.png)
 

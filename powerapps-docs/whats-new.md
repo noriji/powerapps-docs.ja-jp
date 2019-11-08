@@ -19,12 +19,12 @@ search.app:
 searchScope:
 - GetStarted
 - PowerApps
-ms.openlocfilehash: f5d2fc5d493dd46eb6e0bed2bc8d7af754cff0dd
-ms.sourcegitcommit: 25a85b462515cb64f3f2b114864a682abf803f4a
+ms.openlocfilehash: dc170445349e2c3b2bcca02b855914f7644bd685
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70213860"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73543346"
 ---
 # <a name="whats-new-in-powerapps"></a>PowerApps の新機能
 
@@ -34,7 +34,7 @@ ms.locfileid: "70213860"
 
 この数週間でリリースされた新機能、修正プログラム、機能改善については、「[Released versions for Microsoft PowerApps](https://docs.microsoft.com/business-applications-release-notes/powerplatform/released-versions/powerapps)」 (Microsoft PowerApps のリリース バージョン) を参照してください。
 
-週間リリース ノートの情報を閲覧する方法については、こちらの[ブログ投稿](https://powerapps.microsoft.com/en-us/blog/stay-tuned-with-the-latest-features-and-fixes-through-powerapps-weekly-release-notes/)をお読みください。
+週間リリース ノートの情報を閲覧する方法については、こちらの[ブログ投稿](https://powerapps.microsoft.com/blog/stay-tuned-with-the-latest-features-and-fixes-through-powerapps-weekly-release-notes/)をお読みください。
 
 > [!NOTE]
 > リリースは、数日間にわたってロールアウトします。 新機能や更新された機能は、すぐには表示されない場合があります。

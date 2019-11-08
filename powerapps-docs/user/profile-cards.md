@@ -15,19 +15,19 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 67441e506ba2715a9994f6b81cd08426e37e0fc8
-ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
+ms.openlocfilehash: 276c7d3cbf95947306fab768da8af3c4c66b33e0
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "71950912"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73543370"
 ---
 # <a name="view-the-profile-card-for-a-contact-or-user"></a>連絡先またはユーザーのプロファイルカードを表示する
 
-プロファイルカードを使用して、連絡先またはユーザーに関する簡単な情報を取得します。 Dynamics 365 Sales や Dynamics 365 カスタマサービスなど、Dynamics 365 のモデル駆動型アプリで連絡先またはユーザーフィールドを選択すると、それらに関連する情報がプロファイルカードに表示されます。 プロファイルカードの詳細については、「 [Office 365 のプロファイルカード](https://support.office.com/en-us/article/Profile-cards-in-Office-365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501)」を参照してください。
+プロファイルカードを使用して、連絡先またはユーザーに関する簡単な情報を取得します。 Dynamics 365 Sales や Dynamics 365 カスタマサービスなど、Dynamics 365 のモデル駆動型アプリで連絡先またはユーザーフィールドを選択すると、それらに関連する情報がプロファイルカードに表示されます。 プロファイルカードの詳細については、「 [Office 365 のプロファイルカード](https://support.office.com/article/Profile-cards-in-Office-365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501)」を参照してください。
 
 > [!NOTE]
->  - プロファイルカードは、 **Contact**および**User**エンティティで使用できます。 詳細については、「[プロファイルカードを有効にする (管理者向け)](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/enable-profile-card)」を参照してください。
+>  - プロファイルカードは、 **Contact**および**User**エンティティで使用できます。 詳細については、「[プロファイルカードを有効にする (管理者向け)](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-profile-card)」を参照してください。
 >  - Azure Active Directory で Office Delve サービスに対して多要素認証が有効になっている場合、Common Data Service のプロファイルカードは表示されません。
 
 ## <a name="view-a-contacts-profile"></a>連絡先のプロファイルを表示する
@@ -62,7 +62,7 @@ ms.locfileid: "71950912"
 ### <a name="where-is-information-shown-in-the-profile-card-coming-from"></a>プロファイルカードに表示される情報はどこにありますか。
 連絡先プロファイルカードに表示される情報は、(Microsoft Exchange ではなく) Common Data Service からフェッチされます。 これは、連絡先の詳細が Dynamics 365 から送信されることを意味します。
 
-ユーザープロファイルカードに表示される情報は、Office 365 (Azure Active Directory) から取得されます。 詳細については、「 [Office 365 のプロファイルカード (管理者セクション)](https://support.office.com/en-us/article/Profile-cards-in-Office-365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501)」を参照してください。
+ユーザープロファイルカードに表示される情報は、Office 365 (Azure Active Directory) から取得されます。 詳細については、「 [Office 365 のプロファイルカード (管理者セクション)](https://support.office.com/article/Profile-cards-in-Office-365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501)」を参照してください。
 
 ### <a name="how-can-i-customize-the-fields-shown-on-the-profile-card"></a>プロファイルカードに表示されるフィールドをカスタマイズする方法はありますか
 現時点では、プロファイルカードに表示されるフィールドの一覧は、カスタマイズ用に開いていません。

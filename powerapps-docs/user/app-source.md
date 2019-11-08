@@ -16,12 +16,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: d1e0227284549ae293083ba5ae012d28c6178454
-ms.sourcegitcommit: 60fd1792430b9f3da08ec161cb2277506d795e3a
+ms.openlocfilehash: 6e23833c57b5d37c7ce7908a048dbf49fa447e06
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71705386"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73541765"
 ---
 # <a name="discover-apps-via-appsource"></a>AppSource でアプリを探す
 PowerApps で作成、公開したアプリを Web 上の Dynamics 365 で検出して使用できます。 使用をはっきり選択したアプリ (つまり、共有メールから起動するか、AppSource から開いて選択したアプリ) や管理者から与えられたアプリなど、すべてのアプリが表示されます。 これには PowerApps のすべてのアプリと Microsoft の Dynamics 365 アプリケーションが含まれます。 アプリを検索したり、環境別に絞り込んだり、頻繁に使用するアプリをページの一番上に固定したりできます。
@@ -29,7 +29,7 @@ PowerApps で作成、公開したアプリを Web 上の Dynamics 365 で検出
   ![Dynamics 365 のアプリ](./media/app-source/apps-dynamics365.png)
 
 ## <a name="find-apps-via-the-appsource-organization-gallery"></a>AppSource 組織ギャラリーからアプリを見つける
-Microsoft AppSource は [Dynamics 365](http://home.dynamics.com) ホーム ページと共通ナビゲーションに組み込まれるようになりました。 社内で利用できるアプリのプライベート ギャラリーが含まれています。 ホーム ページやタスク ウィンドウから **[Get more apps (他のアプリを取得)]** を選択し、 **[My Organization (自分の組織)]** タブに移動すると、自分が利用できるアプリが表示されます。
+Microsoft AppSource は [Dynamics 365](https://home.dynamics.com) ホーム ページと共通ナビゲーションに組み込まれるようになりました。 社内で利用できるアプリのプライベート ギャラリーが含まれています。 ホーム ページやタスク ウィンドウから **[Get more apps (他のアプリを取得)]** を選択し、 **[My Organization (自分の組織)]** タブに移動すると、自分が利用できるアプリが表示されます。
 
 ![Dynamics 365 のアプリ](./media/app-source/getmoreapps.png)
 

@@ -15,12 +15,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 9ba051395e99dc6f2079d033c10a727a2e95da67
-ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
+ms.openlocfilehash: dee8b918efc60fed57cc6d8ca407e6cafe2b8060
+ms.sourcegitcommit: bee698ca0d11524377b67813a65e1a022d08c05e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "71924564"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73609899"
 ---
 # <a name="add-an-appointment-email-phone-call-note-or-task-activity-to-the-timeline"></a>モデル駆動型アプリのタイムラインに予定、電子メール、電話、メモ、またはタスクのアクティビティを追加する 
 
@@ -100,7 +100,7 @@ ms.locfileid: "71924564"
 
 
     > [!NOTE]
-    > メッセージ交換ビューで電子メールの一覧を表示するには、 **[設定]**  >  **[個人用]** 設定 >  **[電子メール]** タブの順に選択し、 **[タイムラインのメッセージ交換として電子メールを表示]** する を選択 個人設定の詳細については、「[個人用オプションを設定](https://docs.microsoft.com/en-us/powerapps/user/set-personal-options#email-tab-options)する」を参照してください。 有効にすると、タイムラインを持つ任意のフォームを開くことができます。メールは、上部の最新の電子メールを使用して、メッセージ交換スレッドにグループ化されます。
+    > メッセージ交換ビューで電子メールの一覧を表示するには、 **[設定]**  >  **[個人用]** 設定 >  **[電子メール]** タブの順に選択し、 **[タイムラインのメッセージ交換として電子メールを表示]** する を選択 個人設定の詳細については、「[個人用オプションを設定](https://docs.microsoft.com/powerapps/user/set-personal-options#email-tab-options)する」を参照してください。 有効にすると、タイムラインを持つ任意のフォームを開くことができます。メールは、上部の最新の電子メールを使用して、メッセージ交換スレッドにグループ化されます。
 
    > [!div class="mx-imgBorder"]
    > ![個人用オプションの設定](media/emailsettings1.png "個人用オプションを設定する")
@@ -112,6 +112,9 @@ ms.locfileid: "71924564"
 ## <a name="add-an-appointment"></a>予定を追加する  
 
 予定アクティビティをレコードに追加するには、まずアクティビティを追加するレコードを保存する必要があります。  
+
+> [!NOTE]
+> Outlook 用 Dynamics 365 アプリ、Dynamics 365 for phone アプリ、携帯電話 web ブラウザーでモデル駆動型アプリ web クライアントを実行する場合、定期的な予定はサポートされていません。
   
 1. アクティビティを追加するレコードを開きます。 たとえば、連絡先レコードです。
   

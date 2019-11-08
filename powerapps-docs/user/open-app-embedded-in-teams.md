@@ -16,12 +16,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: dc13524f4f567365cdcb6bf9898b62fcb6eac4c4
-ms.sourcegitcommit: 7a96b693e320d0fced7a82987c012b80002cfd84
+ms.openlocfilehash: 62a7166f228545f2a200570186ee23c868650b79
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848237"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73543484"
 ---
 # <a name="add-an-app-to-microsoft-teams"></a>Microsoft Teams にアプリを追加する
 
@@ -29,15 +29,15 @@ Microsoft Teams は、Office 365 テクノロジを基に構築されている�
 
 ![Microsoft Teams に埋め込まれたアプリ](./media/open-app-embedded-in-teams/embedded-app.png)
 
-PowerApps にサインアップしていない場合は、[無料でサインアップ](https://web.powerapps.com/signup?redirect=marketing&email=)してください。
+PowerApps にサインアップしていない場合は、[無料でサインアップ](https://make.powerapps.com/signup?redirect=marketing&email=)してください。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 この手順を行うには、[Office 365 サブスクリプション](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1)と [Teams のチャネル](https://www.youtube.com/watch?v=he2f1quaR7M)が必要です。
 
 ## <a name="sign-in-to-powerapps"></a>PowerApps へのサインイン
 
-[https://web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) で PowerApps にサインインします。
+[https://make.powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) で PowerApps にサインインします。
 
 ## <a name="add-an-app"></a>アプリを追加する
 
@@ -84,7 +84,7 @@ Microsoft Teams のデスクトップ アプリでは:
 
 * アプリは、セキュリティで保護された (https) 接続経由でイメージや .pdf ファイルなどのコンテンツを読み込む必要があります。
 * すべてのセンサー (**Acceleration**、**Compass**、**Location** など) がサポートされているとは限りません。
-* 次のオーディオ形式のみがサポートされています。AAC、H264、OGG Vorbis、および WAV。
+* サポートされているオーディオ形式は、AAC、H264、OGG Vorbis、および WAV のみです。
 
 ## <a name="clean-up-resources"></a>リソースのクリーンアップ
 

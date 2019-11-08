@@ -15,12 +15,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 76241ae2e26752a98e32e7ad72c54780da3934ae
-ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
+ms.openlocfilehash: c5c620590400fc6fe276c8107c94d89b3daa42b9
+ms.sourcegitcommit: 6380b5ac248fc5d2f5d4a34af8831b4f7b6ef1aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "71705327"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801080"
 ---
 # <a name="enhanced-user-experience-with-the-unified-interface-for-model-driven-apps"></a>モデル駆動型アプリ用の統合インターフェイスによるユーザーエクスペリエンスの向上 
 
@@ -29,8 +29,10 @@ ms.locfileid: "71705327"
 > [!div class="mx-imgBorder"]
 > ![統合インターフェイスが画面に適合](media/Reflow.png "統合インターフェイスが画面に適合")
 
+モデル駆動型アプリでの統合インターフェイスの概要については、こちらのビデオ「[統合インターフェイスの概要](https://www.youtube.com/watch?v=_VPOi_Iq6ko)」をご覧ください。
+
 > [!NOTE]
-> レガシ web クライアントは非推奨となり、2020年10月1日より前に、お客様は統合インターフェイスに移行する必要があります。 詳細については、「[ブログ: 統合インターフェイスに移動するタイムラインの発表](https://cloudblogs.microsoft.com/dynamics365/it/2019/09/10/announcing-the-timeline-to-move-to-unified-interface/)」を参照してください。 移行方法の詳細については、「[移行のクイックスタート](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/transition-web-app)」を参照してください。
+> レガシ web クライアントは非推奨となり、2020年10月1日より前に、お客様は統合インターフェイスに移行する必要があります。 詳細については、「[ブログ: 統合インターフェイスに移動するタイムラインの発表](https://cloudblogs.microsoft.com/dynamics365/it/2019/09/10/announcing-the-timeline-to-move-to-unified-interface/)」を参照してください。 移行方法の詳細については、「[移行のクイックスタート](https://docs.microsoft.com/powerapps/maker/model-driven-apps/transition-web-app)」を参照してください。
 
 ## <a name="navigation"></a>領域
 

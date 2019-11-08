@@ -14,19 +14,19 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: a53aaf84530935e525f1177d85f74e125711fc40
-ms.sourcegitcommit: 4c35aedde46380d5438687ae6f61a3b0cc7e7e2f
+ms.openlocfilehash: f0b095b3cb69eb7b6fd373b28eb2255291c7893a
+ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71969145"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73543528"
 ---
 #  <a name="basic-navigation-in-a-model-driven-app"></a>モデル駆動型アプリでのナビゲーションの基本 
 
 モデル駆動型アプリで作業領域に移動したり、新しいレコードを作成したり、検索したり、他のタスクを実行したりするにはナビゲーション バーを使用します。
 
 > [!div class="mx-imgBorder"]
-> ![モデル駆動型アプリでのナビゲーション](media/nav.png "モデル駆動型アプリでのナビゲーション")
+> ![モデル駆動型アプリの nav](media/nav.png "モデル駆動型アプリの nav")
 
 1. このサイト マップは、既定で拡大され維持されます。
 2. 現在使用しているサブ領域は、アプリのどの部分に現在いるのかを示すために、強調表示されます。
@@ -55,13 +55,13 @@ ms.locfileid: "71969145"
 2. アイテムの横のピン留め解除のアイコンを選択すと、一覧からそれが削除されます。  
 
    > [!div class="mx-imgBorder"]
-   > ![レコードのピン留めの解除](media/unpinnedrecords.png "レコードのピン留めの解除")
+   > ![レコードの固定解除](media/unpinnedrecords.png "レコードの固定解除")
 
 ## <a name="record-set-navigation"></a>レコードのセットのナビゲーション 
 事前設定されたビューとクエリを使用して、複数のレコード間を移動できます。 レコードを使用したナビゲーションでは、作業一覧を失うことなく、一覧のレコード間を移動し、元に簡単に戻ることができるので、ユーザーの生産性が高まります。
 
 > [!div class="mx-imgBorder"]
-> ![レコード セットのナビゲーション](media/recordset.png "レコード セットのナビゲーション")
+> ![レコードセットのナビゲーション](media/recordset.png "レコードのセットのナビゲーション")
 
 ## <a name="reference-panel"></a>参照パネル
 参照パネルは、使用している画面から移動せずに、作業を終えられる優れた方法です。 別の画面に移動せずに、参照しているレコードのコンテキスト内で、ケースやアカウントの機会など、その他の関連するものを参照できます。
@@ -71,7 +71,7 @@ ms.locfileid: "71969145"
 
  [参照] パネルの詳細については、次のビデオをご覧ください。
 
-<div class="embeddedvideo"><iframe src="https://www.microsoft.com/en-us/videoplayer/embed/d8224c3f-6e20-4b8e-9d0d-b0f5602c7708" frameborder="0" allowfullscreen=""></iframe></div>
+<div class="embeddedvideo"><iframe src="https://www.microsoft.com/videoplayer/embed/d8224c3f-6e20-4b8e-9d0d-b0f5602c7708" frameborder="0" allowfullscreen=""></iframe></div>
 
 ## <a name="notifications"></a>通知 
 
@@ -83,11 +83,11 @@ ms.locfileid: "71969145"
 
 通知が 1 つのみある場合は、行が 1 つ表示されます。
 
-![通知が 1 つの場合の例](media/single_notification.png "通知が 1 つの場合の例")
+![シングル通知の例](media/single_notification.png "シングル通知の例")
 
 通知が 2 つ以上ある場合は、通知の数が表示されます。 各メッセージを表示するには、シェブロンを選択します。
 
-![通知が複数の場合の例](media/multiple_notification.png "通知が複数の場合の例")
+![複数の通知の例](media/multiple_notification.png "複数の通知の例")
 
 ## <a name="grids"></a>む
 
@@ -99,19 +99,19 @@ ms.locfileid: "71969145"
 
 
    > [!div class="mx-imgBorder"]
-   > ![グリッドの状態]を記憶する状態(media/grid-remember-state-on-back-navigate.gif "を記憶する")
+   > ![グリッドの状態を記憶する](media/grid-remember-state-on-back-navigate.gif "グリッドの状態を記憶する")
 
 
 ジャンプバーでは、最初に並べ替えられたフィールドを使用します。 並べ替えの変更が行われていない場合、ジャンプバーはプライマリフィールドを使用します。 
 
    > [!div class="mx-imgBorder"]
-   > ![グリッドの状態]を記憶する状態(media/jumpbar-filter-on-sorted-column.gif "を記憶する")
+   > ![グリッドの状態を記憶する](media/jumpbar-filter-on-sorted-column.gif "グリッドの状態を記憶する")
    
 
 **[アクティビティの種類]** フィールドをフィルター処理して、複数のフィルター処理の種類を選択できます。 また、owner、status、reason などの関連エンティティフィールドをフィルター処理することもできます。
 
    > [!div class="mx-imgBorder"]
-   > ![グリッドフィルター](media/grid-activity-type-column-filter.gif "グリッドフィルター処理")
+   > ![グリッドフィルター処理](media/grid-activity-type-column-filter.gif "グリッドフィルター処理")
    
 階層アイコンを選択すると、階層のフォームに移動します。
 

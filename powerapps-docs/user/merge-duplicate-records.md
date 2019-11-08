@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/25/2019
+ms.date: 10/31/2019
 ms.author: mduelae
 ms.reviewer: ''
 ms.assetid: ''
@@ -15,16 +15,16 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 5a14662d25a7c2dda79f2399b863b959f9f70cc5
-ms.sourcegitcommit: 79ac9decef3d5aab40fbf3bc95f8f4ba03f9b3df
+ms.openlocfilehash: c0811645429c9f1e7570ceeaf316a5217e440ae4
+ms.sourcegitcommit: bee698ca0d11524377b67813a65e1a022d08c05e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72959326"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73609881"
 ---
 # <a name="merge-duplicate-records"></a>重複レコードをマージする 
 
-重複するレコードは、データを手動で入力したり、データを一括してインポートしたりするときに、データにクリープできます。 Common Data Service を使用すると、アカウントと連絡先の重複を検出することで、潜在的な重複を解決できます。 また、管理者は、他の状況に対して重複検出ルールを設定することもできます。  
+重複するレコードは、データを手動で入力したり、データを一括してインポートしたりするときに、データにクリープできます。 Common Data Service を使用すると、、アカウント、連絡先などのアクティブなレコードの重複を検出することで、潜在的な重複を解決できます。 レコードをマージすると、関連するレコードまたは子レコードもマージされます。 また、管理者は、他の状況に対して重複検出ルールを設定することもできます。  
   
 たとえば、連絡先レコード、Jim Glynn、および携帯電話番号を入力するとします。  重複検出ルールは、既に類似したレコードがあることを検出し、このダイアログボックスを表示します。  
   

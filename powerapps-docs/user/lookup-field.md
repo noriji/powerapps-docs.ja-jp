@@ -5,7 +5,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/28/2019
+ms.date: 11/06/2019
 ms.author: mkaur
 ms.reviewer: ''
 ms.assetid: ''
@@ -14,12 +14,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: e2f267e0dd0b61324da381a3f7f7e13677b997ee
-ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
+ms.openlocfilehash: c37e6e9e2b540dcad2c166a4ebf9d71d3b503978
+ms.sourcegitcommit: 10b2798d8f4acd01da15412a2e9fc872d1212d7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026027"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728418"
 ---
 #  <a name="use-the-lookup-field-on-a-record"></a>レコードのルックアップ フィールドを使用する
 
@@ -61,6 +61,9 @@ Lookup を使用すると、関連エンティティからレコードを選択�
  
 ## <a name="most-recently-used-record-type-images"></a>最近使用したレコードの種類の画像
 最近使用したレコードの一覧には、レコードの種類を区別するのに役立つ画像が表示されます。
+
+>[!NOTE] 
+>最近のレコードは、検索用語や選択したビューではフィルター処理されません。
 
   > [!div class="mx-imgBorder"]
   > ![参照フィールドに画像が表示される](media/Lookup_03-MRU_Entity_Images_56[1].png "参照フィールドに画像が表示される")  
