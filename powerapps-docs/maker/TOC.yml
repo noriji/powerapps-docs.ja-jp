@@ -1,6 +1,7 @@
-- name: 'はじめる:PowerApps とは'
-  href: ../powerapps-overview.md
+- name: はじめる
   items:
+    - name: PowerApps とは
+      href: ../powerapps-overview.md
     - name: 30 日間の無料試用版にサインアップする
       href: signup-for-powerapps.md
     - name: Community Plan にサインアップする
@@ -23,13 +24,15 @@
     - name: AppSource から
       href: ../user/app-source.md
     - name: モデル駆動型アプリを使う
-      href: ../user/use-model-driven-apps.md
       items:
+        - name: 概要
+          href: ../user/use-model-driven-apps.md
         - name: 統一インターフェイス
           href: ../user/unified-interface.md
         - name: ナビゲーションと基本
-          href: ../user/navigation.md
           items:
+            - name: 概要
+              href: ../user/navigation.md
             - name: 自分のプロファイルを表示する
               href: ../user/view-your-user-profile.md
             - name: 管理者またはサポート担当者を見つける
@@ -814,8 +817,9 @@
         - name: アプリケーションにキャンバス アプリを埋め込む
           href: ./canvas-apps/embedding-sdk.md
 - name: モデル駆動型アプリ
-  href: ./model-driven-apps/model-driven-app-overview.md
   items:
+    - name: モデル駆動型アプリとは
+      href: ./model-driven-apps/model-driven-app-overview.md
     - name: サンプル アプリを調べる
       href: ./model-driven-apps/overview-model-driven-samples.md
     - name: 最初のアプリを作成する
@@ -1289,11 +1293,13 @@
     - name: PowerApps ポータルに関する FAQ
       href: ./portals/faq.md
 - name: Common Data Service
-  href: ./common-data-service/data-platform-intro.md
   items:
+    - name: Common Data Service とは
+      href: ./common-data-service/data-platform-intro.md
     - name: エンティティを操作する
-      href: ./common-data-service/entity-overview.md
       items:
+        - name: セキュリティの概要
+          href: ./common-data-service/entity-overview.md
         - name: エンティティの作成
           href: ./common-data-service/data-platform-create-entity.md
         - name: コンポーネントがあるカスタム エンティティの作成
