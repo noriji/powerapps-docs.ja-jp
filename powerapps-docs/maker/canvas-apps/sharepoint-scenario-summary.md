@@ -13,16 +13,16 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ed4b729926cc8a818f8c2d47b98656c91b934788
-ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
+ms.openlocfilehash: 76d4a1ffdc569a3ccfc2567229c99136e744191a
+ms.sourcegitcommit: 0f0b26122be28d674af0833247b491e9367c4932
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73542482"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73899313"
 ---
 # <a name="walk-end-to-end-through-the-completed-sharepoint-online-integration-scenario"></a>完成した SharePoint Online 統合シナリオ全体の説明
 > [!NOTE]
-> この記事は、SharePoint Online で PowerApps、Microsoft Flow、Power BI を使用するチュートリアル シリーズの一部です。 シリーズ全般に関することや、関連するファイルのダウンロードの詳細については、[シリーズの概要](sharepoint-scenario-intro.md)に関する記事をご覧ください。
+> この記事は、SharePoint Online での PowerApps の使用、Power オートメーション、および Power BI に関するチュートリアルシリーズの一部です。 シリーズ全般に関することや、関連するファイルのダウンロードの詳細については、[シリーズの概要](sharepoint-scenario-intro.md)に関する記事をご覧ください。
 
 このチュートリアル シリーズでは、キャンバス アプリとフローの構築からレポートの作成と SharePoint への埋め込みに至るまで、幅広い内容を説明しました。 多くのことを学び、これらのテクノロジの統合の仕組みをしっかりと理解し、お客様自身のニーズに応じてキャンバス アプリやフロー、レポートを SharePoint に統合できるようになっていただきたいと思います。 このチュートリアル シリーズを終える前にシナリオ全体をおさらいして、すべての部分がどのように連携しているかを見ていきましょう。
 
@@ -155,13 +155,13 @@ ms.locfileid: "73542482"
     ![Power BI からのアラート メール](./media/sharepoint-scenario-summary/09-06-04-email-powerbi.png)
 5. データ アラート フローに追加したユーザー (ここでは Allan DeYoung) の受信トレイをチェックします。
    
-    ![Microsoft Flow からのアラート メール](./media/sharepoint-scenario-summary/09-06-05-email-flow.png)
+    ![Power の自動化によるアラートメール](./media/sharepoint-scenario-summary/09-06-05-email-flow.png)
 6. 保留中のプロジェクトに関する情報を取得したら、元の画面に戻って、注意を払うべきプロジェクトを承認できます。
 
 今回の一通りの手順と、このチュートリアル シリーズはこれで終了です。 引き続き次のサイトもぜひご覧ください。
 
 * [PowerApps](https://www.powerapps.com/)
-* [Microsoft Flow](https://flow.microsoft.com)
+* [電力の自動化](https://flow.microsoft.com)
 * [Power BI](https://www.powerbi.com)
 * [Power Users Community](https://powerusers.microsoft.com/)
 * [SharePoint](https://sharepoint.microsoft.com)

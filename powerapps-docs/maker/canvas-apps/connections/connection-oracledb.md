@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c8db848e0d6874fd44fedbe9b84539e548867e76
-ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
+ms.openlocfilehash: df9ad0aead9681d3458d70f44f929c15c073f35a
+ms.sourcegitcommit: 0f0b26122be28d674af0833247b491e9367c4932
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73541032"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73897804"
 ---
 # <a name="connect-to-an-oracle-database-from-powerapps"></a>PowerApps から Oracle データベースへの接続
 PowerApps で接続を作成すると、Oracle データベースのテーブルを一覧表示してテーブルの行の作成、読み取り、更新、削除を行い、アプリを作成することができます。 Oracle データベースへの接続では、フィルター処理や並び替えなど、トリガーとストアド プロシージャを除く機能の完全委任がサポートされています。
@@ -32,7 +32,7 @@ PowerApps で接続を作成すると、Oracle データベースのテーブル
 ### <a name="install-an-on-premises-data-gateway"></a>オンプレミス データ ゲートウェイをインストールする
 ゲートウェイをインストールするには、[こちらのチュートリアル](../gateway-management.md)の手順に従います。
 
-オンプレミス データ ゲートウェイはブリッジとして機能し、オンプレミス データ (クラウド内に存在しないデータ) と Power BI、Microsoft Flow、Logic Apps、PowerApps の各サービス間でデータを素早く安全に転送することができます。 複数のサービスやデータ ソースで、同一のゲートウェイを使用できます。 詳細については、[ゲートウェイの概要](../gateway-reference.md)に関する記事を参照してください。
+オンプレミスデータゲートウェイはブリッジとして機能し、オンプレミスのデータ (クラウドにないデータ) と、Power BI、Power の自動化、Logic Apps、PowerApps サービスの間で迅速かつ安全なデータ転送を提供します。 複数のサービスやデータ ソースで、同一のゲートウェイを使用できます。 詳細については、[ゲートウェイの概要](../gateway-reference.md)に関する記事を参照してください。
 
 ### <a name="install-oracle-client"></a>Oracle クライアントをインストールする
 オンプレミス データ ゲートウェイと同じコンピューターに、[64-bit ODAC 12c Release 4 (12.1.0.2.4) for Windows x64](https://www.oracle.com/technetwork/database/windows/downloads/index-090165.html) をインストールします。 このインストールを行わないと、既知の問題の一覧で説明しているように、接続の作成時または使用時にエラーが発生します。

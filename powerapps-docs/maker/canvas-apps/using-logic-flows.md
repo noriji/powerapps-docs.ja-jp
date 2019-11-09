@@ -13,16 +13,16 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: bb39701a61bcfb75c6fd66e90fc7a5002efcc410
-ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
+ms.openlocfilehash: 636e9f853ada9816e87232348e5ce7ef6df2cedc
+ms.sourcegitcommit: 0f0b26122be28d674af0833247b491e9367c4932
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73541645"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73898321"
 ---
 # <a name="start-a-flow-in-a-canvas-app"></a>キャンバス アプリでフローを開始する
 
-Microsoft Flow を使用すると、キャンバス アプリでイベントが発生したときに 1 つ以上のタスクを実行するロジックを作成できます。 たとえば、ユーザーが選択したときに、SharePoint リストのアイテムの作成、電子メールまたは会議出席依頼の送信、クラウドへのファイルの追加、またはこれらのすべての処理を実行するようにボタンを構成できます。 アプリ内の任意のコントロールは、フローを開始するように構成できます。フローは、PowerApps を閉じた後でも実行し続けます。
+Power の自動化を使用して、canvas アプリでイベントが発生したときに1つ以上のタスクを実行するロジックを作成できます。 たとえば、ユーザーが選択したときに、SharePoint リストのアイテムの作成、電子メールまたは会議出席依頼の送信、クラウドへのファイルの追加、またはこれらのすべての処理を実行するようにボタンを構成できます。 アプリ内の任意のコントロールは、フローを開始するように構成できます。フローは、PowerApps を閉じた後でも実行し続けます。
 
 > [!NOTE]
 > ユーザーがアプリ内からフローを実行する場合、そのユーザーは、フローで指定されたタスクを実行する権限を持っている必要があります。 それ以外の場合、フローは失敗します。

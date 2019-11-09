@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4a72fc689fa9b4d7d84f554745e5a04ee2812b70
-ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
+ms.openlocfilehash: d55245a6fba0383ce897030e87ccf5c4e7c6749d
+ms.sourcegitcommit: 0f0b26122be28d674af0833247b491e9367c4932
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73541144"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73897918"
 ---
 # <a name="send-a-push-notification-in-powerapps"></a>PowerApps でプッシュ通知を送信する
 プッシュ通知は、主にアプリのユーザーに注意を促したり、ユーザーが重要なタスクを優先したりできるようにするため、コンシューマー向けおよびビジネス向けのシナリオにおいてモバイル アプリで使用されます。 PowerApps では PowerApps Notification コネクタを使用して通知を送信できます。 PowerApps で作成したすべてのアプリに、ネイティブのプッシュ通知を送信できます。 通知の種類は今後追加される予定です。
@@ -41,7 +41,7 @@ ms.locfileid: "73541144"
 > [!NOTE]
 > フローからプッシュ通知をトリガーする場合、現在一度に通知を送信できるのは 1 ユーザーまたは 1 セキュリティ グループのみです。
 
-1. [Microsoft Flow](https://flow.microsoft.com) で、プッシュ通知が送信されるタイミングを指定するトリガーを作成します。
+1. [Power オートメーション](https://flow.microsoft.com)で、プッシュ通知を送信するタイミングを指定するトリガーを作成します。
 
     たとえば、Common Data Service の **[Case]** エンティティにレコードが追加されたときに通知を送信するとします。
 
@@ -140,7 +140,7 @@ PowerAppsNotification.SendPushNotification(
 * 現時点では、通知は Windows Phone の PowerApps Mobile に表示されません。
 * 現時点では、Web ブラウザーでのみアプリを実行するユーザーにはプッシュ通知を提供していません。
 * 通知には、特定のアプリ アイコンの代わりに汎用的な PowerApps アイコンが表示されます。
-* Microsoft Flow を使用する場合、一度に 1 人の受信者にしかプッシュ通知を送信できせん。
+* Power の自動化を使用する場合は、一度に1人の受信者にプッシュ通知を送信できます。
 
 参照情報については、[PowerApps 通知の参照](https://docs.microsoft.com/connectors/powerappsnotification/)に関するページを参照してください。
 

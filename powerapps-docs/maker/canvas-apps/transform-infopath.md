@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a5b9ddb2006a53796f782db3c620fa592f2a5aed
-ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.openlocfilehash: 505ddf8bee3108b91ef8e4ca4683ce5fe44172e8
+ms.sourcegitcommit: 0f0b26122be28d674af0833247b491e9367c4932
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71994867"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73899273"
 ---
 # <a name="transform-your-infopath-form-to-powerapps"></a>InfoPath フォームを PowerApps に作り替える
 
@@ -40,7 +40,7 @@ PowerApps はサービスとしてのソフトウェア (SaaS) プラットフ�
 PowerApps では、ユーザーのモバイル デバイスの機能を活用することができます。 アクセラレータ、カメラ、コンパス、接続情報、位置信号などのすべてにアプリ内からアクセスできます。 これにより、アプリ構築のあらゆる可能性を活用できます。 もちろん、PowerApps ではタッチ機能が自動的に有効になり、アプリ構築時に余分なコーディングは必要ありません。
 
 **既成の枠を破る**  
-InfoPath では、通常、1 つのソースからのデータを使用します。 ただし、別のソース (別のサイト コレクションの SharePoint リストなど) を更新したり、外部サービスに接続したりする場合には、注意が必要です。 コード ビハインドなどの概念に悩まされることになります。 PowerApps は、複数のデータ ソースとサービス接続を 1 つのアプリで使用できるように設計されています。 現時点では、[200 を超えるコネクタ](connections-list.md#all-standard-connectors)で、Microsoft Office 365 および Microsoft Flow や Dynamics 365 などの Azure サービスを含む、オンプレミスとクラウドのデータの組み合わせをサポートしています。 Dropbox、Google、Salesforce、Slack などの人気のあるターゲットを含む多数のサード パーティ サービスに接続することもできます。
+InfoPath では、通常、1 つのソースからのデータを使用します。 ただし、別のソース (別のサイト コレクションの SharePoint リストなど) を更新したり、外部サービスに接続したりする場合には、注意が必要です。 コード ビハインドなどの概念に悩まされることになります。 PowerApps は、複数のデータ ソースとサービス接続を 1 つのアプリで使用できるように設計されています。 現在、 [200 以上のコネクタ](connections-list.md#all-standard-connectors)では、オンプレミスとクラウドのデータの組み合わせがサポートされています。たとえば、Microsoft Office 365 や、Power オートメーションや Dynamics 365 などの Azure サービスが含まれます。 Dropbox、Google、Salesforce、Slack などの人気のあるターゲットを含む多数のサード パーティ サービスに接続することもできます。
 
 元のデータがあった場所だけでなく、ユーザーが必要とする場所を含むようにソリューションを拡張できます。
 
@@ -62,7 +62,7 @@ PowerApps を使えば、ネイティブ機能としてリスト フォームを
 
 ![SharePoint の統合](./media/transform-infopath/sharepoint-integration.png)
 
-PowerApps のもう 1 つの重要な機能は、同じフォームから別の SharePoint サイト コレクションまたは別の環境に簡単に接続できることです。 たとえば、SharePoint Online のデータと SharePoint オンプレミス環境のデータを同時に表示して更新する 1 つのフォームを作成したいことはありませんか。 大丈夫。 [オンプレミス データ ゲートウェイ](gateway-management.md)をインストールすれば数分のうちには、接続している PowerApps、Power BI、Microsoft Flow、Azure Logic Apps をオンプレミスのデータで実行できます。 ファイアウォール規則を変更する必要はありません。 このアプリを Microsoft Flow と接続することで、さらに一歩先を行くことができます。
+PowerApps のもう 1 つの重要な機能は、同じフォームから別の SharePoint サイト コレクションまたは別の環境に簡単に接続できることです。 たとえば、SharePoint Online のデータと SharePoint オンプレミス環境のデータを同時に表示して更新する 1 つのフォームを作成したいことはありませんか。 大丈夫。 [オンプレミスデータゲートウェイ](gateway-management.md)をインストールすると、数分で起動し、PowerApps、Power BI、電源自動化、Azure Logic Apps オンプレミスデータとの接続が開始されます。 ファイアウォール規則を変更する必要はありません。 このアプリを Power の自動化に接続することで、さらに一歩進めていくことができます。
 
 ## <a name="a-standalone-sharepoint-app"></a>スタンドアロン SharePoint アプリ
 
@@ -99,7 +99,7 @@ PowerApps によってアプリが作成され、それをカスタマイズす�
 
 カードを読み取り専用にするのではなく、非表示にするには、同様の関数を **DisplayMode** のすぐ上の **Visible** プロパティに挿入します。
 
-また、ユーザーのメール アドレスが承認者のメール アドレスと一致する場合にのみ承認ボタンが表示されるようにすることもできます Int**User () を使用します。** 現在のユーザーの電子メールアドレスにアクセスするための電子メール。)そのため、承認者のメール アドレスを **YourDataCard** に格納してから、ボタンの **Visible** プロパティをこの数式に設定することができます。
+また、ユーザーのメール アドレスが承認者のメール アドレスと一致する場合にのみ承認ボタンが表示されるようにすることもできます (ヒント: **User () を使用します。** 現在のユーザーの電子メールアドレスにアクセスするための電子メール。)そのため、承認者の電子メールアドレスを**ストアに格納**し、ボタンの**Visible**プロパティを次の数式に設定します。
 
 ```If( YourDataCard.Text = User().Email, true, false )```
 
@@ -124,17 +124,17 @@ Active Directory グループを使ってアプリ内のボタンやフォーム
 **アプリからのメールの送信**  
 PowerApps からメール メッセージを送信する方法はたくさんありますが、最も簡単な方法は、Office 365 Outlook コネクタを使うことです。 このコネクタを使用すると、アプリからユーザーとしてメッセージを送信できます。 メール メッセージを受け取ったり、メールボックスの他のタスクを実行したりすることもできます。 メールの送信については、[ドキュメント](connections/connection-office365-outlook.md)またはこちらのコミュニティ [ビデオ](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/Send-an-email-from-PowerApps/m-p/74349)をご覧ください。
 
-Microsoft Flow を使用して、アプリを作成したフローに接続することで、さらに複雑なメッセージを (たとえば、SharePoint の承認ワークフローの一部として) 送信できます。 Microsoft Flow にアプリを接続すると、ワークフロー エンジンで PowerApps などを外部のデータやサービスに接続できます。 PowerApps と Microsoft Flow の接続方法については、こちらの[ドキュメント](using-logic-flows.md)をご覧ください。
+Power オートメーションを使用して、作成したフローにアプリを接続することで、より複雑なメッセージ (たとえば、SharePoint 承認ワークフローの一部として) を送信できます。 アプリを Power の自動化に接続すると、PowerApps のように、外部のデータとサービスに非常によく接続されているワークフローエンジンを最大限に活用できるようになります。 PowerApps と Power の自動化を接続する方法の詳細については、こちらの[ドキュメント](using-logic-flows.md)を参照してください。
 
 まだ探しているメール オプションが見つからない場合は、Benchmark Email、Gmail、MailChimp、Outlook.com、SendGrid、SMTP などに対する PowerApps コネクタも利用できます。 接続性は PowerApps の長所です。
 
 **ワークフロー**  
-ワークフロー エンジンに触れずにビジネス アプリやビジネス ロジックについて説明するのは容易ではありません。 よいニュースは、PowerApps チームは別のワークフロー エンジンを提供するようなことはしていません。 代わりに、Microsoft Flow サービスへの堅牢なコネクタを提供します。 使いやすいワークフロー エンジンを通して [200 以上のさまざまなサービス](https://flow.microsoft.com/connectors/)を使ってプロセスとタスクを自動化できます。 PowerApps と Microsoft Flow の接続方法については、こちらの[ドキュメント](using-logic-flows.md)をご覧ください。
+ワークフロー エンジンに触れずにビジネス アプリやビジネス ロジックについて説明するのは容易ではありません。 よいニュースは、PowerApps チームは別のワークフロー エンジンを提供するようなことはしていません。 代わりに、パワー自動化サービスへの堅牢なコネクタが提供されます。 使いやすいワークフロー エンジンを通して [200 以上のさまざまなサービス](https://flow.microsoft.com/connectors/)を使ってプロセスとタスクを自動化できます。 PowerApps と Power の自動化を接続する方法の詳細については、こちらの[ドキュメント](using-logic-flows.md)を参照してください。
 
 **PowerApps での変数**  
 ソリューションを作成するときは、変数を含める必要があると考えるのが自然です。 PowerApps には数種類の変数が用意されていますが、必要なときにのみ使います。 データを取得し、変数に格納して、その変数を参照することを考えるのではなく、データを直接参照することを考えてください。 Excel と比較すると、このモデルをより深く理解することができます。 Excel では、Total は変数ではなく他のフィールドの合計です。 したがって、シートの他の場所でその値を使う場合は、合計を計算したセルを指定します。 これらはすべて[ドキュメント](working-with-variables.md)で詳しく説明されています。 別の思考プロセスを受け入れてください。
 
-それでも変数が必要な場合 (いろいろなケースがあります)、これは異なるオプションを理解する役に立ちます。 PowerApps では変数を定義する必要がないことに留意してください。 関数を使って名前と格納する値を指定するだけで、変数が作成されます。 作成した変数を表示するには、 **[表示]** タブで **[変数]** を選択します。変数はメモリに保持されているので、アプリを閉じると、その値は失われます。 次の種類の変数を作成できます。
+それでも変数が必要な場合 (いろいろなケースがあります)、これは異なるオプションを理解する役に立ちます。 PowerApps では変数を定義する必要がないことに留意してください。 関数を使って名前と格納する値を指定するだけで、変数が作成されます。 **[表示]** タブ**で変数を選択する**と、作成した変数を表示できます。変数はメモリに保持され、アプリを閉じるとその値は失われます。 次の種類の変数を作成できます。
 
 - グローバル変数は最も一般的なものです。 [Set](functions/function-set.md) 関数を使ってグローバル変数の値を指定すると、その変数がアプリ全体で使用できるようになります。
 
@@ -163,7 +163,7 @@ Microsoft Flow を使用して、アプリを作成したフローに接続す�
 
 ```Filter( Impacts, ddSelectType.Selected.Value in SCategory )```
 
-このようにしてカスケード ドロップダウンを作成できます。 詳細については、PowerApps チーム [SharePoint からこの投稿をご覧ください。4つの簡単な手順でのカスケードドロップダウン。 ](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/SharePoint-Cascading-Dropdowns-in-4-Easy-Steps/ba-p/16248) またはこの[コミュニティ ビデオ](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Cascading-Dropdown/m-p/92813)をご覧ください。 心配しなくても SharePoint なしで簡単に行うことができます。
+このようにしてカスケード ドロップダウンを作成できます。 詳細については、PowerApps チームの投稿「[SharePoint: Cascading Dropdowns in 4 Easy Steps!](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/SharePoint-Cascading-Dropdowns-in-4-Easy-Steps/ba-p/16248)」(SharePoint: 4 つの簡単な手順でドロップダウン カスケードを作成する)、 またはこの[コミュニティ ビデオ](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Cascading-Dropdown/m-p/92813)をご覧ください。 心配しなくても SharePoint なしで簡単に行うことができます。
 
 **1 つのスーパー アプリを作成しない**  
 PowerApps では、アプリから別のアプリを呼び出すことができます。 そのため、大規模な InfoPath フォームを 1 つ作成する代わりに、相互に呼び出すアプリのグループを作成したり、データを受け渡すことで、開発をよりシンプルにできます。

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f4babe6356ab0be34b6b08a3d158462b58cbb0cd
-ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
+ms.openlocfilehash: 06dad46643a3de8b8727d890865c9b6f847a825f
+ms.sourcegitcommit: 0f0b26122be28d674af0833247b491e9367c4932
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73541226"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73899223"
 ---
 # <a name="sign-in-to-powerapps-for-the-first-time"></a>PowerApps に始めてサインインします
 
@@ -121,5 +121,5 @@ Common Data Service データベースを持つ環境を選択した場合は、
 以下のタスクを行うことで、ご利用のアプリの機能を拡張できます。
 
 - [Common Data Service](../common-data-service/data-platform-intro.md)でエンティティ、オプションセット、データ統合を管理します。
-- [Microsoft Flow](https://docs.microsoft.com/flow/getting-started) でのビジネス ロジックの構成。
+- [Power の自動化](https://docs.microsoft.com/flow/getting-started)にビジネスロジックを構成します。
 - [ソリューション](../../developer/common-data-service/introduction-solutions.md)の作成、パッケージ化、および保守。

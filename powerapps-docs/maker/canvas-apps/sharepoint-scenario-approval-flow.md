@@ -13,18 +13,18 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9dc1fa02737b49261dc76a06e208cea578e80dea
-ms.sourcegitcommit: 8185f87dddf05ee256491feab9873e9143535e02
+ms.openlocfilehash: a94b32b21bdb2338adefdfc4c3cddc7648001087
+ms.sourcegitcommit: 0f0b26122be28d674af0833247b491e9367c4932
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73182594"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73900317"
 ---
 # <a name="create-a-flow-to-manage-project-approvals"></a>プロジェクトの承認を管理するフローを作成する
 > [!NOTE]
-> この記事は、SharePoint Online で PowerApps、Microsoft Flow、Power BI を使用するチュートリアル シリーズの一部です。 シリーズ全般に関することや、関連するファイルのダウンロードの詳細については、[シリーズの概要](sharepoint-scenario-intro.md)に関する記事をご覧ください。
+> この記事は、SharePoint Online での PowerApps の使用、Power オートメーション、および Power BI に関するチュートリアルシリーズの一部です。 シリーズ全般に関することや、関連するファイルのダウンロードの詳細については、[シリーズの概要](sharepoint-scenario-intro.md)に関する記事をご覧ください。
 
-このタスクでは、プロジェクトの承認プロセスを進めるフローを作成します。 Microsoft Flow は SharePoint と統合されているため、リストから直接、簡単にフローを作成できます。 作成するフローは、項目が **Project Requests** リストに追加されると、トリガーされます。 フローがプロジェクトの承認者に電子メールを送信し、承認者は申請を電子メールで直接承認または拒否します。 その後、フローはプロジェクト申請者に承認または拒否の電子メールを送信し、SharePoint リストを適宜更新します。
+このタスクでは、プロジェクトの承認プロセスを進めるフローを作成します。 Power の自動化は SharePoint と統合されているため、リストから直接フローを簡単に作成できます。 作成するフローは、項目が **Project Requests** リストに追加されると、トリガーされます。 フローがプロジェクトの承認者に電子メールを送信し、承認者は申請を電子メールで直接承認または拒否します。 その後、フローはプロジェクト申請者に承認または拒否の電子メールを送信し、SharePoint リストを適宜更新します。
 
 ## <a name="step-1-configure-the-flow-template"></a>手順 1: フロー テンプレートを構成する
 1. **Project Requests** リストで、 **[フロー]** 、 **[フローの作成]** の順にクリックまたはタップします。
