@@ -34,8 +34,8 @@ ms.locfileid: "71992658"
 
 | 列 | 種類 | 説明 |
 |----|----|----|
-| *名前付き&#8209;サブ一致また&#8209;はサブマッチ* | Text | 各名前付きサブマッチには、独自の列があります。 **(? @No__t-1*name*&gt;** を使用して名前付きサブマッチを作成します... **)** を指定します。 名前付きサブ一致の名前が定義済みの列 (下記) のいずれかと同じである場合は、サブマッチが優先され、警告が生成されます。 この警告を回避するには、サブマッチの名前を変更します。 |
-| **FullMatch** | Text | 一致したすべてのテキスト文字列。 |
+| *名前付き&#8209;サブ一致また&#8209;はサブマッチ* | テキスト | 各名前付きサブマッチには、独自の列があります。 **(?&lt;*name*&gt;** を使用して名前付きサブマッチを作成します... **)** を指定します。 名前付きサブ一致の名前が定義済みの列 (下記) のいずれかと同じである場合は、サブマッチが優先され、警告が生成されます。 この警告を回避するには、サブマッチの名前を変更します。 |
+| **FullMatch** | テキスト | 一致したすべてのテキスト文字列。 |
 | **StartMatch** | Number | 入力テキスト文字列内の一致の開始位置。 文字列の最初の文字は1を返します。 | 
 | **サブマッチ** | テキストの単一列テーブル (列**値**) | 正規表現に出現する順序での名前付きおよび名前のないサブ一致のテーブル。 一般的に、名前付きのサブマッチは、より簡単に使用でき、推奨されます。 個々のサブマッチを操作するには、 [**ForAll**](function-forall.md)関数または[**Last**](function-first-last.md)( [**firstn**](function-first-last.md)( **...** ) 関数を使用します。 正規表現でサブマッチが定義されていない場合、このテーブルは存在しますが、空になります。 |
 
@@ -61,7 +61,7 @@ ms.locfileid: "71992658"
 
 たとえば、 **IsMatch**関数と共に使用すると、文字列 "hello" はパターン **"hello"** と完全に一致します。 過不足がありません。 文字列 "hello!" は は、末尾に感嘆符があるため、パターンと一致しません。また、大文字と小文字の違いが "h" であるためです。 (この動作を変更する方法については「[MatchOptions](#match-options)」を参照してください)。
 
-パターンの言語では、特別な目的で予約されている文字があります。 これらの文字を使用するには、文字の前に **\\** (円記号) を付けて文字を文字どおりに入力するか、このトピックで後述する定義済みのパターンのいずれかを使用します。 次の表に、特殊文字の一覧を示します。
+パターンの言語では、特別な目的で予約されている文字があります。 これらの文字を使用するには、文字の前に **\\** (円記号) を付けて、文字が文字どおりに使用されることを示すか、このトピックで後述する定義済みのパターンのいずれかを使用します。 次の表に、特殊文字の一覧を示します。
 
 | 特殊文字 | 説明 |
 | --- | --- |
@@ -113,7 +113,7 @@ ms.locfileid: "71992658"
 
 正規表現はさまざまな言語で使用され、PowerApps は JavaScript 言語のバリアントを使用します。 構文の概要については、「[正規表現の構文](https://msdn.microsoft.com/library/1400241x.aspx)」を参照してください。 名前付きサブ一致 (名前付きキャプチャグループと呼ばれることもあります) は、次のようにサポートされています。
 
-- 名前付きサブマッチ: **(? &lt;*name*&gt;...)**
+- 名前付きサブマッチ: **(?&lt;*name*&gt;...)**
 - 名前付き前方参照:  **\\k&lt;*name*&gt;**
 
 このトピックで前に示した列挙型の**照合**テーブルでは、各列挙型は対応する正規表現と同じ行に表示されます。
@@ -124,7 +124,7 @@ ms.locfileid: "71992658"
 | MatchOptions 列挙型 | 説明 | 正規表現への影響 |
 | --- | --- | --- |
 | **BeginsWith** |パターンはテキストの先頭から一致する必要があります。 |正規表現の先頭に **^** が追加されます。 |
-| **Complete** |**IsMatch**の既定値。 パターンは、先頭から末尾までのテキスト文字列全体と一致する必要があります。 |開始位置に **^** を追加し、正規表現の末尾に **$** を追加します。 |
+| **Complete** |**IsMatch**の既定値。 パターンは、先頭から末尾までのテキスト文字列全体と一致する必要があります。 |開始位置と **$** に **^** を正規表現の末尾に追加します。 |
 | **Contains** |**Match**と**matchall**の既定値。 パターンは、テキストの一部と一致する必要がありますが、一致する場所が先頭か末尾である必要はありません。 |正規表現は変更されません。 |
 | **EndsWith** |パターンは、テキスト文字列の末尾と一致する必要があります。 |正規表現の末尾に **$** が追加されます。 |
 | **IgnoreCase** |大文字と小文字を同一として扱います。 既定では、照合で大文字と小文字が区別されます。 |正規表現は変更されません。 このオプションは、正規表現の標準の "i" 修飾子に相当します。  |
@@ -189,10 +189,10 @@ ms.locfileid: "71992658"
 
 | 数式 | 説明 | 結果 |
 |--------|------------|-----------|
-| `Match( "Bob Jones <bob.jones@contoso.com>", "<(?<email>" & Match.Email & ")>"` | 連絡先情報の電子メール部分のみを抽出します。  | {<br>電子メール: &nbsp; "bob.jones@contoso.com",<br>FullMatch: &nbsp; "&lt; @ no__t-2 >",<br>サブマッチ: &nbsp; [&nbsp; "bob.jones@contoso.com" &nbsp;]、<br>StartMatch:個<br>}  
+| `Match( "Bob Jones <bob.jones@contoso.com>", "<(?<email>" & Match.Email & ")>"` | 連絡先情報の電子メール部分のみを抽出します。  | {<br>電子メール:&nbsp;"bob.jones@contoso.com"、<br>FullMatch:&nbsp;"&lt;bob.jones@contoso.com>"、<br>サブマッチ:&nbsp;[&nbsp;"bob.jones@contoso.com"&nbsp;]、<br>StartMatch:11<br>}  
 | `Match( "Bob Jones <InvalidEmailAddress>", "<(?<email>" & Match.Email & ")>"` | 連絡先情報の電子メール部分のみを抽出します。 有効な住所が見つかりません (@ sign はありません)。そのため、関数は*空白*を返します。 | "*空白*" |  
-| `Match( Language(), "(<language>\w{2})(?:-(?<script>\w{4}))?(?:-(?<region>\w{2}))?" )` | **[言語関数が](function-language.md)** 返す言語タグの言語、スクリプト、および地域の部分を抽出します。 これらの結果には米国が反映されます。その他の例については、 [**言語**関数のドキュメント](function-language.md)を参照してください。  **(?:** 演算子は、別のサブマッチを作成せずに文字をグループ化します。 | {<br>言語: "en"、<br>スクリプト:*空白*、 <br>リージョン"US"、<br>FullMatch: "en-us", <br>サブマッチ: ["en", "", "US"], <br>StartMatch:1<br>} 
-| `Match( "PT2H1M39S", "PT(?:<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" )` | ISO 8601 duration 値から時間、分、および秒を抽出します。 抽出された数値は、テキスト文字列の中にあります。数値関数を使用して数値演算を実行する前に、その[**値**](function-value.md)を数値に変換します。  | {<br> まで"2"、<br>~"1"、<br>待ち時間"39",<br>FullMatch:"PT2H1M39S",<br>サブマッチ: &nbsp; [&nbsp; "2"、&nbsp; "1"、&nbsp; "39" &nbsp;]、<br>StartMatch:1<br>} |
+| `Match( Language(), "(<language>\w{2})(?:-(?<script>\w{4}))?(?:-(?<region>\w{2}))?" )` | **[言語関数が](function-language.md)** 返す言語タグの言語、スクリプト、および地域の部分を抽出します。 これらの結果には米国が反映されます。その他の例については、 [**言語**関数のドキュメント](function-language.md)を参照してください。  **(?:** 演算子は、別のサブマッチを作成せずに文字をグループ化します。 | {<br>言語: "en"、<br>スクリプト:*空白*、 <br>リージョン: "US"、<br>FullMatch: "en-us", <br>サブマッチ: ["en", "", "US"], <br>StartMatch: 1<br>} 
+| `Match( "PT2H1M39S", "PT(?:<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" )` | ISO 8601 duration 値から時間、分、および秒を抽出します。 抽出された数値は、テキスト文字列の中にあります。数値関数を使用して数値演算を実行する前に、その[**値**](function-value.md)を数値に変換します。  | {<br> 時間: "2"、<br>分: "1"、<br>秒: "39",<br>FullMatch: "PT2H1M39S",<br>サブマッチ:&nbsp;[&nbsp;"2"、&nbsp;"1"、&nbsp;"39"&nbsp;]、<br>StartMatch: 1<br>} |
 
 最後の例を掘り下げてみましょう。 **[時刻](function-date-time.md)** 関数を使用してこの文字列を日付/時刻値に変換する場合は、名前付きのサブマッチを個別に渡す必要があります。 これを行うには、**一致**するレコードに対し **[て With](function-with.md)** 関数を使用します。
 
@@ -211,11 +211,11 @@ Set( pangram, "The quick brown fox jumps over the lazy dog." )
  
 | 数式 | 説明 | 結果 |
 |---------|-------------|--------|
-| `Match( pangram, "THE", IgnoreCase )` | **Pangram**変数に含まれるテキスト文字列内の "the" のすべての一致を検索します。 文字列には2つの一致が含まれていますが、 **Match** **all**を使用しているので、最初の値のみが返されます。 サブマッチが定義されていないため、サブマッチ列は空です。  | {<br>FullMatch:"The"、<br>サブマッチ: [&nbsp;]、<br>StartMatch:32<br>} |
+| `Match( pangram, "THE", IgnoreCase )` | **Pangram**変数に含まれるテキスト文字列内の "the" のすべての一致を検索します。 文字列には2つの一致が含まれていますが、 **Match** **all**を使用しているので、最初の値のみが返されます。 サブマッチが定義されていないため、サブマッチ列は空です。  | {<br>FullMatch: "the"、<br>サブマッチ: [&nbsp;]、<br>StartMatch:32<br>} |
 | `MatchAll( pangram, "the" )` | **Pangram**変数に含まれるテキスト文字列内の "the" のすべての一致を検索します。 テストでは大文字と小文字が区別されるため、"the" の2番目のインスタンスのみが検出されます。 サブマッチが定義されていないため、サブマッチ列は空です。  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-the-one.png) |
 | `MatchAll( pangram, "the", IgnoreCase )` | **Pangram**変数に含まれるテキスト文字列内の "the" のすべての一致を検索します。 この場合、テストでは大文字と小文字が区別されないため、単語の両方のインスタンスが検索されます。 サブマッチが定義されていないため、サブマッチ列は空です。  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-the-two.png) |
 | `MatchAll( pangram, "\b\wo\w\b" )` | 中央に "o" を含む3文字の単語をすべて検索します。 "茶色" は3文字の単語ではなく、"\b" (ワード境界) と一致しないため、除外されることに注意してください。  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-fox-dog.png) |
-| `Match( pangram, "\b\wo\w\b\s\*(?<between>\w.+\w)\s\*\b\wo\w\b" )` | "Fox" と "dog" の間のすべての文字を検索します。 | {<br>between: &nbsp; "飛び越し @ no__t-1over no__t-2the-3lazy",<br>FullMatch: &nbsp; "fox @ no__t-1jumps @ no__t-2over @ no__t-3the no__t-4lazy @ no__t-5dog",<br>サブマッチ: ["遅延"] にジャンプします。<br>StartMatch:a3<br> } |
+| `Match( pangram, "\b\wo\w\b\s\*(?<between>\w.+\w)\s\*\b\wo\w\b" )` | "Fox" と "dog" の間のすべての文字を検索します。 | {<br>between:&nbsp;"は&nbsp;lazy"&nbsp;の&nbsp;に移動します。<br>FullMatch:&nbsp;"fox&nbsp;ジャンプ&nbsp;&nbsp;lazy&nbsp;dog"&nbsp;上に移動します。<br>サブマッチ: ["遅延"] にジャンプします。<br>StartMatch:17<br> } |
 
 ギャラリー内の**Matchall**の結果を表示するには、次のようにします。
 

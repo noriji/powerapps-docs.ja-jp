@@ -47,8 +47,8 @@ PowerApps のキャンバスアプリの場合、people 画面テンプレート
 
 ![UserBrowseGallery コントロール](media/people-screen/people-browse-gall.png)
 
-* "**品目**<br>
-    数値ユーザーが入力を開始したときにユーザーを検索するロジック:
+* プロパティ: **Items**<br>
+    値: ユーザーが入力を開始したときにユーザーを検索するロジック:
     
     ```powerapps-dot
     If( !IsBlank( Trim( TextSearchBox.Text ) ), 
@@ -61,20 +61,20 @@ PowerApps のキャンバスアプリの場合、people 画面テンプレート
     )
     ```
     
-このギャラリーの項目は、 [Office365 ユーザー](https://docs.microsoft.com/connectors/office365users/#searchuser)操作の検索結果によって設定されます。 操作は、検索語として `Trim(TextSearchBox)` のテキストを取得し、その検索に基づいて上位15件の結果を返します。 空白を検索するユーザーが無効なため、 **texttexttextが**`Trim()` 関数でラップされています。
+このギャラリーの項目は、 [Office365 ユーザー](https://docs.microsoft.com/connectors/office365users/#searchuser)操作の検索結果によって設定されます。 操作は `Trim(TextSearchBox)` 内のテキストを検索語として受け取り、その検索に基づいて上位15件の結果を返します。 空白を検索するユーザーが無効なため、 **texttexttextが**`Trim()` 関数でラップされています。
 
-@No__t 0 操作は、検索ボックスにユーザーが入力したテキストが含まれている場合にのみ操作を呼び出す必要があるため、`If(!IsBlank(Trim(TextSearchBox.Text)) ... )` 関数でラップされます。 これにより、パフォーマンスが向上します。
+`Office365Users.SearchUser` 操作は、検索ボックスにユーザーが入力したテキストが含まれている場合にのみ操作を呼び出す必要があるため、`If(!IsBlank(Trim(TextSearchBox.Text)) ... )` 関数でラップされます。 これにより、パフォーマンスが向上します。
 
 ### <a name="userbrowsegallery-title-control"></a>UserBrowseGallery Title コントロール
 
 ![UserBrowseGallery Title コントロール](media/people-screen/people-browse-gall-title.png)
 
-* " **[Text (テキスト)]**<br>値: `ThisItem.DisplayName`
+* プロパティ:**テキスト**<br>値: `ThisItem.DisplayName`
 
   Office 365 プロファイルからのユーザーの表示名を表示します。
 
-* "**OnSelect**<br>
-    数値アプリレベルのコレクションにユーザーを追加するコードを入力し、ユーザーを選択します。
+* プロパティ: **Onselect**<br>
+    値: ユーザーをアプリレベルのコレクションに追加するコードを入力し、ユーザーを選択します。
 
     ```powerapps-dot
     Concurrent(
@@ -87,7 +87,7 @@ PowerApps のキャンバスアプリの場合、people 画面テンプレート
     ```
 このコントロールを選択すると、次の3つの処理が同時に実行される
 
-   * **@No__t-1selectedUser**変数を選択した項目に設定します。
+   * 選択した項目に **\_selectedUser**変数を設定します。
    * **Texttexttextの**検索語句をリセットします。
    * 選択した項目を**MyPeople**コレクションに追加します。このコレクションは、アプリユーザーが選択したすべてのユーザーのコレクションです。
 
@@ -95,8 +95,8 @@ PowerApps のキャンバスアプリの場合、people 画面テンプレート
 
 ![UserBrowseGallery ProfileImage コントロール](media/people-screen/people-browse-gall-image.png)
 
-* "**イメージ**<br>
-    数値ユーザーのプロファイル写真を取得するためのロジック。
+* プロパティ: **Image**<br>
+    値: ユーザーのプロファイル写真を取得するためのロジック。
 
     ```powerapps-dot
     If( !IsBlank( ThisItem.Id ) && 
@@ -116,7 +116,7 @@ PowerApps のキャンバスアプリの場合、people 画面テンプレート
 
 ![PeopleAddedGallery コントロール](media/people-screen/people-people-gall.png)
 
-* "**品目**<br>
+* プロパティ: **Items**<br>
     値: `MyPeople`
 
 これは、 **UserBrowseGallery Title**コントロールを選択することによって、に初期化または追加された人間のコレクションです。
@@ -125,16 +125,16 @@ PowerApps のキャンバスアプリの場合、people 画面テンプレート
 
 ![PeopleAddedGallery Title コントロール](media/people-screen/people-people-gall-title.png)
 
-* "**OnSelect**<br>
+* プロパティ: **Onselect**<br>
     値: `Set( _selectedUser, ThisItem )`
 
-**EmailPeopleGallery**で選択した項目に**selecteduser**変数を設定します。
+**EmailPeopleGallery**で選択した項目に **_selectedUser**変数を設定します。
 
 ### <a name="peopleaddedgallery-iconremove-control"></a>PeopleAddedGallery iconRemove コントロール
 
 ![PeopleAddedGallery iconRemove コントロール](media/people-screen/people-people-gall-delete.png)
 
-* "**OnSelect**<br>
+* プロパティ: **Onselect**<br>
     値: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`
 
 **MyPeople**コレクション内のレコードを検索します。 **userprincipalname**は選択された項目の**userprincipalname**と一致し、そのレコードをコレクションから削除します。
