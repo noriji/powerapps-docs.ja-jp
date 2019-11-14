@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 99594d99aa0ab1ae4971f3ec2eb1987bb7dcfbcc
-ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
+ms.openlocfilehash: c107e337733f771212359618c5761cb7a89d3177
+ms.sourcegitcommit: a7f2313a048d3b8a03516a2e4c349f3fb08f4a22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73539020"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74072535"
 ---
 # <a name="integrate-canvas-apps-into-websites-and-other-services"></a>キャンバス アプリを Web サイトなどのサービスに統合する
 作成するアプリは、ユーザーが作業を行うときに使用できるときに最も役に立ちます。 Iframe にキャンバスアプリを埋め込むことで、これらのアプリを web サイトやその他のサービス (Power BI や SharePoint など) に統合することができます。
@@ -42,11 +42,11 @@ https://apps.powerapps.com/play/[AppID]?source=iframe
 ```
 
 > [!IMPORTANT]
-> 2019年8月の時点で、URI 形式は https://make.powerapps.com/webplayer から https://apps.powerapps.com/play に変更されました。 新しい URI 形式を使用するように埋め込み iframe を更新してください。 以前の形式への参照は、互換性を確保するために新しい URI にリダイレクトされます。
+> 2019年8月の時点で、URI 形式は https://web.powerapps.com/webplayer から https://apps.powerapps.com/play に変更されました。 新しい URI 形式を使用するように埋め込み iframe を更新してください。 以前の形式への参照は、互換性を確保するために新しい URI にリダイレクトされます。
 >
 > 以前の形式:
 > 
-> https\://make.powerapps.com/webplayer/iframeapp? source = iframe & appId =/providers/Microsoft.PowerApps/apps/[AppID]
+> https\://web.powerapps.com/webplayer/iframeapp? source = iframe & appId =/providers/Microsoft.PowerApps/apps/[AppID]
 
 この URI の [AppID]\('[' と ']' を含む) を、対象のアプリの ID に置き換えるだけです。 ID を調べる方法は後で説明しますが、その前に、URI で使用できるすべてのパラメーターを以下に示します。
 
@@ -54,7 +54,7 @@ https://apps.powerapps.com/play/[AppID]?source=iframe
 * **tenantid** -ゲストアクセスをサポートするオプションのパラメーターで、アプリを開くテナントを決定します。 
 * **screenColor** - ユーザーのアプリの読み込みエクスペリエンスを向上するために使用します。 このパラメーターは [RGBA (赤の値、緑の値、青の値、アルファ)](../canvas-apps/functions/function-colors.md) の形式で、アプリが読み込まれるときの画面の色を制御します。 アプリのアイコンと同じ色に設定することをお勧めします。
 * **source** - アプリには影響しませんが、埋め込みのソースを示すわかりやすい名前を追加することをお勧めします。
-* 最後に、[Param() 関数](../canvas-apps/functions/function-param.md) を使用してカスタムパラメーターを追加すると、その値をアプリで使用できます。 これは `[AppID]&amp;param1=value1` のように、URI の末尾に追加されます。 これらのパラメーターは、アプリの起動中にのみ読み取られます。 これらを変更する必要がある場合は、アプリを再起動する必要があります。 [Appid] の後の最初の項目にのみ "?" が必要であることに注意してください。その後、次に示すように "&" を使用します。 
+* 最後に、[Param() 関数](../canvas-apps/functions/function-param.md) を使用してカスタムパラメーターを追加すると、その値をアプリで使用できます。 これは `[AppID]?source=iframe&param1=value1&param2=value2` のように、URI の末尾に追加されます。 これらのパラメーターは、アプリの起動中にのみ読み取られます。 これらを変更する必要がある場合は、アプリを再起動する必要があります。 [Appid] の後の最初の項目にのみ "?" が必要であることに注意してください。その後、次に示すように "&" を使用します。 
 
 ### <a name="get-the-app-id"></a>アプリ ID を調べる
 アプリの ID は powerapps.com で調べることができます。 埋め込むアプリに対して次の手順を実行します。
