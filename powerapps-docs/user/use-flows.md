@@ -1,5 +1,5 @@
 ---
-title: Microsoft Flow を使用してモデル駆動型アプリのプロセスを自動化する | Microsoft Docs
+title: 電力自動化を使用してモデル駆動型アプリのプロセスを自動化する |MicrosoftDocs
 ms.custom: ''
 author: mduelae
 manager: kvivek
@@ -15,39 +15,39 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 0ecf255ab6e710bf65bd60e39b6dc9b8023876f6
-ms.sourcegitcommit: 982cab99d84663656a8f73d48c6fae03e7517321
+ms.openlocfilehash: 784a12d7ab9c525ee8bb9f68ed8fc2188433d103
+ms.sourcegitcommit: 0f0b26122be28d674af0833247b491e9367c4932
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67457208"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73900373"
 ---
-# <a name="use-microsoft-flow-to-automate-processes"></a>Microsoft Flow を使用してプロセスを自動化する
+# <a name="use-power-automate-to-automate-processes"></a>電力自動化を使用してプロセスを自動化する
 
-Microsoft Flow を使用すると、好みのアプリとサービスの間に自動化されたワークフローを作成できます。 アプリ内から、1 つ以上のレコードに対してフローを実行できます。 
+Power 自動では、お気に入りのアプリとサービスの間に自動化されたプロセスを作成できます。 アプリ内から、1 つ以上のレコードに対してフローを実行できます。 
 
-また、アプリから Microsoft Flow を開いて、新しいフローを表示、編集、または作成することもできます。  詳細は[Microsoft Flow の概要](https://docs.microsoft.com/flow/getting-started)
+また、アプリから Power の自動化を開いて、新しいフローを表示、編集、または作成することもできます。  詳細情報: [Power の自動化の概要](https://docs.microsoft.com/flow/getting-started)
 
 ## <a name="manage-your-flows"></a>フローを管理する 
-アプリから Microsoft Flow に接続してフローを管理します。
+アプリから Power 自動で接続して、フローを管理します。
   
 > [!NOTE]
-> アプリから Microsoft Flow を管理および実行するには、組織の [システム設定] で Microsoft Flow を有効にする必要があります。 詳細は[組織における Flow](https://docs.microsoft.com/flow/organization-q-and-a) 
+> アプリから電力自動化を管理して実行するには、組織のシステム設定で Power の自動化を有効にする必要があります。 詳細情報:[組織内のフロー](https://docs.microsoft.com/flow/organization-q-and-a) 
   
-1. コマンド バーで、**フロー**を選択します。  
+1. コマンドバーで、 **[Flow]** を選択します。  
   
    > [!div class="mx-imgBorder"]
-   > ![Microsoft Flow のメニュー](media/flow.png "Microsoft Flow のメニュー") 
+   > ![[電源自動化] メニュー](media/flow.png "[電源自動化] メニュー") 
   
 2. 次のオプションが表示されます。  
   
-   -   **[フローの作成]** を選択して新しいブラウザー タブを開き、Microsoft Flow サイトにアクセスします。 [Microsoft Flow] ページで **[続行]** を選択し、既存のテンプレートを使用するか **[X]** を選択して閉じるか、別のテンプレートを選択または作成します。  
+   -   **[フローの作成]** を選択して、新しいブラウザータブを開き、Power オートメーションサイトに誘導します。 Power の自動化 ページで、**続行** を選択して既存のテンプレートまたは**X**を使用して閉じたり、選択したり、別のテンプレートを作成したりします。  
   
-   -   **[フローの表示]** を選択して新しいブラウザー タブを開き、Flow 環境内のフローが表示される Microsoft Flow サイトにアクセスします。  
+   -   [**フローを表示**する] を選択して新しいブラウザータブを開き、フロー環境内のフローが表示されている [Power 自動] サイトに移動します。  
   
-   -   **[フローにログイン]** を選択して Microsoft Flow に接続し、実行できるフローを表示します。 これは Microsoft Flow に現在サインインしていない場合にのみ表示されます。   
+   -   **[フローにログインする]** を選択して、電源自動化を使用して接続し、実行可能なフローを表示します。 これは、現在 Power の自動化にサインインしていない場合にのみ表示されます。   
 
-    フローの作成については、「[Microsoft Flow を使ってみる](https://docs.microsoft.com/powerapps/maker/canvas-apps/using-logic-flows#create-a-flow)」をご覧ください。  
+    フローの作成の詳細については、「 [Power の自動化の概要](https://docs.microsoft.com/powerapps/maker/canvas-apps/using-logic-flows#create-a-flow)」を参照してください。  
     
  
     

@@ -15,16 +15,16 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 413201f34109e6022871667bd9773834904acbc2
-ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.openlocfilehash: 9fbe02e0844e1e6f93880bbb43d473989cc88ad2
+ms.sourcegitcommit: 0f0b26122be28d674af0833247b491e9367c4932
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "61556070"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73900362"
 ---
 # <a name="use-model-driven-apps-in-powerapps"></a>PowerApps でモデル駆動型アプリを使用する
 
-モデル駆動型アプリには、ダッシュボード、フォーム、ビュー、グラフ、ビジネスプロセスを含む複数のコンポーネントがあり、これを使用すると、アプリを使いやすくすることができます。 このセクションでは、モデル駆動型アプリ内を移動する方法、レコードを操作する方法、データをインポート/エクスポートする方法、および Microsoft Flow を使用してプロセスを自動化する方法について説明します。 
+モデル駆動型アプリには、ダッシュボード、フォーム、ビュー、グラフ、ビジネスプロセスを含む複数のコンポーネントがあり、これを使用すると、アプリを使いやすくすることができます。 このセクションでは、モデル駆動型アプリ内を移動する方法、レコードを操作する方法、データをインポート/エクスポートする方法、および電力自動化を使用してプロセスを自動化する方法について説明します。 
 
 > [!IMPORTANT]
 > キャンバスアプリでは、ユーザーエクスペリエンスの制御が多く、基本的に何でも可能なので、*キャンバスアプリの使用*方法に関するヘルプドキュメントはあまりありません。 キャンバス アプリの使い方のヘルプが必要な場合は、アプリ作成元や PowerApps 管理者に問い合わせてください。
