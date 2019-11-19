@@ -80,7 +80,7 @@ ms.locfileid: "71992796"
 
 * **Patch( IceCream, EditRecord, Gallery.Updates )**
 
-ここでは、 **{Quantity: に評価さ**れます。** 90}** 。 **Quantity**プロパティのみが変更されているためです。
+ここでは、 **{Quantity: に評価さ**れます。** 90}** 。**Quantity**プロパティのみが変更されているためです。
 
 残念ながら、 **[Patch](function-patch.md)** 関数が呼び出される直前に、他のユーザーによって Chocolate の **Quantity** が 80 に変更されます。  PowerApps はこれを検出し、競合する変更が行われないようにします。  この状況を次の数式で確認できます。
 
