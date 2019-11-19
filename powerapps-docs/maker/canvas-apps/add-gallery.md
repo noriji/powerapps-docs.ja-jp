@@ -22,7 +22,7 @@ ms.locfileid: "73540927"
 ---
 # <a name="show-a-list-of-items-in-powerapps"></a>PowerApps の項目の一覧の表示
 
-キャンバス アプリに **[ギャラリー](controls/control-gallery.md)** コントロールを追加して、任意のデータ ソースからの項目の一覧を表示します。 このトピックでは、データ ソースとして Excel を使用します。 **[テキスト入力](controls/control-text-input.md)** コントロールのフィルター条件に一致する項目のみを表示するように**ギャラリー** コントロールを構成して、一覧をフィルター処理します。
+キャンバス アプリに **[ギャラリー](controls/control-gallery.md)** コントロールを追加して、任意のデータ ソースからの項目の一覧を表示します。 このトピックでは、データ ソースとして Excel を使用します。 テキスト入力 **[コントロールのフィルター条件に一致する項目のみを表示するように](controls/control-text-input.md)ギャラリー** コントロールを構成して、一覧をフィルター処理します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -42,7 +42,7 @@ ms.locfileid: "73540927"
 
     1. **[PowerApps Studio へようこそ]** ダイアログ ボックスが表示されたら、 **[スキップ]** を選択します。
 
-    1. Excel ファイル内の **FlooringEstimates** テーブルへの[接続を追加](add-data-connection.md)します。
+    1. Excel ファイル内の [FlooringEstimates](add-data-connection.md) テーブルへの**接続を追加**します。
 
 ## <a name="add-a-gallery-to-a-blank-screen"></a>空の画面にギャラリーを追加する
 
@@ -92,11 +92,11 @@ ms.locfileid: "73540927"
     ![最終ギャラリー](./media/add-gallery/final-gallery.png)
 
 ## <a name="filter-and-sort-a-gallery"></a>ギャラリーのフィルター処理と並べ替え
-**ギャラリー** コントロールの **[Items](controls/properties-core.md)** プロパティで、表示する項目を指定します。 この手順では、フィルター条件と順序に基づいてどのレコードを表示するかも決定するように、そのプロパティを構成します。
+**ギャラリー[ コントロールの ](controls/properties-core.md)** Items プロパティで、表示する項目を指定します。 この手順では、フィルター条件と順序に基づいてどのレコードを表示するかも決定するように、そのプロパティを構成します。
 
 ![検索ボックスと並べ替えアイコン](./media/add-gallery/text-search-box.png)
 
-1. **ギャラリー** コントロールの **[Items](controls/properties-core.md)** プロパティを次の数式に設定します。
+1. **ギャラリー[ コントロールの ](controls/properties-core.md)** Items プロパティを次の数式に設定します。
 
     ```powerapps-dot
     Sort

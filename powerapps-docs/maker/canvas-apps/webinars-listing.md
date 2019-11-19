@@ -100,7 +100,7 @@ ms.locfileid: "73899179"
 <br>講師: Audrie Gordon [今すぐ見る](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Pro-tips-for-connecting-to-Excel-from-PowerApps-by-Audrie-Gordon/m-p/116881)
 
 **Connecting to on-premises data from PowerApps (PowerApps からオンプレミスのデータに接続する)**
-<br>講師: Archana Nair および Dimah Zaidalkilani [今すぐ見る](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Connecting-to-On-Premises-Data-from-PowerApps/m-p/116885)
+<br>講師: Archana Nair と Dimah Zaidalkilani [今すぐ見る](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Connecting-to-On-Premises-Data-from-PowerApps/m-p/116885)
 
 **コネクタの操作: Planner コネクタを使用する**
 <br> 講師: Audrie Gordon [今すぐ見る](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Using-the-Planner-Connector/m-p/116886)

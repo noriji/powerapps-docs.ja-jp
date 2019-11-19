@@ -24,7 +24,7 @@ ms.locfileid: "73537103"
 
 一対多または多対多のリレーションシップを通じて、2つのエンティティのレコードを関連付けると、関連付けを解除します。
 
-## <a name="description"></a>Description
+## <a name="description"></a>説明
 
 **関連付け**関数は、Common Data Service で一対多または多対多のリレーションシップを介して2つのレコードをリンクします。 **Unrelate**関数はプロセスを反転し、リンクを削除します。
 
@@ -312,27 +312,27 @@ ms.locfileid: "73537103"
 
 1. **Screen1**が重複しています。
 
-    複製は**Screen1_1**という名前になり、連絡先側からの関係を調べるための基礎となります。
+    複製は**Screen1_1**という名前になり、連絡先側からのリレーションシップを確認するための基礎となります。
 
     ![画面を複製する](media/function-relate-unrelate/contacts-duplicate.png)
 
-1. 反転ビューを作成するには、 **Screen1_1**のコントロールに対して次の式を変更します。
+1. 反転ビューを作成するには、 **Screen1_1**のコントロールで次の式を変更します。
 
-    - Screen1_1 = `Refresh( Contacts )`
-    - Gallery1_1 = `Contacts`
-    - Title1_1 = `ThisItem.'Full Name'`
-    - Label1_1 = `"Selected Contact Products"`
-    - Gallery2_1 = `Gallery1_1.Selected.Products`
-    - Title2_1 = `ThisItem.Name`
-    - Icon1_1 = `Unrelate( Gallery1_1.Selected.Products, ThisItem )`
-    - ComboBox1_1 = `Products`
-    - Icon2_1 = `Relate( Gallery1_1.Selected.Products, ComboBox1_1.Selected )`
+    - Screen1_1. OnVisible = `Refresh( Contacts )`
+    - Gallery1_1。 Items = `Contacts`
+    - Title1_1。 Text = `ThisItem.'Full Name'`
+    - Label1_1。 Text = `"Selected Contact Products"`
+    - Gallery2_1。 Items = `Gallery1_1.Selected.Products`
+    - Title2_1。 Text = `ThisItem.Name`
+    - Icon1_1。 OnSelect = `Unrelate( Gallery1_1.Selected.Products, ThisItem )`
+    - ComboBox1_1。 Items = `Products`
+    - Icon2_1。 OnSelect = `Relate( Gallery1_1.Selected.Products, ComboBox1_1.Selected )`
 
     結果は前の画面とよく似ていますが、**連絡先**側からの関係にあります。
 
     ![連絡先で始まる多対多リレーションシップを表示する](media/function-relate-unrelate/reverse-screen.png)
 
-1. 矢印を**上下**に挿入し、 **Onselect**プロパティを**Navigate (Screen1, None)** に設定します。  数式で**Navigate (Screen1_1, None)** を使用して、 **Screen1**で同じ操作を行います。
+1. 矢印を**上下**に挿入し、 **Onselect**プロパティを**Navigate (Screen1, None)** に設定します。  数式を使用して**Screen1**で同じ操作を実行します **(Screen1_1、None)** 。
 
     ![画面間のナビゲーションを追加する](media/function-relate-unrelate/reverse-navigate.png)
 
