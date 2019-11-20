@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 69d29136f5184ed50be6380ee1a91847d4506d6a
-ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
+ms.openlocfilehash: 1c8591790fe14d184f5d5e4ef5fc79ff0bfe0e2a
+ms.sourcegitcommit: 01fefd7a06bf5d6509acd0bb54ea6479208cbbc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73541194"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74177893"
 ---
 # <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>キャンバス アプリのシステム要件、制限、構成値
 このトピックには、PowerApps についての、デバイス プラットフォーム、Web ブラウザーの要件、制限と構成値が含まれています。
@@ -27,12 +27,12 @@ ms.locfileid: "73541194"
 
 | **最小構成** | **推奨** |
 | --- | --- |
-| iOS 12 以降 |iOS 12 以降|
-| Android 7 以降 |Android 7 以降 |
+| iOS 12 or later |iOS 12 or later|
+| Android 7 or later |Android 7 or later |
 | Windows 8.1 以降 (PC のみ) |Windows 10 Fall Creators Update と少なくとも 8 GB の RAM)|
 
 > [!NOTE]
-> 現在、Windows platform for PowerApps アプリの新機能はサポートされていません。 強化された Common Data Service オプションやゲストアクセスなどの機能は、このプラットフォームでは使用できません。 すべての機能を利用するには、Windows で web プレーヤーを使用することをお勧めします。 Windows プラットフォーム用の PowerApps アプリの更新プログラムは、今後発表される予定です。
+> We currently don't support new features on Windows platform for PowerApps app. Features such as the Improved Common Data Service option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the PowerApps app for Windows platform will be announced in future.
 
 ## <a name="supported-browsers-for-running-canvas-apps"></a>キャンバス アプリを実行するためにサポートされているブラウザー
 
@@ -77,13 +77,13 @@ PowerApps からの要求では、アプリが存在する[環境](../../adminis
 | --- | --- |
 | アジア | 13.75.36.64 - 13.75.36.79, 13.67.8.240 - 13.67.8.255, 52.175.23.169, 52.187.68.19 |
 | オーストラリア  | 13.70.72.192 - 13.70.72.207, 13.72.243.10, 13.77.50.240 - 13.77.50.255, 13.70.136.174 |
-| ブラジル | 191.233.203.192 - 191.233.203.207、104.214.19.48 - 104.214.19.63、13.65.86.57、104.41.59.51 |
+| Brazil | 191.233.203.192 - 191.233.203.207、104.214.19.48 - 104.214.19.63、13.65.86.57、104.41.59.51 |
 | カナダ | 13.71.170.208 - 13.71.170.223, 13.71.170.224 - 13.71.170.239, 52.237.24.126, 40.69.106.240 - 40.69.106.255, 52.242.35.152|
 | ヨーロッパ | 13.69.227.208 - 13.69.227.223, 52.178.150.68, 13.69.64.208 - 13.69.64.223, 52.174.88.118, 137.117.161.181|
 | インド  | 104.211.81.192 - 104.211.81.207, 52.172.211.12, 40.78.194.240 - 40.78.194.255, 13.71.125.22, 104.211.146.224 - 104.211.146.239, 104.211.189.218 |
 | 日本 | 13.78.108.0 - 13.78.108.15, 13.71.153.19, 40.74.100.224 - 40.74.100.239, 104.215.61.248 |
 | 南米 | 191.233.203.192 - 191.233.203.207、104.214.19.48 - 104.214.19.63、13.65.86.57、104.41.59.51 |
-| 英国 | 51.140.148.0 - 51.140.148.15、51.140.80.51、51.140.211.0 - 51.140.211.15、51.141.47.105 |
+| United Kingdom | 51.140.148.0 - 51.140.148.15、51.140.80.51、51.140.211.0 - 51.140.211.15、51.141.47.105 |
 | 米国 | 13.89.171.80 - 13.89.171.95, 52.173.245.164, 40.71.11.80 - 40.71.11.95, 40.71.249.205, 40.70.146.208 - 40.70.146.223, 52.232.188.154, 52.162.107.160 - 52.162.107.175, 52.162.242.161, 40.112.243.160 - 40.112.243.175, 104.42.122.49 |
 | 米国 (早期アクセス)  | 13.71.195.32 - 13.71.195.47, 52.161.102.22, 13.66.140.128 - 13.66.140.143, 52.183.78.157 |
 
@@ -95,45 +95,47 @@ PowerApps からの要求では、アプリが存在する[環境](../../adminis
 | management.azure.com |https |RP |
 | msmanaged-na.azure-apim.net |https |コネクタ/API のランタイム |
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |ADAL |
-| graph.microsoft.com<br>graph.windows.net |https |Azure Graph-ユーザー情報を取得する場合 (例: プロファイル写真) |
+| graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (e.g., profile photo) |
 | gallery.azure.com |https |サンプルおよびテンプレート アプリ |
-| \*。 azure-apim.net |https |API のハブ - ロケールごとに異なるサブドメイン |
-| \*。 powerapps.com |https | create.powerapps.com、make.powerapps.com、content.powerapps.com、および make.powerapps.com |
-| \*。 azureedge.net |https | create.powerapps.com、make.powerapps.com、content.powerapps.com、および make.powerapps.com |
-| \*。 blob.core.windows.net |https | Blob Storage |
-| \*。 flow.microsoft.com | https | create.powerapps.com、make.powerapps.com、content.powerapps.com、および make.powerapps.com |
-| *. dynamics.com | https | Common Data Service |
+| \*.azure-apim.net |https |API のハブ - ロケールごとに異なるサブドメイン |
+| \*.powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
+| \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
+| \*.blob.core.windows.net |https | Blob Storage |
+| \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
+| *.dynamics.com | https | Common Data Service |
 | vortex.data.microsoft.com |https |製品利用統計情報 |
 | localhost | https | PowerApps Mobile
 
 > [!NOTE]
 > VPN を使用している場合は、PowerApps Mobile のトンネリングから localhost を除外するように構成する必要があります。
 
-## <a name="size-limits"></a>サイズ制限
+## <a name="size-limits"></a>Size limits
 
-テキスト、ハイパーリンク、画像、メディアのサイズ制限に関する情報については、「[データ型](functions/data-types.md#text-hyperlink-image-and-media)」を参照してください。
+You can find information about size limits on text, hyperlinks, images, and media in [Data types](functions/data-types.md#text-hyperlink-image-and-media).
 
-## <a name="powerapps-per-app-plan"></a>アプリプランごとの PowerApps
+## <a name="powerapps-per-app-plan"></a>PowerApps per app plan
 
-アプリプランごとの PowerApps を使用すると、個々のユーザーは、PowerApps のすべての機能に基づいて、特定のビジネスシナリオに対して1つのポータルで2つのアプリケーションを実行できます。 このプランでは、大規模なスケーリングを導入する前に、ユーザーが簡単にプラットフォームを使い始めることができます。
+PowerApps per app plan allows individual users to run 2 applications on a single portal for a specific business scenario based on the full capabilities of PowerApps. This plan provides an easy way for users to get started with the platform before broader scale adoption.
 
-管理者がアプリプランごとに PowerApps を環境に割り当てると、アプリがユーザーと共有されるときに、既定でユーザーに割り当てられます。 管理者がアプリプランごとに割り当てる方法については、[こちら](https://docs.microsoft.com/power-platform/admin/capacity-add-on)を参照してください。
+After an admin allocates PowerApps per app plan to an environment, they're assigned to unlicensed users when an app in that environment is shared with them. You can see how an admin allocates per app plans [here](https://docs.microsoft.com/power-platform/admin/capacity-add-on).
 
-次の手順に従って、アプリを共有するときにユーザーに割り当てられるアプリごとのプランをオフにします。
+Follow these steps to turn off the assigning per app plans for users when an app is shared with them:
 
-- **アプリ**を選択します。
-- **[設定]** を選択します。
-- **パス割り当て**の下にある **[アプリごとの自動割り当て]** の切り替えを変更します。
+- Choose the **App**.
+- Select **Settings**.
+- Change the **Auto assign per app passes** toggle under **Pass assignment**.
 
-**[アプリごとの自動割り当て]** 切り替えは、すべてのアプリ設定で表示されます。
+The **Auto assign per app passes** toggle appears in all app setting.
 
 > [!NOTE]
-> 現在、アプリごとのプランの無効化は、キャンバスアプリでのみ使用できます。  モデル駆動型アプリとポータルは、今後この機能を利用できるようになります。
+> Disabling the per app plan is currently available for only canvas apps.  Model-driven apps and Portals will have this ability in the future.
+>
+> The ability to control per app plan assignment for an app is only available for apps that are in an environment that had Per app plans allocated in the [Power Platform Admin center](https://admin.powerplatform.microsoft.com).  
 
-### <a name="app-settings"></a>アプリの設定
+### <a name="app-settings"></a>App Settings
 
-![キャンバスアプリの設定](./media/limits-and-config/app_settings.png "キャンバスアプリの設定")
+![Canvas app settings](./media/limits-and-config/app_settings.png "Canvas app settings")
 
-### <a name="pass-assignment"></a>パスの割り当て
+### <a name="pass-assignment"></a>Pass assignment
 
-![キャンバスアプリの設定パスの割り当て](./media/limits-and-config/app_settings_pass_assignment.png "キャンバスアプリの設定パスの割り当て")
+![Canvas app settings pass assignment](./media/limits-and-config/app_settings_pass_assignment.png "Canvas app settings pass assignment")
