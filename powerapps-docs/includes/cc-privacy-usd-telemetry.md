@@ -6,7 +6,7 @@
  Unified Service Desk の品質向上プログラム機能に関連する [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] コンポーネントとサービスを以下に示します。  
   
 > [!NOTE]
->  その他の [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] サービス内容については、[Microsoft Azure セキュリティ センター](https://azure.microsoft.com/support/trust-center/) を参照してください。  
+>  その他の [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] サービス内容については、[Microsoft Azure セキュリティ センター](https://azure.microsoft.com/support/trust-center/)を参照してください。  
   
  [Cloud Services](https://azure.microsoft.com/services/cloud-services/) OrgInsights データの REST API (Web ロール)  
   

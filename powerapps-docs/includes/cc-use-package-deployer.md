@@ -1,15 +1,7 @@
----
-ms.openlocfilehash: a108a9ee6f9033851b2f55beb071a1e7cae254dd
-ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67224260"
----
-Package Deployer ツールは [NuGet パッケージ](https://go.microsoft.com/fwlink/?linkid=859205)に含まれています。 Package Deployer を使用するには、**nuget.exe.** を使用し、Package Deployer をダウンロードしてローカル コンピューターに抽出する必要があります。<br/><br/>
+Package Deployer ツールは [NuGet パッケージ](https://go.microsoft.com/fwlink/?linkid=859205)として提供されています。 Package Deployerを使用するには、**nuget.exe.** を使用してファイルをローカル コンピューターにダウンロードし、展開する必要があります。<br/><br/>
 
-<https://www.nuget.org/downloads> から **nuget.exe** をダウンロードし、コンピューターの **d:\\** などに保存します。 コマンド プロンプトで次のコマンドを実行し、パッケージの中身をコンピューター上のフォルダー (たとえば、**PD**) に抽出します。<br/>
+**nuget.exe** を <https://www.nuget.org/downloads> からダウンロードし、コンピューター (**d:\\** など) に保存します。 その後、コマンド プロンプトで次のコマンドを実行し、パッケージの内容をコンピューター上のフォルダー (たとえば **PD**) に展開します。<br/>
 
 `d:\nuget install Microsoft.CrmSdk.XrmTooling.PackageDeployment.Wpf -Version [VERSION] -O d:\PD`<br/><br/>
     
-Package Deployer ツールを抽出したら、`[ExtractedLocation]\tools` フォルダーに移動し、**PackageDeployer.exe** ファイルを見つけます。 
+Package Deployer ツールを展開した後、`[ExtractedLocation]\tools` フォルダーに移動して **PackageDeployer.exe** ファイルを見つけます。 

@@ -1,19 +1,11 @@
----
-ms.openlocfilehash: 40dcde544894751da2696defc76819892659cb25
-ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67224802"
----
-関係アシスタント機能を有効にすると、電子メールに含まれる関連分析情報を表示する目的で、送信者の名前、電子メール アドレス、電子メール本文からの抜粋を含む、限られた交換データが取得されます (ただし、[!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] には保存されません)。 また、関係アシスタント機能は、([!INCLUDE[pn_ms_dyn_365](pn-ms-dyn-365.md)] Core Services とは見なされていない) MSN Money や Bing などの外部コンポーネントに要求を送信することでニュース、金融、フライトに関連する情報を取得するように構成できます。 管理者は関係アシスタント機能の有効/無効を切り替えることができます。 **[設定]**  >  **[インテリジェンスの構成]** の順に移動し、 **[関係アシスタント]** タブをクリックし、有効/無効を切り替えます。  
+リレーションシップ アシスタント機能を有効にすると、やり取りの限定的なデータ (送信者の名前と電子メール アドレス、電子メール本文の抜粋を含む) が取得されます (ただし、[!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] には保存されません)。データを取得する目的は、電子メールについて関連性のあるインサイトを表示することです。 さらに、リレーションシップ アシスタント機能を構成して、ニュース、金融、フライト情報に関する情報を取得できます。そのために、MSN マネーや Bing ([!INCLUDE[pn_ms_dyn_365](pn-ms-dyn-365.md)] Core Services とは見なされない) などの外部コンポーネントに要求が送信されます。 管理者はリレーションシップ アシスタント機能を有効または無効にすることができます。そのためには、**設定** > **インテリジェンスの構成**に移動し、**リレーションシップ アシスタント**タブをクリックして、適切な選択を行います。  
   
- 関係アシスタント機能に付属する外部コンポーネントの詳細については後続のセクションで説明します。  
+ リレーションシップ アシスタント機能に関連する外部コンポーネントについては、以下のセクションで説明します。  
   
  **[!INCLUDE[pn_bing](pn-bing.md)]**  
   
- 関係アシスタントでは、ユーザーに表示する関連ニュースの検索に [!INCLUDE[pn_bing](pn-bing.md)] が使用されます。その際、ユーザーの [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] データに含まれるアカウント名が利用されます。  
+ リレーションシップ アシスタントは [!INCLUDE[pn_bing](pn-bing.md)] を使用して関連性のあるニュースを検索し、ユーザーに表示します。このとき、そのユーザーの [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] データから、取引先企業名を使用します。  
   
  **[!INCLUDE[pn_ms_MSN_Money](pn-ms-msn-money.md)]**  
   
- 関係アシスタントでは、ユーザーに関連する株価情報を表示するために [!INCLUDE[pn_ms_MSN_Money](pn-ms-msn-money.md)] が使用されます。その際、ユーザーの [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] データに含まれるアカウント株式銘柄コードが利用されます。
+ リレーションシップ アシスタントは [!INCLUDE[pn_ms_MSN_Money](pn-ms-msn-money.md)] を使用して関連性のある株価情報をユーザーに表示します。このとき、そのユーザーの [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] データから、取引先企業の株式銘柄コードを使用します。

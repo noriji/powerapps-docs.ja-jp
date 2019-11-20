@@ -10,7 +10,7 @@
   
  **[!INCLUDE[pn_customerinsight_full](pn-customer-insights-full.md)]**  
   
- [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] で実行されるサービスである [!INCLUDE[pn_customerinsight_short](pn-customer-insights-short.md)] は、[!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] データ (顧客に関する、個人を特定できる情報を含む) を保存します。その目的は、リレーションシップ分析機能の出力を計算することです。 [!INCLUDE[pn_customerinsight_short](pn-customer-insights-short.md)] のプレビューには、[プレビュー機能の追加使用条件](http://go.microsoft.com/fwlink/p/?LinkId=511446)が適用されます。  
+ [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] で実行されるサービスである [!INCLUDE[pn_customerinsight_short](pn-customer-insights-short.md)] は、[!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] データ (顧客に関する、個人を特定できる情報を含む) を保存します。その目的は、リレーションシップ分析機能の出力を計算することです。 [!INCLUDE[pn_customerinsight_short](pn-customer-insights-short.md)] のプレビューには、[プレビュー機能の追加使用条件](https://go.microsoft.com/fwlink/p/?LinkId=511446)が適用されます。  
   
  [Customer Insights のプレビューの詳細については、こちらを参照してください](https://azure.microsoft.com/services/customer-insights/)。  
   

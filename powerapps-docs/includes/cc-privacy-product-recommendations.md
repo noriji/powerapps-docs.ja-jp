@@ -1,33 +1,25 @@
----
-ms.openlocfilehash: 1cdcb40245aae9a23ecb6d3392e412f8a60b95ba
-ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67212305"
----
-[!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)] で推奨事項モデルを構築するときに、製品に関する推奨事項機能を有効にすると、構成されているバスケット データ エンティティに基づくトランザクション データの履歴およびそのフィルターが、[!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] に送信され、[!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] で処理され、[!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Storage に一時的に格納され、最終的に機械学習モデルを構築するために Azure Recommendations API に送信されます。 Azure Recommendations API でモデルが構築されたら、データは [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Storage から削除されます。 なお、推奨事項モデルの構築には、[!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] に ID (アカウント ID、製品 ID、トランザクション ID) のみが送信されます。
+製品レコメンデーション機能を有効にすることで、[!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)] 内からレコメンデーション モデルを作成するときに、構成されたバスケット データ エンティティとそのフィルターに基づくトランザクションの履歴データが [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] に送信されて [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] で処理され、一時的に [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Storage に保存され、最終的に Azure Recommendations API に送信されて機械学習モデルが構築されます。 モデルが Azure Recommendations API で作成されると、データが [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Storage から削除されます。 ID (アカウント ID、製品 ID、トランザクション ID) のみが [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] に送信されてレコメンデーション モデルが構築されます。
 
-管理者は、製品に関する推奨事項機能を [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)] 組織の **[設定]** &gt; **[管理]** &gt; **[システム設定]** &gt; **[プレビュー]** タブで有効にできます。 推奨事項モデルが構築された場合のみ、データは Azure Recommendations API に送信されます。 システム管理者には、Azure Recommendations API で共有されているデータを削除する、既存のモデルを削除するオプションはありません。 また、システム管理者が Azure Recommendations API への接続を削除して、今後いかなる推奨事項モデルも構築されないようにすることも可能です。
+管理者は、[!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)] 組織の**設定** &gt; **管理** &gt; **システムの設定** &gt; **プレビュー**タブで製品レコメンデーション機能を有効にできます。 データは、レコメンデーション モデルが構築されているときにのみ Azure Recommendations API に送信されます。 システム管理者には既存のモデルを削除するオプションがないため、Azure Recommendations API で共有されたデータを削除できません。 また、システム管理者は将来にわたってレコメンデーション モデルが削除されないように、Azure Recommendations API への接続を削除できます。
 
-製品に関する推奨事項に関係する [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] のコンポーネントやサービスについては、以下のセクションで説明しています。
+製品レコメンデーション機能に関連する [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] のコンポーネントとサービスについては、次のセクションで説明します。
 
 [!INCLUDE[cc_privacy_note_azure_trust_center](cc-privacy-note-azure-trust-center.md)]
 
 [Azure Logic Apps](https://azure.microsoft.com/services/app-service/logic/)
 
-これは、推奨事項モデル バージョンを構築するために Recommendations API を使用して製品カタログとトランザクション データを同期する調整されたデータ パイプラインを提供します。 このパイプラインは、Dynamics 365 組織と Recommendations API 間での通信のために、複数の API アプリが使用されたマルチテナント サービスとして実行されます。 Logic Apps は、モデル バージョン ID および [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] 組織の URL などの最小限のコンテキストで [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] からトリガーされます。 
+製品カタログとトランザクション データを Recommendations API と同期してレコメンデーション モデル バージョンを構築する、調整されたデータ パイプラインを提供します。 このパイプラインは、Dynamics 365 組織と Recommendations API の間の通信のために、複数の API アプリでマルチテナント型のサービスとして実行されます。 Logic Apps は、モデル バージョン ID や [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] 組織の URL など、[!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] から最小のコンテキストでトリガーされます。 
 
 [Azure API Apps](https://azure.microsoft.com/services/app-service/api/)
 
-これらは、[!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] 組織からデータを読み取る Web ジョブをトリガーする、推奨モデルを構築するために Recommendations API にデータを送信する Web アプリケーションです。 3 つの API アプリと対応する Web ジョブがあります。1 つは製品データを読み取り、1 つはトランザクション データを読み取り、1 つは推奨事項モデルを構築します。 API アプリは Web ジョブを使用し、バックグラウンドで実際のデータ処理を実行し、[!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob Storage にデータの出力を書き込みます。 データは一時的に [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob Storage に格納されます。 モデルが構築されると、データは最終的に [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Storage から削除されます。
+これらの Web アプリケーションによってトリガーされる Web ジョブは、[!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] 組織からデータを読み込み、Recommendations API にデータを送信してレコメンデーション モデルを構築します。 3 つの API アプリと対応する Web ジョブがあります。1 つは製品データを読み取り、1 つはトランザクション データを読み取り、1 つはレコメンデーション モデルを構築します。 API アプリは Web ジョブを使用してバックグラウンドで実際のデータ処理を実行し、データ出力を [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob Storage に書き込みます。 データは [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob Storage に一時的に保存されます。 最終的にモデルが作成されると、データは [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Storage から削除されます。
 
-[Azure テーブル](https://azure.microsoft.com/services/storage/tables/)
+[Azure Table](https://azure.microsoft.com/services/storage/tables/)
 
-[!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] テーブルは、API アプリと Web ジョブ間でモデルのバージョンと組織のコンテンツをやりとりするために使用されます。
+[!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Table は、API アプリと Web ジョブの間で、モデル バージョンと組織のコンテキストの通信に使用されます。
 
 [Azure Blob Storage](https://azure.microsoft.com/services/storage/) 
 
-データは一時的に Web ジョブにより [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob Storage に格納され、Logic App パイプラインが実行を終了すると削除されます。
+データは Web ジョブにより [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob Storage に一時的に保存され、Logic App パイプラインの実行が完了した時点で削除されます。
 
-[Azure Recommendations API](https://www.microsoft.com/cognitive-services/en-us/recommendations-api) Azure Recommendations API には、推奨事項モデルを構築するための最小限のデータ製品 ID、トランザクション ID、およびアカウント ID が送信されます。 データは対応するモデル バージョンが存在するまで、Recommendations API サービスに格納されます。
+[Azure Recommendations API](https://www.microsoft.com/cognitive-services/recommendations-api) Azure Recommendations API は製品 ID、トランザクション ID、アカウント ID などの最小限のデータと共に送信され、レコメンデーション モデルを構築します。 データは対応するモデル バージョンが存在するまで Recommendations API で保存されます。

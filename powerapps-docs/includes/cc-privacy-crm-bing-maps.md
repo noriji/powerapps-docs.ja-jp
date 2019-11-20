@@ -1,13 +1,5 @@
----
-ms.openlocfilehash: e472dde1411fce4d9489d6e4b1b4ef5ac78d9b5b
-ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67225865"
----
-Microsoft Dynamics 365 を使用する場合、Bing Maps 機能によって Bing Maps サービスにインターネット経由で住所が自動的に送信され、Dynamics 365 内で住所のオンライン マップが表示されます。  Dynamics 365 内で Bing Maps をクリックすると、[www.bing.com/maps](http://www.bing.com/maps) にリダイレクトされます。 また、ユーザーの Bing Maps の使用は [Bing Maps のエンド ユーザーの使用条件](http://go.microsoft.com/?linkid=9710837)に準拠します。  
+Microsoft Dynamics 365 を使用している場合、Bing マップ機能は、Dynamics 365 で住所をオンライン地図で表示するため、インターネットを通して住所を自動的に Bing マップ サービスに送信します。  Dynamics 365 内で Bing 地図をクリックすると、[www.bing.com/maps](https://www.bing.com/maps) にリダイレクトされます。 また、Bing 地図の利用に関しては、[Bing 地図のエンド ユーザー使用条件](https://go.microsoft.com/?linkid=9710837)の規定に従います。  
   
- 管理者は、 **[設定]**  >  **[管理]**  >  **[システム設定]** 領域で Bing Maps 機能のオンとオフを切り替えることができます。 Bing Maps アプリをオフにすると、Dynamics 365 内の機能は無効になります。  
+ 管理者は、**設定** > **管理** > **システム設定**で、Bing 地図の機能のオン/オフを切り替えることができます。 Bing 地図アプリをオフにすると、Dynamics 365 内で Bing 地図機能を使用できなくなります。  
   
- Bing Maps に送信される情報は、[Microsoft のプライバシーと Cookie](http://go.microsoft.com/fwlink/p/?linkid=521839) の対象となります。
+ Bing 地図に送信される情報には、[Microsoft のプライバシーと Cookie](https://go.microsoft.com/fwlink/p/?linkid=521839) の規定が適用されます。
