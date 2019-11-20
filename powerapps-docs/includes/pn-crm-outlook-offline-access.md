@@ -1,1 +1,1 @@
-オフライン アクセス対応 Dynamics 365 for Microsoft Office Outlook
+オフライン アクセス対応 Microsoft Office Outlook 用 Dynamics 365

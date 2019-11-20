@@ -1,1 +1,1 @@
-プラグイン登録ツールを取得するには、「[NuGet からのツールのダウンロード](../developer/common-data-service/download-tools-nuget.md)」をご覧ください。
+プラグイン登録ツールを取得するには、[NuGet からツールをダウンロード](../developer/common-data-service/download-tools-nuget.md)をご覧ください。

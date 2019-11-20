@@ -1,1 +1,1 @@
-Microsoft Dynamics 365 for Microsoft Office Outlook のバージョンを検出します。
+最新バージョンの Microsoft Dynamics 365 for Microsoft Office Outlook を検出します。

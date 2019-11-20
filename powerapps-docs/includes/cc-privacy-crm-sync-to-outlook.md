@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: d13da8a7d262b95c5d11fea58d79b38249bb3410
-ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67225365"
----
-Dynamics 365 (オンライン) を使用しているとき、"Outlook に同期" 機能を使用すると、同期する Dynamic 365 データが Outlook に "エクスポート" されます。 Outlook の情報と Dynamics 365 (オンライン) の情報の間で情報が確実に最新の状態になるようにリンクが維持されます。 Outlook の同期機能では、Outlook アイテムに関してユーザーが追跡または設定するときに使用する関連 Dynamics 365 レコード ID のみがダウンロードされます。 会社のデータはデバイスには格納されません。  
+Dynamics 365 (online) を使用する場合、Outlook の機能に対して同期を使用するとき、同期する Dynamics 365 データは Outlook に対して "エクスポート" されます。 リンクは Outlook 内の情報と Dynamics 365 (online) 内の情報の間で保持され、情報は両者の間で最新に保たれます。 Outlook の同期では、ユーザーが Outlook アイテムに関して追跡および設定を試みる時に使用する、関連 Dynamics 365 レコードの ID のみがダウンロードされます。 企業データはデバイス上に保管されません。  
   
- 管理者は、セキュリティ ロールを使用することで、Dynamics 365 データを Outlook に同期することを組織のユーザーに許可するかどうかを決定します。
+ 管理者は、組織のユーザーのセキュリティ ロールを使用することで、そのユーザーが Dynamics 365 データを Outlook に同期できるかどうかを決定します。
