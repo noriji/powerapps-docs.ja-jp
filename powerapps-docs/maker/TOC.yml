@@ -1140,6 +1140,8 @@
           href: ./portals/admin/migrate-portal-configuration.md
         - name: ポータルのライフサイクルについて
           href: ./portals/admin/portal-lifecycle.md
+        - name: ポータルをアップグレードする
+          href: ./portals/admin/upgrade-portal.md
     - name: 高度なポータルの構成
       items:
         - name: 概要
@@ -1188,12 +1190,22 @@
           href: ./portals/configure/place-child-nodes.md
         - name: 日付と時刻フィールドの動作と形式
           href: ./portals/configure/behavior-format-date-time-field.md
+        - name: ポータルのタイムラインで電子メール レコードを表示する
+          href: ./portals/configure/view-email-in-timeline.md
+        - name: Web ページを評価する
+          href: ./portals/configure/rate-webpage.md
+        - name: ポータルでヘッダーとフッターの出力キャッシュを有効にする
+          href: ./portals/configure/enable-header-footer-output-caching.md
         - name: ポータルの Web ページにグラフを追加する
           href: ./portals/configure/add-chart.md
         - name: エンティティ フォームの操作
           href: ./portals/configure/entity-forms.md
         - name: エンティティ リストの操作
           href: ./portals/configure/entity-lists.md
+        - name: Web サイトの管理
+          href: ./portals/configure/websites.md
+        - name: Web サイトのバインドの作成と管理
+          href: ./portals/configure/website-bindings.md
         - name: Web フォームの操作
           items:
             - name: Web フォームのプロパティを定義する
@@ -1216,6 +1228,8 @@
               href: ./portals/configure/configure-web-form-subgrid.md
             - name: 位置情報の追加
               href: ./portals/configure/add-geolocation.md
+        - name: ポータルでの GDPR の実装
+          href: ./portals/configure/implement-gdpr.md
     - name: 高度なポータルのカスタマイズ
       items:
         - name: 液体テンプレートを操作する
@@ -1262,6 +1276,8 @@
                   href: ./portals/liquid/render-site-header-primary-navigation.md
         - name: OAuth 2.0 の暗黙の許可フロー
           href: ./portals/oauth-implicit-grant-flow.md
+        - name: Web ページの管理
+          href: ./portals/configure/web-page.md
     - name: ポータルでのユーザー管理とセキュリティ
       items:
         - name: 連絡先の構成
@@ -1446,6 +1462,8 @@
           href: ./common-data-service/solution-history.md
         - name: ソリューションのチェックを使う
           href: ./common-data-service/use-powerapps-checker.md
+        - name: '一般的な問題と解決策: ソリューションのチェック'
+          href: ./common-data-service/common-issues-resolutions-solution-checker.md
         - name: セグメント化されたソリューションを使用する
           href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
         - name: ソリューション発行者の接頭辞を変更する
