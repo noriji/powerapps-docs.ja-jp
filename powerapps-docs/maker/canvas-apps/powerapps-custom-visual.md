@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/23/2019
+ms.date: 11/20/2019
 ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 54d8ac3d347c0f60f82fdd73949eb2fd8545519c
-ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
+ms.openlocfilehash: 422cbc151b6ee5c4adfd295800bf9747519132cf
+ms.sourcegitcommit: 6c91c6dae20437f263e4eb827c6b938d6aa1b6a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73541474"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74262109"
 ---
 # <a name="powerapps-custom-visual-for-power-bi"></a>Power BI 用の PowerApps カスタム ビジュアル
 
@@ -92,9 +92,11 @@ PowerApps のカスタムビジュアルには、次の制限事項が適用さ�
 |Microsoft Edge|&check;|&check;|&check;
 |Internet Explorer 11|&check;
 |Google Chrome|&check;|&check;|&check;
-|Safari|&check;
+|Safari \*|&check;
 |Mozilla Firefox
 |その他すべてのブラウザー
+
+Safari で \*、サイト間の追跡を有効にする必要があります ( **[ユーザー設定]**  >  **[プライバシー]** をオンにし、 **[クロスサイトトラッキングを防止]** する をオフにする)。
 
 ## <a name="accessibility-support"></a>ユーザー補助機能のサポート
 
