@@ -1,5 +1,5 @@
 ---
-title: レコードのルックアップフィールドを使用する |MicrosoftDocs
+title: Use the lookup field on a record | MicrosoftDocs
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -14,95 +14,100 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: c37e6e9e2b540dcad2c166a4ebf9d71d3b503978
-ms.sourcegitcommit: 10b2798d8f4acd01da15412a2e9fc872d1212d7c
+ms.openlocfilehash: 4ef67695603f3badeba92f46c6da90e21715c98b
+ms.sourcegitcommit: 01fefd7a06bf5d6509acd0bb54ea6479208cbbc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73728418"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74177846"
 ---
 #  <a name="use-the-lookup-field-on-a-record"></a>レコードのルックアップ フィールドを使用する
 
-Lookup を使用すると、関連エンティティからレコードを選択できます。 関連エンティティを選択し、名前や電子メールアドレスなどの検索条件を入力すると、lookup は自動的に部分的なテキストの解決を開始し、一致するレコードを表示します。 検索条件のテキスト全体を入力した後にレコードが表示されない場合は、レコードがないことを示すメッセージが表示されます。
+Lookup helps you to choose records from a related entity. When you select a related entity and enter search criteria, such as a name or email address, lookup automatically begins to resolve the partial text and displays any matching records. If no records are displayed after you have typed the full text of your search criteria, a message is displayed specifying that there are no records.
 
-たとえば、 **Adrian Dumitrascu**という名前を検索することができます。 「 **Ad**」と入力すると、一致する可能性があるレコードが自動的に入力されて表示されます。
+For example, you might search for the name **Adrian Dumitrascu**. When you type **ad**, possible matching records are automatically populated and displayed.
 
   > [!div class="mx-imgBorder"]
-  > ![一致するレコードを自動的に入力します](media/automatically-populate-matching-records.png "一致するレコードを自動的に入力します")
+  > ![Automatically populates matching records](media/automatically-populate-matching-records.png "Automatically populates matching records")
   
 >[!NOTE] 
->管理者は、部分的な検索テキストを解決するために検索で使用される条件を定義できます。
+>An administrator can define the criteria that lookup uses for resolving partial search text.
 
-また、 **[新規]** ボタンを選択して新しいレコードを作成することもできます。 **[新規]** ボタンを表示し、レコードを作成するための十分なアクセス許可が必要です。 参照フィールドを選択すると、最近使用した5つのレコードが、5つのお気に入りのレコードと共に表示されます。 表示されるレコードは、表示履歴とピン留めしたお気に入りによって異なります。 
+Also, you can create a new record by selecting the **New** button. You must have sufficient permissions to view the **New** button and create a record. When you select the lookup field, the five most recently used records are displayed along with five favorite records. Which records are displayed depends on your view history and the favorites you’ve pinned. 
 
-たとえば、履歴に記録されているレコードが3つしかない場合、その3つのレコードと、7つのお気に入りのレコードが表示されます。 お気に入りをピン留めしていない場合は、最近表示したレコードだけが表示されます。
+For example, if you have only three records in your history, lookup will display those three, along with seven of your favorite records. If you have not pinned any favorites, only the most recently viewed records will be displayed.
 
-## <a name="types-of-lookups"></a>参照の種類
+## <a name="types-of-lookups"></a>Types of lookups
 
-参照は次のように分類されます。 
+Lookups are classified into the following: 
 
-- **単純な参照:** 1つのエンティティのフィールドで1つのレコードを選択します。 
+- **Simple lookup:** Select a single record in a field from a single entity. 
 
-- **PartyList 型のフィールド:** 参照で複数のエンティティから複数のレコードを選択するには、を使用します。 複数のレコードを選択するには、partylist フィールドを使用します。 これにより、新しい検索を複数回実行して、各レコードを追加することができます。 レコードを選択するたびに、別のレコードの新しい検索を実行できるようになります。
+- **PartyList-type fields:** Use to select multiple records from multiple entities in a lookup. Use partylist-type fields to select multiple records. This allows you to add each record by performing a new search, multiple times. Every time you select a record, you will be able to perform a new search for another record.
   
-- **関連する型のフィールド:** 参照内の複数のエンティティから1つのレコードを選択するには、を使用します。 
+- **Regarding-type fields:** Use to select a single record from multiple entities in a lookup. 
 
-## <a name="search-in-a-lookup-field"></a>ルックアップフィールド内の検索 
-参照を検索するには、テキストボックスを選択し、検索条件を入力します。 検索に対して最近のレコードが有効になっている場合は、テキストボックスを選択すると最近のレコードが表示されます。
-
-  > [!div class="mx-imgBorder"]
-  > ![ルックアップフィールドを参照する](media/MRU.png "ルックアップフィールドを参照する")  
-
-## <a name="browse-in-a-lookup-field"></a>参照フィールドを参照する
-参照を参照するには、[参照] アイコン (虫眼鏡) を選択します。 項目の完全な一覧がドロップダウンに表示されます。
+## <a name="search-in-a-lookup-field"></a>Search in a lookup field 
+To search a lookup, select the textbox and type your search criteria. If recent records are enabled for your lookup, your recent records will be displayed when you select the textbox.
 
   > [!div class="mx-imgBorder"]
-  > ![ルックアップフィールドを検索する](media/MRU_1.png "ルックアップフィールドを検索する")  
+  > ![Browse a lookup field](media/MRU.png "Browse a lookup field")  
+  
+>[!NOTE]   
+> The default search result for lookup search is, begins with. This means results include records that begin with a specific word. For example, if you want to search for **Alpine Ski House**, type **alp** in the search box; if you type **ski**, the record will not show up in the search result.
+>
+> For a wildcard search use asterisks: For example, type *ski or *ski.
+
+## <a name="browse-in-a-lookup-field"></a>Browse in a lookup field
+To browse a lookup, select the lookup icon (magnifying glass). A full list of items will be shown in the dropdown.
+
+  > [!div class="mx-imgBorder"]
+  > ![Search a lookup field](media/MRU_1.png "Search a lookup field")  
  
-## <a name="most-recently-used-record-type-images"></a>最近使用したレコードの種類の画像
-最近使用したレコードの一覧には、レコードの種類を区別するのに役立つ画像が表示されます。
+## <a name="most-recently-used-record-type-images"></a>Most recently used record type images
+The most recently used list of records shows an image to help distinguish between record types.
 
 >[!NOTE] 
->最近のレコードは、検索用語や選択したビューではフィルター処理されません。
+>Recent records are not filtered by search term or selected view.
 
   > [!div class="mx-imgBorder"]
-  > ![参照フィールドに画像が表示される](media/Lookup_03-MRU_Entity_Images_56[1].png "参照フィールドに画像が表示される")  
+  > ![Lookup fields shows image](media/Lookup_03-MRU_Entity_Images_56[1].png "Lookup fields shows image")  
   
-## <a name="record-type-selection-list"></a>レコードの種類の選択リスト  
-結果が複数のレコードの種類にまたがっている場合は、そのレコードの種類の数を確認し、一覧から選択することができます。
+## <a name="record-type-selection-list"></a>Record type selection list  
+When results span multiple record types, you can see how many types of records there are and select them from the list.
 
   > [!div class="mx-imgBorder"]
-  > ![レコード数を確認する](media/Lookup_04-MultipleEntityTypes[1].gif "レコード数を確認する")  
+  > ![See how many records](media/Lookup_04-MultipleEntityTypes[1].gif "See how many records")  
   
-## <a name="create-a-new-record-if-you-dont-find-an-existing-record"></a>既存のレコードが見つからない場合は、新しいレコードを作成します
+## <a name="create-a-new-record-if-you-dont-find-an-existing-record"></a>Create a new record if you don’t find an existing record
 
-レコードが見つからない場合は、検索 領域の **新規** を選択して、新しいレコードを作成します。
+If you do not find a record, select **New** in the lookup area to create a new record.
 
 
-### <a name="replace-an-existing-record-from-a-lookup-field"></a>参照フィールドからの既存のレコードの置換
+### <a name="replace-an-existing-record-from-a-lookup-field"></a>Replace an existing record from a lookup field
 
-単純型と関連型の参照を使用して、既存のレコードを置き換えることができます。 レコードを検索します。 次に、レコードを選択して新しいレコードに置き換えます。
+You can replace an existing record while using simple and regarding-type lookups. Search for a record. Then select the record, and replace it with a new record.
 
-### <a name="change-a-view-in-a-lookup-field"></a>ルックアップフィールドのビューを変更する 
+### <a name="change-a-view-in-a-lookup-field"></a>Change a view in a lookup field 
 
-**[ビューの変更]** を選択すると、次のことを確認できます。
- - **連絡先のフォロー**、**連絡先の参照ビュー**、**アクティブな連絡先**などのレコードを表示する方法について説明します。
- - 名前、電子メール、電話番号など、レコードに表示する内容。 たとえば、フォローしている連絡先のみを表示する場合は、 **[ビューの変更]** を選択して \>**連絡先をフォロー**します。 次に示すように、フォローしている連絡先だけが表示されます。 
+Selecting **Change View** lets you determine:
+ - How you want to view records such as **Contacts Being Followed**, **Contacts Lookup View**, or **Active Contacts**.
+ - What you want to view in the records, such as name, email, or telephone number. For example, if you want to view only the contacts that you follow, select **Change View** \> **Contacts being followed**. Only the contacts that you are following will be displayed, as illustrated here. 
 
-    ![連絡先の種類の表示を変更する](media/change-view.png "連絡先の種類の表示を変更する")
+    ![Change view contacts types](media/change-view.png "Change view contacts types")
 
 >[!IMPORTANT] 
->管理者がビューに表示するオプションを構成していない場合、 **[ビューの変更]** オプションは表示されません。
+>The **Change View** option will not be visible if your administrator hasn't configured the option to appear in your views.
 
-### <a name="choose-from-multiple-records"></a>複数のレコードから選択する
+### <a name="choose-from-multiple-records"></a>Choose from multiple records
 
-使用可能な表示領域よりも多くのレコードがフィールドにある場合、表示領域は折りたたまれています。つまり、表示領域に適合するレコードは、表示されていないレコードの数の隣に表示されます。 すべてのレコードを表示するには、数値を選択します。 次の図は、折りたたまれたフィールドと折りたたまれていないフィールドの違いを示しています。
+When lookup has more records in a field than can fit in the available display area, the display area is collapsed—that is, the records that do fit the display area are shown next to the number of records that are not shown. To view all records, select the number. The following images show the difference between collapsed and non-collapsed fields.
 
-**折りたたま**
+**Collapsed:**
 
-![折りたたまれた複数参照表示領域](media/collapsed-multi-lookup-display-area.png "折りたたまれた複数参照表示領域")
+![Collapsed multi-lookup display area](media/collapsed-multi-lookup-display-area.png "Collapsed multi-lookup display area")
 
 
-**折りたたまれていない:**
+**Non-collapsed:**
 
-![折りたたまれていない複数参照表示領域](media/non-collapsed-multi-lookup-display-area.png "折りたたまれていない複数参照表示領域")
+![Non-collapsed multi-lookup display area](media/non-collapsed-multi-lookup-display-area.png "Non-collapsed multi-lookup display area")

@@ -1,5 +1,5 @@
 ---
-title: モデル駆動型アプリでレコードを検索する |MicrosoftDocs
+title: Search for records in model-driven apps| MicrosoftDocs
 ms.custom: ''
 author: mduelae
 manager: kvivek
@@ -15,188 +15,191 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 26903543232025f43f935a403800ed27170e3123
-ms.sourcegitcommit: 7c1e70e94d75140955518349e6f9130ce3fd094e
+ms.openlocfilehash: 18440a61eb4224c751824eaa62386615a8ad6165
+ms.sourcegitcommit: 6c91c6dae20437f263e4eb827c6b938d6aa1b6a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "71940907"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74262125"
 ---
-# <a name="search-for-records-in-an-app"></a>アプリでレコードを検索する
+# <a name="search-for-records-in-an-app"></a>Search for records in an app
 
-Common Data Service では、関連性の検索または分類された検索を使用して、複数のエンティティにわたるレコードを検索できます。 
+You can search for records across multiple entities by using Relevance search or Categorized search in Common Data Service. 
 
-- 関連性検索では、複数のエンティティにわたる高速で包括的な結果を1つのリストにして、関連性によって並べ替えます。 Common Data Service ([!INCLUDE[pn_Windows_Azure](../includes/pn-windows-azure.md)]) の外部で専用の検索サービスを使用して、検索のパフォーマンスを向上させます。 
-- 分類された検索は、アカウント、連絡先、潜在顧客などのエンティティの種類別にグループ化された検索結果を返します。
+- Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. It uses a dedicated search service external to Common Data Service (powered by [!INCLUDE[pn_Windows_Azure](../includes/pn-windows-azure.md)]) to boost search performance. 
+- Categorized search returns search results grouped by entity types, such as accounts, contacts or leads.
 
-通常、分類された検索は、既定の検索オプションです。 ただし、関連性検索が組織によって有効になっている場合は、既定の検索エクスペリエンスになります。  
+Normally, Categorized search is the default search option. However, if Relevance search is enabled by your organization, it becomes the default search experience.  
+  
+## <a name="quick-find-entity-specific-quick-find-or-multi-entity-categorized-search"></a>Quick Find (entity-specific Quick Find or multi-entity Categorized Search) 
 
-1つの種類のレコードのみを検索するには、エンティティのグリッドの [クイック検索] ビューを使用します。
-  
-## <a name="normal-quick-find-categorized-search"></a>通常のクイック検索 (分類された検索) 
+To find records of one type only, you can use the Quick Find View in the entity's grid.
 
-分類を使用すると、特定の単語で始まるレコードを検索したり、ワイルドカードを使用したりできます。
+With Categorized Search (also called multi-entity quick find), you can search records that begin with a specific word or use a wildcard.
   
-- 次**で始まる**: 結果には、特定の単語で始まるレコードが含まれます。 たとえば、"Alpine Ski House" を検索する場合は、検索ボックスに「 **alp** 」と入力します。「 **ski**」と入力した場合、レコードは表示されません。  
+- **Begins with**: Results include records that begin with a specific word. For example, if you want to search for “Alpine Ski House,” type **alp** in the search box; if you type **ski**, the record won’t show up.  
   
-- **ワイルドカード**: たとえば、* ski または * ski\*です。 
-  
-## <a name="relevance-search"></a>関連性の検索
-  
-  関連検索は、既に使い慣れているその他の Common Data Service 検索に加えて利用できます。 エンティティグリッドまたは複数エンティティのクイック検索 (関連性の検索が有効になっている場合は、分類された検索と呼ばれます) で、単一エンティティのクイック検索を引き続き使用できます。 より包括的で高速な結果を得るには、関連性の検索を使用することをお勧めします。  
+- **Wildcard**: For example, *ski or *ski\*. 
 
- 関連性検索では、次のような機能強化と利点が得られます。  
+  > [!NOTE]
+  >  Using a wildcard at the beginning of your Quick Find (single or multi-entity) search query may result in slower performance.
   
-- 外部インデックス作成と [!INCLUDE[pn_azure_shortest](../includes/pn-azure-shortest.md)] 検索テクノロジを使用してパフォーマンスを向上させます。  
+## <a name="relevance-search"></a>Relevance search
   
-- エンティティ内の任意のフィールド内の検索語句に一致する単語を検索します。 一致には、**ストリーム**、**ストリーミング**、ストリーミングなどの変化形語を含めることができ**ます。**  
-  
-- 一致した単語の数や、テキスト内での相互の近接度などの要因に基づいて、検索可能なすべてのエンティティの検索結果を関連性で並べ替えて返します。  
-  
-- 結果一覧の一致項目を強調表示します。  
+  Relevance Search is available in addition to other Common Data Service searches you are already familiar with. You can continue using single-entity Quick Find on the entity grid or Multi-Entity Quick Find (called Categorized Search, if you have Relevance Search enabled). For more comprehensive and faster results, we recommend using Relevance Search.  
 
-- Common Data Service に格納されているドキュメント内のテキストの検索結果を検索します。これには、ノート内のテキスト、電子メールの添付ファイル、予定などが含まれます。 検索では、PDF、Microsoft Office ドキュメント、HTML、XML、ZIP、EML、プレーンテキスト、JSON の各ファイル形式がサポートされています。  
+ Relevance Search brings the following enhancements and benefits:  
   
-- 自分が所有しているレコードと共有されているレコードを検索できます。  
+- Improves performance with external indexing and [!INCLUDE[pn_azure_shortest](../includes/pn-azure-shortest.md)] search technology.  
+  
+- Finds matches to any word in the search term in any field in the entity. Matches can include inflectional words like **stream**, **streaming**, or **streamed**.  
+  
+- Returns results from all searchable entities in a single list sorted by relevance, based on factors like number of words matched or their proximity to each other in the text.  
+  
+- Highlights matches in the result list.  
+
+- You'll find search results for text in a document that is stored in Common Data Service, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.  
+  
+- You can search for records that are shared with you and records that you own.  
   
   > [!NOTE]
-  >  階層型セキュリティモデルはサポートされていません。  Common Data Service に行がある場合でも、階層セキュリティによってアクセスできるため、関連検索に結果が表示されません。  
+  >  Hierarchical security models aren't supported.  Even if you see a row in Common Data Service because you have access to it through hierarchical security, you won't see the result in Relevance Search.  
   
-- また、オプションセットと参照を検索することもできます。 たとえば、名前に**製薬**がある小売店のアカウントを検索するとします。 **製薬小売**を検索すると、業界フィールド (検索可能なオプションセット) に一致するものがあるため、結果が得られます。  
+- You can also search for option sets  and lookups. For example, let's say you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry field, which is a searchable option set.  
   
-  結果にはエンティティが混在している可能性があるため、[**フィルター**条件] ドロップダウンリストでエンティティを選択することで、検索結果を特定のエンティティに絞り込むことができます。 特定のレコードの種類をフィルター処理すると、選択したレコードに関連するアクティビティとメモを検索結果に含めることができます。 これを行うには、[**フィルター**条件] ボックスの一覧の右側にある [**選択したレコードのアクティビティとメモを検索**する] チェックボックスをオンにします。 このチェックボックスは、 **[フィルター]** ドロップダウンリストでレコードを選択した後に選択されます。 **[フィルター]** ボックスの一覧でエンティティを選択しなかった場合は、クリアされます。 アクティビティとメモは、最上位レベルの結果として返されます。
+  Because your results might include a mix of entities, you can narrow your search results to a specific entity by selecting an entity in the **Filter with** drop-down list. When you filter on a specific record type, you can include activities and notes related to the selected record in your search results. To do that, select the **Search activities and notes for selected records** check box to the right of the **Filter with** drop-down list. The check box is selected after you select a record in the **Filter with** drop-down list; it is cleared if you didn't select an entity in the **Filter with** list. The activities and notes are returned as top-level results.
   
   > [!NOTE]
-  > - 既定では、関連検索は無効になっています。 管理者は、組織に対してこれを有効にする必要があります。 関連性の検索を有効にした後、組織のサイズによっては、アプリの関連性の検索結果を確認する前に、最大1時間以上待つ必要がある場合があります。 インデックス付きデータの変更が少ないほど、システムに表示されるまでに最大15分かかることがあります。
-  > - 関連性検索を有効にすると、組織内のすべてのユーザーがそれを使用できるようになります。  
-  > - 関連性検索はテキストベースであり、単一行のテキスト、複数行のテキスト、オプションセット、または参照のフィールドのみを検索できます。 数値データ型または日付データ型のフィールドの検索はサポートされていません。 
+  > - Relevance Search is disabled by default. Your administrator needs to enable it for the organization. After Relevance Search is enabled, you might have to wait up to an hour or more, depending on the size of your organization, before you start seeing Relevance Search results for your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system.
+  > - Enabling Relevance Search allows all users in the organization to use it.  
+  > - Relevance search is text-based, and can search only on fields of type Single Line of Text, Multiple Lines of Text, Option Sets, or Lookups. It doesn't support searching in fields of Numeric or Date data type. 
   
- 関連性検索では、エンティティ内の任意のフィールドの検索語句に一致する単語が検索されますが、[クイック&mdash;検索] では、フルテキスト検索が有効になっている場合でも、検索語句のすべての単語が1つのフィールドに含まれている必要があり&mdash;ます。  
+ Although Relevance Search finds matches to any word in the search term in any field in an entity, in Quick Find&mdash;even with full-text search enabled&mdash;all words from the search term must be found in one field.  
   
- 関連性の高い検索では、一致率が高いほど、結果に表示されます。 検索語句のより多くの単語が相互に近接している場合は、一致する関連性が高くなります。 検索語が見つかるテキストの量が少ないほど、関連性が高くなります。 たとえば、検索語が会社名と住所で見つかった場合は、大規模な記事で見られる言葉とは遠く離れているものと一致していることがあります。 結果は1つの一覧に表示されるため、アカウント、営業案件、潜在顧客などのレコードが1つずつ表示されていることを確認できます。 リスト内の一致する単語が強調表示されます。  
+ In Relevance Search, the better the match, the higher it appears in the results. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than the same words found in a large article, far apart from each other. Because the results are returned in a single list, you can see a mix of records displayed one after another, such as accounts, opportunities, leads, and so on. The matched words in the list are highlighted.  
   
- 検索語句で構文を使用して、必要な結果を取得します。 たとえば、検索結果の検索語句に一致する単語が含まれるように、「 **car シルバー 2-ドア**」と入力します。 「 **Car + シルバー +2** 」と入力すると、3つの単語すべてを含む一致のみが検索されます。 「 **Car&#124;シルバー&#124;2-ドア**」と入力して、**自動車**、**シルバー** 、または**2 扉**、または3つのすべての単語を含む結果を取得します。 検索クエリで使用できる構文の詳細については、「 [Azure Search の単純なクエリ構文」](https://docs.microsoft.com/rest/api/searchservice/simple-query-syntax-in-azure-search)を参照してください。
+ Use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. More information about syntax you can use in your search queries: [Simple query syntax in Azure Search](https://docs.microsoft.com/rest/api/searchservice/simple-query-syntax-in-azure-search)
 
 
 > [!NOTE]
-> 検索用語がアプリの用語と一致すると、ヒットの強調表示が表示されます。 ヒットの強調表示は、検索結果に太字と斜体のテキストとして表示されます。 これらは、一致した用語だけが強調表示されるため、フィールドの完全な値の一部として返されることがよくあります。 
+> You'll see hit highlights when your search term matches a term in your app. The hit highlights appear as bold and italicized text in your search results. These are often returned as a portion of the full value in a field because only the matched terms are highlighted. 
   
   
 <a name=" #BKMK_DefaultOption "></a>
-## <a name="switch-between-relevance-and-categorized-search"></a>関連性と分類された検索の切り替え
+## <a name="switch-between-relevance-and-categorized-search"></a>Switch between Relevance and Categorized search
 
-組織で両方の検索オプション (関連性と分類された検索) をオンにしている場合は、2つを切り替えることができます。
+If your organization has turned on both search options (Relevance and Categorized search), then you can switch between the two.
 
-1. 検索の種類を切り替えるには、ナビゲーションバーで **[検索]** ボタンを選択します。
+1. To switch between search types, on the navigation bar, select the **Search** button.
 
-2. 左側のドロップダウンメニューを選択して、関連性のある**検索**または**分類**された検索を切り替えます。
+2. On the left, select the drop-down menu to switch between **Relevance Search** or **Categorized Search**.
 
    > [!div class="mx-imgBorder"]
-   > ![関連性と分類された検索の切り替え](media/switch-search.png "関連性と分類された検索の切り替え") 
+   > ![Switch between Relevance and Categorized search](media/switch-search.png "Switch between Relevance and Categorized search") 
     
-### <a name="set-a-default-experience"></a>既定のエクスペリエンスを設定する
+### <a name="set-a-default-experience"></a>Set a default experience
 
-組織で両方の検索オプションが有効になっている場合は、個人用の設定で既定の検索エクスペリエンスを選択できます。
+If your organization has turned on both search options then you can select a default search experience in your personal settings.
 
-1. ページの右上隅にある **[設定]** を選択し、 **[個人用設定]** を選択します。  
+1. In the upper-right corner of the page, select **Settings** and then select **Personalization Settings**.  
   
    > [!div class="mx-imgBorder"]
-   > ![既定の検索エクスペリエンスを選択する](media/relevance-search-personal-settings.png "既定の検索エクスペリエンスを選択する")  
+   > ![Select default search experience](media/relevance-search-personal-settings.png "Select default search experience")  
 
-2. **[全般]** タブの **[既定の検索エクスペリエンスの選択]** セクションで、**既定の検索エクスペリエンス**として、既定のエクスペリエンスを選択します。 
+2. On the **General** tab, in the **Select the default search experience** section, for the **Default Search Experience**, select your default experience. 
 
    > [!div class="mx-imgBorder"]
-   > ![既定の検索エクスペリエンスを選択する](media/default.png "既定の検索エクスペリエンスを選択する")  
+   > ![Select default search experience](media/default.png "Select default search experience")  
  
 
 
-## <a name="start-a-search"></a>検索を開始する 
+## <a name="start-a-search"></a>Start a search 
  
-1.  上部のナビゲーションバーから、 **[検索]** ボタンを選択します。  
+1.  From the top nav bar, select the **Search** button.  
   
-2.  検索ボックスに検索語句を入力し、 **[検索]** ボタンを選択します。   
+2.  Type your search words in the search box and then select **Search** button.   
 
     > [!div class="mx-imgBorder"]
-    > ![検索オプション](media/search-option.png "検索オプション")  
+    > ![Search option](media/search-option.png "Search option")  
   
-## <a name="filter-categorized-search-results"></a>分類された検索結果のフィルター処理 
+## <a name="filter-categorized-search-results"></a>Filter Categorized Search results 
   
--   1つのレコードの種類で結果をフィルター処理するには、[検索] 画面で、[**フィルター**条件] ボックスの一覧からレコードの種類を選択します。  
+-   To filter results by one record type, on the search screen, choose a record type from the **Filter with:** drop-down box.  
   
--   すべてのレコードの種類を検索するには、 **[フィルター条件]** ドロップダウンボックスで **[なし]** を選択します。  
+-   To search against all record types, choose **None** in the **Filter with:** drop-down box.  
 
     > [!div class="mx-imgBorder"]
-    > ![検索のフィルター処理](media/filter-search.png "検索のフィルター処理")  
+    > ![Filter Search](media/filter-search.png "Filter Search")  
 
-## <a name="filter-records-with-facets-works-with-relevance-search"></a>ファセットを使用してレコードをフィルター処理する (関連性のある検索で機能します)  
- Common Data Service では、ファセットとフィルターを使用して検索結果を絞り込むことができるようになりました。 ファセットは左ペインで使用できます。 検索を実行するとすぐに、次のグローバルファセットが4つの共通フィールドで使用できるようになります。  
+## <a name="filter-records-with-facets-works-with-relevance-search"></a>Filter records with facets (works with Relevance Search)  
+ With Common Data Service, you can now refine your search results by using facets and filters. Facets are available in the left pane. Immediately after you perform a search, the following global facets are available for four common fields:  
   
--   レコードの種類  
+-   Record Type  
   
 -   Owner  
   
--   作成日  
+-   Created On  
   
--   変更日  
+-   Modified On  
   
-### <a name="record-type-facets"></a>レコードの種類のファセット  
- 検索結果を特定のエンティティに絞り込むには、[レコードの**種類**] セクションでエンティティを選択します。  
+### <a name="record-type-facets"></a>Record Type facets  
+ To narrow your search results to a specific entity, select the entity under the **Record Type** section.  
  
   > [!div class="mx-imgBorder"]
-  > ![検索結果を絞り込むためのレコードの種類のファセット](media/relevance-search-record-type-facet.png "検索結果を絞り込むために使用されるレコード型のファセット")  
+  > ![Record Type facet to narrow the search results](media/relevance-search-record-type-facet.png "Record Type facet used to narrow search results")  
   
- 特定のレコードの種類をフィルター処理すると、選択したレコードに関連するアクティビティとメモを検索結果に含めることができます。 これを行うには、 **[関連するメモ & 活動]** チェックボックスをオンにします。 アクティビティとメモがトップレベルの結果に表示されます。  
+ When you filter on a specific record type, you can include activities and notes that are related to the selected record in your search results. To do that, select the **Related Notes & Activities** check box. The activities and notes will appear in top-level results.  
   
  
   > [!div class="mx-imgBorder"]
-  > ![レコードの種類に関連するメモとアクティビティを検索結果に含める](media/relevance-search-record-type-facet-related-notes-activities.png "レコードの種類に関連するメモとアクティビティを検索結果に含める")  
+  > ![Include notes and activities related to a record type in the search results](media/relevance-search-record-type-facet-related-notes-activities.png "Include notes and activities related to a record type in the search results")  
   
- 電子メールの添付ファイルまたは予定のエンティティで見つかった検索結果は、検索結果の親レコード (電子メールまたは予定) に表示されます。  
+ Search results that are found in email attachments or appointment entities  are shown in the search results under their parent record, either Email or Appointment.  
   
- レコードの種類によって絞り込んだ場合、ファセットのスコープは選択されたエンティティに切り替わり、エンティティに固有の最大4つのファセットが表示されます。 たとえば、Account エンティティを選択した場合は、グローバルファセットに加えて**主要な Contact**ファセットが表示されます。  
+ When you refine by record type, the facet scope switches to the selected entity, and up to four facets that are specific to the entity are shown. For example, if you select the Account entity, you'll see the **Primary Contact** facet in addition to the global facets.  
   
- **[個人用オプションの設定]** ダイアログボックスでは、システム管理者または顧客が使用できるようにした他のファセットを選択することもできます。 ユーザー設定は、既定の設定よりも優先されます。 [検索用のファセットとフィルターを構成 [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] には](#BKMK_ConfigureFacets)  
+ In the **Set Personal Options** dialog box, you can also choose other facets from the ones that your system administrator or customer has made available to you. The user setting overrides the default setting. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Configure facets and filters for the search](#BKMK_ConfigureFacets)  
   
-### <a name="text-based-facets"></a>テキストベースのファセット  
- すべての参照、オプションセット、およびレコードの種類は、テキストベースのファセットです。 たとえば、テキストベースのファセット所有者は、フィールド値のリストとそれに対応するカウントで構成されます。  
+### <a name="text-based-facets"></a>Text-based facets  
+ All lookups, option sets, and record types are text-based facets. For example, the text-based facet Owner consists of a list of field values and their corresponding counts.  
  
   > [!div class="mx-imgBorder"]
-  > ![関連性のある検索でのテキストベースのファセット](media/relevance-search-text-based-facets.png "関連性のある検索でのテキストベースのファセット")  
+  > ![Text-based facet in Relevance Search](media/relevance-search-text-based-facets.png "Text-based facet in Relevance Search")  
   
- これらのファセット内のフィルターは、カウント順に降順に並べ替えられます。 既定では、上位4つのファセット値が表示されます。 4つ以上のファセット値がある場合は、 **[詳細を表示]** リンクが表示されます。このリンクを選択すると、一覧を展開し、最大15個のファセット値を表示できます。 各値を選択すると、検索結果をフィルター処理して、フィールドに選択した値が含まれているレコードのみが表示されるようにすることができます。 たとえば、 **Kim Abercrombie**を選択すると、検索結果には、所有者が kim Abercrombie であるすべてのレコードが表示されます。 参照またはオプションセットのファセット値を選択すると、指定した値を持つレコードだけが検索結果にフィルター処理されます。  
+ Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, you'll see a **SHOW MORE** link that you can select to expand the list and see up to 15 top facet values. Select each value to filter the search results to show only records where the field has the value you've selected. For example, if you select **Kim Abercrombie**, the search results will show all records where the owner is Kim Abercrombie. When you select a Lookup or Option Set facet value, search results are filtered to only include records with the value that you specified.  
   
-### <a name="date-and-time-facets"></a>日付と時刻のファセット  
- 他のファセットと同様に、日付と時刻のファセットを使用して、特定の時刻の検索結果をフィルター処理したり表示したりすることができます。 値の範囲を選択するには、スライダーをドラッグするか、垂直方向の列の1つを選択します。  
+### <a name="date-and-time-facets"></a>Date and time facets  
+ Like other facets, you can use date and time facets to filter and see search results for a specific time. To select a range of values, drag the slider or select one of the vertical columns.  
  
   > [!div class="mx-imgBorder"]
-  > ![関連検索の日付と時刻のファセット](media/relevance-search-date-time-facets.png "関連検索の日付と時刻のファセット")  
+  > ![Date and time facets for Relevance Search](media/relevance-search-date-time-facets.png "Date and time facets for Relevance Search")  
   
 <a name="BKMK_ConfigureFacets"></a>   
-### <a name="configure-facets-and-filters-for-the-search"></a>検索用のファセットとフィルターを構成する  
- ファセットとフィルターを使用すると、検索語句を繰り返し調整することなく、現在の検索結果を掘り下げて調査することができます。 **[個人用オプションの設定]** ダイアログボックスで、必要なファセットとフィルターを構成します。  
+### <a name="configure-facets-and-filters-for-the-search"></a>Configure facets and filters for the search  
+ Facets and filters let you drill into and explore the results of your current search without having to repeatedly refine your search term. Configure the facets and filters you want in the **Set Personal Options** dialog box.  
   
 > [!NOTE]
->  システムカスタマイザーは、すべてのエンティティの既定のエクスペリエンスを設定できますが、独自のファセットとフィルターを構成することができます。  
+>  The system customizer can set the default experience for all entities, but you can configure your own facets and filters.  
   
-#### <a name="to-configure-facets-for-yourself"></a>自分用にファセットを構成するには  
+#### <a name="to-configure-facets-for-yourself"></a>To configure facets for yourself  
   
-1. ページの右上隅にある **[設定]** を選択し、 **[個人用設定]** を選択します。  
+1. In the upper-right corner of the page, select **Settings** and then select **Personalization Settings**.  
   
    > [!div class="mx-imgBorder"]
-   > ![既定の検索エクスペリエンスを選択する](media/relevance-search-personal-settings.png "既定の検索エクスペリエンスを選択する")  
+   > ![Select default search experience](media/relevance-search-personal-settings.png "Select default search experience")  
   
-2. **[全般]** タブの **[既定の検索エクスペリエンスを選択]** します セクションで、 **[ファセットとフィルター]** フィールドの **[構成]** を選択します。  
+2. On the **General** tab, in the **Select the default search experience** section, for the **Facets and Filters** field, select **Configure**.  
   
-3. **[ファセットとフィルターの構成]** ダイアログボックスで、エンティティに対して表示するファセットを指定します。 システム管理者またはカスタマイザーは、すべてのエンティティに既定のエクスペリエンスを設定できますが、ここで独自の設定を行うことができます。  
+3. In the **Configure Facets and Filters** dialog box, specify the facets you'd like to see for an entity. Your system administrator or customizer can set a default experience for all entities, but you can set your own here.  
   
-   - **[エンティティの選択**] ドロップダウンリストで、ファセットを構成するエンティティを選択します。 このドロップダウンリストには、関連性検索が有効になっているエンティティのみが表示されます。  
+   - In the **Select Entity** drop-down list, select an entity you want to configure facets for. This drop-down list contains only the entities that are enabled for Relevance Search.  
   
-   - 選択したエンティティに対して、最大4つのファセットフィールドを選択します。 既定では、選択したエンティティの **[クイック検索]** ビューの最初の4つのファセット可能フィールドが、一覧で選択されています。 常に、ファセットとして選択できるフィールドは4つだけです。  
+   - For the selected entity, select up to four facet fields. By default, the first four facetable fields in the **Quick Find** view for the selected entity are selected in the list. At any time, you can only have four fields selected as facets.  
   
-     複数のエンティティを一度に更新できます。 **[OK]** を選択すると、構成したすべてのエンティティに対する変更が保存されます。 以前に構成したエンティティの既定の動作に戻すには、 **[既定]** を選択します。  
+     You can update multiple entities at one time. When you select **OK**, the changes for all entities that you've configured are saved. To revert to the default behavior for an entity that you previously configured, select **Default**.  
   
    > [!NOTE]
-   > - システムカスタマイザーによってフィールドが削除されるか、または検索できなくなり、そのフィールドのファセットが保存されている場合は、ファセットとして表示されなくなります。  
-   >   -   既定のソリューションに存在し、システムカスタマイザーによって検索可能として構成されているフィールドのみが表示されます。  
+   > - If a system customizer deletes a field or makes it no longer searchable, and you've saved a facet for that field, it will no longer show up as a facet.  
+   >   -   You'll only see the fields that exist in the default solution and that are configured as searchable by your system customizer.  
   
  
