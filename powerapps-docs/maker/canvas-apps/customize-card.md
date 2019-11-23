@@ -44,14 +44,14 @@ ms.locfileid: "71985914"
 1. フィールドの一覧で、 **[Number Of Employees]** の下矢印を選択し、 **[コントロールの種類]** の下の一覧を開きます。
 
     > [!div class="mx-imgBorder"]
-    > 数値カードのオプションの @no__t 0 のドロップダウンリスト @ no__t-1
+    > 数値カードのオプションのドロップダウンリスト ![](./media/customize-card/card-selector.png)
 
 1. **[スライダーの編集]** を選択します。
 
     画面に変更内容が反映されます。
 
     > [!div class="mx-imgBorder"]
-    > ![EditForm1 with slider control @ no__t
+    > スライダーコントロールを使用した EditForm1 の ![](./media/customize-card/add-slider.png)
 
 ## <a name="unlock-and-customize-a-card"></a>カードのロック解除とカスタマイズ
 
@@ -60,22 +60,22 @@ ms.locfileid: "71985914"
 1. **EditForm1**で、 **Employees カードの数**の**スライダー**コントロールを選択します。
 
     > [!div class="mx-imgBorder"]
-    > ![Select @ no__t-1 を選択します。
+    > ![スライダーを選択し](./media/customize-card/select-slider.png)
 
 1. 右側のウィンドウの **[詳細設定]** タブで、ロックアイコンを選択してカードのロックを解除します。
 
     > [!div class="mx-imgBorder"]
-    > ![Unlock card @ no__t
+    > カードのロック解除 ![](./media/customize-card/lock-icon.png)
 
 1. **スライダー**コントロールの**Max**プロパティを1万に設定します。
 
     > [!div class="mx-imgBorder"]
-    > [詳細設定] タブの ![Max プロパティ @ no__t-1
+    > [詳細設定] タブの [最大 ![] プロパティ](./media/customize-card/max-property.png)
 
     **スライダー**コントロールにより、より正確な値が表示されます。
 
     > [!div class="mx-imgBorder"]
-    > ![Slider の範囲:0 ~ 10000 @ no__t
+    > ![スライダーの範囲: 0 ~ 10000](./media/customize-card/final-slider.png)
 
 ## <a name="next-steps"></a>次の手順
 

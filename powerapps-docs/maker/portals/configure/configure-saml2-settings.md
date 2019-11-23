@@ -11,7 +11,7 @@ ms.author: shjais
 ms.reviewer: ''
 ms.openlocfilehash: af5b0ae8eddb68127c7271fccb4696a23fedfc60
 ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73542741"
@@ -64,7 +64,7 @@ ms.locfileid: "73542741"
    > - インデックス: n/a (0)                                              
    > - URL: **https://portal.contoso.com/signin-saml2**
 
-8. Id の構成: https://portal.contoso.com/ を指定し、 **[追加]** を選択して、 **[次へ]** を選択します。
+8. Id の構成: https://portal.contoso.com/を指定し、 **[追加]** を選択して、 **[次へ]** を選択します。
    該当する場合は、追加の証明書利用者ポータルごとに id を追加できます。 ユーザーは、使用可能なすべての id に対して認証できるようになります。
 9. 発行承認規則を選択する: **[すべてのユーザーにこの証明書利用者へのアクセスを許可する]** を選択し、 **[次へ]** を選択します。
 10. 信頼の追加の準備完了: **[次へ]** を選択します。
@@ -98,13 +98,13 @@ ms.locfileid: "73542741"
 [Provider] タグのラベルを置き換えることで、複数の IdP services を構成できます。 各一意のラベルは、IdP に関連する設定のグループを形成します。 例: ADFS、[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)]AD、MyIdP
 
 
-| サイト設定名                                             | Description                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| サイト設定名                                             | 説明                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 認証/登録/ExternalLoginEnabled              | 外部アカウントのサインインと登録を有効または無効にします。 既定値: true                                                                                                                                                                                                                                                                                                                                                            |
 | Authentication/SAML2/[provider]/metadataaddress             | 必須。 [!include[](../../../includes/pn-adfs-short.md)] (STS) サーバーの[ws-federation](https://msdn.microsoft.com/library/bb498017.aspx)メタデータ URL。 通常、パス:/Federationmetadata.xml/2007-06/Federationmetadata.xml で終わります。 例: `https://adfs.contoso.com/FederationMetadata/2007-06/FederationMetadata.xml`。 [!include[](../../../includes/proc-more-information.md)] [WsFederationAuthenticationOptions](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.metadataaddress.aspx) |  
 | Authentication/SAML2/[provider]/AuthenticationType          | 必須。 OWIN authentication ミドルウェア型。 フェデレーションメタデータ XML のルートにある[entityID](https://docs.microsoft.com/azure/active-directory/develop/active-directory-federation-metadata)属性の値を指定します。 例: `https://adfs.contoso.com/adfs/services/trust`。 [!include[](../../../includes/proc-more-information.md)] [Authenticationoptions. AuthenticationType](https://msdn.microsoft.com/library/microsoft.owin.security.authenticationoptions.authenticationtype.aspx)                                                            |  
 | Authentication/SAML2/[provider]/serviceproviderrealm<br>または <br>Authentication/SAML2/[provider]/Wtrealm                      | 必須。 [!include[](../../../includes/pn-adfs-short.md)] 証明書利用者の識別子。 例: `https://portal.contoso.com/`。 [!include[](../../../includes/proc-more-information.md)] [WsFederationAuthenticationOptions Wtrealm](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.wtrealm.aspx)                       |  
-| Authentication/SAML2/[provider]/AssertionConsumerServiceUrl<br>または<br>Authentication/SAML2/[provider]/Wreply                       | 必須。 [!include[](../../../includes/pn-adfs-short.md)] SAML コンシューマーアサーションエンドポイント。 例: https://portal.contoso.com/signin-saml2 。 [!include[](../../../includes/proc-more-information.md)] [WsFederationAuthenticationOptions](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.wreply.aspx)                                                                                                                                                                                                  |  
+| Authentication/SAML2/[provider]/AssertionConsumerServiceUrl<br>または<br>Authentication/SAML2/[provider]/Wreply                       | 必須。 [!include[](../../../includes/pn-adfs-short.md)] SAML コンシューマーアサーションエンドポイント。 例: https://portal.contoso.com/signin-saml2。 [!include[](../../../includes/proc-more-information.md)] [WsFederationAuthenticationOptions](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.wreply.aspx)                                                                                                                                                                                                  |  
 | Authentication/SAML2/[プロバイダー]/キャプション                     | しない. ユーザーがサインインユーザーインターフェイスに表示できるテキスト。 既定値: [プロバイダー]。 [!include[](../../../includes/proc-more-information.md)] [WsFederationAuthenticationOptions](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.caption.aspx)                |  
 | Authentication/SAML2/[プロバイダ]/tcp/ip パス                | 認証コールバックを処理するオプションの制約付きパス。 [!include[](../../../includes/proc-more-information.md)] [WsFederationAuthenticationOptions パス](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.callbackpath.aspx)                                                                                                                                                                                                                      |  
 | Authentication/SAML2/[provider]/backchanneltimeout          | バックチャネル通信のタイムアウト値。 例: 00:05:00 (5 分)。 [!include[](../../../includes/proc-more-information.md)] [WsFederationAuthenticationOptions timeout](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.backchanneltimeout.aspx)                                                                                                                                                                                                                   |  
@@ -217,11 +217,11 @@ Write-Output $idpInitiatedUrl
 1.  ディレクトリの **[アプリケーション]** メニューで、 **[追加]** を選択します。
 2.  **[組織で開発中のアプリケーションを追加する]** を選択します。
 3.  アプリケーションのカスタム名を指定し、[ **web アプリケーションまたは WEB API**の種類] を選択します。
-4.  **[サインオン URL]** と **[アプリ ID URI]** には、 https://portal.contoso.com/ の両方のフィールドにポータルの url を指定します。
+4.  **[サインオン URL]** と **[アプリ ID URI]** には、 https://portal.contoso.com/の両方のフィールドにポータルの url を指定します。
     これは、 **Serviceproviderrealm** (Wtrealm) サイト設定値に対応します。
 5. この時点で、新しいアプリケーションが作成されます。 メニューの **[構成]** セクションにアクセスします。
 
-    [Single sign-on] \ (**シングルサインオン**\) セクションで、最初の**応答 url**エントリを更新して、 https://portal.contoso.com/signin-azure-ad URL にパスを含めます。
+    [Single sign-on] \ (**シングルサインオン**\) セクションで、最初の**応答 url**エントリを更新して、 https://portal.contoso.com/signin-azure-adURL にパスを含めます。
 
     これは、 **AssertionConsumerServiceUrl** (wreply) サイト設定値に対応します。
 
@@ -241,7 +241,7 @@ Write-Output $idpInitiatedUrl
 
 ## <a name="shibboleth-identity-provider-3"></a>Id プロバイダー3を持つ
 
-IdP サービスとしての規則を正しく[構成するに](https://wiki.shibboleth.net/confluence/display/IDP30/Home)は、次のガイドラインに従います。 次の例では、IdP がドメイン https://idp.contoso.com でホストされていることを前提としています。  
+IdP サービスとしての規則を正しく[構成するに](https://wiki.shibboleth.net/confluence/display/IDP30/Home)は、次のガイドラインに従います。 次の例では、IdP がドメイン https://idp.contoso.comでホストされていることを前提としています。  
 
 フェデレーションメタデータ URL が https://idp.contoso.com/idp/shibboleth
 
@@ -275,10 +275,10 @@ Location 属性は、**AssertionConsumerServiceUrl** (wreply) 設定に対応し
 
 > [!Note] 
 > 標準の "指定された Bboleth" 構成では、次の設定のみが使用されます (値の例を含む)。   
-> Authentication/SAML2 https://idp.contoso.com/idp/shibboleth ///   
+> Authentication/SAML2 https://idp.contoso.com/idp/shibboleth///   
 > -   Authentication/SAML2//AuthenticationType- https://idp.contoso.com/idp/shibboleth 
 > -   フェデレーションメタデータのルート要素で**entityID**属性の値を使用します (上記のサイト設定の値であるブラウザーで**metadataaddress URL**を開きます)。  
-> -   Authentication/SAML2///https://portal.contoso.com/ ///////// 
+> -   Authentication/SAML2///https://portal.contoso.com////////// 
 > -   Authentication/SAML2//AssertionConsumerServiceUrl- https://portal.contoso.com/signin-saml2 
 
 ### <a name="idp-initiated-sign-in"></a>IdP が開始したサインイン

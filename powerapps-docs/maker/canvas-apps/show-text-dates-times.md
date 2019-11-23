@@ -39,13 +39,13 @@ PowerApps で、日付と時刻をキャンバス アプリに追加し、その
 
 次に例をいくつか示します。
 
-1. **ShowText** という名前の **[ラベル](controls/control-text-box.md)** コントロールを追加し、その **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
+1. **ShowText[ という名前の](controls/control-text-box.md)** ラベル コントロールを追加し、その **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
    <br>**Now()**
    
     ご使用のコンピューターのロケールが "en-us" に設定されている場合、現在の日付と時刻が " " 形式で表示されます。<br>*/mm/dd/yyyy hh:mm AM/PM*
    
     ご使用のコンピューターのロケールが "fr-fr" などに設定されている場合、現在の日付と時刻は次の形式で表示されます。 <br>*/mm/dd/yyyy hh:mm AM/PM*
-2. **ShowText** の **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
+2. **ShowText[ の ](controls/properties-core.md)** Text プロパティを次の数式に設定します。
    <br>**DateDiff(Today(), DateValue("01/01/2020"))**
    
     ![今日から 2020 年 1 月 1 日までの日数](./media/show-text-dates-times/date-diff-text.png)
@@ -55,11 +55,11 @@ PowerApps で、日付と時刻をキャンバス アプリに追加し、その
    * **DateDiff**。2 つの日付の間の日数、四半期数、または年数を計算します。
    * **Today**。その時点の日付を値として計算します。
    * **DateValue**。二重引用符で囲まれたリテラル文字列を、計算の適用対象として使用できる値に変換します。
-3. **BirthDate** という名前の **[テキスト入力](controls/control-text-input.md)** コントロールを追加し、**ShowText** の下に移動します。
+3. **BirthDate[ という名前の](controls/control-text-input.md)** テキスト入力コントロールを追加し、**ShowText** の下に移動します。
 
 4. **BirthDate** に、自分が生まれた月と日 (例: **05/18**) を入力します。
 
-5. **ShowText** の **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
+5. **ShowText[ の ](controls/properties-core.md)** Text プロパティを次の数式に設定します。
    <br>**DateDiff(Today(), DateValue(BirthDate.Text))**
    
     ![今日から誕生日までの日数](./media/show-text-dates-times/birth-diff.png)
@@ -79,15 +79,15 @@ PowerApps で、日付と時刻をキャンバス アプリに追加し、その
 > 
 > 
 
-1. **ArrivalDateTime** という名前の **[テキスト入力](controls/control-text-input.md)** コントロールを追加し、次の形式で日時を入力します。
+1. **ArrivalDateTime[ という名前の](controls/control-text-input.md)** テキスト入力コントロールを追加し、次の形式で日時を入力します。
    <br>**5/10/85 6:15 AM**
-2. **ShowDate** という名前の **[ラベル](controls/control-text-box.md)** コントロールを追加し、その **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
+2. **ShowDate[ という名前の](controls/control-text-box.md)** ラベル コントロールを追加し、その **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
    <br>**DateTimeValue(ArrivalDateTime.Text)**
    
     ![日付/時刻をテキストから値に変換する](./media/show-text-dates-times/date-value.png)
    
     **ShowDate** に表示される情報は、入力したテキストと同じですが、テキストから値に変換され、設定されている書式が異なります。 たとえば、年が 2 桁ではなく 4 桁で表示されます。
-3. **ShowDate** の **[Text](controls/properties-core.md)** プロパティを次の数式に変更します。
+3. **ShowDate[ の ](controls/properties-core.md)** Text プロパティを次の数式に変更します。
    <br>**DateTimeValue(ArrivalDateTime.Text, "fr")**
    
     ![日付/時刻の値をフランス語の書式で表示する](./media/show-text-dates-times/date-value-fr.png)
@@ -100,7 +100,7 @@ PowerApps で、日付と時刻をキャンバス アプリに追加し、その
    > ![ロケールの一覧を表示する](./media/show-text-dates-times/locale-list.png)
    > 
    > 
-4. 組み込みの書式のいずれかを使用するには、**ShowDate** の **[Text](controls/properties-core.md)** プロパティを次の数式に変更します。
+4. 組み込みの書式のいずれかを使用するには、**ShowDate[ の ](controls/properties-core.md)** Text プロパティを次の数式に変更します。
    <br>**Text(DateTimeValue(ArrivalDateTime.Text), DateTimeFormat.LongDateTime)**
    
     ![日付/時刻の値をフランス語の書式で表示する](./media/show-text-dates-times/long-date-time.png)
@@ -111,7 +111,7 @@ PowerApps で、日付と時刻をキャンバス アプリに追加し、その
    > **DateTimeFormat** パラメーターは、他のいくつかの組み込みの書式をサポートしています。 先ほどの数式から **LongDateTime** を削除すると、その一覧を表示できます。
    > 
    > 
-5. カスタム書式を使用するには、**ShowDate** の **[Text](controls/properties-core.md)** プロパティを次の数式に変更します。
+5. カスタム書式を使用するには、**ShowDate[ の ](controls/properties-core.md)** Text プロパティを次の数式に変更します。
    <br>**Text(DateTimeValue(ArrivalDateTime.Text), "mm/dd/yyyy hh:mm:ss.fff AM/PM")**
    
     ![日付/時刻の値をフランス語の書式で表示する](./media/show-text-dates-times/format-milliseconds.png)
@@ -125,36 +125,36 @@ PowerApps で、日付と時刻をキャンバス アプリに追加し、その
 
 ## <a name="format-a-date-by-using-datevalue"></a>DateValue を使用して日付の書式を設定する
 
-1. **ArrivalDate** という名前の **[テキスト入力](controls/control-text-input.md)** コントロールを追加し、そこに日付を入力します (例: **5/10/85**)。
+1. **ArrivalDate[ という名前の](controls/control-text-input.md)** テキスト入力コントロールを追加し、そこに日付を入力します (例: **5/10/85**)。
 
-2. **FormatDate** という名前の **[ラベル](controls/control-text-box.md)** コントロールを追加し、その **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
+2. **FormatDate[ という名前の](controls/control-text-box.md)** ラベル コントロールを追加し、その **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
    <br>**DateValue(ArrivalDate.Text)**
    
     **FormatDate** には、入力した日付が表示されます。ただし、年は 4 桁で表示されます。
-3. **FormatDate** の **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
+3. **FormatDate[ の ](controls/properties-core.md)** Text プロパティを次の数式に設定します。
    <br>**DateValue(ArrivalDate.Text, "fr")**
    
     **ShowDate** には、フランスのユーザーの予想どおり、月の前に日が表示されます。
-4. 組み込みの書式のいずれかを使用するには、**FormatDate** の **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
+4. 組み込みの書式のいずれかを使用するには、**FormatDate[ の ](controls/properties-core.md)** Text プロパティを次の数式に設定します。
    <br>**Text(DateValue(ArrivalDate.Text), DateTimeFormat.LongDate)**
    
     **FormatDate** には、曜日、月、日、年が表示されます。
-5. カスタム書式を使用するには、**FormatDate** の **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
+5. カスタム書式を使用するには、**FormatDate[ の ](controls/properties-core.md)** Text プロパティを次の数式に設定します。
    <br>**Text(DateValue(ArrivalDate.Text), "yy/mm/dd")**
    
     **FormatDate** には、指定した書式で日付が表示されます。
 
 ## <a name="format-a-time-using-datetimevalue"></a>DateTimeValue を使用して時刻の書式を設定する
 
-1. **ArrivalTime** という名前の **[テキスト入力](controls/control-text-input.md)** コントロールを追加し、そこに「**6:15 AM**」と入力します。
+1. **ArrivalTime[ という名前の](controls/control-text-input.md)** テキスト入力コントロールを追加し、そこに「**6:15 AM**」と入力します。
 
-2. **ShowTime** という名前の **[ラベル](controls/control-text-box.md)** コントロールを追加します。
+2. **ShowTime[ という名前の](controls/control-text-box.md)** ラベル コントロールを追加します。
 
-3. 組み込みの書式のいずれかを使用するには、**ShowTime** の **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
+3. 組み込みの書式のいずれかを使用するには、**ShowTime[ の ](controls/properties-core.md)** Text プロパティを次の数式に設定します。
    <br>**Text(DateTimeValue(ArrivalTime.Text), DateTimeFormat.LongTime)**
    
     **ShowTime** には、指定した時刻 (秒を含む) が表示されます。
-4. カスタム書式を使用するには、**ShowTime** の **[Text](controls/properties-core.md)** プロパティを次の式に設定します。
+4. カスタム書式を使用するには、**ShowTime[ の ](controls/properties-core.md)** Text プロパティを次の式に設定します。
    <br>**Text(DateTimeValue(ArrivalTime.Text), "hh:mm:ss.fff AM/PM")**
    
     **ShowTime** には、指定した時刻 (秒とミリ秒を含む) が表示されます。
@@ -166,37 +166,37 @@ PowerApps で、日付と時刻をキャンバス アプリに追加し、その
 
 ## <a name="show-the-time-between-dates"></a>日付間の時間を表示する
 
-1. **Start** と **End** という名前の 2 つの **[テキスト入力](controls/control-text-input.md)** コントロールを追加します。
+1. **Start[ と ](controls/control-text-input.md)End** という名前の 2 つのテキスト入力コントロールを追加します。
 
 2. **Start** には「**4/1/2015**」と入力し、**End** には「**1/1/2016**」と入力します。
 
-3. **DateDiff** という名前の **[ラベル](controls/control-text-box.md)** コントロールを追加し、その **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
+3. **DateDiff[ という名前の](controls/control-text-box.md)** ラベル コントロールを追加し、その **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
    <br>**DateDiff(DateValue(Start.Text), DateValue(End.Text))**
    
     ![2 つの日付を比較する](./media/show-text-dates-times/date-diff.png)
    
     **DateDiff** には、2015 年 4 月 1 日から 2016 年 1 月 1 日までの日数である "**275**" が表示されます。
-4. **DateDiff** の **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。  <br>**DateDiff(DateValue(Start.Text), DateValue(End.Text), Months)**
+4. **DateDiff[ の ](controls/properties-core.md)** Text プロパティを次の数式に設定します。  <br>**DateDiff(DateValue(Start.Text), DateValue(End.Text), Months)**
    
     **DateDiff** には、2015 年 4 月 1 日から 2016 年 1 月 1 日までの月数である "**9**" が表示されます。 **Months** を **Quarters** または **Years** に置き換えると、時間が四半期単位や年単位で表示されます。
 
 ## <a name="identify-a-date-before-or-after-another-date"></a>特定の日付から前後した日付を特定する
 
-1. **Start** という名前の **[テキスト入力](controls/control-text-input.md)** コントロールを追加し、そこに「**5/10/1985**」と入力します。
+1. **Start[ という名前の](controls/control-text-input.md)** テキスト入力コントロールを追加し、そこに「**5/10/1985**」と入力します。
 
-2. **DateAdd** という名前の **[ラベル](controls/control-text-box.md)** コントロールを追加し、その **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
+2. **DateAdd[ という名前の](controls/control-text-box.md)** ラベル コントロールを追加し、その **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
    <br>**DateAdd(DateValue(Start.Text), 3)**
    
     ![3 日を加算する](./media/show-text-dates-times/date-add.png)
    
     **DateAdd** には、**Start** の日付の 3 日後である "**5/13/1985**" が表示されます。
-3. **DateAdd** の **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
+3. **DateAdd[ の ](controls/properties-core.md)** Text プロパティを次の数式に設定します。
    <br>**DateAdd(DateValue(Start.Text), -3)**
    
     ![3 日を減算する](./media/show-text-dates-times/date-subtract.png)
    
     **DateAdd** には、**Start** の日付の 3 日前である "**5/7/1985**" が表示されます。
-4. **DateAdd** の **[Text](controls/properties-core.md)** プロパティを次の数式に変更します。
+4. **DateAdd[ の ](controls/properties-core.md)** Text プロパティを次の数式に変更します。
    <br>**DateAdd(DateValue(Start.Text), 3, Months)**
    
     ![3 か月を加算する](./media/show-text-dates-times/date-add-months.png)
@@ -205,15 +205,15 @@ PowerApps で、日付と時刻をキャンバス アプリに追加し、その
 
 ## <a name="calculate-dates-based-on-years-months-and-days"></a>年、月、日に基づいて日付を計算する
 
-1. **Year**、**Month**、**Day** という名前の 3 つの **[ドロップダウン](controls/control-drop-down.md)** コントロールを追加します。
+1. **Year[、](controls/control-drop-down.md)Month**、**Day** という名前の 3 つのドロップダウン コントロールを追加します。
 
-2. **Year** の **[Items](controls/properties-core.md)** プロパティを次の数式に設定します。
+2. **Year[ の ](controls/properties-core.md)** Items プロパティを次の数式に設定します。
    <br>**Table({Year:"2014"}, {Year:"2015"}, {Year:"2016"})**
 
-3. **Month** の **[Items](controls/properties-core.md)** プロパティを次の数式に設定します。
+3. **Month[ の ](controls/properties-core.md)** Items プロパティを次の数式に設定します。
    <br>**Table({Month:"1"}, {Month:"2"}, {Month:"3"}, {Month:"4"}, {Month:"5"}, {Month:"6"}, {Month:"7"}, {Month:"8"}, {Month:"9"}, {Month:"10"}, {Month:"11"}, {Month:"12"})**
 
-4. **Day** の **[Items](controls/properties-core.md)** プロパティを次の数式に設定します。
+4. **Day[ の ](controls/properties-core.md)** Items プロパティを次の数式に設定します。
    <br>**Table({Day:"1"}, {Day:"2"}, {Day:"3"}, {Day:"4"}, {Day:"5"}, {Day:"6"}, {Day:"7"}, {Day:"8"}, {Day:"9"}, {Day:"10"}, {Day:"11"}, {Day:"12"}, {Day:"13"}, {Day:"14"}, {Day:"15"}, {Day:"16"}, {Day:"17"}, {Day:"18"}, {Day:"19"}, {Day:"20"}, {Day:"21"}, {Day:"22"}, {Day:"23"}, {Day:"24"}, {Day:"25"}, {Day:"26"}, {Day:"27"}, {Day:"28"}, {Day:"29"}, {Day:"30"}, {Day:"31"})**
 
 5. **[ラベル](controls/control-text-box.md)** コントロールを追加し、その **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。
@@ -221,7 +221,7 @@ PowerApps で、日付と時刻をキャンバス アプリに追加し、その
    
     既定では "**Wednesday, January 1, 2014**" が表示されます。 **[ドロップダウン](controls/control-drop-down.md)** コントロールで別の値を選択して、 **[ラベル](controls/control-text-box.md)** コントロールの日付を変更します。
 
-想定外のデータを変換しなければならない場合があります。 **[ドロップダウン](controls/control-drop-down.md)** コントロールではなく **[テキスト入力](controls/control-text-input.md)** コントロールを追加した場合、ユーザーは誤った日付 (5 月 45 日など) を入力する可能性があります。 **[Date](functions/function-date-time.md)** 関数は、異常なデータを次のように処理します。
+想定外のデータを変換しなければならない場合があります。 **[ドロップダウン](controls/control-text-input.md)** コントロールではなく **[テキスト入力](controls/control-drop-down.md)** コントロールを追加した場合、ユーザーは誤った日付 (5 月 45 日など) を入力する可能性があります。 **[Date](functions/function-date-time.md)** 関数は、異常なデータを次のように処理します。
 
 * 年の値が 0 以上で 1899 以下の場合は、年を計算するために、その値が 1900 に加算されます。
 * 年の値が 1900 以上で 9999 以下の場合は、その値が年として使用されます。
@@ -235,10 +235,10 @@ PowerApps で、日付と時刻をキャンバス アプリに追加し、その
 
 1. **Hour** と **Minute** という名前の 2 つの**ドロップダウン** リストを追加します。
 
-2. **Hour** の **[Items](controls/properties-core.md)** プロパティを次の数式に設定します。
+2. **Hour[ の ](controls/properties-core.md)** Items プロパティを次の数式に設定します。
    <br>**Table({Hour:"9"}, {Hour:"10"}, {Hour:"11"}, {Hour:"12"}, {Hour:"13"}, {Hour:"14"}, {Hour:"15"}, {Hour:"16"}, {Hour:"17"})**
 
-3. **Minute** の **[Items](controls/properties-core.md)** プロパティを次の数式に設定します。
+3. **Minute[ の ](controls/properties-core.md)** Items プロパティを次の数式に設定します。
    <br>**Table({Minute:"0"}, {Minute:"15"}, {Minute:"30"}, {Minute:"45"})**
 
 4. **[ラベル](controls/control-text-box.md)** コントロールを追加し、その **[Text](controls/properties-core.md)** プロパティを次の数式に設定します。  
@@ -248,5 +248,5 @@ PowerApps で、日付と時刻をキャンバス アプリに追加し、その
    
     **[ラベル](controls/control-text-box.md)** コントロールに "**3:45 PM**" と表示されます。
    
-    ユーザーが選択できる時間の範囲を広げ、分数をより正確に指定することができるように、**Hour** と **Minute** にエントリを追加することもできます。 さらに、3 つ目の **[ドロップダウン](controls/control-drop-down.md)** コントロールを追加して、ユーザーが秒数を指定できるようにすることもできます。 3 つ目のリストを追加した場合は、 **[ラベル](controls/control-text-box.md)** コントロールの **[Text](controls/properties-core.md)** プロパティを次の式に設定します。<br>**Text(Time(Value(Hour.Selected.Value), Value(Minute.Selected.Value), Value(Second.Selected.Value)), DateTimeFormat.LongTime)**
+    ユーザーが選択できる時間の範囲を広げ、分数をより正確に指定することができるように、**Hour** と **Minute** にエントリを追加することもできます。 さらに、3 つ目の **[ドロップダウン](controls/control-drop-down.md)** コントロールを追加して、ユーザーが秒数を指定できるようにすることもできます。 3 つ目のリストを追加した場合は、 **[ラベル](controls/properties-core.md)** コントロールの **[Text](controls/control-text-box.md)** プロパティを次の式に設定します。<br>**Text(Time(Value(Hour.Selected.Value), Value(Minute.Selected.Value), Value(Second.Selected.Value)), DateTimeFormat.LongTime)**
 

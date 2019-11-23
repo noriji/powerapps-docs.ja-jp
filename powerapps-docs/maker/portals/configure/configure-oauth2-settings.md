@@ -11,7 +11,7 @@ ms.author: shjais
 ms.reviewer: ''
 ms.openlocfilehash: be576425067079549d3174e6d6306814a6ddb13a
 ms.sourcegitcommit: d9cecdd5a35279d78aa1b6c9fc642e36a4e4612c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73542820"
@@ -31,7 +31,7 @@ OAuth 2.0 ベースの外部 id プロバイダーでは、"クライアント I
 
 ## <a name="create-oauth-applications"></a>OAuth アプリケーションの作成
 
-一般に、OAuth プロバイダーがリダイレクト URI 値を必要とするアプリ設定を使用する場合は、プロバイダーがリダイレクト URI 検証を実行する方法に応じて <https://portal.contoso.com/or> https://portal.contoso.com/signin-\ [プロバイダー\] を指定します (一部のプロバイダーでは、完全な URL パスをと共に指定する必要があります。ドメイン名)。 リダイレクト URI で \[プロバイダーの\] の代わりにプロバイダーの名前を置き換えます。
+一般に、OAuth プロバイダーがリダイレクト URI 値を必要とするアプリ設定を使用する場合は、プロバイダーがリダイレクト URI 検証を実行する方法に応じて <https://portal.contoso.com/or> https://portal.contoso.com/signin-\[プロバイダー\] を指定します (一部のプロバイダーでは、完全な URL パスをドメイン名と共に指定する必要があります)。 リダイレクト URI で \[プロバイダーの\] の代わりにプロバイダーの名前を置き換えます。
 
 ### <a name="google"></a>Google
 
@@ -83,8 +83,8 @@ OAuth 2.0 ベースの外部 id プロバイダーでは、"クライアント I
 2. **[新しいアプリの作成]** を選択します。
 
     - アプリの**名前**と**説明**を指定します。
-    - Web サイトの URL を https://portal.contoso.com として設定します。
-    - コールバック URL を https://portal.contoso.com または https://portal.contoso.com/signin-twitter として設定します。
+    - Web サイトの URL を https://portal.contoso.comとして設定します。
+    - コールバック URL を https://portal.contoso.com または https://portal.contoso.com/signin-twitterとして設定します。
 
 3. **[Twitter アプリケーションの作成]** を選択します。
 
@@ -94,9 +94,9 @@ OAuth 2.0 ベースの外部 id プロバイダーでは、"クライアント I
 2. **[新しいアプリケーションの追加]** を選択します。
 
     - **アプリケーション名**、**説明**などを指定します。
-    - Web サイトの URL を https://portal.contoso.com として設定します。
+    - Web サイトの URL を https://portal.contoso.comとして設定します。
     - OAuth ユーザーアグリーメント/既定のスコープを設定する: r\_basicprofie と r\_emailaddress
-    - Set OAuth 2.0 リダイレクト url: https://portal.contoso.com/signin-linkedin 。
+    - Set OAuth 2.0 リダイレクト url: https://portal.contoso.com/signin-linkedin。
 
 3. **[アプリケーションの追加]** を選択します。
 

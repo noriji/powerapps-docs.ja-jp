@@ -41,13 +41,13 @@ ms.locfileid: "71985143"
 
 * *DateTime* - 必須。 操作する日付/時刻値。
 * *Addition* - 必須。 *DateTime* に追加する数値 (単位は *Units*)。
-* *Units* - 省略可能。 追加する*単位*の種類。**ミリ秒**、**秒**、**分**、**時間**、**日**、**月**、**四半期**、または**年**。  指定しない場合は、**Days** が使用されます。
+* *Units* - 省略可能。 追加する *Units* の種類: **Milliseconds**、**Seconds**、**Minutes**、**Hours**、**Days**、**Months**、**Quarters**、**Years** のいずれかです。  指定しない場合は、**Days** が使用されます。
 
 **DateDiff**( *StartDateTime*, *EndDateTime* [, *Units* ] )
 
 * *StartDateTime* - 必須。 開始の日付/時刻値。
 * *EndDateTime* - 必須。 終了の日付/時刻値。
-* *Units* - 省略可能。 追加する*単位*の種類。**ミリ秒**、**秒**、**分**、**時間**、**日**、**月**、**四半期**、または**年**。  指定しない場合は、**Days** が使用されます。
+* *Units* - 省略可能。 追加する *Units* の種類: **Milliseconds**、**Seconds**、**Minutes**、**Hours**、**Days**、**Months**、**Quarters**、**Years** のいずれかです。  指定しない場合は、**Days** が使用されます。
 
 **TimeZoneOffset**( [ *DateTime* ] )
 
@@ -89,7 +89,7 @@ UTC から変換するには、**TimeZoneOffset** を (負の値を加算する�
 
 たとえば、UTC で表した **July 15, 2013, 8:02 PM** という日付と時刻が、**StartTime** という名前の変数に格納されているとします。 ユーザーのタイム ゾーンに合わせて時刻を調整するには、以下を使用します。
 
-* **DateAdd (StartTime、@no__t 1TimeZoneOffset (StartTime)、Minutes)**
+* **DateAdd (StartTime、&minus;TimeZoneOffset (StartTime)、Minutes)**
 
 **TimeZoneOffset** の前に負の符号が付いています。これは、オフセットを加算するのではなく減算するためです。
 

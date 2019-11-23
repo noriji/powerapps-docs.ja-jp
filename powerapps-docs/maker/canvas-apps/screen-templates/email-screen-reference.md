@@ -52,8 +52,8 @@ PowerApps のキャンバスアプリの場合、電子メール画面テンプ�
 
 [**アイコンの追加]** コントロールを使用すると、アプリユーザーは、組織内に存在しないユーザーを、構成されている電子メールの受信者の一覧に追加できます。
 
-* "**さ**<br>
-    数値ユーザーが検索ボックスに有効な電子メールアドレスを入力した場合にのみ、コントロールを表示するロジック:
+* プロパティ: **Visible**<br>
+    値: ユーザーが検索ボックスに有効な電子メールアドレスを入力した場合にのみ、コントロールを表示するロジック:
 
     ```powerapps-dot
     !IsBlank( TextSearchBox.Text ) &&
@@ -66,8 +66,8 @@ PowerApps のキャンバスアプリの場合、電子メール画面テンプ�
     * **Texttextの**テキストは、有効な電子メールアドレスです。
     * **Textsearchbox**コレクション内のテキストは、既に存在しません。
 
-* "**OnSelect**<br>
-    数値これを選択すると、 **MyPeople**コレクションに有効な電子メールアドレスが追加されます。 このコレクションは、画面で受信者の一覧として使用されます。
+* プロパティ: **Onselect**<br>
+    値: これを選択すると、 **MyPeople**コレクションに有効な電子メールアドレスが追加されます。 このコレクションは、画面で受信者の一覧として使用されます。
 
     ```powerapps-dot
     Collect( MyPeople,
@@ -86,8 +86,8 @@ PowerApps のキャンバスアプリの場合、電子メール画面テンプ�
 
    ![PeopleBrowseGallery コントロール](media/email-screen/email-browse-gall.png)
 
-* "**品目**<br>
-    数値**Texttexttextcontrol**に入力された検索テキストの上位15件の検索結果。
+* プロパティ: **Items**<br>
+    Value: **texttextcontrol**に入力された検索テキストの上位15件の検索結果。
     
     ```powerapps-dot
     If( !IsBlank( Trim(TextSearchBox.Text ) ), 
@@ -95,21 +95,21 @@ PowerApps のキャンバスアプリの場合、電子メール画面テンプ�
     )
     ```
 
-  このギャラリーの項目は、 [Office365 ユーザー](https://docs.microsoft.com/connectors/office365users/#searchuser)操作の検索結果によって設定されます。 操作は、検索語として `Trim(TextSearchBox)` のテキストを取得し、その検索に基づいて上位15件の結果を返します。
+  このギャラリーの項目は、 [Office365 ユーザー](https://docs.microsoft.com/connectors/office365users/#searchuser)操作の検索結果によって設定されます。 操作は `Trim(TextSearchBox)` 内のテキストを検索語として受け取り、その検索に基づいて上位15件の結果を返します。
   
-  空白を検索するユーザーが無効なため、 **texttexttextが**`Trim()` 関数でラップされています。 @No__t 0 操作は、`If(!IsBlank(Trim(TextSearchBox.Text)) ... )` 関数でラップされます。これは、検索ボックスにユーザーが入力したテキストが含まれている場合にのみ操作が実行されることを意味します。 これにより、パフォーマンスが向上します。 
+  空白を検索するユーザーが無効なため、 **texttexttextが**`Trim()` 関数でラップされています。 `Office365Users.SearchUser` 操作は `If(!IsBlank(Trim(TextSearchBox.Text)) ... )` 関数でラップされます。これは、検索ボックスにユーザーが入力したテキストが含まれている場合にのみ操作が実行されることを意味します。 これにより、パフォーマンスが向上します。 
 
 ### <a name="people-browse-gallery-title-control"></a>People 閲覧ギャラリーのタイトルコントロール
 
    ![PeopleBrowseGallery Title コントロール](media/email-screen/email-browse-gall-title.png)
 
-* " **[Text (テキスト)]**<br>
+* プロパティ:**テキスト**<br>
     値: `ThisItem.DisplayName`
 
   Office 365 プロファイルからのユーザーの表示名を表示します。
 
-* "**OnSelect**<br>
-    数値アプリレベルのコレクションにユーザーを追加するコードを入力し、ユーザーを選択します。
+* プロパティ: **Onselect**<br>
+    値: ユーザーをアプリレベルのコレクションに追加するコードを入力し、ユーザーを選択します。
 
     ```powerapps-dot
     Concurrent(
@@ -122,7 +122,7 @@ PowerApps のキャンバスアプリの場合、電子メール画面テンプ�
     ```
 このコントロールを選択すると、次の3つの処理が同時に実行される
 
-   * 選択した項目に**Selecteduser**変数を設定します。
+   * 選択した項目に **_selectedUser**変数を設定します。
    * **Texttexttextの**検索語句をリセットします。
    * 選択した項目を**MyPeople**コレクションに追加します。このコレクションは、電子メール画面が受信者のセットとして使用する、選択されたすべてのユーザーのコレクションです。
 
@@ -130,13 +130,13 @@ PowerApps のキャンバスアプリの場合、電子メール画面テンプ�
 
    ![EmailPeopleGallery コントロール](media/email-screen/email-people-gall.png)
 
-* "**品目**<br>
+* プロパティ: **Items**<br>
     値: `MyPeople`
 
   これは、 **PeopleBrowseGallery Title**コントロールを選択することによって、に初期化または追加された人間のコレクションです。
 
-* "**上下**<br>
-    数値ギャラリー内の現在の項目数に基づいて高さを設定するロジック:
+* プロパティ:**高さ**<br>
+    値: ギャラリー内の現在の項目数に基づいて、高さを設定するロジック:
 
     ```powerapps-dot
     Min( 
@@ -148,9 +148,9 @@ PowerApps のキャンバスアプリの場合、電子メール画面テンプ�
 
   このギャラリーの高さは、ギャラリー内の項目の数に合わせて調整されます。最大の高さは304です。
   
-  **EmailPeopleGallery**の1つの行の高さの合計として0を @no__t し、その値を行数で乗算します。 @No__t-0 のため、true 行の数は-1 @no__t ます。
+  **EmailPeopleGallery**の1行の高さの合計として `TemplateHeight + TemplatePadding * 2` を取得し、行の数で乗算します。 `WrapCount = 2`のため、true 行の数は `RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2, 0)`ます。
 
-* "**ShowScrollbar**<br>
+* プロパティ: **Showscrollbar**<br>
     値: `EmailPeopleGallery.Height >= 304`
   
   ギャラリーの高さが304に達すると、スクロールバーが表示されます。
@@ -159,24 +159,24 @@ PowerApps のキャンバスアプリの場合、電子メール画面テンプ�
 
    ![EmailPeopleGallery Title コントロール](media/email-screen/email-people-gall-text.png)
 
-* "**OnSelect**<br>
+* プロパティ: **Onselect**<br>
     値: `Set(_selectedUser, ThisItem)`
 
-  **EmailPeopleGallery**で選択した項目に**selecteduser**変数を設定します。
+  **EmailPeopleGallery**で選択した項目に **_selectedUser**変数を設定します。
 
 ### <a name="email-people-gallery-iconremove-control"></a>電子メール people ギャラリーアイコンの削除コントロール
 
    ![MonthDayGallery Title コントロール](media/email-screen/email-people-gall-delete.png)
 
-* "**OnSelect**<br>
+* プロパティ: **Onselect**<br>
     値: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`
 
   **MyPeople**コレクション内のレコードを検索します。 **userprincipalname**は選択された項目の**userprincipalname**と一致し、そのレコードをコレクションから削除します。
 
 ## <a name="mail-icon"></a>メールアイコン
 
-* "**OnSelect**<br>
-    数値ユーザーの電子メールメッセージを送信するロジック:
+* プロパティ: **Onselect**<br>
+    値: ユーザーの電子メールメッセージを送信するロジック:
 
     ```powerapps-dot
     Set( _emailRecipientString, Concat( MyPeople, Mail & ";" ) );
@@ -191,14 +191,14 @@ PowerApps のキャンバスアプリの場合、電子メール画面テンプ�
     ```
 
   電子メールメッセージを送信するには、セミコロンで区切られた電子メールアドレスを指定する必要があります。 前のコードでは、次のようになります。
-  1. コードの1行目では、 **MyPeople**コレクション内のすべての行から**メール**フィールドを取得し、それらをセミコロンで区切られた1つの電子メールアドレスに連結して、その文字列に電子メールアドレスを設定**します。** 数値.
+  1. コードの1行目では、 **MyPeople**コレクション内のすべての行から**メール**フィールドを取得し、それらをセミコロンで区切られた1つの電子メールアドレスの文字列に連結し、 **_emailRecipientString**変数をその文字列値に設定します。
 
   1. 次に、 [SendEmail](https://docs.microsoft.com/connectors/office365/#sendemail)操作を使用して、受信者に電子メールを送信します。
-    操作には、 **To**、 **Subject**、 **Body**という3つの必須パラメーターと、1つの省略可能なパラメーター--**重要度**があります。 上記のコードで**は、次**のように**指定されています**。テキスト、テキスト、**メッセージ**。Text および**Normal**。
+    操作には、 **To**、 **Subject**、 **Body**という3つの必須パラメーターと、1つの省略可能なパラメーター--**重要度**があります。 上記のコードで**は、これら**は **_emailRecipientString**、テキストです。テキスト、テキスト、**メッセージ**。Text および**Normal**。
   1. 最後に、テキストコントロール**とテキスト** **メッセージ**のコントロールをリセットし、 **MyPeople**コレクションをクリアします。
 
-* "**DisplayMode**<br>
-    数値`If( Len( Trim( TextEmailSubject.Text ) ) > 0 && !IsEmpty( MyPeople ), DisplayMode.Edit, DisplayMode.Disabled )` を指定すると、電子メールが送信されます。電子メールの件名欄にはテキストが含まれている必要があり、受信者 (**MyPeople**) コレクションを空にすることはできません。
+* プロパティ: **DisplayMode**<br>
+    値 `If( Len( Trim( TextEmailSubject.Text ) ) > 0 && !IsEmpty( MyPeople ), DisplayMode.Edit, DisplayMode.Disabled )`: 電子メールを送信する場合、電子メールの件名行にはテキストが含まれている必要があり、受信者 (**MyPeople**) コレクションを空にすることはできません。
 
 ## <a name="next-steps"></a>次の手順
 
